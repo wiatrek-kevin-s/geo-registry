@@ -1,0 +1,28 @@
+id: mapcode
+kind: tool
+name: Mapcode
+category: Core libraries & formats
+subcategory: Discrete global grids & geocodes
+tool_kind: Format/Standard
+summary: Mapcode system for short location codes, open-sourced by its foundation with libraries in several
+  languages.
+open_source: 'yes'
+license: Apache-2.0
+language: C/Java/JS
+interfaces:
+- C/C++
+- Java
+- JS
+call:
+- js
+- c-cpp
+- java
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://www.mapcode.com
+notes: Alternative short geocode.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 128

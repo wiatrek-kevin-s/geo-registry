@@ -1,0 +1,24 @@
+id: bokeh
+kind: tool
+name: Bokeh
+category: Display & visualization
+subcategory: Python notebook & app mapping
+tool_kind: Library
+summary: Interactive browser plotting library with tile providers and GeoJSON glyph support.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python;TypeScript
+interfaces:
+- Python
+- JS
+call:
+- python
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://bokeh.org/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1093

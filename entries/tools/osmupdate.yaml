@@ -1,0 +1,23 @@
+id: osmupdate
+kind: tool
+name: osmupdate
+category: OSM & Overture tooling
+subcategory: PBF processing
+tool_kind: Toolkit/CLI
+summary: Downloads and applies OSM change files to keep a local extract current.
+open_source: 'yes'
+license: AGPL-3.0-only
+language: C
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://wiki.openstreetmap.org/wiki/Osmupdate
+notes: Keeps local planet/extract fresh
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1192

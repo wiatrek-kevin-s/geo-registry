@@ -1,0 +1,30 @@
+id: whiteboxtools
+kind: tool
+name: WhiteboxTools
+category: Desktop GIS & analysis engines
+subcategory: Whitebox & Rust GIS engines
+tool_kind: Toolkit/CLI
+summary: Standalone geospatial analysis engine with ~450 tools for terrain, hydrology, LiDAR, image and
+  GIS analysis, run from a single binary.
+open_source: 'yes'
+license: MIT
+language: Rust
+interfaces:
+- CLI
+- Python
+- R
+- plugin
+call:
+- python
+- cli
+- r
+- plugin
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/jblindsay/whitebox-tools
+notes: Single binary, no GDAL dependency; ideal agent tool backend
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 241

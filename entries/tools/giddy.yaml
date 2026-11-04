@@ -1,0 +1,22 @@
+id: giddy
+kind: tool
+name: giddy
+category: Desktop GIS & analysis engines
+subcategory: Spatial statistics (Python / PySAL)
+tool_kind: Library
+summary: Geospatial distribution dynamics such as spatial Markov chains and rank mobility.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://pysal.org/giddy/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 312

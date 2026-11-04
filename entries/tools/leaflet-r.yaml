@@ -1,0 +1,22 @@
+id: leaflet-r
+kind: tool
+name: leaflet (R)
+category: Display & visualization
+subcategory: R mapping
+tool_kind: Library
+summary: R package that creates interactive Leaflet maps for RStudio, R Markdown and Shiny.
+open_source: 'yes'
+license: GPL-3.0
+language: R
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: maintained
+url: https://rstudio.github.io/leaflet/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1106

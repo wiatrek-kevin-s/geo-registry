@@ -1,0 +1,23 @@
+id: apache-age
+kind: tool
+name: Apache AGE
+category: Spatial databases & query engines
+subcategory: PostgreSQL ecosystem
+tool_kind: Extension
+summary: Adds openCypher graph queries to PostgreSQL, combinable with PostGIS columns.
+open_source: 'yes'
+license: Apache-2.0
+language: C
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://age.apache.org
+notes: Graph plus spatial in one Postgres
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 656

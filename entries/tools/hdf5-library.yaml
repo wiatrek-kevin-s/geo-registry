@@ -1,0 +1,25 @@
+id: hdf5-library
+kind: tool
+name: HDF5 library
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Reference library for the HDF5 hierarchical data format.
+open_source: 'yes'
+license: BSD-3-Clause
+language: C
+interfaces:
+- C/C++
+- CLI
+call:
+- cli
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://www.hdfgroup.org/solutions/hdf5
+notes: Underlies NetCDF4 and many EO products.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 74

@@ -1,0 +1,22 @@
+id: teradata-geospatial
+kind: tool
+name: Teradata geospatial
+category: Spatial databases & query engines
+subcategory: Cloud warehouses
+tool_kind: Service/API
+summary: ST_Geometry type and spatial functions in Teradata Vantage.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: maintained
+url: https://docs.teradata.com
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 696

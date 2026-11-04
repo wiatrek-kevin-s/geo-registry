@@ -1,0 +1,21 @@
+id: usfws-national-wetlands-inventory
+kind: data
+name: USFWS National Wetlands Inventory
+summary: Wetland and deepwater habitat polygons for the US.
+publisher: U.S. Fish and Wildlife Service
+themes:
+- us-federal-interior
+- open-data-sources
+coverage:
+  region: United States
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.fws.gov/program/national-wetlands-inventory
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1277

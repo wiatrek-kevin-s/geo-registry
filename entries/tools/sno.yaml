@@ -1,0 +1,23 @@
+id: sno
+kind: tool
+name: Sno
+category: Connections & storage
+subcategory: Data versioning & Git
+tool_kind: Toolkit/CLI
+summary: Koordinates' earlier name for Kart before its 2021 rename.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: Python
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: archived
+url: https://github.com/koordinates/kart
+notes: Renamed to Kart; list for completeness
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1472

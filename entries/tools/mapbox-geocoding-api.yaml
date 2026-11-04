@@ -1,0 +1,26 @@
+id: mapbox-geocoding-api
+kind: tool
+name: Mapbox Geocoding API
+category: Routing, networks, geocoding & LRS
+subcategory: Geocoding services
+tool_kind: Service/API
+summary: Mapbox forward, reverse and batch geocoding service with permanent-storage tier.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- JS
+- Python
+call:
+- python
+- rest
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://docs.mapbox.com/api/search/geocoding/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 837

@@ -1,0 +1,23 @@
+id: aws-ground-station
+kind: tool
+name: AWS Ground Station
+category: Commercial GIS platforms & APIs
+subcategory: AWS
+tool_kind: Service/API
+summary: Managed satellite ground-station antennas for downlinking and processing satellite data.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://aws.amazon.com/ground-station/
+notes: Marginal for desktop users
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1405

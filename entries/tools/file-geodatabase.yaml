@@ -1,0 +1,21 @@
+id: file-geodatabase
+kind: tool
+name: File Geodatabase
+category: Core libraries & formats
+subcategory: Vector formats
+tool_kind: Format/Standard
+summary: Esri's folder-based geodatabase format for vector, raster and topology in ArcGIS.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://pro.arcgis.com/en/pro-app/latest/help/data/geodatabases/overview/what-is-a-geodatabase-.htm
+notes: Read via OpenFileGDB or FileGDB API.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 159

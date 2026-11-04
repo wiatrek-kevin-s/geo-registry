@@ -1,0 +1,25 @@
+id: sfcgal
+kind: tool
+name: SFCGAL
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: Wrapper around CGAL adding ISO 19107 3D geometry operations and used by PostGIS for 3D functions.
+open_source: 'yes'
+license: LGPL-2.0-or-later
+language: C++
+interfaces:
+- C/C++
+- SQL
+call:
+- sql
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://sfcgal.org
+notes: Provides 3D/straight-skeleton ops in PostGIS.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 10

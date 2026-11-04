@@ -1,0 +1,24 @@
+id: actian-ingres-lrs
+kind: tool
+name: Actian Ingres LRS
+category: Routing, networks, geocoding & LRS
+subcategory: Linear referencing (LRS)
+tool_kind: Extension
+summary: Ingres geospatial linear reference system functions.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: unknown
+url: https://docs.actian.com/ingres/10.2/GeospatialUser/Linear_Reference_System.htm
+notes: Niche
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 872

@@ -1,0 +1,22 @@
+id: mapgl
+kind: tool
+name: mapgl
+category: Display & visualization
+subcategory: R mapping
+tool_kind: Library
+summary: R interface to MapLibre GL JS and Mapbox GL JS for interactive maps.
+open_source: 'yes'
+license: MIT
+language: R
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: active
+url: https://walker-data.com/mapgl/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1111

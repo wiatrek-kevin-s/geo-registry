@@ -1,0 +1,22 @@
+id: railroad-commission-of-texas-gis
+kind: data
+name: Railroad Commission of Texas GIS
+summary: Oil and gas wells, pipelines and surveys via public viewer and downloadable data.
+publisher: Railroad Commission of Texas
+themes:
+- texas
+- open-data-sources
+coverage:
+  region: Texas
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://gis.rrc.texas.gov/GISViewer/
+  auth: none
+notes: Some datasets historically sold
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1343

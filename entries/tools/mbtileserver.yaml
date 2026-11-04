@@ -1,0 +1,24 @@
+id: mbtileserver
+kind: tool
+name: mbtileserver
+category: Servers, standards, tiles & catalogs
+subcategory: Tile servers
+tool_kind: Server
+summary: Small Go server that serves tiles and TileJSON from a directory of MBTiles files.
+open_source: 'yes'
+license: ISC
+language: Go
+interfaces:
+- CLI
+- REST
+call:
+- cli
+- rest
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/consbio/mbtileserver
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 914

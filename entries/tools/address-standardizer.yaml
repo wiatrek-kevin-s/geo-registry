@@ -1,0 +1,23 @@
+id: address-standardizer
+kind: tool
+name: address_standardizer
+category: Spatial databases & query engines
+subcategory: PostgreSQL ecosystem
+tool_kind: Extension
+summary: Parses and normalises postal addresses into components; bundled with PostGIS.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: C
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: maintained
+url: https://postgis.net/docs/Extras.html
+notes: Pairs with TIGER geocoder
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 649

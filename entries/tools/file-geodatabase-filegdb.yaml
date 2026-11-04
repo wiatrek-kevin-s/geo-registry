@@ -1,0 +1,27 @@
+id: file-geodatabase-filegdb
+kind: tool
+name: File geodatabase (FileGDB)
+category: Spatial databases & query engines
+subcategory: Esri enterprise
+tool_kind: Format/Standard
+summary: Esri folder-based geodatabase; GDAL OpenFileGDB reads and writes it, Esri FileGDB API also exists.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- SQL
+- C/C++
+- Python
+call:
+- python
+- sql
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/Esri/file-geodatabase-api
+notes: Common user input format
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 713

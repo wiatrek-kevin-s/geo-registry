@@ -1,0 +1,23 @@
+id: mgwr
+kind: tool
+name: mgwr
+category: Desktop GIS & analysis engines
+subcategory: Spatial statistics (Python / PySAL)
+tool_kind: Library
+summary: Geographically weighted and multiscale geographically weighted regression.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/pysal/mgwr
+notes: Last release Jan 2024
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 308

@@ -1,0 +1,20 @@
+id: ghsl
+kind: data
+name: GHSL
+summary: 'JRC Global Human Settlement Layer: built-up, population and settlement grids.'
+publisher: Unknown
+themes:
+- global-population
+- open-data-sources
+coverage:
+  region: Global
+license: CC-BY-4.0
+access:
+- type: http
+  url: https://human-settlement.emergency.copernicus.eu/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1305

@@ -1,0 +1,25 @@
+id: proj4leaflet
+kind: tool
+name: Proj4Leaflet
+category: Display & visualization
+subcategory: Leaflet plugins
+tool_kind: Extension
+summary: Lets Leaflet display tiles and data in non-Web-Mercator projections via Proj4js.
+open_source: 'yes'
+license: BSD-2-Clause
+language: JavaScript
+interfaces:
+- JS
+- plugin
+call:
+- js
+- plugin
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/kartena/Proj4Leaflet
+notes: Needed for national grids/polar maps
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1037

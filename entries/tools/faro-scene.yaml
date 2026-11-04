@@ -1,0 +1,23 @@
+id: faro-scene
+kind: tool
+name: FARO SCENE
+category: Point clouds, LiDAR & 3D
+subcategory: Desktop viewers & editors
+tool_kind: Application
+summary: FARO software for processing and registering terrestrial laser scans.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://www.faro.com/en/Products/Software/SCENE-Software
+notes: Common TLS vendor format source.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 595

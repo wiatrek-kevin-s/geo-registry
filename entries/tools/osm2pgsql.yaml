@@ -1,0 +1,25 @@
+id: osm2pgsql
+kind: tool
+name: osm2pgsql
+category: OSM & Overture tooling
+subcategory: Database import
+tool_kind: Toolkit/CLI
+summary: Imports OSM data into PostgreSQL/PostGIS with Lua-configurable flex output and diff updates.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: C++;Lua
+interfaces:
+- CLI
+- SQL
+call:
+- cli
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://osm2pgsql.org/
+notes: Standard path from PBF to PostGIS
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1187

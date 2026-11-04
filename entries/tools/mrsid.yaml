@@ -1,0 +1,23 @@
+id: mrsid
+kind: tool
+name: MrSID
+category: Core libraries & formats
+subcategory: Raster formats
+tool_kind: Format/Standard
+summary: Extensis wavelet-compressed raster format for large imagery and LiDAR, read via the MrSID SDK.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- C/C++
+call:
+- c-cpp
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.extensis.com/mrsid-file-format
+notes: Legacy imagery; closed SDK.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 144

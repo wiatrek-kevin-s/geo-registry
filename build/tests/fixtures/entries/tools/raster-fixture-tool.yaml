@@ -1,0 +1,26 @@
+id: raster-fixture-tool
+kind: tool
+name: Raster Fixture Tool
+category: Desktop GIS & analysis engines
+subcategory: Raster analysis
+tool_kind: Library
+summary: Fixture raster algebra library used by the integration test.
+open_source: 'yes'
+license: MIT
+language: Rust
+interfaces:
+- Python
+- CLI
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://example.org/raster-fixture-tool
+related:
+- vector-fixture-tool
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 2

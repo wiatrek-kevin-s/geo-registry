@@ -1,0 +1,25 @@
+id: ogc-api-connected-systems
+kind: tool
+name: OGC API – Connected Systems
+category: Servers, standards, tiles & catalogs
+subcategory: OGC API standards
+tool_kind: Format/Standard
+summary: REST API for describing and tasking sensors, platforms and other connected systems.
+open_source: 'yes'
+license: LicenseRef-OGC-Document
+license_original: OGC document licence
+interfaces:
+- OGC
+- REST
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://ogcapi.ogc.org
+notes: OpenAPI-described; easy for agents to call
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1000

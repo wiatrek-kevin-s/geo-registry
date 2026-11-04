@@ -1,0 +1,20 @@
+id: gbfs
+kind: tool
+name: GBFS
+category: Routing, networks, geocoding & LRS
+subcategory: Transit data & tools
+tool_kind: Format/Standard
+summary: General Bikeshare Feed Specification for real-time shared bike and scooter availability.
+open_source: 'yes'
+license: CC-BY-4.0
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://gbfs.org/
+notes: License unverified
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 818

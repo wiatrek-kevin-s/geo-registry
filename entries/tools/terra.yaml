@@ -1,0 +1,23 @@
+id: terra
+kind: tool
+name: terra
+category: Desktop GIS & analysis engines
+subcategory: R spatial packages
+tool_kind: Library
+summary: Fast raster and vector data handling and analysis in R, successor to raster.
+open_source: 'yes'
+license: GPL-3.0-or-later
+language: R; C++
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/rspatial/terra
+notes: Core R raster package; licence from memory
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 332

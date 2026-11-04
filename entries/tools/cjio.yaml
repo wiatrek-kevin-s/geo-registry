@@ -1,0 +1,25 @@
+id: cjio
+kind: tool
+name: cjio
+category: Point clouds, LiDAR & 3D
+subcategory: City models
+tool_kind: Toolkit/CLI
+summary: Python CLI for manipulating, validating, subsetting and converting CityJSON files.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- CLI
+- Python
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/cityjson/cjio
+notes: Agent-friendly CityJSON operations.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 621

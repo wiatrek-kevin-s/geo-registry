@@ -1,0 +1,27 @@
+id: planet-apis
+kind: tool
+name: Planet APIs
+category: Imagery, remote sensing & GeoAI
+subcategory: Commercial imagery providers
+tool_kind: Service/API
+summary: Data, Orders, Subscriptions and Basemaps APIs for PlanetScope and SkySat imagery.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- Python
+- CLI
+call:
+- python
+- cli
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://docs.planet.com
+notes: Python SDK planet
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 478

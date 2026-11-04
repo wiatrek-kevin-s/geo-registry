@@ -1,0 +1,28 @@
+id: vroom
+kind: tool
+name: VROOM
+category: Routing, networks, geocoding & LRS
+subcategory: Routing engines
+tool_kind: Toolkit/CLI
+summary: Vehicle routing problem solver that optimizes multi-vehicle delivery and pickup tours using OSRM,
+  Valhalla or ORS matrices.
+open_source: 'yes'
+license: BSD-2-Clause
+language: C++
+interfaces:
+- CLI
+- REST
+- Python
+call:
+- python
+- cli
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/VROOM-Project/vroom
+notes: Pairs with local OSRM for fleet optimization
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 765

@@ -1,0 +1,22 @@
+id: rayshader
+kind: tool
+name: rayshader
+category: Display & visualization
+subcategory: R mapping
+tool_kind: Library
+summary: Creates 2D and 3D shaded relief maps and renders from elevation matrices.
+open_source: 'yes'
+license: GPL-3.0
+language: R;C++
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.rayshader.com/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1113

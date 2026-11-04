@@ -1,0 +1,25 @@
+id: potree
+kind: tool
+name: Potree
+category: Point clouds, LiDAR & 3D
+subcategory: Web viewers & engines
+tool_kind: Library
+summary: WebGL viewer for streaming and measuring very large point clouds in the browser.
+open_source: 'yes'
+license: BSD-2-Clause
+language: JavaScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: maintained
+url: https://potree.org
+notes: Embeddable viewer for a local web UI.
+also_categories:
+- Display & visualization
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 596

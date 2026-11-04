@@ -1,0 +1,25 @@
+id: circuitscape
+kind: tool
+name: Circuitscape
+category: Desktop GIS & analysis engines
+subcategory: Spatial statistics applications
+tool_kind: Library
+summary: Applies circuit theory to raster landscapes to model connectivity and movement corridors.
+open_source: 'yes'
+license: MIT
+language: Julia
+interfaces:
+- CLI
+- plugin
+call:
+- cli
+- plugin
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/Circuitscape/Circuitscape.jl
+notes: Julia runtime needed
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 330

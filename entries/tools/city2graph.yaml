@@ -1,0 +1,23 @@
+id: city2graph
+kind: tool
+name: city2graph
+category: Routing, networks, geocoding & LRS
+subcategory: Accessibility & transport modeling
+tool_kind: Library
+summary: Turns urban datasets such as streets, buildings and transit into graphs for graph neural network
+  and network analysis.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/c2g-dev/city2graph
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 788

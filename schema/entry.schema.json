@@ -1,0 +1,232 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/wiatrek-kevin-s/geo-registry/schema/entry.schema.json",
+  "title": "geo-registry entry",
+  "description": "One GIS tool or data source in the Columbus geo-registry. Entries are CC0-1.0.",
+  "type": "object",
+  "required": ["id", "kind", "name", "license", "status", "review"],
+  "properties": {
+    "kind": { "enum": ["data", "tool"] }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "kind": { "const": "data" } }, "required": ["kind"] },
+      "then": { "$ref": "#/$defs/dataEntry" }
+    },
+    {
+      "if": { "properties": { "kind": { "const": "tool" } }, "required": ["kind"] },
+      "then": { "$ref": "#/$defs/toolEntry" }
+    }
+  ],
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$",
+      "maxLength": 96
+    },
+    "nonEmptyString": { "type": "string", "minLength": 1 },
+    "httpUrl": {
+      "type": "string",
+      "pattern": "^(https?|s3)://\\S+$"
+    },
+    "license": {
+      "description": "SPDX licence expression, a LicenseRef-* identifier, or NOASSERTION.",
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(NOASSERTION|[A-Za-z0-9().+ -]+)$"
+    },
+    "entryStatus": {
+      "description": "Registry status of the entry itself (not of the upstream project).",
+      "enum": ["active", "degraded", "retired"]
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state"],
+      "properties": {
+        "state": { "enum": ["seeded", "reviewed"] },
+        "source": { "type": "string" },
+        "source_row": { "type": "integer", "minimum": 2 },
+        "reviewed_by": { "type": "string" },
+        "reviewed_on": { "type": "string", "format": "date" }
+      },
+      "if": { "properties": { "state": { "const": "seeded" } } },
+      "then": { "required": ["state", "source", "source_row"] }
+    },
+    "relatedIds": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/id" },
+      "uniqueItems": true
+    },
+    "accessType": {
+      "enum": [
+        "http", "download", "ogc-wms", "ogc-wmts", "ogc-wfs", "ogc-wcs",
+        "ogc-api-features", "ogc-api-tiles", "stac", "ept", "arcgis-rest",
+        "s3", "api", "other"
+      ]
+    },
+    "access": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "url", "auth"],
+      "properties": {
+        "type": { "$ref": "#/$defs/accessType" },
+        "url": { "$ref": "#/$defs/httpUrl" },
+        "index": {
+          "description": "Optional layer/collection/index within the endpoint (layer name, collection id, EPT index path, ...).",
+          "type": "string"
+        },
+        "auth": { "enum": ["none", "api-key", "oauth", "login"] },
+        "notes": { "type": "string" }
+      }
+    },
+    "recipeTool": {
+      "description": "Columbus server tool that executes the recipe. Recipes are declarative; the server owns all code.",
+      "enum": ["query_features", "vector_op", "raster_op", "pointcloud_pipeline", "registry_fetch"]
+    },
+    "recipe": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tool", "steps"],
+      "properties": {
+        "tool": { "$ref": "#/$defs/recipeTool" },
+        "steps": {
+          "description": "Plain-language declarative steps. Never code: no shell, no scripts, no inline programs.",
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 20,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 300,
+            "not": {
+              "pattern": "(`|\\$\\(|&&|\\|\\||;\\s*(rm|curl|wget|sh|bash|python|powershell)\\b|\\b(import|eval|exec|subprocess|os\\.system|lambda)\\b|<script|#!/)"
+            }
+          }
+        }
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["region"],
+      "properties": {
+        "region": { "$ref": "#/$defs/nonEmptyString" },
+        "bbox": {
+          "description": "[minx, miny, maxx, maxy] in EPSG:4326 degrees.",
+          "type": "array",
+          "prefixItems": [
+            { "type": "number", "minimum": -180, "maximum": 180 },
+            { "type": "number", "minimum": -90, "maximum": 90 },
+            { "type": "number", "minimum": -180, "maximum": 180 },
+            { "type": "number", "minimum": -90, "maximum": 90 }
+          ],
+          "minItems": 4,
+          "maxItems": 4,
+          "items": false
+        }
+      }
+    },
+    "dataEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "name", "publisher", "themes", "coverage", "license", "access", "status", "review"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "kind": { "const": "data" },
+        "name": { "$ref": "#/$defs/nonEmptyString" },
+        "summary": { "type": "string" },
+        "publisher": { "$ref": "#/$defs/nonEmptyString" },
+        "themes": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/id" },
+          "uniqueItems": true
+        },
+        "coverage": { "$ref": "#/$defs/coverage" },
+        "license": { "$ref": "#/$defs/license" },
+        "license_original": { "type": "string" },
+        "update": {
+          "description": "Update cadence, e.g. daily, monthly, annual, irregular, static.",
+          "type": "string"
+        },
+        "access": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/access" }
+        },
+        "recipe": { "$ref": "#/$defs/recipe" },
+        "formats_out": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/nonEmptyString" },
+          "uniqueItems": true
+        },
+        "notes": { "type": "string" },
+        "last_verified": { "type": "string", "format": "date" },
+        "status": { "$ref": "#/$defs/entryStatus" },
+        "replaced_by": { "$ref": "#/$defs/id" },
+        "related": { "$ref": "#/$defs/relatedIds" },
+        "review": { "$ref": "#/$defs/review" }
+      }
+    },
+    "toolEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "name", "category", "tool_kind", "open_source", "license", "interfaces", "project_status", "status", "review"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "kind": { "const": "tool" },
+        "name": { "$ref": "#/$defs/nonEmptyString" },
+        "category": { "$ref": "#/$defs/nonEmptyString" },
+        "subcategory": { "type": "string" },
+        "tool_kind": {
+          "description": "The Geospatial Tool Atlas `kind` value.",
+          "enum": ["Library", "Format/Standard", "Application", "Server", "Service/API", "Toolkit/CLI", "Extension", "Platform", "Database"]
+        },
+        "summary": { "type": "string" },
+        "open_source": { "enum": ["yes", "no", "partial"] },
+        "license": { "$ref": "#/$defs/license" },
+        "license_original": { "type": "string" },
+        "language": { "type": "string" },
+        "interfaces": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/nonEmptyString" },
+          "uniqueItems": true
+        },
+        "install": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "winget": { "$ref": "#/$defs/nonEmptyString" },
+            "conda_forge": { "$ref": "#/$defs/nonEmptyString" },
+            "pip": { "$ref": "#/$defs/nonEmptyString" },
+            "npm": { "$ref": "#/$defs/nonEmptyString" },
+            "cargo": { "$ref": "#/$defs/nonEmptyString" }
+          }
+        },
+        "call": {
+          "description": "How an agent can call the tool.",
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": ["cli", "python", "rest", "js", "r", "sql", "mcp", "ogc", "stac", "c-cpp", "rust", "java", "dotnet", "go", "jdbc", "julia", "plugin", "download"]
+          }
+        },
+        "wrapped_by_columbus": { "type": "boolean", "default": false },
+        "project_status": { "enum": ["active", "maintained", "low-activity", "unknown", "archived"] },
+        "url": { "$ref": "#/$defs/httpUrl" },
+        "notes": { "type": "string" },
+        "related": { "$ref": "#/$defs/relatedIds" },
+        "also_categories": {
+          "description": "Other atlas categories this tool also belongs to.",
+          "type": "array",
+          "items": { "$ref": "#/$defs/nonEmptyString" },
+          "uniqueItems": true
+        },
+        "status": { "$ref": "#/$defs/entryStatus" },
+        "replaced_by": { "$ref": "#/$defs/id" },
+        "review": { "$ref": "#/$defs/review" }
+      }
+    }
+  }
+}

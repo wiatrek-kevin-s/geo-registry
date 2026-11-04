@@ -1,0 +1,23 @@
+id: pygeos
+kind: tool
+name: PyGEOS
+category: Desktop GIS & analysis engines
+subcategory: Python vector analysis
+tool_kind: Library
+summary: Vectorised GEOS bindings for NumPy arrays, now merged into Shapely 2.0.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python; C
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: archived
+url: https://github.com/pygeos/pygeos
+notes: Legacy; use Shapely 2
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 288

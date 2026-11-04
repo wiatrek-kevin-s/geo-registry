@@ -1,0 +1,21 @@
+id: esri-tile-package-compact-cache-tpk-vtpk-bundle
+kind: tool
+name: Esri Tile Package / Compact Cache (TPK/VTPK/Bundle)
+category: Core libraries & formats
+subcategory: Tile formats
+tool_kind: Format/Standard
+summary: Esri tile cache and package formats for raster and vector tiles.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary (compact cache documented)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/Esri/raster-tiles-compactcache
+notes: ArcGIS offline tiles.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 203

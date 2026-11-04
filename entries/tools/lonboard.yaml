@@ -1,0 +1,25 @@
+id: lonboard
+kind: tool
+name: Lonboard
+category: Display & visualization
+subcategory: Python notebook & app mapping
+tool_kind: Library
+summary: Jupyter widget that renders large GeoDataFrames fast with deck.gl and GeoArrow.
+open_source: 'yes'
+license: MIT
+language: Python;TypeScript
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://developmentseed.org/lonboard/
+notes: Millions of features in notebooks
+also_categories:
+- Commercial GIS platforms & APIs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1083

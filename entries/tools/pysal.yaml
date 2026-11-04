@@ -1,0 +1,24 @@
+id: pysal
+kind: tool
+name: PySAL
+category: Desktop GIS & analysis engines
+subcategory: Spatial statistics (Python / PySAL)
+tool_kind: Library
+summary: Meta-package federating PySAL libraries for spatial weights, autocorrelation, regression, clustering
+  and dynamics.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://pysal.org
+notes: Release 26.07 (Jul 2026)
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 304

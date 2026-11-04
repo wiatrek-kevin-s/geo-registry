@@ -1,0 +1,21 @@
+id: who-s-on-first
+kind: data
+name: Who's On First
+summary: Gazetteer of places with stable IDs and polygons.
+publisher: Unknown
+themes:
+- global-names
+- open-data-sources
+coverage:
+  region: Global
+license: LicenseRef-Multiple
+license_original: Mixed
+access:
+- type: http
+  url: https://whosonfirst.org/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1318

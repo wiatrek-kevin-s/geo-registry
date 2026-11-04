@@ -1,0 +1,23 @@
+id: laserchicken
+kind: tool
+name: Laserchicken
+category: Point clouds, LiDAR & 3D
+subcategory: Lidar processing suites
+tool_kind: Library
+summary: Python toolkit for computing ecological feature metrics from large airborne lidar point clouds.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/eEcoLiDAR/laserchicken
+notes: Ecology metrics for habitat mapping.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 558

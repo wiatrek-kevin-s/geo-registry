@@ -1,0 +1,22 @@
+id: usgs-3dep-lidar-on-aws-ept
+kind: data
+name: USGS 3DEP lidar on AWS (EPT)
+summary: Public S3 bucket of 3DEP lidar reorganized as Entwine Point Tiles for direct streaming.
+publisher: U.S. Geological Survey
+themes:
+- lidar-data-sources
+- point-clouds-lidar-3d
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://registry.opendata.aws/usgs-lidar/
+  auth: none
+notes: PDAL can query by AOI with readers.ept.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 635

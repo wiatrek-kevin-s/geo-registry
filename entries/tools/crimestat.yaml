@@ -1,0 +1,23 @@
+id: crimestat
+kind: tool
+name: CrimeStat
+category: Desktop GIS & analysis engines
+subcategory: Spatial statistics applications
+tool_kind: Application
+summary: NIJ-funded Windows program of spatial statistics for crime incident analysis such as hot spots
+  and journey to crime.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://nij.ojp.gov/crimestat
+notes: Free; CrimeStat IV is last major version
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 328

@@ -1,0 +1,22 @@
+id: ggplot2
+kind: tool
+name: ggplot2
+category: Display & visualization
+subcategory: R mapping
+tool_kind: Library
+summary: Grammar-of-graphics plotting for R; geom_sf and coord_sf draw sf spatial data.
+open_source: 'yes'
+license: MIT
+language: R
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: active
+url: https://ggplot2.tidyverse.org/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1109

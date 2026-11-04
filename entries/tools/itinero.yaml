@@ -1,0 +1,23 @@
+id: itinero
+kind: tool
+name: Itinero
+category: Routing, networks, geocoding & LRS
+subcategory: Routing engines
+tool_kind: Library
+summary: .NET routing library that builds routable networks from OSM and supports custom vehicle profiles.
+open_source: 'yes'
+license: Apache-2.0
+language: C#
+interfaces:
+- C/C++
+call:
+- c-cpp
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/itinero/routing
+notes: For .NET hosts
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 763

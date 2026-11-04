@@ -1,0 +1,24 @@
+id: ckanext-dcat
+kind: tool
+name: ckanext-dcat
+category: Servers, standards, tiles & catalogs
+subcategory: Metadata catalogs & data portals
+tool_kind: Extension
+summary: CKAN extension exposing and harvesting catalog metadata as DCAT/RDF including GeoDCAT-AP.
+open_source: 'yes'
+license: AGPL-3.0-only
+language: Python
+interfaces:
+- REST
+- plugin
+call:
+- rest
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/ckan/ckanext-dcat
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 937

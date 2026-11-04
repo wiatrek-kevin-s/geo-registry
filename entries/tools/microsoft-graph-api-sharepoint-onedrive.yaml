@@ -1,0 +1,27 @@
+id: microsoft-graph-api-sharepoint-onedrive
+kind: tool
+name: Microsoft Graph API (SharePoint/OneDrive)
+category: Connections & storage
+subcategory: Identity & document stores
+tool_kind: Service/API
+summary: Unified Microsoft 365 REST API for files in SharePoint and OneDrive, plus mail, Teams and users.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- Python
+- JS
+call:
+- python
+- rest
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://learn.microsoft.com/graph/overview
+notes: Where many GIS shops keep shapefiles and Excel tables
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1442

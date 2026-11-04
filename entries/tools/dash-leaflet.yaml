@@ -1,0 +1,22 @@
+id: dash-leaflet
+kind: tool
+name: Dash Leaflet
+category: Display & visualization
+subcategory: Python notebook & app mapping
+tool_kind: Library
+summary: Leaflet components for Plotly Dash apps.
+open_source: 'yes'
+license: MIT
+language: Python;JavaScript
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/emilhe/dash-leaflet
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1092

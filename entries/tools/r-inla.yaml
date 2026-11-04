@@ -1,0 +1,24 @@
+id: r-inla
+kind: tool
+name: R-INLA
+category: Desktop GIS & analysis engines
+subcategory: R spatial packages
+tool_kind: Library
+summary: Bayesian inference with integrated nested Laplace approximation, widely used for spatial and
+  spatio-temporal models.
+open_source: partial
+license: GPL-2.0-or-later
+language: R; C
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: active
+url: https://www.r-inla.org
+notes: Not on CRAN; some bundled binaries closed
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 354

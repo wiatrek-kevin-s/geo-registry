@@ -1,0 +1,22 @@
+id: gadm
+kind: data
+name: GADM
+summary: Global administrative boundaries down to sub-district levels.
+publisher: Unknown
+themes:
+- global-boundaries
+- open-data-sources
+coverage:
+  region: Global
+license: LicenseRef-Custom
+license_original: Custom (non-commercial)
+access:
+- type: http
+  url: https://gadm.org/
+  auth: none
+notes: No redistribution or commercial use without permission
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1315

@@ -1,0 +1,20 @@
+id: mapbox-vector-tile-specification
+kind: tool
+name: Mapbox Vector Tile Specification
+category: Servers, standards, tiles & catalogs
+subcategory: Tile, style & catalog specs
+tool_kind: Format/Standard
+summary: Protocol Buffers encoding for tiled vector geometries and attributes (MVT).
+open_source: 'yes'
+license: CC-BY-3.0
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/mapbox/vector-tile-spec
+notes: Basis of most vector tiling; MLT is emerging successor
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1004

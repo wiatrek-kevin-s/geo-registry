@@ -1,0 +1,22 @@
+id: icesat-2-atl03-atl08
+kind: data
+name: ICESat-2 ATL03/ATL08
+summary: NASA spaceborne photon-counting lidar products for surface heights and canopy.
+publisher: Unknown
+themes:
+- lidar-data-sources
+- point-clouds-lidar-3d
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://icesat-2.gsfc.nasa.gov
+  auth: none
+notes: Global elevation profiles.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 640

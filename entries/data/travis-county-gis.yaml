@@ -1,0 +1,21 @@
+id: travis-county-gis
+kind: data
+name: Travis County GIS
+summary: County boundaries, roads, precincts and environmental layers.
+publisher: Travis County
+themes:
+- texas
+- open-data-sources
+coverage:
+  region: Texas
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.traviscountytx.gov/tnr/gis
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1351

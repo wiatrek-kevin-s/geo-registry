@@ -1,0 +1,24 @@
+id: lidar-opengeos
+kind: tool
+name: lidar (opengeos)
+category: Point clouds, LiDAR & 3D
+subcategory: Lidar processing suites
+tool_kind: Library
+summary: Python package for terrain and depression analysis from lidar-derived DEMs.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+- GUI
+call:
+- python
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/opengeos/lidar
+notes: Hydrology from lidar DEMs.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 557

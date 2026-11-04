@@ -1,0 +1,26 @@
+id: arcgis-rest-js
+kind: tool
+name: ArcGIS REST JS
+category: Commercial GIS platforms & APIs
+subcategory: Esri ArcGIS
+tool_kind: Library
+summary: Modular JavaScript wrappers for ArcGIS REST endpoints, including auth, geocoding, routing and
+  feature queries.
+open_source: 'yes'
+license: Apache-2.0
+language: TypeScript
+interfaces:
+- JS
+- REST
+call:
+- rest
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/Esri/arcgis-rest-js
+notes: Handy for a JS/Tauri front end
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1379

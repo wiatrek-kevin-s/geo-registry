@@ -1,0 +1,24 @@
+id: azure-cosmos-db-geospatial
+kind: tool
+name: Azure Cosmos DB geospatial
+category: Spatial databases & query engines
+subcategory: NoSQL / search / KV
+tool_kind: Service/API
+summary: GeoJSON spatial indexing and ST_ functions in Cosmos DB's NoSQL API.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- SQL
+- REST
+call:
+- rest
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://learn.microsoft.com/azure/cosmos-db/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 723

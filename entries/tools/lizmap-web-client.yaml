@@ -1,0 +1,24 @@
+id: lizmap-web-client
+kind: tool
+name: Lizmap Web Client
+category: Display & visualization
+subcategory: Web GIS application frameworks
+tool_kind: Application
+summary: Publishes QGIS projects as web maps through QGIS Server, configured from a QGIS plugin.
+open_source: 'yes'
+license: MPL-2.0
+language: PHP;JavaScript
+interfaces:
+- GUI
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/3liz/lizmap-web-client
+notes: QGIS-to-web publishing
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1156

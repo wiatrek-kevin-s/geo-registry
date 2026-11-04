@@ -1,0 +1,23 @@
+id: geotrellis
+kind: tool
+name: GeoTrellis
+category: Desktop GIS & analysis engines
+subcategory: JVM analysis engines
+tool_kind: Library
+summary: Scala library for high-performance distributed raster processing on Apache Spark.
+open_source: 'yes'
+license: Apache-2.0
+language: Scala
+interfaces:
+- Java
+call:
+- java
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://geotrellis.io
+notes: Heavy Spark/JVM stack; latest 3.8.x
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 359

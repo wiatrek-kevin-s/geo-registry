@@ -1,0 +1,20 @@
+id: overture-divisions-theme
+kind: data
+name: Overture Divisions theme
+summary: Administrative boundaries and localities with names.
+publisher: Overture Maps Foundation
+themes:
+- global-boundaries
+- open-data-sources
+coverage:
+  region: Global
+license: ODbL-1.0
+access:
+- type: http
+  url: https://docs.overturemaps.org/guides/divisions/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1312

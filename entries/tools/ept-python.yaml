@@ -1,0 +1,23 @@
+id: ept-python
+kind: tool
+name: ept-python
+category: Point clouds, LiDAR & 3D
+subcategory: Indexing & cloud-optimized
+tool_kind: Library
+summary: Python client for querying Entwine Point Tile datasets by bounds and resolution.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/hobu/ept-python
+notes: Pull 3DEP EPT data into NumPy.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 537

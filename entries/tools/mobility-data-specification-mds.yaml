@@ -1,0 +1,21 @@
+id: mobility-data-specification-mds
+kind: tool
+name: Mobility Data Specification (MDS)
+category: Routing, networks, geocoding & LRS
+subcategory: Network & traffic referencing standards
+tool_kind: Format/Standard
+summary: Open Mobility Foundation API spec for cities to exchange data with shared mobility operators.
+open_source: 'yes'
+license: Apache-2.0
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/openmobilityfoundation/mobility-data-specification
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 890

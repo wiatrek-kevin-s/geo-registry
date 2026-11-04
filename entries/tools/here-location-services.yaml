@@ -1,0 +1,26 @@
+id: here-location-services
+kind: tool
+name: HERE Location Services
+category: Commercial GIS platforms & APIs
+subcategory: Location & mapping APIs
+tool_kind: Service/API
+summary: HERE platform APIs for maps, geocoding, routing, traffic and fleet logistics.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- JS
+- MCP
+call:
+- rest
+- js
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://www.here.com/platform
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1408

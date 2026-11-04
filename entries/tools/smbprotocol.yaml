@@ -1,0 +1,22 @@
+id: smbprotocol
+kind: tool
+name: smbprotocol
+category: Connections & storage
+subcategory: Network shares & transfer
+tool_kind: Library
+summary: Pure-Python SMB2/3 client for accessing Windows shares without mounting.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/jborean93/smbprotocol
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1464

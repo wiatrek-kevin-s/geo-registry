@@ -1,0 +1,23 @@
+id: spatialreference-org
+kind: tool
+name: spatialreference.org
+category: Core libraries & formats
+subcategory: Projection & CRS
+tool_kind: Service/API
+summary: Website listing CRS definitions in WKT, PROJ and other formats, now generated from PROJ.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: maintained
+url: https://spatialreference.org
+notes: Lookup source for CRS strings.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 42

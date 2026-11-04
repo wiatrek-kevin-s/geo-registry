@@ -1,0 +1,21 @@
+id: interlis-nas-alkis-sosi
+kind: tool
+name: Interlis / NAS / ALKIS / SOSI
+category: Core libraries & formats
+subcategory: Vector formats
+tool_kind: Format/Standard
+summary: National exchange standards (Swiss, German, Norwegian) for cadastral and topographic data.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open national standards
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://gdal.org/en/stable/drivers/vector/index.html
+notes: Read via GDAL drivers.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 188

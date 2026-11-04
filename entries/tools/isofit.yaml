@@ -1,0 +1,26 @@
+id: isofit
+kind: tool
+name: ISOFIT
+category: Imagery, remote sensing & GeoAI
+subcategory: Hyperspectral
+tool_kind: Toolkit/CLI
+summary: Optimal-estimation framework for atmospheric correction and surface property retrieval from imaging
+  spectrometers.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+- CLI
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/isofit/isofit
+notes: Used for NASA EMIT/AVIRIS
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 381

@@ -1,0 +1,21 @@
+id: maps-in-microsoft-fabric
+kind: tool
+name: Maps in Microsoft Fabric
+category: Commercial GIS platforms & APIs
+subcategory: Microsoft
+tool_kind: Service/API
+summary: Fabric Real-Time Intelligence map item for visualizing streaming and lakehouse geodata.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://blog.fabric.microsoft.com/en-US/blog/maps-in-microsoft-fabric-bring-your-own-imagery-into-real-time-intelligence/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1403

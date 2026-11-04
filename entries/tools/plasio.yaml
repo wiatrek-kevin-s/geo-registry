@@ -1,0 +1,25 @@
+id: plasio
+kind: tool
+name: Plasio
+category: Point clouds, LiDAR & 3D
+subcategory: Web viewers & engines
+tool_kind: Application
+summary: Browser-based viewer for LAS/LAZ and Entwine point clouds.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: JavaScript
+interfaces:
+- GUI
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/hobuinc/plasio
+notes: Older Hobu viewer.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 599

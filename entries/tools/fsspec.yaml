@@ -1,0 +1,24 @@
+id: fsspec
+kind: tool
+name: fsspec
+category: Connections & storage
+subcategory: Object storage
+tool_kind: Library
+summary: Pythonic file-system abstraction with backends for local, HTTP, S3 (s3fs), Azure (adlfs), GCS
+  (gcsfs), SFTP, SMB and more.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/fsspec/filesystem_spec
+notes: Used by GeoPandas, xarray and Dask
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1458

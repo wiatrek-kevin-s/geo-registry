@@ -1,0 +1,26 @@
+id: meos-pymeos
+kind: tool
+name: MEOS / PyMEOS
+category: Spatial databases & query engines
+subcategory: PostgreSQL ecosystem
+tool_kind: Library
+summary: Standalone C library and Python bindings of MobilityDB's temporal geometry types, usable without
+  a database.
+open_source: 'yes'
+license: PostgreSQL
+language: C;Python
+interfaces:
+- Python
+- C/C++
+call:
+- python
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://libmeos.org
+notes: Embeddable trajectory ops without Postgres
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 651

@@ -1,0 +1,22 @@
+id: postgis-jdbc
+kind: tool
+name: PostGIS JDBC
+category: Spatial databases & query engines
+subcategory: Drivers & connectors
+tool_kind: Library
+summary: Java extensions adding geometry types to the PostgreSQL JDBC driver.
+open_source: 'yes'
+license: LGPL-2.1-or-later
+language: Java
+interfaces:
+- Java
+call:
+- java
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/postgis/postgis-java
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 740

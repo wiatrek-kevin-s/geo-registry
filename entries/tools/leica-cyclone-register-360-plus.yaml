@@ -1,0 +1,23 @@
+id: leica-cyclone-register-360-plus
+kind: tool
+name: Leica Cyclone REGISTER 360 PLUS
+category: Point clouds, LiDAR & 3D
+subcategory: Desktop viewers & editors
+tool_kind: Application
+summary: Leica software for automated registration and QA of terrestrial laser scans.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://leica-geosystems.com/products/laser-scanners/software/leica-cyclone
+notes: Part of the Leica Cyclone family.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 593

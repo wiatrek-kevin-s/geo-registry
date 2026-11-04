@@ -1,0 +1,21 @@
+id: dted
+kind: tool
+name: DTED
+category: Core libraries & formats
+subcategory: Raster formats
+tool_kind: Format/Standard
+summary: Military digital terrain elevation data format in fixed tiles.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Public (NGA specification)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://gdal.org/en/stable/drivers/raster/dted.html
+notes: Defence elevation data.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 153

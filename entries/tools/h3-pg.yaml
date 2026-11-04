@@ -1,0 +1,23 @@
+id: h3-pg
+kind: tool
+name: h3-pg
+category: Spatial databases & query engines
+subcategory: PostgreSQL ecosystem
+tool_kind: Extension
+summary: Provides Uber H3 hexagonal grid indexing functions and PostGIS integration inside PostgreSQL.
+open_source: 'yes'
+license: Apache-2.0
+language: C
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/zachasme/h3-pg
+notes: Hex binning in SQL
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 652

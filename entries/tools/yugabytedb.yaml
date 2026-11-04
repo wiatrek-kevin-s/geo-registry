@@ -1,0 +1,23 @@
+id: yugabytedb
+kind: tool
+name: YugabyteDB
+category: Spatial databases & query engines
+subcategory: Open-source RDBMS
+tool_kind: Database
+summary: Distributed PostgreSQL-compatible database that can run PostGIS.
+open_source: 'yes'
+license: Apache-2.0
+language: C++;C
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://www.yugabyte.com
+notes: Limited GiST index support
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 710

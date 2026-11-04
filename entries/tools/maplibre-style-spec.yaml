@@ -1,0 +1,22 @@
+id: maplibre-style-spec
+kind: tool
+name: MapLibre Style Spec
+category: Core libraries & formats
+subcategory: Tile formats
+tool_kind: Format/Standard
+summary: JSON style specification describing how vector tile layers are rendered.
+open_source: 'yes'
+license: BSD-3-Clause
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://maplibre.org/maplibre-style-spec
+notes: Agent can generate map styles.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 206

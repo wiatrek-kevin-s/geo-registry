@@ -1,0 +1,24 @@
+id: openaddresses
+kind: data
+name: OpenAddresses
+summary: Global collection of open address point datasets gathered from government sources, with processing
+  tools.
+publisher: Unknown
+themes:
+- address-data
+- routing-networks-geocoding-lrs
+- open-data-sources
+coverage:
+  region: Global
+license: NOASSERTION
+license_original: Unknown
+access:
+- type: http
+  url: https://openaddresses.io/
+  auth: none
+notes: Per-source licences vary
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 843

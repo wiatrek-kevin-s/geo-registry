@@ -1,0 +1,29 @@
+id: gdal-openfilegdb-driver
+kind: tool
+name: GDAL OpenFileGDB driver
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Open-source GDAL driver reading and writing Esri File Geodatabases without the Esri SDK.
+open_source: 'yes'
+license: MIT
+language: C++
+interfaces:
+- C/C++
+- CLI
+- Python
+call:
+- python
+- cli
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://gdal.org/en/stable/drivers/vector/openfilegdb.html
+notes: Write support since GDAL 3.6.
+also_categories:
+- Connections & storage
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 85

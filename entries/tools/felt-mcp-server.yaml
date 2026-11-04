@@ -1,0 +1,23 @@
+id: felt-mcp-server
+kind: tool
+name: Felt MCP Server
+category: AI, agents & MCP for GIS
+subcategory: Vendor/location MCP servers
+tool_kind: Server
+summary: Hosted MCP with ~30 tools for building Felt maps, running spatial SQL and publishing links.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- MCP
+call:
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://felt.com/blog/introducing-felt-mcp-server
+notes: Business/Enterprise plans
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1530

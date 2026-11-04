@@ -1,0 +1,31 @@
+id: geographiclib
+kind: tool
+name: GeographicLib
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: Accurate geodesic, geoid, magnetic and projection computations on the ellipsoid.
+open_source: 'yes'
+license: MIT
+language: C++ (ports in C, Java, JS, Python, others)
+interfaces:
+- C/C++
+- Python
+- JS
+- Java
+- CLI
+call:
+- python
+- cli
+- js
+- c-cpp
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://geographiclib.sourceforge.io
+notes: Precise distance/area; used by PROJ.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 17

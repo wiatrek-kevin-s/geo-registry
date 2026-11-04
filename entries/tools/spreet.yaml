@@ -1,0 +1,24 @@
+id: spreet
+kind: tool
+name: spreet
+category: Display & visualization
+subcategory: Map style tools & specs
+tool_kind: Toolkit/CLI
+summary: Generates map sprite sheets from SVG icon folders for MapLibre/Mapbox styles.
+open_source: 'yes'
+license: MIT
+language: Rust
+interfaces:
+- CLI
+- Rust
+call:
+- cli
+- rust
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/flother/spreet
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1166

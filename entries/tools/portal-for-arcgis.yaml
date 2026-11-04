@@ -1,0 +1,27 @@
+id: portal-for-arcgis
+kind: tool
+name: Portal for ArcGIS
+category: Servers, standards, tiles & catalogs
+subcategory: Commercial GIS servers & platforms
+tool_kind: Application
+summary: Content management, sharing and identity component of ArcGIS Enterprise for maps, apps and layers.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Java; JavaScript
+interfaces:
+- REST
+- GUI
+- Python
+call:
+- python
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://enterprise.arcgis.com/en/portal/
+notes: Sharing API for item search
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 954

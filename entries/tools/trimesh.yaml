@@ -1,0 +1,23 @@
+id: trimesh
+kind: tool
+name: trimesh
+category: Point clouds, LiDAR & 3D
+subcategory: Point cloud & mesh libraries
+tool_kind: Library
+summary: Python library for loading, analyzing and exporting triangle meshes, including glTF and PLY.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://trimesh.org
+notes: Lightweight mesh ops for building models.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 577

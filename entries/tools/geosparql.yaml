@@ -1,0 +1,23 @@
+id: geosparql
+kind: tool
+name: GeoSPARQL
+category: Servers, standards, tiles & catalogs
+subcategory: OGC web service standards
+tool_kind: Format/Standard
+summary: Vocabulary and query extensions for representing and querying geospatial data in RDF/SPARQL.
+open_source: 'yes'
+license: LicenseRef-OGC-Document
+license_original: OGC document licence
+interfaces:
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://www.ogc.org/standards/geosparql
+notes: Linked-data spatial queries
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 983

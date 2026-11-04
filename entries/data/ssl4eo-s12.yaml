@@ -1,0 +1,20 @@
+id: ssl4eo-s12
+kind: data
+name: SSL4EO-S12
+summary: Self-supervised pretraining dataset and models for Sentinel-1/2.
+publisher: Unknown
+themes:
+- geoai-deep-learning
+- imagery-remote-sensing-geoai
+coverage:
+  region: Unspecified
+license: CC-BY-4.0
+access:
+- type: http
+  url: https://github.com/zhu-xlab/SSL4EO-S12
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 456

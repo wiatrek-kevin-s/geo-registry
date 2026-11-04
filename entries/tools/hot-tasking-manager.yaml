@@ -1,0 +1,24 @@
+id: hot-tasking-manager
+kind: tool
+name: HOT Tasking Manager
+category: OSM & Overture tooling
+subcategory: QA & coordination
+tool_kind: Application
+summary: Splits mapping projects into tasks so many volunteers can map an area in coordination.
+open_source: 'yes'
+license: BSD-2-Clause
+language: Python;JavaScript
+interfaces:
+- GUI
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://tasks.hotosm.org/
+notes: Has a REST API for project/task data
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1219

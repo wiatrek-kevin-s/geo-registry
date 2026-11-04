@@ -1,0 +1,24 @@
+id: ecognition
+kind: tool
+name: eCognition
+category: Imagery, remote sensing & GeoAI
+subcategory: Commercial RS software
+tool_kind: Application
+summary: Trimble object-based image analysis software segmenting and classifying imagery by rule sets.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://geospatial.trimble.com/products/software/trimble-ecognition
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 473

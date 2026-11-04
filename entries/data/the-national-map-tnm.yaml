@@ -1,0 +1,22 @@
+id: the-national-map-tnm
+kind: data
+name: The National Map (TNM)
+summary: USGS portal and Access API for elevation, hydrography, boundaries, transport, names and imagery.
+publisher: Unknown
+themes:
+- us-federal-general
+- open-data-sources
+coverage:
+  region: United States
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.usgs.gov/programs/national-geospatial-program/national-map
+  auth: none
+notes: TNM Access API scriptable
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1235

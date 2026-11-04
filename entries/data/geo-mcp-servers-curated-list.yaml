@@ -1,0 +1,22 @@
+id: geo-mcp-servers-curated-list
+kind: data
+name: geo-mcp-servers (curated list)
+summary: Sparkgeo's tracked catalog of ~86 geospatial MCP servers by category.
+publisher: Unknown
+themes:
+- general-gis-mcp-servers
+- ai-agents-mcp-for-gis
+coverage:
+  region: Unspecified
+license: NOASSERTION
+license_original: Unknown
+access:
+- type: http
+  url: https://github.com/sparkgeo/geo-mcp-servers
+  auth: none
+notes: Good source for ongoing discovery
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1519

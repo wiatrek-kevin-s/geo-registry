@@ -1,0 +1,22 @@
+id: potree-desktop
+kind: tool
+name: Potree Desktop
+category: Point clouds, LiDAR & 3D
+subcategory: Web viewers & engines
+tool_kind: Application
+summary: Electron desktop wrapper for Potree with drag-and-drop conversion and viewing of point clouds.
+open_source: 'yes'
+license: BSD-2-Clause
+language: JavaScript
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/potree/PotreeDesktop
+notes: Offline viewer.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 598

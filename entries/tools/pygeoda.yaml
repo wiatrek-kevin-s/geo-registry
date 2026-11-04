@@ -1,0 +1,24 @@
+id: pygeoda
+kind: tool
+name: pygeoda
+category: Desktop GIS & analysis engines
+subcategory: Spatial statistics (Python / PySAL)
+tool_kind: Library
+summary: Python bindings to the libgeoda engine for GeoDa's weights, LISA and clustering functions.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: Python; C++
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/GeoDaCenter/pygeoda
+notes: Licence not confirmed
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 317

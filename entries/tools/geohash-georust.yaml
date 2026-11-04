@@ -1,0 +1,23 @@
+id: geohash-georust
+kind: tool
+name: geohash (GeoRust)
+category: Core libraries & formats
+subcategory: Discrete global grids & geocodes
+tool_kind: Library
+summary: Rust crate for encoding and decoding geohashes and neighbours.
+open_source: 'yes'
+license: MIT OR Apache-2.0
+language: Rust
+interfaces:
+- Rust
+call:
+- rust
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/georust/geohash
+notes: Geohash in Rust.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 220

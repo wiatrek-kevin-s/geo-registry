@@ -1,0 +1,21 @@
+id: openlr
+kind: tool
+name: OpenLR
+category: Routing, networks, geocoding & LRS
+subcategory: Network & traffic referencing standards
+tool_kind: Format/Standard
+summary: Map-agnostic dynamic location referencing method encoding road locations as compact binary or
+  XML references.
+open_source: 'yes'
+license: Apache-2.0
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.openlr-association.com/
+notes: Lets traffic data move between different maps
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 878

@@ -1,0 +1,23 @@
+id: pclpy
+kind: tool
+name: pclpy
+category: Point clouds, LiDAR & 3D
+subcategory: Point cloud & mesh libraries
+tool_kind: Library
+summary: Python bindings for a subset of the Point Cloud Library.
+open_source: 'yes'
+license: MIT
+language: Python;C++
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/davidcaron/pclpy
+notes: Partial PCL access from Python.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 574

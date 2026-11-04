@@ -1,0 +1,24 @@
+id: d3-geo-projection
+kind: tool
+name: d3-geo-projection
+category: Display & visualization
+subcategory: Charting & dataviz libraries with maps
+tool_kind: Library
+summary: Extended set of cartographic projections for d3-geo, with CLI tools.
+open_source: 'yes'
+license: ISC
+language: JavaScript
+interfaces:
+- JS
+- CLI
+call:
+- cli
+- js
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/d3/d3-geo-projection
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1117

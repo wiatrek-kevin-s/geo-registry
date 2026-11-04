@@ -1,0 +1,23 @@
+id: llm-geo
+kind: tool
+name: LLM-Geo
+category: AI, agents & MCP for GIS
+subcategory: LLM GIS agents & research
+tool_kind: Toolkit/CLI
+summary: Penn State prototype autonomous GIS that uses an LLM to plan, code and run spatial analysis.
+open_source: 'yes'
+license: GPL-3.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/gladcolor/LLM-Geo
+notes: 2026 tests with local Gemma models
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1552

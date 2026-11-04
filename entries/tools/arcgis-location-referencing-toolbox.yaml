@@ -1,0 +1,26 @@
+id: arcgis-location-referencing-toolbox
+kind: tool
+name: ArcGIS Location Referencing toolbox
+category: Routing, networks, geocoding & LRS
+subcategory: Linear referencing (LRS)
+tool_kind: Toolkit/CLI
+summary: ArcGIS Pro geoprocessing tools to create LRS, routes and events, generate calibration points
+  and apply edits.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Python
+interfaces:
+- Python
+- GUI
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://pro.arcgis.com/en/pro-app/latest/tool-reference/location-referencing/an-overview-of-the-location-referencing-toolbox.htm
+notes: Scriptable via arcpy
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 858

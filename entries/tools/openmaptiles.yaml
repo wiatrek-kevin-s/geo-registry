@@ -1,0 +1,26 @@
+id: openmaptiles
+kind: tool
+name: OpenMapTiles
+category: Servers, standards, tiles & catalogs
+subcategory: Tile generation & packaging
+tool_kind: Toolkit/CLI
+summary: Open vector tile schema and toolchain for producing OSM-based basemaps.
+open_source: 'yes'
+license: LicenseRef-Multiple
+license_original: BSD-3-Clause (code); CC-BY-4.0 (schema)
+language: SQL; Python
+interfaces:
+- CLI
+- SQL
+call:
+- cli
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://openmaptiles.org
+notes: Schema used by many styles
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 928

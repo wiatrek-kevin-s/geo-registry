@@ -1,0 +1,29 @@
+id: spatialite
+kind: tool
+name: SpatiaLite
+category: Spatial databases & query engines
+subcategory: Embedded / file databases
+tool_kind: Extension
+summary: Loadable SQLite extension adding geometry types, R*Tree-backed spatial indexes and OGC SQL functions.
+open_source: 'yes'
+license: MPL-1.1 OR GPL-2.0-or-later OR LGPL-2.1-or-later
+language: C
+interfaces:
+- SQL
+- CLI
+- Python
+- C/C++
+call:
+- python
+- cli
+- sql
+- c-cpp
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.gaia-gis.it/fossil/libspatialite
+notes: Zero-server spatial SQL for a desktop app
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 665

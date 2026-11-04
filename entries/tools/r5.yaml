@@ -1,0 +1,26 @@
+id: r5
+kind: tool
+name: R5
+category: Routing, networks, geocoding & LRS
+subcategory: Accessibility & transport modeling
+tool_kind: Server
+summary: Conveyal's rapid realistic routing engine for many-to-many multimodal accessibility and travel-time
+  distributions.
+open_source: 'yes'
+license: MIT
+language: Java
+interfaces:
+- Java
+- REST
+call:
+- rest
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/conveyal/r5
+notes: Engine behind r5py and r5r
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 773

@@ -1,0 +1,21 @@
+id: prithvi-eo-2-0
+kind: data
+name: Prithvi-EO-2.0
+summary: NASA/IBM multi-temporal vision transformer for HLS imagery, 300M-600M parameters.
+publisher: Unknown
+themes:
+- geospatial-foundation-models
+- ai-agents-mcp-for-gis
+coverage:
+  region: Unspecified
+license: Apache-2.0
+access:
+- type: http
+  url: https://huggingface.co/ibm-nasa-geospatial
+  auth: none
+notes: Fine-tune with TerraTorch
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1563

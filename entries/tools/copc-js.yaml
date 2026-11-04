@@ -1,0 +1,23 @@
+id: copc-js
+kind: tool
+name: copc.js
+category: Point clouds, LiDAR & 3D
+subcategory: Indexing & cloud-optimized
+tool_kind: Library
+summary: JavaScript library that reads COPC headers and octree nodes over HTTP range requests.
+open_source: 'yes'
+license: MIT
+language: TypeScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/connormanning/copc.js
+notes: Browser-side COPC streaming.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 536

@@ -1,0 +1,23 @@
+id: epsg-io
+kind: tool
+name: epsg.io
+category: Core libraries & formats
+subcategory: Projection & CRS
+tool_kind: Service/API
+summary: Website and API for searching CRS definitions and transforming coordinates, run by MapTiler.
+open_source: partial
+license: NOASSERTION
+license_original: Unknown
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: maintained
+url: https://epsg.io
+notes: Quick CRS lookup; API needs key.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 43

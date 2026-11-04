@@ -1,0 +1,23 @@
+id: dggrid4py
+kind: tool
+name: dggrid4py
+category: Core libraries & formats
+subcategory: Discrete global grids & geocodes
+tool_kind: Library
+summary: Python wrapper that drives the DGGRID executable and returns GeoPandas outputs.
+open_source: 'yes'
+license: AGPL-3.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/allixender/dggrid4py
+notes: Needs DGGRID binary.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 122

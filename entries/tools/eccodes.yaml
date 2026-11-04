@@ -1,0 +1,27 @@
+id: eccodes
+kind: tool
+name: ecCodes
+category: Core libraries & formats
+subcategory: Raster formats
+tool_kind: Library
+summary: ECMWF library and tools for decoding and encoding GRIB and BUFR.
+open_source: 'yes'
+license: Apache-2.0
+language: C
+interfaces:
+- C/C++
+- Python
+- CLI
+call:
+- python
+- cli
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/ecmwf/eccodes
+notes: Needed to read GRIB.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 141

@@ -1,0 +1,26 @@
+id: earth-search
+kind: tool
+name: Earth Search
+category: Imagery, remote sensing & GeoAI
+subcategory: Cloud EO platforms
+tool_kind: Service/API
+summary: Element 84 public STAC API indexing open datasets on AWS such as Sentinel-2, Landsat and Copernicus
+  DEM.
+open_source: partial
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://earth-search.aws.element84.com/v1
+notes: Free, no auth; good default STAC source
+also_categories:
+- Commercial GIS platforms & APIs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 397

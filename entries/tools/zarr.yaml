@@ -1,0 +1,21 @@
+id: zarr
+kind: tool
+name: Zarr
+category: Core libraries & formats
+subcategory: Raster formats
+tool_kind: Format/Standard
+summary: Chunked, compressed N-dimensional array storage format designed for cloud object stores.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open specification (OGC community standard)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://zarr.dev
+notes: Cloud-native datacubes.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 137

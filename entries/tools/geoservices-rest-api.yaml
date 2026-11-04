@@ -1,0 +1,25 @@
+id: geoservices-rest-api
+kind: tool
+name: GeoServices REST API
+category: Servers, standards, tiles & catalogs
+subcategory: Esri REST & industry specs
+tool_kind: Format/Standard
+summary: OGC community standard documenting Esri's REST API pattern for map, feature and image services.
+open_source: 'yes'
+license: LicenseRef-OGC-Document
+license_original: OGC document licence
+interfaces:
+- REST
+- OGC
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: archived
+url: https://www.ogc.org/standards/geoservices
+notes: Formalised Esri REST spec
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 968

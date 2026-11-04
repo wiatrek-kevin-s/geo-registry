@@ -1,0 +1,20 @@
+id: microsoft-building-footprints
+kind: data
+name: Microsoft Building Footprints
+summary: ML-derived global building footprints, including a US dataset.
+publisher: Microsoft
+themes:
+- global-buildings
+- open-data-sources
+coverage:
+  region: Unspecified
+license: ODbL-1.0
+access:
+- type: http
+  url: https://github.com/microsoft/GlobalMLBuildingFootprints
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1307

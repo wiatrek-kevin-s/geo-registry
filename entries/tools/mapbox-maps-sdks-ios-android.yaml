@@ -1,0 +1,24 @@
+id: mapbox-maps-sdks-ios-android
+kind: tool
+name: Mapbox Maps SDKs (iOS/Android)
+category: Display & visualization
+subcategory: Web map libraries
+tool_kind: Library
+summary: Native mobile map SDKs rendering Mapbox styles and vector tiles.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++;Swift;Kotlin
+interfaces:
+- C/C++
+call:
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://docs.mapbox.com/
+notes: Commercial mobile counterpart to Mapbox GL JS
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1030

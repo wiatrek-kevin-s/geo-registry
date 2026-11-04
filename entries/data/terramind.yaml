@@ -1,0 +1,21 @@
+id: terramind
+kind: data
+name: TerraMind
+summary: IBM/ESA multimodal generative EO foundation model trained on TerraMesh.
+publisher: Unknown
+themes:
+- geospatial-foundation-models
+- ai-agents-mcp-for-gis
+coverage:
+  region: Unspecified
+license: Apache-2.0
+access:
+- type: http
+  url: https://huggingface.co/ibm-esa-geospatial/TerraMind-1.0-large
+  auth: none
+notes: Tiny/small variants exist for edge use
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1564

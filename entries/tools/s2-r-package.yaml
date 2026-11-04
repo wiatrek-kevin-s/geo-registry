@@ -1,0 +1,23 @@
+id: s2-r-package
+kind: tool
+name: s2 (R package)
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: R bindings to S2 used by sf for spherical geometry on geographic coordinates.
+open_source: 'yes'
+license: Apache-2.0
+language: R/C++
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/r-spatial/s2
+notes: Default for sf geographic ops.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 21

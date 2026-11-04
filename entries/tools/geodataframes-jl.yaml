@@ -1,0 +1,23 @@
+id: geodataframes-jl
+kind: tool
+name: GeoDataFrames.jl
+category: Desktop GIS & analysis engines
+subcategory: Julia geospatial
+tool_kind: Library
+summary: Reading, writing and operating on vector data as DataFrames in Julia via GDAL.
+open_source: 'yes'
+license: MIT
+language: Julia
+interfaces:
+- plugin
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/evetion/GeoDataFrames.jl
+notes: Repo location and licence not confirmed
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 357

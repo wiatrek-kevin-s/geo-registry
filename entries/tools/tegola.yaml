@@ -1,0 +1,24 @@
+id: tegola
+kind: tool
+name: Tegola
+category: Servers, standards, tiles & catalogs
+subcategory: Tile servers
+tool_kind: Server
+summary: Vector tile server that generates MVT tiles from PostGIS and GeoPackage with built-in caching.
+open_source: 'yes'
+license: MIT
+language: Go
+interfaces:
+- CLI
+- REST
+call:
+- cli
+- rest
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/go-spatial/tegola
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 910

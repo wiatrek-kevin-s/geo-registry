@@ -1,0 +1,21 @@
+id: esri-ascii-grid-aaigrid
+kind: tool
+name: Esri ASCII Grid (AAIGrid)
+category: Core libraries & formats
+subcategory: Raster formats
+tool_kind: Format/Standard
+summary: Plain-text raster grid with header giving extent and cell size.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open (documented)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://gdal.org/en/stable/drivers/raster/aaigrid.html
+notes: Easy for agents to read/write.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 147

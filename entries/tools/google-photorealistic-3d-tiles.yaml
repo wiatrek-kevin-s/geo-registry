@@ -1,0 +1,25 @@
+id: google-photorealistic-3d-tiles
+kind: tool
+name: Google Photorealistic 3D Tiles
+category: Point clouds, LiDAR & 3D
+subcategory: 3D tiles & streaming formats
+tool_kind: Service/API
+summary: Google Map Tiles API service streaming photogrammetric 3D Tiles of cities worldwide.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://developers.google.com/maps/documentation/tile/3d-tiles
+notes: API key and attribution required; caching limits.
+also_categories:
+- Display & visualization
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 618

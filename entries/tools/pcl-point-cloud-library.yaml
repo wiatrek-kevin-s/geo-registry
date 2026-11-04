@@ -1,0 +1,24 @@
+id: pcl-point-cloud-library
+kind: tool
+name: PCL (Point Cloud Library)
+category: Point clouds, LiDAR & 3D
+subcategory: Point cloud & mesh libraries
+tool_kind: Library
+summary: Large C++ library of point cloud filtering, segmentation, registration and surface reconstruction
+  algorithms.
+open_source: 'yes'
+license: BSD-3-Clause
+language: C++
+interfaces:
+- C/C++
+call:
+- c-cpp
+wrapped_by_columbus: false
+project_status: maintained
+url: https://pointclouds.org
+notes: Heavy build; Python bindings are unofficial.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 573

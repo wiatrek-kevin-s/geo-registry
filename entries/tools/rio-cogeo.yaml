@@ -1,0 +1,27 @@
+id: rio-cogeo
+kind: tool
+name: rio-cogeo
+category: Core libraries & formats
+subcategory: Raster formats
+tool_kind: Library
+summary: Rasterio plugin to create and validate Cloud Optimized GeoTIFFs.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+- CLI
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/cogeotiff/rio-cogeo
+notes: Agent can validate COGs.
+also_categories:
+- Imagery, remote sensing & GeoAI
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 132

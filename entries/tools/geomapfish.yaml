@@ -1,0 +1,23 @@
+id: geomapfish
+kind: tool
+name: GeoMapFish
+category: Display & visualization
+subcategory: Web GIS application frameworks
+tool_kind: Platform
+summary: Camptocamp web GIS platform (c2cgeoportal server and ngeo client) for building geoportals.
+open_source: 'yes'
+license: BSD-2-Clause
+language: Python;JavaScript
+interfaces:
+- GUI
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://geomapfish.org/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1157

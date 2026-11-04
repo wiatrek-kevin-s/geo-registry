@@ -1,0 +1,21 @@
+id: gnis
+kind: data
+name: GNIS
+summary: Official US geographic place-name database.
+publisher: Unknown
+themes:
+- us-federal-names
+- open-data-sources
+coverage:
+  region: United States
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.usgs.gov/tools/geographic-names-information-system-gnis
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1246

@@ -1,0 +1,22 @@
+id: mappymatch
+kind: tool
+name: mappymatch
+category: Routing, networks, geocoding & LRS
+subcategory: Routing engines
+tool_kind: Library
+summary: NREL package for matching GPS traces to road networks using OSM or custom networks.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/NREL/mappymatch
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 771

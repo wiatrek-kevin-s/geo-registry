@@ -1,0 +1,21 @@
+id: geojson
+kind: tool
+name: GeoJSON
+category: Core libraries & formats
+subcategory: Vector formats
+tool_kind: Format/Standard
+summary: JSON encoding of features and geometries in WGS84 coordinates.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open standard (IETF RFC 7946)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://datatracker.ietf.org/doc/html/rfc7946
+notes: Native format for LLM tool payloads.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 164

@@ -1,0 +1,27 @@
+id: ogc-api-dggs
+kind: tool
+name: OGC API - DGGS
+category: Core libraries & formats
+subcategory: Discrete global grids & geocodes
+tool_kind: Format/Standard
+summary: OGC API standard for retrieving data organised by discrete global grid zones.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open standard
+interfaces:
+- REST
+- OGC
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://ogcapi.ogc.org/dggs
+notes: Emerging web API for DGGS data.
+also_categories:
+- Servers, standards, tiles & catalogs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 119

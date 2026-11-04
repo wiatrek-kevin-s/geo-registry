@@ -1,0 +1,26 @@
+id: igraph
+kind: tool
+name: igraph
+category: Routing, networks, geocoding & LRS
+subcategory: Accessibility & transport modeling
+tool_kind: Library
+summary: Fast graph analysis library usable for large road or transit networks.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: C;Python;R
+interfaces:
+- Python
+- R
+- C/C++
+call:
+- python
+- r
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://igraph.org/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 782

@@ -1,0 +1,22 @@
+id: here-location-reasoning
+kind: tool
+name: HERE Location Reasoning
+category: AI, agents & MCP for GIS
+subcategory: Vendor/location MCP servers
+tool_kind: Server
+summary: HERE's hosted MCP endpoint for geocoding, routing, transit, traffic, isolines and map rendering.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- MCP
+call:
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://docs.here.com/location-reasoning
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1524

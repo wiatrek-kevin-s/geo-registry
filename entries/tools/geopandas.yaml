@@ -1,0 +1,25 @@
+id: geopandas
+kind: tool
+name: GeoPandas
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Extends pandas with geometry columns and spatial operations for vector data.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://geopandas.org
+notes: Most common agent-friendly vector API.
+also_categories:
+- Desktop GIS & analysis engines
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 92

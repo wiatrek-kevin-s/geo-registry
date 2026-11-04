@@ -1,0 +1,22 @@
+id: sqlalchemy-geoalchemy2
+kind: tool
+name: SQLAlchemy + GeoAlchemy2
+category: Spatial databases & query engines
+subcategory: Drivers & connectors
+tool_kind: Library
+summary: ORM/SQL toolkit and its spatial extension for PostGIS, SpatiaLite, MySQL and others.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://geoalchemy-2.readthedocs.io
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 739

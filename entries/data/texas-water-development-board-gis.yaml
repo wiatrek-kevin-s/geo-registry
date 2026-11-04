@@ -1,0 +1,21 @@
+id: texas-water-development-board-gis
+kind: data
+name: Texas Water Development Board GIS
+summary: Water planning, groundwater, reservoirs, flood planning and water-well data for Texas.
+publisher: Texas Water Development Board
+themes:
+- texas
+- open-data-sources
+coverage:
+  region: Texas
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.twdb.texas.gov/mapping/gisdata.asp
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1338

@@ -1,0 +1,22 @@
+id: curb-data-specification-cds
+kind: tool
+name: Curb Data Specification (CDS)
+category: Routing, networks, geocoding & LRS
+subcategory: Network & traffic referencing standards
+tool_kind: Format/Standard
+summary: Open Mobility Foundation spec describing curb regulations and usage linked to street references.
+open_source: 'yes'
+license: Apache-2.0
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/openmobilityfoundation/curb-data-specification
+notes: License unverified
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 891

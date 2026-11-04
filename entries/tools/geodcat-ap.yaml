@@ -1,0 +1,23 @@
+id: geodcat-ap
+kind: tool
+name: GeoDCAT-AP
+category: Servers, standards, tiles & catalogs
+subcategory: Tile, style & catalog specs
+tool_kind: Format/Standard
+summary: Geospatial extension of the DCAT application profile for publishing spatial dataset metadata
+  as linked data.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://semiceu.github.io/GeoDCAT-AP/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1012

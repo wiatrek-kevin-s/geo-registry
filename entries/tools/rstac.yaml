@@ -1,0 +1,22 @@
+id: rstac
+kind: tool
+name: rstac
+category: Imagery, remote sensing & GeoAI
+subcategory: STAC ecosystem
+tool_kind: Library
+summary: R client for searching STAC APIs and downloading assets.
+open_source: 'yes'
+license: MIT
+language: R
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/brazil-data-cube/rstac
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 435

@@ -1,0 +1,23 @@
+id: usgs-earthexplorer
+kind: data
+name: USGS EarthExplorer
+summary: USGS portal for searching and ordering Landsat, aerial and other remote sensing data.
+publisher: U.S. Geological Survey
+themes:
+- cloud-eo-platforms
+- imagery-remote-sensing-geoai
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://earthexplorer.usgs.gov
+  auth: none
+notes: M2M API needs approval
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 410

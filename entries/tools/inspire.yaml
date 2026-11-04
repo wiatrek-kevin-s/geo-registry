@@ -1,0 +1,26 @@
+id: inspire
+kind: tool
+name: INSPIRE
+category: Servers, standards, tiles & catalogs
+subcategory: Tile, style & catalog specs
+tool_kind: Format/Standard
+summary: EU directive and technical guidelines defining harmonised data specs, metadata and network services
+  for spatial data.
+open_source: 'yes'
+license: LicenseRef-Public-Domain
+license_original: Public domain
+interfaces:
+- OGC
+- REST
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://inspire.ec.europa.eu
+notes: Relevant for EU data sources
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1011

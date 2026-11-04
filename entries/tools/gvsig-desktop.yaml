@@ -1,0 +1,29 @@
+id: gvsig-desktop
+kind: tool
+name: gvSIG Desktop
+category: Desktop GIS & analysis engines
+subcategory: Open-source desktop GIS
+tool_kind: Application
+summary: Java desktop GIS from the gvSIG Association with vector editing, geoprocessing and CAD-style
+  tools, popular in Spain and Latin America.
+open_source: 'yes'
+license: GPL-3.0-or-later
+language: Java
+interfaces:
+- GUI
+- Java
+- Python
+- plugin
+call:
+- python
+- java
+- plugin
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://www.gvsig.com
+notes: JVM-based; Jython scripting
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 227

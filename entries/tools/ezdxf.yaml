@@ -1,0 +1,23 @@
+id: ezdxf
+kind: tool
+name: ezdxf
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Python library for creating and editing DXF CAD drawings.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/mozman/ezdxf
+notes: CAD interop without AutoCAD.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 81

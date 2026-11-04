@@ -1,0 +1,23 @@
+id: terraformer
+kind: tool
+name: Terraformer
+category: Connections & storage
+subcategory: Esri connections & auth
+tool_kind: Library
+summary: JS library for converting between GeoJSON, ArcGIS JSON and WKT (successor of Esri/terraformer).
+open_source: 'yes'
+license: MIT
+language: JavaScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/terraformer-js/terraformer
+notes: Legacy Esri/terraformer repo archived 2021
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1438

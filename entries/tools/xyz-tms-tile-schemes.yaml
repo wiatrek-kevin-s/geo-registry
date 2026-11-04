@@ -1,0 +1,23 @@
+id: xyz-tms-tile-schemes
+kind: tool
+name: XYZ / TMS tile schemes
+category: Core libraries & formats
+subcategory: Tile formats
+tool_kind: Format/Standard
+summary: URL templates and Y-axis conventions for addressing Web Mercator map tiles.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open conventions
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames
+notes: Tile math for any basemap.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 204

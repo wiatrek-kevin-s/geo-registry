@@ -1,0 +1,24 @@
+id: sharedstreets-js
+kind: tool
+name: sharedstreets-js
+category: Routing, networks, geocoding & LRS
+subcategory: Network & traffic referencing standards
+tool_kind: Toolkit/CLI
+summary: CLI and library that match GPS traces and line data to SharedStreets references.
+open_source: 'yes'
+license: MIT
+language: JS
+interfaces:
+- CLI
+- JS
+call:
+- cli
+- js
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/sharedstreets/sharedstreets-js
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 884

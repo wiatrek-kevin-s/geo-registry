@@ -1,0 +1,21 @@
+id: encoded-polyline
+kind: tool
+name: Encoded Polyline
+category: Core libraries & formats
+subcategory: Vector formats
+tool_kind: Format/Standard
+summary: Google's compact ASCII encoding of coordinate sequences, used by routing APIs.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open (documented)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://developers.google.com/maps/documentation/utilities/polylinealgorithm
+notes: Decode routing results.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 178

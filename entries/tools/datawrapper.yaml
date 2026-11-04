@@ -1,0 +1,23 @@
+id: datawrapper
+kind: tool
+name: Datawrapper
+category: Display & visualization
+subcategory: BI & dashboard maps
+tool_kind: Service/API
+summary: Hosted tool for making publishable choropleth, symbol and locator maps for journalism.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.datawrapper.de/maps
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1135

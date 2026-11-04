@@ -1,0 +1,25 @@
+id: pg-tileserv
+kind: tool
+name: pg_tileserv
+category: Spatial databases & query engines
+subcategory: PostgreSQL ecosystem
+tool_kind: Server
+summary: Serves Mapbox vector tiles directly from PostGIS tables and functions.
+open_source: 'yes'
+license: Apache-2.0
+language: Go
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/CrunchyData/pg_tileserv
+notes: Overlaps tile-server category
+also_categories:
+- Servers, standards, tiles & catalogs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 657

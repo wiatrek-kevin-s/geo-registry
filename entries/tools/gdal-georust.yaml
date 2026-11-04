@@ -1,0 +1,23 @@
+id: gdal-georust
+kind: tool
+name: gdal (GeoRust)
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Rust bindings to GDAL for raster and vector IO.
+open_source: 'yes'
+license: MIT
+language: Rust
+interfaces:
+- Rust
+call:
+- rust
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/georust/gdal
+notes: Brings GDAL formats to a Rust app.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 50

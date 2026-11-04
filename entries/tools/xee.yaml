@@ -1,0 +1,23 @@
+id: xee
+kind: tool
+name: Xee
+category: Imagery, remote sensing & GeoAI
+subcategory: Cloud EO platforms
+tool_kind: Library
+summary: Xarray backend that opens Earth Engine image collections as lazily loaded datasets.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/google/Xee
+notes: Bridges GEE to xarray tooling
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 393

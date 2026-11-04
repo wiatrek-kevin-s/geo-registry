@@ -1,0 +1,27 @@
+id: arcgis-geoanalytics-engine
+kind: tool
+name: ArcGIS GeoAnalytics Engine
+category: Commercial GIS platforms & APIs
+subcategory: Esri ArcGIS
+tool_kind: Library
+summary: Spatial SQL functions and analysis tools plug-in for Apache Spark clusters (Databricks, EMR,
+  Synapse etc.).
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Scala; Python
+interfaces:
+- Python
+- SQL
+call:
+- python
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://www.esri.com/en-us/arcgis/products/arcgis-geoanalytics-engine/overview
+notes: Big-data option; needs Spark, not desktop-friendly
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1372

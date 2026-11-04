@@ -1,0 +1,24 @@
+id: unixodbc
+kind: tool
+name: unixODBC
+category: Connections & storage
+subcategory: Database drivers
+tool_kind: Library
+summary: ODBC driver manager for Linux and Unix.
+open_source: 'yes'
+license: LGPL-2.1
+language: C
+interfaces:
+- C/C++
+- CLI
+call:
+- cli
+- c-cpp
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.unixodbc.org/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1426

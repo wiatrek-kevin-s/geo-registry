@@ -1,0 +1,22 @@
+id: data-gov
+kind: data
+name: data.gov
+summary: Federal open-data catalog indexing datasets across agencies via CKAN.
+publisher: Unknown
+themes:
+- us-federal-catalogs
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Multiple
+license_original: Mixed
+access:
+- type: http
+  url: https://catalog.data.gov/
+  auth: none
+notes: CKAN API search
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1290

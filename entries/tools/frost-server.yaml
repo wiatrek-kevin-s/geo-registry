@@ -1,0 +1,25 @@
+id: frost-server
+kind: tool
+name: FROST-Server
+category: Servers, standards, tiles & catalogs
+subcategory: Processing & sensor services
+tool_kind: Server
+summary: Fraunhofer's full implementation of OGC SensorThings API with MQTT support.
+open_source: 'yes'
+license: LGPL-3.0-only
+language: Java
+interfaces:
+- REST
+- OGC
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/FraunhoferIOSB/FROST-Server
+notes: Most complete STA server
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 949

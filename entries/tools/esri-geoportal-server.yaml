@@ -1,0 +1,25 @@
+id: esri-geoportal-server
+kind: tool
+name: Esri Geoportal Server
+category: Servers, standards, tiles & catalogs
+subcategory: Metadata catalogs & data portals
+tool_kind: Application
+summary: Open-source metadata catalog with CSW, OpenSearch and ISO metadata harvesting backed by Elasticsearch.
+open_source: 'yes'
+license: Apache-2.0
+language: Java; JavaScript
+interfaces:
+- REST
+- OGC
+- GUI
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/Esri/geoportal-server-catalog
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 938

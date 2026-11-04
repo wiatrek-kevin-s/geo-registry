@@ -1,0 +1,27 @@
+id: a5
+kind: tool
+name: A5
+category: Core libraries & formats
+subcategory: Discrete global grids & geocodes
+tool_kind: Library
+summary: Pentagonal equal-area discrete global grid system with JS, Rust and Python implementations.
+open_source: 'yes'
+license: Apache-2.0
+language: TypeScript (Rust, Python ports)
+interfaces:
+- JS
+- Rust
+- Python
+call:
+- python
+- js
+- rust
+wrapped_by_columbus: false
+project_status: active
+url: https://a5geo.org
+notes: New equal-area alternative to H3.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 123

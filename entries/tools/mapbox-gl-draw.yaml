@@ -1,0 +1,25 @@
+id: mapbox-gl-draw
+kind: tool
+name: Mapbox GL Draw
+category: Display & visualization
+subcategory: MapLibre/OpenLayers ecosystem
+tool_kind: Extension
+summary: Drawing and editing controls for Mapbox GL JS and MapLibre GL JS maps.
+open_source: 'yes'
+license: ISC
+language: JavaScript
+interfaces:
+- JS
+- plugin
+call:
+- js
+- plugin
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/mapbox/mapbox-gl-draw
+notes: Works with MapLibre with minor shims
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1043

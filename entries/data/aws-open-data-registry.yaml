@@ -1,0 +1,21 @@
+id: aws-open-data-registry
+kind: data
+name: AWS Open Data Registry
+summary: Registry of public datasets hosted on Amazon S3, many geospatial.
+publisher: Unknown
+themes:
+- catalogs
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Multiple
+license_original: Mixed
+access:
+- type: http
+  url: https://registry.opendata.aws/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1330

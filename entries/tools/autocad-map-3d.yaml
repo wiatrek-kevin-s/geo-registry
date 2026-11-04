@@ -1,0 +1,28 @@
+id: autocad-map-3d
+kind: tool
+name: AutoCAD Map 3D
+category: Desktop GIS & analysis engines
+subcategory: Commercial desktop GIS
+tool_kind: Application
+summary: AutoCAD toolset that adds GIS data access, FDO connections, topology and map analysis to CAD
+  drafting.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++; .NET
+interfaces:
+- GUI
+- plugin
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://www.autodesk.com/products/autocad-map-3d/overview
+notes: CAD/GIS bridge; FDO data access
+also_categories:
+- Commercial GIS platforms & APIs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 263

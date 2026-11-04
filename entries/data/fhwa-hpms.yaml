@@ -1,0 +1,21 @@
+id: fhwa-hpms
+kind: data
+name: FHWA HPMS
+summary: Highway Performance Monitoring System road inventory with traffic volumes.
+publisher: Federal Highway Administration
+themes:
+- us-federal-transportation
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.fhwa.dot.gov/policyinformation/hpms.cfm
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1287

@@ -1,0 +1,22 @@
+id: rasters-jl
+kind: tool
+name: Rasters.jl
+category: Desktop GIS & analysis engines
+subcategory: Julia geospatial
+tool_kind: Library
+summary: Julia package for reading, manipulating and analysing raster data with named dimensions.
+open_source: 'yes'
+license: MIT
+language: Julia
+interfaces:
+- plugin
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/rafaqz/Rasters.jl
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 356

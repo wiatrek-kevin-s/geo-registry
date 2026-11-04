@@ -1,0 +1,30 @@
+[package]
+name = "geo-registry"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.89"
+license = "Apache-2.0"
+description = "Validate, index and search the Columbus geo-registry entries."
+repository = "https://github.com/wiatrek-kevin-s/geo-registry"
+publish = false
+
+[[bin]]
+name = "geo-registry"
+path = "src/main.rs"
+
+[lib]
+name = "geo_registry"
+path = "src/lib.rs"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4.6", features = ["derive"] }
+jsonschema = { version = "0.60", default-features = false }
+rusqlite = { version = "0.41", features = ["bundled"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+serde_norway = "0.9"
+sha2 = "0.11"
+
+[dev-dependencies]
+tempfile = "3"

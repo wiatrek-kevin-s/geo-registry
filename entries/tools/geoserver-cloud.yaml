@@ -1,0 +1,25 @@
+id: geoserver-cloud
+kind: tool
+name: GeoServer Cloud
+category: Servers, standards, tiles & catalogs
+subcategory: Map & feature servers
+tool_kind: Server
+summary: Splits GeoServer into containerised microservices for scalable Kubernetes or Docker deployments.
+open_source: 'yes'
+license: GPL-2.0-only
+language: Java
+interfaces:
+- REST
+- OGC
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/geoserver/geoserver-cloud
+notes: Cloud-scale option; heavy for a desktop app
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 894

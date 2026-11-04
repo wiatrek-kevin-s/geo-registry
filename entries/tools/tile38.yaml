@@ -1,0 +1,25 @@
+id: tile38
+kind: tool
+name: Tile38
+category: Spatial databases & query engines
+subcategory: NoSQL / search / KV
+tool_kind: Database
+summary: In-memory geospatial database and geofencing server speaking the Redis protocol.
+open_source: 'yes'
+license: MIT
+language: Go
+interfaces:
+- CLI
+- REST
+call:
+- cli
+- rest
+wrapped_by_columbus: false
+project_status: maintained
+url: https://tile38.com
+notes: Real-time geofences; single Go binary
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 720

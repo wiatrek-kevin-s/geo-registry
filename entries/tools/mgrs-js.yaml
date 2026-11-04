@@ -1,0 +1,23 @@
+id: mgrs-js
+kind: tool
+name: mgrs (JS)
+category: Core libraries & formats
+subcategory: Discrete global grids & geocodes
+tool_kind: Library
+summary: JavaScript conversion between MGRS and latitude/longitude, part of proj4js org.
+open_source: 'yes'
+license: MIT
+language: JavaScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/proj4js/mgrs
+notes: MGRS in a web UI.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 117

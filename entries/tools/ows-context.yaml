@@ -1,0 +1,22 @@
+id: ows-context
+kind: tool
+name: OWS Context
+category: Servers, standards, tiles & catalogs
+subcategory: OGC web service standards
+tool_kind: Format/Standard
+summary: Encodes a set of configured map layers and services for sharing between applications.
+open_source: 'yes'
+license: LicenseRef-OGC-Document
+license_original: OGC document licence
+interfaces:
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://www.ogc.org/standards/owc
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 980

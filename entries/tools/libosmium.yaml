@@ -1,0 +1,29 @@
+id: libosmium
+kind: tool
+name: libosmium
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Libosmium is a fast C++ library for processing OpenStreetMap data files, with the osmium CLI.
+open_source: 'yes'
+license: BSL-1.0
+language: C++
+interfaces:
+- C/C++
+- Python
+- CLI
+call:
+- python
+- cli
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://osmcode.org/libosmium
+notes: Efficient OSM extraction.
+also_categories:
+- OSM & Overture tooling
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 64

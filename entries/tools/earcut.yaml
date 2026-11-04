@@ -1,0 +1,25 @@
+id: earcut
+kind: tool
+name: earcut
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: Polygon triangulation library used for rendering polygons on GPUs.
+open_source: 'yes'
+license: ISC
+language: JavaScript (C++ port)
+interfaces:
+- JS
+- C/C++
+call:
+- js
+- c-cpp
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/mapbox/earcut
+notes: Used by most WebGL map renderers.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 29

@@ -1,0 +1,22 @@
+id: overpy
+kind: tool
+name: overpy
+category: OSM & Overture tooling
+subcategory: Cloud-native / analytics
+tool_kind: Library
+summary: Python client for querying the Overpass API and parsing results into objects.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/DinoTools/python-overpy
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1197

@@ -1,0 +1,25 @@
+id: geemap
+kind: tool
+name: geemap
+category: Imagery, remote sensing & GeoAI
+subcategory: Cloud EO platforms
+tool_kind: Library
+summary: Python package for interactive mapping and analysis with Earth Engine in notebooks.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/gee-community/geemap
+notes: Popular GEE wrapper
+also_categories:
+- Display & visualization
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 392

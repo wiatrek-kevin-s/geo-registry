@@ -1,0 +1,26 @@
+id: libtiff
+kind: tool
+name: libtiff
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Reference library for reading and writing TIFF images underlying GeoTIFF.
+open_source: 'yes'
+license: libtiff
+license_original: libtiff (BSD-like)
+language: C
+interfaces:
+- C/C++
+- CLI
+call:
+- cli
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://libtiff.gitlab.io/libtiff
+notes: Low-level dependency.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 67

@@ -1,0 +1,22 @@
+id: planetary-computer-pro-mcp-tools
+kind: tool
+name: Planetary Computer Pro MCP tools
+category: AI, agents & MCP for GIS
+subcategory: Earth observation MCP servers
+tool_kind: Extension
+summary: 35+ MCP tools for Planetary Computer and Pro, delivered for VS Code and GitHub Copilot.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- MCP
+call:
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://techcommunity.microsoft.com/blog/microsoft-planetary-computer-blog/introducing-microsoft-planetary-computer-pro-model-context-protocol-tools-on-vs-/4522346
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1542

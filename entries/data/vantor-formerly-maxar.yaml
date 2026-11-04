@@ -1,0 +1,22 @@
+id: vantor-formerly-maxar
+kind: data
+name: Vantor (formerly Maxar)
+summary: High-resolution commercial satellite imagery and derived products.
+publisher: Vantor
+themes:
+- commercial
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Proprietary
+license_original: Proprietary
+access:
+- type: http
+  url: https://vantor.com/
+  auth: none
+notes: Unsure of current rebrand naming
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1363

@@ -1,0 +1,22 @@
+id: usgs-lidarexplorer
+kind: tool
+name: USGS LidarExplorer
+category: Point clouds, LiDAR & 3D
+subcategory: Lidar data sources
+tool_kind: Application
+summary: Web map for finding and downloading 3DEP lidar point cloud projects.
+open_source: 'no'
+license: LicenseRef-Public-Domain
+license_original: Public domain
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://apps.nationalmap.gov/lidar-explorer/
+notes: Discovery UI.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 636

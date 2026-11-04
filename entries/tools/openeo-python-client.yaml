@@ -1,0 +1,23 @@
+id: openeo-python-client
+kind: tool
+name: openeo (Python client)
+category: Imagery, remote sensing & GeoAI
+subcategory: Cloud EO platforms
+tool_kind: Library
+summary: Python client for connecting to openEO back-ends and building process graphs.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/Open-EO/openeo-python-client
+notes: Works with CDSE openEO
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 403

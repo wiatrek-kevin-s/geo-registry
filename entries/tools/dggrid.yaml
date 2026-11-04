@@ -1,0 +1,23 @@
+id: dggrid
+kind: tool
+name: DGGRID
+category: Core libraries & formats
+subcategory: Discrete global grids & geocodes
+tool_kind: Toolkit/CLI
+summary: Command-line tool for generating and working with icosahedral discrete global grids (ISEA, FULLER).
+open_source: 'yes'
+license: AGPL-3.0
+language: C++
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/sahrk/DGGRID
+notes: AGPL; wrapped by dggridR and dggrid4py.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 120

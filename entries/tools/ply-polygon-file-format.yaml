@@ -1,0 +1,20 @@
+id: ply-polygon-file-format
+kind: tool
+name: PLY (Polygon File Format)
+category: Point clouds, LiDAR & 3D
+subcategory: Formats
+tool_kind: Format/Standard
+summary: Simple ASCII or binary format for meshes and point clouds with arbitrary per-vertex properties.
+open_source: 'yes'
+license: NOASSERTION
+license_original: n/a
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+notes: Also used for Gaussian splat files.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 540

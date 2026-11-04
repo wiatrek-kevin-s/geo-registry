@@ -1,0 +1,24 @@
+id: oracle-spatial-lrs
+kind: tool
+name: Oracle Spatial LRS
+category: Routing, networks, geocoding & LRS
+subcategory: Linear referencing (LRS)
+tool_kind: Extension
+summary: Oracle Spatial SDO_LRS package for creating measured geometries and locating points and segments
+  by measure.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: PL/SQL
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://docs.oracle.com/en/database/oracle/oracle-database/19/spatl/linear-referencing-system.html
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 871

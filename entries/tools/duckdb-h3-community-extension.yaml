@@ -1,0 +1,22 @@
+id: duckdb-h3-community-extension
+kind: tool
+name: DuckDB h3 community extension
+category: Spatial databases & query engines
+subcategory: Embedded / file databases
+tool_kind: Extension
+summary: Adds H3 hexagon indexing functions to DuckDB.
+open_source: 'yes'
+license: Apache-2.0
+language: C++
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/isaacbrodsky/h3-duckdb
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 670

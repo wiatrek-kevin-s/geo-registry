@@ -1,0 +1,24 @@
+id: force
+kind: tool
+name: FORCE
+category: Imagery, remote sensing & GeoAI
+subcategory: Remote sensing processing
+tool_kind: Toolkit/CLI
+summary: Framework for Landsat/Sentinel-2 preprocessing into analysis-ready data cubes plus time-series
+  analysis.
+open_source: 'yes'
+license: GPL-3.0-or-later
+language: C
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/davidfrantz/force
+notes: Linux/Docker only; scriptable batch pipelines
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 364

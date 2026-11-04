@@ -1,0 +1,23 @@
+id: overture-maps-mcp-server
+kind: tool
+name: Overture Maps MCP Server
+category: AI, agents & MCP for GIS
+subcategory: General GIS MCP servers
+tool_kind: Server
+summary: MCP server querying Overture GeoParquet on S3 through DuckDB for buildings, places and land use.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: Python
+interfaces:
+- MCP
+call:
+- mcp
+wrapped_by_columbus: false
+project_status: unknown
+url: https://github.com/srivinod1/overture-mcp-server
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1517

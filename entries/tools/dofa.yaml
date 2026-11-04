@@ -1,0 +1,23 @@
+id: dofa
+kind: tool
+name: DOFA
+category: Imagery, remote sensing & GeoAI
+subcategory: GeoAI / deep learning
+tool_kind: Library
+summary: Dynamic one-for-all foundation model accepting arbitrary spectral bands across sensors.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/zhu-xlab/DOFA
+notes: Weights in TorchGeo
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 455

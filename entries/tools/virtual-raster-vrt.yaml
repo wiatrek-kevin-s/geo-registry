@@ -1,0 +1,23 @@
+id: virtual-raster-vrt
+kind: tool
+name: Virtual Raster (VRT)
+category: Core libraries & formats
+subcategory: Raster formats
+tool_kind: Format/Standard
+summary: GDAL XML format that mosaics, subsets or transforms other rasters without copying data.
+open_source: 'yes'
+license: MIT
+license_original: MIT (GDAL)
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://gdal.org/en/stable/drivers/raster/vrt.html
+notes: Agent can compose rasters cheaply.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 151

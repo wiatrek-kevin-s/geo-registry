@@ -1,0 +1,21 @@
+id: safe-sentinel
+kind: tool
+name: SAFE (Sentinel)
+category: Core libraries & formats
+subcategory: Raster formats
+tool_kind: Format/Standard
+summary: ESA product packaging format containing manifests and imagery for Sentinel missions.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open specification (ESA)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://sentinels.copernicus.eu
+notes: Read via GDAL Sentinel drivers.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 152

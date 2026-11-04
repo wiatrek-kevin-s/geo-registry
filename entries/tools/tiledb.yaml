@@ -1,0 +1,29 @@
+id: tiledb
+kind: tool
+name: TileDB
+category: Spatial databases & query engines
+subcategory: Array / raster databases
+tool_kind: Database
+summary: Storage engine for dense and sparse multi-dimensional arrays, used for rasters and point clouds.
+open_source: partial
+license: MIT
+language: C++
+interfaces:
+- Python
+- R
+- C/C++
+- Java
+call:
+- python
+- r
+- c-cpp
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://tiledb.com
+notes: TileDB Embedded is MIT; cloud platform commercial
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 727

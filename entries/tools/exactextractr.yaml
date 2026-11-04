@@ -1,0 +1,22 @@
+id: exactextractr
+kind: tool
+name: exactextractr
+category: Desktop GIS & analysis engines
+subcategory: R spatial packages
+tool_kind: Library
+summary: R interface to exactextract for coverage-weighted zonal statistics.
+open_source: 'yes'
+license: Apache-2.0
+language: R; C++
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/isciences/exactextractr
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 346

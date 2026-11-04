@@ -1,0 +1,21 @@
+id: 3dbag
+kind: data
+name: 3DBAG
+summary: Openly published LoD1-LoD2 3D building models for every building in the Netherlands.
+publisher: Unknown
+themes:
+- city-models
+- point-clouds-lidar-3d
+coverage:
+  region: Netherlands
+license: CC-BY-4.0
+access:
+- type: http
+  url: https://3dbag.nl
+  auth: none
+notes: Example national 3D buildings dataset.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 629

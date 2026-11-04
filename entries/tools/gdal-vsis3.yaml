@@ -1,0 +1,27 @@
+id: gdal-vsis3
+kind: tool
+name: GDAL /vsis3/
+category: Connections & storage
+subcategory: Object storage
+tool_kind: Library
+summary: GDAL virtual file system for reading and writing S3 and S3-compatible objects.
+open_source: 'yes'
+license: MIT
+language: C++
+interfaces:
+- CLI
+- Python
+- C/C++
+call:
+- python
+- cli
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://gdal.org/en/stable/user/virtual_file_systems.html
+notes: Works with MinIO via AWS_S3_ENDPOINT
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1454

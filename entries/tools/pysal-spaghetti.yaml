@@ -1,0 +1,23 @@
+id: pysal-spaghetti
+kind: tool
+name: PySAL spaghetti
+category: Routing, networks, geocoding & LRS
+subcategory: Accessibility & transport modeling
+tool_kind: Library
+summary: 'Spatial analysis on networks: snapping points, network distance matrices and network-constrained
+  statistics.'
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/pysal/spaghetti
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 789

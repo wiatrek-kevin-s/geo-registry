@@ -1,0 +1,21 @@
+id: automap
+kind: tool
+name: automap
+category: Desktop GIS & analysis engines
+subcategory: R spatial packages
+tool_kind: Library
+summary: Automatic variogram fitting and kriging built on gstat.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: R
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: low-activity
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 341

@@ -1,0 +1,22 @@
+id: pykrige
+kind: tool
+name: PyKrige
+category: Desktop GIS & analysis engines
+subcategory: Geostatistics & interpolation
+tool_kind: Library
+summary: Ordinary and universal kriging in 2D and 3D with a scikit-learn-compatible API.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/GeoStat-Framework/PyKrige
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 318

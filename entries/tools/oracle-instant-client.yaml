@@ -1,0 +1,27 @@
+id: oracle-instant-client
+kind: tool
+name: Oracle Instant Client
+category: Spatial databases & query engines
+subcategory: Drivers & connectors
+tool_kind: Library
+summary: Free-to-use Oracle client libraries required by thick-mode drivers and tools.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C
+interfaces:
+- C/C++
+- CLI
+call:
+- cli
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://www.oracle.com/database/technologies/instant-client.html
+also_categories:
+- Connections & storage
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 735

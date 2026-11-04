@@ -1,0 +1,25 @@
+id: 3d-tiles-tools
+kind: tool
+name: 3d-tiles-tools
+category: Point clouds, LiDAR & 3D
+subcategory: 3D tiles & streaming formats
+tool_kind: Toolkit/CLI
+summary: Cesium CLI and library for validating, converting, packaging and upgrading 3D Tiles tilesets.
+open_source: 'yes'
+license: Apache-2.0
+language: TypeScript
+interfaces:
+- CLI
+- JS
+call:
+- cli
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/CesiumGS/3d-tiles-tools
+notes: Validate and repackage tilesets locally.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 612

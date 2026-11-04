@@ -1,0 +1,23 @@
+id: geopackage
+kind: tool
+name: GeoPackage
+category: Core libraries & formats
+subcategory: Vector formats
+tool_kind: Format/Standard
+summary: SQLite-based OGC container for vector features, tile pyramids and attributes in one file.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open standard (OGC)
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://www.geopackage.org
+notes: Good default local working format.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 163

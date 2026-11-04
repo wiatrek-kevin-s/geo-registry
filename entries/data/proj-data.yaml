@@ -1,0 +1,22 @@
+id: proj-data
+kind: data
+name: PROJ-data
+summary: Collection of datum grids (geoid models, NTv2 shift grids) used by PROJ for accurate transformations.
+publisher: Unknown
+themes:
+- projection-crs
+- core-libraries-formats
+coverage:
+  region: Unspecified
+license: LicenseRef-Multiple
+license_original: Various open (mostly CC-BY/public domain)
+access:
+- type: http
+  url: https://github.com/OSGeo/PROJ-data
+  auth: none
+notes: Needed offline for accurate datum shifts.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 41

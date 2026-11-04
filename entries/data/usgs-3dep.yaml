@@ -1,0 +1,24 @@
+id: usgs-3dep
+kind: data
+name: USGS 3DEP
+summary: USGS program collecting nationwide airborne lidar and derived elevation products for the United
+  States.
+publisher: U.S. Geological Survey
+themes:
+- lidar-data-sources
+- point-clouds-lidar-3d
+- open-data-sources
+coverage:
+  region: United States
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.usgs.gov/3d-elevation-program
+  auth: none
+notes: Primary US lidar source.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 634

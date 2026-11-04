@@ -1,0 +1,26 @@
+id: mobilitydb
+kind: tool
+name: MobilityDB
+category: Spatial databases & query engines
+subcategory: PostgreSQL ecosystem
+tool_kind: Extension
+summary: Adds temporal and moving-object types (tgeompoint etc.) to PostgreSQL/PostGIS for trajectory
+  analysis.
+open_source: 'yes'
+license: PostgreSQL
+language: C
+interfaces:
+- SQL
+- Python
+call:
+- python
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://mobilitydb.com
+notes: GPS/AIS trajectory analytics; PyMEOS/MEOS bindings
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 650

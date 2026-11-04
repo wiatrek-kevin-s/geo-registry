@@ -1,0 +1,23 @@
+id: epsg-geodetic-parameter-dataset
+kind: data
+name: EPSG Geodetic Parameter Dataset
+summary: Authoritative registry of coordinate reference systems, datums and transformations maintained
+  by IOGP.
+publisher: Unknown
+themes:
+- projection-crs
+- core-libraries-formats
+coverage:
+  region: Unspecified
+license: LicenseRef-Proprietary
+license_original: Proprietary (free use under EPSG terms of use)
+access:
+- type: http
+  url: https://epsg.org
+  auth: none
+notes: Source of CRS codes embedded in PROJ.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 40

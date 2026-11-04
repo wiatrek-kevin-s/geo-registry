@@ -1,0 +1,27 @@
+id: terracotta
+kind: tool
+name: Terracotta
+category: Servers, standards, tiles & catalogs
+subcategory: Tile servers
+tool_kind: Server
+summary: Lightweight Python tile server serving XYZ tiles from cloud-optimised GeoTIFF collections.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- REST
+- Python
+- CLI
+call:
+- python
+- cli
+- rest
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/DHI-GRAS/terracotta
+notes: Simple raster tile serving
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 913

@@ -1,0 +1,24 @@
+id: maptiler-basemaps
+kind: tool
+name: MapTiler basemaps
+category: Display & visualization
+subcategory: Basemap providers
+tool_kind: Service/API
+summary: Hosted vector, satellite and terrain basemaps for MapLibre and other libraries.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- OGC
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://www.maptiler.com/maps/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1173

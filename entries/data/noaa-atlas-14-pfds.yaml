@@ -1,0 +1,22 @@
+id: noaa-atlas-14-pfds
+kind: data
+name: NOAA Atlas 14 (PFDS)
+summary: Precipitation frequency estimates for storm design.
+publisher: National Oceanic and Atmospheric Administration
+themes:
+- us-federal-noaa
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://hdsc.nws.noaa.gov/pfds/
+  auth: none
+notes: Used in drainage design
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1261

@@ -1,0 +1,22 @@
+id: radiant-mlhub-source-cooperative-ml-data
+kind: data
+name: Radiant MLHub / Source Cooperative ML data
+summary: Radiant Earth's library of open labeled EO training datasets, now hosted on Source Cooperative.
+publisher: Unknown
+themes:
+- labeling-training-data
+- imagery-remote-sensing-geoai
+coverage:
+  region: Unspecified
+license: NOASSERTION
+license_original: Unknown
+access:
+- type: http
+  url: https://source.coop/radiantearth
+  auth: none
+notes: MLHub API retired
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 525

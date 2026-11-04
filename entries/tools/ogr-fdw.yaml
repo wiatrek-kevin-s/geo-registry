@@ -1,0 +1,23 @@
+id: ogr-fdw
+kind: tool
+name: ogr_fdw
+category: Spatial databases & query engines
+subcategory: PostgreSQL ecosystem
+tool_kind: Extension
+summary: PostgreSQL foreign data wrapper that exposes any GDAL/OGR vector source as a queryable table.
+open_source: 'yes'
+license: MIT
+language: C
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/pramsey/pgsql-ogr-fdw
+notes: Query shapefiles/FGDB from Postgres without import
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 653

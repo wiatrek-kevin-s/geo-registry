@@ -1,0 +1,24 @@
+id: sits
+kind: tool
+name: sits
+category: Imagery, remote sensing & GeoAI
+subcategory: Time series
+tool_kind: Library
+summary: R package for satellite image time series analysis and machine-learning land classification on
+  data cubes.
+open_source: 'yes'
+license: GPL-2.0-only
+language: R
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/e-sensing/sits
+notes: Works with STAC and BDC/MPC/DEA
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 389

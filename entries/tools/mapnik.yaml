@@ -1,0 +1,27 @@
+id: mapnik
+kind: tool
+name: Mapnik
+category: Display & visualization
+subcategory: Cartographic renderers
+tool_kind: Library
+summary: Toolkit for rendering high-quality raster maps from vector and raster data sources.
+open_source: 'yes'
+license: LGPL-2.1-or-later
+language: C++
+interfaces:
+- C/C++
+- Python
+- CLI
+call:
+- python
+- cli
+- c-cpp
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://mapnik.org/
+notes: Classic OSM raster renderer
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1182

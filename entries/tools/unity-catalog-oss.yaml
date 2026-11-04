@@ -1,0 +1,26 @@
+id: unity-catalog-oss
+kind: tool
+name: Unity Catalog (OSS)
+category: Connections & storage
+subcategory: Data catalogs with geo support
+tool_kind: Server
+summary: Open-source data and AI catalog for tables, volumes and models, originally from Databricks.
+open_source: 'yes'
+license: Apache-2.0
+language: Java
+interfaces:
+- REST
+- Python
+- SQL
+call:
+- python
+- rest
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://www.unitycatalog.io/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1475

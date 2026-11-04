@@ -1,0 +1,22 @@
+id: luma-gl
+kind: tool
+name: luma.gl
+category: Display & visualization
+subcategory: vis.gl / large-data WebGL
+tool_kind: Library
+summary: Low-level WebGL/WebGPU rendering library underpinning deck.gl.
+open_source: 'yes'
+license: MIT
+language: TypeScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://luma.gl/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1052

@@ -1,0 +1,19 @@
+id: sharedstreets-referencing-system
+kind: tool
+name: SharedStreets Referencing System
+category: Routing, networks, geocoding & LRS
+subcategory: Network & traffic referencing standards
+tool_kind: Format/Standard
+summary: Open, map-neutral street segment identifiers for linking transport data across basemaps.
+open_source: 'yes'
+license: MIT
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://sharedstreets.io/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 883

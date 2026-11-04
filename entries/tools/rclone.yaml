@@ -1,0 +1,25 @@
+id: rclone
+kind: tool
+name: rclone
+category: Connections & storage
+subcategory: Object storage
+tool_kind: Toolkit/CLI
+summary: CLI that syncs, copies and mounts 70+ cloud and network storage backends.
+open_source: 'yes'
+license: MIT
+language: Go
+interfaces:
+- CLI
+- REST
+call:
+- cli
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://rclone.org/
+notes: Agent can call for bulk copies or mounts
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1462

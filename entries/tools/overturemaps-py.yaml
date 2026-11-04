@@ -1,0 +1,25 @@
+id: overturemaps-py
+kind: tool
+name: overturemaps-py
+category: OSM & Overture tooling
+subcategory: Overture Maps
+tool_kind: Toolkit/CLI
+summary: Python CLI and library to download Overture data by bbox and type to GeoJSON or GeoParquet.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- CLI
+- Python
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/OvertureMaps/overturemaps-py
+notes: Agent can call via CLI
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1231

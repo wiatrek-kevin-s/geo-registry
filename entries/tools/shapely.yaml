@@ -1,0 +1,23 @@
+id: shapely
+kind: tool
+name: Shapely
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: Python library exposing GEOS geometry objects and vectorized operations on NumPy arrays.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python/C
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/shapely/shapely
+notes: Default geometry layer for agent-written Python.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 7

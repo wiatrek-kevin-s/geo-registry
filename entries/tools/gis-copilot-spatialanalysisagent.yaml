@@ -1,0 +1,24 @@
+id: gis-copilot-spatialanalysisagent
+kind: tool
+name: GIS Copilot (SpatialAnalysisAgent)
+category: AI, agents & MCP for GIS
+subcategory: QGIS AI & MCP
+tool_kind: Extension
+summary: Penn State QGIS plugin that plans and runs spatial analysis from natural-language requests.
+open_source: 'yes'
+license: GPL-3.0
+language: Python
+interfaces:
+- GUI
+- plugin
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/Teakinboyewa/SpatialAnalysisAgent
+notes: Research-backed (arXiv 2411.03205)
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1504

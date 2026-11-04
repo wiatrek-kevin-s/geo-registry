@@ -1,0 +1,23 @@
+id: xvec
+kind: tool
+name: Xvec
+category: Desktop GIS & analysis engines
+subcategory: Python raster & array analysis
+tool_kind: Library
+summary: xarray extension for vector data cubes, indexing arrays by geometry coordinates.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/xarray-contrib/xvec
+notes: Vector data cubes
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 299

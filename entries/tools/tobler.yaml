@@ -1,0 +1,22 @@
+id: tobler
+kind: tool
+name: tobler
+category: Desktop GIS & analysis engines
+subcategory: Spatial statistics (Python / PySAL)
+tool_kind: Library
+summary: Areal interpolation and dasymetric mapping between incompatible zone systems.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/pysal/tobler
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 311

@@ -1,0 +1,21 @@
+id: jrc-global-surface-water
+kind: data
+name: JRC Global Surface Water
+summary: Global 30 m surface-water occurrence and change since 1984.
+publisher: European Commission Joint Research Centre
+themes:
+- global-land-cover
+- open-data-sources
+coverage:
+  region: Global
+license: LicenseRef-Copernicus
+license_original: Copernicus free and open licence
+access:
+- type: http
+  url: https://global-surface-water.appspot.com/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1303

@@ -1,0 +1,25 @@
+id: geodatafusion
+kind: tool
+name: GeoDataFusion
+category: Spatial databases & query engines
+subcategory: Embedded / file databases
+tool_kind: Library
+summary: Adds ST_ spatial functions and GeoParquet/FlatGeobuf readers to Apache DataFusion.
+open_source: 'yes'
+license: MIT OR Apache-2.0
+language: Rust
+interfaces:
+- Rust
+- SQL
+call:
+- sql
+- rust
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/datafusion-contrib/geodatafusion
+notes: Rust-native, relevant to RustGIS-style apps
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 673

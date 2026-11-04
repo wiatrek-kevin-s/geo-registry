@@ -1,0 +1,25 @@
+id: global-mapper-sdk
+kind: tool
+name: Global Mapper SDK
+category: Desktop GIS & analysis engines
+subcategory: Commercial desktop GIS
+tool_kind: Library
+summary: Developer kit exposing Global Mapper's data reading, conversion, rendering and analysis functions
+  to custom applications.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- C/C++
+call:
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://www.bluemarblegeo.com
+notes: Embeddable commercial engine
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 258

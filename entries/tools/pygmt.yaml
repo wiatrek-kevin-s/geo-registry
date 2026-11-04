@@ -1,0 +1,22 @@
+id: pygmt
+kind: tool
+name: PyGMT
+category: Display & visualization
+subcategory: Python notebook & app mapping
+tool_kind: Library
+summary: Python interface to the Generic Mapping Tools for scientific maps and figures.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://www.pygmt.org/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1104

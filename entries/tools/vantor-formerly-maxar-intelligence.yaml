@@ -1,0 +1,27 @@
+id: vantor-formerly-maxar-intelligence
+kind: tool
+name: Vantor (formerly Maxar Intelligence)
+category: Imagery, remote sensing & GeoAI
+subcategory: Commercial imagery providers
+tool_kind: Service/API
+summary: High-resolution WorldView imagery and analytics delivered through the Vantor platform and APIs.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- OGC
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://vantor.com
+notes: Maxar Intelligence rebranded Oct 2025
+also_categories:
+- Commercial GIS platforms & APIs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 480

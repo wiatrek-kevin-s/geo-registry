@@ -1,0 +1,23 @@
+id: projnet-projnet4geoapi
+kind: tool
+name: ProjNet (ProjNET4GeoAPI)
+category: Core libraries & formats
+subcategory: Projection & CRS
+tool_kind: Library
+summary: .NET library for coordinate system conversions and transformations.
+open_source: 'yes'
+license: LGPL-2.1-or-later
+language: C#
+interfaces:
+- .NET
+call:
+- dotnet
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/NetTopologySuite/ProjNet4GeoAPI
+notes: .NET projection support.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 39

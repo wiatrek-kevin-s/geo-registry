@@ -1,0 +1,22 @@
+id: detectron2
+kind: tool
+name: detectron2
+category: Imagery, remote sensing & GeoAI
+subcategory: GeoAI / deep learning
+tool_kind: Library
+summary: Meta's object detection and segmentation library often used under geospatial tools.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/facebookresearch/detectron2
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 460

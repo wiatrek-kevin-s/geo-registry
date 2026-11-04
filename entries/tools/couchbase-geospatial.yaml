@@ -1,0 +1,25 @@
+id: couchbase-geospatial
+kind: tool
+name: Couchbase geospatial
+category: Spatial databases & query engines
+subcategory: NoSQL / search / KV
+tool_kind: Database
+summary: Full Text Search service with geo point/shape queries in Couchbase.
+open_source: partial
+license: BUSL-1.1
+license_original: BSL-1.1
+language: Go;C++
+interfaces:
+- REST
+- SQL
+call:
+- rest
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://www.couchbase.com
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 721

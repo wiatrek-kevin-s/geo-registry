@@ -1,0 +1,23 @@
+id: whitebox-python
+kind: tool
+name: whitebox (Python)
+category: Desktop GIS & analysis engines
+subcategory: Whitebox & Rust GIS engines
+tool_kind: Library
+summary: Python wrapper that downloads and calls the WhiteboxTools binary from scripts and notebooks.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/opengeos/whitebox-python
+notes: Easiest pip route to WhiteboxTools
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 245

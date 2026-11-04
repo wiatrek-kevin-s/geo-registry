@@ -1,0 +1,21 @@
+id: e57
+kind: tool
+name: E57
+category: Core libraries & formats
+subcategory: Point cloud & 3D formats
+tool_kind: Format/Standard
+summary: ASTM format for 3D imaging data from terrestrial laser scanners.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open standard (ASTM E2807)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://libe57.org
+notes: Scanner exports.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 193

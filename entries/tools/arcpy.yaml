@@ -1,0 +1,27 @@
+id: arcpy
+kind: tool
+name: ArcPy
+category: Desktop GIS & analysis engines
+subcategory: Commercial desktop GIS
+tool_kind: Library
+summary: Python site package bundled with ArcGIS Pro that exposes geoprocessing tools, data access and
+  mapping automation.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://pro.arcgis.com/en/pro-app/latest/arcpy/main/arcgis-pro-arcpy-reference.htm
+notes: Requires licensed ArcGIS Pro on the same machine
+also_categories:
+- Commercial GIS platforms & APIs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 252

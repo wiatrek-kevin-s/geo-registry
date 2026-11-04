@@ -1,0 +1,25 @@
+id: fme-flow-safe-software
+kind: tool
+name: FME Flow (Safe Software)
+category: Desktop GIS & analysis engines
+subcategory: Spatial ETL
+tool_kind: Server
+summary: Server platform for scheduling and automating FME workspaces with REST APIs and webhooks.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++; Java
+interfaces:
+- REST
+- GUI
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://fme.safe.com
+notes: Formerly FME Server; REST-driveable
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 275

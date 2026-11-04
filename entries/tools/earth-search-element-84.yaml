@@ -1,0 +1,25 @@
+id: earth-search-element-84
+kind: tool
+name: Earth Search (Element 84)
+category: Open data sources
+subcategory: Catalogs
+tool_kind: Service/API
+summary: Public STAC API over Sentinel, Landsat, NAIP and Copernicus DEM on AWS.
+open_source: 'yes'
+license: LicenseRef-Multiple
+license_original: Mixed
+interfaces:
+- STAC
+- REST
+call:
+- rest
+- stac
+wrapped_by_columbus: false
+project_status: active
+url: https://element84.com/earth-search/
+notes: No key; pystac-client
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1329

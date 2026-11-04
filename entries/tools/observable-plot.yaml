@@ -1,0 +1,22 @@
+id: observable-plot
+kind: tool
+name: Observable Plot
+category: Display & visualization
+subcategory: Charting & dataviz libraries with maps
+tool_kind: Library
+summary: Concise JavaScript charting library with geo marks and projections.
+open_source: 'yes'
+license: ISC
+language: JavaScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://observablehq.com/plot/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1118

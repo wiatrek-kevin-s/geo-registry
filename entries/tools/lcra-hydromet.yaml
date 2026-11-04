@@ -1,0 +1,24 @@
+id: lcra-hydromet
+kind: tool
+name: LCRA Hydromet
+category: Open data sources
+subcategory: Texas
+tool_kind: Service/API
+summary: Lower Colorado River Authority real-time rainfall, river and lake data.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+interfaces:
+- GUI
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://hydromet.lcra.org/
+notes: Austin-area flood monitoring
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1354

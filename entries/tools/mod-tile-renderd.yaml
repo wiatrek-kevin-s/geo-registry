@@ -1,0 +1,25 @@
+id: mod-tile-renderd
+kind: tool
+name: mod_tile / renderd
+category: Servers, standards, tiles & catalogs
+subcategory: Tile servers
+tool_kind: Server
+summary: Apache module and rendering daemon that render and cache raster map tiles on demand with Mapnik.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: C/C++
+interfaces:
+- REST
+- CLI
+call:
+- cli
+- rest
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/openstreetmap/mod_tile
+notes: Classic OSM raster tile stack
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 917

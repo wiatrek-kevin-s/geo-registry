@@ -1,0 +1,22 @@
+id: boto3
+kind: tool
+name: boto3
+category: Connections & storage
+subcategory: Object storage
+tool_kind: Library
+summary: AWS SDK for Python, including S3 clients.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/boto/boto3
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1449

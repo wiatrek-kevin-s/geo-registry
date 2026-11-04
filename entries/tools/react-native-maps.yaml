@@ -1,0 +1,22 @@
+id: react-native-maps
+kind: tool
+name: react-native-maps
+category: Display & visualization
+subcategory: Native & mobile SDKs
+tool_kind: Library
+summary: React Native map components backed by Google Maps and Apple Maps.
+open_source: 'yes'
+license: MIT
+language: TypeScript;Java;Objective-C
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/react-native-maps/react-native-maps
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1080

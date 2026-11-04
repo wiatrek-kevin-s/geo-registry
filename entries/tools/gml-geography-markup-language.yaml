@@ -1,0 +1,23 @@
+id: gml-geography-markup-language
+kind: tool
+name: GML (Geography Markup Language)
+category: Servers, standards, tiles & catalogs
+subcategory: OGC web service standards
+tool_kind: Format/Standard
+summary: XML grammar for encoding geographic features and their geometry.
+open_source: 'yes'
+license: LicenseRef-OGC-Document
+license_original: OGC document licence
+interfaces:
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.ogc.org/standards/gml
+notes: Also ISO 19136
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 981

@@ -1,0 +1,23 @@
+id: geometryops-jl
+kind: tool
+name: GeometryOps.jl
+category: Desktop GIS & analysis engines
+subcategory: Julia geospatial
+tool_kind: Library
+summary: Pure-Julia geometry operations such as area, distance, clipping and simplification on GeoInterface
+  types.
+open_source: 'yes'
+license: MIT
+language: Julia
+interfaces:
+- plugin
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/JuliaGeo/GeometryOps.jl
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 358

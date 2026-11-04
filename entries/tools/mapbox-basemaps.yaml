@@ -1,0 +1,22 @@
+id: mapbox-basemaps
+kind: tool
+name: Mapbox basemaps
+category: Display & visualization
+subcategory: Basemap providers
+tool_kind: Service/API
+summary: Mapbox's hosted vector, satellite and terrain basemap tilesets and styles.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.mapbox.com/maps
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1177

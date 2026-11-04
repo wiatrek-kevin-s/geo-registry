@@ -1,0 +1,23 @@
+id: pix4dcloud
+kind: tool
+name: PIX4Dcloud
+category: Imagery, remote sensing & GeoAI
+subcategory: Photogrammetry & drone
+tool_kind: Service/API
+summary: Cloud processing and sharing of drone mapping projects.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- GUI
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.pix4d.com/product/pix4dcloud/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 512

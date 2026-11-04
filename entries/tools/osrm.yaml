@@ -1,0 +1,30 @@
+id: osrm
+kind: tool
+name: OSRM
+category: Routing, networks, geocoding & LRS
+subcategory: Routing engines
+tool_kind: Server
+summary: Very fast road routing engine on OSM data using contraction hierarchies or MLD, with route, table,
+  match, trip and tile services.
+open_source: 'yes'
+license: BSD-2-Clause
+language: C++
+interfaces:
+- CLI
+- REST
+- JS
+- C/C++
+call:
+- cli
+- rest
+- js
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/Project-OSRM/osrm-backend
+notes: Docker image makes local self-hosting easy for an agent
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 749

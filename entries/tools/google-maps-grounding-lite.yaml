@@ -1,0 +1,23 @@
+id: google-maps-grounding-lite
+kind: tool
+name: Google Maps Grounding Lite
+category: AI, agents & MCP for GIS
+subcategory: Vendor/location MCP servers
+tool_kind: Server
+summary: Google's hosted MCP server (mapstools.googleapis.com) for grounding agents with Maps places and
+  routes data.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- MCP
+call:
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://developers.google.com/maps/ai/grounding-lite
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1521

@@ -1,0 +1,28 @@
+id: pmtiles
+kind: tool
+name: PMTiles
+category: Core libraries & formats
+subcategory: Tile formats
+tool_kind: Format/Standard
+summary: Single-file archive of map tiles readable by HTTP range requests without a tile server.
+open_source: 'yes'
+license: BSD-3-Clause
+interfaces:
+- CLI
+- JS
+- Python
+call:
+- python
+- cli
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/protomaps/PMTiles
+notes: Serverless basemaps for a desktop app.
+also_categories:
+- Servers, standards, tiles & catalogs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 202

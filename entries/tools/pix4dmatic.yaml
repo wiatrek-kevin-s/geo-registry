@@ -1,0 +1,24 @@
+id: pix4dmatic
+kind: tool
+name: PIX4Dmatic
+category: Imagery, remote sensing & GeoAI
+subcategory: Photogrammetry & drone
+tool_kind: Application
+summary: Pix4D desktop photogrammetry optimised for large corridor and mapping projects.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://www.pix4d.com/product/pix4dmatic-large-scale-photogrammetry-software/
+also_categories:
+- Point clouds, LiDAR & 3D
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 511

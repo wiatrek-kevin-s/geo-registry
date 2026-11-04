@@ -1,0 +1,21 @@
+id: dwg
+kind: tool
+name: DWG
+category: Core libraries & formats
+subcategory: Vector formats
+tool_kind: Format/Standard
+summary: Autodesk's native binary CAD drawing format.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://www.autodesk.com/products/dwg
+notes: Needs ODA or LibreDWG.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 182

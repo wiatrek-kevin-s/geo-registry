@@ -1,0 +1,24 @@
+id: pyransac-3d
+kind: tool
+name: pyRANSAC-3D
+category: Point clouds, LiDAR & 3D
+subcategory: Point cloud & mesh libraries
+tool_kind: Library
+summary: Python implementation of RANSAC fitting for planes, cylinders, spheres and other primitives in
+  point clouds.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/leomariga/pyRANSAC-3D
+notes: Roof plane extraction helper.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 581

@@ -1,0 +1,23 @@
+id: libe57format
+kind: tool
+name: libE57Format
+category: Point clouds, LiDAR & 3D
+subcategory: LAS/LAZ libraries
+tool_kind: Library
+summary: C++ library for reading and writing ASTM E57 scan files.
+open_source: 'yes'
+license: BSL-1.0
+language: C++
+interfaces:
+- C/C++
+call:
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/asmaloney/libE57Format
+notes: Used by CloudCompare and PDAL for E57.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 549

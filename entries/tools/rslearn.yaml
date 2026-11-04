@@ -1,0 +1,24 @@
+id: rslearn
+kind: tool
+name: rslearn
+category: Imagery, remote sensing & GeoAI
+subcategory: GeoAI / deep learning
+tool_kind: Library
+summary: AI2 toolkit for assembling remote sensing datasets and training models on them.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+- CLI
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/allenai/rslearn
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 452

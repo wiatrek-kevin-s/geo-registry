@@ -1,0 +1,28 @@
+id: fme-flow
+kind: tool
+name: FME Flow
+category: Commercial GIS platforms & APIs
+subcategory: Spatial ETL
+tool_kind: Server
+summary: Server (formerly FME Server) for scheduling, automating and exposing FME workspaces as services;
+  2026.2 can host an MCP server.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++; Java
+interfaces:
+- REST
+- GUI
+- MCP
+call:
+- rest
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://fme.safe.com/fme-flow/
+notes: Workspaces become AI-callable MCP tools
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1385

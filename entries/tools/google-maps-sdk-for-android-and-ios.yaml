@@ -1,0 +1,23 @@
+id: google-maps-sdk-for-android-and-ios
+kind: tool
+name: Google Maps SDK for Android and iOS
+category: Display & visualization
+subcategory: Native & mobile SDKs
+tool_kind: Library
+summary: Native mobile SDKs for embedding Google Maps in apps.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Java;Kotlin;Swift
+interfaces:
+- Java
+call:
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://developers.google.com/maps/documentation/android-sdk
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1073

@@ -1,0 +1,23 @@
+id: arcgis-quickcapture
+kind: tool
+name: ArcGIS QuickCapture
+category: Commercial GIS platforms & APIs
+subcategory: Esri ArcGIS
+tool_kind: Application
+summary: Mobile app for rapid, button-driven field data capture, often from moving vehicles.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.esri.com/en-us/arcgis/products/arcgis-quickcapture/overview
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1369

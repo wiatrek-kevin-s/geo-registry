@@ -1,0 +1,22 @@
+id: samba
+kind: tool
+name: Samba
+category: Connections & storage
+subcategory: Network shares & transfer
+tool_kind: Server
+summary: Open-source SMB server and client suite for Linux and Unix.
+open_source: 'yes'
+license: GPL-3.0
+language: C
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://www.samba.org/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1465

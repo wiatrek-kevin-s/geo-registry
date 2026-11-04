@@ -1,0 +1,23 @@
+id: maptiler-sdk-js
+kind: tool
+name: MapTiler SDK JS
+category: Display & visualization
+subcategory: Web map libraries
+tool_kind: Library
+summary: MapLibre GL JS-based SDK with built-in helpers for MapTiler styles, geocoding and terrain.
+open_source: 'yes'
+license: BSD-3-Clause
+language: TypeScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/maptiler/maptiler-sdk-js
+notes: Library is open; hosted data needs MapTiler key
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1029

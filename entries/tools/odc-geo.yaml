@@ -1,0 +1,23 @@
+id: odc-geo
+kind: tool
+name: odc-geo
+category: Desktop GIS & analysis engines
+subcategory: Python raster & array analysis
+tool_kind: Library
+summary: Open Data Cube geometry and GeoBox utilities for reprojecting and tiling xarray rasters.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/opendatacube/odc-geo
+notes: Licence and status from memory
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 300

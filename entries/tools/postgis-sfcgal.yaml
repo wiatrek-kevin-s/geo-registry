@@ -1,0 +1,24 @@
+id: postgis-sfcgal
+kind: tool
+name: postgis_sfcgal
+category: Spatial databases & query engines
+subcategory: PostgreSQL ecosystem
+tool_kind: Extension
+summary: Exposes SFCGAL 3D and exact-arithmetic geometry operations (extrusion, 3D intersection, straight
+  skeleton) in PostGIS.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: C;C++
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://postgis.net/docs/reference_sfcgal.html
+notes: 3D/CGAL operations
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 648

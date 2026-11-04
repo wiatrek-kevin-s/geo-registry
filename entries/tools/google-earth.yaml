@@ -1,0 +1,22 @@
+id: google-earth
+kind: tool
+name: Google Earth
+category: Display & visualization
+subcategory: 3D globes & 3D Tiles
+tool_kind: Application
+summary: Web and desktop 3D globe for viewing imagery, terrain and KML content.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://earth.google.com/
+notes: Common KML viewer for end users
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1067

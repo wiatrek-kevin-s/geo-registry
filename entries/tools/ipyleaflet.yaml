@@ -1,0 +1,22 @@
+id: ipyleaflet
+kind: tool
+name: ipyleaflet
+category: Display & visualization
+subcategory: Python notebook & app mapping
+tool_kind: Library
+summary: Interactive Jupyter widget wrapping Leaflet with two-way Python bindings.
+open_source: 'yes'
+license: MIT
+language: Python;TypeScript
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/jupyter-widgets/ipyleaflet
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1085

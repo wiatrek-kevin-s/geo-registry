@@ -1,0 +1,26 @@
+id: luciadfusion
+kind: tool
+name: LuciadFusion
+category: Servers, standards, tiles & catalogs
+subcategory: Commercial GIS servers & platforms
+tool_kind: Server
+summary: Hexagon server for fusing and serving 2D/3D geodata through OGC and 3D Tiles services.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Java
+interfaces:
+- OGC
+- REST
+- GUI
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://hexagon.com/products/luciadfusion
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 960

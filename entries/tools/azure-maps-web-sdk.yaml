@@ -1,0 +1,26 @@
+id: azure-maps-web-sdk
+kind: tool
+name: Azure Maps Web SDK
+category: Display & visualization
+subcategory: Web map libraries
+tool_kind: Library
+summary: Microsoft's web map control for Azure Maps basemaps, data layers and spatial services.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: TypeScript
+interfaces:
+- JS
+- REST
+call:
+- rest
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://learn.microsoft.com/en-us/azure/azure-maps/how-to-use-map-control
+notes: Successor to Bing Maps; needs Azure subscription
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1026

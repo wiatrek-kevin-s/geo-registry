@@ -1,0 +1,21 @@
+id: scribble-maps
+kind: tool
+name: Scribble Maps
+category: Display & visualization
+subcategory: Hosted web map makers
+tool_kind: Application
+summary: Browser tool for quickly drawing, annotating and sharing custom maps.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://www.scribblemaps.com/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1147

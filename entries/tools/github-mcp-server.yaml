@@ -1,0 +1,22 @@
+id: github-mcp-server
+kind: tool
+name: GitHub MCP Server
+category: Connections & storage
+subcategory: Data versioning & Git
+tool_kind: Server
+summary: GitHub's official MCP server giving agents access to repos, issues and PRs.
+open_source: 'yes'
+license: MIT
+language: Go
+interfaces:
+- MCP
+call:
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/github/github-mcp-server
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1470

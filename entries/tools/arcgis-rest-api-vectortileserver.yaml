@@ -1,0 +1,22 @@
+id: arcgis-rest-api-vectortileserver
+kind: tool
+name: ArcGIS REST API – VectorTileServer
+category: Servers, standards, tiles & catalogs
+subcategory: Esri REST & industry specs
+tool_kind: Format/Standard
+summary: Esri REST endpoint serving vector tiles with an accompanying style resource.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://developers.arcgis.com/rest/services-reference/enterprise/vector-tile-service/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 967

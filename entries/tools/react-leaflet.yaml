@@ -1,0 +1,23 @@
+id: react-leaflet
+kind: tool
+name: React Leaflet
+category: Display & visualization
+subcategory: Leaflet plugins
+tool_kind: Library
+summary: React component bindings for building Leaflet maps.
+open_source: 'yes'
+license: Hippocratic-2.1
+language: TypeScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: maintained
+url: https://react-leaflet.js.org/
+notes: Hippocratic licence is not OSI-approved
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1039

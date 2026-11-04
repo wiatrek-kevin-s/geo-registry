@@ -1,0 +1,23 @@
+id: citydb-tool
+kind: tool
+name: citydb-tool
+category: Point clouds, LiDAR & 3D
+subcategory: City models
+tool_kind: Toolkit/CLI
+summary: Command-line tool for importing and exporting CityGML and CityJSON with 3DCityDB v5.
+open_source: 'yes'
+license: Apache-2.0
+language: Java
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/3dcitydb/citydb-tool
+notes: JVM dependency.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 626

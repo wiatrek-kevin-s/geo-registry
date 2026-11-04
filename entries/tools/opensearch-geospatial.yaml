@@ -1,0 +1,29 @@
+id: opensearch-geospatial
+kind: tool
+name: OpenSearch geospatial
+category: Spatial databases & query engines
+subcategory: NoSQL / search / KV
+tool_kind: Database
+summary: geo_point/geo_shape fields, geo queries and aggregations plus a geospatial plugin in the OpenSearch
+  fork.
+open_source: 'yes'
+license: Apache-2.0
+language: Java
+interfaces:
+- REST
+- Python
+- JS
+- Java
+call:
+- python
+- rest
+- js
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://opensearch.org
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 716

@@ -1,0 +1,23 @@
+id: potreeconverter
+kind: tool
+name: PotreeConverter
+category: Point clouds, LiDAR & 3D
+subcategory: Web viewers & engines
+tool_kind: Toolkit/CLI
+summary: Converts LAS/LAZ into the Potree octree format for web streaming.
+open_source: 'yes'
+license: BSD-2-Clause
+language: C++
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/potree/PotreeConverter
+notes: One CLI call to prep data for Potree.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 597

@@ -1,0 +1,20 @@
+id: geonames
+kind: data
+name: GeoNames
+summary: Global gazetteer of place names with web services.
+publisher: Unknown
+themes:
+- global-names
+- open-data-sources
+coverage:
+  region: Global
+license: CC-BY-4.0
+access:
+- type: http
+  url: https://www.geonames.org/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1317

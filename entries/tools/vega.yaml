@@ -1,0 +1,22 @@
+id: vega
+kind: tool
+name: Vega
+category: Display & visualization
+subcategory: Charting & dataviz libraries with maps
+tool_kind: Library
+summary: Declarative visualization grammar with projections and geo transforms.
+open_source: 'yes'
+license: BSD-3-Clause
+language: JavaScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://vega.github.io/vega/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1120

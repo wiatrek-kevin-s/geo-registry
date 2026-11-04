@@ -1,0 +1,21 @@
+id: looker-studio
+kind: tool
+name: Looker Studio
+category: Display & visualization
+subcategory: BI & dashboard maps
+tool_kind: Application
+summary: Google's free reporting tool with Google Maps and filled-map charts.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://lookerstudio.google.com/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1133

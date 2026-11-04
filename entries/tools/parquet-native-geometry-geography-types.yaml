@@ -1,0 +1,22 @@
+id: parquet-native-geometry-geography-types
+kind: tool
+name: Parquet native GEOMETRY/GEOGRAPHY types
+category: Core libraries & formats
+subcategory: Vector formats
+tool_kind: Format/Standard
+summary: Logical geometry and geography types added to the Apache Parquet and Iceberg specifications.
+open_source: 'yes'
+license: Apache-2.0
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/apache/parquet-format
+notes: Successor path for GeoParquet.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 170

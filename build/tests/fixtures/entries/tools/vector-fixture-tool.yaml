@@ -1,0 +1,19 @@
+id: vector-fixture-tool
+kind: tool
+name: Vector Fixture Tool
+category: Core libraries & formats
+tool_kind: Toolkit/CLI
+summary: Fixture vector overlay CLI; mentions lidar only in notes.
+open_source: partial
+license: Apache-2.0 OR MIT
+interfaces:
+- CLI
+call:
+- cli
+project_status: archived
+notes: Converts lidar footprints to polygons.
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 3

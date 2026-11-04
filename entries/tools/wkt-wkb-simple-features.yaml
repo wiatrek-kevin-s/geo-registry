@@ -1,0 +1,23 @@
+id: wkt-wkb-simple-features
+kind: tool
+name: WKT / WKB (Simple Features)
+category: Core libraries & formats
+subcategory: Vector formats
+tool_kind: Format/Standard
+summary: Text and binary encodings of Simple Features geometries.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open standard (OGC/ISO 19125)
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://www.ogc.org/standards/sfa
+notes: Universal geometry interchange.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 175

@@ -1,0 +1,24 @@
+id: stac-fastapi
+kind: tool
+name: stac-fastapi
+category: Imagery, remote sensing & GeoAI
+subcategory: STAC ecosystem
+tool_kind: Server
+summary: FastAPI-based framework for running STAC API servers with pluggable backends.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/stac-utils/stac-fastapi
+also_categories:
+- Servers, standards, tiles & catalogs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 423

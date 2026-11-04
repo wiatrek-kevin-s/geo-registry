@@ -1,0 +1,24 @@
+id: terraview
+kind: tool
+name: TerraView
+category: Desktop GIS & analysis engines
+subcategory: Open-source desktop GIS
+tool_kind: Application
+summary: Brazilian INPE desktop GIS built on the TerraLib library for vector, raster and spatial statistics
+  analysis.
+open_source: 'yes'
+license: LGPL-3.0
+language: C++
+interfaces:
+- GUI
+- C/C++
+call:
+- c-cpp
+wrapped_by_columbus: false
+project_status: low-activity
+notes: Licence and current URL not confirmed
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 238

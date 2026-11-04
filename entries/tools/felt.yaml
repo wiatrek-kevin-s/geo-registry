@@ -1,0 +1,26 @@
+id: felt
+kind: tool
+name: Felt
+category: Display & visualization
+subcategory: Hosted web map makers
+tool_kind: Platform
+summary: Collaborative browser-based map making and light analysis platform with an API.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://felt.com/
+notes: Has REST API for uploads/layers
+also_categories:
+- Commercial GIS platforms & APIs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1137

@@ -1,0 +1,24 @@
+id: mintpy
+kind: tool
+name: MintPy
+category: Imagery, remote sensing & GeoAI
+subcategory: SAR processing
+tool_kind: Toolkit/CLI
+summary: Small-baseline InSAR time-series analysis producing ground deformation maps.
+open_source: 'yes'
+license: GPL-3.0-or-later
+language: Python
+interfaces:
+- CLI
+- Python
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/insarlab/MintPy
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 494

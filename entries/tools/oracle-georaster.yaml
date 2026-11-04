@@ -1,0 +1,24 @@
+id: oracle-georaster
+kind: tool
+name: Oracle GeoRaster
+category: Spatial databases & query engines
+subcategory: Commercial RDBMS
+tool_kind: Extension
+summary: Stores and processes raster imagery and grids inside Oracle Database.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: PL/SQL
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: maintained
+url: https://docs.oracle.com/en/database/oracle/oracle-database/
+notes: Part of Oracle Spatial
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 698

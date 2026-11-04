@@ -1,0 +1,25 @@
+id: arcmap-arcgis-desktop
+kind: tool
+name: ArcMap / ArcGIS Desktop
+category: Desktop GIS & analysis engines
+subcategory: Commercial desktop GIS
+tool_kind: Application
+summary: Esri's legacy 32-bit Windows desktop GIS suite (ArcMap, ArcCatalog), superseded by ArcGIS Pro.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++; .NET
+interfaces:
+- GUI
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: archived
+url: https://desktop.arcgis.com
+notes: Retired March 2026; only legacy .mxd migration matters
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 254

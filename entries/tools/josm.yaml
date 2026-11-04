@@ -1,0 +1,26 @@
+id: josm
+kind: tool
+name: JOSM
+category: OSM & Overture tooling
+subcategory: Editors
+tool_kind: Application
+summary: Full-featured desktop OSM editor with plugins, validators, imagery and scripting.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: Java
+interfaces:
+- GUI
+- plugin
+- Java
+call:
+- java
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://josm.openstreetmap.de/
+notes: Remote control port can be driven over HTTP; JVM
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1211

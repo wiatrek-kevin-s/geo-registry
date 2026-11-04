@@ -1,0 +1,21 @@
+id: cf-conventions
+kind: tool
+name: CF Conventions
+category: Core libraries & formats
+subcategory: Raster formats
+tool_kind: Format/Standard
+summary: Climate and Forecast metadata conventions for NetCDF describing coordinates, units and grids.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open specification
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://cfconventions.org
+notes: Needed to interpret NetCDF georeferencing.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 134

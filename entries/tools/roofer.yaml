@@ -1,0 +1,26 @@
+id: roofer
+kind: tool
+name: roofer
+category: Point clouds, LiDAR & 3D
+subcategory: City models
+tool_kind: Toolkit/CLI
+summary: Automatic LoD2 building reconstruction from footprints and point clouds, used to make 3DBAG.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: C++
+interfaces:
+- CLI
+- Python
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/3DBAG/roofer
+notes: Lidar-to-building pipeline.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 624

@@ -1,0 +1,22 @@
+id: shapely-linear-referencing
+kind: tool
+name: Shapely linear referencing
+category: Routing, networks, geocoding & LRS
+subcategory: Linear referencing (LRS)
+tool_kind: Library
+summary: Shapely interpolate/project methods for distance along lines; basis for most Python LRS scripts.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python;C
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://shapely.readthedocs.io/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 862

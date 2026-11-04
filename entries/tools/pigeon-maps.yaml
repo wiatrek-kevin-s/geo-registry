@@ -1,0 +1,22 @@
+id: pigeon-maps
+kind: tool
+name: Pigeon Maps
+category: Display & visualization
+subcategory: Web map libraries
+tool_kind: Library
+summary: Minimal React map component for raster tiles with no external dependencies.
+open_source: 'yes'
+license: MIT
+language: TypeScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/mariusandra/pigeon-maps
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1021

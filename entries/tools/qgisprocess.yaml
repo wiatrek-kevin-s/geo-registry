@@ -1,0 +1,23 @@
+id: qgisprocess
+kind: tool
+name: qgisprocess
+category: Desktop GIS & analysis engines
+subcategory: R spatial packages
+tool_kind: Library
+summary: R interface to the qgis_process CLI for running QGIS Processing algorithms from R.
+open_source: 'yes'
+license: GPL-3.0-only
+language: R
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/r-spatial/qgisprocess
+notes: Bridges R and QGIS
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 349

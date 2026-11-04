@@ -1,0 +1,25 @@
+id: sld-symbology-encoding
+kind: tool
+name: SLD / Symbology Encoding
+category: Servers, standards, tiles & catalogs
+subcategory: OGC web service standards
+tool_kind: Format/Standard
+summary: XML languages for describing how map layers are symbolised in WMS and other services.
+open_source: 'yes'
+license: LicenseRef-OGC-Document
+license_original: OGC document licence
+interfaces:
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.ogc.org/standards/sld
+notes: Supported by GeoServer, MapServer, QGIS
+also_categories:
+- Display & visualization
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 979

@@ -1,0 +1,21 @@
+id: nps-data-and-api
+kind: data
+name: NPS data and API
+summary: National Park Service boundaries, trails and features plus a park-information API.
+publisher: National Park Service
+themes:
+- us-federal-interior
+- open-data-sources
+coverage:
+  region: United States
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.nps.gov/subjects/developer/api-documentation.htm
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1279

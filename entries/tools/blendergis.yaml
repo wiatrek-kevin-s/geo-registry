@@ -1,0 +1,24 @@
+id: blendergis
+kind: tool
+name: BlenderGIS
+category: Point clouds, LiDAR & 3D
+subcategory: Desktop viewers & editors
+tool_kind: Extension
+summary: Blender add-on for importing DEMs, shapefiles, OSM data and basemaps with georeferencing.
+open_source: 'yes'
+license: GPL-3.0
+language: Python
+interfaces:
+- plugin
+- GUI
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/domlysz/BlenderGIS
+notes: Last push mid-2024; check Blender version compatibility.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 590

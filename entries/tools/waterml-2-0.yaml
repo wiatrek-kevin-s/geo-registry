@@ -1,0 +1,22 @@
+id: waterml-2-0
+kind: tool
+name: WaterML 2.0
+category: Servers, standards, tiles & catalogs
+subcategory: OGC web service standards
+tool_kind: Format/Standard
+summary: Information model and encoding for hydrological time series and observations.
+open_source: 'yes'
+license: LicenseRef-OGC-Document
+license_original: OGC document licence
+interfaces:
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.ogc.org/standards/waterml
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 986

@@ -1,0 +1,23 @@
+id: libkml
+kind: tool
+name: libkml
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Google's C++ reference library for parsing and writing KML.
+open_source: 'yes'
+license: BSD-3-Clause
+language: C++
+interfaces:
+- C/C++
+call:
+- c-cpp
+wrapped_by_columbus: false
+project_status: archived
+url: https://github.com/libkml/libkml
+notes: Optional GDAL KML driver backend.
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 79

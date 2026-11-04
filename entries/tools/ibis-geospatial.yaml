@@ -1,0 +1,23 @@
+id: ibis-geospatial
+kind: tool
+name: Ibis geospatial
+category: Spatial databases & query engines
+subcategory: DataFrame / query libraries
+tool_kind: Library
+summary: Dataframe API that compiles geospatial expressions to DuckDB, PostGIS, BigQuery and other backends.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://ibis-project.org
+notes: Backend-agnostic spatial queries
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 731

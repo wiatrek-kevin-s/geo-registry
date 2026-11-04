@@ -1,0 +1,22 @@
+id: overture-maps-addresses
+kind: data
+name: Overture Maps Addresses
+summary: Overture's global addresses theme in GeoParquet, aggregated from open address sources.
+publisher: Overture Maps Foundation
+themes:
+- address-data
+- routing-networks-geocoding-lrs
+coverage:
+  region: Global
+license: NOASSERTION
+license_original: Unknown
+access:
+- type: http
+  url: https://docs.overturemaps.org/guides/addresses/
+  auth: none
+notes: Licence varies by source
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 846

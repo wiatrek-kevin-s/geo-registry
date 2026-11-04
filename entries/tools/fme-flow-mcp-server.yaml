@@ -1,0 +1,22 @@
+id: fme-flow-mcp-server
+kind: tool
+name: FME Flow MCP server
+category: AI, agents & MCP for GIS
+subcategory: General GIS MCP servers
+tool_kind: Server
+summary: FME Flow 2026.2 feature that publishes FME workspaces as audited MCP tools.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- MCP
+call:
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://fme.safe.com/platform/solutions/mcp/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1518

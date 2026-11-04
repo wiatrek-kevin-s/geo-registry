@@ -1,0 +1,26 @@
+id: gtfs-realtime-bindings
+kind: tool
+name: gtfs-realtime-bindings
+category: Routing, networks, geocoding & LRS
+subcategory: Transit data & tools
+tool_kind: Library
+summary: Official language bindings to parse GTFS Realtime protobuf feeds.
+open_source: 'yes'
+license: Apache-2.0
+language: Python;Java;JS
+interfaces:
+- Python
+- Java
+- JS
+call:
+- python
+- js
+- java
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/MobilityData/gtfs-realtime-bindings
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 803

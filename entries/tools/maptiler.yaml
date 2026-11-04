@@ -1,0 +1,26 @@
+id: maptiler
+kind: tool
+name: MapTiler
+category: Commercial GIS platforms & APIs
+subcategory: Location & mapping APIs
+tool_kind: Platform
+summary: Map hosting and tiling platform with vector basemaps, geocoding and MapTiler Engine tiling software.
+open_source: partial
+license: LicenseRef-Multiple
+license_original: Proprietary (cloud); BSD-3-Clause (MapTiler SDK JS)
+interfaces:
+- REST
+- JS
+- GUI
+call:
+- rest
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://www.maptiler.com/
+notes: MapLibre-friendly
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1407

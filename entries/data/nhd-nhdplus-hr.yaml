@@ -1,0 +1,22 @@
+id: nhd-nhdplus-hr
+kind: data
+name: NHD / NHDPlus HR
+summary: National stream, waterbody and catchment network with flow attributes.
+publisher: Unknown
+themes:
+- us-federal-hydrography
+- open-data-sources
+coverage:
+  region: United States
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.usgs.gov/national-hydrography
+  auth: none
+notes: Being succeeded by 3DHP
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1236

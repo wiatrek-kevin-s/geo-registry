@@ -1,0 +1,22 @@
+id: txgio-stratmap
+kind: data
+name: TxGIO StratMap
+summary: 'Statewide framework layers: land parcels, address points, roads, hydrography and elevation.'
+publisher: Texas Geographic Information Office
+themes:
+- texas
+- open-data-sources
+coverage:
+  region: Texas
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://geographic.texas.gov/stratmap/
+  auth: none
+notes: Statewide parcels from appraisal districts
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1335

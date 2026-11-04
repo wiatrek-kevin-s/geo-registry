@@ -1,0 +1,26 @@
+id: arcgis-pipeline-referencing
+kind: tool
+name: ArcGIS Pipeline Referencing
+category: Routing, networks, geocoding & LRS
+subcategory: Linear referencing (LRS)
+tool_kind: Extension
+summary: Esri extension managing linear referencing for pipeline networks (APDM, UPDM, PODS models).
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Python;C++
+interfaces:
+- GUI
+- Python
+- REST
+call:
+- python
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.esri.com/en-us/arcgis/products/arcgis-pipeline-referencing/overview
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 857

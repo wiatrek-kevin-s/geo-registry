@@ -1,0 +1,26 @@
+id: geoosam
+kind: tool
+name: GeoOSAM
+category: Imagery, remote sensing & GeoAI
+subcategory: GeoAI / deep learning
+tool_kind: Extension
+summary: QGIS plugin that segments rasters with SAM 2.1/SAM3 by click, box or text prompt and exports
+  vectors.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: Python
+interfaces:
+- plugin
+- GUI
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/espressouk/GeoOSAM
+notes: Local SAM inference in QGIS
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 468

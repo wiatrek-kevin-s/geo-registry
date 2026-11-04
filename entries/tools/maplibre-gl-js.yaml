@@ -1,0 +1,23 @@
+id: maplibre-gl-js
+kind: tool
+name: MapLibre GL JS
+category: Display & visualization
+subcategory: Web map libraries
+tool_kind: Library
+summary: Renders vector-tile and raster maps in the browser with WebGL, driven by a JSON style document.
+open_source: 'yes'
+license: BSD-3-Clause
+language: TypeScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://maplibre.org/maplibre-gl-js/docs/
+notes: Best default renderer for an embedded map view in a desktop app's webview
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1015

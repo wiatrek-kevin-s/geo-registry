@@ -1,0 +1,27 @@
+id: esri-enterprise-geodatabase
+kind: tool
+name: Esri enterprise geodatabase
+category: Spatial databases & query engines
+subcategory: Esri enterprise
+tool_kind: Platform
+summary: ArcGIS schema layer on Oracle, SQL Server, PostgreSQL, SAP HANA or Db2 that adds versioning,
+  replication, domains and topology.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+- Python
+- SQL
+call:
+- python
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://pro.arcgis.com/en/pro-app/latest/help/data/geodatabases/overview/what-is-a-geodatabase-.htm
+notes: Agent should go through arcpy or versioned views
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 711

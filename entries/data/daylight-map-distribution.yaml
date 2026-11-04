@@ -1,0 +1,21 @@
+id: daylight-map-distribution
+kind: data
+name: Daylight Map Distribution
+summary: Meta's validated OSM distribution with added ML buildings, coastlines and names.
+publisher: Unknown
+themes:
+- downloads-distributions
+- osm-overture-tooling
+coverage:
+  region: Unspecified
+license: ODbL-1.0
+access:
+- type: http
+  url: https://daylightmap.org/
+  auth: none
+notes: Final release v1.58 in Nov 2024; replaced by Overture
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1229

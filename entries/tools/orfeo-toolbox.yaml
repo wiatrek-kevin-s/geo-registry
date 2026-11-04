@@ -1,0 +1,31 @@
+id: orfeo-toolbox
+kind: tool
+name: Orfeo ToolBox
+category: Imagery, remote sensing & GeoAI
+subcategory: Remote sensing processing
+tool_kind: Toolkit/CLI
+summary: Library and CLI apps for high-resolution optical, SAR and hyperspectral image processing, segmentation
+  and classification.
+open_source: 'yes'
+license: Apache-2.0
+language: C++
+interfaces:
+- CLI
+- Python
+- C/C++
+- GUI
+- plugin
+call:
+- python
+- cli
+- c-cpp
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://www.orfeo-toolbox.org
+notes: otbcli_* apps easy for an agent to call; QGIS provider exists
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 360

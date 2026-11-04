@@ -1,0 +1,23 @@
+id: d3-d3-geo
+kind: tool
+name: D3 (d3-geo)
+category: Display & visualization
+subcategory: Charting & dataviz libraries with maps
+tool_kind: Library
+summary: D3 module for geographic projections, path generation and spherical geometry.
+open_source: 'yes'
+license: ISC
+language: JavaScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: maintained
+url: https://d3js.org/d3-geo
+notes: Custom projections and SVG maps
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1116

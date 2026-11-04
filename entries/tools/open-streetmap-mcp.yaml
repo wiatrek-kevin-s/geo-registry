@@ -1,0 +1,23 @@
+id: open-streetmap-mcp
+kind: tool
+name: open-streetmap-mcp
+category: AI, agents & MCP for GIS
+subcategory: Vendor/location MCP servers
+tool_kind: Server
+summary: OSM MCP for geocoding, nearby POIs, directions and neighborhood analysis.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: Python
+interfaces:
+- MCP
+call:
+- mcp
+wrapped_by_columbus: false
+project_status: unknown
+url: https://github.com/jagan-shanmugam/open-streetmap-mcp
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1537

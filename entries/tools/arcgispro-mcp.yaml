@@ -1,0 +1,25 @@
+id: arcgispro-mcp
+kind: tool
+name: ArcGISPro.MCP
+category: AI, agents & MCP for GIS
+subcategory: Community ArcGIS MCP servers
+tool_kind: Extension
+summary: Community MCP integration for ArcGIS Pro (v0.3.0 release seen).
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: C#
+interfaces:
+- MCP
+- plugin
+call:
+- mcp
+- plugin
+wrapped_by_columbus: false
+project_status: unknown
+url: https://github.com/nicoazel/ArcGISPro.MCP
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1493

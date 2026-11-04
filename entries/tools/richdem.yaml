@@ -1,0 +1,25 @@
+id: richdem
+kind: tool
+name: RichDEM
+category: Desktop GIS & analysis engines
+subcategory: Terrain & hydrology engines
+tool_kind: Library
+summary: High-performance DEM analysis library for depression filling, flow accumulation and terrain attributes.
+open_source: 'yes'
+license: GPL-3.0-only
+language: C++; Python
+interfaces:
+- Python
+- C/C++
+call:
+- python
+- c-cpp
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/r-barnes/richdem
+notes: Last PyPI release 2018
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 278

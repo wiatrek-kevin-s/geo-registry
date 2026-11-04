@@ -1,0 +1,23 @@
+id: geomoose
+kind: tool
+name: GeoMoose
+category: Display & visualization
+subcategory: Web GIS application frameworks
+tool_kind: Application
+summary: Web GIS client framework for displaying distributed spatial data, popular with US local governments.
+open_source: 'yes'
+license: MIT
+language: JavaScript
+interfaces:
+- GUI
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://www.geomoose.org/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1161

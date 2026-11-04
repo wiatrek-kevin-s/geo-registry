@@ -1,0 +1,25 @@
+id: e57-rust-crate
+kind: tool
+name: e57 (Rust crate)
+category: Point clouds, LiDAR & 3D
+subcategory: LAS/LAZ libraries
+tool_kind: Library
+summary: Pure Rust reader and writer for E57 point cloud files, with Python bindings available.
+open_source: 'yes'
+license: MIT
+language: Rust
+interfaces:
+- Rust
+- Python
+call:
+- python
+- rust
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/cry-inc/e57
+notes: E57 without a C++ dependency.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 551

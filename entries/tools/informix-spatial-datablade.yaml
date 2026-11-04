@@ -1,0 +1,23 @@
+id: informix-spatial-datablade
+kind: tool
+name: Informix Spatial DataBlade
+category: Spatial databases & query engines
+subcategory: Commercial RDBMS
+tool_kind: Extension
+summary: Spatial types and R-tree indexing for IBM/HCL Informix.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://www.hcl-software.com/informix
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 703

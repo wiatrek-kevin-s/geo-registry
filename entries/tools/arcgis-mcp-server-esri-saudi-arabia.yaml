@@ -1,0 +1,25 @@
+id: arcgis-mcp-server-esri-saudi-arabia
+kind: tool
+name: arcgis-mcp-server (Esri Saudi Arabia)
+category: AI, agents & MCP for GIS
+subcategory: Community ArcGIS MCP servers
+tool_kind: Server
+summary: MCP server for searching content in ArcGIS Online and Portal for ArcGIS.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- MCP
+- Python
+call:
+- python
+- mcp
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/esrisaudiarabia/esrisaudiarabia-mcp
+notes: Built by an Esri distributor, not Esri Inc.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1489

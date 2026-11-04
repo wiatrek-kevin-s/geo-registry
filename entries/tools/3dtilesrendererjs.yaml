@@ -1,0 +1,25 @@
+id: 3dtilesrendererjs
+kind: tool
+name: 3DTilesRendererJS
+category: Point clouds, LiDAR & 3D
+subcategory: Web viewers & engines
+tool_kind: Library
+summary: Three.js renderer for 3D Tiles tilesets, including Google photorealistic tiles.
+open_source: 'yes'
+license: Apache-2.0
+language: JavaScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/NASA-AMMOS/3DTilesRendererJS
+notes: Lightweight 3D Tiles in three.js.
+also_categories:
+- Display & visualization
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 607

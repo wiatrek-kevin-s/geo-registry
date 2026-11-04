@@ -1,0 +1,21 @@
+id: geozarr
+kind: tool
+name: GeoZarr
+category: Core libraries & formats
+subcategory: Raster formats
+tool_kind: Format/Standard
+summary: Draft OGC specification adding geospatial conventions (CRS, multiscales) to Zarr.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open specification (OGC draft)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/zarr-developers/geozarr-spec
+notes: Still in draft; ESA EOPF adopting.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 138

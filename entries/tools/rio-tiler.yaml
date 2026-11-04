@@ -1,0 +1,22 @@
+id: rio-tiler
+kind: tool
+name: rio-tiler
+category: Imagery, remote sensing & GeoAI
+subcategory: Imagery tiling & serving
+tool_kind: Library
+summary: Reads web map tiles, previews and statistics from COGs and other rasters.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/cogeotiff/rio-tiler
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 437

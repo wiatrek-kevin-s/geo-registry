@@ -1,0 +1,24 @@
+id: qgis-lrs-plugin
+kind: tool
+name: QGIS LRS plugin
+category: Routing, networks, geocoding & LRS
+subcategory: Linear referencing (LRS)
+tool_kind: Extension
+summary: QGIS plugin to calibrate routes from measured points, locate events, and create measures, with
+  error reporting.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: Python
+interfaces:
+- GUI
+- plugin
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/blazek/lrs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 864

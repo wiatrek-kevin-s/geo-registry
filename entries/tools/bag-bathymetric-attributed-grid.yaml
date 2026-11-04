@@ -1,0 +1,21 @@
+id: bag-bathymetric-attributed-grid
+kind: tool
+name: BAG (Bathymetric Attributed Grid)
+category: Core libraries & formats
+subcategory: Raster formats
+tool_kind: Format/Standard
+summary: HDF5-based format for gridded bathymetry with uncertainty from ONS-WG.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open specification
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/OpenNavigationSurface/BAG
+notes: Hydrographic surveys.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 155

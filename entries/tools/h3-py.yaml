@@ -1,0 +1,23 @@
+id: h3-py
+kind: tool
+name: h3-py
+category: Core libraries & formats
+subcategory: Discrete global grids & geocodes
+tool_kind: Library
+summary: Official Python bindings for H3.
+open_source: 'yes'
+license: Apache-2.0
+language: Python/Cython
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/uber/h3-py
+notes: H3 in Python agents.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 104

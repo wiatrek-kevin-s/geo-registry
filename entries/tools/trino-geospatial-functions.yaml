@@ -1,0 +1,27 @@
+id: trino-geospatial-functions
+kind: tool
+name: Trino geospatial functions
+category: Spatial databases & query engines
+subcategory: Big data / distributed
+tool_kind: Extension
+summary: Built-in ST_ and Bing tile functions for federated SQL queries in Trino.
+open_source: 'yes'
+license: Apache-2.0
+language: Java
+interfaces:
+- SQL
+- REST
+- JDBC
+call:
+- rest
+- sql
+- jdbc
+wrapped_by_columbus: false
+project_status: active
+url: https://trino.io/docs/current/functions/geospatial.html
+notes: Query lakes spatially
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 681

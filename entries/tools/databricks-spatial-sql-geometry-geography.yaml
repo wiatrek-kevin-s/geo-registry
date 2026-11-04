@@ -1,0 +1,24 @@
+id: databricks-spatial-sql-geometry-geography
+kind: tool
+name: Databricks Spatial SQL (GEOMETRY/GEOGRAPHY)
+category: Connections & storage
+subcategory: Data catalogs with geo support
+tool_kind: Service/API
+summary: Native geospatial types and ST functions in Databricks SQL, governed by Unity Catalog.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- SQL
+- Python
+call:
+- python
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://www.databricks.com/blog/geospatial-unbounded-spatial-sql-ga-aibi-maps-delta-sharing-and-iceberg-v3
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1476

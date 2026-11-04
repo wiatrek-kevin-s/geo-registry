@@ -1,0 +1,20 @@
+id: hpms-field-manual
+kind: tool
+name: HPMS Field Manual
+category: Routing, networks, geocoding & LRS
+subcategory: Linear referencing (LRS)
+tool_kind: Format/Standard
+summary: FHWA specification for reporting route-and-measure highway inventory data sections.
+open_source: 'yes'
+license: LicenseRef-Public-Domain
+license_original: Public domain
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://www.fhwa.dot.gov/policyinformation/hpms.cfm
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 875

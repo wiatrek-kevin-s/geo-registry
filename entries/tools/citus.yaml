@@ -1,0 +1,23 @@
+id: citus
+kind: tool
+name: Citus
+category: Spatial databases & query engines
+subcategory: PostgreSQL ecosystem
+tool_kind: Extension
+summary: Distributes PostgreSQL tables across nodes; works with PostGIS for scale-out spatial queries.
+open_source: 'yes'
+license: AGPL-3.0
+language: C
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/citusdata/citus
+notes: Scale-out PostGIS
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 655

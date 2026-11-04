@@ -1,0 +1,25 @@
+id: openjpeg
+kind: tool
+name: OpenJPEG
+category: Core libraries & formats
+subcategory: Raster formats
+tool_kind: Library
+summary: Open-source JPEG 2000 codec used by GDAL's JP2 driver.
+open_source: 'yes'
+license: BSD-2-Clause
+language: C
+interfaces:
+- C/C++
+- CLI
+call:
+- cli
+- c-cpp
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.openjpeg.org
+notes: Decoding Sentinel-2 JP2.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 143

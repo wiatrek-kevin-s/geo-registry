@@ -1,0 +1,25 @@
+id: momepy
+kind: tool
+name: momepy
+category: Desktop GIS & analysis engines
+subcategory: Python vector analysis
+tool_kind: Library
+summary: PySAL-family toolkit for quantitative urban morphology metrics of buildings, streets and plots.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/pysal/momepy
+notes: 1.0 released Jul 2026
+also_categories:
+- Routing, networks, geocoding & LRS
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 289

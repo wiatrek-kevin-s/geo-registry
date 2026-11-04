@@ -1,0 +1,20 @@
+id: worldpop
+kind: data
+name: WorldPop
+summary: Gridded population counts and demographics at 100 m and 1 km.
+publisher: Unknown
+themes:
+- global-population
+- open-data-sources
+coverage:
+  region: Global
+license: CC-BY-4.0
+access:
+- type: http
+  url: https://www.worldpop.org/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1306

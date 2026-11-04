@@ -1,0 +1,25 @@
+id: h3o
+kind: tool
+name: h3o
+category: Core libraries & formats
+subcategory: Discrete global grids & geocodes
+tool_kind: Library
+summary: Pure Rust implementation of the H3 grid system.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Rust
+interfaces:
+- Rust
+- Python
+call:
+- python
+- rust
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/HydroniumLabs/h3o
+notes: H3 without C bindings in Rust.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 106

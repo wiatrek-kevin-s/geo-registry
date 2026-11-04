@@ -1,0 +1,23 @@
+id: gml
+kind: tool
+name: GML
+category: Core libraries & formats
+subcategory: Vector formats
+tool_kind: Format/Standard
+summary: XML grammar for geographic features used by WFS and many national datasets.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open standard (OGC, ISO 19136)
+interfaces:
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.ogc.org/standards/gml
+notes: Verbose; application schemas vary.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 172

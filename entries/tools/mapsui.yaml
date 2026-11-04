@@ -1,0 +1,23 @@
+id: mapsui
+kind: tool
+name: Mapsui
+category: Display & visualization
+subcategory: Native & mobile SDKs
+tool_kind: Library
+summary: .NET map component for MAUI, WPF, Avalonia, Blazor and other UI frameworks.
+open_source: 'yes'
+license: MIT
+language: C#
+interfaces:
+- C/C++
+call:
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://mapsui.com/
+notes: Option for a .NET desktop shell
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1077

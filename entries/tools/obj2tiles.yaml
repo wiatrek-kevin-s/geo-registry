@@ -1,0 +1,23 @@
+id: obj2tiles
+kind: tool
+name: Obj2Tiles
+category: Point clouds, LiDAR & 3D
+subcategory: 3D tiles & streaming formats
+tool_kind: Toolkit/CLI
+summary: Converts OBJ meshes into 3D Tiles with decimation and splitting, from the OpenDroneMap project.
+open_source: 'yes'
+license: AGPL-3.0
+language: C#
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/OpenDroneMap/Obj2Tiles
+notes: Turn photogrammetry meshes into 3D Tiles.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 616

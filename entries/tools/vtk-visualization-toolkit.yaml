@@ -1,0 +1,27 @@
+id: vtk-visualization-toolkit
+kind: tool
+name: VTK (Visualization Toolkit)
+category: Point clouds, LiDAR & 3D
+subcategory: Point cloud & mesh libraries
+tool_kind: Library
+summary: Visualization and processing library for 3D geometry, volumes and scientific data.
+open_source: 'yes'
+license: BSD-3-Clause
+language: C++
+interfaces:
+- C/C++
+- Python
+- JS
+call:
+- python
+- js
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://vtk.org
+notes: Foundation under PyVista and ParaView.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 576

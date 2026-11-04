@@ -1,0 +1,21 @@
+id: panoramax
+kind: data
+name: Panoramax
+summary: Federated open street-level imagery commons with a STAC-based API.
+publisher: Unknown
+themes:
+- global-street-level
+- open-data-sources
+coverage:
+  region: Global
+license: MIT
+access:
+- type: http
+  url: https://panoramax.fr/
+  auth: none
+notes: Code MIT; imagery CC-BY-SA
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1327

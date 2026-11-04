@@ -1,0 +1,24 @@
+id: starrocks-spatial-functions
+kind: tool
+name: StarRocks spatial functions
+category: Spatial databases & query engines
+subcategory: Big data / distributed
+tool_kind: Extension
+summary: MPP analytics database with a set of ST_ spatial functions.
+open_source: 'yes'
+license: Apache-2.0
+language: C++;Java
+interfaces:
+- SQL
+- JDBC
+call:
+- sql
+- jdbc
+wrapped_by_columbus: false
+project_status: active
+url: https://docs.starrocks.io/docs/sql-reference/sql-functions/spatial-functions/st_contains
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 688

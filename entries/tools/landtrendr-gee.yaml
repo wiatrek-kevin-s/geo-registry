@@ -1,0 +1,26 @@
+id: landtrendr-gee
+kind: tool
+name: LandTrendr (GEE)
+category: Imagery, remote sensing & GeoAI
+subcategory: Change detection
+tool_kind: Library
+summary: Earth Engine implementation of the LandTrendr temporal segmentation algorithm for Landsat disturbance
+  mapping.
+open_source: 'yes'
+license: Apache-2.0
+language: JavaScript
+interfaces:
+- JS
+- Python
+call:
+- python
+- js
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/eMapR/LT-GEE
+notes: Requires Earth Engine account
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 385

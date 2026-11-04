@@ -1,0 +1,25 @@
+id: carto-analytics-toolbox
+kind: tool
+name: CARTO Analytics Toolbox
+category: Spatial databases & query engines
+subcategory: Cloud warehouses
+tool_kind: Extension
+summary: Set of spatial UDFs (tiling, quadbin, H3, clustering, routing) deployed into BigQuery, Snowflake,
+  Redshift, Databricks and Postgres.
+open_source: partial
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: SQL;JavaScript;Python
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://docs.carto.com/data-and-analysis/analytics-toolbox-overview
+notes: Core module open on GitHub; advanced modules paid
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 695

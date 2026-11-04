@@ -1,0 +1,27 @@
+id: agisoft-metashape
+kind: tool
+name: Agisoft Metashape
+category: Imagery, remote sensing & GeoAI
+subcategory: Photogrammetry & drone
+tool_kind: Application
+summary: Photogrammetry software generating point clouds, meshes, DEMs and orthomosaics from photos.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://www.agisoft.com
+notes: Python API in Pro edition
+also_categories:
+- Point clouds, LiDAR & 3D
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 509

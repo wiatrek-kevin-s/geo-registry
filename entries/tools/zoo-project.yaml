@@ -1,0 +1,27 @@
+id: zoo-project
+kind: tool
+name: ZOO-Project
+category: Servers, standards, tiles & catalogs
+subcategory: Processing & sensor services
+tool_kind: Server
+summary: WPS and OGC API Processes server that wraps C, Python, Java and other code as web processes.
+open_source: 'yes'
+license: MIT
+language: C/C++; Python
+interfaces:
+- OGC
+- REST
+- Python
+call:
+- python
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://www.zoo-project.org
+notes: Exposes local tools as standard process endpoints
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 942

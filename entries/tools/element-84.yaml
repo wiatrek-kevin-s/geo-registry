@@ -1,0 +1,25 @@
+id: element-84
+kind: tool
+name: Element 84
+category: Commercial GIS platforms & APIs
+subcategory: Open-source EO consultancies
+tool_kind: Platform
+summary: Geospatial engineering firm behind FilmDrop, stac-server and Earth Search.
+open_source: partial
+license: LicenseRef-Multiple
+license_original: Varies
+language: Python; JS
+interfaces:
+- REST
+- STAC
+call:
+- rest
+- stac
+wrapped_by_columbus: false
+project_status: active
+url: https://element84.com/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1420

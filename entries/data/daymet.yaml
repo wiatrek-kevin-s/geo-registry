@@ -1,0 +1,21 @@
+id: daymet
+kind: data
+name: Daymet
+summary: Daily 1 km gridded weather for North America from ORNL DAAC.
+publisher: Unknown
+themes:
+- global-climate
+- open-data-sources
+coverage:
+  region: North America
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://daymet.ornl.gov/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1322

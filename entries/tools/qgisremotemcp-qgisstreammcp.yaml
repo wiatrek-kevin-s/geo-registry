@@ -1,0 +1,23 @@
+id: qgisremotemcp-qgisstreammcp
+kind: tool
+name: QgisRemoteMCP / QgisStreamMCP
+category: AI, agents & MCP for GIS
+subcategory: QGIS AI & MCP
+tool_kind: Server
+summary: Dockerized QGIS Desktop exposed as an MCP server with noVNC GUI and 1000+ Processing algorithms.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: Python
+interfaces:
+- MCP
+call:
+- mcp
+wrapped_by_columbus: false
+project_status: unknown
+url: https://github.com/nic01asFr/QgisRemoteMCP
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1500

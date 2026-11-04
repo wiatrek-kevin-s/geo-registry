@@ -1,0 +1,22 @@
+id: ol-mapbox-style
+kind: tool
+name: ol-mapbox-style
+category: Display & visualization
+subcategory: MapLibre/OpenLayers ecosystem
+tool_kind: Library
+summary: Applies Mapbox/MapLibre style JSON to OpenLayers vector tile layers.
+open_source: 'yes'
+license: BSD-2-Clause
+language: JavaScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/openlayers/ol-mapbox-style
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1045

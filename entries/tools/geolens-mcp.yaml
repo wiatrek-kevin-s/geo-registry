@@ -1,0 +1,22 @@
+id: geolens-mcp
+kind: tool
+name: GeoLens MCP
+category: AI, agents & MCP for GIS
+subcategory: General GIS MCP servers
+tool_kind: Server
+summary: Read-only MCP for GeoLens catalog search, schemas, GeoJSON output and sandboxed SQL.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+interfaces:
+- MCP
+call:
+- mcp
+wrapped_by_columbus: false
+project_status: unknown
+url: https://github.com/geolens-io/geolens/tree/main/mcp
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1516

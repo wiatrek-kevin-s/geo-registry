@@ -1,0 +1,22 @@
+id: travis-central-appraisal-district
+kind: data
+name: Travis Central Appraisal District
+summary: Travis County parcel and appraisal data; parcels also in StratMap.
+publisher: Travis Central Appraisal District
+themes:
+- texas
+- open-data-sources
+coverage:
+  region: Texas
+license: LicenseRef-Custom
+license_original: Custom
+access:
+- type: http
+  url: https://traviscad.org/
+  auth: none
+notes: Each Texas county has its own CAD with its own terms
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1352

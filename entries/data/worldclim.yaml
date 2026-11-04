@@ -1,0 +1,21 @@
+id: worldclim
+kind: data
+name: WorldClim
+summary: Global gridded climate normals and bioclimatic variables at up to 30 arc-seconds.
+publisher: Unknown
+themes:
+- global-climate
+- open-data-sources
+coverage:
+  region: Global
+license: LicenseRef-Custom
+license_original: Custom (free; no redistribution)
+access:
+- type: http
+  url: https://worldclim.org/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1320

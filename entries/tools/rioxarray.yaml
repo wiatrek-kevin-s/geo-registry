@@ -1,0 +1,25 @@
+id: rioxarray
+kind: tool
+name: rioxarray
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Rasterio-powered extension adding CRS and geospatial IO to xarray.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/corteva/rioxarray
+notes: Bridges xarray and GeoTIFF.
+also_categories:
+- Desktop GIS & analysis engines
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 54

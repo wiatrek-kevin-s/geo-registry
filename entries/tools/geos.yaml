@@ -1,0 +1,23 @@
+id: geos
+kind: tool
+name: GEOS
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: C/C++ geometry engine for predicates, overlays, buffers and validity checks, ported from JTS.
+open_source: 'yes'
+license: LGPL-2.1-or-later
+language: C++
+interfaces:
+- C/C++
+call:
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://libgeos.org
+notes: Underpins Shapely, PostGIS, QGIS and GDAL geometry ops.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 2

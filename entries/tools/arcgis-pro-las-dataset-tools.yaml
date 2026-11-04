@@ -1,0 +1,25 @@
+id: arcgis-pro-las-dataset-tools
+kind: tool
+name: ArcGIS Pro LAS dataset tools
+category: Point clouds, LiDAR & 3D
+subcategory: Lidar processing suites
+tool_kind: Application
+summary: ArcGIS Pro tools for managing LAS datasets, classifying ground and buildings, and creating surfaces.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++;Python
+interfaces:
+- GUI
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://pro.arcgis.com/en/pro-app/latest/help/data/las-dataset/what-is-a-las-dataset-.htm
+notes: Agent can script via arcpy where licensed.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 565

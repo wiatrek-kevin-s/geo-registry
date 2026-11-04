@@ -1,0 +1,25 @@
+id: 3d-tiles-validator
+kind: tool
+name: 3d-tiles-validator
+category: Point clouds, LiDAR & 3D
+subcategory: 3D tiles & streaming formats
+tool_kind: Toolkit/CLI
+summary: Validator that checks 3D Tiles tilesets and tile content against the specification.
+open_source: 'yes'
+license: Apache-2.0
+language: TypeScript
+interfaces:
+- CLI
+- JS
+call:
+- cli
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/CesiumGS/3d-tiles-validator
+notes: QA step for tiling pipelines.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 613

@@ -1,0 +1,29 @@
+id: arcgis-api-for-python
+kind: tool
+name: ArcGIS API for Python
+category: Desktop GIS & analysis engines
+subcategory: Commercial desktop GIS
+tool_kind: Library
+summary: Esri's Python package for working with ArcGIS Online/Enterprise content, spatial DataFrames and
+  hosted analysis.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Python
+interfaces:
+- Python
+- REST
+call:
+- python
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://developers.arcgis.com/python/
+notes: Esri MLA licence; works without ArcPy for web GIS
+also_categories:
+- Commercial GIS platforms & APIs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 253

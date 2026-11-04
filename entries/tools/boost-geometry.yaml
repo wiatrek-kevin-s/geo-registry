@@ -1,0 +1,23 @@
+id: boost-geometry
+kind: tool
+name: Boost.Geometry
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: Header-only C++ library of geometry algorithms, spatial indexes (R-tree) and coordinate systems.
+open_source: 'yes'
+license: BSL-1.0
+language: C++
+interfaces:
+- C/C++
+call:
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://www.boost.org/libs/geometry
+notes: Used by MySQL spatial; header-only.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 8

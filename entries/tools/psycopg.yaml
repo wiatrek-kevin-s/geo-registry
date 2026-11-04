@@ -1,0 +1,25 @@
+id: psycopg
+kind: tool
+name: psycopg
+category: Spatial databases & query engines
+subcategory: Drivers & connectors
+tool_kind: Library
+summary: PostgreSQL adapter for Python used to run PostGIS queries.
+open_source: 'yes'
+license: LGPL-3.0
+language: Python;C
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://www.psycopg.org
+notes: Primary agent path to PostGIS
+also_categories:
+- Connections & storage
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 733

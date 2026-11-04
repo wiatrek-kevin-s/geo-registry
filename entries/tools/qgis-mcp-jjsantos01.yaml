@@ -1,0 +1,26 @@
+id: qgis-mcp-jjsantos01
+kind: tool
+name: qgis_mcp (jjsantos01)
+category: AI, agents & MCP for GIS
+subcategory: QGIS AI & MCP
+tool_kind: Extension
+summary: Original QGIS socket plugin and MCP server letting Claude manage projects, layers and processing.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: Python
+interfaces:
+- MCP
+- plugin
+call:
+- mcp
+- plugin
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/jjsantos01/qgis_mcp
+notes: No licence file seen
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1498

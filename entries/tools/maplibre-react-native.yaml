@@ -1,0 +1,22 @@
+id: maplibre-react-native
+kind: tool
+name: MapLibre React Native
+category: Display & visualization
+subcategory: MapLibre/OpenLayers ecosystem
+tool_kind: Library
+summary: React Native bindings for MapLibre Native maps on iOS and Android.
+open_source: 'yes'
+license: MIT
+language: TypeScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/maplibre/maplibre-react-native
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1041

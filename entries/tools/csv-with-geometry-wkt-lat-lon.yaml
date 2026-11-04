@@ -1,0 +1,21 @@
+id: csv-with-geometry-wkt-lat-lon
+kind: tool
+name: CSV with geometry (WKT/lat-lon)
+category: Core libraries & formats
+subcategory: Vector formats
+tool_kind: Format/Standard
+summary: Delimited text holding geometry as WKT columns or X/Y coordinate columns.
+open_source: 'yes'
+license: NOASSERTION
+license_original: n/a (convention)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://gdal.org/en/stable/drivers/vector/csv.html
+notes: Most common user upload; needs column sniffing.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 179

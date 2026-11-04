@@ -1,0 +1,21 @@
+id: city-of-austin-gis-arcgis
+kind: data
+name: City of Austin GIS (ArcGIS)
+summary: City map services for zoning, floodplain, jurisdictions and utilities.
+publisher: City of Austin
+themes:
+- texas
+- open-data-sources
+coverage:
+  region: Texas
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.austintexas.gov/department/gis-and-maps
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1350

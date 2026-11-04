@@ -1,0 +1,27 @@
+id: deegree
+kind: tool
+name: deegree
+category: Servers, standards, tiles & catalogs
+subcategory: Map & feature servers
+tool_kind: Server
+summary: Implements a wide set of OGC services including WFS, WMS, WMTS, CSW and WPS with strong GML and
+  INSPIRE support.
+open_source: 'yes'
+license: LGPL-2.1-or-later
+language: Java
+interfaces:
+- OGC
+- REST
+- GUI
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.deegree.org
+notes: OGC reference implementation for several standards
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 897

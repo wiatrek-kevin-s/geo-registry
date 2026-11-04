@@ -1,0 +1,21 @@
+id: socet-gxp
+kind: tool
+name: Socet GXP
+category: Imagery, remote sensing & GeoAI
+subcategory: Commercial RS software
+tool_kind: Application
+summary: BAE Systems geospatial intelligence software for imagery exploitation and photogrammetry.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://www.geospatialexploitationproducts.com
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 474

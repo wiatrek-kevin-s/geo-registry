@@ -1,0 +1,23 @@
+id: gsplat
+kind: tool
+name: gsplat
+category: Point clouds, LiDAR & 3D
+subcategory: Photogrammetry & reality capture
+tool_kind: Library
+summary: CUDA-accelerated library for training and rendering 3D Gaussian splats.
+open_source: 'yes'
+license: Apache-2.0
+language: Python;CUDA
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/nerfstudio-project/gsplat
+notes: Requires NVIDIA GPU.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 632

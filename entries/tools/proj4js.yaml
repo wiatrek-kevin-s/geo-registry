@@ -1,0 +1,23 @@
+id: proj4js
+kind: tool
+name: Proj4js
+category: Core libraries & formats
+subcategory: Projection & CRS
+tool_kind: Library
+summary: JavaScript library to transform coordinates between projections defined by PROJ strings or WKT.
+open_source: 'yes'
+license: MIT
+language: JavaScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/proj4js/proj4js
+notes: Used by OpenLayers/Leaflet plugins.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 36

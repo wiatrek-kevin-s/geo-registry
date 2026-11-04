@@ -1,0 +1,22 @@
+id: arcgis-location-services-mcp-community
+kind: tool
+name: arcgis-location-services-mcp (community)
+category: AI, agents & MCP for GIS
+subcategory: Community ArcGIS MCP servers
+tool_kind: Server
+summary: Community wrapper exposing ArcGIS Location Platform geocoding and routing as MCP tools.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+interfaces:
+- MCP
+call:
+- mcp
+wrapped_by_columbus: false
+project_status: unknown
+url: https://github.com/lwsinclair/arcgis-location-services-mcp
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1495

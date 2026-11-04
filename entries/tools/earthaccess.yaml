@@ -1,0 +1,23 @@
+id: earthaccess
+kind: tool
+name: earthaccess
+category: Imagery, remote sensing & GeoAI
+subcategory: Cloud EO platforms
+tool_kind: Library
+summary: Python library for searching and downloading NASA Earthdata with simplified authentication.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/nsidc/earthaccess
+notes: Easy agent tool for NASA data
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 408

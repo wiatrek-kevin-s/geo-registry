@@ -1,0 +1,23 @@
+id: dodgr
+kind: tool
+name: dodgr
+category: Routing, networks, geocoding & LRS
+subcategory: Accessibility & transport modeling
+tool_kind: Library
+summary: R package for distances, flows and routing on dual-weighted directed street graphs.
+open_source: 'yes'
+license: GPL-3.0
+language: R;C++
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/UrbanAnalyst/dodgr
+notes: URL is the moved repo; unverified
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 794

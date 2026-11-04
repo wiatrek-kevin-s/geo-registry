@@ -1,0 +1,23 @@
+id: mapbender
+kind: tool
+name: Mapbender
+category: Display & visualization
+subcategory: Web GIS application frameworks
+tool_kind: Application
+summary: Web-based geoportal framework for configuring map applications over OGC services.
+open_source: 'yes'
+license: MIT
+language: PHP;JavaScript
+interfaces:
+- GUI
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://mapbender.org/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1159

@@ -1,0 +1,21 @@
+id: fabdem
+kind: data
+name: FABDEM
+summary: Copernicus DEM with forests and buildings removed to approximate bare earth.
+publisher: Unknown
+themes:
+- global-elevation
+- open-data-sources
+coverage:
+  region: Global
+license: CC-BY-NC-SA-4.0
+access:
+- type: http
+  url: https://data.bris.ac.uk/data/dataset/s5hqmjcdj8yo2ibzi9b4ew3sn
+  auth: none
+notes: Non-commercial only
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1297

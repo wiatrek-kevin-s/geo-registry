@@ -1,0 +1,25 @@
+id: maptiler-cloud
+kind: tool
+name: MapTiler Cloud
+category: Display & visualization
+subcategory: Hosted web map makers
+tool_kind: Platform
+summary: Hosted map styles, tiles, geocoding and a style customizer from MapTiler.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+- REST
+- OGC
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://www.maptiler.com/cloud/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1141

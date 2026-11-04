@@ -1,0 +1,21 @@
+id: qlik-geoanalytics
+kind: tool
+name: Qlik GeoAnalytics
+category: Display & visualization
+subcategory: BI & dashboard maps
+tool_kind: Extension
+summary: Mapping and location analytics add-on for Qlik Sense.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.qlik.com/us/products/qlik-geoanalytics
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1134

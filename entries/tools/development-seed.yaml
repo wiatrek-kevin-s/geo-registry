@@ -1,0 +1,25 @@
+id: development-seed
+kind: tool
+name: Development Seed
+category: Commercial GIS platforms & APIs
+subcategory: Open-source EO consultancies
+tool_kind: Platform
+summary: Consultancy that builds open-source EO tooling such as TiTiler, eoAPI, Lonboard and obstore.
+open_source: partial
+license: LicenseRef-Multiple
+license_original: Varies
+language: Python; TS
+interfaces:
+- Python
+- REST
+call:
+- python
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://developmentseed.org/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1421

@@ -1,0 +1,26 @@
+id: whitebox-workflows-pro-wbw-pro
+kind: tool
+name: Whitebox Workflows Pro (WbW-Pro)
+category: Desktop GIS & analysis engines
+subcategory: Whitebox & Rust GIS engines
+tool_kind: Extension
+summary: Paid extension adding advanced Whitebox tools on top of the open Whitebox Workflows core.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Rust
+interfaces:
+- Python
+- R
+call:
+- python
+- r
+wrapped_by_columbus: false
+project_status: active
+url: https://www.whiteboxgeo.com
+notes: Commercial add-on funding the OSS core
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 244

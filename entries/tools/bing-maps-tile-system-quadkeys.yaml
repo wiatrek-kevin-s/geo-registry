@@ -1,0 +1,21 @@
+id: bing-maps-tile-system-quadkeys
+kind: tool
+name: Bing Maps Tile System (quadkeys)
+category: Core libraries & formats
+subcategory: Discrete global grids & geocodes
+tool_kind: Format/Standard
+summary: Web Mercator tile addressing scheme encoding zoom/x/y as base-4 quadkey strings.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open specification
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://learn.microsoft.com/en-us/bingmaps/articles/bing-maps-tile-system
+notes: Used for tiling and partitioning.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 109

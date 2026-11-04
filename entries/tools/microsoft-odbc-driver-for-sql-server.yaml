@@ -1,0 +1,25 @@
+id: microsoft-odbc-driver-for-sql-server
+kind: tool
+name: Microsoft ODBC Driver for SQL Server
+category: Spatial databases & query engines
+subcategory: Drivers & connectors
+tool_kind: Library
+summary: Official ODBC driver for SQL Server and Azure SQL.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- C/C++
+call:
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://learn.microsoft.com/sql/connect/odbc/microsoft-odbc-driver-for-sql-server
+also_categories:
+- Connections & storage
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 737

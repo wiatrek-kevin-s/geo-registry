@@ -1,0 +1,24 @@
+id: torchgeo
+kind: tool
+name: TorchGeo
+category: Imagery, remote sensing & GeoAI
+subcategory: GeoAI / deep learning
+tool_kind: Library
+summary: PyTorch library of geospatial datasets, samplers, transforms and pretrained models.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/torchgeo/torchgeo
+also_categories:
+- AI, agents & MCP for GIS
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 444

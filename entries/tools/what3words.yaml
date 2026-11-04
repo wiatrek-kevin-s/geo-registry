@@ -1,0 +1,29 @@
+id: what3words
+kind: tool
+name: what3words
+category: Core libraries & formats
+subcategory: Discrete global grids & geocodes
+tool_kind: Service/API
+summary: Commercial system assigning three-word addresses to 3 m squares worldwide via API and SDKs.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- JS
+- Python
+- Java
+call:
+- python
+- rest
+- js
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://what3words.com
+notes: Licensed API; cannot be computed offline freely.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 114

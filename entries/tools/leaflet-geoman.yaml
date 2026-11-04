@@ -1,0 +1,26 @@
+id: leaflet-geoman
+kind: tool
+name: Leaflet-Geoman
+category: Display & visualization
+subcategory: Leaflet plugins
+tool_kind: Extension
+summary: Drawing, editing, cutting and snapping toolkit for Leaflet with a free edition and a paid Pro
+  edition.
+open_source: partial
+license: MIT
+language: TypeScript
+interfaces:
+- JS
+- plugin
+call:
+- js
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/geoman-io/leaflet-geoman
+notes: Free edition MIT; Pro features commercial
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1032

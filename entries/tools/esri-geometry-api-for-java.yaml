@@ -1,0 +1,26 @@
+id: esri-geometry-api-for-java
+kind: tool
+name: Esri Geometry API for Java
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: Esri's open Java geometry library supporting relational operations, used by Hive/Spark spatial
+  tools.
+open_source: 'yes'
+license: Apache-2.0
+language: Java
+interfaces:
+- Java
+call:
+- java
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/Esri/geometry-api-java
+notes: Older JVM engine; still in GIS Tools for Hadoop.
+also_categories:
+- Spatial databases & query engines
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 25

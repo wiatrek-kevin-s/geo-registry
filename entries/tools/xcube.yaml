@@ -1,0 +1,26 @@
+id: xcube
+kind: tool
+name: xcube
+category: Imagery, remote sensing & GeoAI
+subcategory: Imagery tiling & serving
+tool_kind: Toolkit/CLI
+summary: Toolkit for building, serving and analysing xarray/Zarr EO data cubes, with server and viewer.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+- CLI
+- REST
+call:
+- python
+- cli
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/xcube-dev/xcube
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 441

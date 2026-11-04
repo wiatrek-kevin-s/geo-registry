@@ -1,0 +1,23 @@
+id: osmfilter
+kind: tool
+name: osmfilter
+category: OSM & Overture tooling
+subcategory: PBF processing
+tool_kind: Toolkit/CLI
+summary: Small command-line filter that keeps OSM objects matching tag expressions in .osm/.o5m files.
+open_source: 'yes'
+license: AGPL-3.0-only
+language: C
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://wiki.openstreetmap.org/wiki/Osmfilter
+notes: Tiny binary; works on o5m
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1190

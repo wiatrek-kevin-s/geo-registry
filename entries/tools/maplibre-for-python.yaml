@@ -1,0 +1,22 @@
+id: maplibre-for-python
+kind: tool
+name: MapLibre for Python
+category: Display & visualization
+subcategory: Python notebook & app mapping
+tool_kind: Library
+summary: Python bindings that build MapLibre GL JS maps for Jupyter, Shiny and HTML export.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/eodaGmbH/py-maplibregl
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1089

@@ -1,0 +1,22 @@
+id: rgeoda
+kind: tool
+name: rgeoda
+category: Desktop GIS & analysis engines
+subcategory: R spatial packages
+tool_kind: Library
+summary: R bindings to the libgeoda engine for spatial weights, LISA and spatial clustering.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: R; C++
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/GeoDaCenter/rgeoda
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 345

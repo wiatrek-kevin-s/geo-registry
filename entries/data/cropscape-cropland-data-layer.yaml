@@ -1,0 +1,21 @@
+id: cropscape-cropland-data-layer
+kind: data
+name: CropScape / Cropland Data Layer
+summary: Annual 30 m crop-specific land cover for the US from USDA NASS.
+publisher: Unknown
+themes:
+- us-federal-usda
+- open-data-sources
+coverage:
+  region: United States
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://nassgeodata.gmu.edu/CropScape/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1275

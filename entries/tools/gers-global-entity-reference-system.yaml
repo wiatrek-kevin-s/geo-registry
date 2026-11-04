@@ -1,0 +1,21 @@
+id: gers-global-entity-reference-system
+kind: tool
+name: GERS (Global Entity Reference System)
+category: Routing, networks, geocoding & LRS
+subcategory: Network & traffic referencing standards
+tool_kind: Format/Standard
+summary: Overture's stable global feature IDs for joining third-party data to map entities, including
+  road segments.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://docs.overturemaps.org/gers/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 886

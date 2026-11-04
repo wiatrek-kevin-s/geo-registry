@@ -1,0 +1,26 @@
+id: osmnx
+kind: tool
+name: OSMnx
+category: Routing, networks, geocoding & LRS
+subcategory: Accessibility & transport modeling
+tool_kind: Library
+summary: Downloads, models, simplifies and analyses OSM street networks as NetworkX graphs with GeoPandas
+  integration.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/gboeing/osmnx
+notes: Go-to agent tool for street network questions
+also_categories:
+- OSM & Overture tooling
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 780

@@ -1,0 +1,22 @@
+id: flutter-map
+kind: tool
+name: flutter_map
+category: Display & visualization
+subcategory: Native & mobile SDKs
+tool_kind: Library
+summary: Leaflet-inspired map widget for Flutter apps.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Dart
+interfaces:
+- plugin
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/fleaflet/flutter_map
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1078

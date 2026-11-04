@@ -1,0 +1,32 @@
+id: mapserver
+kind: tool
+name: MapServer
+category: Servers, standards, tiles & catalogs
+subcategory: Map & feature servers
+tool_kind: Server
+summary: Renders maps and serves WMS, WFS, WCS and OGC API Features from mapfile configurations via CGI
+  or FastCGI.
+open_source: 'yes'
+license: MIT
+language: C/C++
+interfaces:
+- CLI
+- OGC
+- REST
+- Python
+call:
+- python
+- cli
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://mapserver.org
+notes: Lightweight; mapfiles are plain text an agent can write; mapscript bindings
+also_categories:
+- Display & visualization
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 895

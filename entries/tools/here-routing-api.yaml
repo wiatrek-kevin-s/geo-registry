@@ -1,0 +1,26 @@
+id: here-routing-api
+kind: tool
+name: HERE Routing API
+category: Routing, networks, geocoding & LRS
+subcategory: Commercial routing APIs
+tool_kind: Service/API
+summary: HERE routing, matrix and isoline APIs covering car, truck, pedestrian and transit.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- JS
+- Java
+call:
+- rest
+- js
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://www.here.com/docs/bundle/routing-api-developer-guide-v8/page/README.html
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 850

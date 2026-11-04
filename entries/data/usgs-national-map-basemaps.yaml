@@ -1,0 +1,22 @@
+id: usgs-national-map-basemaps
+kind: data
+name: USGS National Map basemaps
+summary: US government topo, imagery and shaded-relief tile services from The National Map.
+publisher: U.S. Geological Survey
+themes:
+- basemap-providers
+- display-visualization
+coverage:
+  region: United States
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://basemap.nationalmap.gov/
+  auth: none
+notes: Free, US coverage
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1176

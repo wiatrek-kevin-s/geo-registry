@@ -1,0 +1,23 @@
+id: geoda
+kind: tool
+name: GeoDa
+category: Desktop GIS & analysis engines
+subcategory: Spatial statistics applications
+tool_kind: Application
+summary: Desktop tool for exploratory spatial data analysis, spatial weights, LISA, clustering and spatial
+  regression.
+open_source: 'yes'
+license: GPL-3.0-only
+language: C++
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://geodacenter.github.io
+notes: v1.22; engine also exposed via rgeoda/pygeoda
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 326

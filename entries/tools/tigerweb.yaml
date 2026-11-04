@@ -1,0 +1,25 @@
+id: tigerweb
+kind: tool
+name: TIGERweb
+category: Open data sources
+subcategory: US federal – census
+tool_kind: Service/API
+summary: Census map services exposing current TIGER geographies.
+open_source: 'yes'
+license: LicenseRef-Public-Domain
+license_original: Public domain
+interfaces:
+- REST
+- OGC
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://tigerweb.geo.census.gov/
+notes: ArcGIS REST and WMS
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1250

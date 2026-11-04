@@ -1,0 +1,22 @@
+id: segregation
+kind: tool
+name: segregation
+category: Desktop GIS & analysis engines
+subcategory: Spatial statistics (Python / PySAL)
+tool_kind: Library
+summary: Measures and decomposes residential segregation with spatial and aspatial indices.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/pysal/segregation
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 313

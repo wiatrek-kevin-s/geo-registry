@@ -1,0 +1,27 @@
+id: digital-earth-africa
+kind: tool
+name: Digital Earth Africa
+category: Imagery, remote sensing & GeoAI
+subcategory: Cloud EO platforms
+tool_kind: Platform
+summary: Open Data Cube platform serving analysis-ready satellite data and products for the African continent.
+open_source: partial
+license: CC-BY-4.0
+language: Python
+interfaces:
+- REST
+- OGC
+- Python
+call:
+- python
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://www.digitalearthafrica.org
+notes: Data on AWS
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 413

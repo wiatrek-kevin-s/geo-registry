@@ -1,0 +1,23 @@
+id: geozero
+kind: tool
+name: geozero
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Rust zero-copy reading and writing of many geo formats via a streaming processor API.
+open_source: 'yes'
+license: MIT OR Apache-2.0
+language: Rust
+interfaces:
+- Rust
+call:
+- rust
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/georust/geozero
+notes: Format bridge without full deserialisation.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 56

@@ -1,0 +1,26 @@
+id: autodesk-civil-3d
+kind: tool
+name: Autodesk Civil 3D
+category: Desktop GIS & analysis engines
+subcategory: Commercial desktop GIS
+tool_kind: Application
+summary: Civil engineering design software with surfaces, corridors, grading and GIS data integration
+  on top of AutoCAD.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++; .NET
+interfaces:
+- GUI
+- plugin
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://www.autodesk.com/products/autocad-civil-3d/overview
+notes: Source of DWG/LandXML surfaces analysts receive
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 264

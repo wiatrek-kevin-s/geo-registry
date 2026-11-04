@@ -1,0 +1,22 @@
+id: 3d-forest
+kind: tool
+name: 3D Forest
+category: Point clouds, LiDAR & 3D
+subcategory: Lidar processing suites
+tool_kind: Application
+summary: Desktop application for terrestrial lidar forest inventory and tree segmentation.
+open_source: 'yes'
+license: GPL-3.0
+language: C++
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.3dforest.eu
+notes: TLS forestry focus.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 560

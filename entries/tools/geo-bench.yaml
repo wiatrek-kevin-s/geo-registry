@@ -1,0 +1,22 @@
+id: geo-bench
+kind: tool
+name: GEO-Bench
+category: Imagery, remote sensing & GeoAI
+subcategory: GeoAI / deep learning
+tool_kind: Toolkit/CLI
+summary: Benchmark suite for evaluating Earth observation foundation models.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/ServiceNow/geo-bench
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 457

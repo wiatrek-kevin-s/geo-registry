@@ -1,0 +1,27 @@
+id: pg-featureserv
+kind: tool
+name: pg_featureserv
+category: Spatial databases & query engines
+subcategory: PostgreSQL ecosystem
+tool_kind: Server
+summary: Lightweight server publishing PostGIS tables and functions as an OGC API - Features endpoint.
+open_source: 'yes'
+license: Apache-2.0
+language: Go
+interfaces:
+- REST
+- OGC
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/CrunchyData/pg_featureserv
+notes: Quick OGC API over PostGIS
+also_categories:
+- Servers, standards, tiles & catalogs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 654

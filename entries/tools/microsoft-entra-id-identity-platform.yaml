@@ -1,0 +1,24 @@
+id: microsoft-entra-id-identity-platform
+kind: tool
+name: Microsoft Entra ID (identity platform)
+category: Connections & storage
+subcategory: Identity & document stores
+tool_kind: Service/API
+summary: Microsoft's cloud identity service (formerly Azure AD) issuing OAuth 2.0/OIDC tokens for Microsoft
+  365 and Azure.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://learn.microsoft.com/entra/identity-platform/
+notes: SSO for ArcGIS Enterprise via SAML/OIDC is common
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1440

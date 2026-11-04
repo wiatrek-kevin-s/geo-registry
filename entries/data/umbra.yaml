@@ -1,0 +1,22 @@
+id: umbra
+kind: data
+name: Umbra
+summary: Commercial X-band SAR imagery provider with tasking API and an open data program.
+publisher: Umbra
+themes:
+- commercial-imagery-providers
+- imagery-remote-sensing-geoai
+coverage:
+  region: Unspecified
+license: LicenseRef-Proprietary
+license_original: Proprietary
+access:
+- type: http
+  url: https://umbra.space
+  auth: none
+notes: Open SAR samples on AWS
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 483

@@ -1,0 +1,22 @@
+id: spdep
+kind: tool
+name: spdep
+category: Desktop GIS & analysis engines
+subcategory: R spatial packages
+tool_kind: Library
+summary: Spatial weights, autocorrelation tests and local indicators of spatial association in R.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: R
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/r-spatial/spdep
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 337

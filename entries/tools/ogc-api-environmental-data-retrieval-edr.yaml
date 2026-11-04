@@ -1,0 +1,25 @@
+id: ogc-api-environmental-data-retrieval-edr
+kind: tool
+name: OGC API – Environmental Data Retrieval (EDR)
+category: Servers, standards, tiles & catalogs
+subcategory: OGC API standards
+tool_kind: Format/Standard
+summary: REST API for retrieving environmental data by position, area, trajectory or corridor queries.
+open_source: 'yes'
+license: LicenseRef-OGC-Document
+license_original: OGC document licence
+interfaces:
+- OGC
+- REST
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://ogcapi.ogc.org
+notes: OpenAPI-described; easy for agents to call
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 996

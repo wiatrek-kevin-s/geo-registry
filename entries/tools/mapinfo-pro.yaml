@@ -1,0 +1,28 @@
+id: mapinfo-pro
+kind: tool
+name: MapInfo Pro
+category: Desktop GIS & analysis engines
+subcategory: Commercial desktop GIS
+tool_kind: Application
+summary: Precisely's Windows desktop GIS for business mapping, geocoded analysis and thematic maps with
+  MapBasic scripting.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+- Python
+- plugin
+call:
+- python
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://www.precisely.com/product/precisely-mapinfo/mapinfo-pro
+notes: Common in telecom/insurance; TAB format
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 259

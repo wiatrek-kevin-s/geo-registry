@@ -1,0 +1,21 @@
+id: hdf4-hdf-eos
+kind: tool
+name: HDF4 / HDF-EOS
+category: Core libraries & formats
+subcategory: Raster formats
+tool_kind: Format/Standard
+summary: Older HDF format and NASA EOS profile used by legacy MODIS and other satellite products.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open specification
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://hdfeos.org
+notes: Legacy archives still distributed.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 136

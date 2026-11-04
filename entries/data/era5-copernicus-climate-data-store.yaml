@@ -1,0 +1,21 @@
+id: era5-copernicus-climate-data-store
+kind: data
+name: ERA5 / Copernicus Climate Data Store
+summary: Hourly global climate reanalysis and other climate datasets via the CDS API.
+publisher: Unknown
+themes:
+- global-climate
+- open-data-sources
+coverage:
+  region: Global
+license: CC-BY-4.0
+access:
+- type: http
+  url: https://cds.climate.copernicus.eu/
+  auth: none
+notes: cdsapi Python client
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1319

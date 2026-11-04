@@ -1,0 +1,29 @@
+id: qgis-server
+kind: tool
+name: QGIS Server
+category: Servers, standards, tiles & catalogs
+subcategory: Map & feature servers
+tool_kind: Server
+summary: Serves QGIS desktop projects as WMS, WFS, WCS, WMTS and OGC API Features with identical styling.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: C/C++
+interfaces:
+- OGC
+- REST
+- Python
+- plugin
+call:
+- python
+- rest
+- ogc
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://qgis.org
+notes: Publish a .qgs project directly; Python server plugins
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 896

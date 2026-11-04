@@ -1,0 +1,26 @@
+id: blender
+kind: tool
+name: Blender
+category: Point clouds, LiDAR & 3D
+subcategory: Desktop viewers & editors
+tool_kind: Application
+summary: Open source 3D creation suite used for modeling, texturing and rendering city and terrain scenes.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: C;C++;Python
+interfaces:
+- GUI
+- Python
+- CLI
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://www.blender.org
+notes: Headless Python scripting for 3D visualization.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 589

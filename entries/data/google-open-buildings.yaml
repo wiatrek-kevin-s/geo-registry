@@ -1,0 +1,22 @@
+id: google-open-buildings
+kind: data
+name: Google Open Buildings
+summary: ML-detected building polygons for Africa, Asia and Latin America, plus a 2.5D temporal set.
+publisher: Google
+themes:
+- global-buildings
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Multiple
+license_original: CC-BY-4.0; ODbL-1.0
+access:
+- type: http
+  url: https://sites.research.google/open-buildings/
+  auth: none
+notes: Little US coverage
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1308

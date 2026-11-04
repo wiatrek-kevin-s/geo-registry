@@ -1,0 +1,23 @@
+id: magda
+kind: tool
+name: Magda
+category: Servers, standards, tiles & catalogs
+subcategory: Metadata catalogs & data portals
+tool_kind: Platform
+summary: Federated data catalog that harvests and indexes datasets including spatial ones from many portals.
+open_source: 'yes'
+license: Apache-2.0
+language: TypeScript; Scala
+interfaces:
+- REST
+- GUI
+call:
+- rest
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/magda-io/magda
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 941

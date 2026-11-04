@@ -1,0 +1,23 @@
+id: trimble-connect
+kind: tool
+name: Trimble Connect
+category: Commercial GIS platforms & APIs
+subcategory: Trimble
+tool_kind: Platform
+summary: Cloud collaboration platform for sharing BIM, CAD and project files.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- GUI
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://connect.trimble.com/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1393

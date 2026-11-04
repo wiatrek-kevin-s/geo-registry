@@ -1,0 +1,23 @@
+id: stac-api
+kind: tool
+name: STAC API
+category: Imagery, remote sensing & GeoAI
+subcategory: STAC ecosystem
+tool_kind: Format/Standard
+summary: API specification for searching STAC catalogs, aligned with OGC API - Features.
+open_source: 'yes'
+license: Apache-2.0
+interfaces:
+- REST
+- OGC
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/radiantearth/stac-api-spec
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 419

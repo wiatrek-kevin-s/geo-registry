@@ -1,0 +1,30 @@
+id: sedonadb
+kind: tool
+name: SedonaDB
+category: Spatial databases & query engines
+subcategory: Embedded / file databases
+tool_kind: Database
+summary: Single-node analytical engine from Apache Sedona with spatial types, joins and CRS awareness
+  built in, built on DataFusion.
+open_source: 'yes'
+license: Apache-2.0
+language: Rust
+interfaces:
+- SQL
+- Python
+- R
+- Rust
+call:
+- python
+- r
+- sql
+- rust
+wrapped_by_columbus: false
+project_status: active
+url: https://sedona.apache.org/sedonadb/latest/
+notes: Local alternative to DuckDB for GeoParquet
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 672

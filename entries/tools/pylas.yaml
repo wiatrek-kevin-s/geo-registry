@@ -1,0 +1,23 @@
+id: pylas
+kind: tool
+name: pylas
+category: Point clouds, LiDAR & 3D
+subcategory: LAS/LAZ libraries
+tool_kind: Library
+summary: Earlier Python LAS/LAZ reader-writer whose code was merged into laspy 2.0.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: archived
+url: https://github.com/tmontaigu/pylas
+notes: Legacy; use laspy instead.
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 546

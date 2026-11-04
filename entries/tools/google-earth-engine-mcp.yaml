@@ -1,0 +1,23 @@
+id: google-earth-engine-mcp
+kind: tool
+name: google-earth-engine-mcp
+category: AI, agents & MCP for GIS
+subcategory: Earth observation MCP servers
+tool_kind: Server
+summary: Community MCP for natural-language Earth Engine queries, exports and visualization.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: TypeScript
+interfaces:
+- MCP
+call:
+- mcp
+wrapped_by_columbus: false
+project_status: unknown
+url: https://github.com/cameronking4/google-earth-engine-mcp
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1548

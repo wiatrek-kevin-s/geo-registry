@@ -1,0 +1,31 @@
+id: copernicus-data-space-ecosystem
+kind: tool
+name: Copernicus Data Space Ecosystem
+category: Imagery, remote sensing & GeoAI
+subcategory: Cloud EO platforms
+tool_kind: Platform
+summary: Official EU platform offering Sentinel data access, STAC/OData APIs, Sentinel Hub and openEO
+  processing.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- OGC
+- Python
+- GUI
+call:
+- python
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://dataspace.copernicus.eu
+notes: Free tier; replaced SciHub
+also_categories:
+- Open data sources
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 399

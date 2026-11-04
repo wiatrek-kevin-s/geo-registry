@@ -1,0 +1,25 @@
+id: gltf-transform
+kind: tool
+name: glTF Transform
+category: Point clouds, LiDAR & 3D
+subcategory: Point cloud & mesh libraries
+tool_kind: Toolkit/CLI
+summary: SDK and CLI for inspecting, optimizing and compressing glTF/GLB models.
+open_source: 'yes'
+license: MIT
+language: TypeScript
+interfaces:
+- CLI
+- JS
+call:
+- cli
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://gltf-transform.dev
+notes: Agent can optimize models before tiling.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 583

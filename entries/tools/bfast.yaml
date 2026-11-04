@@ -1,0 +1,23 @@
+id: bfast
+kind: tool
+name: BFAST
+category: Imagery, remote sensing & GeoAI
+subcategory: Change detection
+tool_kind: Library
+summary: R package detecting breaks for additive season and trend in satellite time series.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: R
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/bfast2/bfast
+notes: R dependency
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 384

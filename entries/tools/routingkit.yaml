@@ -1,0 +1,23 @@
+id: routingkit
+kind: tool
+name: RoutingKit
+category: Routing, networks, geocoding & LRS
+subcategory: Routing engines
+tool_kind: Library
+summary: C++ library implementing customizable contraction hierarchies and other fast shortest-path techniques
+  for road graphs.
+open_source: 'yes'
+license: BSD-2-Clause
+language: C++
+interfaces:
+- C/C++
+call:
+- c-cpp
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/RoutingKit/RoutingKit
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 762

@@ -1,0 +1,26 @@
+id: blosm
+kind: tool
+name: Blosm
+category: Point clouds, LiDAR & 3D
+subcategory: Desktop viewers & editors
+tool_kind: Extension
+summary: Blender add-on for importing OpenStreetMap buildings, terrain and Google 3D Tiles; free and premium
+  editions.
+open_source: partial
+license: NOASSERTION
+license_original: Unknown
+language: Python
+interfaces:
+- plugin
+- GUI
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://prochitecture.gumroad.com/l/blender-osm
+notes: Premium features are paid.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 591

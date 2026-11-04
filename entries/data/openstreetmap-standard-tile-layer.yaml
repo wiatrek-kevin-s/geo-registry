@@ -1,0 +1,21 @@
+id: openstreetmap-standard-tile-layer
+kind: data
+name: OpenStreetMap Standard tile layer
+summary: Community-run raster tiles of OpenStreetMap, governed by a strict usage policy.
+publisher: OpenStreetMap Foundation
+themes:
+- basemap-providers
+- display-visualization
+coverage:
+  region: Unspecified
+license: ODbL-1.0
+access:
+- type: http
+  url: https://operations.osmfoundation.org/policies/tiles/
+  auth: none
+notes: Not for heavy app use; attribution required
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1169

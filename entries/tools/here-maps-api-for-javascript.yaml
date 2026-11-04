@@ -1,0 +1,26 @@
+id: here-maps-api-for-javascript
+kind: tool
+name: HERE Maps API for JavaScript
+category: Display & visualization
+subcategory: Web map libraries
+tool_kind: Service/API
+summary: HERE's browser map library with HERE basemaps, routing and geocoding overlays.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: JavaScript
+interfaces:
+- JS
+- REST
+call:
+- rest
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://www.here.com/docs/bundle/maps-api-for-javascript-developer-guide/page/README.html
+notes: Requires HERE API key
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1025

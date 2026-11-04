@@ -1,0 +1,29 @@
+id: open-location-code-plus-codes
+kind: tool
+name: Open Location Code (Plus Codes)
+category: Core libraries & formats
+subcategory: Discrete global grids & geocodes
+tool_kind: Format/Standard
+summary: Open grid-based short code for any location, with reference libraries in many languages.
+open_source: 'yes'
+license: Apache-2.0
+language: Multiple (C, Java, JS, Python, Go, Rust)
+interfaces:
+- Python
+- JS
+- Java
+- C/C++
+call:
+- python
+- js
+- c-cpp
+- java
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/google/open-location-code
+notes: Free alternative to what3words.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 113

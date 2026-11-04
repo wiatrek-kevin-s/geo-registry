@@ -1,0 +1,23 @@
+id: geoparquet
+kind: tool
+name: GeoParquet
+category: Core libraries & formats
+subcategory: Vector formats
+tool_kind: Format/Standard
+summary: Specification for storing geometry columns and CRS metadata in Apache Parquet.
+open_source: 'yes'
+license: Apache-2.0
+license_original: Apache-2.0 (OGC standard)
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://geoparquet.org
+notes: Analytics-scale vectors; DuckDB reads natively.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 168

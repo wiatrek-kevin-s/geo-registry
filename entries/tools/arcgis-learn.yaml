@@ -1,0 +1,24 @@
+id: arcgis-learn
+kind: tool
+name: arcgis.learn
+category: Imagery, remote sensing & GeoAI
+subcategory: GeoAI / deep learning
+tool_kind: Library
+summary: Esri module in the ArcGIS API for Python for training and running deep learning models on imagery.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://developers.arcgis.com/python/latest/guide/geospatial-deep-learning/
+notes: Requires ArcGIS licence
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 464

@@ -1,0 +1,27 @@
+id: fused
+kind: tool
+name: Fused
+category: Commercial GIS platforms & APIs
+subcategory: Cloud/web GIS & analytics
+tool_kind: Platform
+summary: Serverless platform for running Python UDFs over geospatial data and returning tiles or tables.
+open_source: partial
+license: LicenseRef-Multiple
+license_original: Proprietary (platform); MIT (MCP agents repo)
+language: Python
+interfaces:
+- Python
+- REST
+- MCP
+call:
+- python
+- rest
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://www.fused.io/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1416

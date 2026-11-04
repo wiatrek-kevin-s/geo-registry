@@ -1,0 +1,23 @@
+id: shapefile-js-shpjs
+kind: tool
+name: shapefile.js / shpjs
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: JavaScript library that converts zipped Shapefiles to GeoJSON in the browser.
+open_source: 'yes'
+license: MIT
+language: JavaScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/calvinmetcalf/shapefile-js
+notes: Client-side Shapefile import.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 87

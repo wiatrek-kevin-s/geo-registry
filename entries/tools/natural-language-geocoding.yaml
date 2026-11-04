@@ -1,0 +1,22 @@
+id: natural-language-geocoding
+kind: tool
+name: Natural Language Geocoding
+category: AI, agents & MCP for GIS
+subcategory: LLM GIS agents & research
+tool_kind: Library
+summary: Element 84 library that uses an LLM to turn place descriptions into polygons.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/Element84/natural-language-geocoding
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1561

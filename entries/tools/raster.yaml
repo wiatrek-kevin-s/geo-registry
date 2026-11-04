@@ -1,0 +1,23 @@
+id: raster
+kind: tool
+name: raster
+category: Desktop GIS & analysis engines
+subcategory: R spatial packages
+tool_kind: Library
+summary: Original R package for gridded spatial data, superseded by terra.
+open_source: 'yes'
+license: GPL-3.0-or-later
+language: R
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/rspatial/raster
+notes: Legacy
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 335

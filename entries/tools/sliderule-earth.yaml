@@ -1,0 +1,26 @@
+id: sliderule-earth
+kind: tool
+name: SlideRule Earth
+category: Point clouds, LiDAR & 3D
+subcategory: Lidar data sources
+tool_kind: Service/API
+summary: On-demand cloud service and Python client for processing ICESat-2 and other elevation data.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: C++;Python
+interfaces:
+- Python
+- REST
+call:
+- python
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://slideruleearth.io
+notes: Programmatic ICESat-2 subsetting.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 641

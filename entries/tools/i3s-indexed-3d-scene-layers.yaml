@@ -1,0 +1,24 @@
+id: i3s-indexed-3d-scene-layers
+kind: tool
+name: I3S (Indexed 3D Scene Layers)
+category: Point clouds, LiDAR & 3D
+subcategory: 3D tiles & streaming formats
+tool_kind: Format/Standard
+summary: Esri-originated OGC community standard for streaming 3D scene layers, meshes and point clouds.
+open_source: 'yes'
+license: CC-BY-ND-4.0
+interfaces:
+- OGC
+- REST
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/Esri/i3s-spec
+notes: ArcGIS scene layer format; tools in repo are Apache-2.0.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 610

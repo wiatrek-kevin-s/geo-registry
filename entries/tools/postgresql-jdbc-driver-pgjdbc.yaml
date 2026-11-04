@@ -1,0 +1,24 @@
+id: postgresql-jdbc-driver-pgjdbc
+kind: tool
+name: PostgreSQL JDBC Driver (pgJDBC)
+category: Connections & storage
+subcategory: Database drivers
+tool_kind: Library
+summary: Official JDBC driver for PostgreSQL.
+open_source: 'yes'
+license: BSD-2-Clause
+language: Java
+interfaces:
+- Java
+- SQL
+call:
+- sql
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://jdbc.postgresql.org/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1427

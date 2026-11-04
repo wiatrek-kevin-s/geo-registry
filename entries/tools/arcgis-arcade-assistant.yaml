@@ -1,0 +1,21 @@
+id: arcgis-arcade-assistant
+kind: tool
+name: ArcGIS Arcade assistant
+category: AI, agents & MCP for GIS
+subcategory: Esri AI
+tool_kind: Extension
+summary: Beta assistant for writing Arcade expressions in ArcGIS apps.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://www.esri.com/arcgis-blog/products/apps/geoai/whats-new-in-ai-assistants-june-2026
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1485

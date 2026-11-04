@@ -1,0 +1,24 @@
+id: azure-maps-visual-for-power-bi
+kind: tool
+name: Azure Maps visual for Power BI
+category: Display & visualization
+subcategory: BI & dashboard maps
+tool_kind: Extension
+summary: Power BI map visual backed by Azure Maps for bubbles, heatmaps and reference layers.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+- plugin
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://learn.microsoft.com/en-us/azure/azure-maps/power-bi-visual-get-started
+notes: Replaces Bing-based Map visuals
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1131

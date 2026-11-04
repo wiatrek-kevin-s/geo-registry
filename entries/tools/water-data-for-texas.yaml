@@ -1,0 +1,24 @@
+id: water-data-for-texas
+kind: tool
+name: Water Data for Texas
+category: Open data sources
+subcategory: Texas
+tool_kind: Service/API
+summary: TWDB reservoir levels, drought and water-condition data.
+open_source: 'yes'
+license: LicenseRef-Public-Domain
+license_original: Public domain
+interfaces:
+- REST
+- download
+call:
+- rest
+- download
+wrapped_by_columbus: false
+project_status: active
+url: https://waterdatafortexas.org/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1339

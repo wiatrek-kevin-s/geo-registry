@@ -1,0 +1,25 @@
+id: geomedia-webmap
+kind: tool
+name: GeoMedia WebMap
+category: Servers, standards, tiles & catalogs
+subcategory: Commercial GIS servers & platforms
+tool_kind: Server
+summary: Hexagon web GIS server publishing GeoMedia data as maps and OGC services.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C#
+interfaces:
+- OGC
+- REST
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: maintained
+url: https://hexagon.com/products/geomedia-webmap
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 959

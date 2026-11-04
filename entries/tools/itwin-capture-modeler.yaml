@@ -1,0 +1,24 @@
+id: itwin-capture-modeler
+kind: tool
+name: iTwin Capture Modeler
+category: Point clouds, LiDAR & 3D
+subcategory: Photogrammetry & reality capture
+tool_kind: Application
+summary: Bentley reality modeling software (formerly ContextCapture) that builds 3D meshes from photos
+  and scans.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://www.bentley.com/software/itwin-capture-modeler/
+notes: Outputs 3D Tiles and I3S.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 630

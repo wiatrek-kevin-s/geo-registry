@@ -1,0 +1,24 @@
+id: trimble-unity
+kind: tool
+name: Trimble Unity
+category: Commercial GIS platforms & APIs
+subcategory: Trimble
+tool_kind: Platform
+summary: Trimble's cloud suite for asset lifecycle, work and capital-program management for utilities
+  and cities.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://assetlifecycle.trimble.com/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1394

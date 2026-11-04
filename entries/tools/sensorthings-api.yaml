@@ -1,0 +1,22 @@
+id: sensorthings-api
+kind: tool
+name: SensorThings API
+category: Servers, standards, tiles & catalogs
+subcategory: OGC web service standards
+tool_kind: Format/Standard
+summary: REST/JSON and MQTT API for IoT sensors, things, datastreams and observations.
+open_source: 'yes'
+license: LicenseRef-OGC-Document
+license_original: OGC document licence
+interfaces:
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://www.ogc.org/standards/sensorthings
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 977

@@ -1,0 +1,23 @@
+id: pymeshlab
+kind: tool
+name: PyMeshLab
+category: Point clouds, LiDAR & 3D
+subcategory: Desktop viewers & editors
+tool_kind: Library
+summary: Python interface to MeshLab's filters for scripted mesh processing.
+open_source: 'yes'
+license: GPL-3.0
+language: Python;C++
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/cnr-isti-vclab/PyMeshLab
+notes: Headless MeshLab for agents.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 587

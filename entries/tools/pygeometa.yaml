@@ -1,0 +1,25 @@
+id: pygeometa
+kind: tool
+name: pygeometa
+category: Servers, standards, tiles & catalogs
+subcategory: Metadata catalogs & data portals
+tool_kind: Library
+summary: Generates ISO 19139, ISO 19115-3, OGC API Records and other metadata from simple YAML configs.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+- CLI
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/geopython/pygeometa
+notes: Agent can emit metadata records
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 939

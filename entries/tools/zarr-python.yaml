@@ -1,0 +1,23 @@
+id: zarr-python
+kind: tool
+name: zarr-python
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Python implementation of the Zarr chunked, compressed N-dimensional array format.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/zarr-developers/zarr-python
+notes: Cloud-native array access.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 76

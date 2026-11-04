@@ -1,0 +1,25 @@
+id: qgis-network-analysis-qneat3
+kind: tool
+name: QGIS Network Analysis (QNEAT3)
+category: Routing, networks, geocoding & LRS
+subcategory: Accessibility & transport modeling
+tool_kind: Extension
+summary: QGIS Processing plugin adding OD matrices, iso-areas and shortest-path tools over line layers.
+open_source: 'yes'
+license: GPL-3.0
+language: Python
+interfaces:
+- GUI
+- plugin
+- Python
+call:
+- python
+- plugin
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/root676/QNEAT3
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 797

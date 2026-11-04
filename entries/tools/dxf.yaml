@@ -1,0 +1,21 @@
+id: dxf
+kind: tool
+name: DXF
+category: Core libraries & formats
+subcategory: Vector formats
+tool_kind: Format/Standard
+summary: Autodesk's documented CAD exchange format for drawings.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary (Autodesk published spec)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://help.autodesk.com/view/OARX/2024/ENU/?guid=GUID-235B22E0-A567-4CF6-92D3-38A2306D73F3
+notes: CAD-GIS handoff.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 181

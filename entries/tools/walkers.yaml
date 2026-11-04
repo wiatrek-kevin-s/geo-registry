@@ -1,0 +1,23 @@
+id: walkers
+kind: tool
+name: Walkers
+category: Display & visualization
+subcategory: Native & mobile SDKs
+tool_kind: Library
+summary: Slippy-map widget for the egui Rust immediate-mode GUI toolkit.
+open_source: 'yes'
+license: MIT
+language: Rust
+interfaces:
+- Rust
+call:
+- rust
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/podusowski/walkers
+notes: Simple tile map inside a Rust desktop app
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1082

@@ -1,0 +1,23 @@
+id: pg2b3dm
+kind: tool
+name: pg2b3dm
+category: Point clouds, LiDAR & 3D
+subcategory: 3D tiles & streaming formats
+tool_kind: Toolkit/CLI
+summary: Generates 3D Tiles from 3D geometries stored in PostGIS tables.
+open_source: 'yes'
+license: MIT
+language: C#
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/Geodan/pg2b3dm
+notes: Buildings in PostGIS to web 3D.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 617

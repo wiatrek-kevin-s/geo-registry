@@ -1,0 +1,23 @@
+id: ewkt-ewkb
+kind: tool
+name: EWKT / EWKB
+category: Core libraries & formats
+subcategory: Vector formats
+tool_kind: Format/Standard
+summary: PostGIS extensions to WKT/WKB embedding SRID and Z/M dimensions.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open (PostGIS-documented)
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://postgis.net/docs/using_postgis_dbmanagement.html
+notes: Common in PostGIS dumps.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 176

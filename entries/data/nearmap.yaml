@@ -1,0 +1,23 @@
+id: nearmap
+kind: data
+name: Nearmap
+summary: High-resolution aerial imagery subscription with AI-derived feature layers.
+publisher: Nearmap
+themes:
+- commercial-imagery-providers
+- imagery-remote-sensing-geoai
+- open-data-sources
+- commercial-gis-platforms-apis
+coverage:
+  region: Unspecified
+license: LicenseRef-Proprietary
+license_original: Proprietary
+access:
+- type: http
+  url: https://www.nearmap.com
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 490

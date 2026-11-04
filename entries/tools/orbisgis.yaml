@@ -1,0 +1,27 @@
+id: orbisgis
+kind: tool
+name: OrbisGIS
+category: Desktop GIS & analysis engines
+subcategory: Open-source desktop GIS
+tool_kind: Application
+summary: Research-oriented desktop GIS from CNRS Lab-STICC built around the H2GIS spatial database and
+  SQL-based processing.
+open_source: 'yes'
+license: GPL-3.0-or-later
+language: Java
+interfaces:
+- GUI
+- SQL
+- Java
+call:
+- sql
+- java
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/orbisgis/orbisgis
+notes: Architecture being split up; H2GIS lives on separately
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 237

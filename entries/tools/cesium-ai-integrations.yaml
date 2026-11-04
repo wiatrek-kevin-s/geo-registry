@@ -1,0 +1,23 @@
+id: cesium-ai-integrations
+kind: tool
+name: Cesium AI Integrations
+category: AI, agents & MCP for GIS
+subcategory: Vendor/location MCP servers
+tool_kind: Server
+summary: Official Cesium MCP servers and agent skills for CesiumJS and 3D Tiles.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: TypeScript
+interfaces:
+- MCP
+call:
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/CesiumGS/cesium-ai-integrations
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1534

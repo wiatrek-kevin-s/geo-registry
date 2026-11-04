@@ -1,0 +1,25 @@
+id: terriajs
+kind: tool
+name: TerriaJS
+category: Display & visualization
+subcategory: 3D globes & 3D Tiles
+tool_kind: Library
+summary: Library for building 2D/3D catalogue-driven web map portals on Cesium and Leaflet.
+open_source: 'yes'
+license: Apache-2.0
+language: TypeScript
+interfaces:
+- JS
+- OGC
+call:
+- js
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/TerriaJS/terriajs
+notes: Many OGC/ArcGIS/CKAN catalogue connectors
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1060

@@ -1,0 +1,26 @@
+id: hot-raw-data-api
+kind: tool
+name: HOT Raw Data API
+category: OSM & Overture tooling
+subcategory: Query services
+tool_kind: Service/API
+summary: HOT API that returns custom OSM extracts by area and tags in GeoJSON, shapefile, GeoPackage and
+  more.
+open_source: 'yes'
+license: AGPL-3.0-only
+language: Python
+interfaces:
+- REST
+- Python
+call:
+- python
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/hotosm/raw-data-api
+notes: Backs HOT Export Tool
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1209

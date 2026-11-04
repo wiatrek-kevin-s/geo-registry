@@ -1,0 +1,24 @@
+id: fused-mcp
+kind: tool
+name: Fused MCP
+category: AI, agents & MCP for GIS
+subcategory: Vendor/location MCP servers
+tool_kind: Server
+summary: Turns Fused Python UDFs into MCP tools for agents.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- MCP
+- Python
+call:
+- python
+- mcp
+wrapped_by_columbus: false
+project_status: unknown
+url: https://github.com/fusedio/fused-mcp
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1533

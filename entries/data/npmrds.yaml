@@ -1,0 +1,22 @@
+id: npmrds
+kind: data
+name: NPMRDS
+summary: FHWA National Performance Management Research Data Set of probe speeds keyed to TMC segments.
+publisher: Unknown
+themes:
+- network-traffic-referencing-standards
+- routing-networks-geocoding-lrs
+coverage:
+  region: Unspecified
+license: LicenseRef-Proprietary
+license_original: Proprietary
+access:
+- type: http
+  url: https://ops.fhwa.dot.gov/perf_measurement/
+  auth: none
+notes: Available to agencies only
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 889

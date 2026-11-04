@@ -1,0 +1,23 @@
+id: spherely
+kind: tool
+name: Spherely
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: Python library for spherical geometry built on s2geography, a Shapely-like API on the sphere.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python/C++
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/benbovy/spherely
+notes: Experimental; spherical counterpart to Shapely.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 22

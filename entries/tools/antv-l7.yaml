@@ -1,0 +1,23 @@
+id: antv-l7
+kind: tool
+name: AntV L7
+category: Display & visualization
+subcategory: Web map libraries
+tool_kind: Library
+summary: WebGL geospatial visualization framework for large point, line, polygon and heatmap layers.
+open_source: 'yes'
+license: MIT
+language: TypeScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/antvis/L7
+notes: Popular in Chinese-language ecosystem
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1022

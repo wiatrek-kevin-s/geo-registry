@@ -1,0 +1,23 @@
+id: flatgeobuf-rust-crate
+kind: tool
+name: flatgeobuf (Rust crate)
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Rust implementation of FlatGeobuf reading/writing including HTTP range reads.
+open_source: 'yes'
+license: BSD-2-Clause
+language: Rust
+interfaces:
+- Rust
+call:
+- rust
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/flatgeobuf/flatgeobuf
+notes: Part of the multi-language FlatGeobuf repo.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 62

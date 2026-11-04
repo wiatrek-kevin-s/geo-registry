@@ -1,0 +1,21 @@
+id: mapinfo-tab-mif-mid
+kind: tool
+name: MapInfo TAB / MIF-MID
+category: Core libraries & formats
+subcategory: Vector formats
+tool_kind: Format/Standard
+summary: Precisely MapInfo native and interchange vector formats.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary (read/write in GDAL)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://gdal.org/en/stable/drivers/vector/mitab.html
+notes: Still common in telecom/local gov.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 185

@@ -1,0 +1,22 @@
+id: sentinel-2
+kind: data
+name: Sentinel-2
+summary: 10–60 m multispectral optical imagery with about 5-day revisit.
+publisher: Unknown
+themes:
+- global-satellite
+- open-data-sources
+coverage:
+  region: Global
+license: LicenseRef-Copernicus
+license_original: Copernicus free and open licence
+access:
+- type: http
+  url: https://sentiwiki.copernicus.eu/web/sentinel-2
+  auth: none
+notes: COGs on AWS Earth Search and Planetary Computer
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1293

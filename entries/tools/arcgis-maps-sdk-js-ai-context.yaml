@@ -1,0 +1,24 @@
+id: arcgis-maps-sdk-js-ai-context
+kind: tool
+name: arcgis-maps-sdk-js-ai-context
+category: AI, agents & MCP for GIS
+subcategory: Community ArcGIS MCP servers
+tool_kind: Toolkit/CLI
+summary: Community agent skills/context files for coding with the ArcGIS Maps SDK for JavaScript and Arcade.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: Markdown
+interfaces:
+- plugin
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/SaschaBrunnerCH/arcgis-maps-sdk-js-ai-context
+notes: Example of GIS-specific agent skills
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1496

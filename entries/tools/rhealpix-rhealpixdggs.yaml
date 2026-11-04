@@ -1,0 +1,23 @@
+id: rhealpix-rhealpixdggs
+kind: tool
+name: rHEALPix / rhealpixdggs
+category: Core libraries & formats
+subcategory: Discrete global grids & geocodes
+tool_kind: Library
+summary: Python implementation of the rHEALPix equal-area discrete global grid system.
+open_source: 'yes'
+license: LGPL-3.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/manaakiwhenua/rhealpixdggs-py
+notes: Equal-area square-cell DGGS.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 125

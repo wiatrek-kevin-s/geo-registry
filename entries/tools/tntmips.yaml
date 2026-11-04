@@ -1,0 +1,25 @@
+id: tntmips
+kind: tool
+name: TNTmips
+category: Desktop GIS & analysis engines
+subcategory: Commercial desktop GIS
+tool_kind: Application
+summary: MicroImages' integrated GIS, image processing and mapping system with a free TNTmips Free tier.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+- plugin
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.microimages.com
+notes: Niche; free limited-size version
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 267

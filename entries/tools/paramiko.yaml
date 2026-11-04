@@ -1,0 +1,22 @@
+id: paramiko
+kind: tool
+name: Paramiko
+category: Connections & storage
+subcategory: Network shares & transfer
+tool_kind: Library
+summary: Python SSHv2 implementation providing SFTP client and server.
+open_source: 'yes'
+license: LGPL-2.1
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://www.paramiko.org/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1466

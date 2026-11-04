@@ -1,0 +1,22 @@
+id: locationiq
+kind: tool
+name: LocationIQ
+category: Routing, networks, geocoding & LRS
+subcategory: Geocoding services
+tool_kind: Service/API
+summary: Hosted Nominatim-based geocoding plus routing and map tiles.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://locationiq.com/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 840

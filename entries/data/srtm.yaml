@@ -1,0 +1,21 @@
+id: srtm
+kind: data
+name: SRTM
+summary: Near-global 30 m and 90 m DEM from the 2000 Shuttle Radar Topography Mission.
+publisher: Unknown
+themes:
+- us-federal-nasa
+- open-data-sources
+coverage:
+  region: Global
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.earthdata.nasa.gov/data/instruments/srtm
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1270

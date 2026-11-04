@@ -1,0 +1,23 @@
+id: osmextract
+kind: tool
+name: osmextract
+category: OSM & Overture tooling
+subcategory: R packages
+tool_kind: Library
+summary: R package that downloads and imports OSM extracts from Geofabrik, BBBike and others via GDAL.
+open_source: 'yes'
+license: GPL-3.0-only
+language: R
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: maintained
+url: https://docs.ropensci.org/osmextract/
+notes: rOpenSci; bulk extracts in R
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1200

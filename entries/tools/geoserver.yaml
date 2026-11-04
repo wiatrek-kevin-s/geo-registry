@@ -1,0 +1,29 @@
+id: geoserver
+kind: tool
+name: GeoServer
+category: Servers, standards, tiles & catalogs
+subcategory: Map & feature servers
+tool_kind: Server
+summary: Publishes vector and raster data from files and databases as OGC web services with styling and
+  security.
+open_source: 'yes'
+license: GPL-2.0-only
+language: Java
+interfaces:
+- REST
+- OGC
+- GUI
+- plugin
+call:
+- rest
+- ogc
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://geoserver.org
+notes: REST config API lets an agent publish layers; JVM dependency
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 893

@@ -1,0 +1,25 @@
+id: motherduck-duckdb-mcp-server
+kind: tool
+name: MotherDuck / DuckDB MCP server
+category: AI, agents & MCP for GIS
+subcategory: General GIS MCP servers
+tool_kind: Server
+summary: MCP server for running SQL on local DuckDB files or MotherDuck, including the spatial extension.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- MCP
+- SQL
+call:
+- sql
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://motherduck.com/docs/sql-reference/mcp
+notes: Licence not re-verified
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1512

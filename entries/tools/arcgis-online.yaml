@@ -1,0 +1,30 @@
+id: arcgis-online
+kind: tool
+name: ArcGIS Online
+category: Servers, standards, tiles & catalogs
+subcategory: Commercial GIS servers & platforms
+tool_kind: Service/API
+summary: Esri's SaaS mapping platform for hosting layers, maps, apps and analysis.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- Python
+- JS
+- GUI
+call:
+- python
+- rest
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://www.arcgis.com
+notes: Most common org data source for analysts
+also_categories:
+- Commercial GIS platforms & APIs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 956

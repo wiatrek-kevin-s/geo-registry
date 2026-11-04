@@ -1,0 +1,21 @@
+id: national-geologic-map-database
+kind: data
+name: National Geologic Map Database
+summary: Catalog of US geologic maps and geologic map databases.
+publisher: Unknown
+themes:
+- us-federal-geology
+- open-data-sources
+coverage:
+  region: United States
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://ngmdb.usgs.gov/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1244

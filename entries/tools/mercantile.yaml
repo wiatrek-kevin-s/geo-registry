@@ -1,0 +1,25 @@
+id: mercantile
+kind: tool
+name: mercantile
+category: Core libraries & formats
+subcategory: Discrete global grids & geocodes
+tool_kind: Library
+summary: Python utilities for Web Mercator XYZ tiles and quadkeys.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+- CLI
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/mapbox/mercantile
+notes: Tile math helpers.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 110

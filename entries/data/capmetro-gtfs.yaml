@@ -1,0 +1,21 @@
+id: capmetro-gtfs
+kind: data
+name: CapMetro GTFS
+summary: Austin transit schedules and real-time feeds.
+publisher: Capital Metropolitan Transportation Authority
+themes:
+- texas
+- open-data-sources
+coverage:
+  region: Texas
+license: NOASSERTION
+license_original: Unknown
+access:
+- type: http
+  url: https://www.capmetro.org/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1355

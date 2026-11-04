@@ -1,0 +1,24 @@
+id: us-census-geocoder
+kind: tool
+name: US Census Geocoder
+category: Routing, networks, geocoding & LRS
+subcategory: Geocoding services
+tool_kind: Service/API
+summary: Free US government geocoder matching addresses to TIGER/Line and returning census geographies,
+  with batch upload.
+open_source: 'no'
+license: LicenseRef-Public-Domain
+license_original: Public domain
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://geocoding.geo.census.gov/
+notes: Free, no key; US only
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 831

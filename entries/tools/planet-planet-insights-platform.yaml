@@ -1,0 +1,27 @@
+id: planet-planet-insights-platform
+kind: tool
+name: Planet (Planet Insights Platform)
+category: Commercial GIS platforms & APIs
+subcategory: Imagery & data vendors
+tool_kind: Platform
+summary: Daily satellite imagery provider; Insights Platform merges Planet APIs with Sentinel Hub processing.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- Python
+- MCP
+call:
+- python
+- rest
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://www.planet.com/
+notes: Planet SDK for Python; beta MCP
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1418

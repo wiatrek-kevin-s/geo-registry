@@ -1,0 +1,25 @@
+id: postgis-tiger-geocoder
+kind: tool
+name: PostGIS TIGER Geocoder
+category: Spatial databases & query engines
+subcategory: PostgreSQL ecosystem
+tool_kind: Extension
+summary: Geocodes and reverse geocodes US addresses using Census TIGER data loaded into PostGIS.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: PL/pgSQL
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: maintained
+url: https://postgis.net/docs/Extras.html
+notes: Offline US geocoding for an Austin-based user
+also_categories:
+- Routing, networks, geocoding & LRS
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 647

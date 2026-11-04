@@ -1,0 +1,26 @@
+id: postgis-raster
+kind: tool
+name: PostGIS Raster
+category: Spatial databases & query engines
+subcategory: PostgreSQL ecosystem
+tool_kind: Extension
+summary: Stores and analyses tiled rasters inside PostgreSQL with map algebra, clipping and raster-vector
+  operations.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: C
+interfaces:
+- SQL
+- CLI
+call:
+- cli
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://postgis.net/docs/RT_reference.html
+notes: raster2pgsql loader ships with it; needs GDAL
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 645

@@ -1,0 +1,26 @@
+id: cesium-for-unity
+kind: tool
+name: Cesium for Unity
+category: Point clouds, LiDAR & 3D
+subcategory: Web viewers & engines
+tool_kind: Extension
+summary: Unity plugin that streams 3D Tiles and terrain into Unity projects.
+open_source: 'yes'
+license: Apache-2.0
+language: C#;C++
+interfaces:
+- plugin
+- GUI
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/CesiumGS/cesium-unity
+notes: Digital twin visualization.
+also_categories:
+- Display & visualization
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 604

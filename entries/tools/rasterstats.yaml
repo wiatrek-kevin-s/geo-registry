@@ -1,0 +1,25 @@
+id: rasterstats
+kind: tool
+name: rasterstats
+category: Desktop GIS & analysis engines
+subcategory: Python raster & array analysis
+tool_kind: Library
+summary: Computes zonal statistics and point queries of rasters against vector geometries.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+- CLI
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/perrygeo/python-rasterstats
+notes: Simple zonal stats
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 296

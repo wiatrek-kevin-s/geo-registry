@@ -1,0 +1,20 @@
+id: esa-worldcover
+kind: data
+name: ESA WorldCover
+summary: Global 10 m land cover for 2020 and 2021 from Sentinel-1/2.
+publisher: European Space Agency
+themes:
+- global-land-cover
+- open-data-sources
+coverage:
+  region: Global
+license: CC-BY-4.0
+access:
+- type: http
+  url: https://esa-worldcover.org/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1300

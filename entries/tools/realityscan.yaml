@@ -1,0 +1,24 @@
+id: realityscan
+kind: tool
+name: RealityScan
+category: Imagery, remote sensing & GeoAI
+subcategory: Photogrammetry & drone
+tool_kind: Application
+summary: Epic Games photogrammetry software, formerly RealityCapture.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://www.realityscan.com
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 520

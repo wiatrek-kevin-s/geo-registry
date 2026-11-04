@@ -1,0 +1,22 @@
+id: regrid-mcp-server
+kind: tool
+name: Regrid MCP Server
+category: AI, agents & MCP for GIS
+subcategory: Vendor/location MCP servers
+tool_kind: Server
+summary: MCP for querying US/Canada parcels by location, zoning and ownership.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- MCP
+call:
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://regrid.com/mcp
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1535

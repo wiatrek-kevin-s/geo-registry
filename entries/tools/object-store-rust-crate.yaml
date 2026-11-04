@@ -1,0 +1,23 @@
+id: object-store-rust-crate
+kind: tool
+name: object_store (Rust crate)
+category: Connections & storage
+subcategory: Object storage
+tool_kind: Library
+summary: Apache Arrow's async Rust abstraction over S3, Azure, GCS, HTTP and local storage.
+open_source: 'yes'
+license: Apache-2.0
+language: Rust
+interfaces:
+- Rust
+call:
+- rust
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/apache/arrow-rs-object-store
+notes: Native fit for a Rust (RustGIS) core
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1460

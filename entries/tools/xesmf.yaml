@@ -1,0 +1,23 @@
+id: xesmf
+kind: tool
+name: xESMF
+category: Desktop GIS & analysis engines
+subcategory: Python raster & array analysis
+tool_kind: Library
+summary: Regridding between structured and unstructured grids for xarray using ESMF.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/pangeo-data/xESMF
+notes: Climate regridding; licence from memory
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 301

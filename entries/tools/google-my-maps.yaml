@@ -1,0 +1,21 @@
+id: google-my-maps
+kind: tool
+name: Google My Maps
+category: Display & visualization
+subcategory: Hosted web map makers
+tool_kind: Application
+summary: Simple Google tool for making and sharing custom maps with points, lines and layers.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.google.com/maps/about/mymaps/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1146

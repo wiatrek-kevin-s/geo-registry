@@ -1,0 +1,25 @@
+id: foursquare-places-api
+kind: tool
+name: Foursquare Places API
+category: Commercial GIS platforms & APIs
+subcategory: Location & mapping APIs
+tool_kind: Service/API
+summary: API for POI search and venue details from Foursquare's places dataset.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- MCP
+call:
+- rest
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://foursquare.com/products/places-api/
+notes: URL path not re-verified
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1411

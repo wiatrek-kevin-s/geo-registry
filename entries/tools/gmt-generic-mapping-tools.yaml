@@ -1,0 +1,25 @@
+id: gmt-generic-mapping-tools
+kind: tool
+name: GMT (Generic Mapping Tools)
+category: Display & visualization
+subcategory: R mapping
+tool_kind: Toolkit/CLI
+summary: Command-line toolkit for scientific maps, projections and gridded data figures.
+open_source: 'yes'
+license: LGPL-3.0-or-later
+language: C
+interfaces:
+- CLI
+- Python
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://www.generic-mapping-tools.org/
+notes: Scriptable static map output
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1115

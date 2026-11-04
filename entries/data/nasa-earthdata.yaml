@@ -1,0 +1,23 @@
+id: nasa-earthdata
+kind: data
+name: NASA Earthdata
+summary: NASA portal and login system for accessing Earth science data from its distributed archives.
+publisher: NASA
+themes:
+- cloud-eo-platforms
+- imagery-remote-sensing-geoai
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.earthdata.nasa.gov
+  auth: none
+notes: Free Earthdata Login required
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 406

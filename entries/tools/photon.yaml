@@ -1,0 +1,23 @@
+id: photon
+kind: tool
+name: Photon
+category: Routing, networks, geocoding & LRS
+subcategory: Geocoding engines & libraries
+tool_kind: Server
+summary: Search-as-you-type OSM geocoder by komoot backed by Elasticsearch/OpenSearch, using Nominatim
+  data.
+open_source: 'yes'
+license: Apache-2.0
+language: Java
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/komoot/photon
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 821

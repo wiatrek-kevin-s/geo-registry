@@ -1,0 +1,22 @@
+id: tmap
+kind: tool
+name: tmap
+category: Display & visualization
+subcategory: R mapping
+tool_kind: Library
+summary: Thematic map package for R with static and interactive modes.
+open_source: 'yes'
+license: GPL-3.0
+language: R
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: active
+url: https://r-tmap.github.io/tmap/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1108

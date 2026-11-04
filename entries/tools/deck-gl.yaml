@@ -1,0 +1,25 @@
+id: deck-gl
+kind: tool
+name: deck.gl
+category: Display & visualization
+subcategory: vis.gl / large-data WebGL
+tool_kind: Library
+summary: GPU-powered framework for layered visualization of large geospatial datasets in the browser.
+open_source: 'yes'
+license: MIT
+language: TypeScript
+interfaces:
+- JS
+- Python
+call:
+- python
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://deck.gl/
+notes: Handles millions of features; basis for kepler.gl and pydeck
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1049

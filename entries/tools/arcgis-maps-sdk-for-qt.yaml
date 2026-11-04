@@ -1,0 +1,24 @@
+id: arcgis-maps-sdk-for-qt
+kind: tool
+name: ArcGIS Maps SDK for Qt
+category: Display & visualization
+subcategory: Native & mobile SDKs
+tool_kind: Library
+summary: Esri SDK for cross-platform desktop and mobile mapping apps built with Qt.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- C/C++
+call:
+- c-cpp
+wrapped_by_columbus: false
+project_status: maintained
+url: https://developers.arcgis.com/qt/
+notes: Check Esri roadmap for long-term support
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1072

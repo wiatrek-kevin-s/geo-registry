@@ -1,0 +1,21 @@
+id: capcog-data
+kind: data
+name: CAPCOG data
+summary: Capital Area Council of Governments regional GIS, addressing and 911 data.
+publisher: Capital Area Council of Governments
+themes:
+- texas
+- open-data-sources
+coverage:
+  region: Texas
+license: NOASSERTION
+license_original: Unknown
+access:
+- type: http
+  url: https://www.capcog.org/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1353

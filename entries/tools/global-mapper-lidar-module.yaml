@@ -1,0 +1,25 @@
+id: global-mapper-lidar-module
+kind: tool
+name: Global Mapper Lidar Module
+category: Point clouds, LiDAR & 3D
+subcategory: Lidar processing suites
+tool_kind: Extension
+summary: Add-on to Global Mapper Pro for classifying, filtering and extracting features from point clouds.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://www.bluemarblegeo.com/global-mapper-pro/
+notes: Popular with mid-size GIS shops.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 562

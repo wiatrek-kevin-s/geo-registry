@@ -1,0 +1,29 @@
+id: ogr-gdal-vector
+kind: tool
+name: OGR (GDAL vector)
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Vector part of GDAL providing drivers, SQL dialects and ogr2ogr conversion.
+open_source: 'yes'
+license: MIT
+language: C++
+interfaces:
+- C/C++
+- Python
+- CLI
+- SQL
+call:
+- python
+- cli
+- sql
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://gdal.org/en/stable/drivers/vector/index.html
+notes: ogr2ogr is a universal converter.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 48

@@ -1,0 +1,23 @@
+id: geotiff-js
+kind: tool
+name: geotiff.js
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: JavaScript parser for TIFF/GeoTIFF and COG with HTTP range reads.
+open_source: 'yes'
+license: MIT
+language: JavaScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/geotiffjs/geotiff.js
+notes: Browser COG reading.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 88

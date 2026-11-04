@@ -1,0 +1,22 @@
+id: polars-st
+kind: tool
+name: polars-st
+category: Spatial databases & query engines
+subcategory: DataFrame / query libraries
+tool_kind: Library
+summary: GEOS-backed spatial expressions for Polars DataFrames.
+open_source: 'yes'
+license: LGPL-2.1-or-later
+language: Rust;Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/Oreilles/polars-st
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 729

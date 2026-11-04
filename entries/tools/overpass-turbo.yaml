@@ -1,0 +1,22 @@
+id: overpass-turbo
+kind: tool
+name: Overpass Turbo
+category: OSM & Overture tooling
+subcategory: Query services
+tool_kind: Application
+summary: Web IDE for writing, running and mapping Overpass queries, with a query wizard.
+open_source: 'yes'
+license: MIT
+language: JavaScript
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://overpass-turbo.eu/
+notes: Handy for crafting queries an agent can reuse
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1203

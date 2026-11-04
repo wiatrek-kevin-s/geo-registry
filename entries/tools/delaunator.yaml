@@ -1,0 +1,27 @@
+id: delaunator
+kind: tool
+name: Delaunator
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: Fast 2D Delaunay triangulation library, with ports in Rust, C++ and other languages.
+open_source: 'yes'
+license: ISC
+language: JavaScript
+interfaces:
+- JS
+- Rust
+- C/C++
+call:
+- js
+- c-cpp
+- rust
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/mapbox/delaunator
+notes: Triangulation/Voronoi for interpolation.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 28

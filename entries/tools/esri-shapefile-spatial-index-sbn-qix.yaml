@@ -1,0 +1,21 @@
+id: esri-shapefile-spatial-index-sbn-qix
+kind: tool
+name: Esri Shapefile spatial index (.sbn/.qix)
+category: Core libraries & formats
+subcategory: Vector formats
+tool_kind: Format/Standard
+summary: Sidecar spatial index files for Shapefiles from Esri (.sbn/.sbx) and MapServer/GDAL (.qix).
+open_source: partial
+license: LicenseRef-Multiple
+license_original: Proprietary (.sbn); open (.qix)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://gdal.org/en/stable/drivers/vector/shapefile.html
+notes: Affects query speed on shapefiles.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 189

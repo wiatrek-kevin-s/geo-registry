@@ -1,0 +1,23 @@
+id: cesium-native
+kind: tool
+name: cesium-native
+category: Point clouds, LiDAR & 3D
+subcategory: Web viewers & engines
+tool_kind: Library
+summary: C++ runtime for streaming 3D Tiles and terrain, used by Cesium's game-engine integrations.
+open_source: 'yes'
+license: Apache-2.0
+language: C++
+interfaces:
+- C/C++
+call:
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/CesiumGS/cesium-native
+notes: Native 3D Tiles engine for a desktop app.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 602

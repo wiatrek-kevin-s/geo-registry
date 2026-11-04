@@ -1,0 +1,24 @@
+id: carto-ai-agents
+kind: tool
+name: CARTO AI Agents
+category: AI, agents & MCP for GIS
+subcategory: Vendor/location MCP servers
+tool_kind: Service/API
+summary: Configurable agents in CARTO that answer spatial questions on maps and workflows, integrated
+  with Google AI tools.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://carto.com/blog/carto-ai-agents-now-integrated-with-google-ai-studio-vertex-ai/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1529

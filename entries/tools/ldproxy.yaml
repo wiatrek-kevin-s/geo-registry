@@ -1,0 +1,26 @@
+id: ldproxy
+kind: tool
+name: ldproxy
+category: Servers, standards, tiles & catalogs
+subcategory: Map & feature servers
+tool_kind: Server
+summary: Publishes feature data from databases or WFS as OGC API Features, Tiles, Styles and Routes with
+  HTML and JSON views.
+open_source: 'yes'
+license: MPL-2.0
+language: Java
+interfaces:
+- REST
+- OGC
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/interactive-instruments/ldproxy
+notes: Reference-grade OGC API implementation
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 902

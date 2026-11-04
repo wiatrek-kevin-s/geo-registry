@@ -1,0 +1,28 @@
+id: titiler
+kind: tool
+name: TiTiler
+category: Imagery, remote sensing & GeoAI
+subcategory: Imagery tiling & serving
+tool_kind: Server
+summary: FastAPI dynamic tile server for COG, STAC and mosaics.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- REST
+- OGC
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/developmentseed/titiler
+notes: Run locally to preview imagery
+also_categories:
+- Servers, standards, tiles & catalogs
+- Commercial GIS platforms & APIs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 438

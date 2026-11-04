@@ -1,0 +1,21 @@
+id: satellogic
+kind: data
+name: Satellogic
+summary: Sub-meter multispectral and hyperspectral imagery provider.
+publisher: Satellogic
+themes:
+- commercial-imagery-providers
+- imagery-remote-sensing-geoai
+coverage:
+  region: Unspecified
+license: LicenseRef-Proprietary
+license_original: Proprietary
+access:
+- type: http
+  url: https://satellogic.com
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 487

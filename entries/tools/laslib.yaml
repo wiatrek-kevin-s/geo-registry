@@ -1,0 +1,23 @@
+id: laslib
+kind: tool
+name: LASlib
+category: Point clouds, LiDAR & 3D
+subcategory: LAS/LAZ libraries
+tool_kind: Library
+summary: C++ read/write API underlying the LAStools suite.
+open_source: 'yes'
+license: LGPL-2.1
+language: C++
+interfaces:
+- C/C++
+call:
+- c-cpp
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/LAStools/LAStools
+notes: The open part of LAStools.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 547

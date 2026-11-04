@@ -1,0 +1,21 @@
+id: viirs
+kind: data
+name: VIIRS
+summary: Moderate-resolution land, fire, night lights and atmosphere products from Suomi NPP/NOAA-20/21.
+publisher: Unknown
+themes:
+- us-federal-nasa
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.earthdata.nasa.gov/data/instruments/viirs
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1266

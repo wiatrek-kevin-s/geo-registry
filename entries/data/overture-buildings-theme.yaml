@@ -1,0 +1,20 @@
+id: overture-buildings-theme
+kind: data
+name: Overture Buildings theme
+summary: Conflated global buildings from OSM, Microsoft, Google and others.
+publisher: Overture Maps Foundation
+themes:
+- global-buildings
+- open-data-sources
+coverage:
+  region: Global
+license: ODbL-1.0
+access:
+- type: http
+  url: https://docs.overturemaps.org/guides/buildings/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1309

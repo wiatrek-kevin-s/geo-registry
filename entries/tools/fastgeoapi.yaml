@@ -1,0 +1,27 @@
+id: fastgeoapi
+kind: tool
+name: fastgeoapi
+category: AI, agents & MCP for GIS
+subcategory: General GIS MCP servers
+tool_kind: Server
+summary: Authenticated wrapper around pygeoapi that also exposes OGC API endpoints as MCP tools.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: Python
+interfaces:
+- MCP
+- OGC
+- REST
+call:
+- rest
+- mcp
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/geobeyond/fastgeoapi
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1515

@@ -1,0 +1,31 @@
+id: eclipse-sumo
+kind: tool
+name: Eclipse SUMO
+category: Routing, networks, geocoding & LRS
+subcategory: Accessibility & transport modeling
+tool_kind: Application
+summary: Microscopic, continuous traffic simulator with network import from OSM and many tools for demand
+  and analysis.
+open_source: 'yes'
+license: EPL-2.0 OR GPL-2.0-or-later
+language: C++
+interfaces:
+- CLI
+- Python
+- GUI
+- C/C++
+call:
+- python
+- cli
+- c-cpp
+install:
+  pip: eclipse-sumo
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/eclipse-sumo/sumo
+notes: pip install eclipse-sumo; TraCI Python control
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 779

@@ -1,0 +1,23 @@
+id: osmmcp
+kind: tool
+name: osmmcp
+category: AI, agents & MCP for GIS
+subcategory: Vendor/location MCP servers
+tool_kind: Server
+summary: OSM MCP server for geocoding, routing, nearby places and EV charging.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: Go
+interfaces:
+- MCP
+call:
+- mcp
+wrapped_by_columbus: false
+project_status: unknown
+url: https://github.com/NERVsystems/osmmcp
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1538

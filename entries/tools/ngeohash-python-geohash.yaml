@@ -1,0 +1,25 @@
+id: ngeohash-python-geohash
+kind: tool
+name: ngeohash / python-geohash
+category: Core libraries & formats
+subcategory: Discrete global grids & geocodes
+tool_kind: Library
+summary: Small libraries for geohash encode/decode in Node and Python.
+open_source: 'yes'
+license: MIT
+language: JavaScript/Python
+interfaces:
+- JS
+- Python
+call:
+- python
+- js
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/sunng87/node-geohash
+notes: Lightweight geohash.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 221

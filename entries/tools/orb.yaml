@@ -1,0 +1,23 @@
+id: orb
+kind: tool
+name: orb
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: Go library of 2D geometry types with GeoJSON, WKB, MVT encoding and planar/geo helpers.
+open_source: 'yes'
+license: MIT
+language: Go
+interfaces:
+- Go
+call:
+- go
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/paulmach/orb
+notes: Go-based tooling.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 214

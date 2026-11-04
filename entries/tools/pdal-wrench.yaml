@@ -1,0 +1,26 @@
+id: pdal-wrench
+kind: tool
+name: pdal_wrench
+category: Point clouds, LiDAR & 3D
+subcategory: Core processing
+tool_kind: Toolkit/CLI
+summary: Parallel command-line tools built on PDAL for common point cloud tasks like clipping, merging,
+  tiling, rasterizing and COPC conversion.
+open_source: 'yes'
+license: GPL-3.0
+language: C++
+interfaces:
+- CLI
+- plugin
+call:
+- cli
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/PDAL/wrench
+notes: Powers QGIS point cloud Processing tools; simple CLI verbs for agents.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 529

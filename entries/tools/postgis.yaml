@@ -1,0 +1,33 @@
+id: postgis
+kind: tool
+name: PostGIS
+category: Spatial databases & query engines
+subcategory: PostgreSQL ecosystem
+tool_kind: Extension
+summary: Adds geometry and geography types, spatial indexes and hundreds of ST_ functions to PostgreSQL.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: C
+interfaces:
+- SQL
+- Python
+- R
+- Java
+- JS
+- C/C++
+call:
+- python
+- js
+- r
+- sql
+- c-cpp
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://postgis.net
+notes: Reference spatial SQL engine; agent can run SQL via psycopg
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 644

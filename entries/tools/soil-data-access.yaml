@@ -1,0 +1,27 @@
+id: soil-data-access
+kind: tool
+name: Soil Data Access
+category: Open data sources
+subcategory: US federal – USDA
+tool_kind: Service/API
+summary: SQL-over-REST service for querying SSURGO tabular and spatial data.
+open_source: 'yes'
+license: LicenseRef-Public-Domain
+license_original: Public domain
+interfaces:
+- REST
+- SQL
+- OGC
+call:
+- rest
+- sql
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://sdmdataaccess.nrcs.usda.gov/
+notes: Agent can send SQL
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1274

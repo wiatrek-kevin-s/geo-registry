@@ -1,0 +1,21 @@
+id: db-browser-for-sqlite
+kind: tool
+name: DB Browser for SQLite
+category: Spatial databases & query engines
+subcategory: Client tools
+tool_kind: Application
+summary: Desktop GUI for SQLite files; can load SpatiaLite to query GeoPackage tables.
+open_source: 'yes'
+license: MPL-2.0 OR GPL-3.0-or-later
+language: C++
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://sqlitebrowser.org
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 747

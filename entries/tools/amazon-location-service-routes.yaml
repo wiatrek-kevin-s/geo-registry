@@ -1,0 +1,26 @@
+id: amazon-location-service-routes
+kind: tool
+name: Amazon Location Service Routes
+category: Routing, networks, geocoding & LRS
+subcategory: Commercial routing APIs
+tool_kind: Service/API
+summary: AWS routing, matrix, isoline and route optimization APIs using HERE and other data providers.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- Python
+- JS
+call:
+- python
+- rest
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://aws.amazon.com/location/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 854

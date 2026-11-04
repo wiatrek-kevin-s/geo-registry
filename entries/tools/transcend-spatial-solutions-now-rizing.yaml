@@ -1,0 +1,22 @@
+id: transcend-spatial-solutions-now-rizing
+kind: tool
+name: Transcend Spatial Solutions (now Rizing)
+category: Routing, networks, geocoding & LRS
+subcategory: Linear referencing (LRS)
+tool_kind: Platform
+summary: Consultancy that built LRS and Roads and Highways solutions for DOTs; rebranded as Rizing geospatial
+  after acquisition.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: unknown
+notes: Mostly services, not a standalone product; no confirmed URL
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 870

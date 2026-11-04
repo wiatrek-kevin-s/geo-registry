@@ -1,0 +1,23 @@
+id: pylandstats
+kind: tool
+name: PyLandStats
+category: Desktop GIS & analysis engines
+subcategory: Python raster & array analysis
+tool_kind: Library
+summary: Computes landscape metrics in the style of FRAGSTATS from categorical rasters.
+open_source: 'yes'
+license: GPL-3.0-only
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/martibosch/pylandstats
+notes: Landscape ecology
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 303

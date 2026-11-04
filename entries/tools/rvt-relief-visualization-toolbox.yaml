@@ -1,0 +1,27 @@
+id: rvt-relief-visualization-toolbox
+kind: tool
+name: RVT (Relief Visualization Toolbox)
+category: Desktop GIS & analysis engines
+subcategory: Terrain & hydrology engines
+tool_kind: Library
+summary: Toolbox computing relief visualisations like sky-view factor, openness and hillshade blends from
+  DEMs.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: Python
+interfaces:
+- Python
+- plugin
+call:
+- python
+- plugin
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/EarthObservation/RVT_py
+notes: Licence not confirmed
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 284

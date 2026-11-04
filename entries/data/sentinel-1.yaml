@@ -1,0 +1,21 @@
+id: sentinel-1
+kind: data
+name: Sentinel-1
+summary: C-band SAR imagery for all-weather surface mapping and change.
+publisher: Unknown
+themes:
+- global-satellite
+- open-data-sources
+coverage:
+  region: Global
+license: LicenseRef-Copernicus
+license_original: Copernicus free and open licence
+access:
+- type: http
+  url: https://sentiwiki.copernicus.eu/web/sentinel-1
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1292

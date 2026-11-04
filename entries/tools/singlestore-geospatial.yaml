@@ -1,0 +1,25 @@
+id: singlestore-geospatial
+kind: tool
+name: SingleStore geospatial
+category: Spatial databases & query engines
+subcategory: Commercial RDBMS
+tool_kind: Database
+summary: Distributed SQL database with GEOGRAPHY and GEOGRAPHYPOINT types and spatial joins.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- SQL
+- REST
+call:
+- rest
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://www.singlestore.com
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 704

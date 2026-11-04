@@ -1,0 +1,24 @@
+id: fmask
+kind: tool
+name: Fmask
+category: Imagery, remote sensing & GeoAI
+subcategory: Cloud & atmospheric masking
+tool_kind: Toolkit/CLI
+summary: Rule-based cloud, cloud-shadow and snow masking algorithm for Landsat and Sentinel-2.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: MATLAB
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/GERSL/Fmask
+notes: Standard baseline mask; compiled binaries
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 368

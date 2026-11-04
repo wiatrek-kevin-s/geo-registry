@@ -1,0 +1,21 @@
+id: pgadmin-4
+kind: tool
+name: pgAdmin 4
+category: Spatial databases & query engines
+subcategory: Client tools
+tool_kind: Application
+summary: PostgreSQL admin tool with a built-in geometry viewer for query results.
+open_source: 'yes'
+license: PostgreSQL
+language: Python;JS
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://www.pgadmin.org
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 744

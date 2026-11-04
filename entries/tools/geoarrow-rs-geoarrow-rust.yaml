@@ -1,0 +1,27 @@
+id: geoarrow-rs-geoarrow-rust
+kind: tool
+name: geoarrow-rs / geoarrow (Rust)
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: Rust implementation of GeoArrow arrays with geometry ops and Python/JS bindings.
+open_source: 'yes'
+license: MIT OR Apache-2.0
+language: Rust
+interfaces:
+- Rust
+- Python
+- JS
+call:
+- python
+- js
+- rust
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/geoarrow/geoarrow-rs
+notes: Columnar geometry processing for big data.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 31

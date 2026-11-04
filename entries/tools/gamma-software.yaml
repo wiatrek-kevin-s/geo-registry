@@ -1,0 +1,23 @@
+id: gamma-software
+kind: tool
+name: GAMMA Software
+category: Imagery, remote sensing & GeoAI
+subcategory: Commercial RS software
+tool_kind: Toolkit/CLI
+summary: Commercial SAR and InSAR processing package widely used in research.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://www.gamma-rs.ch
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 477

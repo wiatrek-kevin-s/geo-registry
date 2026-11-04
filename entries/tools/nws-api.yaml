@@ -1,0 +1,23 @@
+id: nws-api
+kind: tool
+name: NWS API
+category: Open data sources
+subcategory: US federal – NOAA
+tool_kind: Service/API
+summary: National Weather Service API for forecasts, alerts and observations by point or zone.
+open_source: 'yes'
+license: LicenseRef-Public-Domain
+license_original: Public domain
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.weather.gov/documentation/services-web-api
+notes: No key; GeoJSON
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1259

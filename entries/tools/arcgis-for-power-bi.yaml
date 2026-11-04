@@ -1,0 +1,23 @@
+id: arcgis-for-power-bi
+kind: tool
+name: ArcGIS for Power BI
+category: Display & visualization
+subcategory: BI & dashboard maps
+tool_kind: Extension
+summary: Esri visual that adds ArcGIS mapping, demographics and spatial analysis to Power BI reports.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+- plugin
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://www.esri.com/en-us/arcgis/products/arcgis-for-power-bi/overview
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1132

@@ -1,0 +1,32 @@
+id: rasdaman
+kind: tool
+name: rasdaman
+category: Spatial databases & query engines
+subcategory: Array / raster databases
+tool_kind: Database
+summary: Array database for massive multi-dimensional rasters and datacubes with WCS/WCPS query interfaces.
+open_source: partial
+license: LicenseRef-Multiple
+license_original: GPL-3.0 / LGPL-3.0
+language: C++;Java
+interfaces:
+- SQL
+- OGC
+- REST
+- Python
+call:
+- python
+- rest
+- sql
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://rasdaman.org
+notes: Community edition GPL server, LGPL clients
+also_categories:
+- Servers, standards, tiles & catalogs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 726

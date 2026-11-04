@@ -1,0 +1,22 @@
+id: titiler-pgstac
+kind: tool
+name: titiler-pgstac
+category: Imagery, remote sensing & GeoAI
+subcategory: Imagery tiling & serving
+tool_kind: Server
+summary: TiTiler extension serving dynamic mosaics from pgstac searches.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/stac-utils/titiler-pgstac
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 439

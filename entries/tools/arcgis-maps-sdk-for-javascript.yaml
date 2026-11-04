@@ -1,0 +1,29 @@
+id: arcgis-maps-sdk-for-javascript
+kind: tool
+name: ArcGIS Maps SDK for JavaScript
+category: Display & visualization
+subcategory: Web map libraries
+tool_kind: Library
+summary: Esri's 2D/3D web mapping SDK tightly integrated with ArcGIS Online/Enterprise services and web
+  maps.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: TypeScript
+interfaces:
+- JS
+- REST
+call:
+- rest
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://developers.arcgis.com/javascript/latest/
+notes: Needed to render Esri web maps/scenes faithfully
+also_categories:
+- Commercial GIS platforms & APIs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1024

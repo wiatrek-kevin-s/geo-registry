@@ -1,0 +1,21 @@
+id: texas-flood-viewer-txgio
+kind: tool
+name: Texas Flood Viewer (TxGIO)
+category: Open data sources
+subcategory: Texas
+tool_kind: Application
+summary: Map of Texas flood gauges, lake levels and weather.
+open_source: 'yes'
+license: LicenseRef-Public-Domain
+license_original: Public domain
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://map.texasflood.org/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1340

@@ -1,0 +1,26 @@
+id: taudem
+kind: tool
+name: TauDEM
+category: Desktop GIS & analysis engines
+subcategory: Terrain & hydrology engines
+tool_kind: Toolkit/CLI
+summary: 'MPI-parallel tools for DEM-based hydrologic terrain analysis: pit removal, flow directions,
+  contributing area and stream networks.'
+open_source: 'yes'
+license: GPL-3.0-only
+language: C++
+interfaces:
+- CLI
+- plugin
+call:
+- cli
+- plugin
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/dtarb/TauDEM
+notes: Command-line, scales to big DEMs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 276

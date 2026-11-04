@@ -1,0 +1,22 @@
+id: google-earth-engine-data-catalog
+kind: data
+name: Google Earth Engine Data Catalog
+summary: Catalog of hundreds of datasets accessible through Earth Engine.
+publisher: Google
+themes:
+- catalogs
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Multiple
+license_original: Mixed
+access:
+- type: http
+  url: https://developers.google.com/earth-engine/datasets
+  auth: none
+notes: Platform needs Google account; non-commercial free
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1332

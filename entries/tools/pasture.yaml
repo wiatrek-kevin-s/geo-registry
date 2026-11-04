@@ -1,0 +1,23 @@
+id: pasture
+kind: tool
+name: pasture
+category: Point clouds, LiDAR & 3D
+subcategory: LAS/LAZ libraries
+tool_kind: Library
+summary: Rust framework for point cloud data layouts, I/O and processing.
+open_source: 'yes'
+license: MIT OR Apache-2.0
+language: Rust
+interfaces:
+- Rust
+call:
+- rust
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/Mortano/pasture
+notes: Research-grade Rust point cloud toolkit.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 545

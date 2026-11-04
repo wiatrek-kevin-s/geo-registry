@@ -1,0 +1,21 @@
+id: copernicus-land-monitoring-service
+kind: data
+name: Copernicus Land Monitoring Service
+summary: Pan-European and global land cover, vegetation and water products.
+publisher: Unknown
+themes:
+- catalogs
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Copernicus
+license_original: Copernicus free and open licence
+access:
+- type: http
+  url: https://land.copernicus.eu/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1333

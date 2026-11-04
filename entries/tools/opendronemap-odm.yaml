@@ -1,0 +1,25 @@
+id: opendronemap-odm
+kind: tool
+name: OpenDroneMap (ODM)
+category: Imagery, remote sensing & GeoAI
+subcategory: Photogrammetry & drone
+tool_kind: Toolkit/CLI
+summary: Processes drone images into orthophotos, DSMs, point clouds and 3D models.
+open_source: 'yes'
+license: AGPL-3.0
+language: Python;C++
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/OpenDroneMap/ODM
+notes: Docker CLI; AGPL
+also_categories:
+- Point clouds, LiDAR & 3D
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 506

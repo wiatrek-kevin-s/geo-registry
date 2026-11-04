@@ -1,0 +1,31 @@
+id: oracle-spatial-sdo-geometry
+kind: tool
+name: Oracle Spatial (SDO_GEOMETRY)
+category: Spatial databases & query engines
+subcategory: Commercial RDBMS
+tool_kind: Database
+summary: Spatial types, R-tree indexes, networks, GeoRaster and topology inside Oracle Database, now included
+  free in all editions.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C;Java;PL/SQL
+interfaces:
+- SQL
+- Java
+- Python
+- REST
+call:
+- python
+- rest
+- sql
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://www.oracle.com/database/spatial/
+notes: Covers SDO_GEOMETRY queries
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 697

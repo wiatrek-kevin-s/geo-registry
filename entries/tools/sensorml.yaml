@@ -1,0 +1,22 @@
+id: sensorml
+kind: tool
+name: SensorML
+category: Servers, standards, tiles & catalogs
+subcategory: OGC web service standards
+tool_kind: Format/Standard
+summary: Describes sensors and processing of observations in XML or JSON.
+open_source: 'yes'
+license: LicenseRef-OGC-Document
+license_original: OGC document licence
+interfaces:
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.ogc.org/standards/sensorml
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 984

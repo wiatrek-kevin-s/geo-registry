@@ -1,0 +1,26 @@
+id: itwin-platform-itwin-js
+kind: tool
+name: iTwin Platform / iTwin.js
+category: Commercial GIS platforms & APIs
+subcategory: Bentley
+tool_kind: Platform
+summary: Infrastructure digital-twin platform; iTwin.js is the open-source library, iTwin Platform the
+  hosted APIs.
+open_source: partial
+license: LicenseRef-Multiple
+license_original: MIT (iTwin.js); Proprietary (platform)
+language: TypeScript
+interfaces:
+- JS
+- REST
+call:
+- rest
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://www.itwinjs.org/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1390

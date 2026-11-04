@@ -1,0 +1,26 @@
+id: cesium-ion
+kind: tool
+name: Cesium ion
+category: Point clouds, LiDAR & 3D
+subcategory: Web viewers & engines
+tool_kind: Service/API
+summary: Hosted platform that tiles and streams 3D content, terrain and point clouds as 3D Tiles.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- GUI
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://cesium.com/platform/cesium-ion/
+notes: Cloud tiler; data leaves the desktop.
+also_categories:
+- Display & visualization
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 601

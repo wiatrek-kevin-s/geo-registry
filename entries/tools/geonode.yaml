@@ -1,0 +1,29 @@
+id: geonode
+kind: tool
+name: GeoNode
+category: Servers, standards, tiles & catalogs
+subcategory: Metadata catalogs & data portals
+tool_kind: Platform
+summary: Web spatial content management system for uploading, styling, cataloguing and sharing layers
+  and maps, built on GeoServer.
+open_source: 'yes'
+license: GPL-3.0-or-later
+language: Python
+interfaces:
+- REST
+- OGC
+- GUI
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://geonode.org
+notes: Full open-source portal stack
+also_categories:
+- Display & visualization
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 934

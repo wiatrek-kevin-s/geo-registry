@@ -1,0 +1,21 @@
+id: hdf5
+kind: tool
+name: HDF5
+category: Core libraries & formats
+subcategory: Raster formats
+tool_kind: Format/Standard
+summary: Hierarchical binary container for large scientific datasets used by many satellite products.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open specification
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://www.hdfgroup.org/solutions/hdf5
+notes: NASA/EO products.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 135

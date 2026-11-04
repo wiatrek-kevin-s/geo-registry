@@ -1,0 +1,27 @@
+id: arcgis-server
+kind: tool
+name: ArcGIS Server
+category: Servers, standards, tiles & catalogs
+subcategory: Commercial GIS servers & platforms
+tool_kind: Server
+summary: Publishes maps, features, imagery and geoprocessing as web services; core server component of
+  ArcGIS Enterprise.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Java; C/C++
+interfaces:
+- REST
+- OGC
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://enterprise.arcgis.com/en/server/
+notes: Also serves WMS/WFS/WMTS/OGC API Features
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 953

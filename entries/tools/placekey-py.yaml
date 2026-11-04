@@ -1,0 +1,22 @@
+id: placekey-py
+kind: tool
+name: placekey-py
+category: Routing, networks, geocoding & LRS
+subcategory: Geocoding services
+tool_kind: Library
+summary: Python library to convert between Placekeys, coordinates and H3, and call the Placekey API.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/Placekey/placekey-py
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 842

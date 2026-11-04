@@ -1,0 +1,28 @@
+id: colmap
+kind: tool
+name: COLMAP
+category: Imagery, remote sensing & GeoAI
+subcategory: Photogrammetry & drone
+tool_kind: Toolkit/CLI
+summary: Structure-from-motion and multi-view stereo pipeline.
+open_source: 'yes'
+license: BSD-3-Clause
+language: C++
+interfaces:
+- CLI
+- GUI
+- Python
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/colmap/colmap
+notes: pycolmap bindings
+also_categories:
+- Point clouds, LiDAR & 3D
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 514

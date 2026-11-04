@@ -1,0 +1,24 @@
+id: stac-validator
+kind: tool
+name: stac-validator
+category: Imagery, remote sensing & GeoAI
+subcategory: STAC ecosystem
+tool_kind: Toolkit/CLI
+summary: Validates STAC JSON against the specification and extension schemas.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- CLI
+- Python
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/stac-utils/stac-validator
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 430

@@ -1,0 +1,26 @@
+id: gis-mcp-server-gis-mcp
+kind: tool
+name: GIS MCP Server (gis-mcp)
+category: AI, agents & MCP for GIS
+subcategory: General GIS MCP servers
+tool_kind: Server
+summary: MCP server wrapping Shapely, PyProj, GeoPandas, Rasterio and PySAL for geometry, projection,
+  raster and stats tools.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- MCP
+- Python
+call:
+- python
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/mahdin75/gis-mcp
+notes: Good reference tool catalog
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1508

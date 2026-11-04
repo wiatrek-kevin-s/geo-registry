@@ -1,0 +1,23 @@
+id: qgis2web
+kind: tool
+name: QGIS2Web
+category: Display & visualization
+subcategory: Data viewers & editors
+tool_kind: Extension
+summary: QGIS plugin that exports a project to a standalone Leaflet or OpenLayers web map.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: Python
+interfaces:
+- plugin
+- GUI
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/qgis2web/qgis2web
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1152

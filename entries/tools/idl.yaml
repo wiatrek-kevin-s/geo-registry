@@ -1,0 +1,25 @@
+id: idl
+kind: tool
+name: IDL
+category: Imagery, remote sensing & GeoAI
+subcategory: Commercial RS software
+tool_kind: Toolkit/CLI
+summary: Array-oriented programming language widely used for scientific and remote sensing processing.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: IDL
+interfaces:
+- CLI
+- Python
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.nv5geospatialsoftware.com/Products/IDL
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 470

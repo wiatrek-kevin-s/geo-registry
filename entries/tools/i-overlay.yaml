@@ -1,0 +1,23 @@
+id: i-overlay
+kind: tool
+name: i_overlay
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: Rust polygon boolean operations library, used as the backend for geo's boolean ops.
+open_source: 'yes'
+license: MIT
+language: Rust
+interfaces:
+- Rust
+call:
+- rust
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/iShape-Rust/iOverlay
+notes: Fast robust overlay in pure Rust.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 14

@@ -1,0 +1,22 @@
+id: pypostal
+kind: tool
+name: pypostal
+category: Routing, networks, geocoding & LRS
+subcategory: Geocoding engines & libraries
+tool_kind: Library
+summary: Python bindings for libpostal parsing and expansion.
+open_source: 'yes'
+license: MIT
+language: Python;C
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/openvenues/pypostal
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 823

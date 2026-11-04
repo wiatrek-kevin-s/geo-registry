@@ -1,0 +1,27 @@
+id: ohsome-api
+kind: tool
+name: ohsome API
+category: OSM & Overture tooling
+subcategory: Query services
+tool_kind: Service/API
+summary: REST API for aggregated statistics and extractions over the full OSM edit history.
+open_source: 'yes'
+license: AGPL-3.0-only
+language: Java
+interfaces:
+- REST
+- Python
+- R
+call:
+- python
+- rest
+- r
+wrapped_by_columbus: false
+project_status: maintained
+url: https://api.ohsome.org/
+notes: HeiGIT; historic OSM change analysis
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1205

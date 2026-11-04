@@ -1,0 +1,22 @@
+id: supersplat
+kind: tool
+name: SuperSplat
+category: Point clouds, LiDAR & 3D
+subcategory: Photogrammetry & reality capture
+tool_kind: Application
+summary: Browser-based editor for cleaning and publishing Gaussian splat scenes.
+open_source: 'yes'
+license: MIT
+language: TypeScript
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/playcanvas/supersplat
+notes: Edit splats locally in browser.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 633

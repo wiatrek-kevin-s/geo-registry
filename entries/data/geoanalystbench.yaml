@@ -1,0 +1,21 @@
+id: geoanalystbench
+kind: data
+name: GeoAnalystBench
+summary: Benchmark of spatial-analysis workflows and code generation for LLMs.
+publisher: Unknown
+themes:
+- llm-gis-agents-research
+- ai-agents-mcp-for-gis
+coverage:
+  region: Unspecified
+license: NOASSERTION
+license_original: Unknown
+access:
+- type: http
+  url: https://arxiv.org/abs/2509.05881
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1558

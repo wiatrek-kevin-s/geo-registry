@@ -1,0 +1,23 @@
+id: osmium-tool
+kind: tool
+name: osmium-tool
+category: OSM & Overture tooling
+subcategory: PBF processing
+tool_kind: Toolkit/CLI
+summary: Command-line Swiss-army knife to extract, filter, merge, convert and diff OSM PBF/XML files.
+open_source: 'yes'
+license: GPL-3.0-only
+language: C++
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://osmcode.org/osmium-tool/
+notes: Fast bbox/polygon extracts; agent can call via CLI
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1186

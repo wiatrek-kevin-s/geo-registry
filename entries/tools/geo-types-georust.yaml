@@ -1,0 +1,23 @@
+id: geo-types-georust
+kind: tool
+name: geo-types (GeoRust)
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: Shared Rust geometry primitive types used as the interchange layer across GeoRust crates.
+open_source: 'yes'
+license: MIT OR Apache-2.0
+language: Rust
+interfaces:
+- Rust
+call:
+- rust
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/georust/geo
+notes: Common type layer for Rust ecosystem.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 12

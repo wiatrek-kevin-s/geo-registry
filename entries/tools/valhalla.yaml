@@ -1,0 +1,30 @@
+id: valhalla
+kind: tool
+name: Valhalla
+category: Routing, networks, geocoding & LRS
+subcategory: Routing engines
+tool_kind: Server
+summary: Tiled, multimodal OSM routing engine with dynamic costing, isochrones, map matching, matrices
+  and elevation.
+open_source: 'yes'
+license: MIT
+language: C++
+interfaces:
+- CLI
+- REST
+- Python
+- C/C++
+call:
+- python
+- cli
+- rest
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/valhalla/valhalla
+notes: pyvalhalla wheels allow in-process routing without a server
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 750

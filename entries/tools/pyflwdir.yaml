@@ -1,0 +1,23 @@
+id: pyflwdir
+kind: tool
+name: pyflwdir
+category: Desktop GIS & analysis engines
+subcategory: Terrain & hydrology engines
+tool_kind: Library
+summary: Deltares library for fast flow-direction-based hydrological operations on gridded data.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/Deltares/pyflwdir
+notes: Numba-accelerated
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 280

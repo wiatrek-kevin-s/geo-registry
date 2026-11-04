@@ -1,0 +1,25 @@
+id: meshroom
+kind: tool
+name: Meshroom
+category: Imagery, remote sensing & GeoAI
+subcategory: Photogrammetry & drone
+tool_kind: Application
+summary: Node-based 3D reconstruction application built on AliceVision.
+open_source: 'yes'
+license: MPL-2.0
+language: Python;C++
+interfaces:
+- GUI
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/alicevision/Meshroom
+also_categories:
+- Point clouds, LiDAR & 3D
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 517

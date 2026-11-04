@@ -1,0 +1,24 @@
+id: kerchunk-virtualizarr
+kind: tool
+name: Kerchunk / VirtualiZarr
+category: Core libraries & formats
+subcategory: Raster formats
+tool_kind: Library
+summary: Python tools that build virtual Zarr references over existing NetCDF/HDF5/GRIB files.
+open_source: 'yes'
+license: MIT OR Apache-2.0
+license_original: MIT / Apache-2.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/zarr-developers/VirtualiZarr
+notes: Cloud access to legacy archives.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 139

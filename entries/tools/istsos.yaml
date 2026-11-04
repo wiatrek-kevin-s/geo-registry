@@ -1,0 +1,26 @@
+id: istsos
+kind: tool
+name: istSOS
+category: Servers, standards, tiles & catalogs
+subcategory: Processing & sensor services
+tool_kind: Server
+summary: Python sensor data server; istSOS2 implements SOS and istSOS4 implements SensorThings API.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: Python
+interfaces:
+- OGC
+- REST
+- GUI
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://istsos.org
+notes: istSOS4 is the current line
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 948

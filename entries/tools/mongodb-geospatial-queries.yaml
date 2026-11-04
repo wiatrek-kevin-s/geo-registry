@@ -1,0 +1,28 @@
+id: mongodb-geospatial-queries
+kind: tool
+name: MongoDB geospatial queries
+category: Spatial databases & query engines
+subcategory: NoSQL / search / KV
+tool_kind: Database
+summary: 2dsphere and 2d indexes with $near, $geoWithin and $geoIntersects queries over GeoJSON documents.
+open_source: partial
+license: SSPL-1.0
+language: C++
+interfaces:
+- Python
+- JS
+- Java
+- REST
+call:
+- python
+- rest
+- js
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://www.mongodb.com/docs/manual/geospatial-queries/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 714

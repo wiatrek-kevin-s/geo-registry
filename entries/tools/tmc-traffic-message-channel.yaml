@@ -1,0 +1,22 @@
+id: tmc-traffic-message-channel
+kind: tool
+name: TMC (Traffic Message Channel)
+category: Routing, networks, geocoding & LRS
+subcategory: Network & traffic referencing standards
+tool_kind: Format/Standard
+summary: Pre-coded location table standard (ISO 14819) used to reference road segments in traffic data
+  such as NPMRDS.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://tisa.org/
+notes: Needed to join speed data like INRIX/NPMRDS
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 882

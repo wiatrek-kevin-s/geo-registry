@@ -1,0 +1,24 @@
+id: tilemaker
+kind: tool
+name: tilemaker
+category: Servers, standards, tiles & catalogs
+subcategory: Tile generation & packaging
+tool_kind: Toolkit/CLI
+summary: Converts OpenStreetMap PBF extracts into vector tiles using Lua-configured layer logic.
+open_source: 'yes'
+license: LicenseRef-FTWPL
+license_original: FTWPL
+language: C/C++
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/systemed/tilemaker
+notes: No database needed
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 923

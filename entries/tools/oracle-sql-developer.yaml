@@ -1,0 +1,22 @@
+id: oracle-sql-developer
+kind: tool
+name: Oracle SQL Developer
+category: Spatial databases & query engines
+subcategory: Client tools
+tool_kind: Application
+summary: Oracle database IDE with a map view for SDO_GEOMETRY results.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Java
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.oracle.com/database/sqldeveloper/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 746

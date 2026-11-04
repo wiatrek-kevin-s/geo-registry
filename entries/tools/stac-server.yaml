@@ -1,0 +1,24 @@
+id: stac-server
+kind: tool
+name: stac-server
+category: Imagery, remote sensing & GeoAI
+subcategory: STAC ecosystem
+tool_kind: Server
+summary: Serverless STAC API on AWS Lambda with OpenSearch, used for Earth Search.
+open_source: 'yes'
+license: MIT
+language: JavaScript
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/stac-utils/stac-server
+also_categories:
+- Commercial GIS platforms & APIs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 432

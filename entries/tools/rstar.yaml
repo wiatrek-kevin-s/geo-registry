@@ -1,0 +1,23 @@
+id: rstar
+kind: tool
+name: rstar
+category: Core libraries & formats
+subcategory: Spatial indexing
+tool_kind: Library
+summary: Rust R*-tree implementation for spatial queries and nearest neighbours.
+open_source: 'yes'
+license: MIT OR Apache-2.0
+language: Rust
+interfaces:
+- Rust
+call:
+- rust
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/georust/rstar
+notes: Used by geo crate.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 98

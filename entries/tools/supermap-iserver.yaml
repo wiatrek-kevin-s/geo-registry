@@ -1,0 +1,26 @@
+id: supermap-iserver
+kind: tool
+name: SuperMap iServer
+category: Servers, standards, tiles & catalogs
+subcategory: Commercial GIS servers & platforms
+tool_kind: Server
+summary: SuperMap's GIS server publishing maps, data, analysis and 3D services with REST and OGC interfaces.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Java
+interfaces:
+- REST
+- OGC
+- GUI
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://www.supermap.com
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 963

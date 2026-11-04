@@ -1,0 +1,23 @@
+id: geographiclib-python
+kind: tool
+name: geographiclib (Python)
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: Pure Python implementation of GeographicLib geodesic routines.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/geographiclib/geographiclib-python
+notes: Dependency-free geodesics.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 18

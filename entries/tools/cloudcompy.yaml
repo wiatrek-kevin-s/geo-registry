@@ -1,0 +1,23 @@
+id: cloudcompy
+kind: tool
+name: CloudComPy
+category: Point clouds, LiDAR & 3D
+subcategory: Desktop viewers & editors
+tool_kind: Library
+summary: Python bindings exposing CloudCompare's algorithms for scripting.
+open_source: 'yes'
+license: GPL-3.0
+language: C++;Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/CloudCompare/CloudComPy
+notes: Script CloudCompare from an agent; conda-based install.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 585

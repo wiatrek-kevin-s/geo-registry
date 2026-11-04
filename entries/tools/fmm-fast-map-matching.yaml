@@ -1,0 +1,28 @@
+id: fmm-fast-map-matching
+kind: tool
+name: FMM (Fast Map Matching)
+category: Routing, networks, geocoding & LRS
+subcategory: Routing engines
+tool_kind: Library
+summary: Fast map matching library using precomputed upper-bounded origin-destination tables for large
+  GPS datasets.
+open_source: 'yes'
+license: Apache-2.0
+language: C++;Python
+interfaces:
+- CLI
+- Python
+- C/C++
+call:
+- python
+- cli
+- c-cpp
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/cyang-kth/fmm
+notes: Good for large GPS trace batches
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 772

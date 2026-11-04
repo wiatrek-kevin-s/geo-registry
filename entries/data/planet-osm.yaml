@@ -1,0 +1,21 @@
+id: planet-osm
+kind: data
+name: Planet OSM
+summary: Official full planet dumps, full-history files and minutely/hourly/daily replication diffs.
+publisher: OpenStreetMap Foundation
+themes:
+- downloads-distributions
+- osm-overture-tooling
+coverage:
+  region: Unspecified
+license: ODbL-1.0
+access:
+- type: http
+  url: https://planet.openstreetmap.org/
+  auth: none
+notes: ~80 GB PBF; also mirrored on AWS
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1225

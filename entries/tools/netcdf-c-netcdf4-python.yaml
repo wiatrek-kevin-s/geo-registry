@@ -1,0 +1,28 @@
+id: netcdf-c-netcdf4-python
+kind: tool
+name: NetCDF-C / netCDF4-python
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Unidata reference libraries for reading and writing netCDF files.
+open_source: 'yes'
+license: BSD-3-Clause
+license_original: BSD-3-Clause (Unidata)
+language: C/Python
+interfaces:
+- C/C++
+- Python
+- CLI
+call:
+- python
+- cli
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://www.unidata.ucar.edu/software/netcdf
+notes: Climate/ocean data access.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 73

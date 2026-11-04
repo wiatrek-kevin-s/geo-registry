@@ -1,0 +1,31 @@
+id: geolibre-rust-geolibre-wasm
+kind: tool
+name: geolibre-rust (geolibre-wasm)
+category: Desktop GIS & analysis engines
+subcategory: Whitebox & Rust GIS engines
+tool_kind: Library
+summary: WebAssembly toolkit that bundles Whitebox tools plus GeoLibre-specific tools to run geoprocessing
+  in the browser with no server or GDAL.
+open_source: 'yes'
+license: MIT
+language: Rust
+interfaces:
+- JS
+- Python
+- CLI
+call:
+- python
+- cli
+- js
+install:
+  pip: geolibre-wasm
+  npm: geolibre-wasm
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/opengeos/geolibre-rust
+notes: npm/PyPI geolibre-wasm; in-browser analysis
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 250

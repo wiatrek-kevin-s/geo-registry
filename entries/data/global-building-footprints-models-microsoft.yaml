@@ -1,0 +1,20 @@
+id: global-building-footprints-models-microsoft
+kind: data
+name: Global Building Footprints models (Microsoft)
+summary: Microsoft AI-derived building footprint datasets extracted from imagery.
+publisher: Unknown
+themes:
+- geoai-deep-learning
+- imagery-remote-sensing-geoai
+coverage:
+  region: Global
+license: ODbL-1.0
+access:
+- type: http
+  url: https://github.com/microsoft/GlobalMLBuildingFootprints
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 463

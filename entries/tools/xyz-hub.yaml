@@ -1,0 +1,22 @@
+id: xyz-hub
+kind: tool
+name: XYZ Hub
+category: Servers, standards, tiles & catalogs
+subcategory: Map & feature servers
+tool_kind: Server
+summary: HERE's RESTful GeoJSON feature store and API for storing, querying and tiling spatial data.
+open_source: 'yes'
+license: Apache-2.0
+language: Java
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/heremaps/xyz-hub
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 905

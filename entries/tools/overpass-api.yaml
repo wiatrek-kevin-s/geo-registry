@@ -1,0 +1,23 @@
+id: overpass-api
+kind: tool
+name: Overpass API
+category: OSM & Overture tooling
+subcategory: Query services
+tool_kind: Server
+summary: Read-only query server for OSM data with its own query language for area/tag searches.
+open_source: 'yes'
+license: AGPL-3.0-only
+language: C++
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://overpass-api.de/
+notes: Main live OSM query service; agent can call via REST; public rate limits
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1202

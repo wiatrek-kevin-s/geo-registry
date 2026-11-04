@@ -1,0 +1,21 @@
+id: lp-daac
+kind: data
+name: LP DAAC
+summary: NASA archive for land processes data such as MODIS, VIIRS land, ASTER, HLS and GEDI L2.
+publisher: Unknown
+themes:
+- us-federal-nasa
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.earthdata.nasa.gov/centers/lp-daac
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1264

@@ -1,0 +1,30 @@
+id: apache-sedona
+kind: tool
+name: Apache Sedona
+category: Spatial databases & query engines
+subcategory: Big data / distributed
+tool_kind: Platform
+summary: Cluster engine adding spatial types, SQL functions, spatial joins and raster support to Spark
+  and Flink.
+open_source: 'yes'
+license: Apache-2.0
+language: Scala;Java;Python
+interfaces:
+- SQL
+- Python
+- R
+- Java
+call:
+- python
+- r
+- sql
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://sedona.apache.org
+notes: Heavy JVM/Spark dependency
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 675

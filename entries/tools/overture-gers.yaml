@@ -1,0 +1,20 @@
+id: overture-gers
+kind: tool
+name: Overture GERS
+category: OSM & Overture tooling
+subcategory: Overture Maps
+tool_kind: Format/Standard
+summary: Global Entity Reference System of stable IDs for joining data to Overture features.
+open_source: 'yes'
+license: CDLA-Permissive-2.0
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://docs.overturemaps.org/gers/
+notes: Stable join key across releases
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1233

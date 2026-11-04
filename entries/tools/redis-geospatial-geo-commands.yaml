@@ -1,0 +1,28 @@
+id: redis-geospatial-geo-commands
+kind: tool
+name: Redis geospatial (GEO commands)
+category: Spatial databases & query engines
+subcategory: NoSQL / search / KV
+tool_kind: Database
+summary: Sorted-set based GEOADD/GEOSEARCH commands for radius and box point lookups.
+open_source: partial
+license: LicenseRef-RSALv2 OR SSPL-1.0 OR AGPL-3.0
+license_original: RSALv2 OR SSPLv1 OR AGPL-3.0
+language: C
+interfaces:
+- CLI
+- Python
+- JS
+call:
+- python
+- cli
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://redis.io/docs/latest/develop/data-types/geospatial/
+notes: Valkey fork is BSD
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 718

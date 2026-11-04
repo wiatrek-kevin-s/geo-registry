@@ -1,0 +1,20 @@
+id: iso-19119
+kind: tool
+name: ISO 19119
+category: Servers, standards, tiles & catalogs
+subcategory: Tile, style & catalog specs
+tool_kind: Format/Standard
+summary: ISO standard defining geographic service architecture and service metadata.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary (ISO)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.iso.org/standard/59221.html
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1010

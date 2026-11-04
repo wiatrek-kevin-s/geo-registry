@@ -1,0 +1,22 @@
+id: ohsome-r
+kind: tool
+name: ohsome (R)
+category: OSM & Overture tooling
+subcategory: R packages
+tool_kind: Library
+summary: R client for the ohsome API to query OSM history statistics.
+open_source: 'yes'
+license: GPL-3.0-only
+language: R
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/GIScience/ohsome-r
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1201

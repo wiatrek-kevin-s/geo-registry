@@ -1,0 +1,23 @@
+id: esda
+kind: tool
+name: esda
+category: Desktop GIS & analysis engines
+subcategory: Spatial statistics (Python / PySAL)
+tool_kind: Library
+summary: 'Exploratory spatial data analysis: Moran''s I, Geary''s C, LISA, Getis-Ord and join counts.'
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://pysal.org/esda/
+notes: Hot-spot analysis for agents
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 306

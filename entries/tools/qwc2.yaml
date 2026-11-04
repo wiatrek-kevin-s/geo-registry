@@ -1,0 +1,23 @@
+id: qwc2
+kind: tool
+name: QWC2
+category: Display & visualization
+subcategory: Web GIS application frameworks
+tool_kind: Application
+summary: React web client for QGIS Server projects, part of QGIS Web Client 2.
+open_source: 'yes'
+license: BSD-2-Clause
+language: JavaScript
+interfaces:
+- GUI
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/qgis/qwc2
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1162

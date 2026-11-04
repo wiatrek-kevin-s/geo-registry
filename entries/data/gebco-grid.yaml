@@ -1,0 +1,21 @@
+id: gebco-grid
+kind: data
+name: GEBCO Grid
+summary: Global bathymetry and topography grid at 15 arc-seconds.
+publisher: Unknown
+themes:
+- global-elevation
+- open-data-sources
+coverage:
+  region: Global
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.gebco.net/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1299

@@ -1,0 +1,25 @@
+id: mssql-python
+kind: tool
+name: mssql-python
+category: Connections & storage
+subcategory: Database drivers
+tool_kind: Library
+summary: Microsoft's newer Python driver for SQL Server that bundles its own ODBC layer.
+open_source: 'yes'
+license: MIT
+language: Python; C++
+interfaces:
+- Python
+- SQL
+call:
+- python
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/microsoft/mssql-python
+notes: Not re-verified this session
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1425

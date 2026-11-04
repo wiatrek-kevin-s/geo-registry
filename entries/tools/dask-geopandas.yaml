@@ -1,0 +1,25 @@
+id: dask-geopandas
+kind: tool
+name: Dask-GeoPandas
+category: Desktop GIS & analysis engines
+subcategory: Python vector analysis
+tool_kind: Library
+summary: Parallel and out-of-core GeoPandas using Dask partitions for large vector datasets.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/geopandas/dask-geopandas
+notes: Larger-than-memory vectors
+also_categories:
+- Spatial databases & query engines
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 286

@@ -1,0 +1,23 @@
+id: maplibre-rs
+kind: tool
+name: maplibre-rs
+category: Display & visualization
+subcategory: MapLibre/OpenLayers ecosystem
+tool_kind: Library
+summary: Experimental Rust/WebGPU vector-tile map renderer targeting web and native.
+open_source: 'yes'
+license: Apache-2.0 OR MIT
+language: Rust
+interfaces:
+- Rust
+call:
+- rust
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/maplibre/maplibre-rs
+notes: Relevant to a Rust stack; experimental
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1042

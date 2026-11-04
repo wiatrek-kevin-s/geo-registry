@@ -1,0 +1,25 @@
+id: galileo
+kind: tool
+name: Galileo
+category: Display & visualization
+subcategory: Native & mobile SDKs
+tool_kind: Library
+summary: Cross-platform Rust map rendering library for vector and raster layers, still under heavy development.
+open_source: 'yes'
+license: Apache-2.0 OR MIT
+language: Rust
+interfaces:
+- Rust
+call:
+- rust
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/galileo-map/galileo
+notes: Native Rust renderer; fits a Rust GIS app
+also_categories:
+- AI, agents & MCP for GIS
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1081

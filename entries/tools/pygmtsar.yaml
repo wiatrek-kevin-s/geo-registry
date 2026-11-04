@@ -1,0 +1,22 @@
+id: pygmtsar
+kind: tool
+name: PyGMTSAR
+category: Imagery, remote sensing & GeoAI
+subcategory: SAR processing
+tool_kind: Library
+summary: Python reimplementation of GMTSAR workflows for Sentinel-1 InSAR in notebooks.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/AlexeyPechnikov/pygmtsar
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 498

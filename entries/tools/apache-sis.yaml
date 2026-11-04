@@ -1,0 +1,23 @@
+id: apache-sis
+kind: tool
+name: Apache SIS
+category: Core libraries & formats
+subcategory: Projection & CRS
+tool_kind: Library
+summary: Java library implementing OGC/ISO standards for CRS, metadata and data stores.
+open_source: 'yes'
+license: Apache-2.0
+language: Java
+interfaces:
+- Java
+call:
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://sis.apache.org
+notes: Strong ISO 19111 CRS model.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 38

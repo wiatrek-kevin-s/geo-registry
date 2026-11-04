@@ -1,0 +1,24 @@
+id: 6s
+kind: tool
+name: 6S
+category: Imagery, remote sensing & GeoAI
+subcategory: Atmospheric correction
+tool_kind: Toolkit/CLI
+summary: Radiative transfer code simulating the reflection of solar radiation through the atmosphere.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: Fortran
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://salsa.umd.edu/6spage.html
+notes: Underlies many correction tools
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 373

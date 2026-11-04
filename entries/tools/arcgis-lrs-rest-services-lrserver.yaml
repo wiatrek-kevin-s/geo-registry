@@ -1,0 +1,24 @@
+id: arcgis-lrs-rest-services-lrserver
+kind: tool
+name: ArcGIS LRS REST services (LRServer)
+category: Routing, networks, geocoding & LRS
+subcategory: Linear referencing (LRS)
+tool_kind: Service/API
+summary: Server capability exposing measure-to-geometry, geometry-to-measure and translate operations
+  over an LRS.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://developers.arcgis.com/rest/services-reference/enterprise/lr-server/
+notes: Agent can translate route/measure via REST
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 860

@@ -1,0 +1,24 @@
+id: gee-mcp-frontier-development-lab
+kind: tool
+name: gee-mcp (Frontier Development Lab)
+category: AI, agents & MCP for GIS
+subcategory: Earth observation MCP servers
+tool_kind: Server
+summary: MCP server for Earth Engine dataset discovery, metadata, analysis primitives and GEE code generation.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- MCP
+- Python
+call:
+- python
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/FrontierDevelopmentLab/gee-mcp
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1547

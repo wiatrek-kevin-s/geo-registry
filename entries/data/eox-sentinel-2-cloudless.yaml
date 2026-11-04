@@ -1,0 +1,22 @@
+id: eox-sentinel-2-cloudless
+kind: data
+name: EOX Sentinel-2 cloudless
+summary: Cloud-free global Sentinel-2 mosaic served as WMTS/WMS; licence varies by year.
+publisher: Unknown
+themes:
+- basemap-providers
+- display-visualization
+coverage:
+  region: Global
+license: LicenseRef-Multiple
+license_original: CC-BY-4.0 / CC-BY-NC-SA-4.0
+access:
+- type: http
+  url: https://s2maps.eu/
+  auth: none
+notes: Later years non-commercial only
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1180

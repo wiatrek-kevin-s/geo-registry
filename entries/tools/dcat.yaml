@@ -1,0 +1,23 @@
+id: dcat
+kind: tool
+name: DCAT
+category: Servers, standards, tiles & catalogs
+subcategory: Tile, style & catalog specs
+tool_kind: Format/Standard
+summary: W3C RDF vocabulary for describing datasets and data catalogs.
+open_source: 'yes'
+license: LicenseRef-W3C-Document
+license_original: W3C document licence
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.w3.org/TR/vocab-dcat-3/
+notes: Used by data.gov and ArcGIS Hub feeds
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1013

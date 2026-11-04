@@ -1,0 +1,23 @@
+id: stars
+kind: tool
+name: stars
+category: Desktop GIS & analysis engines
+subcategory: R spatial packages
+tool_kind: Library
+summary: Spatiotemporal arrays and raster/vector data cubes for R.
+open_source: 'yes'
+license: Apache-2.0
+language: R
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/r-spatial/stars
+notes: Licence from memory
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 333

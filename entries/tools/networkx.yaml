@@ -1,0 +1,23 @@
+id: networkx
+kind: tool
+name: NetworkX
+category: Routing, networks, geocoding & LRS
+subcategory: Accessibility & transport modeling
+tool_kind: Library
+summary: General graph library used for shortest paths, centrality and connectivity on geographic networks.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://networkx.org/
+notes: Backbone of OSMnx and momepy
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 781

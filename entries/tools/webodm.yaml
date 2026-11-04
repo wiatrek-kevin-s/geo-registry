@@ -1,0 +1,25 @@
+id: webodm
+kind: tool
+name: WebODM
+category: Imagery, remote sensing & GeoAI
+subcategory: Photogrammetry & drone
+tool_kind: Application
+summary: Web interface and API for managing OpenDroneMap processing tasks.
+open_source: 'yes'
+license: AGPL-3.0
+language: Python;JavaScript
+interfaces:
+- GUI
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/OpenDroneMap/WebODM
+also_categories:
+- Point clouds, LiDAR & 3D
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 507

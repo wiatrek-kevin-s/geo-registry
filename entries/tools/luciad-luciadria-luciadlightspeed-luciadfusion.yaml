@@ -1,0 +1,29 @@
+id: luciad-luciadria-luciadlightspeed-luciadfusion
+kind: tool
+name: Luciad (LuciadRIA, LuciadLightspeed, LuciadFusion)
+category: Commercial GIS platforms & APIs
+subcategory: Hexagon
+tool_kind: Toolkit/CLI
+summary: Hexagon SDK family for high-performance 2D/3D situational-awareness apps and geodata serving,
+  common in defense.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Java; JS
+interfaces:
+- Java
+- JS
+- OGC
+call:
+- js
+- ogc
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://hexagon.com/company/newsroom/press-releases/2025/hexagon-releases-luciad-2025-featuring-enhanced-real-time-visuals-and-new-capabilities-for-defense-and-intelligence-agencies
+notes: URL is the 2025 release note
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1388

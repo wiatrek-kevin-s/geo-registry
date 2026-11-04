@@ -1,0 +1,23 @@
+id: gdal-python-bindings-osgeo
+kind: tool
+name: GDAL Python bindings (osgeo)
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Official SWIG Python bindings for GDAL/OGR/OSR.
+open_source: 'yes'
+license: MIT
+language: Python/C++
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://pypi.org/project/GDAL
+notes: Low-level but complete.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 49

@@ -1,0 +1,26 @@
+id: here-geocoding-search-api
+kind: tool
+name: HERE Geocoding & Search API
+category: Routing, networks, geocoding & LRS
+subcategory: Geocoding services
+tool_kind: Service/API
+summary: HERE's geocode, reverse, autosuggest and place search API.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- JS
+- Java
+call:
+- rest
+- js
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://www.here.com/docs/bundle/geocoding-and-search-api-developer-guide/page/README.html
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 836

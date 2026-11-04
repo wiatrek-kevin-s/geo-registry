@@ -1,0 +1,26 @@
+id: cratedb
+kind: tool
+name: CrateDB
+category: Spatial databases & query engines
+subcategory: Big data / distributed
+tool_kind: Database
+summary: Distributed SQL database built on Lucene with geo_point/geo_shape types and spatial match queries.
+open_source: 'yes'
+license: Apache-2.0
+language: Java
+interfaces:
+- SQL
+- REST
+- Python
+call:
+- python
+- rest
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://cratedb.com
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 690

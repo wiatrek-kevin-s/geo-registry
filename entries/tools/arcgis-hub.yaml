@@ -1,0 +1,24 @@
+id: arcgis-hub
+kind: tool
+name: ArcGIS Hub
+category: Servers, standards, tiles & catalogs
+subcategory: Commercial GIS servers & platforms
+tool_kind: Service/API
+summary: Esri's open data and community engagement site builder on top of ArcGIS Online.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- GUI
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.esri.com/en-us/arcgis/products/arcgis-hub/overview
+notes: Exposes DCAT and OGC API feeds
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 957

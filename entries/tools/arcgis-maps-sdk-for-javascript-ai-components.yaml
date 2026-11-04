@@ -1,0 +1,25 @@
+id: arcgis-maps-sdk-for-javascript-ai-components
+kind: tool
+name: ArcGIS Maps SDK for JavaScript AI components
+category: AI, agents & MCP for GIS
+subcategory: Esri AI
+tool_kind: Library
+summary: Beta components (arcgis-assistant plus navigation, data-exploration, help and custom agents)
+  for chat-driven web maps.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: TypeScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://www.esri.com/arcgis-blog/products/js-api-arcgis/developers/introducing-ai-components-beta-in-the-js-maps-sdk
+notes: Requires ArcGIS Online named users
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1481

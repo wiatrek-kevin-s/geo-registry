@@ -1,0 +1,24 @@
+id: 52north-javaps
+kind: tool
+name: 52°North javaPS
+category: Servers, standards, tiles & catalogs
+subcategory: Processing & sensor services
+tool_kind: Server
+summary: Java web processing server implementing WPS 2.0 and OGC API Processes.
+open_source: 'yes'
+license: Apache-2.0
+language: Java
+interfaces:
+- OGC
+- REST
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/52North/javaPS
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 944

@@ -1,0 +1,21 @@
+id: arcgis-storymaps-assistant
+kind: tool
+name: ArcGIS StoryMaps assistant
+category: AI, agents & MCP for GIS
+subcategory: Esri AI
+tool_kind: Extension
+summary: Preview assistant that turns documents such as PDFs into draft StoryMaps.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://www.esri.com/arcgis-blog/products/apps/geoai/whats-new-in-ai-assistants-june-2026
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1486

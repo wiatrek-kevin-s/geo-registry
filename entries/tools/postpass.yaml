@@ -1,0 +1,25 @@
+id: postpass
+kind: tool
+name: Postpass
+category: OSM & Overture tooling
+subcategory: Query services
+tool_kind: Server
+summary: Thin HTTP wrapper that runs SQL against an OSM PostGIS database and returns GeoJSON.
+open_source: 'yes'
+license: GPL-3.0-only
+language: Go;SQL
+interfaces:
+- REST
+- SQL
+call:
+- rest
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/woodpeck/postpass
+notes: Public instance hosted by Geofabrik; SQL-based Overpass alternative
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1204

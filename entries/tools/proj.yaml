@@ -1,0 +1,26 @@
+id: proj
+kind: tool
+name: PROJ
+category: Core libraries & formats
+subcategory: Projection & CRS
+tool_kind: Library
+summary: Coordinate transformation library and CLI tools covering projections, datum shifts and the EPSG
+  database.
+open_source: 'yes'
+license: MIT
+language: C++
+interfaces:
+- C/C++
+- CLI
+call:
+- cli
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://proj.org
+notes: Essential; agent can call cs2cs/projinfo.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 32

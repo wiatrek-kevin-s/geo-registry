@@ -1,0 +1,26 @@
+id: arcgis-location-platform-routing-services
+kind: tool
+name: ArcGIS Location Platform routing services
+category: Routing, networks, geocoding & LRS
+subcategory: Accessibility & transport modeling
+tool_kind: Service/API
+summary: Esri's hosted routing, service area, closest facility and VRP REST services.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- Python
+- JS
+call:
+- python
+- rest
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://developers.arcgis.com/rest/services-reference/enterprise/network-analysis-services/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 800

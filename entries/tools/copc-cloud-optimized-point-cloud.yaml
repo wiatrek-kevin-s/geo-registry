@@ -1,0 +1,23 @@
+id: copc-cloud-optimized-point-cloud
+kind: tool
+name: COPC (Cloud Optimized Point Cloud)
+category: Core libraries & formats
+subcategory: Point cloud & 3D formats
+tool_kind: Format/Standard
+summary: LAZ 1.4 file organised as a clustered octree for streaming partial reads over HTTP.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open specification
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://copc.io
+notes: Cloud-native LiDAR (USGS 3DEP).
+also_categories:
+- Point clouds, LiDAR & 3D
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 192

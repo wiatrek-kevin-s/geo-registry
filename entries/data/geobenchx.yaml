@@ -1,0 +1,22 @@
+id: geobenchx
+kind: data
+name: GeoBenchX
+summary: Benchmark of multi-step geospatial tasks for testing tool-calling LLM agents.
+publisher: Unknown
+themes:
+- llm-gis-agents-research
+- ai-agents-mcp-for-gis
+coverage:
+  region: Unspecified
+license: NOASSERTION
+license_original: Unknown
+access:
+- type: http
+  url: https://arxiv.org/abs/2503.18129
+  auth: none
+notes: Useful to evaluate Columbus
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1557

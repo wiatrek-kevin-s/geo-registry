@@ -1,0 +1,22 @@
+id: capella-space
+kind: data
+name: Capella Space
+summary: Commercial X-band SAR constellation offering tasking and archive via API.
+publisher: Capella Space
+themes:
+- commercial-imagery-providers
+- imagery-remote-sensing-geoai
+coverage:
+  region: Unspecified
+license: LicenseRef-Proprietary
+license_original: Proprietary
+access:
+- type: http
+  url: https://www.capellaspace.com
+  auth: none
+notes: Open data on AWS
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 484

@@ -1,0 +1,31 @@
+id: saga-gis
+kind: tool
+name: SAGA GIS
+category: Desktop GIS & analysis engines
+subcategory: Open-source desktop GIS
+tool_kind: Application
+summary: Desktop GIS focused on terrain, hydrology, climate and raster analysis, with a large tool library
+  usable via the saga_cmd CLI.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: C++
+interfaces:
+- GUI
+- CLI
+- Python
+- R
+- plugin
+call:
+- python
+- cli
+- r
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://saga-gis.sourceforge.io
+notes: saga_cmd is easy for an agent to drive; API library is LGPL
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 226

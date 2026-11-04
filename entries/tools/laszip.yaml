@@ -1,0 +1,25 @@
+id: laszip
+kind: tool
+name: LASzip
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Lossless compression library for LAS point clouds producing LAZ files.
+open_source: 'yes'
+license: Apache-2.0
+language: C++
+interfaces:
+- C/C++
+call:
+- c-cpp
+wrapped_by_columbus: false
+project_status: maintained
+url: https://laszip.org
+notes: Needed for LAZ.
+also_categories:
+- Point clouds, LiDAR & 3D
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 71

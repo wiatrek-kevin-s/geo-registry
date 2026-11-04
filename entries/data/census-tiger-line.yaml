@@ -1,0 +1,22 @@
+id: census-tiger-line
+kind: data
+name: Census TIGER/Line
+summary: Annual shapefiles/geodatabases of census geographies, roads, address ranges and boundaries.
+publisher: U.S. Census Bureau
+themes:
+- us-federal-census
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html
+  auth: none
+notes: Base for joins to ACS
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1249

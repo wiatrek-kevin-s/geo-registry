@@ -1,0 +1,23 @@
+id: pyvalhalla
+kind: tool
+name: pyvalhalla
+category: Routing, networks, geocoding & LRS
+subcategory: Routing engines
+tool_kind: Library
+summary: Python bindings that embed the Valhalla engine for building tiles and running routing calls locally.
+open_source: 'yes'
+license: MIT
+language: Python;C++
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/valhalla/valhalla
+notes: pip-installable local routing for a desktop app
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 751

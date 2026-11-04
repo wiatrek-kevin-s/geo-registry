@@ -1,0 +1,23 @@
+id: maja
+kind: tool
+name: MAJA
+category: Imagery, remote sensing & GeoAI
+subcategory: Atmospheric correction
+tool_kind: Toolkit/CLI
+summary: CNES multi-temporal atmospheric correction and cloud screening processor for Sentinel-2 and others.
+open_source: 'yes'
+license: Apache-2.0
+language: C++
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: maintained
+url: https://gitlab.orfeo-toolbox.org/maja/maja
+notes: Used for THEIA L2A products
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 375

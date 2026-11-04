@@ -1,0 +1,22 @@
+id: mariadb-spatial
+kind: tool
+name: MariaDB spatial
+category: Spatial databases & query engines
+subcategory: Open-source RDBMS
+tool_kind: Database
+summary: OpenGIS geometry types and ST_ functions with SPATIAL indexes in MariaDB.
+open_source: 'yes'
+license: GPL-2.0-only
+language: C++
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://mariadb.com/kb/en/geographic-geometric-features/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 708

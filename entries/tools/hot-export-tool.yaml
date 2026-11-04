@@ -1,0 +1,21 @@
+id: hot-export-tool
+kind: tool
+name: HOT Export Tool
+category: OSM & Overture tooling
+subcategory: Query services
+tool_kind: Application
+summary: Web app for building on-demand OSM exports by area and feature theme.
+open_source: 'yes'
+license: AGPL-3.0-only
+language: Python;JavaScript
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://export.hotosm.org/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1210

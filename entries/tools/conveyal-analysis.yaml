@@ -1,0 +1,25 @@
+id: conveyal-analysis
+kind: tool
+name: Conveyal Analysis
+category: Routing, networks, geocoding & LRS
+subcategory: Accessibility & transport modeling
+tool_kind: Platform
+summary: Web platform for scenario planning and regional accessibility analysis of transit and street
+  changes, built on R5.
+open_source: 'yes'
+license: MIT
+language: Java;JS
+interfaces:
+- GUI
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: maintained
+url: https://conveyal.com/
+notes: Open source but mostly used as hosted service
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 776

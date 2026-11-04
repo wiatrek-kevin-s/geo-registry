@@ -1,0 +1,25 @@
+id: 3dcitydb
+kind: tool
+name: 3DCityDB
+category: Point clouds, LiDAR & 3D
+subcategory: City models
+tool_kind: Database
+summary: Database schema and tools for storing and managing CityGML city models in PostgreSQL/PostGIS.
+open_source: 'yes'
+license: Apache-2.0
+language: SQL;Java
+interfaces:
+- SQL
+- CLI
+call:
+- cli
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://www.3dcitydb.org
+notes: v5 uses citydb-tool; versions before 3.3 were LGPL.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 625

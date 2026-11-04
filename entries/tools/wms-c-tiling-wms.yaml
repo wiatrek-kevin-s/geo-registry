@@ -1,0 +1,23 @@
+id: wms-c-tiling-wms
+kind: tool
+name: WMS-C (Tiling WMS)
+category: Servers, standards, tiles & catalogs
+subcategory: Tile, style & catalog specs
+tool_kind: Format/Standard
+summary: OSGeo recommendation constraining WMS requests to a fixed grid so responses can be cached as
+  tiles.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+interfaces:
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: archived
+url: https://wiki.osgeo.org/wiki/WMS_Tiling_Client_Recommendation
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1003

@@ -1,0 +1,29 @@
+id: rustgis
+kind: tool
+name: RustGIS
+category: Desktop GIS & analysis engines
+subcategory: Whitebox & Rust GIS engines
+tool_kind: Application
+summary: Pure-Rust desktop and browser GIS with a ribbon UI, 1,000+ GeoLibre/Whitebox tools, DuckDB SQL,
+  an AI assistant and an MCP server.
+open_source: 'yes'
+license: Apache-2.0
+language: Rust
+interfaces:
+- GUI
+- CLI
+- Python
+- MCP
+call:
+- python
+- cli
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://rustgis.app
+notes: Ships an MCP server (rustgis-cli mcp); built largely with Claude; v0.x, very new
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 248

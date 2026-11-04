@@ -1,0 +1,25 @@
+id: copc-lib
+kind: tool
+name: copc-lib
+category: Point clouds, LiDAR & 3D
+subcategory: Indexing & cloud-optimized
+tool_kind: Library
+summary: C++ library with Python bindings for reading and writing COPC files node by node.
+open_source: 'yes'
+license: BSD-3-Clause
+language: C++;Python
+interfaces:
+- Python
+- C/C++
+call:
+- python
+- c-cpp
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/RockRobotic/copc-lib
+notes: Lightweight COPC I/O without full PDAL.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 534

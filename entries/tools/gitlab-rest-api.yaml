@@ -1,0 +1,23 @@
+id: gitlab-rest-api
+kind: tool
+name: GitLab REST API
+category: Connections & storage
+subcategory: Data versioning & Git
+tool_kind: Service/API
+summary: REST API for GitLab projects, files and pipelines.
+open_source: partial
+license: LicenseRef-Multiple
+license_original: MIT (CE); Proprietary (EE)
+language: Ruby
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://docs.gitlab.com/api/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1469

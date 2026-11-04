@@ -1,0 +1,21 @@
+id: mgrs-usng
+kind: tool
+name: MGRS / USNG
+category: Core libraries & formats
+subcategory: Discrete global grids & geocodes
+tool_kind: Format/Standard
+summary: Military and US national grid reference systems based on UTM zones and 100 km squares.
+open_source: 'yes'
+license: LicenseRef-Public-Domain
+license_original: Public domain (US government)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://earth-info.nga.mil
+notes: Supported by GeographicLib and PROJ tools.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 116

@@ -1,0 +1,23 @@
+id: census-geocoder
+kind: tool
+name: Census Geocoder
+category: Open data sources
+subcategory: US federal – census
+tool_kind: Service/API
+summary: Free address geocoding and geography lookup service from the Census Bureau.
+open_source: 'yes'
+license: LicenseRef-Public-Domain
+license_original: Public domain
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://geocoding.geo.census.gov/
+notes: Batch up to 10k
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1252

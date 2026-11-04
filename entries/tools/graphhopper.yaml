@@ -1,0 +1,28 @@
+id: graphhopper
+kind: tool
+name: GraphHopper
+category: Routing, networks, geocoding & LRS
+subcategory: Routing engines
+tool_kind: Server
+summary: OSM routing engine with custom profiles, isochrones, map matching and matrix support; also sold
+  as a hosted API.
+open_source: 'yes'
+license: Apache-2.0
+language: Java
+interfaces:
+- REST
+- Java
+- CLI
+call:
+- cli
+- rest
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/graphhopper/graphhopper
+notes: JVM dependency; single jar is easy to bundle
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 752

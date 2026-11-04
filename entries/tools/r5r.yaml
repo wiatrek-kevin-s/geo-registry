@@ -1,0 +1,22 @@
+id: r5r
+kind: tool
+name: r5r
+category: Routing, networks, geocoding & LRS
+subcategory: Accessibility & transport modeling
+tool_kind: Library
+summary: R package wrapping R5 for fast multimodal travel-time matrices and accessibility measures.
+open_source: 'yes'
+license: MIT
+language: R
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/ipeaGIT/r5r
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 775

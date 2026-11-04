@@ -1,0 +1,21 @@
+id: cloud-optimized-geotiff-cog
+kind: tool
+name: Cloud Optimized GeoTIFF (COG)
+category: Core libraries & formats
+subcategory: Raster formats
+tool_kind: Format/Standard
+summary: GeoTIFF layout with internal tiling and overviews enabling efficient HTTP range reads.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open standard (OGC)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://cogeo.org
+notes: Stream large rasters without download.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 131

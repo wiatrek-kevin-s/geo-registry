@@ -1,0 +1,22 @@
+id: apache-echarts
+kind: tool
+name: Apache ECharts
+category: Display & visualization
+subcategory: Charting & dataviz libraries with maps
+tool_kind: Library
+summary: Charting library with GeoJSON maps, geo coordinate systems and map-based series.
+open_source: 'yes'
+license: Apache-2.0
+language: TypeScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://echarts.apache.org/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1122

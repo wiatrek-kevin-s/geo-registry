@@ -1,0 +1,25 @@
+id: geowebcache
+kind: tool
+name: GeoWebCache
+category: Servers, standards, tiles & catalogs
+subcategory: Tile caches & proxies
+tool_kind: Server
+summary: Caches and serves tiles from WMS backends via WMTS, TMS and WMS-C; embedded in GeoServer.
+open_source: 'yes'
+license: LGPL-3.0-only
+language: Java
+interfaces:
+- REST
+- OGC
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://www.geowebcache.org
+notes: Seeding via REST
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 919

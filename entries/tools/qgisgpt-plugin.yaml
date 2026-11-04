@@ -1,0 +1,24 @@
+id: qgisgpt-plugin
+kind: tool
+name: QGISGPT plugin
+category: AI, agents & MCP for GIS
+subcategory: QGIS AI & MCP
+tool_kind: Extension
+summary: QGIS plugin that sends prompts to ChatGPT and runs generated PyQGIS code.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: Python
+interfaces:
+- plugin
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/javaftw/qgisgpt_plugin
+notes: No public release on plugin repo
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1506

@@ -1,0 +1,27 @@
+id: erdas-apollo
+kind: tool
+name: ERDAS APOLLO
+category: Servers, standards, tiles & catalogs
+subcategory: Commercial GIS servers & platforms
+tool_kind: Server
+summary: Hexagon's server for cataloguing, processing and delivering large imagery and geodata via OGC
+  services.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Java; C/C++
+interfaces:
+- OGC
+- REST
+- GUI
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://hexagon.com/products/erdas-apollo
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 958

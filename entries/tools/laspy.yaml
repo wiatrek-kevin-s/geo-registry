@@ -1,0 +1,25 @@
+id: laspy
+kind: tool
+name: laspy
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Python library for reading and writing LAS/LAZ point clouds as NumPy arrays.
+open_source: 'yes'
+license: BSD-2-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/laspy/laspy
+notes: Simple point cloud IO in Python.
+also_categories:
+- Point clouds, LiDAR & 3D
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 72

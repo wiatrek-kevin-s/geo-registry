@@ -1,0 +1,23 @@
+id: masterportal
+kind: tool
+name: Masterportal
+category: Display & visualization
+subcategory: Web GIS application frameworks
+tool_kind: Application
+summary: Configurable geoportal client from the city of Hamburg built on OpenLayers.
+open_source: 'yes'
+license: MIT
+language: JavaScript
+interfaces:
+- GUI
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://www.masterportal.org/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1164

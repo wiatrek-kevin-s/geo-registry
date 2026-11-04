@@ -1,0 +1,27 @@
+id: maptiler-server
+kind: tool
+name: MapTiler Server
+category: Servers, standards, tiles & catalogs
+subcategory: Tile servers
+tool_kind: Server
+summary: Desktop and server application for hosting tiles, maps and geodata with a web admin UI and OGC
+  endpoints.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+- REST
+- OGC
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://www.maptiler.com/server/
+notes: Free tier with limits; v4.9 released 2026-09
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 916

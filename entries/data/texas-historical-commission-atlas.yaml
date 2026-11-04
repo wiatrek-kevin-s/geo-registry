@@ -1,0 +1,22 @@
+id: texas-historical-commission-atlas
+kind: data
+name: Texas Historical Commission Atlas
+summary: Texas historic sites and markers database.
+publisher: Texas Historical Commission
+themes:
+- texas
+- open-data-sources
+coverage:
+  region: Texas
+license: NOASSERTION
+license_original: Unknown
+access:
+- type: http
+  url: https://atlas.thc.texas.gov/
+  auth: none
+notes: Restricted archaeology data
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1347

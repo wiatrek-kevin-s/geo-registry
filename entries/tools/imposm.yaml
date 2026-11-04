@@ -1,0 +1,25 @@
+id: imposm
+kind: tool
+name: Imposm
+category: OSM & Overture tooling
+subcategory: Database import
+tool_kind: Toolkit/CLI
+summary: Imports OSM into PostGIS using YAML mappings, with fast parallel import and minutely diff support.
+open_source: 'yes'
+license: Apache-2.0
+language: Go
+interfaces:
+- CLI
+- SQL
+call:
+- cli
+- sql
+wrapped_by_columbus: false
+project_status: maintained
+url: https://imposm.org/
+notes: Used by OpenMapTiles-style stacks
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1188

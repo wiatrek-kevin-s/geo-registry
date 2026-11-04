@@ -1,0 +1,25 @@
+id: caliper-maptitude
+kind: tool
+name: Caliper Maptitude
+category: Desktop GIS & analysis engines
+subcategory: Commercial desktop GIS
+tool_kind: Application
+summary: Business and demographic mapping desktop GIS with bundled census data, territory design and routing.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+- plugin
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://www.caliper.com/maptitude/
+notes: GISDK scripting; affordable
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 265

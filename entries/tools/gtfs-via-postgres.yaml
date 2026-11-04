@@ -1,0 +1,25 @@
+id: gtfs-via-postgres
+kind: tool
+name: gtfs-via-postgres
+category: Routing, networks, geocoding & LRS
+subcategory: Transit data & tools
+tool_kind: Toolkit/CLI
+summary: Imports GTFS into PostgreSQL with views for querying arrivals and departures.
+open_source: 'yes'
+license: Apache-2.0
+language: JS;SQL
+interfaces:
+- CLI
+- SQL
+call:
+- cli
+- sql
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/public-transport/gtfs-via-postgres
+notes: License unverified
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 812

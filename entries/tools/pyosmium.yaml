@@ -1,0 +1,25 @@
+id: pyosmium
+kind: tool
+name: PyOsmium
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Python bindings for libosmium to process OSM files and change streams.
+open_source: 'yes'
+license: BSD-2-Clause
+language: Python/C++
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://osmcode.org/pyosmium
+notes: OSM in Python.
+also_categories:
+- OSM & Overture tooling
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 65

@@ -1,0 +1,25 @@
+id: entwine
+kind: tool
+name: Entwine
+category: Point clouds, LiDAR & 3D
+subcategory: Indexing & cloud-optimized
+tool_kind: Toolkit/CLI
+summary: Builds Entwine Point Tile (EPT) octree indexes from large point cloud collections for streaming.
+open_source: 'yes'
+license: LGPL-2.1
+language: C++
+interfaces:
+- CLI
+- C/C++
+call:
+- cli
+- c-cpp
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://entwine.io
+notes: Produced the USGS 3DEP EPT archive; largely superseded by COPC for new work.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 532

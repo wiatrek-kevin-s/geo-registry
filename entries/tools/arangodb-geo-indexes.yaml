@@ -1,0 +1,28 @@
+id: arangodb-geo-indexes
+kind: tool
+name: ArangoDB geo indexes
+category: Spatial databases & query engines
+subcategory: NoSQL / search / KV
+tool_kind: Database
+summary: Multi-model database with GeoJSON geo indexes and AQL GEO_ functions.
+open_source: partial
+license: BUSL-1.1
+license_original: BSL-1.1
+language: C++
+interfaces:
+- REST
+- JS
+- Python
+call:
+- python
+- rest
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://arango.ai
+notes: BSL since 3.12
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 722

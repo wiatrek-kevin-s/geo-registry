@@ -1,0 +1,25 @@
+id: myria3d
+kind: tool
+name: Myria3D
+category: Point clouds, LiDAR & 3D
+subcategory: Ground classification
+tool_kind: Library
+summary: Deep learning framework from IGN France for semantic segmentation of aerial lidar point clouds.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- CLI
+- Python
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/IGNF/myria3d
+notes: Used to classify France's national lidar; GPU required.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 570

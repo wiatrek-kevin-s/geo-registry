@@ -1,0 +1,22 @@
+id: naip
+kind: data
+name: NAIP
+summary: USDA leaf-on aerial imagery at about 0.6–1 m covering the continental US.
+publisher: Unknown
+themes:
+- us-federal-imagery
+- open-data-sources
+coverage:
+  region: United States
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://naip-usdaonline.hub.arcgis.com/
+  auth: none
+notes: COGs on Planetary Computer/AWS
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1241

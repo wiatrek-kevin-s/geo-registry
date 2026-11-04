@@ -1,0 +1,23 @@
+id: ept-entwine-point-tile
+kind: tool
+name: EPT (Entwine Point Tile)
+category: Core libraries & formats
+subcategory: Point cloud & 3D formats
+tool_kind: Format/Standard
+summary: Octree-based tiled point cloud layout produced by Entwine.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open specification
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://entwine.io
+notes: Predecessor to COPC.
+also_categories:
+- Point clouds, LiDAR & 3D
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 194

@@ -1,0 +1,28 @@
+id: satscan
+kind: tool
+name: SaTScan
+category: Desktop GIS & analysis engines
+subcategory: Spatial statistics applications
+tool_kind: Application
+summary: Free software for spatial, temporal and space-time scan statistics to detect disease or event
+  clusters.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++; Java
+interfaces:
+- GUI
+- CLI
+- R
+call:
+- cli
+- r
+wrapped_by_columbus: false
+project_status: active
+url: https://www.satscan.org
+notes: Freeware; batch mode and rsatscan R wrapper
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 327

@@ -1,0 +1,21 @@
+id: go-map
+kind: tool
+name: Go Map!!
+category: OSM & Overture tooling
+subcategory: Editors
+tool_kind: Application
+summary: OSM editor for iPhone and iPad.
+open_source: 'yes'
+license: ISC
+language: Swift
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/bryceco/GoMap
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1217

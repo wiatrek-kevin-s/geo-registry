@@ -1,0 +1,22 @@
+id: axion-mcp
+kind: tool
+name: Axion-MCP
+category: AI, agents & MCP for GIS
+subcategory: Earth observation MCP servers
+tool_kind: Server
+summary: Earth Engine MCP for indices like NDVI, classification and map outputs.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+interfaces:
+- MCP
+call:
+- mcp
+wrapped_by_columbus: false
+project_status: unknown
+url: https://github.com/Dhenenjay/Axion-MCP
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1549

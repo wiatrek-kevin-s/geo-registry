@@ -1,0 +1,21 @@
+id: ahn-actueel-hoogtebestand-nederland
+kind: data
+name: AHN (Actueel Hoogtebestand Nederland)
+summary: National high-density airborne lidar and elevation model of the Netherlands.
+publisher: Unknown
+themes:
+- lidar-data-sources
+- point-clouds-lidar-3d
+coverage:
+  region: Netherlands
+license: CC0-1.0
+access:
+- type: http
+  url: https://www.ahn.nl
+  auth: none
+notes: Example national open lidar.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 643

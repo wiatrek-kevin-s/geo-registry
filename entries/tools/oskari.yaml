@@ -1,0 +1,25 @@
+id: oskari
+kind: tool
+name: Oskari
+category: Display & visualization
+subcategory: Web GIS application frameworks
+tool_kind: Platform
+summary: Framework for building map portals and embedded maps over spatial data infrastructure services.
+open_source: 'yes'
+license: MIT OR EUPL-1.1
+language: JavaScript;Java
+interfaces:
+- GUI
+- OGC
+- JS
+call:
+- js
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://www.oskari.org/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1163

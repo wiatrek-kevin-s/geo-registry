@@ -1,0 +1,24 @@
+id: mbutil
+kind: tool
+name: mbutil
+category: Servers, standards, tiles & catalogs
+subcategory: Tile generation & packaging
+tool_kind: Toolkit/CLI
+summary: Imports and exports tiles between MBTiles files and directory trees.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- CLI
+- Python
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/mapbox/mbutil
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 927

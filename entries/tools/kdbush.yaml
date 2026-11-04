@@ -1,0 +1,23 @@
+id: kdbush
+kind: tool
+name: KDBush
+category: Core libraries & formats
+subcategory: Spatial indexing
+tool_kind: Library
+summary: Static KD-tree index for 2D points in JavaScript.
+open_source: 'yes'
+license: ISC
+language: JavaScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/mourner/kdbush
+notes: Point clustering (supercluster).
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 101

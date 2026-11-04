@@ -1,0 +1,23 @@
+id: planetary-computer-mcp
+kind: tool
+name: planetary-computer-mcp
+category: AI, agents & MCP for GIS
+subcategory: Earth observation MCP servers
+tool_kind: Server
+summary: Community MCP for searching and downloading imagery from the Planetary Computer STAC API.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: Python
+interfaces:
+- MCP
+call:
+- mcp
+wrapped_by_columbus: false
+project_status: unknown
+url: https://github.com/isaaccorley/planetary-computer-mcp
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1543

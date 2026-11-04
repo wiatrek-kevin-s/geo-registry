@@ -1,0 +1,23 @@
+id: esri-basemaps-arcgis-basemap-styles-service
+kind: tool
+name: Esri basemaps (ArcGIS Basemap Styles service)
+category: Display & visualization
+subcategory: Basemap providers
+tool_kind: Service/API
+summary: Esri's hosted vector and imagery basemaps for ArcGIS and open-source map libraries.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://developers.arcgis.com/rest/basemap-styles/
+notes: Needs ArcGIS access token
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1172

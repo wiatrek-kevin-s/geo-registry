@@ -1,0 +1,21 @@
+id: geohash
+kind: tool
+name: Geohash
+category: Core libraries & formats
+subcategory: Discrete global grids & geocodes
+tool_kind: Format/Standard
+summary: Base-32 string encoding of latitude/longitude into a Z-order grid for prefix-based proximity.
+open_source: 'yes'
+license: LicenseRef-Public-Domain
+license_original: Public domain
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://en.wikipedia.org/wiki/Geohash
+notes: Simple key for databases.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 108

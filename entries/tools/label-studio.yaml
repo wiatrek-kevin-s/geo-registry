@@ -1,0 +1,26 @@
+id: label-studio
+kind: tool
+name: Label Studio
+category: Imagery, remote sensing & GeoAI
+subcategory: Labeling & training data
+tool_kind: Application
+summary: Data labeling tool for images and other data, usable for imagery annotation with ML backends.
+open_source: partial
+license: Apache-2.0
+language: Python;JavaScript
+interfaces:
+- GUI
+- REST
+- Python
+call:
+- python
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/HumanSignal/label-studio
+notes: Open-core; enterprise edition paid
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 522

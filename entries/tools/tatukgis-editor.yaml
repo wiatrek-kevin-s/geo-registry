@@ -1,0 +1,23 @@
+id: tatukgis-editor
+kind: tool
+name: TatukGIS Editor
+category: Desktop GIS & analysis engines
+subcategory: Commercial desktop GIS
+tool_kind: Application
+summary: Windows desktop GIS editor and viewer built on the TatukGIS Developer Kernel SDK.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Delphi; C#
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.tatukgis.com
+notes: Also sold as embeddable SDK
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 268

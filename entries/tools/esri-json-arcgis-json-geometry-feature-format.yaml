@@ -1,0 +1,22 @@
+id: esri-json-arcgis-json-geometry-feature-format
+kind: tool
+name: Esri JSON (ArcGIS JSON geometry/feature format)
+category: Connections & storage
+subcategory: Esri connections & auth
+tool_kind: Format/Standard
+summary: JSON geometry and feature-set encoding used by ArcGIS REST services.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary (published spec)
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://developers.arcgis.com/documentation/common-data-types/geometry-objects.htm
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1434

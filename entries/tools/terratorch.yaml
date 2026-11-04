@@ -1,0 +1,27 @@
+id: terratorch
+kind: tool
+name: TerraTorch
+category: Imagery, remote sensing & GeoAI
+subcategory: GeoAI / deep learning
+tool_kind: Toolkit/CLI
+summary: Fine-tuning framework for geospatial foundation models like Prithvi, built on TorchGeo and Lightning.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+- CLI
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/torchgeo/terratorch
+notes: Moved from IBM org to torchgeo
+also_categories:
+- AI, agents & MCP for GIS
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 445

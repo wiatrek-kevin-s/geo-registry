@@ -1,0 +1,25 @@
+id: esri-gis-tools-for-hadoop-spatial-framework-for-hadoop
+kind: tool
+name: Esri GIS Tools for Hadoop / Spatial Framework for Hadoop
+category: Spatial databases & query engines
+subcategory: Big data / distributed
+tool_kind: Library
+summary: Hive UDFs and Hadoop tools built on Esri Geometry API for Java.
+open_source: 'yes'
+license: Apache-2.0
+language: Java
+interfaces:
+- SQL
+- Java
+call:
+- sql
+- java
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/Esri/spatial-framework-for-hadoop
+notes: Legacy Hive spatial
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 684

@@ -1,0 +1,22 @@
+id: tangram-es
+kind: tool
+name: Tangram ES
+category: Display & visualization
+subcategory: Native & mobile SDKs
+tool_kind: Library
+summary: Native C++ OpenGL ES renderer for vector-tile maps using Tangram scene files.
+open_source: 'yes'
+license: MIT
+language: C++
+interfaces:
+- C/C++
+call:
+- c-cpp
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/tangrams/tangram-es
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1076

@@ -1,0 +1,24 @@
+id: pyodbc
+kind: tool
+name: pyodbc
+category: Spatial databases & query engines
+subcategory: Drivers & connectors
+tool_kind: Library
+summary: Python ODBC bridge used to query SQL Server, Db2, Teradata and HANA spatial data.
+open_source: 'yes'
+license: MIT-0
+language: C++;Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/mkleehammer/pyodbc
+also_categories:
+- Connections & storage
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 736

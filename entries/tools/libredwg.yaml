@@ -1,0 +1,25 @@
+id: libredwg
+kind: tool
+name: LibreDWG
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: GNU library for reading and writing DWG files.
+open_source: 'yes'
+license: GPL-3.0-or-later
+language: C
+interfaces:
+- C/C++
+- CLI
+call:
+- cli
+- c-cpp
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.gnu.org/software/libredwg
+notes: GPL; incomplete write support.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 82

@@ -1,0 +1,22 @@
+id: esri-arcgis-to-geojson-utils
+kind: tool
+name: '@esri/arcgis-to-geojson-utils'
+category: Connections & storage
+subcategory: Esri connections & auth
+tool_kind: Library
+summary: Esri JS utilities for converting between ArcGIS JSON and GeoJSON.
+open_source: 'yes'
+license: Apache-2.0
+language: JavaScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/Esri/arcgis-to-geojson-utils
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1436

@@ -1,0 +1,22 @@
+id: blm-navigator-plss-cadnsdi
+kind: data
+name: BLM Navigator / PLSS (CadNSDI)
+summary: BLM land status, surface management and Public Land Survey System cadastral data.
+publisher: Bureau of Land Management
+themes:
+- us-federal-interior
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://gbp-blm-egis.hub.arcgis.com/
+  auth: none
+notes: PLSS not used in Texas
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1280

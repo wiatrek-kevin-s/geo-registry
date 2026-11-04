@@ -1,0 +1,26 @@
+id: ogc-team-engine
+kind: tool
+name: OGC TEAM Engine
+category: Servers, standards, tiles & catalogs
+subcategory: Processing & sensor services
+tool_kind: Toolkit/CLI
+summary: OGC's compliance test engine that runs CITE test suites against service implementations.
+open_source: 'yes'
+license: Apache-2.0
+language: Java
+interfaces:
+- REST
+- GUI
+- CLI
+call:
+- cli
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/opengeospatial/teamengine
+notes: Validation of published services
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 951

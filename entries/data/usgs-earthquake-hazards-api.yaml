@@ -1,0 +1,22 @@
+id: usgs-earthquake-hazards-api
+kind: data
+name: USGS Earthquake Hazards API
+summary: Real-time and historic earthquake catalog feeds and query service.
+publisher: U.S. Geological Survey
+themes:
+- us-federal-hazards
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://earthquake.usgs.gov/fdsnws/event/1/
+  auth: none
+notes: GeoJSON feeds
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1245

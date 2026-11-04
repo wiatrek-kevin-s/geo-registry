@@ -1,0 +1,25 @@
+id: quackosm
+kind: tool
+name: QuackOSM
+category: OSM & Overture tooling
+subcategory: Cloud-native / analytics
+tool_kind: Library
+summary: Converts OSM PBF to GeoParquet using DuckDB, with tag filtering and geometry reconstruction.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+- CLI
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/kraina-ai/quackosm
+notes: 'Good local-first fit: PBF to GeoParquet without PostGIS'
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1193

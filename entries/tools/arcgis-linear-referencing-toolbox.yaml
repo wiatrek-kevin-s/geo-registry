@@ -1,0 +1,25 @@
+id: arcgis-linear-referencing-toolbox
+kind: tool
+name: ArcGIS Linear Referencing toolbox
+category: Routing, networks, geocoding & LRS
+subcategory: Linear referencing (LRS)
+tool_kind: Toolkit/CLI
+summary: Core ArcGIS tools to create M-aware routes, locate features along routes, overlay and dissolve
+  route events.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Python
+interfaces:
+- Python
+- GUI
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://pro.arcgis.com/en/pro-app/latest/tool-reference/linear-referencing/an-overview-of-the-linear-referencing-toolbox.htm
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 859

@@ -1,0 +1,21 @@
+id: infraworks
+kind: tool
+name: InfraWorks
+category: Commercial GIS platforms & APIs
+subcategory: Autodesk
+tool_kind: Application
+summary: Conceptual infrastructure design tool building 3D context models from GIS data.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://www.autodesk.com/products/infraworks/overview
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1398

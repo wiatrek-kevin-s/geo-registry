@@ -1,0 +1,24 @@
+id: mapcache
+kind: tool
+name: MapCache
+category: Servers, standards, tiles & catalogs
+subcategory: Tile caches & proxies
+tool_kind: Server
+summary: MapServer-project tile caching server for Apache and Nginx supporting WMTS, TMS and WMS.
+open_source: 'yes'
+license: MIT
+language: C/C++
+interfaces:
+- OGC
+- CLI
+call:
+- cli
+- ogc
+wrapped_by_columbus: false
+project_status: maintained
+url: https://mapserver.org/mapcache/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 921

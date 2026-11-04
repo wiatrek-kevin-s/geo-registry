@@ -1,0 +1,22 @@
+id: filter-encoding-fes
+kind: tool
+name: Filter Encoding (FES)
+category: Servers, standards, tiles & catalogs
+subcategory: OGC web service standards
+tool_kind: Format/Standard
+summary: XML grammar for expressing spatial, temporal and attribute query filters in OGC services.
+open_source: 'yes'
+license: LicenseRef-OGC-Document
+license_original: OGC document licence
+interfaces:
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.ogc.org/standards/filter
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 978

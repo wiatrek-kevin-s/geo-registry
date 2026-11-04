@@ -1,0 +1,24 @@
+id: azure-sql-database-spatial
+kind: tool
+name: Azure SQL Database spatial
+category: Spatial databases & query engines
+subcategory: Commercial RDBMS
+tool_kind: Service/API
+summary: Managed SQL Server engine in Azure with the same geometry/geography types.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- SQL
+- REST
+call:
+- rest
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://learn.microsoft.com/azure/azure-sql/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 700

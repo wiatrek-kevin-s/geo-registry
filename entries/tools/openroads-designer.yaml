@@ -1,0 +1,22 @@
+id: openroads-designer
+kind: tool
+name: OpenRoads Designer
+category: Commercial GIS platforms & APIs
+subcategory: Bentley
+tool_kind: Application
+summary: Civil design software for roads, corridors, drainage and terrain modeling.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://www.bentley.com/software/openroads-designer/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1389

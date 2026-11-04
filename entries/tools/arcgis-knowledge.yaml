@@ -1,0 +1,25 @@
+id: arcgis-knowledge
+kind: tool
+name: ArcGIS Knowledge
+category: Commercial GIS platforms & APIs
+subcategory: Esri ArcGIS
+tool_kind: Platform
+summary: Graph database and link-analysis capability in ArcGIS Enterprise for entities and relationships.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+- REST
+- Python
+call:
+- python
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.esri.com/en-us/arcgis/products/arcgis-knowledge/overview
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1375

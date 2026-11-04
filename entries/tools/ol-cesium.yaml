@@ -1,0 +1,22 @@
+id: ol-cesium
+kind: tool
+name: OL-Cesium
+category: Display & visualization
+subcategory: MapLibre/OpenLayers ecosystem
+tool_kind: Library
+summary: Synchronises an OpenLayers 2D map with a CesiumJS 3D globe.
+open_source: 'yes'
+license: BSD-2-Clause
+language: JavaScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/openlayers/ol-cesium
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1047

@@ -1,0 +1,24 @@
+id: osm2pgrouting
+kind: tool
+name: osm2pgrouting
+category: Routing, networks, geocoding & LRS
+subcategory: Routing engines
+tool_kind: Toolkit/CLI
+summary: Imports OSM XML into a pgRouting-ready topology in PostgreSQL.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: C++
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/pgRouting/osm2pgrouting
+also_categories:
+- OSM & Overture tooling
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 760

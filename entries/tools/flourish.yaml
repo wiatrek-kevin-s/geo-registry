@@ -1,0 +1,21 @@
+id: flourish
+kind: tool
+name: Flourish
+category: Display & visualization
+subcategory: BI & dashboard maps
+tool_kind: Service/API
+summary: Hosted data storytelling tool with map templates such as 3D globes, choropleths and arcs.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://flourish.studio/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1136

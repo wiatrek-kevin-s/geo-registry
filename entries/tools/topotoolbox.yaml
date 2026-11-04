@@ -1,0 +1,25 @@
+id: topotoolbox
+kind: tool
+name: TopoToolbox
+category: Desktop GIS & analysis engines
+subcategory: Terrain & hydrology engines
+tool_kind: Library
+summary: Toolbox for topographic and river-profile analysis from DEMs, with MATLAB and newer Python versions.
+open_source: 'yes'
+license: GPL-3.0-only
+language: MATLAB; C; Python
+interfaces:
+- Python
+- plugin
+call:
+- python
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://topotoolbox.github.io
+notes: Geomorphology focus
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 283

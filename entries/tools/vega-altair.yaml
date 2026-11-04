@@ -1,0 +1,22 @@
+id: vega-altair
+kind: tool
+name: Vega-Altair
+category: Display & visualization
+subcategory: Charting & dataviz libraries with maps
+tool_kind: Library
+summary: Python API that produces Vega-Lite charts and maps.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://altair-viz.github.io/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1121

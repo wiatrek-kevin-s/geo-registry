@@ -1,0 +1,26 @@
+id: carmenta-server
+kind: tool
+name: Carmenta Server
+category: Servers, standards, tiles & catalogs
+subcategory: Commercial GIS servers & platforms
+tool_kind: Server
+summary: Carmenta's geospatial server delivering maps and analysis via OGC services, used in defence and
+  emergency systems.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C/C++
+interfaces:
+- OGC
+- REST
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://carmenta.com
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 962

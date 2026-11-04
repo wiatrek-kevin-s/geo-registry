@@ -1,0 +1,23 @@
+id: protomaps-leaflet
+kind: tool
+name: protomaps-leaflet
+category: Display & visualization
+subcategory: Web map libraries
+tool_kind: Library
+summary: Renders vector tiles and PMTiles archives on a canvas inside Leaflet without WebGL.
+open_source: 'yes'
+license: BSD-3-Clause
+language: TypeScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/protomaps/protomaps-leaflet
+notes: Displays local PMTiles with no tile server
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1020

@@ -1,0 +1,24 @@
+id: pgstac
+kind: tool
+name: pgstac
+category: Imagery, remote sensing & GeoAI
+subcategory: STAC ecosystem
+tool_kind: Database
+summary: PostgreSQL schema and functions for storing and searching large STAC catalogs.
+open_source: 'yes'
+license: MIT
+language: SQL;PLpgSQL
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/stac-utils/pgstac
+also_categories:
+- Servers, standards, tiles & catalogs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 425

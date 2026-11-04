@@ -1,0 +1,24 @@
+id: presto-geospatial-functions
+kind: tool
+name: Presto geospatial functions
+category: Spatial databases & query engines
+subcategory: Big data / distributed
+tool_kind: Extension
+summary: ESRI-geometry-based ST_ functions and spatial joins in PrestoDB.
+open_source: 'yes'
+license: Apache-2.0
+language: Java
+interfaces:
+- SQL
+- JDBC
+call:
+- sql
+- jdbc
+wrapped_by_columbus: false
+project_status: active
+url: https://prestodb.io/docs/current/functions/geospatial.html
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 682

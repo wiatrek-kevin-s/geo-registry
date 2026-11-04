@@ -1,0 +1,27 @@
+id: udig
+kind: tool
+name: uDig
+category: Desktop GIS & analysis engines
+subcategory: Open-source desktop GIS
+tool_kind: Application
+summary: Eclipse RCP desktop GIS built on GeoTools, oriented to web map services and lightweight editing.
+open_source: 'yes'
+license: LicenseRef-Multiple
+license_original: EPL-1.0; BSD-3-Clause
+language: Java
+interfaces:
+- GUI
+- Java
+- plugin
+call:
+- java
+- plugin
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://projects.eclipse.org/projects/locationtech.udig
+notes: Last stable 2.0.0 (2018); mainly legacy interest
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 228

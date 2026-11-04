@@ -1,0 +1,25 @@
+id: cuspatial
+kind: tool
+name: cuSpatial
+category: Desktop GIS & analysis engines
+subcategory: Python vector analysis
+tool_kind: Library
+summary: RAPIDS GPU library for spatial joins, distances and trajectory operations on NVIDIA GPUs.
+open_source: 'yes'
+license: Apache-2.0
+language: C++; CUDA; Python
+interfaces:
+- Python
+- C/C++
+call:
+- python
+- c-cpp
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/rapidsai/cuspatial
+notes: GPU needed; status not confirmed
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 292

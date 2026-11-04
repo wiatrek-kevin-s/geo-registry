@@ -1,0 +1,25 @@
+id: amazon-rds-aurora-postgresql-postgis
+kind: tool
+name: Amazon RDS / Aurora PostgreSQL (PostGIS)
+category: Spatial databases & query engines
+subcategory: Managed PostgreSQL
+tool_kind: Service/API
+summary: AWS managed PostgreSQL services that support the PostGIS, h3-pg and pgRouting extensions.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- SQL
+- REST
+call:
+- rest
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://aws.amazon.com/rds/aurora/
+notes: Connect with psycopg like any PostGIS
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 659

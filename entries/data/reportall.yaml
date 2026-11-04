@@ -1,0 +1,21 @@
+id: reportall
+kind: data
+name: ReportAll
+summary: US parcel data and APIs.
+publisher: ReportAll
+themes:
+- commercial
+- open-data-sources
+coverage:
+  region: United States
+license: LicenseRef-Proprietary
+license_original: Proprietary
+access:
+- type: http
+  url: https://reportallusa.com/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1365

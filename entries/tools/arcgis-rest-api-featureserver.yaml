@@ -1,0 +1,23 @@
+id: arcgis-rest-api-featureserver
+kind: tool
+name: ArcGIS REST API – FeatureServer
+category: Servers, standards, tiles & catalogs
+subcategory: Esri REST & industry specs
+tool_kind: Format/Standard
+summary: Esri REST endpoint for querying, editing and syncing vector features and attributes.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://developers.arcgis.com/rest/services-reference/enterprise/feature-service/
+notes: Ubiquitous source; GDAL ESRIJSON driver reads it
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 964

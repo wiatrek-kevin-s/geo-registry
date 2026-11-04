@@ -1,0 +1,24 @@
+id: leaflet-timeline
+kind: tool
+name: leaflet-timeline
+category: Display & visualization
+subcategory: Time & animation
+tool_kind: Extension
+summary: Leaflet plugin that shows GeoJSON features on a time slider with playback.
+open_source: 'yes'
+license: MIT
+language: JavaScript
+interfaces:
+- JS
+- plugin
+call:
+- js
+- plugin
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/skeate/Leaflet.timeline
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1184

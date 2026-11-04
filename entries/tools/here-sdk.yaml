@@ -1,0 +1,23 @@
+id: here-sdk
+kind: tool
+name: HERE SDK
+category: Display & visualization
+subcategory: Native & mobile SDKs
+tool_kind: Library
+summary: HERE's native SDK for maps, search and navigation on mobile.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++;Kotlin;Swift;Dart
+interfaces:
+- Java
+call:
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://www.here.com/docs/category/here-sdk
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1075

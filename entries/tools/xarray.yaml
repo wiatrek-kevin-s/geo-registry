@@ -1,0 +1,25 @@
+id: xarray
+kind: tool
+name: xarray
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Labelled N-dimensional array library widely used for NetCDF, Zarr and gridded geodata.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://xarray.dev
+notes: Datacube backbone for Python.
+also_categories:
+- Desktop GIS & analysis engines
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 77

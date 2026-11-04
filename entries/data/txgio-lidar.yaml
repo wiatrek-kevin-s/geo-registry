@@ -1,0 +1,21 @@
+id: txgio-lidar
+kind: data
+name: TxGIO lidar
+summary: Texas lidar point clouds and DEMs collected under StratMap and partners.
+publisher: Texas Geographic Information Office
+themes:
+- texas
+- open-data-sources
+coverage:
+  region: Texas
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.geographic.texas.gov/stratmap/elevation-lidar.html
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1336

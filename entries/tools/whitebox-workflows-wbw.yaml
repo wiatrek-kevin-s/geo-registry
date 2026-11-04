@@ -1,0 +1,28 @@
+id: whitebox-workflows-wbw
+kind: tool
+name: Whitebox Workflows (WbW)
+category: Desktop GIS & analysis engines
+subcategory: Whitebox & Rust GIS engines
+tool_kind: Library
+summary: Python and R frontends to the Whitebox tool runtime for in-memory geoprocessing; open mode free,
+  Pro tools need a licence.
+open_source: partial
+license: MIT OR Apache-2.0
+language: Rust; Python
+interfaces:
+- Python
+- R
+call:
+- python
+- r
+install:
+  pip: whitebox-workflows
+wrapped_by_columbus: false
+project_status: active
+url: https://www.whiteboxgeo.com
+notes: PyPI whitebox-workflows 2.0.6 (Jun 2026); Pro tools gated
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 242

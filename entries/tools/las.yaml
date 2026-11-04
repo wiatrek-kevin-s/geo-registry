@@ -1,0 +1,21 @@
+id: las
+kind: tool
+name: LAS
+category: Core libraries & formats
+subcategory: Point cloud & 3D formats
+tool_kind: Format/Standard
+summary: ASPRS binary format for LiDAR point clouds with classification and attributes.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open standard (ASPRS)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://www.asprs.org/divisions-committees/lidar-division/laser-las-file-format-exchange-activities
+notes: Standard LiDAR deliverable.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 190

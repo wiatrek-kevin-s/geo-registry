@@ -1,0 +1,23 @@
+id: nettopologysuite
+kind: tool
+name: NetTopologySuite
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: .NET port of JTS providing geometry types, operations and IO.
+open_source: 'yes'
+license: BSD-3-Clause
+language: C#
+interfaces:
+- .NET
+call:
+- dotnet
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/NetTopologySuite/NetTopologySuite
+notes: Relevant for .NET/Windows desktop builds.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 4

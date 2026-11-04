@@ -1,0 +1,24 @@
+id: esri-file-geodatabase-api
+kind: tool
+name: Esri File Geodatabase API
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Esri's free closed-source C++ API for reading and writing File Geodatabases.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary (free to use)
+language: C++
+interfaces:
+- C/C++
+call:
+- c-cpp
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/Esri/file-geodatabase-api
+notes: Behind GDAL's FileGDB driver.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 84

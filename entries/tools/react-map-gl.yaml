@@ -1,0 +1,22 @@
+id: react-map-gl
+kind: tool
+name: react-map-gl
+category: Display & visualization
+subcategory: vis.gl / large-data WebGL
+tool_kind: Library
+summary: React wrapper for MapLibre GL JS and Mapbox GL JS maps.
+open_source: 'yes'
+license: MIT
+language: TypeScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://visgl.github.io/react-map-gl/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1051

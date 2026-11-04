@@ -1,0 +1,24 @@
+id: turf-js
+kind: tool
+name: Turf.js
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: Modular JavaScript toolkit for geospatial analysis on GeoJSON such as buffers, distances and
+  aggregation.
+open_source: 'yes'
+license: MIT
+language: JavaScript/TypeScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://turfjs.org
+notes: Lightweight analysis in a web UI or Node tool server.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 6

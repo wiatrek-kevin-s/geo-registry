@@ -1,0 +1,29 @@
+id: kepler-gl
+kind: tool
+name: kepler.gl
+category: Display & visualization
+subcategory: vis.gl / large-data WebGL
+tool_kind: Application
+summary: Browser app for exploring large location datasets with filters, time playback and many layer
+  types.
+open_source: 'yes'
+license: MIT
+language: TypeScript
+interfaces:
+- JS
+- Python
+- GUI
+call:
+- python
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://kepler.gl/
+notes: Embeddable exploratory viewer; also Jupyter widget
+also_categories:
+- Commercial GIS platforms & APIs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1050

@@ -1,0 +1,21 @@
+id: precisely
+kind: data
+name: Precisely
+summary: Commercial address, parcel, POI, boundary and demographic datasets.
+publisher: Precisely
+themes:
+- commercial
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Proprietary
+license_original: Proprietary
+access:
+- type: http
+  url: https://www.precisely.com/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1359

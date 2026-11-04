@@ -1,0 +1,22 @@
+id: arcgis-rest-api-mapserver
+kind: tool
+name: ArcGIS REST API – MapServer
+category: Servers, standards, tiles & catalogs
+subcategory: Esri REST & industry specs
+tool_kind: Format/Standard
+summary: Esri REST endpoint for rendered map images, tiles, identify and layer queries.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://developers.arcgis.com/rest/services-reference/enterprise/map-service/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 965

@@ -1,0 +1,24 @@
+id: xarray-spatial
+kind: tool
+name: xarray-spatial
+category: Desktop GIS & analysis engines
+subcategory: Python raster & array analysis
+tool_kind: Library
+summary: 'Numba/Dask-accelerated raster analysis for xarray: slope, aspect, viewshed, proximity, zonal
+  stats and classification.'
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/xarray-contrib/xarray-spatial
+notes: No GDAL needed for analysis; moved to xarray-contrib
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 295

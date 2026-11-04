@@ -1,0 +1,25 @@
+id: duckdb-mcp-duckdb-community-extension
+kind: tool
+name: duckdb_mcp (DuckDB community extension)
+category: AI, agents & MCP for GIS
+subcategory: General GIS MCP servers
+tool_kind: Extension
+summary: DuckDB extension letting DuckDB act as an MCP client or server.
+open_source: 'yes'
+license: MIT
+language: C++
+interfaces:
+- SQL
+- MCP
+call:
+- sql
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://duckdb.org/community_extensions/extensions/duckdb_mcp.html
+notes: Licence not re-verified
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1513

@@ -1,0 +1,25 @@
+id: duckdb-httpfs-azure-extensions
+kind: tool
+name: DuckDB httpfs/azure extensions
+category: Connections & storage
+subcategory: Data catalogs with geo support
+tool_kind: Library
+summary: DuckDB extensions for querying Parquet/GeoParquet directly over HTTP, S3, Azure and GCS.
+open_source: 'yes'
+license: MIT
+language: C++
+interfaces:
+- SQL
+- Python
+call:
+- python
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://duckdb.org/docs/stable/core_extensions/httpfs/overview
+notes: Pairs with DuckDB spatial for local analytics
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1479

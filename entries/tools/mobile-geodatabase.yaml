@@ -1,0 +1,23 @@
+id: mobile-geodatabase
+kind: tool
+name: Mobile Geodatabase
+category: Core libraries & formats
+subcategory: Vector formats
+tool_kind: Format/Standard
+summary: Esri SQLite-based single-file geodatabase used by ArcGIS Pro and Runtime.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary (SQLite-based)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://pro.arcgis.com/en/pro-app/latest/help/data/geodatabases/manage-mobile-gdb/mobile-geodatabases.htm
+notes: Partial read support in GDAL.
+also_categories:
+- Spatial databases & query engines
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 160

@@ -1,0 +1,23 @@
+id: stac-geoparquet
+kind: tool
+name: stac-geoparquet
+category: Imagery, remote sensing & GeoAI
+subcategory: STAC ecosystem
+tool_kind: Library
+summary: Converts STAC items to and from GeoParquet for fast bulk catalog queries.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/stac-utils/stac-geoparquet
+notes: Query catalogs locally with DuckDB
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 427

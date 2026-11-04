@@ -1,0 +1,24 @@
+id: dotspatial
+kind: tool
+name: DotSpatial
+category: Desktop GIS & analysis engines
+subcategory: Open-source desktop GIS
+tool_kind: Library
+summary: .NET library for building GIS-enabled Windows Forms applications with map display, projections
+  and analysis.
+open_source: 'yes'
+license: MIT
+language: C#
+interfaces:
+- plugin
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/DotSpatial/DotSpatial
+notes: Legacy .NET option
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 233

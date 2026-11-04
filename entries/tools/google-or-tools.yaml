@@ -1,0 +1,27 @@
+id: google-or-tools
+kind: tool
+name: Google OR-Tools
+category: Routing, networks, geocoding & LRS
+subcategory: Routing engines
+tool_kind: Library
+summary: Operations research toolkit with vehicle routing, scheduling and graph solvers.
+open_source: 'yes'
+license: Apache-2.0
+language: C++
+interfaces:
+- Python
+- Java
+- C/C++
+call:
+- python
+- c-cpp
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/google/or-tools
+notes: Useful for VRP on custom matrices
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 766

@@ -1,0 +1,25 @@
+id: matsim
+kind: tool
+name: MATSim
+category: Routing, networks, geocoding & LRS
+subcategory: Accessibility & transport modeling
+tool_kind: Application
+summary: Agent-based multimodal transport simulation running daily plans of synthetic populations on networks.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: Java
+interfaces:
+- Java
+- CLI
+call:
+- cli
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/matsim-org/matsim-libs
+notes: Heavy JVM; research-grade
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 777

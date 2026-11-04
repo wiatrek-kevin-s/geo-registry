@@ -1,0 +1,23 @@
+id: go-pmtiles-pmtiles-cli
+kind: tool
+name: go-pmtiles / pmtiles CLI
+category: Core libraries & formats
+subcategory: Tile formats
+tool_kind: Toolkit/CLI
+summary: CLI and server for creating, inspecting, extracting and serving PMTiles archives.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Go
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/protomaps/go-pmtiles
+notes: Extract regional basemaps offline.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 209

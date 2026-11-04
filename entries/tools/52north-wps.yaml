@@ -1,0 +1,23 @@
+id: 52north-wps
+kind: tool
+name: 52°North WPS
+category: Servers, standards, tiles & catalogs
+subcategory: Processing & sensor services
+tool_kind: Server
+summary: Older Java WPS 1.0 server with R, GRASS and Sextante process backends.
+open_source: 'yes'
+license: GPL-2.0-only
+language: Java
+interfaces:
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: archived
+url: https://github.com/52North/WPS
+notes: Superseded by javaPS
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 945

@@ -1,0 +1,26 @@
+id: python-oracledb
+kind: tool
+name: python-oracledb
+category: Connections & storage
+subcategory: Database drivers
+tool_kind: Library
+summary: Oracle's Python driver (successor to cx_Oracle) with a pure-Python thin mode needing no Instant
+  Client.
+open_source: 'yes'
+license: Apache-2.0 OR UPL-1.0
+language: Python; Cython
+interfaces:
+- Python
+- SQL
+call:
+- python
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/oracle/python-oracledb
+notes: Thin mode avoids shipping Instant Client
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1422

@@ -1,0 +1,25 @@
+id: google-maps-platform
+kind: tool
+name: Google Maps Platform
+category: Commercial GIS platforms & APIs
+subcategory: Google
+tool_kind: Service/API
+summary: Google APIs for maps, places, geocoding, routes, elevation and address validation.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- JS
+call:
+- rest
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://mapsplatform.google.com/
+notes: Usage-billed; terms restrict caching
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1399

@@ -1,0 +1,26 @@
+id: fusion-ldv
+kind: tool
+name: FUSION/LDV
+category: Point clouds, LiDAR & 3D
+subcategory: Lidar processing suites
+tool_kind: Application
+summary: USDA Forest Service suite of command-line lidar tools and a viewer for forestry metrics and canopy
+  surfaces.
+open_source: partial
+license: LicenseRef-Public-Domain
+license_original: Public domain
+language: C++
+interfaces:
+- CLI
+- GUI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: maintained
+url: https://forsys.sefs.uw.edu/FUSION/fusion_overview.html
+notes: Windows-only; author states public domain but source is by request only.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 555

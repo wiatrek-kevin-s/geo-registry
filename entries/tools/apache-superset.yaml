@@ -1,0 +1,25 @@
+id: apache-superset
+kind: tool
+name: Apache Superset
+category: Display & visualization
+subcategory: BI & dashboard maps
+tool_kind: Platform
+summary: BI platform whose chart types include deck.gl map layers and country choropleths.
+open_source: 'yes'
+license: Apache-2.0
+language: Python;TypeScript
+interfaces:
+- SQL
+- REST
+- GUI
+call:
+- rest
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://superset.apache.org/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1125

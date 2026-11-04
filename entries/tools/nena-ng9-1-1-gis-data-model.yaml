@@ -1,0 +1,21 @@
+id: nena-ng9-1-1-gis-data-model
+kind: tool
+name: NENA NG9-1-1 GIS Data Model
+category: Routing, networks, geocoding & LRS
+subcategory: Address data
+tool_kind: Format/Standard
+summary: NENA standard schema for road centerlines and address points used in Next Generation 9-1-1.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://www.nena.org/page/NG911GISDataModel
+notes: Free to download but copyrighted
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 848

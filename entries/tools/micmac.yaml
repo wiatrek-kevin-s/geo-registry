@@ -1,0 +1,22 @@
+id: micmac
+kind: tool
+name: MicMac
+category: Imagery, remote sensing & GeoAI
+subcategory: Photogrammetry & drone
+tool_kind: Toolkit/CLI
+summary: IGN photogrammetry suite for aerial, satellite and close-range 3D reconstruction.
+open_source: 'yes'
+license: CECILL-B
+language: C++
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/micmacIGN/micmac
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 513

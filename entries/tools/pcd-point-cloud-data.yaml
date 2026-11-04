@@ -1,0 +1,20 @@
+id: pcd-point-cloud-data
+kind: tool
+name: PCD (Point Cloud Data)
+category: Point clouds, LiDAR & 3D
+subcategory: Formats
+tool_kind: Format/Standard
+summary: Point Cloud Library's native file format for storing point clouds with typed fields.
+open_source: 'yes'
+license: BSD-3-Clause
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://pointclouds.org/documentation/tutorials/pcd_file_format.html
+notes: Common in robotics and mobile mapping pipelines.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 541

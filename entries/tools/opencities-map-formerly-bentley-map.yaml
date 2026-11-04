@@ -1,0 +1,25 @@
+id: opencities-map-formerly-bentley-map
+kind: tool
+name: OpenCities Map (formerly Bentley Map)
+category: Desktop GIS & analysis engines
+subcategory: Commercial desktop GIS
+tool_kind: Application
+summary: Bentley's MicroStation-based GIS for creating, editing and analysing 2D/3D geospatial data in
+  infrastructure workflows.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+- plugin
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: active
+notes: Bentley Map renamed OpenCities Map; URL not confirmed
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 262

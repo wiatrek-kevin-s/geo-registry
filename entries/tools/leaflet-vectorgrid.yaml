@@ -1,0 +1,24 @@
+id: leaflet-vectorgrid
+kind: tool
+name: Leaflet.VectorGrid
+category: Display & visualization
+subcategory: Leaflet plugins
+tool_kind: Extension
+summary: Displays vector tiles and sliced GeoJSON as Leaflet grid layers.
+open_source: 'yes'
+license: Beerware
+language: JavaScript
+interfaces:
+- JS
+- plugin
+call:
+- js
+- plugin
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/Leaflet/Leaflet.VectorGrid
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1035

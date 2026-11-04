@@ -1,0 +1,27 @@
+id: microsoft-planetary-computer
+kind: tool
+name: Microsoft Planetary Computer
+category: Imagery, remote sensing & GeoAI
+subcategory: Cloud EO platforms
+tool_kind: Platform
+summary: Microsoft hosted STAC catalog of open environmental datasets with tiling and SAS-token data access.
+open_source: partial
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- Python
+call:
+- python
+- rest
+wrapped_by_columbus: false
+project_status: maintained
+url: https://planetarycomputer.microsoft.com
+notes: Hub was retired; STAC API and data remain
+also_categories:
+- Commercial GIS platforms & APIs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 394

@@ -1,0 +1,22 @@
+id: pix4dmapper
+kind: tool
+name: Pix4Dmapper
+category: Imagery, remote sensing & GeoAI
+subcategory: Photogrammetry & drone
+tool_kind: Application
+summary: Desktop photogrammetry for drone mapping products.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://www.pix4d.com/product/pix4dmapper-photogrammetry-software/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 510

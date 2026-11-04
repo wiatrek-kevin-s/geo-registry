@@ -1,0 +1,22 @@
+id: agileassets-lrs-gateway
+kind: tool
+name: AgileAssets LRS Gateway
+category: Routing, networks, geocoding & LRS
+subcategory: Linear referencing (LRS)
+tool_kind: Application
+summary: Integration component synchronizing Esri Roads and Highways LRS data with AgileAssets asset management
+  systems.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.esri.com/partners/agileassets-inc-a2T70000000TNJaEAO/lrs-gateway-for-esri-a2d39000000sRuDAAU
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 868

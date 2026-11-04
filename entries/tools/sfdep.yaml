@@ -1,0 +1,23 @@
+id: sfdep
+kind: tool
+name: sfdep
+category: Desktop GIS & analysis engines
+subcategory: R spatial packages
+tool_kind: Library
+summary: Tidy interface to spdep for sf objects, adding emerging hot spot and colocation analysis.
+open_source: 'yes'
+license: GPL-3.0-or-later
+language: R
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/JosiahParry/sfdep
+notes: Licence from memory
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 339

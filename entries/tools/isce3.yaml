@@ -1,0 +1,24 @@
+id: isce3
+kind: tool
+name: ISCE3
+category: Imagery, remote sensing & GeoAI
+subcategory: SAR processing
+tool_kind: Library
+summary: Next-generation ISCE framework used for NISAR processing.
+open_source: 'yes'
+license: Apache-2.0
+language: C++;Python
+interfaces:
+- Python
+- C/C++
+call:
+- python
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/isce-framework/isce3
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 493

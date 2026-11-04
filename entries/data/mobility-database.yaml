@@ -1,0 +1,21 @@
+id: mobility-database
+kind: data
+name: Mobility Database
+summary: MobilityData's open catalog of GTFS, GTFS-RT and GBFS feeds with an API.
+publisher: Unknown
+themes:
+- transit-data-tools
+- routing-networks-geocoding-lrs
+- open-data-sources
+coverage:
+  region: Unspecified
+license: Apache-2.0
+access:
+- type: http
+  url: https://mobilitydatabase.org/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 816

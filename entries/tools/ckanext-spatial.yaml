@@ -1,0 +1,26 @@
+id: ckanext-spatial
+kind: tool
+name: ckanext-spatial
+category: Servers, standards, tiles & catalogs
+subcategory: Metadata catalogs & data portals
+tool_kind: Extension
+summary: CKAN extension adding spatial search, geospatial previews and ISO/CSW metadata harvesting.
+open_source: 'yes'
+license: AGPL-3.0-only
+language: Python
+interfaces:
+- REST
+- OGC
+- plugin
+call:
+- rest
+- ogc
+- plugin
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/ckan/ckanext-spatial
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 936

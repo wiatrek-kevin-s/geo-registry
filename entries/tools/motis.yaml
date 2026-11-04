@@ -1,0 +1,26 @@
+id: motis
+kind: tool
+name: MOTIS
+category: Routing, networks, geocoding & LRS
+subcategory: Routing engines
+tool_kind: Server
+summary: Intermodal mobility platform offering timetable routing, street routing and geocoding from GTFS
+  and OSM in one server.
+open_source: 'yes'
+license: MIT
+language: C++
+interfaces:
+- REST
+- CLI
+call:
+- cli
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/motis-project/motis
+notes: Single binary alternative to OTP
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 764

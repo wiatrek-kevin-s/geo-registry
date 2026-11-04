@@ -1,0 +1,23 @@
+id: geostatspy
+kind: tool
+name: GeostatsPy
+category: Desktop GIS & analysis engines
+subcategory: Geostatistics & interpolation
+tool_kind: Library
+summary: Python port of GSLIB geostatistics routines for teaching and subsurface modelling.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/GeostatsGuy/GeostatsPy
+notes: Licence and status from memory
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 323

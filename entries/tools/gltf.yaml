@@ -1,0 +1,23 @@
+id: gltf
+kind: tool
+name: glTF
+category: Core libraries & formats
+subcategory: Point cloud & 3D formats
+tool_kind: Format/Standard
+summary: Khronos runtime 3D asset format used inside 3D Tiles.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open standard (Khronos)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://www.khronos.org/gltf
+notes: 3D model payloads.
+also_categories:
+- Point clouds, LiDAR & 3D
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 197

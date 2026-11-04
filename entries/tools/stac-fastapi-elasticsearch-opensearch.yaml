@@ -1,0 +1,22 @@
+id: stac-fastapi-elasticsearch-opensearch
+kind: tool
+name: stac-fastapi-elasticsearch-opensearch
+category: Imagery, remote sensing & GeoAI
+subcategory: STAC ecosystem
+tool_kind: Server
+summary: stac-fastapi backend storing STAC items in Elasticsearch or OpenSearch.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/stac-utils/stac-fastapi-elasticsearch-opensearch
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 426

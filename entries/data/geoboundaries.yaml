@@ -1,0 +1,20 @@
+id: geoboundaries
+kind: data
+name: geoBoundaries
+summary: Open administrative boundaries for every country with an API.
+publisher: Unknown
+themes:
+- global-boundaries
+- open-data-sources
+coverage:
+  region: Global
+license: CC-BY-4.0
+access:
+- type: http
+  url: https://www.geoboundaries.org/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1316

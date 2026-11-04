@@ -1,0 +1,22 @@
+id: epa-enviroatlas
+kind: data
+name: EPA EnviroAtlas
+summary: Ecosystem services, land cover and community indicators with map services.
+publisher: U.S. Environmental Protection Agency
+themes:
+- us-federal-epa
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.epa.gov/enviroatlas
+  auth: none
+notes: Status after 2025 EPA cuts unclear
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1282

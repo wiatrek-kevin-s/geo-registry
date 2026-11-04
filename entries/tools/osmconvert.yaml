@@ -1,0 +1,23 @@
+id: osmconvert
+kind: tool
+name: osmconvert
+category: OSM & Overture tooling
+subcategory: PBF processing
+tool_kind: Toolkit/CLI
+summary: Converts and clips OSM data between PBF, XML and o5m formats and applies change files.
+open_source: 'yes'
+license: AGPL-3.0-only
+language: C
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://wiki.openstreetmap.org/wiki/Osmconvert
+notes: Companion to osmfilter/osmupdate
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1191

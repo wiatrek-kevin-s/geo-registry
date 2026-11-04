@@ -1,0 +1,22 @@
+id: foursquare-places-mcp
+kind: tool
+name: Foursquare Places MCP
+category: AI, agents & MCP for GIS
+subcategory: Vendor/location MCP servers
+tool_kind: Server
+summary: Official MCP server for Foursquare Places search and details.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+interfaces:
+- MCP
+call:
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/foursquare/foursquare-places-mcp
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1527

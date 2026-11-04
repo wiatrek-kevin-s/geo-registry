@@ -1,0 +1,23 @@
+id: cityseer
+kind: tool
+name: cityseer
+category: Routing, networks, geocoding & LRS
+subcategory: Accessibility & transport modeling
+tool_kind: Library
+summary: Computes localized network centralities, land-use accessibility and mixed-use metrics on street
+  networks.
+open_source: 'yes'
+license: AGPL-3.0
+language: Python;Rust
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/benchmark-urbanism/cityseer-api
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 787

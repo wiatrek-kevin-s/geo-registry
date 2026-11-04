@@ -1,0 +1,26 @@
+id: plotly
+kind: tool
+name: Plotly
+category: Display & visualization
+subcategory: Python notebook & app mapping
+tool_kind: Library
+summary: Charting library whose map traces cover choropleths, scatter maps and tile-based maps.
+open_source: 'yes'
+license: MIT
+language: Python;JavaScript
+interfaces:
+- Python
+- JS
+- R
+call:
+- python
+- js
+- r
+wrapped_by_columbus: false
+project_status: active
+url: https://plotly.com/python/maps/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1090

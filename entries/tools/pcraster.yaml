@@ -1,0 +1,26 @@
+id: pcraster
+kind: tool
+name: PCRaster
+category: Desktop GIS & analysis engines
+subcategory: Open-source desktop GIS
+tool_kind: Toolkit/CLI
+summary: Raster-based environmental modelling environment for dynamic spatio-temporal simulation with
+  map algebra operators.
+open_source: 'yes'
+license: GPL-3.0-only
+language: C++; Python
+interfaces:
+- CLI
+- Python
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: maintained
+url: https://pcraster.geo.uu.nl
+notes: Good for scripted hydrology/land-use models
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 240

@@ -1,0 +1,23 @@
+id: fme-flow-hosted
+kind: tool
+name: FME Flow Hosted
+category: Commercial GIS platforms & APIs
+subcategory: Spatial ETL
+tool_kind: Service/API
+summary: Safe Software-managed cloud deployment of FME Flow.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- GUI
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://fme.safe.com/fme-flow-hosted/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1386

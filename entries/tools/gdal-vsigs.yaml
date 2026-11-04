@@ -1,0 +1,26 @@
+id: gdal-vsigs
+kind: tool
+name: GDAL /vsigs/
+category: Connections & storage
+subcategory: Object storage
+tool_kind: Library
+summary: GDAL virtual file system for Google Cloud Storage.
+open_source: 'yes'
+license: MIT
+language: C++
+interfaces:
+- CLI
+- Python
+- C/C++
+call:
+- python
+- cli
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://gdal.org/en/stable/user/virtual_file_systems.html
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1456

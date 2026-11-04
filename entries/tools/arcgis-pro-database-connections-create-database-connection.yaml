@@ -1,0 +1,26 @@
+id: arcgis-pro-database-connections-create-database-connection
+kind: tool
+name: ArcGIS Pro database connections (Create Database Connection)
+category: Connections & storage
+subcategory: Esri connections & auth
+tool_kind: Toolkit/CLI
+summary: ArcGIS Pro tool and UI for creating connections to Oracle, SQL Server, PostgreSQL and other enterprise
+  geodatabases.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Python
+interfaces:
+- GUI
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/create-database-connection.htm
+notes: Agent can script via arcpy.management.CreateDatabaseConnection
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1431

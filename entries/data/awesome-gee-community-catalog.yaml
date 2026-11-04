@@ -1,0 +1,21 @@
+id: awesome-gee-community-catalog
+kind: data
+name: awesome-gee-community-catalog
+summary: Community-curated datasets made available as Earth Engine assets.
+publisher: Unknown
+themes:
+- cloud-eo-platforms
+- imagery-remote-sensing-geoai
+coverage:
+  region: Unspecified
+license: NOASSERTION
+license_original: Unknown
+access:
+- type: http
+  url: https://gee-community-catalog.org
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 415

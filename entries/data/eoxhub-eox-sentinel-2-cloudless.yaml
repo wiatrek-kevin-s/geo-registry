@@ -1,0 +1,21 @@
+id: eoxhub-eox-sentinel-2-cloudless
+kind: data
+name: EOxHub / EOX Sentinel-2 Cloudless
+summary: Cloud-free Sentinel-2 global mosaic served as WMTS tiles.
+publisher: Unknown
+themes:
+- cloud-eo-platforms
+- imagery-remote-sensing-geoai
+coverage:
+  region: Global
+license: CC-BY-NC-SA-4.0
+access:
+- type: http
+  url: https://s2maps.eu
+  auth: none
+notes: Non-commercial for newer years
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 417

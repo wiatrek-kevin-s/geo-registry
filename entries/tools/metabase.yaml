@@ -1,0 +1,25 @@
+id: metabase
+kind: tool
+name: Metabase
+category: Display & visualization
+subcategory: BI & dashboard maps
+tool_kind: Platform
+summary: BI tool with pin, grid and region maps; open-source edition plus commercial editions.
+open_source: partial
+license: AGPL-3.0
+language: Clojure;TypeScript
+interfaces:
+- SQL
+- REST
+- GUI
+call:
+- rest
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://www.metabase.com/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1127

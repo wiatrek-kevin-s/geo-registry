@@ -1,0 +1,24 @@
+id: py6s
+kind: tool
+name: Py6S
+category: Imagery, remote sensing & GeoAI
+subcategory: Atmospheric correction
+tool_kind: Library
+summary: Python interface to the 6S radiative transfer model for simulating and correcting atmospheric
+  effects.
+open_source: 'yes'
+license: LGPL-3.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/robintw/Py6S
+notes: Needs 6S Fortran binary
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 372

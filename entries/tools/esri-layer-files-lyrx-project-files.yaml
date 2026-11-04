@@ -1,0 +1,21 @@
+id: esri-layer-files-lyrx-project-files
+kind: tool
+name: Esri layer files (.lyrx) / project files
+category: Core libraries & formats
+subcategory: Metadata & catalog formats
+tool_kind: Format/Standard
+summary: ArcGIS Pro layer and map definition files based on the Cartographic Information Model.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary (JSON-based CIM)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/Esri/cim-spec
+notes: Styling interop with ArcGIS.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 212

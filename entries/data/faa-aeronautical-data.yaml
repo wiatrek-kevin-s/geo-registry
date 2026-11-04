@@ -1,0 +1,22 @@
+id: faa-aeronautical-data
+kind: data
+name: FAA aeronautical data
+summary: Airports, airspace, obstacles and UAS facility maps from the FAA.
+publisher: Federal Aviation Administration
+themes:
+- us-federal-transportation
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://adds-faa.opendata.arcgis.com/
+  auth: none
+notes: Drone airspace checks
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1288

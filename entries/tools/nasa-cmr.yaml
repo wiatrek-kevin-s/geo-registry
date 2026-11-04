@@ -1,0 +1,25 @@
+id: nasa-cmr
+kind: tool
+name: NASA CMR
+category: Imagery, remote sensing & GeoAI
+subcategory: Cloud EO platforms
+tool_kind: Service/API
+summary: NASA Common Metadata Repository search API for collections and granules, with a CMR-STAC endpoint.
+open_source: 'no'
+license: LicenseRef-Public-Domain
+license_original: Public domain
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://cmr.earthdata.nasa.gov/search/
+notes: Search backbone for earthaccess
+also_categories:
+- Open data sources
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 407

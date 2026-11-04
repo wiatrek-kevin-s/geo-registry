@@ -1,0 +1,23 @@
+id: neatnet
+kind: tool
+name: neatnet
+category: Routing, networks, geocoding & LRS
+subcategory: Accessibility & transport modeling
+tool_kind: Library
+summary: Simplifies street network geometry for morphological analysis, collapsing dual carriageways and
+  intersections.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/uscuni/neatnet
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 786

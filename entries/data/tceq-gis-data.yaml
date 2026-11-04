@@ -1,0 +1,22 @@
+id: tceq-gis-data
+kind: data
+name: TCEQ GIS data
+summary: Texas environmental data such as water districts, permits, monitoring sites and Edwards Aquifer
+  zones.
+publisher: Texas Commission on Environmental Quality
+themes:
+- texas
+- open-data-sources
+coverage:
+  region: Texas
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.tceq.texas.gov/gis
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1342

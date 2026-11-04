@@ -1,0 +1,23 @@
+id: geometryops-jl-archgdal-jl
+kind: tool
+name: GeometryOps.jl / ArchGDAL.jl
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: Julia geometry operations and GDAL bindings within the JuliaGeo ecosystem.
+open_source: 'yes'
+license: MIT
+language: Julia
+interfaces:
+- Julia
+call:
+- julia
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/JuliaGeo
+notes: Julia users.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 217

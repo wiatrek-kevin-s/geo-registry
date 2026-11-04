@@ -1,0 +1,23 @@
+id: geocube
+kind: tool
+name: geocube
+category: Desktop GIS & analysis engines
+subcategory: Python raster & array analysis
+tool_kind: Library
+summary: Rasterises vector data into xarray datasets on a chosen grid.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/vylor/geocube
+notes: Vector-to-raster for xarray
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 298

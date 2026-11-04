@@ -1,0 +1,21 @@
+id: usgs-dem-sdts
+kind: tool
+name: USGS DEM / SDTS
+category: Core libraries & formats
+subcategory: Raster formats
+tool_kind: Format/Standard
+summary: Legacy USGS elevation and transfer standards still found in archives.
+open_source: 'yes'
+license: LicenseRef-Public-Domain
+license_original: Public domain
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: archived
+url: https://gdal.org/en/stable/drivers/raster/usgsdem.html
+notes: Legacy only.
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 154

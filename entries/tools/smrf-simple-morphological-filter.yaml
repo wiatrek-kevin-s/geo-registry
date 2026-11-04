@@ -1,0 +1,26 @@
+id: smrf-simple-morphological-filter
+kind: tool
+name: SMRF (Simple Morphological Filter)
+category: Point clouds, LiDAR & 3D
+subcategory: Ground classification
+tool_kind: Library
+summary: Ground classification algorithm using progressive morphological openings on a minimum surface;
+  implemented as PDAL filters.smrf.
+open_source: 'yes'
+license: BSD-3-Clause
+language: C++
+interfaces:
+- CLI
+- Python
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: maintained
+url: https://pdal.org/en/stable/stages/filters.smrf.html
+notes: Good default ground filter for DTM generation.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 566

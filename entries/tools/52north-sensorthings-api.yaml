@@ -1,0 +1,24 @@
+id: 52north-sensorthings-api
+kind: tool
+name: 52°North SensorThings API
+category: Servers, standards, tiles & catalogs
+subcategory: Processing & sensor services
+tool_kind: Server
+summary: 52°North server implementing OGC SensorThings API on its sensor-web data model.
+open_source: 'yes'
+license: GPL-2.0-only
+language: Java
+interfaces:
+- REST
+- OGC
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/52North/sensorweb-server-sta
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 947

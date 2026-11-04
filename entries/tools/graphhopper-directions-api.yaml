@@ -1,0 +1,23 @@
+id: graphhopper-directions-api
+kind: tool
+name: GraphHopper Directions API
+category: Routing, networks, geocoding & LRS
+subcategory: Routing engines
+tool_kind: Service/API
+summary: Hosted routing, matrix, isochrone, geocoding and route optimization API run by GraphHopper GmbH.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.graphhopper.com/
+notes: Free tier for light use
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 753

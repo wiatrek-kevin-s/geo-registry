@@ -1,0 +1,26 @@
+id: eoapi
+kind: tool
+name: eoAPI
+category: Imagery, remote sensing & GeoAI
+subcategory: Imagery tiling & serving
+tool_kind: Platform
+summary: Bundle of pgstac, stac-fastapi, TiTiler and vector services for a full EO data stack.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- REST
+- OGC
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/developmentseed/eoAPI
+also_categories:
+- Commercial GIS platforms & APIs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 440

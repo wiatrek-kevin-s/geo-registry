@@ -1,0 +1,23 @@
+id: webdav
+kind: tool
+name: WebDAV
+category: Connections & storage
+subcategory: Network shares & transfer
+tool_kind: Format/Standard
+summary: HTTP extension (RFC 4918) for remote file authoring, used by Nextcloud and SharePoint.
+open_source: 'yes'
+license: NOASSERTION
+license_original: n/a
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://datatracker.ietf.org/doc/html/rfc4918
+notes: Reachable via rclone or OpenDAL
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1467

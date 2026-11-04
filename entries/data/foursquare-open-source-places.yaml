@@ -1,0 +1,20 @@
+id: foursquare-open-source-places
+kind: data
+name: Foursquare Open Source Places
+summary: Global POI dataset released openly by Foursquare in Parquet.
+publisher: Foursquare
+themes:
+- global-poi
+- open-data-sources
+coverage:
+  region: Global
+license: Apache-2.0
+access:
+- type: http
+  url: https://opensource.foursquare.com/os-places/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1313

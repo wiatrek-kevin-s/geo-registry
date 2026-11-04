@@ -1,0 +1,27 @@
+id: open-data-cube
+kind: tool
+name: Open Data Cube
+category: Imagery, remote sensing & GeoAI
+subcategory: Cloud EO platforms
+tool_kind: Toolkit/CLI
+summary: Software for indexing large satellite archives and loading them as xarray data cubes for analysis.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+- CLI
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://www.opendatacube.org
+notes: datacube-core; Postgres index
+also_categories:
+- Spatial databases & query engines
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 411

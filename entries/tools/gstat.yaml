@@ -1,0 +1,22 @@
+id: gstat
+kind: tool
+name: gstat
+category: Desktop GIS & analysis engines
+subcategory: R spatial packages
+tool_kind: Library
+summary: Variogram modelling, kriging and geostatistical simulation in R.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: R; C
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/r-spatial/gstat
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 340

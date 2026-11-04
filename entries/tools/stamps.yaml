@@ -1,0 +1,23 @@
+id: stamps
+kind: tool
+name: StaMPS
+category: Imagery, remote sensing & GeoAI
+subcategory: SAR processing
+tool_kind: Toolkit/CLI
+summary: Persistent scatterer and small baseline InSAR time-series processing.
+open_source: 'yes'
+license: GPL-3.0
+language: MATLAB
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/dbekaert/StaMPS
+notes: MATLAB required
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 504

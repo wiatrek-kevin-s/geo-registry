@@ -1,0 +1,22 @@
+id: nhgis-ipums
+kind: data
+name: NHGIS (IPUMS)
+summary: Historical census tables and boundary files from 1790 onward, harmonized.
+publisher: Unknown
+themes:
+- us-federal-census
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Custom
+license_original: Custom (free with registration)
+access:
+- type: http
+  url: https://www.nhgis.org/
+  auth: none
+notes: Requires account; citation terms
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1253

@@ -1,0 +1,24 @@
+id: nowcoast
+kind: tool
+name: nowCOAST
+category: Open data sources
+subcategory: US federal – NOAA
+tool_kind: Service/API
+summary: NOAA map services of real-time coastal observations, forecasts and warnings.
+open_source: 'yes'
+license: LicenseRef-Public-Domain
+license_original: Public domain
+interfaces:
+- REST
+- OGC
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://nowcoast.noaa.gov/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1260

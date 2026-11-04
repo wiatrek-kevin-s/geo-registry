@@ -1,0 +1,22 @@
+id: google-cloud-storage
+kind: tool
+name: Google Cloud Storage
+category: Connections & storage
+subcategory: Object storage
+tool_kind: Service/API
+summary: Google Cloud object storage with an S3-interoperable XML API.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://cloud.google.com/storage
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1452

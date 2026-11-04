@@ -1,0 +1,24 @@
+id: maplibre-style-specification
+kind: tool
+name: MapLibre Style Specification
+category: Servers, standards, tiles & catalogs
+subcategory: Tile, style & catalog specs
+tool_kind: Format/Standard
+summary: Community-maintained open fork of the GL style JSON format used by MapLibre renderers.
+open_source: 'yes'
+license: BSD-3-Clause
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://maplibre.org/maplibre-style-spec/
+notes: Agent can generate styles as JSON
+also_categories:
+- Display & visualization
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1006

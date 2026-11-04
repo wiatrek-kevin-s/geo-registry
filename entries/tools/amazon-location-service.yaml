@@ -1,0 +1,27 @@
+id: amazon-location-service
+kind: tool
+name: Amazon Location Service
+category: Commercial GIS platforms & APIs
+subcategory: AWS
+tool_kind: Service/API
+summary: AWS managed maps, places, routes, geofencing and tracking APIs.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- JS
+- Python
+call:
+- python
+- rest
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://aws.amazon.com/location/
+notes: Has an awslabs MCP server
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1404

@@ -1,0 +1,26 @@
+id: qgis2ollamamcp
+kind: tool
+name: QGIS2OllamaMCP
+category: AI, agents & MCP for GIS
+subcategory: QGIS AI & MCP
+tool_kind: Extension
+summary: Fork of qgis_mcp by Anita Graser that lets local Ollama models control QGIS.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: Python
+interfaces:
+- MCP
+- plugin
+call:
+- mcp
+- plugin
+wrapped_by_columbus: false
+project_status: unknown
+url: https://github.com/anitagraser/qgis_mcp
+notes: Local-LLM precedent
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1499

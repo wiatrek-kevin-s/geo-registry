@@ -1,0 +1,21 @@
+id: mapbox-vector-tile-mvt
+kind: tool
+name: Mapbox Vector Tile (MVT)
+category: Core libraries & formats
+subcategory: Tile formats
+tool_kind: Format/Standard
+summary: Protocol Buffers encoding of tiled vector features used by most web vector maps.
+open_source: 'yes'
+license: CC-BY-3.0
+license_original: CC-BY-3.0 (spec)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/mapbox/vector-tile-spec
+notes: Standard vector tile payload.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 199

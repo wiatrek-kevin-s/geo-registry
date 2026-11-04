@@ -1,0 +1,21 @@
+id: gssurgo-gnatsgo
+kind: data
+name: gSSURGO / gNATSGO
+summary: Gridded state and national SSURGO-based soils in file geodatabase form.
+publisher: Unknown
+themes:
+- us-federal-usda
+- open-data-sources
+coverage:
+  region: United States
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.nrcs.usda.gov/resources/data-and-reports/gridded-soil-survey-geographic-gssurgo-database
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1273

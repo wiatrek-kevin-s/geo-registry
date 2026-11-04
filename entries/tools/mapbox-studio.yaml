@@ -1,0 +1,23 @@
+id: mapbox-studio
+kind: tool
+name: Mapbox Studio
+category: Display & visualization
+subcategory: Hosted web map makers
+tool_kind: Application
+summary: Web tool for designing custom Mapbox map styles and managing tilesets.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.mapbox.com/mapbox-studio
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1140

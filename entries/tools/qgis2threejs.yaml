@@ -1,0 +1,23 @@
+id: qgis2threejs
+kind: tool
+name: Qgis2threejs
+category: Display & visualization
+subcategory: Data viewers & editors
+tool_kind: Extension
+summary: QGIS plugin that exports DEM and vector layers to interactive three.js 3D web scenes.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: Python;JavaScript
+interfaces:
+- plugin
+- GUI
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/minorua/Qgis2threejs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1153

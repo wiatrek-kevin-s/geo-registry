@@ -1,0 +1,23 @@
+id: rlas
+kind: tool
+name: rlas
+category: Point clouds, LiDAR & 3D
+subcategory: LAS/LAZ libraries
+tool_kind: Library
+summary: R package that reads and writes LAS/LAZ files using LASlib.
+open_source: 'yes'
+license: GPL-3.0
+language: R;C++
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/r-lidar/rlas
+notes: I/O layer under lidR.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 548

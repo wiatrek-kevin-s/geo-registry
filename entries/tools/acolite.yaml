@@ -1,0 +1,27 @@
+id: acolite
+kind: tool
+name: ACOLITE
+category: Imagery, remote sensing & GeoAI
+subcategory: Atmospheric correction
+tool_kind: Toolkit/CLI
+summary: Atmospheric correction processor tuned for aquatic and coastal applications of Landsat, Sentinel-2
+  and other sensors.
+open_source: 'yes'
+license: GPL-3.0-only
+language: Python
+interfaces:
+- CLI
+- Python
+- GUI
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/acolite/acolite
+notes: Water quality work
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 371

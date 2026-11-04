@@ -1,0 +1,21 @@
+id: bbbike-extracts
+kind: data
+name: BBBike extracts
+summary: Custom-area OSM extracts in many formats, plus ready-made city extracts.
+publisher: Unknown
+themes:
+- downloads-distributions
+- osm-overture-tooling
+coverage:
+  region: Unspecified
+license: ODbL-1.0
+access:
+- type: http
+  url: https://extract.bbbike.org/
+  auth: none
+notes: Custom polygon extracts
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1227

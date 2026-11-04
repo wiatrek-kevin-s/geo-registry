@@ -1,0 +1,24 @@
+id: arcgis-field-maps
+kind: tool
+name: ArcGIS Field Maps
+category: Commercial GIS platforms & APIs
+subcategory: Esri ArcGIS
+tool_kind: Application
+summary: Mobile app for viewing maps, collecting and editing data, and tasks in the field.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.esri.com/en-us/arcgis/products/arcgis-field-maps/overview
+notes: Data lands in hosted feature layers the app can read
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1367

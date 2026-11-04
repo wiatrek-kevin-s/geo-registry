@@ -1,0 +1,24 @@
+id: streamlit-folium
+kind: tool
+name: streamlit-folium
+category: Display & visualization
+subcategory: Python notebook & app mapping
+tool_kind: Extension
+summary: Streamlit component for showing interactive Folium maps and receiving map events.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+- plugin
+call:
+- python
+- plugin
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/randyzwitch/streamlit-folium
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1100

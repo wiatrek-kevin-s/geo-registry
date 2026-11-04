@@ -1,0 +1,30 @@
+id: kinetica
+kind: tool
+name: Kinetica
+category: Spatial databases & query engines
+subcategory: Commercial RDBMS
+tool_kind: Database
+summary: GPU-accelerated analytic database with extensive geospatial, track and graph functions.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- SQL
+- REST
+- Python
+- Java
+call:
+- python
+- rest
+- sql
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://www.kinetica.com
+notes: Free developer edition
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 705

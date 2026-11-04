@@ -1,0 +1,20 @@
+id: fgdc-united-states-thoroughfare-landmark-and-postal-address-data-standard
+kind: tool
+name: FGDC United States Thoroughfare, Landmark, and Postal Address Data Standard
+category: Routing, networks, geocoding & LRS
+subcategory: Address data
+tool_kind: Format/Standard
+summary: US federal standard defining address content, classification and quality measures.
+open_source: 'yes'
+license: LicenseRef-Public-Domain
+license_original: Public domain
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.fgdc.gov/standards/projects/address-data
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 847

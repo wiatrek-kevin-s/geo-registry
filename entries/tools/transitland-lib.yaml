@@ -1,0 +1,26 @@
+id: transitland-lib
+kind: tool
+name: transitland-lib
+category: Routing, networks, geocoding & LRS
+subcategory: Transit data & tools
+tool_kind: Toolkit/CLI
+summary: Library and CLI for validating, merging, filtering and importing GTFS feeds; dual commercial
+  licence available.
+open_source: 'yes'
+license: GPL-3.0
+language: Go
+interfaces:
+- CLI
+- Go
+call:
+- cli
+- go
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/interline-io/transitland-lib
+notes: Language Go (not in interfaces list)
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 815

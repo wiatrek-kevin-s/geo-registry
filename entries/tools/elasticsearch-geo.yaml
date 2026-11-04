@@ -1,0 +1,29 @@
+id: elasticsearch-geo
+kind: tool
+name: Elasticsearch geo
+category: Spatial databases & query engines
+subcategory: NoSQL / search / KV
+tool_kind: Database
+summary: geo_point/geo_shape fields with bounding-box, distance, shape queries and geohex/geotile aggregations.
+open_source: partial
+license: AGPL-3.0 OR SSPL-1.0 OR Elastic-2.0
+language: Java
+interfaces:
+- REST
+- Python
+- JS
+- Java
+call:
+- python
+- rest
+- js
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://www.elastic.co/docs/explore-analyze/geospatial-analysis
+notes: AGPL option added 2024
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 715

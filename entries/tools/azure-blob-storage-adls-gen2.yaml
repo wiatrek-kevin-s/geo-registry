@@ -1,0 +1,22 @@
+id: azure-blob-storage-adls-gen2
+kind: tool
+name: Azure Blob Storage / ADLS Gen2
+category: Connections & storage
+subcategory: Object storage
+tool_kind: Service/API
+summary: Azure object storage, with hierarchical-namespace Data Lake Storage Gen2.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://learn.microsoft.com/azure/storage/blobs/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1451

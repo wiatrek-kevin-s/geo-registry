@@ -1,0 +1,26 @@
+id: cesium-for-unreal
+kind: tool
+name: Cesium for Unreal
+category: Point clouds, LiDAR & 3D
+subcategory: Web viewers & engines
+tool_kind: Extension
+summary: Unreal Engine plugin that streams global 3D Tiles content into Unreal scenes.
+open_source: 'yes'
+license: Apache-2.0
+language: C++
+interfaces:
+- plugin
+- GUI
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/CesiumGS/cesium-unreal
+notes: Digital twin visualization.
+also_categories:
+- Display & visualization
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 603

@@ -1,0 +1,23 @@
+id: geodesy-rust
+kind: tool
+name: Geodesy (Rust)
+category: Core libraries & formats
+subcategory: Projection & CRS
+tool_kind: Library
+summary: Experimental Rust platform for geodetic transformations designed as a PROJ successor experiment.
+open_source: 'yes'
+license: MIT OR Apache-2.0
+language: Rust
+interfaces:
+- Rust
+call:
+- rust
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/busstoptaktik/geodesy
+notes: Pure Rust geodesy experiment.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 46

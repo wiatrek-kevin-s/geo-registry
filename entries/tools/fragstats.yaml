@@ -1,0 +1,25 @@
+id: fragstats
+kind: tool
+name: FRAGSTATS
+category: Desktop GIS & analysis engines
+subcategory: Spatial statistics applications
+tool_kind: Application
+summary: Computes landscape pattern metrics from categorical maps for landscape ecology.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://fragstats.org
+notes: Freeware; status not confirmed
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 329

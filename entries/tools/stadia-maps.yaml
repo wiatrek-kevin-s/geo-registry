@@ -1,0 +1,24 @@
+id: stadia-maps
+kind: tool
+name: Stadia Maps
+category: Display & visualization
+subcategory: Basemap providers
+tool_kind: Service/API
+summary: Hosted vector and raster basemaps, including the Stamen styles, plus geocoding and routing.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://stadiamaps.com/
+also_categories:
+- Commercial GIS platforms & APIs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1171

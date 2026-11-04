@@ -1,0 +1,30 @@
+id: openrouteservice
+kind: tool
+name: openrouteservice
+category: Routing, networks, geocoding & LRS
+subcategory: Routing engines
+tool_kind: Server
+summary: GraphHopper-based routing service from HeiGIT adding isochrones, matrices, POIs, elevation and
+  many travel profiles.
+open_source: 'yes'
+license: GPL-3.0
+language: Java
+interfaces:
+- REST
+- Python
+- R
+- JS
+call:
+- python
+- rest
+- js
+- r
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/GIScience/openrouteservice
+notes: Public API with free key; QGIS plugin ORS Tools
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 754

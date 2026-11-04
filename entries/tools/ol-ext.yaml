@@ -1,0 +1,24 @@
+id: ol-ext
+kind: tool
+name: ol-ext
+category: Display & visualization
+subcategory: MapLibre/OpenLayers ecosystem
+tool_kind: Extension
+summary: Large collection of extra controls, interactions, styles and animations for OpenLayers.
+open_source: 'yes'
+license: CECILL-B
+language: JavaScript
+interfaces:
+- JS
+- plugin
+call:
+- js
+- plugin
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/Viglino/ol-ext
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1046

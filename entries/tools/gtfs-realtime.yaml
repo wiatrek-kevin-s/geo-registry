@@ -1,0 +1,19 @@
+id: gtfs-realtime
+kind: tool
+name: GTFS Realtime
+category: Routing, networks, geocoding & LRS
+subcategory: Transit data & tools
+tool_kind: Format/Standard
+summary: Protocol Buffers feed format for live vehicle positions, trip updates and service alerts.
+open_source: 'yes'
+license: Apache-2.0
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://gtfs.org/documentation/realtime/reference/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 802

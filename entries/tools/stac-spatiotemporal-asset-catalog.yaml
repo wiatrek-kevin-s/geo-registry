@@ -1,0 +1,25 @@
+id: stac-spatiotemporal-asset-catalog
+kind: tool
+name: STAC (SpatioTemporal Asset Catalog)
+category: Imagery, remote sensing & GeoAI
+subcategory: STAC ecosystem
+tool_kind: Format/Standard
+summary: JSON specification for describing geospatial assets so imagery and other data can be searched
+  and indexed consistently.
+open_source: 'yes'
+license: Apache-2.0
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://stacspec.org
+notes: Core metadata standard for imagery search
+also_categories:
+- Servers, standards, tiles & catalogs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 418

@@ -1,0 +1,27 @@
+id: brouter
+kind: tool
+name: BRouter
+category: Routing, networks, geocoding & LRS
+subcategory: Routing engines
+tool_kind: Application
+summary: Configurable bicycle- and hiking-focused offline router with elevation-aware profiles; also runs
+  as a server and Android app.
+open_source: 'yes'
+license: MIT
+language: Java
+interfaces:
+- REST
+- Java
+- GUI
+call:
+- rest
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/abrensch/brouter
+notes: Lightweight offline routing
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 761

@@ -1,0 +1,23 @@
+id: opensearch-dashboards-maps
+kind: tool
+name: OpenSearch Dashboards Maps
+category: Display & visualization
+subcategory: BI & dashboard maps
+tool_kind: Extension
+summary: Map visualization plugin for OpenSearch Dashboards using MapLibre.
+open_source: 'yes'
+license: Apache-2.0
+language: TypeScript
+interfaces:
+- GUI
+- plugin
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/opensearch-project/dashboards-maps
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1129

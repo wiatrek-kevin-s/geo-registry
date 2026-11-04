@@ -1,0 +1,25 @@
+id: azure-database-for-postgresql-postgis
+kind: tool
+name: Azure Database for PostgreSQL (PostGIS)
+category: Spatial databases & query engines
+subcategory: Managed PostgreSQL
+tool_kind: Service/API
+summary: Microsoft managed PostgreSQL (Flexible Server) with PostGIS and related extensions allow-listed.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- SQL
+- REST
+call:
+- rest
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://azure.microsoft.com/products/postgresql
+notes: Standard PostGIS client access
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 660

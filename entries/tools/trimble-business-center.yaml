@@ -1,0 +1,21 @@
+id: trimble-business-center
+kind: tool
+name: Trimble Business Center
+category: Commercial GIS platforms & APIs
+subcategory: Trimble
+tool_kind: Application
+summary: Survey office software for processing GNSS, total station, scanner and drone data.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://geospatial.trimble.com/en/products/software/trimble-business-center
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1392

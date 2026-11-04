@@ -1,0 +1,24 @@
+id: hypercoast
+kind: tool
+name: HyperCoast
+category: Imagery, remote sensing & GeoAI
+subcategory: Hyperspectral
+tool_kind: Library
+summary: Python package for visualising and analysing hyperspectral data such as EMIT, PACE and DESIS,
+  focused on coastal areas.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/opengeos/HyperCoast
+notes: Notebook-friendly
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 380

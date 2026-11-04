@@ -1,0 +1,25 @@
+id: geoarrow-python-geoarrow-pyarrow-etc
+kind: tool
+name: GeoArrow (Python geoarrow-pyarrow etc.)
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Python and C implementations of GeoArrow geometry arrays (geoarrow-c, geoarrow-pyarrow).
+open_source: 'yes'
+license: Apache-2.0
+language: Python/C
+interfaces:
+- Python
+- C/C++
+call:
+- python
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/geoarrow/geoarrow-python
+notes: Zero-copy geometry with Arrow.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 90

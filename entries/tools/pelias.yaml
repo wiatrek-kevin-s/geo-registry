@@ -1,0 +1,23 @@
+id: pelias
+kind: tool
+name: Pelias
+category: Routing, networks, geocoding & LRS
+subcategory: Geocoding engines & libraries
+tool_kind: Server
+summary: Modular Elasticsearch-based geocoder importing OSM, OpenAddresses, Who's On First and Geonames.
+open_source: 'yes'
+license: MIT
+language: JS
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/pelias/pelias
+notes: Heavy stack (Elasticsearch, Docker)
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 820

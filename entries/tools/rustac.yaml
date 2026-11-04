@@ -1,0 +1,27 @@
+id: rustac
+kind: tool
+name: rustac
+category: Imagery, remote sensing & GeoAI
+subcategory: STAC ecosystem
+tool_kind: Toolkit/CLI
+summary: Rust implementation of STAC tooling with CLI, server and GeoParquet support, plus Python bindings.
+open_source: 'yes'
+license: MIT OR Apache-2.0
+language: Rust
+interfaces:
+- CLI
+- Rust
+- Python
+call:
+- python
+- cli
+- rust
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/stac-utils/rustac
+notes: Fits a Rust-based app well
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 422

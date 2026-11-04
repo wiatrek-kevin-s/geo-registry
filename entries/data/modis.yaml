@@ -1,0 +1,22 @@
+id: modis
+kind: data
+name: MODIS
+summary: Daily 250 m–1 km land, ocean and atmosphere products from Terra and Aqua.
+publisher: Unknown
+themes:
+- us-federal-nasa
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://modis.gsfc.nasa.gov/
+  auth: none
+notes: Sensors near end of life; VIIRS continues
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1265

@@ -1,0 +1,23 @@
+id: cartegraph
+kind: tool
+name: Cartegraph
+category: Commercial GIS platforms & APIs
+subcategory: Asset management
+tool_kind: Application
+summary: Asset management and operations software for local government, now part of OpenGov.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.cartegraph.com/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1396

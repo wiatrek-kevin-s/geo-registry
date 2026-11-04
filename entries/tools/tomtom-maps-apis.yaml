@@ -1,0 +1,27 @@
+id: tomtom-maps-apis
+kind: tool
+name: TomTom Maps APIs
+category: Commercial GIS platforms & APIs
+subcategory: Location & mapping APIs
+tool_kind: Service/API
+summary: TomTom developer APIs for maps, search, routing and live traffic.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- JS
+- MCP
+call:
+- rest
+- js
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://developer.tomtom.com/
+notes: Official MCP servers
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1409

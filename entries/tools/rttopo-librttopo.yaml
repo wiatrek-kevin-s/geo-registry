@@ -1,0 +1,23 @@
+id: rttopo-librttopo
+kind: tool
+name: RTTOPO (librttopo)
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: Topology and geometry library derived from PostGIS liblwgeom, used by SpatiaLite.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: C
+interfaces:
+- C/C++
+call:
+- c-cpp
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://git.osgeo.org/gitea/rttopo/librttopo
+notes: Dependency of SpatiaLite topology.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 24

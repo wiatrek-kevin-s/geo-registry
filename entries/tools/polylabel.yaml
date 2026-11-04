@@ -1,0 +1,27 @@
+id: polylabel
+kind: tool
+name: polylabel
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: Finds the pole of inaccessibility, the best interior label point of a polygon.
+open_source: 'yes'
+license: ISC
+language: JavaScript (C++/Rust ports)
+interfaces:
+- JS
+- Rust
+- C/C++
+call:
+- js
+- c-cpp
+- rust
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/mapbox/polylabel
+notes: Label placement.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 218

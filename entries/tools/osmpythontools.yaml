@@ -1,0 +1,23 @@
+id: osmpythontools
+kind: tool
+name: OSMPythonTools
+category: OSM & Overture tooling
+subcategory: Cloud-native / analytics
+tool_kind: Library
+summary: Python wrappers for the OSM API, Overpass, Nominatim and ohsome with caching.
+open_source: 'yes'
+license: GPL-3.0-only
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/mocnik-science/osm-python-tools
+notes: Convenience wrapper for agents
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1196

@@ -1,0 +1,23 @@
+id: kosmo
+kind: tool
+name: Kosmo
+category: Desktop GIS & analysis engines
+subcategory: Open-source desktop GIS
+tool_kind: Application
+summary: Spanish desktop GIS derived from OpenJUMP with editing, database connectivity and printing tools.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: Java
+interfaces:
+- GUI
+- Java
+call:
+- java
+wrapped_by_columbus: false
+project_status: archived
+notes: Last release 2.0 in 2011; historical only
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 230

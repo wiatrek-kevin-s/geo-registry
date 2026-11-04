@@ -1,0 +1,23 @@
+id: harp-gl
+kind: tool
+name: harp.gl
+category: Display & visualization
+subcategory: 3D globes & 3D Tiles
+tool_kind: Library
+summary: HERE's former open-source 3D vector-tile web map renderer, archived in 2023.
+open_source: 'yes'
+license: Apache-2.0
+language: TypeScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: archived
+url: https://github.com/heremaps/harp.gl
+notes: Do not adopt
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1063

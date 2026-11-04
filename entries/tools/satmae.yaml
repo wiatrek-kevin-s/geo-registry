@@ -1,0 +1,26 @@
+id: satmae
+kind: tool
+name: SatMAE
+category: Imagery, remote sensing & GeoAI
+subcategory: GeoAI / deep learning
+tool_kind: Library
+summary: Masked autoencoder pretraining for temporal and multispectral satellite imagery.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: archived
+url: https://github.com/sustainlab-group/SatMAE
+notes: Research code
+also_categories:
+- AI, agents & MCP for GIS
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 454

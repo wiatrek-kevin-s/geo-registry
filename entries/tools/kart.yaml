@@ -1,0 +1,27 @@
+id: kart
+kind: tool
+name: Kart
+category: Connections & storage
+subcategory: Data versioning & Git
+tool_kind: Toolkit/CLI
+summary: Git-based distributed version control for vector and raster geodata and tables, with diffs and
+  merges.
+open_source: 'yes'
+license: LicenseRef-GPL-2.0-or-later-with-linking-exception
+license_original: GPL-2.0-or-later WITH linking exception
+language: Python; C++
+interfaces:
+- CLI
+- plugin
+call:
+- cli
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://kartproject.org/
+notes: QGIS plugin; agent can call kart CLI
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1471

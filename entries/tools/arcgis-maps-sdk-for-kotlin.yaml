@@ -1,0 +1,23 @@
+id: arcgis-maps-sdk-for-kotlin
+kind: tool
+name: ArcGIS Maps SDK for Kotlin
+category: Display & visualization
+subcategory: Native & mobile SDKs
+tool_kind: Library
+summary: Esri SDK for 2D/3D maps and offline GIS on Android.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Kotlin
+interfaces:
+- Java
+call:
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://developers.arcgis.com/kotlin/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1070

@@ -1,0 +1,23 @@
+id: postgis-topology
+kind: tool
+name: PostGIS Topology
+category: Spatial databases & query engines
+subcategory: PostgreSQL ecosystem
+tool_kind: Extension
+summary: Models shared-edge topological networks of nodes, edges and faces in PostgreSQL.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: C;PL/pgSQL
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: maintained
+url: https://postgis.net/docs/Topology.html
+notes: Useful for topology cleaning workflows
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 646

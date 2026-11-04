@@ -1,0 +1,22 @@
+id: osmdroid
+kind: tool
+name: osmdroid
+category: Display & visualization
+subcategory: Native & mobile SDKs
+tool_kind: Library
+summary: Android map view for OSM and other raster tile sources; archived in 2024.
+open_source: 'yes'
+license: Apache-2.0
+language: Java
+interfaces:
+- Java
+call:
+- java
+wrapped_by_columbus: false
+project_status: archived
+url: https://github.com/osmdroid/osmdroid
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1079

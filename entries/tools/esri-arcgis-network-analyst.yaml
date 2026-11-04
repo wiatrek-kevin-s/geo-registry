@@ -1,0 +1,28 @@
+id: esri-arcgis-network-analyst
+kind: tool
+name: Esri ArcGIS Network Analyst
+category: Routing, networks, geocoding & LRS
+subcategory: Accessibility & transport modeling
+tool_kind: Extension
+summary: ArcGIS Pro extension for routes, service areas, closest facility, OD matrices and vehicle routing
+  on network datasets.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++;Python
+interfaces:
+- GUI
+- Python
+- REST
+call:
+- python
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.esri.com/en-us/arcgis/products/arcgis-network-analyst/overview
+notes: arcpy.nax for scripting
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 799

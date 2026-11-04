@@ -1,0 +1,25 @@
+id: dvc
+kind: tool
+name: DVC
+category: Connections & storage
+subcategory: Data versioning & Git
+tool_kind: Toolkit/CLI
+summary: Data version control on top of Git for large files and ML pipelines on remote storage.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- CLI
+- Python
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://dvc.org/
+notes: Good for large raster training sets
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1473

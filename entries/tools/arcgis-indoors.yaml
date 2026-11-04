@@ -1,0 +1,23 @@
+id: arcgis-indoors
+kind: tool
+name: ArcGIS Indoors
+category: Commercial GIS platforms & APIs
+subcategory: Esri ArcGIS
+tool_kind: Platform
+summary: Indoor mapping and space-management system for buildings and campuses.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.esri.com/en-us/arcgis/products/arcgis-indoors/overview
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1374

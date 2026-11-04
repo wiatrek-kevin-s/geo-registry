@@ -1,0 +1,23 @@
+id: gpx-georust
+kind: tool
+name: gpx (GeoRust)
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Rust crate for reading and writing GPX files.
+open_source: 'yes'
+license: MIT
+language: Rust
+interfaces:
+- Rust
+call:
+- rust
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/georust/gpx
+notes: GPS tracks in Rust.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 219

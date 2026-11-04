@@ -1,0 +1,21 @@
+id: gpx
+kind: tool
+name: GPX
+category: Core libraries & formats
+subcategory: Vector formats
+tool_kind: Format/Standard
+summary: XML format for GPS waypoints, tracks and routes.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open (public schema)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.topografix.com/gpx.asp
+notes: Field GPS data import.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 174

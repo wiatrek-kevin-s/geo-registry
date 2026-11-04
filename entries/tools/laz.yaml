@@ -1,0 +1,23 @@
+id: laz
+kind: tool
+name: LAZ
+category: Core libraries & formats
+subcategory: Point cloud & 3D formats
+tool_kind: Format/Standard
+summary: Losslessly compressed LAS using LASzip.
+open_source: 'yes'
+license: Apache-2.0
+license_original: Apache-2.0 (LASzip)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://laszip.org
+notes: Usual distribution format.
+also_categories:
+- Point clouds, LiDAR & 3D
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 191

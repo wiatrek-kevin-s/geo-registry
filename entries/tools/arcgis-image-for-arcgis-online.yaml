@@ -1,0 +1,26 @@
+id: arcgis-image-for-arcgis-online
+kind: tool
+name: ArcGIS Image for ArcGIS Online
+category: Commercial GIS platforms & APIs
+subcategory: Esri ArcGIS
+tool_kind: Service/API
+summary: Extension for hosting, streaming and analyzing imagery and raster collections in ArcGIS Online.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- GUI
+- Python
+call:
+- python
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.esri.com/en-us/arcgis/products/arcgis-image/overview
+notes: URL is the ArcGIS Image family page
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1376

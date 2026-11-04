@@ -1,0 +1,21 @@
+id: jpeg-2000-gmljp2
+kind: tool
+name: JPEG 2000 / GMLJP2
+category: Core libraries & formats
+subcategory: Raster formats
+tool_kind: Format/Standard
+summary: Wavelet-compressed image format with embedded GML georeferencing, used by Sentinel-2.
+open_source: 'yes'
+license: LicenseRef-Multiple
+license_original: ISO standard; OGC GMLJP2
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.ogc.org/standards/gmljp2
+notes: Sentinel-2 L1C/L2A tiles.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 142

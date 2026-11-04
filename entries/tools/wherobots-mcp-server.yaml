@@ -1,0 +1,22 @@
+id: wherobots-mcp-server
+kind: tool
+name: Wherobots MCP Server
+category: AI, agents & MCP for GIS
+subcategory: Vendor/location MCP servers
+tool_kind: Server
+summary: Hosted MCP (16 tools) for catalog exploration and natural-language spatial SQL on WherobotsDB.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- MCP
+call:
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://docs.wherobots.com/develop/mcp/mcp-server-overview
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1532

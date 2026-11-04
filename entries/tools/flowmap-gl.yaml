@@ -1,0 +1,22 @@
+id: flowmap-gl
+kind: tool
+name: flowmap.gl
+category: Display & visualization
+subcategory: vis.gl / large-data WebGL
+tool_kind: Library
+summary: deck.gl layer for drawing origin-destination flow maps with clustering.
+open_source: 'yes'
+license: MIT
+language: TypeScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/visgl/flowmap.gl
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1056

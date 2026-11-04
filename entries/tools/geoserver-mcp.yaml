@@ -1,0 +1,23 @@
+id: geoserver-mcp
+kind: tool
+name: GeoServer MCP
+category: AI, agents & MCP for GIS
+subcategory: General GIS MCP servers
+tool_kind: Server
+summary: MCP server for managing GeoServer workspaces, layers and styles and querying WMS/WFS.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: Python
+interfaces:
+- MCP
+call:
+- mcp
+wrapped_by_columbus: false
+project_status: unknown
+url: https://github.com/mahdin75/geoserver-mcp
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1510

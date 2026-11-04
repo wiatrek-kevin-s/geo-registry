@@ -1,0 +1,27 @@
+id: openjump
+kind: tool
+name: OpenJUMP
+category: Desktop GIS & analysis engines
+subcategory: Open-source desktop GIS
+tool_kind: Application
+summary: Lightweight Java desktop GIS built on JTS for vector editing, topology checks and spatial analysis,
+  extensible via plugins.
+open_source: 'yes'
+license: GPL-2.0-only
+language: Java
+interfaces:
+- GUI
+- Java
+- plugin
+call:
+- java
+- plugin
+wrapped_by_columbus: false
+project_status: maintained
+url: https://openjump.org
+notes: Small JVM app; good JTS-based vector ops
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 229

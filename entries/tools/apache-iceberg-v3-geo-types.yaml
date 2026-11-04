@@ -1,0 +1,26 @@
+id: apache-iceberg-v3-geo-types
+kind: tool
+name: Apache Iceberg (v3 geo types)
+category: Connections & storage
+subcategory: Data catalogs with geo support
+tool_kind: Format/Standard
+summary: Open table format whose v3 spec adds native geometry and geography types.
+open_source: 'yes'
+license: Apache-2.0
+language: Java
+interfaces:
+- SQL
+- Python
+- Java
+call:
+- python
+- sql
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://iceberg.apache.org/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1478

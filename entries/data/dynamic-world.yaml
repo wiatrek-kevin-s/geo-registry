@@ -1,0 +1,21 @@
+id: dynamic-world
+kind: data
+name: Dynamic World
+summary: Near-real-time 10 m land-cover probabilities from each Sentinel-2 scene.
+publisher: Unknown
+themes:
+- global-land-cover
+- open-data-sources
+coverage:
+  region: Global
+license: CC-BY-4.0
+access:
+- type: http
+  url: https://dynamicworld.app/
+  auth: none
+notes: Mainly via Earth Engine
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1301

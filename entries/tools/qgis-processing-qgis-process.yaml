@@ -1,0 +1,27 @@
+id: qgis-processing-qgis-process
+kind: tool
+name: QGIS Processing / qgis_process
+category: Desktop GIS & analysis engines
+subcategory: Open-source desktop GIS
+tool_kind: Toolkit/CLI
+summary: Unified geoprocessing framework inside QGIS with a standalone qgis_process command that runs
+  any native, GDAL, GRASS or SAGA algorithm headless.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: C++; Python
+interfaces:
+- CLI
+- Python
+- GUI
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://docs.qgis.org/latest/en/docs/user_manual/processing/standalone.html
+notes: Agent can list and run hundreds of algorithms via JSON-friendly CLI
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 223

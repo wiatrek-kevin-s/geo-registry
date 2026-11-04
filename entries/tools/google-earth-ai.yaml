@@ -1,0 +1,24 @@
+id: google-earth-ai
+kind: tool
+name: Google Earth AI
+category: Commercial GIS platforms & APIs
+subcategory: Google
+tool_kind: Platform
+summary: Google's suite of geospatial foundation models plus an experimental Gemini geospatial reasoning
+  agent.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://research.google/blog/putting-earth-ai-to-work-geospatial-agents-for-our-planets-biggest-challenges/
+notes: Limited early access
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1401

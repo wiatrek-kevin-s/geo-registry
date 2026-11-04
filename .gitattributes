@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.sqlite binary
+# Seed spreadsheet is kept byte-for-byte as received (CRLF line endings).
+seed/*.csv -text

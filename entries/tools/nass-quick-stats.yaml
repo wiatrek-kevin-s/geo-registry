@@ -1,0 +1,22 @@
+id: nass-quick-stats
+kind: tool
+name: NASS Quick Stats
+category: Open data sources
+subcategory: US federal – USDA
+tool_kind: Service/API
+summary: API for US agricultural statistics by county and state.
+open_source: 'yes'
+license: LicenseRef-Public-Domain
+license_original: Public domain
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://quickstats.nass.usda.gov/api
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1276

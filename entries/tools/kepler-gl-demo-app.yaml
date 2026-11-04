@@ -1,0 +1,22 @@
+id: kepler-gl-demo-app
+kind: tool
+name: Kepler.gl demo app
+category: Display & visualization
+subcategory: Data viewers & editors
+tool_kind: Application
+summary: Hosted no-install instance of kepler.gl for loading local CSV/GeoJSON in the browser.
+open_source: 'yes'
+license: MIT
+language: TypeScript
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://kepler.gl/demo
+notes: Data stays client-side
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1154

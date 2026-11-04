@@ -1,0 +1,29 @@
+id: neo4j-native-point-type
+kind: tool
+name: Neo4j native point type
+category: Spatial databases & query engines
+subcategory: Graph
+tool_kind: Database
+summary: Built-in Cypher point values and point indexes for distance and bounding-box queries.
+open_source: partial
+license: GPL-3.0
+language: Java
+interfaces:
+- REST
+- Python
+- JS
+- Java
+call:
+- python
+- rest
+- js
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://neo4j.com/docs/cypher-manual/current/values-and-types/spatial/
+notes: Community edition GPL
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 725

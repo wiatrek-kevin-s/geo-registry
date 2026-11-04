@@ -1,0 +1,22 @@
+id: openrouteservice-py
+kind: tool
+name: openrouteservice-py
+category: Routing, networks, geocoding & LRS
+subcategory: Routing engines
+tool_kind: Library
+summary: Python client for the openrouteservice API covering directions, isochrones, matrix and geocoding.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/GIScience/openrouteservice-py
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 755

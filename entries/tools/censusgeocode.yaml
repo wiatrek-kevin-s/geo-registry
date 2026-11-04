@@ -1,0 +1,24 @@
+id: censusgeocode
+kind: tool
+name: censusgeocode
+category: Routing, networks, geocoding & LRS
+subcategory: Geocoding engines & libraries
+tool_kind: Library
+summary: Python wrapper for the US Census Bureau geocoder, including batch mode.
+open_source: 'yes'
+license: GPL-3.0
+language: Python
+interfaces:
+- Python
+- CLI
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/fitnr/censusgeocode
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 828

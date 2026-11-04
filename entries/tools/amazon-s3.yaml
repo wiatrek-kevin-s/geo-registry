@@ -1,0 +1,22 @@
+id: amazon-s3
+kind: tool
+name: Amazon S3
+category: Connections & storage
+subcategory: Object storage
+tool_kind: Service/API
+summary: AWS object storage and the de facto S3 API that many stores mimic.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://aws.amazon.com/s3/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1448

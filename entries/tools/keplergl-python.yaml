@@ -1,0 +1,22 @@
+id: keplergl-python
+kind: tool
+name: keplergl (Python)
+category: Display & visualization
+subcategory: Python notebook & app mapping
+tool_kind: Library
+summary: Jupyter widget and HTML exporter for kepler.gl maps.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://docs.kepler.gl/docs/keplergl-jupyter
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1088

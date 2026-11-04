@@ -1,0 +1,24 @@
+id: arcgis-rest-api
+kind: tool
+name: ArcGIS REST API
+category: Commercial GIS platforms & APIs
+subcategory: Esri ArcGIS
+tool_kind: Service/API
+summary: HTTP/JSON API exposed by ArcGIS Server, Online and Enterprise for map, feature, image and geoprocessing
+  services.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://developers.arcgis.com/rest/
+notes: Agent can query FeatureServer layers directly with plain HTTP
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1366

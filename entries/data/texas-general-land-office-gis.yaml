@@ -1,0 +1,21 @@
+id: texas-general-land-office-gis
+kind: data
+name: Texas General Land Office GIS
+summary: State lands, coastal boundaries, original land survey maps and leases.
+publisher: Texas General Land Office
+themes:
+- texas
+- open-data-sources
+coverage:
+  region: Texas
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.glo.texas.gov/land/land-management/gis/index.html
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1345

@@ -1,0 +1,21 @@
+id: arcgis-streetmap-premium-locators
+kind: data
+name: ArcGIS StreetMap Premium / locators
+summary: Esri's licensed locator files and network data for offline geocoding and routing in ArcGIS Pro.
+publisher: Esri
+themes:
+- geocoding-services
+- routing-networks-geocoding-lrs
+coverage:
+  region: Unspecified
+license: LicenseRef-Proprietary
+license_original: Proprietary
+access:
+- type: http
+  url: https://www.esri.com/en-us/arcgis/products/arcgis-streetmap-premium/overview
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 835

@@ -1,0 +1,25 @@
+id: mapstore
+kind: tool
+name: MapStore
+category: Display & visualization
+subcategory: Web GIS application frameworks
+tool_kind: Application
+summary: React-based web GIS framework and app for building maps, dashboards and geostories over OGC services.
+open_source: 'yes'
+license: BSD-2-Clause
+language: JavaScript
+interfaces:
+- GUI
+- OGC
+- JS
+call:
+- js
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/geosolutions-it/MapStore2
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1155

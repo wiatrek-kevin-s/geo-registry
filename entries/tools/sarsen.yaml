@@ -1,0 +1,22 @@
+id: sarsen
+kind: tool
+name: sarsen
+category: Imagery, remote sensing & GeoAI
+subcategory: SAR processing
+tool_kind: Library
+summary: Algorithms for SAR terrain correction and simulation using xarray.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/bopen/sarsen
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 503

@@ -1,0 +1,24 @@
+id: osm-inspector
+kind: tool
+name: OSM Inspector
+category: OSM & Overture tooling
+subcategory: QA & coordination
+tool_kind: Service/API
+summary: Geofabrik web tool with QA views for routing, tagging and boundary problems in OSM.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: maintained
+url: https://tools.geofabrik.de/osmi/
+notes: Provides WMS layers
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1223

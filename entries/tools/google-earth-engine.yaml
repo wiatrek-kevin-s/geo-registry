@@ -1,0 +1,31 @@
+id: google-earth-engine
+kind: tool
+name: Google Earth Engine
+category: Imagery, remote sensing & GeoAI
+subcategory: Cloud EO platforms
+tool_kind: Platform
+summary: Cloud platform with a petabyte catalog and server-side API for planetary-scale geospatial analysis.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: JavaScript;Python
+interfaces:
+- JS
+- Python
+- REST
+- GUI
+call:
+- python
+- rest
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://earthengine.google.com
+notes: Needs Google Cloud project; commercial use paid
+also_categories:
+- Commercial GIS platforms & APIs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 390

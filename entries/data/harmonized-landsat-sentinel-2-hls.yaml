@@ -1,0 +1,21 @@
+id: harmonized-landsat-sentinel-2-hls
+kind: data
+name: Harmonized Landsat Sentinel-2 (HLS)
+summary: Consistent 30 m surface reflectance merging Landsat 8/9 and Sentinel-2.
+publisher: Unknown
+themes:
+- us-federal-nasa
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://hls.gsfc.nasa.gov/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1268

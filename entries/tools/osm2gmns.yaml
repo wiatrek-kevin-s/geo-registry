@@ -1,0 +1,22 @@
+id: osm2gmns
+kind: tool
+name: osm2gmns
+category: Routing, networks, geocoding & LRS
+subcategory: Accessibility & transport modeling
+tool_kind: Library
+summary: Converts OSM into networks in the GMNS (General Modeling Network Specification) format.
+open_source: 'yes'
+license: GPL-3.0-or-later
+language: Python;C++
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/jiawlu/OSM2GMNS
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 792

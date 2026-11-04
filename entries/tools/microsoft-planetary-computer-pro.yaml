@@ -1,0 +1,29 @@
+id: microsoft-planetary-computer-pro
+kind: tool
+name: Microsoft Planetary Computer Pro
+category: Imagery, remote sensing & GeoAI
+subcategory: Cloud EO platforms
+tool_kind: Service/API
+summary: Azure service for ingesting, cataloging and serving private geospatial data through STAC and
+  tiling APIs.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- Python
+- GUI
+call:
+- python
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://azure.microsoft.com/en-us/products/planetary-computer-pro
+notes: Paid Azure resource
+also_categories:
+- Commercial GIS platforms & APIs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 395

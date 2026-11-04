@@ -1,0 +1,25 @@
+id: neon-postgis
+kind: tool
+name: Neon (PostGIS)
+category: Spatial databases & query engines
+subcategory: Managed PostgreSQL
+tool_kind: Service/API
+summary: Serverless branching Postgres service supporting PostGIS.
+open_source: partial
+license: Apache-2.0
+language: Rust;C
+interfaces:
+- SQL
+- REST
+call:
+- rest
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://neon.tech
+notes: Cheap dev PostGIS
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 664

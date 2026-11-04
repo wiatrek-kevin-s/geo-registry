@@ -1,0 +1,22 @@
+id: globe-gl
+kind: tool
+name: Globe.gl
+category: Display & visualization
+subcategory: vis.gl / large-data WebGL
+tool_kind: Library
+summary: Three.js-based component for 3D globe data visualizations such as arcs, points and hex bins.
+open_source: 'yes'
+license: MIT
+language: JavaScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/vasturiano/globe.gl
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1058

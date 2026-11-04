@@ -1,0 +1,22 @@
+id: arcgis-living-atlas-of-the-world
+kind: data
+name: ArcGIS Living Atlas of the World
+summary: Curated collection of Esri and partner basemaps, imagery, demographics and authoritative layers.
+publisher: Esri
+themes:
+- esri-arcgis
+- commercial-gis-platforms-apis
+coverage:
+  region: Unspecified
+license: LicenseRef-Proprietary
+license_original: Proprietary
+access:
+- type: http
+  url: https://livingatlas.arcgis.com/
+  auth: none
+notes: Ready-made context layers; some need subscription credits
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1377

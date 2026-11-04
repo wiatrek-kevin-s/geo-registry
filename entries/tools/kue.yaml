@@ -1,0 +1,25 @@
+id: kue
+kind: tool
+name: Kue
+category: AI, agents & MCP for GIS
+subcategory: QGIS AI & MCP
+tool_kind: Extension
+summary: Bunting Labs' paid ($19/mo) AI assistant inside QGIS for symbology, geoprocessing and sharing.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Python
+interfaces:
+- GUI
+- plugin
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://buntinglabs.com/solutions/kue-ai
+notes: Last plugin release Feb 2025; company focus moved to Mundi
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1505

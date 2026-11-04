@@ -1,0 +1,25 @@
+id: pgpointcloud
+kind: tool
+name: pgPointcloud
+category: Point clouds, LiDAR & 3D
+subcategory: Core processing
+tool_kind: Extension
+summary: PostgreSQL extension that stores point cloud patches in the database with PostGIS integration.
+open_source: 'yes'
+license: BSD-3-Clause
+language: C
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/pgpointcloud/pointcloud
+notes: SQL access to lidar alongside PostGIS vectors.
+also_categories:
+- Spatial databases & query engines
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 531

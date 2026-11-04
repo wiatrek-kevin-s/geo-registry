@@ -1,0 +1,27 @@
+id: arcgis-utility-network
+kind: tool
+name: ArcGIS Utility Network
+category: Commercial GIS platforms & APIs
+subcategory: Esri ArcGIS
+tool_kind: Platform
+summary: Geodatabase-based network model for electric, gas, water and telecom utilities with tracing and
+  topology.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+- REST
+- Python
+call:
+- python
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.esri.com/en-us/arcgis/products/arcgis-utility-network/overview
+notes: Complex schema; agent help valuable
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1373

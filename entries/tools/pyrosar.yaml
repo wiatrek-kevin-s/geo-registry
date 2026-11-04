@@ -1,0 +1,22 @@
+id: pyrosar
+kind: tool
+name: pyroSAR
+category: Imagery, remote sensing & GeoAI
+subcategory: SAR processing
+tool_kind: Library
+summary: Python framework for organising and processing SAR data through SNAP and GAMMA.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/johntruckenbrodt/pyroSAR
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 495

@@ -1,0 +1,26 @@
+id: google-drive-api
+kind: tool
+name: Google Drive API
+category: Connections & storage
+subcategory: Identity & document stores
+tool_kind: Service/API
+summary: REST API for listing, downloading and uploading files in Google Drive.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- Python
+- JS
+call:
+- python
+- rest
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://developers.google.com/drive/api
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1444

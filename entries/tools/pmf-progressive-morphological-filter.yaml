@@ -1,0 +1,28 @@
+id: pmf-progressive-morphological-filter
+kind: tool
+name: PMF (Progressive Morphological Filter)
+category: Point clouds, LiDAR & 3D
+subcategory: Ground classification
+tool_kind: Library
+summary: Classic ground filter that grows a morphological window to separate ground from objects; available
+  in PDAL, PCL and lidR.
+open_source: 'yes'
+license: BSD-3-Clause
+language: C++
+interfaces:
+- CLI
+- Python
+- R
+call:
+- python
+- cli
+- r
+wrapped_by_columbus: false
+project_status: maintained
+url: https://pdal.org/en/stable/stages/filters.pmf.html
+notes: Algorithm row; implementations also in PCL and lidR.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 567

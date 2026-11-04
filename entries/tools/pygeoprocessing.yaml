@@ -1,0 +1,23 @@
+id: pygeoprocessing
+kind: tool
+name: pygeoprocessing
+category: Desktop GIS & analysis engines
+subcategory: Python vector analysis
+tool_kind: Library
+summary: NatCap's library of memory-efficient raster and vector geoprocessing routines behind InVEST.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python; C++
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/natcap/pygeoprocessing
+notes: Blockwise raster ops
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 293

@@ -1,0 +1,27 @@
+id: gdal-esrijson-driver
+kind: tool
+name: GDAL ESRIJSON driver
+category: Connections & storage
+subcategory: Esri connections & auth
+tool_kind: Library
+summary: OGR driver that reads Esri JSON and pages through ArcGIS FeatureServer/MapServer query results.
+open_source: 'yes'
+license: MIT
+language: C++
+interfaces:
+- CLI
+- Python
+- C/C++
+call:
+- python
+- cli
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://gdal.org/en/stable/drivers/vector/esrijson.html
+notes: ogr2ogr can pull REST layers into GeoPackage
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1435

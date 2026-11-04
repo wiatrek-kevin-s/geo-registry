@@ -1,0 +1,22 @@
+id: spreg
+kind: tool
+name: spreg
+category: Desktop GIS & analysis engines
+subcategory: Spatial statistics (Python / PySAL)
+tool_kind: Library
+summary: Spatial econometric regression models including spatial lag, error, SUR and diagnostics.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/pysal/spreg
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 307

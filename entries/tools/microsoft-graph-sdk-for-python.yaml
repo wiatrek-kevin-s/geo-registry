@@ -1,0 +1,22 @@
+id: microsoft-graph-sdk-for-python
+kind: tool
+name: Microsoft Graph SDK for Python
+category: Connections & storage
+subcategory: Identity & document stores
+tool_kind: Library
+summary: Official Python client for Microsoft Graph.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/microsoftgraph/msgraph-sdk-python
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1443

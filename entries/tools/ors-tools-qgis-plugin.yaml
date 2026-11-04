@@ -1,0 +1,23 @@
+id: ors-tools-qgis-plugin
+kind: tool
+name: ORS Tools (QGIS plugin)
+category: Routing, networks, geocoding & LRS
+subcategory: Routing engines
+tool_kind: Extension
+summary: QGIS plugin to request openrouteservice routes, isochrones and matrices from map layers.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: Python
+interfaces:
+- GUI
+- plugin
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: maintained
+url: https://plugins.qgis.org/plugins/ORStools/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 756

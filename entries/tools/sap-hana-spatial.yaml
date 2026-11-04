@@ -1,0 +1,25 @@
+id: sap-hana-spatial
+kind: tool
+name: SAP HANA Spatial
+category: Spatial databases & query engines
+subcategory: Commercial RDBMS
+tool_kind: Database
+summary: ST_Geometry/ST_Point types, spatial joins and clustering in SAP HANA.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- SQL
+- Python
+call:
+- python
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://help.sap.com/docs/SAP_HANA_PLATFORM
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 701

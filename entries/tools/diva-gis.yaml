@@ -1,0 +1,23 @@
+id: diva-gis
+kind: tool
+name: DIVA-GIS
+category: Desktop GIS & analysis engines
+subcategory: Open-source desktop GIS
+tool_kind: Application
+summary: Free Windows GIS aimed at biodiversity and genetic-resources mapping, species distribution modelling
+  and simple climate analysis.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://www.diva-gis.org
+notes: Freeware, not open source; largely unchanged since ~2012
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 234

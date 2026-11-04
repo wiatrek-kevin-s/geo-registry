@@ -1,0 +1,24 @@
+id: file-geodatabase-api
+kind: tool
+name: File Geodatabase API
+category: Commercial GIS platforms & APIs
+subcategory: Esri ArcGIS
+tool_kind: Library
+summary: Esri's C++ (and .NET) library for reading and writing file geodatabases on Windows, macOS and
+  Linux.
+open_source: 'yes'
+license: Apache-2.0
+language: C++
+interfaces:
+- C/C++
+call:
+- c-cpp
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/Esri/file-geodatabase-api
+notes: Used by GDAL FileGDB driver; OpenFileGDB covers most needs without it
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1380

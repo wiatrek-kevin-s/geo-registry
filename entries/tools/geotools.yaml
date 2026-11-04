@@ -1,0 +1,23 @@
+id: geotools
+kind: tool
+name: GeoTools
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Java toolkit implementing OGC standards with data stores, rendering and CRS support.
+open_source: 'yes'
+license: LGPL-2.1
+language: Java
+interfaces:
+- Java
+call:
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://geotools.org
+notes: Core of GeoServer; JVM.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 55

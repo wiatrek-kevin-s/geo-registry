@@ -1,0 +1,23 @@
+id: esri-st-geometry
+kind: tool
+name: Esri ST_Geometry
+category: Connections & storage
+subcategory: Esri connections & auth
+tool_kind: Format/Standard
+summary: Esri spatial type and SQL functions installed in Oracle/PostgreSQL enterprise geodatabases.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: active
+notes: Non-ArcGIS clients need Esri's st_shapelib; GDAL cannot read it natively
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1432

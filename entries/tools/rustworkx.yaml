@@ -1,0 +1,25 @@
+id: rustworkx
+kind: tool
+name: rustworkx
+category: Routing, networks, geocoding & LRS
+subcategory: Accessibility & transport modeling
+tool_kind: Library
+summary: High-performance graph library for Python implemented in Rust.
+open_source: 'yes'
+license: Apache-2.0
+language: Rust;Python
+interfaces:
+- Python
+- Rust
+call:
+- python
+- rust
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/Qiskit/rustworkx
+notes: Faster NetworkX alternative
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 783

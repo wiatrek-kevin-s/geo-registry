@@ -1,0 +1,22 @@
+id: autonomous-gis-research-agenda
+kind: tool
+name: Autonomous GIS (research agenda)
+category: AI, agents & MCP for GIS
+subcategory: LLM GIS agents & research
+tool_kind: Format/Standard
+summary: Penn State paper framing the next-generation AI-powered GIS with self-generating, self-executing
+  agents.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://giscience.psu.edu/cool_timeline/autonomous-gis-autogis-the-next-generation-ai-powered-gis
+notes: Conceptual reference
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1554

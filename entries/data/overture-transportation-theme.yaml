@@ -1,0 +1,20 @@
+id: overture-transportation-theme
+kind: data
+name: Overture Transportation theme
+summary: Global road, rail and path network segments and connectors.
+publisher: Overture Maps Foundation
+themes:
+- global-transport
+- open-data-sources
+coverage:
+  region: Global
+license: ODbL-1.0
+access:
+- type: http
+  url: https://docs.overturemaps.org/guides/transportation/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1311

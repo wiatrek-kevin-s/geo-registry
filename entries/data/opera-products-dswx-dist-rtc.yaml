@@ -1,0 +1,22 @@
+id: opera-products-dswx-dist-rtc
+kind: data
+name: OPERA products (DSWx, DIST, RTC)
+summary: JPL analysis-ready products including surface water, disturbance and radiometrically corrected
+  SAR.
+publisher: Unknown
+themes:
+- sar-processing
+- imagery-remote-sensing-geoai
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.jpl.nasa.gov/go/opera
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 502

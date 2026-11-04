@@ -1,0 +1,26 @@
+id: matlab-mapping-toolbox
+kind: tool
+name: MATLAB Mapping Toolbox
+category: Desktop GIS & analysis engines
+subcategory: Commercial desktop GIS
+tool_kind: Extension
+summary: MATLAB add-on for map projections, geographic data import, raster and vector analysis and map
+  display.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: MATLAB
+interfaces:
+- GUI
+- plugin
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://www.mathworks.com/products/mapping.html
+notes: Common in academia/engineering
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 273

@@ -1,0 +1,21 @@
+id: prithvi-ibm-nasa
+kind: data
+name: Prithvi (IBM-NASA)
+summary: IBM-NASA family of pretrained geospatial foundation models for HLS imagery, weather and climate.
+publisher: Unknown
+themes:
+- geoai-deep-learning
+- imagery-remote-sensing-geoai
+coverage:
+  region: Unspecified
+license: Apache-2.0
+access:
+- type: http
+  url: https://huggingface.co/ibm-nasa-geospatial
+  auth: none
+notes: Weights on Hugging Face
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 448

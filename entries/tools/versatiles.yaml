@@ -1,0 +1,30 @@
+id: versatiles
+kind: tool
+name: VersaTiles
+category: Servers, standards, tiles & catalogs
+subcategory: Tile generation & packaging
+tool_kind: Toolkit/CLI
+summary: Toolbox for converting, checking and serving map tiles across MBTiles, PMTiles and its own container
+  format.
+open_source: 'yes'
+license: MIT
+language: Rust
+interfaces:
+- CLI
+- REST
+- JS
+call:
+- cli
+- rest
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/versatiles-org/versatiles-rs
+notes: Includes free OSM basemap tiles
+also_categories:
+- Display & visualization
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 924

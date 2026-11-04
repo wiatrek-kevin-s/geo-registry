@@ -1,0 +1,26 @@
+id: cgal
+kind: tool
+name: CGAL
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: Computational geometry library with exact predicates, triangulations, meshes and polygon operations.
+open_source: 'yes'
+license: GPL-3.0-or-later OR LGPL-3.0-or-later OR LicenseRef-Commercial
+license_original: GPL-3.0-or-later OR LGPL-3.0-or-later (dual commercial)
+language: C++
+interfaces:
+- C/C++
+- Python
+call:
+- python
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://www.cgal.org
+notes: GPL for most packages; commercial licence via GeometryFactory.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 9

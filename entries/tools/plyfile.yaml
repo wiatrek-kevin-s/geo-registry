@@ -1,0 +1,23 @@
+id: plyfile
+kind: tool
+name: plyfile
+category: Point clouds, LiDAR & 3D
+subcategory: Point cloud & mesh libraries
+tool_kind: Library
+summary: NumPy-based Python reader and writer for PLY files.
+open_source: 'yes'
+license: GPL-3.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/dranjan/python-plyfile
+notes: Reads splat and scan PLYs.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 580

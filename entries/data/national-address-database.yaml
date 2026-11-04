@@ -1,0 +1,22 @@
+id: national-address-database
+kind: data
+name: National Address Database
+summary: DOT-compiled national address points from state and local contributors.
+publisher: Unknown
+themes:
+- us-federal-addresses
+- open-data-sources
+coverage:
+  region: United States
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.transportation.gov/gis/national-address-database
+  auth: none
+notes: Texas coverage partial
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1256

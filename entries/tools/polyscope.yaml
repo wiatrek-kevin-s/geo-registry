@@ -1,0 +1,26 @@
+id: polyscope
+kind: tool
+name: Polyscope
+category: Point clouds, LiDAR & 3D
+subcategory: Point cloud & mesh libraries
+tool_kind: Library
+summary: Lightweight viewer and UI for 3D meshes and point clouds in C++ and Python.
+open_source: 'yes'
+license: MIT
+language: C++;Python
+interfaces:
+- Python
+- C/C++
+- GUI
+call:
+- python
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://polyscope.run
+notes: Fast local debug visualizer.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 579

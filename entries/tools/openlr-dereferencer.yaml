@@ -1,0 +1,22 @@
+id: openlr-dereferencer
+kind: tool
+name: openlr-dereferencer
+category: Routing, networks, geocoding & LRS
+subcategory: Network & traffic referencing standards
+tool_kind: Library
+summary: Python decoder that matches OpenLR references onto a target road network.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/tomtom-international/openlr-dereferencer-python
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 881

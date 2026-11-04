@@ -1,0 +1,23 @@
+id: alphaearth-foundations-satellite-embedding
+kind: data
+name: AlphaEarth Foundations / Satellite Embedding
+summary: Google DeepMind annual 64-dimension embedding dataset of global land surfaces, available in Earth
+  Engine.
+publisher: Unknown
+themes:
+- geoai-deep-learning
+- imagery-remote-sensing-geoai
+- ai-agents-mcp-for-gis
+coverage:
+  region: Global
+license: CC-BY-4.0
+access:
+- type: http
+  url: https://developers.google.com/earth-engine/datasets/catalog/GOOGLE_SATELLITE_EMBEDDING_V1_ANNUAL
+  auth: none
+notes: Model closed; embeddings open
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 453

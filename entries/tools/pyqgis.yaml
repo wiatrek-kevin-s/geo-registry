@@ -1,0 +1,23 @@
+id: pyqgis
+kind: tool
+name: PyQGIS
+category: Desktop GIS & analysis engines
+subcategory: Open-source desktop GIS
+tool_kind: Library
+summary: Python bindings to the QGIS core, GUI and analysis APIs for scripts, plugins and standalone apps.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: Python; C++
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://qgis.org
+notes: Headless QGIS from Python; heavy install footprint
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 224

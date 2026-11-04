@@ -1,0 +1,21 @@
+id: e57-astm-e2807
+kind: tool
+name: E57 (ASTM E2807)
+category: Point clouds, LiDAR & 3D
+subcategory: Formats
+tool_kind: Format/Standard
+summary: Vendor-neutral standard for terrestrial laser scan point clouds, images and metadata.
+open_source: partial
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.astm.org/e2807-11r19.html
+notes: Common export from TLS scanners; ASTM standard text is paywalled.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 539

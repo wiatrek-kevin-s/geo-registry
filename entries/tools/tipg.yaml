@@ -1,0 +1,27 @@
+id: tipg
+kind: tool
+name: TiPg
+category: Servers, standards, tiles & catalogs
+subcategory: Map & feature servers
+tool_kind: Server
+summary: FastAPI application serving PostGIS tables as OGC API Features and vector Tiles.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- REST
+- OGC
+- Python
+call:
+- python
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/developmentseed/tipg
+notes: Python-native alternative to pg_featureserv/pg_tileserv
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 901

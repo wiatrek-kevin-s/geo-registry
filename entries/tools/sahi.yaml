@@ -1,0 +1,24 @@
+id: sahi
+kind: tool
+name: SAHI
+category: Imagery, remote sensing & GeoAI
+subcategory: GeoAI / deep learning
+tool_kind: Library
+summary: Sliced inference for detecting small objects in large images such as satellite scenes.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+- CLI
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/obss/sahi
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 461

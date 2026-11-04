@@ -1,0 +1,27 @@
+id: scidb
+kind: tool
+name: SciDB
+category: Spatial databases & query engines
+subcategory: Array / raster databases
+tool_kind: Database
+summary: Array database for scientific data from Paradigm4.
+open_source: partial
+license: AGPL-3.0
+language: C++
+interfaces:
+- SQL
+- Python
+- R
+call:
+- python
+- r
+- sql
+wrapped_by_columbus: false
+project_status: archived
+url: https://www.paradigm4.com
+notes: Community edition no longer actively released
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 728

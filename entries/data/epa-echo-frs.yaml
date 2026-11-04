@@ -1,0 +1,21 @@
+id: epa-echo-frs
+kind: data
+name: EPA ECHO / FRS
+summary: Facility registry and enforcement/compliance records with locations.
+publisher: U.S. Environmental Protection Agency
+themes:
+- us-federal-epa
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://echo.epa.gov/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1284

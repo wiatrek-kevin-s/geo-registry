@@ -1,0 +1,22 @@
+id: ngeo
+kind: tool
+name: ngeo
+category: Display & visualization
+subcategory: Web GIS application frameworks
+tool_kind: Library
+summary: OpenLayers-based client library behind GeoMapFish web portals.
+open_source: 'yes'
+license: MIT
+language: JavaScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/camptocamp/ngeo
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1158

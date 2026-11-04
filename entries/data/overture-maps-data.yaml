@@ -1,0 +1,23 @@
+id: overture-maps-data
+kind: data
+name: Overture Maps data
+summary: 'Monthly open global map releases in GeoParquet: places, buildings, transportation, divisions,
+  base and addresses.'
+publisher: Overture Maps Foundation
+themes:
+- overture-maps
+- osm-overture-tooling
+coverage:
+  region: Global
+license: LicenseRef-Multiple
+license_original: CDLA-Permissive-2.0; ODbL-1.0
+access:
+- type: http
+  url: https://overturemaps.org/
+  auth: none
+notes: Licence varies by theme (ODbL for OSM-derived); query with DuckDB on S3/Azure
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1230

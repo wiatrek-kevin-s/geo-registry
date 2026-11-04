@@ -1,0 +1,21 @@
+id: esri-crf-mrf
+kind: tool
+name: Esri CRF / MRF
+category: Core libraries & formats
+subcategory: Raster formats
+tool_kind: Format/Standard
+summary: Meta Raster Format (NASA/Esri, open) and Esri's Cloud Raster Format for tiled cloud rasters.
+open_source: partial
+license: LicenseRef-Multiple
+license_original: Apache-2.0 (MRF); Proprietary (CRF)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/nasa-gibs/mrf
+notes: CRF is ArcGIS-specific.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 148

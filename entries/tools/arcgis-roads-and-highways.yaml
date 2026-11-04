@@ -1,0 +1,30 @@
+id: arcgis-roads-and-highways
+kind: tool
+name: ArcGIS Roads and Highways
+category: Routing, networks, geocoding & LRS
+subcategory: Linear referencing (LRS)
+tool_kind: Extension
+summary: Esri extension for managing multi-method linear referencing systems, routes, events and their
+  time-aware history for DOTs.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Python;C++
+interfaces:
+- GUI
+- Python
+- REST
+call:
+- python
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.esri.com/en-us/arcgis/products/arcgis-roads-highways/overview
+notes: Core LRS platform for most US DOTs, including TxDOT
+also_categories:
+- Commercial GIS platforms & APIs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 856

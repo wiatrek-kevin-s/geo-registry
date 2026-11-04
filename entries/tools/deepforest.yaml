@@ -1,0 +1,22 @@
+id: deepforest
+kind: tool
+name: DeepForest
+category: Imagery, remote sensing & GeoAI
+subcategory: GeoAI / deep learning
+tool_kind: Library
+summary: Detects individual tree crowns and birds in RGB aerial imagery with pretrained models.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/weecology/DeepForest
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 458

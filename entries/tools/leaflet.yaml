@@ -1,0 +1,23 @@
+id: leaflet
+kind: tool
+name: Leaflet
+category: Display & visualization
+subcategory: Web map libraries
+tool_kind: Library
+summary: Lightweight library for interactive tiled web maps with a large plugin ecosystem.
+open_source: 'yes'
+license: BSD-2-Clause
+language: JavaScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://leafletjs.com/
+notes: Simple, widely understood; many Python wrappers build on it
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1017

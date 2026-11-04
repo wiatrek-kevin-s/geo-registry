@@ -1,0 +1,28 @@
+id: digital-earth-australia
+kind: tool
+name: Digital Earth Australia
+category: Imagery, remote sensing & GeoAI
+subcategory: Cloud EO platforms
+tool_kind: Platform
+summary: Geoscience Australia's Open Data Cube deployment providing analysis-ready Landsat/Sentinel products
+  for Australia.
+open_source: partial
+license: CC-BY-4.0
+language: Python
+interfaces:
+- REST
+- OGC
+- Python
+call:
+- python
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://www.dea.ga.gov.au
+notes: Open data and notebooks
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 412

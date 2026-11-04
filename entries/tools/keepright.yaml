@@ -1,0 +1,22 @@
+id: keepright
+kind: tool
+name: KeepRight
+category: OSM & Overture tooling
+subcategory: QA & coordination
+tool_kind: Service/API
+summary: Older OSM data-error checker showing problems on a map.
+open_source: 'yes'
+license: GPL-3.0-only
+language: PHP
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: archived
+url: https://wiki.openstreetmap.org/wiki/Keep_Right
+notes: Largely superseded by Osmose
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1224

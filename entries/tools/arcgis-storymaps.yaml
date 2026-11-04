@@ -1,0 +1,23 @@
+id: arcgis-storymaps
+kind: tool
+name: ArcGIS StoryMaps
+category: Display & visualization
+subcategory: Hosted web map makers
+tool_kind: Application
+summary: Esri app for narrative web stories mixing maps, text and media.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://storymaps.arcgis.com/
+also_categories:
+- Commercial GIS platforms & APIs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1144

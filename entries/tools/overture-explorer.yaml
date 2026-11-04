@@ -1,0 +1,21 @@
+id: overture-explorer
+kind: tool
+name: Overture Explorer
+category: OSM & Overture tooling
+subcategory: Overture Maps
+tool_kind: Application
+summary: Web map for browsing current Overture releases and inspecting features.
+open_source: 'yes'
+license: MIT
+language: JavaScript
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://explore.overturemaps.org/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1232

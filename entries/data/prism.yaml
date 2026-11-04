@@ -1,0 +1,21 @@
+id: prism
+kind: data
+name: PRISM
+summary: Gridded US climate data from Oregon State; recent and normals free.
+publisher: Unknown
+themes:
+- global-climate
+- open-data-sources
+coverage:
+  region: United States
+license: LicenseRef-Custom
+license_original: Custom
+access:
+- type: http
+  url: https://prism.oregonstate.edu/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1323

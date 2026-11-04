@@ -1,0 +1,22 @@
+id: google-earth-pro
+kind: tool
+name: Google Earth Pro
+category: Commercial GIS platforms & APIs
+subcategory: Google
+tool_kind: Application
+summary: Free desktop globe for viewing imagery, KML and historical imagery.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.google.com/earth/about/versions/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1400

@@ -1,0 +1,27 @@
+id: openeaggr
+kind: tool
+name: OpenEAGGR
+category: Core libraries & formats
+subcategory: Discrete global grids & geocodes
+tool_kind: Library
+summary: Open equal-area global grid library supporting ISEA hexagonal and triangular cells.
+open_source: 'yes'
+license: LGPL-3.0
+language: C++
+interfaces:
+- C/C++
+- Python
+- Java
+call:
+- python
+- c-cpp
+- java
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/riskaware-ltd/open-eaggr
+notes: Older DGGS implementation.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 124

@@ -1,0 +1,23 @@
+id: flowmap-city
+kind: tool
+name: Flowmap City
+category: Display & visualization
+subcategory: vis.gl / large-data WebGL
+tool_kind: Application
+summary: Hosted tool for building interactive origin-destination flow maps from spreadsheets (successor
+  to Flowmap.blue).
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: TypeScript
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: unknown
+url: https://www.flowmap.city/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1057

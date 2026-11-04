@@ -1,0 +1,22 @@
+id: fema-nfhl
+kind: data
+name: FEMA NFHL
+summary: National Flood Hazard Layer of effective flood zones and FIRM panels.
+publisher: Federal Emergency Management Agency
+themes:
+- us-federal-hazards
+- open-data-sources
+coverage:
+  region: United States
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.fema.gov/flood-maps/national-flood-hazard-layer
+  auth: none
+notes: Key for Austin floodplain work
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1254

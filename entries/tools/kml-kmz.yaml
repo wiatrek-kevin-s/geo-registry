@@ -1,0 +1,21 @@
+id: kml-kmz
+kind: tool
+name: KML / KMZ
+category: Core libraries & formats
+subcategory: Vector formats
+tool_kind: Format/Standard
+summary: XML language for placemarks, styles and overlays originating in Google Earth.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open standard (OGC)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.ogc.org/standards/kml
+notes: Common user-supplied format.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 171

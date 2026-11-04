@@ -1,0 +1,22 @@
+id: arcgis-earth
+kind: tool
+name: ArcGIS Earth
+category: Display & visualization
+subcategory: 3D globes & 3D Tiles
+tool_kind: Application
+summary: Free Esri desktop 3D globe for viewing KML, ArcGIS services and local data.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C#
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.esri.com/en-us/arcgis/products/arcgis-earth/overview
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1068

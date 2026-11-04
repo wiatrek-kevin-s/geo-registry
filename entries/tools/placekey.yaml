@@ -1,0 +1,27 @@
+id: placekey
+kind: tool
+name: Placekey
+category: Core libraries & formats
+subcategory: Discrete global grids & geocodes
+tool_kind: Service/API
+summary: Universal place identifier combining address encoding with an H3-based location part.
+open_source: partial
+license: LicenseRef-Multiple
+license_original: Proprietary API (free tier); spec open
+interfaces:
+- REST
+- Python
+call:
+- python
+- rest
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.placekey.io
+notes: POI join key; API needs key.
+also_categories:
+- Routing, networks, geocoding & LRS
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 129

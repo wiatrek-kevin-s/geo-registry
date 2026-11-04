@@ -1,0 +1,20 @@
+id: osm-carto
+kind: data
+name: OSM Carto
+summary: The CartoCSS stylesheet behind the standard OpenStreetMap map rendering.
+publisher: Unknown
+themes:
+- map-style-tools-specs
+- display-visualization
+coverage:
+  region: Unspecified
+license: CC0-1.0
+access:
+- type: http
+  url: https://github.com/gravitystorm/openstreetmap-carto
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1168

@@ -1,0 +1,26 @@
+id: lp360
+kind: tool
+name: LP360
+category: Point clouds, LiDAR & 3D
+subcategory: Lidar processing suites
+tool_kind: Application
+summary: Lidar and drone point cloud processing for classification, QA and volumetrics, standalone or
+  in ArcGIS.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+- plugin
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://www.geocue.com/lp360
+notes: Common in drone survey workflows.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 563

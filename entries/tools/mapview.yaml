@@ -1,0 +1,22 @@
+id: mapview
+kind: tool
+name: mapview
+category: Display & visualization
+subcategory: R mapping
+tool_kind: Library
+summary: Quick interactive viewing of sf, terra and stars objects in R.
+open_source: 'yes'
+license: GPL-3.0-or-later
+language: R
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/r-spatial/mapview
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1107

@@ -1,0 +1,27 @@
+id: safe-fme-engine
+kind: tool
+name: Safe FME Engine
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Platform
+summary: Commercial data integration engine translating hundreds of GIS, CAD and database formats.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+- CLI
+- Python
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://fme.safe.com
+notes: Commercial alternative to GDAL for exotic formats.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 95

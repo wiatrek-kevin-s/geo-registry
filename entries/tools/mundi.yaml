@@ -1,0 +1,24 @@
+id: mundi
+kind: tool
+name: Mundi
+category: AI, agents & MCP for GIS
+subcategory: QGIS AI & MCP
+tool_kind: Application
+summary: Open-source AI-native web GIS from Bunting Labs with LLM-driven geoprocessing and PostGIS connections.
+open_source: 'yes'
+license: AGPL-3.0
+language: Python; TypeScript
+interfaces:
+- GUI
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/BuntingLabs/mundi.ai
+notes: QGIS-linked parts are GPL-3.0
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1507

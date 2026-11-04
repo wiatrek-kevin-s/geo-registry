@@ -1,0 +1,20 @@
+id: potree-format-potree-2-0
+kind: tool
+name: Potree format (Potree 2.0)
+category: Point clouds, LiDAR & 3D
+subcategory: Formats
+tool_kind: Format/Standard
+summary: Octree file layout produced by PotreeConverter for streaming point clouds in the Potree viewer.
+open_source: 'yes'
+license: BSD-2-Clause
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/potree/PotreeConverter
+notes: Fast web viewing of local scans.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 542

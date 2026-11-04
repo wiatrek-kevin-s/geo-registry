@@ -1,0 +1,28 @@
+id: bbox
+kind: tool
+name: BBOX
+category: Servers, standards, tiles & catalogs
+subcategory: Map & feature servers
+tool_kind: Server
+summary: Composable Rust server offering OGC API Features, Maps, Tiles and Processes plus asset serving
+  and a bundled viewer.
+open_source: 'yes'
+license: Apache-2.0 OR MIT
+language: Rust
+interfaces:
+- REST
+- OGC
+- CLI
+call:
+- cli
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/bbox-services/bbox
+notes: Single binary; successor to t-rex; activity slowed since 2025
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 899

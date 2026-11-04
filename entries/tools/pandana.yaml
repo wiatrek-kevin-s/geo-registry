@@ -1,0 +1,24 @@
+id: pandana
+kind: tool
+name: pandana
+category: Routing, networks, geocoding & LRS
+subcategory: Accessibility & transport modeling
+tool_kind: Library
+summary: Contraction-hierarchy network queries for fast accessibility aggregations and nearest-POI searches
+  over large networks.
+open_source: 'yes'
+license: AGPL-3.0-or-later
+language: Python;C++
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/UDST/pandana
+notes: AGPL licence matters for bundling
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 784

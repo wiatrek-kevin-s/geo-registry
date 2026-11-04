@@ -1,0 +1,22 @@
+id: level0
+kind: tool
+name: Level0
+category: OSM & Overture tooling
+subcategory: Editors
+tool_kind: Application
+summary: Text-based web editor for OSM objects in a compact textual format.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: PHP
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://wiki.openstreetmap.org/wiki/Level0
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1218

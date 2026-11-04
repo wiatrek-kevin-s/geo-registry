@@ -1,0 +1,23 @@
+id: arcgis-maps-sdk-for-swift
+kind: tool
+name: ArcGIS Maps SDK for Swift
+category: Display & visualization
+subcategory: Native & mobile SDKs
+tool_kind: Library
+summary: Esri SDK for 2D/3D maps and offline GIS on iOS and macOS.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Swift
+interfaces:
+- C/C++
+call:
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://developers.arcgis.com/swift/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1071

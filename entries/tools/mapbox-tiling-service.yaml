@@ -1,0 +1,25 @@
+id: mapbox-tiling-service
+kind: tool
+name: Mapbox Tiling Service
+category: Servers, standards, tiles & catalogs
+subcategory: Tile generation & packaging
+tool_kind: Service/API
+summary: Hosted pipeline that converts uploaded data into vector tilesets using recipe configurations.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- CLI
+call:
+- cli
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://docs.mapbox.com/mapbox-tiling-service/
+notes: Cloud-only; usage-billed
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 930

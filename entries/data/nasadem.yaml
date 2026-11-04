@@ -1,0 +1,21 @@
+id: nasadem
+kind: data
+name: NASADEM
+summary: Reprocessed SRTM DEM with improved void filling.
+publisher: Unknown
+themes:
+- us-federal-nasa
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.earthdata.nasa.gov/esds/competitive-programs/measures/nasadem
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1271

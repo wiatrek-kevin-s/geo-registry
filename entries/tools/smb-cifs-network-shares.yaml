@@ -1,0 +1,20 @@
+id: smb-cifs-network-shares
+kind: tool
+name: SMB/CIFS network shares
+category: Connections & storage
+subcategory: Network shares & transfer
+tool_kind: Format/Standard
+summary: Windows file-sharing protocol behind most departmental GIS drives and UNC paths.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary (published MS-SMB2 spec)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+notes: Usually mapped by OS; app just needs UNC path handling
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1463

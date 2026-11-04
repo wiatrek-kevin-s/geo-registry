@@ -1,0 +1,27 @@
+id: geobrix
+kind: tool
+name: GeoBrix
+category: Spatial databases & query engines
+subcategory: Big data / distributed
+tool_kind: Library
+summary: Databricks Labs successor to Mosaic with raster, grid and vector functions for current Databricks
+  runtimes.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: Scala;Python
+interfaces:
+- Python
+- SQL
+call:
+- python
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://databrickslabs.github.io/geobrix/
+notes: Mosaic successor
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 680

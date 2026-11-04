@@ -1,0 +1,21 @@
+id: mtfcc-maf-tiger-feature-class-code
+kind: tool
+name: MTFCC (MAF/TIGER Feature Class Code)
+category: Routing, networks, geocoding & LRS
+subcategory: Network & traffic referencing standards
+tool_kind: Format/Standard
+summary: Census Bureau classification codes for TIGER features such as S1100 primary roads and S1400 local
+  streets.
+open_source: 'yes'
+license: LicenseRef-Public-Domain
+license_original: Public domain
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.census.gov/library/reference/code-lists/mt-feature-class-codes.html
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 887

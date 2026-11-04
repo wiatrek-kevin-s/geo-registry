@@ -1,0 +1,21 @@
+id: usfws-ecos-critical-habitat
+kind: data
+name: USFWS ECOS critical habitat
+summary: Critical habitat designations for threatened and endangered species.
+publisher: U.S. Fish and Wildlife Service
+themes:
+- us-federal-interior
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://ecos.fws.gov/ecp/report/table/critical-habitat.html
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1278

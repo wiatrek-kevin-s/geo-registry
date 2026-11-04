@@ -1,0 +1,24 @@
+id: civil-3d
+kind: tool
+name: Civil 3D
+category: Commercial GIS platforms & APIs
+subcategory: Autodesk
+tool_kind: Application
+summary: Civil engineering design and documentation tool on AutoCAD with surfaces, alignments and corridors.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++; .NET
+interfaces:
+- GUI
+- plugin
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://www.autodesk.com/products/civil-3d/overview
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1397

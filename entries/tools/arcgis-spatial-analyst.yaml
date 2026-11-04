@@ -1,0 +1,26 @@
+id: arcgis-spatial-analyst
+kind: tool
+name: ArcGIS Spatial Analyst
+category: Desktop GIS & analysis engines
+subcategory: Commercial desktop GIS
+tool_kind: Extension
+summary: ArcGIS Pro extension for raster modelling, map algebra, surface, hydrology, distance and suitability
+  analysis.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://www.esri.com/en-us/arcgis/products/arcgis-spatial-analyst/overview
+notes: Extra licence needed for most raster tools in ArcPy
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 255

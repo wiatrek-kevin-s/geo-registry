@@ -1,0 +1,28 @@
+id: geowave
+kind: tool
+name: GeoWave
+category: Spatial databases & query engines
+subcategory: Big data / distributed
+tool_kind: Platform
+summary: Multi-dimensional indexing layer for spatial data on distributed key-value stores like Accumulo
+  and HBase.
+open_source: 'yes'
+license: Apache-2.0
+language: Java
+interfaces:
+- CLI
+- Java
+- Python
+call:
+- python
+- cli
+- java
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://locationtech.github.io/geowave/
+notes: Last release 2021; Eclipse asked about termination
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 677

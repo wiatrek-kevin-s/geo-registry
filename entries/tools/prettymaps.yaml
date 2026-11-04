@@ -1,0 +1,24 @@
+id: prettymaps
+kind: tool
+name: prettymaps
+category: Display & visualization
+subcategory: Python notebook & app mapping
+tool_kind: Library
+summary: Draws stylised artistic maps from OpenStreetMap data using Matplotlib.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/marceloprates/prettymaps
+notes: Licence changed over time; verify before use
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1105

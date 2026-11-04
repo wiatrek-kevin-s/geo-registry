@@ -1,0 +1,25 @@
+id: i3s-scene-layer-package
+kind: tool
+name: I3S (Scene Layer Package)
+category: Core libraries & formats
+subcategory: Point cloud & 3D formats
+tool_kind: Format/Standard
+summary: Esri-originated OGC community standard for streaming 3D scene layers.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open standard (OGC community standard)
+interfaces:
+- REST
+- OGC
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/Esri/i3s-spec
+notes: ArcGIS 3D scenes.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 196

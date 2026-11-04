@@ -1,0 +1,24 @@
+id: routingpy
+kind: tool
+name: routingpy
+category: Routing, networks, geocoding & LRS
+subcategory: Routing engines
+tool_kind: Library
+summary: Single Python client wrapping many routing APIs, including OSRM, Valhalla, GraphHopper, ORS,
+  Google, HERE and Mapbox.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/gis-ops/routing-py
+notes: One client for agents switching providers
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 768

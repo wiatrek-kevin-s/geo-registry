@@ -1,0 +1,20 @@
+id: overture-places-theme
+kind: data
+name: Overture Places theme
+summary: Global points of interest from Meta, Microsoft and others with categories.
+publisher: Overture Maps Foundation
+themes:
+- global-poi
+- open-data-sources
+coverage:
+  region: Global
+license: CDLA-Permissive-2.0
+access:
+- type: http
+  url: https://docs.overturemaps.org/guides/places/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1310

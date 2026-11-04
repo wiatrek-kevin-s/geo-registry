@@ -1,0 +1,23 @@
+id: terriamap
+kind: tool
+name: TerriaMap
+category: Display & visualization
+subcategory: 3D globes & 3D Tiles
+tool_kind: Application
+summary: Ready-to-deploy web map application built on TerriaJS, used by many national data portals.
+open_source: 'yes'
+license: Apache-2.0
+language: TypeScript
+interfaces:
+- GUI
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/TerriaJS/TerriaMap
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1061

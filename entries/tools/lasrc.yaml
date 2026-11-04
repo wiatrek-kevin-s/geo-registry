@@ -1,0 +1,24 @@
+id: lasrc
+kind: tool
+name: LaSRC
+category: Imagery, remote sensing & GeoAI
+subcategory: Atmospheric correction
+tool_kind: Toolkit/CLI
+summary: USGS surface reflectance code used to produce Landsat 8/9 Collection 2 Level-2 products.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: C
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/USGS-EROS/espa-surface-reflectance
+notes: Mostly consumed as finished USGS L2 data
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 374

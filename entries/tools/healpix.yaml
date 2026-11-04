@@ -1,0 +1,25 @@
+id: healpix
+kind: tool
+name: HEALPix
+category: Core libraries & formats
+subcategory: Discrete global grids & geocodes
+tool_kind: Library
+summary: Equal-area hierarchical pixelisation of the sphere from astronomy, usable for global geodata.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: C/C++/Fortran/Python
+interfaces:
+- C/C++
+- Python
+call:
+- python
+- c-cpp
+wrapped_by_columbus: false
+project_status: maintained
+url: https://healpix.sourceforge.io
+notes: Astronomy origin; healpy in Python.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 126

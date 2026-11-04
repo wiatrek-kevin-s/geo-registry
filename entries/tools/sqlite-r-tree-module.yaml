@@ -1,0 +1,24 @@
+id: sqlite-r-tree-module
+kind: tool
+name: SQLite R*Tree module
+category: Spatial databases & query engines
+subcategory: Embedded / file databases
+tool_kind: Extension
+summary: Built-in SQLite virtual table for fast bounding-box range queries.
+open_source: 'yes'
+license: LicenseRef-Public-Domain
+license_original: Public domain
+language: C
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.sqlite.org/rtree.html
+notes: Spatial index under SpatiaLite and GeoPackage
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 667

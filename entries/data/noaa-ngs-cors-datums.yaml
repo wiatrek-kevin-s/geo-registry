@@ -1,0 +1,21 @@
+id: noaa-ngs-cors-datums
+kind: data
+name: NOAA NGS (CORS, datums)
+summary: Geodetic control, CORS data, datum transformations and shoreline data.
+publisher: National Oceanic and Atmospheric Administration
+themes:
+- us-federal-noaa
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://geodesy.noaa.gov/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1263

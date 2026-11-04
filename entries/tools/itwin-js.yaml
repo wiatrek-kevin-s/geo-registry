@@ -1,0 +1,24 @@
+id: itwin-js
+kind: tool
+name: iTwin.js
+category: Point clouds, LiDAR & 3D
+subcategory: Web viewers & engines
+tool_kind: Platform
+summary: Bentley's open source library for building digital twin apps over infrastructure models and reality
+  data.
+open_source: 'yes'
+license: MIT
+language: TypeScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://www.itwinjs.org
+notes: Digital twin SDK; hosted iTwin services are commercial.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 609

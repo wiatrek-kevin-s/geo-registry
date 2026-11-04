@@ -1,0 +1,26 @@
+id: mcp-server-arcgis-pro-addin
+kind: tool
+name: MCP-Server-ArcGIS-Pro-AddIn
+category: AI, agents & MCP for GIS
+subcategory: Community ArcGIS MCP servers
+tool_kind: Extension
+summary: ArcGIS Pro add-in that hosts an MCP server inside Pro.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: C#
+interfaces:
+- MCP
+- plugin
+call:
+- mcp
+- plugin
+wrapped_by_columbus: false
+project_status: unknown
+url: https://github.com/nicogis/MCP-Server-ArcGIS-Pro-AddIn
+notes: Pattern for in-process Pro integration
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1492

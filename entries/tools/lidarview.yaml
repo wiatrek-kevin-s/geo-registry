@@ -1,0 +1,24 @@
+id: lidarview
+kind: tool
+name: LidarView
+category: Point clouds, LiDAR & 3D
+subcategory: Desktop viewers & editors
+tool_kind: Application
+summary: ParaView-based application for live and recorded visualization of lidar sensor streams.
+open_source: 'yes'
+license: Apache-2.0
+language: C++
+interfaces:
+- GUI
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://lidarview.kitware.com
+notes: Mobile/automotive sensor data.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 588

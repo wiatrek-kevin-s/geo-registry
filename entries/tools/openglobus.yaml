@@ -1,0 +1,22 @@
+id: openglobus
+kind: tool
+name: OpenGlobus
+category: Display & visualization
+subcategory: 3D globes & 3D Tiles
+tool_kind: Library
+summary: WebGL library for 3D globe and planetary visualization with terrain and vector layers.
+open_source: 'yes'
+license: Apache-2.0
+language: TypeScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://www.openglobus.org/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1062

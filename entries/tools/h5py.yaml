@@ -1,0 +1,23 @@
+id: h5py
+kind: tool
+name: h5py
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Python interface to HDF5 files using NumPy arrays.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python/Cython
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://www.h5py.org
+notes: Reading satellite HDF5.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 75

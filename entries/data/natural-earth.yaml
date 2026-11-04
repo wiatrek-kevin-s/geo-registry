@@ -1,0 +1,22 @@
+id: natural-earth
+kind: data
+name: Natural Earth
+summary: Small-scale cultural and physical vector and raster data at 1:10m–1:110m.
+publisher: Unknown
+themes:
+- global-boundaries
+- open-data-sources
+coverage:
+  region: Global
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.naturalearthdata.com/
+  auth: none
+notes: Good for overview maps
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1314

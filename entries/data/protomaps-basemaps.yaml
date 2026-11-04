@@ -1,0 +1,23 @@
+id: protomaps-basemaps
+kind: data
+name: Protomaps Basemaps
+summary: Planetiler-based OSM basemap build and styles distributed as PMTiles.
+publisher: Unknown
+themes:
+- tile-generation-packaging
+- servers-standards-tiles-catalogs
+- display-visualization
+coverage:
+  region: Unspecified
+license: LicenseRef-Multiple
+license_original: BSD-3-Clause (code); ODbL (data)
+access:
+- type: http
+  url: https://github.com/protomaps/basemaps
+  auth: none
+notes: Offline basemap for a desktop app
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 929

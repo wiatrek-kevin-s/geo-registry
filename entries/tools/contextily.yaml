@@ -1,0 +1,22 @@
+id: contextily
+kind: tool
+name: contextily
+category: Display & visualization
+subcategory: Python notebook & app mapping
+tool_kind: Library
+summary: Fetches web tile basemaps and adds them under Matplotlib/GeoPandas plots.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://contextily.readthedocs.io/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1102

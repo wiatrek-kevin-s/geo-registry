@@ -1,0 +1,23 @@
+id: ogc-sld-se
+kind: tool
+name: OGC SLD / SE
+category: Core libraries & formats
+subcategory: Tile formats
+tool_kind: Format/Standard
+summary: XML styling standards for map layers used by GeoServer and QGIS.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open standard (OGC)
+interfaces:
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://www.ogc.org/standards/sld
+notes: Legacy server styling.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 207

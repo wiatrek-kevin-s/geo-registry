@@ -1,0 +1,21 @@
+id: felt-ai
+kind: tool
+name: Felt AI
+category: AI, agents & MCP for GIS
+subcategory: Vendor/location MCP servers
+tool_kind: Service/API
+summary: Natural-language map, app and analysis builder inside Felt.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://felt.com/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1531

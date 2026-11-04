@@ -1,0 +1,24 @@
+id: pysheds
+kind: tool
+name: pysheds
+category: Desktop GIS & analysis engines
+subcategory: Terrain & hydrology engines
+tool_kind: Library
+summary: Python library for watershed delineation, flow direction and accumulation and river network extraction
+  from DEMs.
+open_source: 'yes'
+license: GPL-3.0-only
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/mdbartos/pysheds
+notes: Lightweight hydrology in Python
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 279

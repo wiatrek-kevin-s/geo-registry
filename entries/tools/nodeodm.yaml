@@ -1,0 +1,23 @@
+id: nodeodm
+kind: tool
+name: NodeODM
+category: Imagery, remote sensing & GeoAI
+subcategory: Photogrammetry & drone
+tool_kind: Server
+summary: Lightweight REST API wrapping ODM for processing nodes.
+open_source: 'yes'
+license: AGPL-3.0
+language: JavaScript
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/OpenDroneMap/NodeODM
+notes: Agent can submit jobs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 508

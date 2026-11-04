@@ -1,0 +1,24 @@
+id: carto-mcp-server
+kind: tool
+name: CARTO MCP Server
+category: AI, agents & MCP for GIS
+subcategory: Vendor/location MCP servers
+tool_kind: Server
+summary: Hosted MCP for exploring warehouse data, building CARTO maps, running Workflows and SQL from
+  any assistant.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- MCP
+call:
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://docs.carto.com/carto-for-agents/mcp-server
+notes: OAuth per user
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1528

@@ -1,0 +1,25 @@
+id: pystac-client
+kind: tool
+name: pystac-client
+category: Imagery, remote sensing & GeoAI
+subcategory: STAC ecosystem
+tool_kind: Library
+summary: Python and CLI client for searching STAC APIs.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+- CLI
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/stac-utils/pystac-client
+notes: stac-client CLI is agent-friendly
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 421

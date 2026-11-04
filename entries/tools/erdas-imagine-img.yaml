@@ -1,0 +1,21 @@
+id: erdas-imagine-img
+kind: tool
+name: ERDAS IMAGINE (.img)
+category: Core libraries & formats
+subcategory: Raster formats
+tool_kind: Format/Standard
+summary: Hexagon ERDAS raster format storing multiband imagery with pyramids.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary (read/write in GDAL HFA driver)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://gdal.org/en/stable/drivers/raster/hfa.html
+notes: Common in remote sensing archives.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 149

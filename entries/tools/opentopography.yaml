@@ -1,0 +1,26 @@
+id: opentopography
+kind: tool
+name: OpenTopography
+category: Point clouds, LiDAR & 3D
+subcategory: Lidar data sources
+tool_kind: Service/API
+summary: NSF-funded facility serving lidar point clouds, DEMs and on-demand processing with a REST API.
+open_source: partial
+license: NOASSERTION
+license_original: Unknown
+interfaces:
+- REST
+- GUI
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://opentopography.org
+notes: API key; good for global DEMs and research lidar.
+also_categories:
+- Open data sources
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 637

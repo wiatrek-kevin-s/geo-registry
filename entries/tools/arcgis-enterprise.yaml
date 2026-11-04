@@ -1,0 +1,31 @@
+id: arcgis-enterprise
+kind: tool
+name: ArcGIS Enterprise
+category: Servers, standards, tiles & catalogs
+subcategory: Commercial GIS servers & platforms
+tool_kind: Platform
+summary: Esri's self-hosted GIS platform combining ArcGIS Server, Portal, Data Store and Web Adaptor.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Java; C/C++
+interfaces:
+- REST
+- OGC
+- Python
+- GUI
+call:
+- python
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://enterprise.arcgis.com
+notes: Agent drives via ArcGIS REST API or ArcGIS API for Python
+also_categories:
+- Commercial GIS platforms & APIs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 952

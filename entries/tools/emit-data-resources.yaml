@@ -1,0 +1,23 @@
+id: emit-data-resources
+kind: tool
+name: EMIT Data Resources
+category: Imagery, remote sensing & GeoAI
+subcategory: Hyperspectral
+tool_kind: Toolkit/CLI
+summary: NASA tutorials and utilities for working with EMIT imaging spectroscopy data.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/nasa/EMIT-Data-Resources
+notes: Reference code more than product
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 382

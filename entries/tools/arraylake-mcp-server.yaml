@@ -1,0 +1,22 @@
+id: arraylake-mcp-server
+kind: tool
+name: Arraylake MCP Server
+category: AI, agents & MCP for GIS
+subcategory: Earth observation MCP servers
+tool_kind: Server
+summary: Earthmover MCP for browsing Zarr/Icechunk arrays and running OGC EDR queries.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- MCP
+call:
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://docs.earthmover.io/mcp/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1550

@@ -1,0 +1,21 @@
+id: terrset
+kind: tool
+name: TerrSet
+category: Imagery, remote sensing & GeoAI
+subcategory: Commercial RS software
+tool_kind: Application
+summary: Clark Labs GIS and remote sensing software, includes land change and earth trends modelers.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://clarklabs.org/terrset/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 475

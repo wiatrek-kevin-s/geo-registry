@@ -1,0 +1,23 @@
+id: trimble-realworks
+kind: tool
+name: Trimble RealWorks
+category: Point clouds, LiDAR & 3D
+subcategory: Desktop viewers & editors
+tool_kind: Application
+summary: Software for registering, analyzing and modeling terrestrial and mobile laser scan data.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://geospatial.trimble.com/en/products/software/trimble-realworks
+notes: Survey-grade TLS registration.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 592

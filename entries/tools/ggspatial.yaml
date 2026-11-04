@@ -1,0 +1,22 @@
+id: ggspatial
+kind: tool
+name: ggspatial
+category: Display & visualization
+subcategory: R mapping
+tool_kind: Library
+summary: Adds scale bars, north arrows, tiles and raster layers to ggplot2 maps.
+open_source: 'yes'
+license: GPL-3.0
+language: R
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: maintained
+url: https://paleolimbot.github.io/ggspatial/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1110

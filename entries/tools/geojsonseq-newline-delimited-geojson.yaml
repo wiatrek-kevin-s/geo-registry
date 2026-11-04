@@ -1,0 +1,21 @@
+id: geojsonseq-newline-delimited-geojson
+kind: tool
+name: GeoJSONSeq / newline-delimited GeoJSON
+category: Core libraries & formats
+subcategory: Vector formats
+tool_kind: Format/Standard
+summary: Sequence of GeoJSON texts separated by record separators or newlines for streaming.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open standard (IETF RFC 8142)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://datatracker.ietf.org/doc/html/rfc8142
+notes: Streamable feature output.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 165

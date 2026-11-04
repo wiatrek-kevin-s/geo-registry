@@ -1,0 +1,22 @@
+id: usaddress
+kind: tool
+name: usaddress
+category: Routing, networks, geocoding & LRS
+subcategory: Geocoding engines & libraries
+tool_kind: Library
+summary: Parses US address strings into components using a CRF model.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/datamade/usaddress
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 827

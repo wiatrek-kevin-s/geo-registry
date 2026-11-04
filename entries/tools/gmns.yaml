@@ -1,0 +1,20 @@
+id: gmns
+kind: tool
+name: GMNS
+category: Routing, networks, geocoding & LRS
+subcategory: Accessibility & transport modeling
+tool_kind: Format/Standard
+summary: Zephyr Foundation's General Modeling Network Specification, a CSV-based standard for routable
+  transport model networks.
+open_source: 'yes'
+license: Apache-2.0
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/zephyr-data-specs/GMNS
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 793

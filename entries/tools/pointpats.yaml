@@ -1,0 +1,22 @@
+id: pointpats
+kind: tool
+name: pointpats
+category: Desktop GIS & analysis engines
+subcategory: Spatial statistics (Python / PySAL)
+tool_kind: Library
+summary: 'Point pattern analysis: centrography, quadrat counts, distance-based statistics and simulation.'
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/pysal/pointpats
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 309

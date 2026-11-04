@@ -1,0 +1,23 @@
+id: copc-rs
+kind: tool
+name: copc-rs
+category: Point clouds, LiDAR & 3D
+subcategory: Indexing & cloud-optimized
+tool_kind: Library
+summary: Rust crate for reading and writing Cloud Optimized Point Cloud files.
+open_source: 'yes'
+license: MIT OR Apache-2.0
+language: Rust
+interfaces:
+- Rust
+call:
+- rust
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/pka/copc-rs
+notes: Native Rust option for a Rust-based GIS app.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 535

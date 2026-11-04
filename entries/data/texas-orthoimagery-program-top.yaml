@@ -1,0 +1,22 @@
+id: texas-orthoimagery-program-top
+kind: data
+name: Texas Orthoimagery Program (TOP)
+summary: Statewide high-resolution orthoimagery with web map services.
+publisher: Unknown
+themes:
+- texas
+- open-data-sources
+coverage:
+  region: Texas
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://geographic.texas.gov/
+  auth: none
+notes: Via TxGIO
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1337

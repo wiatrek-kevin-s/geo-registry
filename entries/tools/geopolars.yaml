@@ -1,0 +1,25 @@
+id: geopolars
+kind: tool
+name: GeoPolars
+category: Spatial databases & query engines
+subcategory: DataFrame / query libraries
+tool_kind: Library
+summary: Prototype geospatial extension to Polars based on GeoArrow.
+open_source: 'yes'
+license: MIT
+language: Rust;Python
+interfaces:
+- Python
+- Rust
+call:
+- python
+- rust
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/geopolars/geopolars
+notes: Alpha; unblocked late 2025
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 730

@@ -1,0 +1,22 @@
+id: txdot-open-data-portal
+kind: data
+name: TxDOT Open Data Portal
+summary: TxDOT roadways, traffic counts, crashes, bridges and projects.
+publisher: Texas Department of Transportation
+themes:
+- texas
+- open-data-sources
+coverage:
+  region: Texas
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://gis-txdot.opendata.arcgis.com/
+  auth: none
+notes: ArcGIS Hub
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1341

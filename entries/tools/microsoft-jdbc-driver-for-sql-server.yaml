@@ -1,0 +1,24 @@
+id: microsoft-jdbc-driver-for-sql-server
+kind: tool
+name: Microsoft JDBC Driver for SQL Server
+category: Connections & storage
+subcategory: Database drivers
+tool_kind: Library
+summary: Open-source JDBC driver for SQL Server and Azure SQL.
+open_source: 'yes'
+license: MIT
+language: Java
+interfaces:
+- Java
+- SQL
+call:
+- sql
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/microsoft/mssql-jdbc
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1424

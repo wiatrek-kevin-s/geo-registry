@@ -1,0 +1,23 @@
+id: geojson-vt
+kind: tool
+name: geojson-vt
+category: Servers, standards, tiles & catalogs
+subcategory: Tile generation & packaging
+tool_kind: Library
+summary: Slices GeoJSON into vector tiles on the fly in memory.
+open_source: 'yes'
+license: ISC
+language: JavaScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/mapbox/geojson-vt
+notes: Client-side tiling
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 931

@@ -1,0 +1,21 @@
+id: maputnik
+kind: tool
+name: Maputnik
+category: Display & visualization
+subcategory: Map style tools & specs
+tool_kind: Application
+summary: Visual browser-based editor for MapLibre/Mapbox style JSON.
+open_source: 'yes'
+license: MIT
+language: TypeScript
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://maplibre.org/maputnik/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1165

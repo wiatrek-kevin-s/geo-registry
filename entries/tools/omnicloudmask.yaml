@@ -1,0 +1,23 @@
+id: omnicloudmask
+kind: tool
+name: OmniCloudMask
+category: Imagery, remote sensing & GeoAI
+subcategory: Cloud & atmospheric masking
+tool_kind: Library
+summary: Deep-learning cloud and shadow segmentation that works across sensors and resolutions.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/DPIRD-DMA/OmniCloudMask
+notes: Sensor-agnostic masking for local workflows
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 370

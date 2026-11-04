@@ -1,0 +1,23 @@
+id: geostats-jl
+kind: tool
+name: GeoStats.jl
+category: Desktop GIS & analysis engines
+subcategory: Julia geospatial
+tool_kind: Library
+summary: Julia framework for geostatistical modelling, learning and simulation on geospatial domains.
+open_source: 'yes'
+license: MIT
+language: Julia
+interfaces:
+- plugin
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/JuliaEarth/GeoStats.jl
+notes: Julia runtime needed
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 355

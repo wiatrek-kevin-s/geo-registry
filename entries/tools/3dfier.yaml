@@ -1,0 +1,23 @@
+id: 3dfier
+kind: tool
+name: 3dfier
+category: Point clouds, LiDAR & 3D
+subcategory: City models
+tool_kind: Toolkit/CLI
+summary: Extrudes 2D polygons into 3D using lidar point clouds to create city models.
+open_source: 'yes'
+license: GPL-3.0
+language: C++
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/tudelft3d/3dfier
+notes: Footprints plus lidar to LoD1.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 623

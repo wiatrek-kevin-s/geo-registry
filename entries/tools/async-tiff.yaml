@@ -1,0 +1,25 @@
+id: async-tiff
+kind: tool
+name: async-tiff
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Asynchronous TIFF/COG reader for Rust and Python built on object-store.
+open_source: 'yes'
+license: MIT OR Apache-2.0
+language: Rust/Python
+interfaces:
+- Rust
+- Python
+call:
+- python
+- rust
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/developmentseed/async-tiff
+notes: Fast COG reads from cloud storage.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 61

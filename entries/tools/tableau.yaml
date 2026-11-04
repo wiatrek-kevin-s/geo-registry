@@ -1,0 +1,23 @@
+id: tableau
+kind: tool
+name: Tableau
+category: Display & visualization
+subcategory: BI & dashboard maps
+tool_kind: Application
+summary: BI platform with built-in geocoding, filled maps, spatial files and spatial joins.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.tableau.com/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1130

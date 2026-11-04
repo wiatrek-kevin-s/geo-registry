@@ -1,0 +1,25 @@
+id: arosics
+kind: tool
+name: Arosics
+category: Imagery, remote sensing & GeoAI
+subcategory: Atmospheric correction
+tool_kind: Library
+summary: Automatic co-registration of satellite images to correct sub-pixel spatial shifts between scenes.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+- CLI
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/GFZ/arosics
+notes: Useful prep for change detection
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 377

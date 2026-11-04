@@ -1,0 +1,25 @@
+id: cvat
+kind: tool
+name: CVAT
+category: Imagery, remote sensing & GeoAI
+subcategory: Labeling & training data
+tool_kind: Application
+summary: Annotation tool for images and video with boxes, polygons and AI-assisted labeling.
+open_source: 'yes'
+license: MIT
+language: Python;TypeScript
+interfaces:
+- GUI
+- REST
+- Python
+call:
+- python
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/cvat-ai/cvat
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 524

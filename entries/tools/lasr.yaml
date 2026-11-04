@@ -1,0 +1,27 @@
+id: lasr
+kind: tool
+name: lasR
+category: Point clouds, LiDAR & 3D
+subcategory: Lidar processing suites
+tool_kind: Library
+summary: Fast C++ pipeline engine for airborne lidar processing with R and Python front ends.
+open_source: 'yes'
+license: GPL-3.0
+language: C++;R;Python
+interfaces:
+- R
+- Python
+- C/C++
+call:
+- python
+- r
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/r-lidar/lasR
+notes: Successor-style engine to lidR built for large collections.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 554

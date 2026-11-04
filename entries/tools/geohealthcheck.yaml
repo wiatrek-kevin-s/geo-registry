@@ -1,0 +1,26 @@
+id: geohealthcheck
+kind: tool
+name: GeoHealthCheck
+category: Servers, standards, tiles & catalogs
+subcategory: Processing & sensor services
+tool_kind: Application
+summary: Monitors uptime, availability and compliance of OGC web services and APIs with scheduled probes.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- GUI
+- REST
+- Python
+call:
+- python
+- rest
+wrapped_by_columbus: false
+project_status: maintained
+url: https://geohealthcheck.org
+notes: Agent could check endpoint health before calling
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 950

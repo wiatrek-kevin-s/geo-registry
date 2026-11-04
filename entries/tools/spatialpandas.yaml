@@ -1,0 +1,24 @@
+id: spatialpandas
+kind: tool
+name: spatialpandas
+category: Desktop GIS & analysis engines
+subcategory: Python vector analysis
+tool_kind: Library
+summary: HoloViz library of pandas/Dask extension arrays for geometry, aimed at fast spatial indexing
+  and visualisation.
+open_source: 'yes'
+license: BSD-2-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/holoviz/spatialpandas
+notes: Pairs with Datashader
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 287

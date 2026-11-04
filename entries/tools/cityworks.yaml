@@ -1,0 +1,24 @@
+id: cityworks
+kind: tool
+name: Cityworks
+category: Commercial GIS platforms & APIs
+subcategory: Asset management
+tool_kind: Application
+summary: GIS-centric asset and work management system for public works and utilities, built on Esri geodatabases;
+  owned by Trimble.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.cityworks.com/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1395

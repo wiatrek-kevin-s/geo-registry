@@ -1,0 +1,23 @@
+id: go-geom
+kind: tool
+name: go-geom
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: Go library for efficient geometry types with WKB/WKT/GeoJSON encoders.
+open_source: 'yes'
+license: BSD-2-Clause
+language: Go
+interfaces:
+- Go
+call:
+- go
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/twpayne/go-geom
+notes: Go geometry.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 215

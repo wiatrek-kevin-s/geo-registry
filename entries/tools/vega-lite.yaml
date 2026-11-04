@@ -1,0 +1,25 @@
+id: vega-lite
+kind: tool
+name: Vega-Lite
+category: Display & visualization
+subcategory: Charting & dataviz libraries with maps
+tool_kind: Library
+summary: High-level JSON grammar for charts, including geoshape and projection-based maps.
+open_source: 'yes'
+license: BSD-3-Clause
+language: TypeScript
+interfaces:
+- JS
+- Python
+call:
+- python
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://vega.github.io/vega-lite/
+notes: Agent can emit JSON specs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1119

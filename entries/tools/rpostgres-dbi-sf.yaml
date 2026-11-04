@@ -1,0 +1,22 @@
+id: rpostgres-dbi-sf
+kind: tool
+name: RPostgres / DBI + sf
+category: Spatial databases & query engines
+subcategory: Drivers & connectors
+tool_kind: Library
+summary: R database interface used by sf to read and write PostGIS layers.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: R;C++
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: active
+url: https://rpostgres.r-dbi.org
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 741

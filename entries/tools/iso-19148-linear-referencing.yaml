@@ -1,0 +1,20 @@
+id: iso-19148-linear-referencing
+kind: tool
+name: ISO 19148 Linear referencing
+category: Routing, networks, geocoding & LRS
+subcategory: Linear referencing (LRS)
+tool_kind: Format/Standard
+summary: International standard conceptual schema for linear referencing methods, events and offsets.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://www.iso.org/standard/32566.html
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 876

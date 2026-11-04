@@ -1,0 +1,22 @@
+id: pfaedle
+kind: tool
+name: pfaedle
+category: Routing, networks, geocoding & LRS
+subcategory: Transit data & tools
+tool_kind: Toolkit/CLI
+summary: Map-matches GTFS trips to OSM to generate accurate shapes.txt geometry.
+open_source: 'yes'
+license: GPL-3.0
+language: C++
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/ad-freiburg/pfaedle
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 813

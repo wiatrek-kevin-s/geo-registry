@@ -1,0 +1,30 @@
+id: whitebox-next-gen
+kind: tool
+name: Whitebox Next Gen
+category: Desktop GIS & analysis engines
+subcategory: Whitebox & Rust GIS engines
+tool_kind: Toolkit/CLI
+summary: Ground-up Rust rewrite of Whitebox as modular crates for raster, vector, LiDAR, projection and
+  topology plus ~750 OSS tools.
+open_source: partial
+license: MIT OR Apache-2.0
+language: Rust
+interfaces:
+- Rust
+- Python
+- R
+- plugin
+call:
+- python
+- r
+- rust
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/jblindsay/whitebox_next_gen
+notes: Pure Rust, no GDAL/PROJ/GEOS; separate proprietary Pro extension; soft-launched 2026
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 243

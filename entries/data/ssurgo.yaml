@@ -1,0 +1,21 @@
+id: ssurgo
+kind: data
+name: SSURGO
+summary: Detailed county-level soil survey polygons and attribute tables from NRCS.
+publisher: Unknown
+themes:
+- us-federal-usda
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.nrcs.usda.gov/resources/data-and-reports/soil-survey-geographic-database-ssurgo
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1272

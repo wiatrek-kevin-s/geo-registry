@@ -1,0 +1,27 @@
+id: clickhouse-geo-functions
+kind: tool
+name: ClickHouse geo functions
+category: Spatial databases & query engines
+subcategory: Big data / distributed
+tool_kind: Extension
+summary: Columnar OLAP database with Point/Polygon types, geohash, H3, S2 and polygon containment functions.
+open_source: 'yes'
+license: Apache-2.0
+language: C++
+interfaces:
+- SQL
+- REST
+- Python
+call:
+- python
+- rest
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://clickhouse.com/docs/sql-reference/functions/geo
+notes: Fast point-in-polygon at scale
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 689

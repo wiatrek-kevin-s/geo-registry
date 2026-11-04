@@ -1,0 +1,22 @@
+id: apple-mapkit
+kind: tool
+name: Apple MapKit
+category: Display & visualization
+subcategory: Native & mobile SDKs
+tool_kind: Library
+summary: Apple's native map framework for iOS, macOS and visionOS apps.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Swift;Objective-C
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://developer.apple.com/documentation/mapkit
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1074

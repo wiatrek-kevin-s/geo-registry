@@ -1,0 +1,22 @@
+id: open-transport-map-inspire-transport-networks
+kind: tool
+name: Open Transport Map / INSPIRE Transport Networks
+category: Routing, networks, geocoding & LRS
+subcategory: Network & traffic referencing standards
+tool_kind: Format/Standard
+summary: EU INSPIRE data specification for transport network themes with linear referencing.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+interfaces:
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: maintained
+url: https://inspire.ec.europa.eu/Themes/127/2892
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 892

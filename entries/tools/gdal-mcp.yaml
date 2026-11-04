@@ -1,0 +1,25 @@
+id: gdal-mcp
+kind: tool
+name: GDAL MCP
+category: AI, agents & MCP for GIS
+subcategory: General GIS MCP servers
+tool_kind: Server
+summary: MCP server for GDAL/Rasterio conversion, reprojection, COG creation and metadata, requiring justification
+  for sensitive choices.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- MCP
+- Python
+call:
+- python
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/JordanGunn/gdal-mcp
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1509

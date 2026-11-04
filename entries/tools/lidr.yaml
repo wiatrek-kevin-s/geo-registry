@@ -1,0 +1,24 @@
+id: lidr
+kind: tool
+name: lidR
+category: Point clouds, LiDAR & 3D
+subcategory: Lidar processing suites
+tool_kind: Library
+summary: R package for airborne lidar analysis including ground classification, normalization, canopy
+  models and tree segmentation.
+open_source: 'yes'
+license: GPL-3.0
+language: R;C++
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/r-lidar/lidR
+notes: Standard forestry lidar toolkit in R.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 553

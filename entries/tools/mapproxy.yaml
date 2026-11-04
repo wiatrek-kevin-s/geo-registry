@@ -1,0 +1,27 @@
+id: mapproxy
+kind: tool
+name: MapProxy
+category: Servers, standards, tiles & catalogs
+subcategory: Tile caches & proxies
+tool_kind: Server
+summary: Tile cache and proxy that accelerates, reprojects and combines WMS, WMTS and tile sources.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- CLI
+- OGC
+- Python
+call:
+- python
+- cli
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://mapproxy.org
+notes: YAML config; seeding CLI
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 920

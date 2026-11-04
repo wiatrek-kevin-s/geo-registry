@@ -1,0 +1,29 @@
+id: opencage-geocoding-api
+kind: tool
+name: OpenCage Geocoding API
+category: Routing, networks, geocoding & LRS
+subcategory: Geocoding services
+tool_kind: Service/API
+summary: Geocoding API aggregating open data sources such as OSM, with permissive result storage.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- Python
+- R
+- JS
+call:
+- python
+- rest
+- js
+- r
+wrapped_by_columbus: false
+project_status: active
+url: https://opencagedata.com/
+notes: Results usable under open terms
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 838

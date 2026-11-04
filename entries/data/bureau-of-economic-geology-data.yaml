@@ -1,0 +1,22 @@
+id: bureau-of-economic-geology-data
+kind: data
+name: Bureau of Economic Geology data
+summary: UT Austin geologic maps and coastal/subsurface datasets for Texas.
+publisher: Unknown
+themes:
+- texas
+- open-data-sources
+coverage:
+  region: Texas
+license: LicenseRef-Multiple
+license_original: Mixed
+access:
+- type: http
+  url: https://www.beg.utexas.edu/
+  auth: none
+notes: Some products sold
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1346

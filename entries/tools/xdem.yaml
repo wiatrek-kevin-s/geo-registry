@@ -1,0 +1,23 @@
+id: xdem
+kind: tool
+name: xDEM
+category: Desktop GIS & analysis engines
+subcategory: Terrain & hydrology engines
+tool_kind: Library
+summary: Library for DEM co-registration, differencing, uncertainty analysis and terrain attributes.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/GlacioHack/xdem
+notes: Elevation-change workflows
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 281

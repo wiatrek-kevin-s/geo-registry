@@ -1,0 +1,24 @@
+id: pyforestscan
+kind: tool
+name: PyForestScan
+category: Point clouds, LiDAR & 3D
+subcategory: Lidar processing suites
+tool_kind: Library
+summary: Python library for computing forest structure metrics from airborne point clouds.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/iosefa/PyForestScan
+notes: Forest canopy metrics for agents.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 559

@@ -1,0 +1,26 @@
+id: vgrid
+kind: tool
+name: vgrid
+category: Core libraries & formats
+subcategory: Discrete global grids & geocodes
+tool_kind: Library
+summary: Python toolkit converting between many DGGS and geocode systems (H3, S2, A5, rHEALPix, Geohash,
+  etc.).
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+- CLI
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/opengeoshub/vgrid
+notes: One-stop DGGS conversion.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 127

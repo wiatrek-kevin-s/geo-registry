@@ -1,0 +1,21 @@
+id: esri-grid-arcinfo-binary-grid
+kind: tool
+name: Esri Grid (ArcInfo binary grid)
+category: Core libraries & formats
+subcategory: Raster formats
+tool_kind: Format/Standard
+summary: Esri's legacy directory-based binary raster format.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary (read by GDAL AIG driver)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: archived
+url: https://gdal.org/en/stable/drivers/raster/aig.html
+notes: Read-only in GDAL.
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 146

@@ -1,0 +1,26 @@
+id: opentripplanner
+kind: tool
+name: OpenTripPlanner
+category: Routing, networks, geocoding & LRS
+subcategory: Routing engines
+tool_kind: Server
+summary: Multimodal trip planner combining GTFS/NeTEx transit with OSM walking, cycling and driving, with
+  a GraphQL API.
+open_source: 'yes'
+license: LGPL-3.0
+language: Java
+interfaces:
+- REST
+- Java
+call:
+- rest
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/opentripplanner/OpenTripPlanner
+notes: Core engine for transit itineraries; JVM
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 757

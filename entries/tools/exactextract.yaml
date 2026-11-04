@@ -1,0 +1,27 @@
+id: exactextract
+kind: tool
+name: exactextract
+category: Desktop GIS & analysis engines
+subcategory: Python raster & array analysis
+tool_kind: Library
+summary: Fast, exact zonal statistics that weight raster cells by their fractional coverage of polygons.
+open_source: 'yes'
+license: Apache-2.0
+language: C++; Python
+interfaces:
+- Python
+- CLI
+- C/C++
+call:
+- python
+- cli
+- c-cpp
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/isciences/exactextract
+notes: More accurate than centroid-based zonal stats
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 297

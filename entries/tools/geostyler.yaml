@@ -1,0 +1,24 @@
+id: geostyler
+kind: tool
+name: GeoStyler
+category: Display & visualization
+subcategory: MapLibre/OpenLayers ecosystem
+tool_kind: Library
+summary: UI and parsers for editing and converting map styles between SLD, QGIS, Mapbox and OpenLayers
+  formats.
+open_source: 'yes'
+license: BSD-2-Clause
+language: TypeScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://geostyler.org/
+notes: Style conversion an agent could use
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1048

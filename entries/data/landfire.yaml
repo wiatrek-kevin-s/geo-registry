@@ -1,0 +1,21 @@
+id: landfire
+kind: data
+name: LANDFIRE
+summary: National vegetation, fuels and fire-regime rasters.
+publisher: Unknown
+themes:
+- us-federal-land-cover
+- open-data-sources
+coverage:
+  region: United States
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://landfire.gov/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1248

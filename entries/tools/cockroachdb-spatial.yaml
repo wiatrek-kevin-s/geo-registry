@@ -1,0 +1,24 @@
+id: cockroachdb-spatial
+kind: tool
+name: CockroachDB spatial
+category: Spatial databases & query engines
+subcategory: Open-source RDBMS
+tool_kind: Database
+summary: Distributed SQL database with PostGIS-compatible geometry/geography and S2-based indexes.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Go
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://www.cockroachlabs.com/docs/stable/spatial-data-overview
+notes: Dropped open-source Core in 2024
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 709

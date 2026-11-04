@@ -1,0 +1,25 @@
+id: neo4j-spatial
+kind: tool
+name: Neo4j Spatial
+category: Spatial databases & query engines
+subcategory: Graph
+tool_kind: Extension
+summary: Neo4j plugin providing spatial layers, R-tree indexes and WKT/shapefile/OSM import procedures.
+open_source: 'yes'
+license: GPL-3.0
+language: Java
+interfaces:
+- Java
+- SQL
+call:
+- sql
+- java
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/neo4j-contrib/spatial
+notes: Versioned with Neo4j since 5.19
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 724

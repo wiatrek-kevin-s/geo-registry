@@ -1,0 +1,23 @@
+id: libpostgis-liblwgeom
+kind: tool
+name: libpostgis / liblwgeom
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: PostGIS's internal lightweight geometry library for serialization and geometry functions.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: C
+interfaces:
+- C/C++
+call:
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://postgis.net
+notes: Not a standalone product; embedded in PostGIS.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 26

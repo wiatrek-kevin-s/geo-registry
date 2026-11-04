@@ -1,0 +1,20 @@
+id: netex
+kind: tool
+name: NeTEx
+category: Routing, networks, geocoding & LRS
+subcategory: Transit data & tools
+tool_kind: Format/Standard
+summary: CEN European XML standard for exchanging public transport network and timetable data.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://netex-cen.eu/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 805

@@ -1,0 +1,25 @@
+id: owslib
+kind: tool
+name: OWSLib
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Python client for OGC web services such as WMS, WFS, WCS, CSW and OGC API.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/geopython/OWSLib
+notes: Agent can query OGC endpoints.
+also_categories:
+- Servers, standards, tiles & catalogs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 78

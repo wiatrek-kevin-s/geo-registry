@@ -1,0 +1,23 @@
+id: s2geography
+kind: tool
+name: s2geography
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: C++ layer on S2 providing Simple Features-style geography operations, used by R s2 and DuckDB.
+open_source: 'yes'
+license: Apache-2.0
+language: C++
+interfaces:
+- C/C++
+call:
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/paleolimbot/s2geography
+notes: Spherical ops in DuckDB/R.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 20

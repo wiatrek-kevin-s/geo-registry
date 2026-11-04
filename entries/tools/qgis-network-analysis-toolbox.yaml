@@ -1,0 +1,24 @@
+id: qgis-network-analysis-toolbox
+kind: tool
+name: QGIS Network analysis toolbox
+category: Routing, networks, geocoding & LRS
+subcategory: Accessibility & transport modeling
+tool_kind: Application
+summary: Built-in QGIS Processing tools for shortest path and service area on any line layer.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: C++
+interfaces:
+- GUI
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://qgis.org/
+notes: Native QGIS; callable via qgis_process
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 798

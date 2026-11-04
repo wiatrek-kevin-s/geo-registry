@@ -1,0 +1,27 @@
+id: gdal
+kind: tool
+name: GDAL
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Translator library and CLI tools reading and writing hundreds of raster and vector formats.
+open_source: 'yes'
+license: MIT
+language: C++
+interfaces:
+- C/C++
+- Python
+- CLI
+call:
+- python
+- cli
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://gdal.org
+notes: Backbone of format support; agent can call gdal CLI.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 47

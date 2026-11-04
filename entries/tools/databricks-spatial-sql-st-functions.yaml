@@ -1,0 +1,27 @@
+id: databricks-spatial-sql-st-functions
+kind: tool
+name: Databricks spatial SQL (ST functions)
+category: Spatial databases & query engines
+subcategory: Big data / distributed
+tool_kind: Service/API
+summary: Native GEOMETRY/GEOGRAPHY types and 80+ ST_ and H3 functions in Databricks SQL and Runtime.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- SQL
+- Python
+- REST
+call:
+- python
+- rest
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://docs.databricks.com/aws/en/sql/language-manual/sql-ref-st-geospatial-functions
+notes: Replaces Mosaic for vector work
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 678

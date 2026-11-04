@@ -1,0 +1,22 @@
+id: nasa-gibs
+kind: data
+name: NASA GIBS
+summary: NASA service providing global satellite imagery layers via WMTS, WMS and tiled access.
+publisher: NASA
+themes:
+- basemap-providers
+- display-visualization
+coverage:
+  region: Global
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.earthdata.nasa.gov/engage/open-data-services-software/earthdata-developer-portal/gibs-api
+  auth: none
+notes: Daily imagery basemaps
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1179

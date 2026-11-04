@@ -1,0 +1,36 @@
+id: duckdb-spatial-extension
+kind: tool
+name: DuckDB spatial extension
+category: Spatial databases & query engines
+subcategory: Embedded / file databases
+tool_kind: Extension
+summary: Adds GEOS-backed ST_ functions, GDAL I/O and CRS transforms to DuckDB; GEOMETRY became a core
+  type in DuckDB 1.5.
+open_source: 'yes'
+license: MIT
+language: C++
+interfaces:
+- SQL
+- CLI
+- Python
+- R
+- JS
+- Java
+- Rust
+call:
+- python
+- cli
+- js
+- r
+- sql
+- rust
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://duckdb.org/docs/stable/core_extensions/spatial/overview
+notes: Best in-process engine for an AI desktop app
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 669

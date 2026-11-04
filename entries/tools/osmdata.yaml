@@ -1,0 +1,23 @@
+id: osmdata
+kind: tool
+name: osmdata
+category: OSM & Overture tooling
+subcategory: R packages
+tool_kind: Library
+summary: R package that queries Overpass and returns OSM features as sf or sp objects.
+open_source: 'yes'
+license: GPL-3.0-only
+language: R;C++
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: active
+url: https://docs.ropensci.org/osmdata/
+notes: rOpenSci; R users
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1199

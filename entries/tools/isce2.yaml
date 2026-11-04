@@ -1,0 +1,24 @@
+id: isce2
+kind: tool
+name: ISCE2
+category: Imagery, remote sensing & GeoAI
+subcategory: SAR processing
+tool_kind: Toolkit/CLI
+summary: JPL InSAR Scientific Computing Environment for interferometric SAR processing.
+open_source: 'yes'
+license: Apache-2.0
+language: Python;C++;Fortran
+interfaces:
+- CLI
+- Python
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/isce-framework/isce2
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 492

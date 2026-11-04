@@ -1,0 +1,27 @@
+id: qgis-mcp-nkarasiak
+kind: tool
+name: QGIS MCP (nkarasiak)
+category: AI, agents & MCP for GIS
+subcategory: QGIS AI & MCP
+tool_kind: Extension
+summary: QGIS plugin plus MCP server exposing ~118 tools for layers, editing, processing, rendering and
+  layouts.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: Python
+interfaces:
+- MCP
+- plugin
+call:
+- mcp
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/nkarasiak/qgis-mcp
+notes: Most complete QGIS MCP; v0.15.2 Oct 2026
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1497

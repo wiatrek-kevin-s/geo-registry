@@ -1,0 +1,31 @@
+id: grass
+kind: tool
+name: GRASS
+category: Desktop GIS & analysis engines
+subcategory: Open-source desktop GIS
+tool_kind: Application
+summary: Long-running OSGeo GIS and geoprocessing engine with 500+ raster, vector, imagery, terrain and
+  hydrology modules (formerly GRASS GIS).
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: C; Python
+interfaces:
+- CLI
+- Python
+- GUI
+- R
+- plugin
+call:
+- python
+- cli
+- r
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://grass.osgeo.org
+notes: Every module callable from shell or grass.script; 8.5 released May 2026
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 225

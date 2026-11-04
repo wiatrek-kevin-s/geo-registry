@@ -1,0 +1,21 @@
+id: mapillary
+kind: data
+name: Mapillary
+summary: Crowdsourced street-level imagery and detected map features with an API.
+publisher: Unknown
+themes:
+- global-street-level
+- open-data-sources
+coverage:
+  region: Global
+license: CC-BY-SA-4.0
+access:
+- type: http
+  url: https://www.mapillary.com/
+  auth: none
+notes: Meta-owned; API token
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1325

@@ -1,0 +1,21 @@
+id: spatialite-gui
+kind: tool
+name: spatialite_gui
+category: Spatial databases & query engines
+subcategory: Embedded / file databases
+tool_kind: Application
+summary: Desktop GUI for browsing, querying and mapping SpatiaLite databases.
+open_source: 'yes'
+license: GPL-3.0-or-later
+language: C++
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://www.gaia-gis.it/fossil/spatialite_gui
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 666

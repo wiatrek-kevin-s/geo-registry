@@ -1,0 +1,22 @@
+id: pygtfs
+kind: tool
+name: pygtfs
+category: Routing, networks, geocoding & LRS
+subcategory: Transit data & tools
+tool_kind: Library
+summary: Loads GTFS feeds into a SQLAlchemy database for querying.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/jarondl/pygtfs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 810

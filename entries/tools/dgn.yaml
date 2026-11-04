@@ -1,0 +1,21 @@
+id: dgn
+kind: tool
+name: DGN
+category: Core libraries & formats
+subcategory: Vector formats
+tool_kind: Format/Standard
+summary: Bentley MicroStation CAD format; GDAL reads V7 natively and V8 via ODA.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary (V7 documented)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://gdal.org/en/stable/drivers/vector/dgn.html
+notes: Transport/infra agencies.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 183

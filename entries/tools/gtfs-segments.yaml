@@ -1,0 +1,22 @@
+id: gtfs-segments
+kind: tool
+name: gtfs_segments
+category: Routing, networks, geocoding & LRS
+subcategory: Transit data & tools
+tool_kind: Library
+summary: Splits GTFS routes into stop-to-stop segments and computes service frequency per segment.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/UTEL-UIUC/gtfs_segments
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 808

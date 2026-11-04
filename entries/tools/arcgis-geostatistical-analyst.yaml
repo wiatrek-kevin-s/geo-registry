@@ -1,0 +1,24 @@
+id: arcgis-geostatistical-analyst
+kind: tool
+name: ArcGIS Geostatistical Analyst
+category: Desktop GIS & analysis engines
+subcategory: Commercial desktop GIS
+tool_kind: Extension
+summary: ArcGIS Pro extension for kriging, interpolation, simulation and exploratory spatial data analysis.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+notes: URL not confirmed
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 256

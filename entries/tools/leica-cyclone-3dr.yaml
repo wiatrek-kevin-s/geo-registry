@@ -1,0 +1,25 @@
+id: leica-cyclone-3dr
+kind: tool
+name: Leica Cyclone 3DR
+category: Point clouds, LiDAR & 3D
+subcategory: Desktop viewers & editors
+tool_kind: Application
+summary: Leica point cloud analysis and modeling software for inspection, meshing and deliverables.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+- plugin
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://leica-geosystems.com/products/laser-scanners/software/leica-cyclone/leica-cyclone-3dr
+notes: Separate product in the Cyclone family.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 594

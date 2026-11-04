@@ -1,0 +1,28 @@
+id: apache-opendal
+kind: tool
+name: Apache OpenDAL
+category: Connections & storage
+subcategory: Object storage
+tool_kind: Library
+summary: Unified data-access layer for 50+ storage services (S3, Azure, GCS, WebDAV, SFTP, Google Drive,
+  OneDrive...).
+open_source: 'yes'
+license: Apache-2.0
+language: Rust
+interfaces:
+- Rust
+- Python
+- Java
+call:
+- python
+- rust
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://opendal.apache.org/
+notes: Broader backends than object_store
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1461

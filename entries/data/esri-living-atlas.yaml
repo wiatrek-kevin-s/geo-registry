@@ -1,0 +1,22 @@
+id: esri-living-atlas
+kind: data
+name: Esri Living Atlas
+summary: Esri's curated collection of maps, layers and imagery, many free and some subscriber-only.
+publisher: Esri
+themes:
+- commercial
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Proprietary
+license_original: Proprietary
+access:
+- type: http
+  url: https://livingatlas.arcgis.com/
+  auth: none
+notes: Some layers need ArcGIS account
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1357

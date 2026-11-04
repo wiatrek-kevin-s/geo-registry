@@ -1,0 +1,23 @@
+id: arcgis-data-interoperability
+kind: tool
+name: ArcGIS Data Interoperability
+category: Commercial GIS platforms & APIs
+subcategory: Esri ArcGIS
+tool_kind: Extension
+summary: ArcGIS Pro extension embedding FME technology for hundreds of extra formats and spatial ETL.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://www.esri.com/en-us/arcgis/products/arcgis-data-interoperability/overview
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1381

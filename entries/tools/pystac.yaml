@@ -1,0 +1,22 @@
+id: pystac
+kind: tool
+name: pystac
+category: Imagery, remote sensing & GeoAI
+subcategory: STAC ecosystem
+tool_kind: Library
+summary: Python library for reading, writing and validating STAC catalogs, collections and items.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/stac-utils/pystac
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 420

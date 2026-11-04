@@ -1,0 +1,24 @@
+id: earthdaily
+kind: tool
+name: EarthDaily
+category: Imagery, remote sensing & GeoAI
+subcategory: Commercial imagery providers
+tool_kind: Platform
+summary: Analysis-ready commercial EO data platform with STAC-based access.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- Python
+call:
+- python
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://earthdaily.com
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 491

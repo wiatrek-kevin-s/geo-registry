@@ -1,0 +1,23 @@
+id: osmapi
+kind: tool
+name: osmapi
+category: OSM & Overture tooling
+subcategory: Cloud-native / analytics
+tool_kind: Library
+summary: Python wrapper for the OSM editing API v0.6 to read and upload changesets.
+open_source: 'yes'
+license: GPL-3.0-only
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/metaodi/osmapi
+notes: Programmatic edits (use with care)
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1198

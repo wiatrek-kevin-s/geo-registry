@@ -1,0 +1,23 @@
+id: arcgis-maps-sdk-for-unreal-engine
+kind: tool
+name: ArcGIS Maps SDK for Unreal Engine
+category: Display & visualization
+subcategory: 3D globes & 3D Tiles
+tool_kind: Library
+summary: Esri SDK for building 3D GIS experiences with ArcGIS data in Unreal Engine.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- plugin
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://developers.arcgis.com/unreal-engine/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1066

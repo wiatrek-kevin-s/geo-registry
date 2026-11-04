@@ -1,0 +1,25 @@
+id: tilestache
+kind: tool
+name: TileStache
+category: Servers, standards, tiles & catalogs
+subcategory: Tile servers
+tool_kind: Server
+summary: Python tile server and cache serving rendered or proxied map tiles.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- REST
+- Python
+call:
+- python
+- rest
+wrapped_by_columbus: false
+project_status: archived
+url: https://github.com/TileStache/TileStache
+notes: Historical
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 918

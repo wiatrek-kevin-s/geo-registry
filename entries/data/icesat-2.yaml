@@ -1,0 +1,21 @@
+id: icesat-2
+kind: data
+name: ICESat-2
+summary: Photon-counting laser altimetry for ice, terrain, canopy and water heights.
+publisher: Unknown
+themes:
+- us-federal-nasa
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://icesat-2.gsfc.nasa.gov/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1267

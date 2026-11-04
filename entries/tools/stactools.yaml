@@ -1,0 +1,26 @@
+id: stactools
+kind: tool
+name: stactools
+category: Imagery, remote sensing & GeoAI
+subcategory: STAC ecosystem
+tool_kind: Toolkit/CLI
+summary: CLI and library for creating and manipulating STAC metadata, with per-dataset plugin packages.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- CLI
+- Python
+- plugin
+call:
+- python
+- cli
+- plugin
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/stac-utils/stactools
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 429

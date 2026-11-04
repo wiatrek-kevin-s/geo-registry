@@ -1,0 +1,24 @@
+id: arcgis-workforce
+kind: tool
+name: ArcGIS Workforce
+category: Commercial GIS platforms & APIs
+subcategory: Esri ArcGIS
+tool_kind: Application
+summary: Mobile and web app for dispatching and tracking field work assignments.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: archived
+url: https://support.esri.com/en-us/knowledge-base/deprecation-arcgis-workforce-000038426
+notes: Deprecated Jan 2026, retiring Q4 2026; replaced by Tasks in Field Maps
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1370

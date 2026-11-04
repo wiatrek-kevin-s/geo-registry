@@ -1,0 +1,24 @@
+id: google-geospatial-reasoning-agent
+kind: tool
+name: Google Geospatial Reasoning agent
+category: AI, agents & MCP for GIS
+subcategory: LLM GIS agents & research
+tool_kind: Service/API
+summary: Experimental Gemini agent linking Earth AI models, Maps, Earth Engine and Data Commons; offered
+  as an A2A API.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://research.google/pubs/google-earth-ai-geospatial-reasoning-agent-capabilities-and-a-systematic-evaluation/
+notes: Limited early access
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1559

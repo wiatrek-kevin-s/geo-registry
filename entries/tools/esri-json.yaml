@@ -1,0 +1,23 @@
+id: esri-json
+kind: tool
+name: Esri JSON
+category: Core libraries & formats
+subcategory: Vector formats
+tool_kind: Format/Standard
+summary: JSON geometry and feature encoding used by ArcGIS REST services.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary (documented)
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://developers.arcgis.com/documentation/common-data-types/geometry-objects.htm
+notes: Needed to consume ArcGIS feature services.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 162

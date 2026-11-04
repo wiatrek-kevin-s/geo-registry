@@ -1,0 +1,24 @@
+id: pyinterpolate
+kind: tool
+name: pyinterpolate
+category: Desktop GIS & analysis engines
+subcategory: Geostatistics & interpolation
+tool_kind: Library
+summary: Spatial interpolation library including kriging and area-to-point Poisson kriging.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/DataverseLabs/pyinterpolate
+notes: Licence not confirmed
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 322

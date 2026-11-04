@@ -1,0 +1,23 @@
+id: simplekml
+kind: tool
+name: simplekml
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Python package for generating KML files.
+open_source: 'yes'
+license: LGPL-3.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/eisoldt/simplekml
+notes: Quick KML export.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 80

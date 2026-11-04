@@ -1,0 +1,23 @@
+id: val3dity
+kind: tool
+name: val3dity
+category: Point clouds, LiDAR & 3D
+subcategory: City models
+tool_kind: Toolkit/CLI
+summary: Validates 3D primitives and city model geometries against ISO 19107 rules.
+open_source: 'yes'
+license: GPL-3.0
+language: C++
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/tudelft3d/val3dity
+notes: Geometry QA for building models.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 622

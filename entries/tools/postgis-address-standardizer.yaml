@@ -1,0 +1,22 @@
+id: postgis-address-standardizer
+kind: tool
+name: PostGIS Address Standardizer
+category: Routing, networks, geocoding & LRS
+subcategory: Geocoding engines & libraries
+tool_kind: Extension
+summary: PostgreSQL extension that parses addresses into normalized components using rule tables.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: C
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: maintained
+url: https://postgis.net/docs/Address_Standardizer.html
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 830

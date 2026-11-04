@@ -1,0 +1,26 @@
+id: lastools-laslib
+kind: tool
+name: LAStools / LASlib
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Point cloud toolset with open LASlib IO and commercially licensed processing tools.
+open_source: partial
+license: LicenseRef-Multiple
+license_original: LGPL-2.1 (LASlib/LASzip); Proprietary (most tools)
+language: C++
+interfaces:
+- CLI
+- C/C++
+call:
+- cli
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://rapidlasso.de
+notes: Commercial licence for most tools.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 70

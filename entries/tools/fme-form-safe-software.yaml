@@ -1,0 +1,28 @@
+id: fme-form-safe-software
+kind: tool
+name: FME Form (Safe Software)
+category: Desktop GIS & analysis engines
+subcategory: Spatial ETL
+tool_kind: Application
+summary: Visual data integration tool for translating, transforming and validating hundreds of spatial
+  and non-spatial formats.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+- CLI
+- Python
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://fme.safe.com
+notes: Formerly FME Desktop; fme.exe workspaces runnable from CLI
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 274

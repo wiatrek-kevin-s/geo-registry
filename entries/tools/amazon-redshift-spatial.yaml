@@ -1,0 +1,24 @@
+id: amazon-redshift-spatial
+kind: tool
+name: Amazon Redshift spatial
+category: Spatial databases & query engines
+subcategory: Cloud warehouses
+tool_kind: Service/API
+summary: GEOMETRY and GEOGRAPHY types with ST_ and H3 functions in Redshift.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- SQL
+- REST
+call:
+- rest
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://docs.aws.amazon.com/redshift/latest/dg/geospatial-functions.html
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 693

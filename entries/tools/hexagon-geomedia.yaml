@@ -1,0 +1,25 @@
+id: hexagon-geomedia
+kind: tool
+name: Hexagon GeoMedia
+category: Desktop GIS & analysis engines
+subcategory: Commercial desktop GIS
+tool_kind: Application
+summary: Hexagon desktop GIS for data integration, editing, analysis and cartography, often paired with
+  ERDAS imagery tools.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+- plugin
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: active
+notes: 2025 release confirmed; official URL not confirmed
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 261

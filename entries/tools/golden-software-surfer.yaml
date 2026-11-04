@@ -1,0 +1,26 @@
+id: golden-software-surfer
+kind: tool
+name: Golden Software Surfer
+category: Desktop GIS & analysis engines
+subcategory: Commercial desktop GIS
+tool_kind: Application
+summary: Gridding, contouring and 3D surface mapping package with many interpolation methods, scriptable
+  via automation.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://www.goldensoftware.com/products/surfer
+notes: Classic for kriging/contours in geoscience
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 270

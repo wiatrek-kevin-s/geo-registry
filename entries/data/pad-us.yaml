@@ -1,0 +1,21 @@
+id: pad-us
+kind: data
+name: PAD-US
+summary: 'Protected Areas Database of the US: public lands and conservation areas.'
+publisher: Unknown
+themes:
+- us-federal-protected-areas
+- open-data-sources
+coverage:
+  region: United States
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.usgs.gov/programs/gap-analysis-project/science/pad-us-data-overview
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1247

@@ -1,0 +1,26 @@
+id: geopackage-as-database
+kind: tool
+name: GeoPackage (as database)
+category: Spatial databases & query engines
+subcategory: Embedded / file databases
+tool_kind: Format/Standard
+summary: OGC SQLite-based container for vectors, tiles and attributes that can be queried directly with
+  SQL.
+open_source: 'yes'
+license: NOASSERTION
+license_original: n/a
+interfaces:
+- SQL
+- OGC
+call:
+- sql
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://www.geopackage.org
+notes: Default local store; query via sqlite3 or GDAL SQL
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 668

@@ -1,0 +1,23 @@
+id: terra-sf-stars-r
+kind: tool
+name: terra / sf / stars (R)
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Core R packages for vector (sf), raster (terra) and datacube (stars) spatial data built on GDAL/GEOS/PROJ.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: R/C++
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: active
+url: https://r-spatial.org
+notes: R analysts' default stack.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 91

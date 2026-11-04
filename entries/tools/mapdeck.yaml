@@ -1,0 +1,23 @@
+id: mapdeck
+kind: tool
+name: mapdeck
+category: Display & visualization
+subcategory: R mapping
+tool_kind: Library
+summary: R interface to deck.gl for large interactive maps.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: R
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/SymbolixAU/mapdeck
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1112

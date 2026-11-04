@@ -1,0 +1,22 @@
+id: dbeaver
+kind: tool
+name: DBeaver
+category: Spatial databases & query engines
+subcategory: Client tools
+tool_kind: Application
+summary: Universal SQL client with a spatial viewer that maps geometry columns.
+open_source: partial
+license: Apache-2.0
+language: Java
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://dbeaver.io
+notes: Community edition open
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 743

@@ -1,0 +1,25 @@
+id: rasterio
+kind: tool
+name: Rasterio
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Pythonic raster IO built on GDAL with NumPy arrays and windowed reads.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python/Cython
+interfaces:
+- Python
+- CLI
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/rasterio/rasterio
+notes: Standard raster IO for Python agents.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 51

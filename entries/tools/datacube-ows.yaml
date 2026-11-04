@@ -1,0 +1,25 @@
+id: datacube-ows
+kind: tool
+name: datacube-ows
+category: Servers, standards, tiles & catalogs
+subcategory: Map & feature servers
+tool_kind: Server
+summary: Serves Open Data Cube raster collections as WMS, WMTS and WCS with on-the-fly styling.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- OGC
+- Python
+call:
+- python
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/opendatacube/datacube-ows
+notes: EO data cube publishing
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 906

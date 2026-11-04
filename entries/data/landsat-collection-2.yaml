@@ -1,0 +1,22 @@
+id: landsat-collection-2
+kind: data
+name: Landsat (Collection 2)
+summary: 30 m multispectral and thermal imagery archive back to 1972 from USGS/NASA.
+publisher: Unknown
+themes:
+- us-federal-imagery
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.usgs.gov/landsat-missions
+  auth: none
+notes: STAC on AWS and Planetary Computer
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1242

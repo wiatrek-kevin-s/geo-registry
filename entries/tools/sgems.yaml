@@ -1,0 +1,24 @@
+id: sgems
+kind: tool
+name: SGeMS
+category: Desktop GIS & analysis engines
+subcategory: Geostatistics & interpolation
+tool_kind: Application
+summary: Stanford geostatistical modelling software for variograms, kriging and stochastic simulation.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: C++
+interfaces:
+- GUI
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: archived
+notes: Historical; URL not confirmed
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 324

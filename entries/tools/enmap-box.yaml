@@ -1,0 +1,27 @@
+id: enmap-box
+kind: tool
+name: EnMAP-Box
+category: Imagery, remote sensing & GeoAI
+subcategory: Hyperspectral
+tool_kind: Extension
+summary: QGIS plugin for visualising and analysing imaging spectroscopy and multispectral data, including
+  ML workflows.
+open_source: 'yes'
+license: GPL-3.0-or-later
+language: Python
+interfaces:
+- plugin
+- GUI
+- Python
+call:
+- python
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/EnMAP-Box/enmap-box
+notes: Runs inside QGIS processing
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 378

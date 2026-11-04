@@ -1,0 +1,24 @@
+id: source-cooperative
+kind: data
+name: Source Cooperative
+summary: Radiant Earth hosted repository for publishing and sharing open geospatial datasets on cloud
+  storage.
+publisher: Unknown
+themes:
+- cloud-eo-platforms
+- imagery-remote-sensing-geoai
+- open-data-sources
+coverage:
+  region: Unspecified
+license: NOASSERTION
+license_original: Unknown
+access:
+- type: http
+  url: https://source.coop
+  auth: none
+notes: Many GeoParquet/COG datasets
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 416

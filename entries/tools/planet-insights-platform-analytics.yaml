@@ -1,0 +1,22 @@
+id: planet-insights-platform-analytics
+kind: tool
+name: Planet Insights Platform analytics
+category: Imagery, remote sensing & GeoAI
+subcategory: GeoAI / deep learning
+tool_kind: Service/API
+summary: Planet's analysis-ready feeds such as Planetary Variables and change detection served over APIs.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.planet.com/products/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 469

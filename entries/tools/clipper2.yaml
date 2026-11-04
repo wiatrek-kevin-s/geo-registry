@@ -1,0 +1,25 @@
+id: clipper2
+kind: tool
+name: Clipper2
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: Polygon clipping and offsetting library for integer and float coordinates.
+open_source: 'yes'
+license: BSL-1.0
+language: C++/C#/Delphi
+interfaces:
+- C/C++
+- .NET
+call:
+- c-cpp
+- dotnet
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/AngusJohnson/Clipper2
+notes: Popular for buffering/offsetting.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 15

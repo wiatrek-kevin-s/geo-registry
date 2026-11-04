@@ -1,0 +1,23 @@
+id: ogc-two-dimensional-tile-matrix-set
+kind: tool
+name: OGC Two Dimensional Tile Matrix Set
+category: Core libraries & formats
+subcategory: Discrete global grids & geocodes
+tool_kind: Format/Standard
+summary: OGC standard defining tile grids and tile matrix sets for any CRS.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open standard
+interfaces:
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://www.ogc.org/standards/tms
+notes: Basis for OGC API Tiles.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 112

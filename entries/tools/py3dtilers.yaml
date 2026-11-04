@@ -1,0 +1,26 @@
+id: py3dtilers
+kind: tool
+name: py3dtilers
+category: Point clouds, LiDAR & 3D
+subcategory: 3D tiles & streaming formats
+tool_kind: Toolkit/CLI
+summary: Python tools from the VCity project for building 3D Tiles from CityGML, OBJ, GeoJSON and IFC.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: Python
+interfaces:
+- CLI
+- Python
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/VCityTeam/py3dtilers
+notes: City model tiling.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 615

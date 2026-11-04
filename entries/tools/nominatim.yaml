@@ -1,0 +1,28 @@
+id: nominatim
+kind: tool
+name: Nominatim
+category: Routing, networks, geocoding & LRS
+subcategory: Geocoding engines & libraries
+tool_kind: Server
+summary: Geocoder and reverse geocoder built on OSM data in PostgreSQL; also runs the public osm.org search
+  service.
+open_source: 'yes'
+license: GPL-3.0-or-later
+language: Python;SQL
+interfaces:
+- REST
+- Python
+- CLI
+call:
+- python
+- cli
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/osm-search/Nominatim
+notes: Python source GPL-3; some files GPL-2/Apache-2
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 819

@@ -1,0 +1,22 @@
+id: groundwork
+kind: tool
+name: GroundWork
+category: Imagery, remote sensing & GeoAI
+subcategory: Labeling & training data
+tool_kind: Application
+summary: Element 84 (ex-Azavea) web tool for labeling geospatial imagery for segmentation and detection.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: unknown
+url: https://groundwork.element84.com
+notes: Status unclear; possibly discontinued
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 523

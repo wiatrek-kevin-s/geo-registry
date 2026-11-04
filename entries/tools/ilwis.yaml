@@ -1,0 +1,25 @@
+id: ilwis
+kind: tool
+name: ILWIS
+category: Desktop GIS & analysis engines
+subcategory: Open-source desktop GIS
+tool_kind: Application
+summary: Integrated remote sensing and GIS desktop from ITC, with raster/vector analysis, image processing
+  and hydrology toolboxes.
+open_source: 'yes'
+license: GPL-2.0-only
+language: C++
+interfaces:
+- GUI
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/52North/IlwisCore
+notes: 3.8.x Windows desktop; next-gen ILWIS framework in development
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 235

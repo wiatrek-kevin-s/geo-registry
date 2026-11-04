@@ -1,0 +1,29 @@
+id: mapguide-open-source
+kind: tool
+name: MapGuide Open Source
+category: Servers, standards, tiles & catalogs
+subcategory: Map & feature servers
+tool_kind: Server
+summary: Web mapping platform with a server, authoring tools and APIs for publishing and querying maps.
+open_source: 'yes'
+license: LGPL-2.1-only
+language: C/C++
+interfaces:
+- REST
+- OGC
+- Java
+call:
+- rest
+- ogc
+- java
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://mapguide.osgeo.org
+notes: Legacy OSGeo project
+also_categories:
+- Display & visualization
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 903

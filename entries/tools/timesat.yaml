@@ -1,0 +1,25 @@
+id: timesat
+kind: tool
+name: TIMESAT
+category: Imagery, remote sensing & GeoAI
+subcategory: Time series
+tool_kind: Toolkit/CLI
+summary: Software for extracting vegetation phenology metrics from satellite time series.
+open_source: partial
+license: NOASSERTION
+license_original: Unknown
+language: Fortran;MATLAB
+interfaces:
+- CLI
+- GUI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: maintained
+url: https://web.nateko.lu.se/timesat/timesat.asp
+notes: Licence terms unclear
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 388

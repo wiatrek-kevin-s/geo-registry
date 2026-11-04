@@ -1,0 +1,24 @@
+id: gdalcubes
+kind: tool
+name: gdalcubes
+category: Imagery, remote sensing & GeoAI
+subcategory: STAC ecosystem
+tool_kind: Library
+summary: Builds on-the-fly regular data cubes from image collections such as STAC results.
+open_source: 'yes'
+license: MIT
+language: C++;R
+interfaces:
+- R
+- C/C++
+call:
+- r
+- c-cpp
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/appelmar/gdalcubes
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 436

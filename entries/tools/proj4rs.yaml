@@ -1,0 +1,25 @@
+id: proj4rs
+kind: tool
+name: proj4rs
+category: Core libraries & formats
+subcategory: Projection & CRS
+tool_kind: Library
+summary: Pure Rust port of proj4js projection logic, usable in WebAssembly.
+open_source: 'yes'
+license: MIT OR Apache-2.0
+language: Rust
+interfaces:
+- Rust
+- JS
+call:
+- js
+- rust
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/3liz/proj4rs
+notes: PROJ-free Rust/WASM option.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 35

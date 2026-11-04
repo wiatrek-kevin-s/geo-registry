@@ -1,0 +1,25 @@
+id: atcor
+kind: tool
+name: ATCOR
+category: Imagery, remote sensing & GeoAI
+subcategory: Atmospheric correction
+tool_kind: Application
+summary: Commercial atmospheric and topographic correction software for multispectral and hyperspectral
+  imagery.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+- plugin
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.rese-apps.com
+notes: Also sold as ERDAS/PCI add-on
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 376

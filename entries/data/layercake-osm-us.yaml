@@ -1,0 +1,21 @@
+id: layercake-osm-us
+kind: data
+name: Layercake (OSM US)
+summary: Thematic OSM extracts (buildings, roads, etc.) published as GeoParquet by OpenStreetMap US.
+publisher: Unknown
+themes:
+- cloud-native-analytics
+- osm-overture-tooling
+coverage:
+  region: United States
+license: ODbL-1.0
+access:
+- type: http
+  url: https://openstreetmap.us/our-work/layercake/
+  auth: none
+notes: Query OSM from DuckDB without PBF tooling; code is CC0
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1194

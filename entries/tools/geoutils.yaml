@@ -1,0 +1,23 @@
+id: geoutils
+kind: tool
+name: GeoUtils
+category: Desktop GIS & analysis engines
+subcategory: Terrain & hydrology engines
+tool_kind: Library
+summary: Raster and vector convenience layer on rasterio/geopandas used by xDEM for georeferenced operations.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/GlacioHack/geoutils
+notes: Companion to xDEM
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 282

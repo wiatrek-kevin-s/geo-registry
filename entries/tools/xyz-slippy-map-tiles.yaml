@@ -1,0 +1,23 @@
+id: xyz-slippy-map-tiles
+kind: tool
+name: XYZ / Slippy map tiles
+category: Servers, standards, tiles & catalogs
+subcategory: Tile, style & catalog specs
+tool_kind: Format/Standard
+summary: De facto z/x/y URL scheme for Web Mercator tiles with a top-left origin.
+open_source: 'yes'
+license: LicenseRef-Public-Domain
+license_original: Public domain
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: maintained
+url: https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames
+notes: Universal tile addressing
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1002

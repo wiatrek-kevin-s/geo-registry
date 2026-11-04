@@ -1,0 +1,25 @@
+id: osm-buildings
+kind: tool
+name: OSM Buildings
+category: Point clouds, LiDAR & 3D
+subcategory: Web viewers & engines
+tool_kind: Library
+summary: JavaScript library and hosted service that renders OpenStreetMap buildings in 2.5D/3D on web
+  maps.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: JavaScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://osmbuildings.org
+notes: Code is open with attribution; exact license not confirmed.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 608

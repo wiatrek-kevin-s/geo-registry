@@ -1,0 +1,22 @@
+id: placemark
+kind: tool
+name: Placemark
+category: Display & visualization
+subcategory: Data viewers & editors
+tool_kind: Application
+summary: Feature-rich browser editor for geospatial data; now open source after the commercial service
+  ended.
+open_source: 'yes'
+license: MIT
+language: TypeScript
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/placemark/placemark
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1150

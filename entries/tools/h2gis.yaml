@@ -1,0 +1,25 @@
+id: h2gis
+kind: tool
+name: H2GIS
+category: Spatial databases & query engines
+subcategory: Embedded / file databases
+tool_kind: Extension
+summary: Spatial extension for the H2 Java database offering OGC SQL functions and many file drivers.
+open_source: 'yes'
+license: LGPL-3.0
+language: Java
+interfaces:
+- SQL
+- Java
+call:
+- sql
+- java
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.h2gis.org
+notes: Embedded JVM spatial DB
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 671

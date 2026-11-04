@@ -1,0 +1,25 @@
+id: mcc-lidar
+kind: tool
+name: MCC-LIDAR
+category: Point clouds, LiDAR & 3D
+subcategory: Ground classification
+tool_kind: Toolkit/CLI
+summary: Multiscale curvature classification tool from USFS researchers for separating ground returns
+  in forested lidar.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: C++
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://sourceforge.net/projects/mcclidar/
+notes: Forest-terrain ground filter; old but cited.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 569

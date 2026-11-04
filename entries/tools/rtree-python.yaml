@@ -1,0 +1,23 @@
+id: rtree-python
+kind: tool
+name: Rtree (Python)
+category: Core libraries & formats
+subcategory: Spatial indexing
+tool_kind: Library
+summary: Python ctypes wrapper of libspatialindex for R-tree queries.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/Toblerity/rtree
+notes: Shapely STRtree often suffices instead.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 97

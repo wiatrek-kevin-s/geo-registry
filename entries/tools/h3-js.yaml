@@ -1,0 +1,23 @@
+id: h3-js
+kind: tool
+name: h3-js
+category: Core libraries & formats
+subcategory: Discrete global grids & geocodes
+tool_kind: Library
+summary: Official JavaScript bindings for H3.
+open_source: 'yes'
+license: Apache-2.0
+language: JavaScript (Emscripten)
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/uber/h3-js
+notes: H3 in the UI.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 105

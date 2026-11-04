@@ -1,0 +1,22 @@
+id: font-maker
+kind: tool
+name: font-maker
+category: Display & visualization
+subcategory: Map style tools & specs
+tool_kind: Toolkit/CLI
+summary: Converts TTF/OTF fonts into PBF glyph ranges for map labels.
+open_source: 'yes'
+license: BSD-3-Clause
+language: C++;JavaScript
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/maplibre/font-maker
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1167

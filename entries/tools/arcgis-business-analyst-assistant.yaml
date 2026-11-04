@@ -1,0 +1,21 @@
+id: arcgis-business-analyst-assistant
+kind: tool
+name: ArcGIS Business Analyst assistant
+category: AI, agents & MCP for GIS
+subcategory: Esri AI
+tool_kind: Extension
+summary: GA assistant that recommends Business Analyst workflows for business questions.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://www.esri.com/arcgis-blog/products/apps/geoai/whats-new-in-ai-assistants-june-2026
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1487

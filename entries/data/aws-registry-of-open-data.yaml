@@ -1,0 +1,22 @@
+id: aws-registry-of-open-data
+kind: data
+name: AWS Registry of Open Data
+summary: Catalog of public datasets hosted on Amazon S3, including many satellite archives as COG/Zarr.
+publisher: Unknown
+themes:
+- cloud-eo-platforms
+- imagery-remote-sensing-geoai
+coverage:
+  region: Unspecified
+license: LicenseRef-Proprietary
+license_original: Proprietary
+access:
+- type: http
+  url: https://registry.opendata.aws
+  auth: none
+notes: Direct S3 reads via GDAL /vsis3/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 398

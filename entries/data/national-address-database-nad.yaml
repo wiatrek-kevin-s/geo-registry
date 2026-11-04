@@ -1,0 +1,21 @@
+id: national-address-database-nad
+kind: data
+name: National Address Database (NAD)
+summary: US DOT compilation of address points contributed by state, local and tribal governments.
+publisher: Unknown
+themes:
+- address-data
+- routing-networks-geocoding-lrs
+coverage:
+  region: United States
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.transportation.gov/gis/national-address-database
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 844

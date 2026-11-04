@@ -1,0 +1,29 @@
+id: airbus-oneatlas
+kind: tool
+name: Airbus OneAtlas
+category: Imagery, remote sensing & GeoAI
+subcategory: Commercial imagery providers
+tool_kind: Platform
+summary: Airbus platform providing Pléiades, Pléiades Neo and SPOT imagery with streaming and ordering
+  APIs.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- OGC
+- GUI
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://oneatlas.airbus.com
+also_categories:
+- Open data sources
+- Commercial GIS platforms & APIs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 482

@@ -1,0 +1,26 @@
+id: google-routes-api
+kind: tool
+name: Google Routes API
+category: Routing, networks, geocoding & LRS
+subcategory: Commercial routing APIs
+tool_kind: Service/API
+summary: Google Maps Platform routing and route-matrix service with traffic-aware travel times.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- Python
+- JS
+call:
+- python
+- rest
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://developers.google.com/maps/documentation/routes
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 849

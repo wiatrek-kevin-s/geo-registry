@@ -1,0 +1,24 @@
+id: web-worldwind
+kind: tool
+name: Web WorldWind
+category: Display & visualization
+subcategory: 3D globes & 3D Tiles
+tool_kind: Library
+summary: NASA's JavaScript 3D virtual globe for displaying imagery, terrain and OGC layers.
+open_source: 'yes'
+license: Apache-2.0
+language: JavaScript
+interfaces:
+- JS
+- OGC
+call:
+- js
+- ogc
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/NASAWorldWind/WebWorldWind
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1064

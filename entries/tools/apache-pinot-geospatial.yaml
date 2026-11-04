@@ -1,0 +1,26 @@
+id: apache-pinot-geospatial
+kind: tool
+name: Apache Pinot geospatial
+category: Spatial databases & query engines
+subcategory: Big data / distributed
+tool_kind: Extension
+summary: Real-time OLAP store with ST_ functions and H3-based geospatial indexes.
+open_source: 'yes'
+license: Apache-2.0
+language: Java
+interfaces:
+- SQL
+- REST
+- Java
+call:
+- rest
+- sql
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://docs.pinot.apache.org/functions/indexing/geospatial-support
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 686

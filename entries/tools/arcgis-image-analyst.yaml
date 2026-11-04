@@ -1,0 +1,24 @@
+id: arcgis-image-analyst
+kind: tool
+name: ArcGIS Image Analyst
+category: Imagery, remote sensing & GeoAI
+subcategory: GeoAI / deep learning
+tool_kind: Extension
+summary: ArcGIS Pro extension for advanced imagery, deep learning, stereo and motion imagery analysis.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Python
+interfaces:
+- GUI
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://www.esri.com/en-us/arcgis/products/arcgis-image-analyst/overview
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 466

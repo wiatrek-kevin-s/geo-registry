@@ -1,0 +1,22 @@
+id: openlr-python
+kind: tool
+name: openlr (Python)
+category: Routing, networks, geocoding & LRS
+subcategory: Network & traffic referencing standards
+tool_kind: Library
+summary: Python library for parsing and serializing OpenLR binary location references.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/tomtom-international/openlr-python
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 880

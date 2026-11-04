@@ -1,0 +1,25 @@
+id: asf-hyp3
+kind: tool
+name: ASF HyP3
+category: Imagery, remote sensing & GeoAI
+subcategory: SAR processing
+tool_kind: Service/API
+summary: Alaska Satellite Facility on-demand cloud processing of Sentinel-1 RTC and InSAR products.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- REST
+- Python
+call:
+- python
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://hyp3-docs.asf.alaska.edu
+notes: Free with Earthdata login
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 499

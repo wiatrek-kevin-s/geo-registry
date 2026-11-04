@@ -1,0 +1,23 @@
+id: citygml
+kind: tool
+name: CityGML
+category: Point clouds, LiDAR & 3D
+subcategory: City models
+tool_kind: Format/Standard
+summary: OGC standard data model and GML encoding for semantic 3D city and landscape models.
+open_source: 'yes'
+license: NOASSERTION
+license_original: n/a
+interfaces:
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://www.ogc.org/standards/citygml/
+notes: Version 3.0 conceptual model adopted.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 619

@@ -1,0 +1,26 @@
+id: mapbox-directions-api
+kind: tool
+name: Mapbox Directions API
+category: Routing, networks, geocoding & LRS
+subcategory: Commercial routing APIs
+tool_kind: Service/API
+summary: Mapbox routing, matrix, isochrone and map matching APIs built on OSM with traffic.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- JS
+- Python
+call:
+- python
+- rest
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://docs.mapbox.com/api/navigation/directions/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 852

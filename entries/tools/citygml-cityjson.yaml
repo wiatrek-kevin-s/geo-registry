@@ -1,0 +1,21 @@
+id: citygml-cityjson
+kind: tool
+name: CityGML / CityJSON
+category: Core libraries & formats
+subcategory: Vector formats
+tool_kind: Format/Standard
+summary: Data models and encodings (XML and JSON) for semantic 3D city and building models.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open standard (OGC)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://www.cityjson.org
+notes: 3D city models.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 173

@@ -1,0 +1,21 @@
+id: ugrid-mesh-formats-2dm-selafin
+kind: tool
+name: UGRID / mesh formats (2DM, SELAFIN)
+category: Core libraries & formats
+subcategory: Point cloud & 3D formats
+tool_kind: Format/Standard
+summary: Conventions and formats for unstructured mesh model output used in hydraulics and oceanography.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open conventions
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://ugrid-conventions.github.io/ugrid-conventions
+notes: Read via MDAL.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 198

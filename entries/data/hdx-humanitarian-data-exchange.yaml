@@ -1,0 +1,22 @@
+id: hdx-humanitarian-data-exchange
+kind: data
+name: HDX (Humanitarian Data Exchange)
+summary: OCHA platform of humanitarian datasets including boundaries and population.
+publisher: Unknown
+themes:
+- catalogs
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Multiple
+license_original: Mixed
+access:
+- type: http
+  url: https://data.humdata.org/
+  auth: none
+notes: CKAN API
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1331

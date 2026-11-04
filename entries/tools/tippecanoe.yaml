@@ -1,0 +1,25 @@
+id: tippecanoe
+kind: tool
+name: tippecanoe
+category: Core libraries & formats
+subcategory: Tile formats
+tool_kind: Toolkit/CLI
+summary: CLI that builds vector tilesets (MBTiles/PMTiles) from large GeoJSON or FlatGeobuf collections.
+open_source: 'yes'
+license: BSD-2-Clause
+language: C++
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/felt/tippecanoe
+notes: Agent can bake vector tiles.
+also_categories:
+- Servers, standards, tiles & catalogs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 208

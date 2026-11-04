@@ -1,0 +1,23 @@
+id: grafana-geomap
+kind: tool
+name: Grafana Geomap
+category: Display & visualization
+subcategory: BI & dashboard maps
+tool_kind: Extension
+summary: Grafana panel for plotting time-series and metric data on an OpenLayers map.
+open_source: 'yes'
+license: AGPL-3.0
+language: TypeScript
+interfaces:
+- GUI
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/geomap/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1126

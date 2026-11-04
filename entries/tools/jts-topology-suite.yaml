@@ -1,0 +1,23 @@
+id: jts-topology-suite
+kind: tool
+name: JTS Topology Suite
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: Reference Java library for 2D planar geometry operations, spatial predicates and indexing.
+open_source: 'yes'
+license: EPL-2.0 OR BSD-3-Clause
+language: Java
+interfaces:
+- Java
+call:
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/locationtech/jts
+notes: JVM dependency; reference semantics for Simple Features ops.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 3

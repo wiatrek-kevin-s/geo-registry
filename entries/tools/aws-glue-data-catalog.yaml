@@ -1,0 +1,24 @@
+id: aws-glue-data-catalog
+kind: tool
+name: AWS Glue Data Catalog
+category: Connections & storage
+subcategory: Data catalogs with geo support
+tool_kind: Service/API
+summary: AWS metadata catalog for tables in S3, used by Athena, which provides geospatial SQL functions.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- SQL
+call:
+- rest
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://aws.amazon.com/glue/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1477

@@ -1,0 +1,25 @@
+id: onebusaway
+kind: tool
+name: OneBusAway
+category: Routing, networks, geocoding & LRS
+subcategory: Transit data & tools
+tool_kind: Server
+summary: Open-source real-time transit information system serving arrival predictions and trip data via
+  API and apps.
+open_source: 'yes'
+license: Apache-2.0
+language: Java
+interfaces:
+- REST
+- Java
+call:
+- rest
+- java
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/OneBusAway/onebusaway-application-modules
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 817

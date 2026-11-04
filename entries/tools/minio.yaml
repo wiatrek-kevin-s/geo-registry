@@ -1,0 +1,25 @@
+id: minio
+kind: tool
+name: MinIO
+category: Connections & storage
+subcategory: Object storage
+tool_kind: Server
+summary: Self-hosted S3-compatible object store.
+open_source: 'yes'
+license: AGPL-3.0
+language: Go
+interfaces:
+- REST
+- CLI
+call:
+- cli
+- rest
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/minio/minio
+notes: Community edition scaled back in 2025; check status
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1450

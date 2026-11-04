@@ -1,0 +1,25 @@
+id: nerfstudio
+kind: tool
+name: nerfstudio
+category: Point clouds, LiDAR & 3D
+subcategory: Photogrammetry & reality capture
+tool_kind: Toolkit/CLI
+summary: Framework for training and viewing neural radiance fields and Gaussian splats from images.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- CLI
+- Python
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: maintained
+url: https://nerf.studio
+notes: GPU-heavy.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 631

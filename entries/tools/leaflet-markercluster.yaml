@@ -1,0 +1,24 @@
+id: leaflet-markercluster
+kind: tool
+name: Leaflet.markercluster
+category: Display & visualization
+subcategory: Leaflet plugins
+tool_kind: Extension
+summary: Groups nearby markers into animated clusters that split apart as the user zooms in.
+open_source: 'yes'
+license: MIT
+language: JavaScript
+interfaces:
+- JS
+- plugin
+call:
+- js
+- plugin
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/Leaflet/Leaflet.markercluster
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1033

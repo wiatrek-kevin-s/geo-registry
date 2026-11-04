@@ -1,0 +1,23 @@
+id: obstore
+kind: tool
+name: obstore
+category: Connections & storage
+subcategory: Object storage
+tool_kind: Library
+summary: Fast Python bindings to the Rust object_store crate for S3, Azure, GCS and HTTP.
+open_source: 'yes'
+license: MIT
+language: Rust; Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/developmentseed/obstore
+notes: Low-dependency option for a Rust/Python app
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1459

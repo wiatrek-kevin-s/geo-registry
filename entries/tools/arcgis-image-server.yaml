@@ -1,0 +1,28 @@
+id: arcgis-image-server
+kind: tool
+name: ArcGIS Image Server
+category: Servers, standards, tiles & catalogs
+subcategory: Commercial GIS servers & platforms
+tool_kind: Server
+summary: ArcGIS Enterprise role for serving, analysing and dynamically processing large raster and imagery
+  collections.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C/C++
+interfaces:
+- REST
+- OGC
+- Python
+call:
+- python
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://enterprise.arcgis.com/en/image/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 955

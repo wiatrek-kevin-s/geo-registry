@@ -1,0 +1,20 @@
+id: chirps
+kind: data
+name: CHIRPS
+summary: Quasi-global daily to monthly rainfall from satellite and stations since 1981.
+publisher: Unknown
+themes:
+- global-climate
+- open-data-sources
+coverage:
+  region: Global
+license: CC0-1.0
+access:
+- type: http
+  url: https://www.chc.ucsb.edu/data/chirps
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1321

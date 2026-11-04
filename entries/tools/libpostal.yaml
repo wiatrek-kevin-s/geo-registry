@@ -1,0 +1,27 @@
+id: libpostal
+kind: tool
+name: libpostal
+category: Routing, networks, geocoding & LRS
+subcategory: Geocoding engines & libraries
+tool_kind: Library
+summary: Statistical NLP library to parse and normalize street addresses in most countries.
+open_source: 'yes'
+license: MIT
+language: C
+interfaces:
+- C/C++
+- Python
+- CLI
+call:
+- python
+- cli
+- c-cpp
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/openvenues/libpostal
+notes: Large ~2GB model download
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 822

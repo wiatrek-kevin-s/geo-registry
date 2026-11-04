@@ -1,0 +1,23 @@
+id: microsoft-fabric-data-warehouse-spatial
+kind: tool
+name: Microsoft Fabric Data Warehouse spatial
+category: Spatial databases & query engines
+subcategory: Cloud warehouses
+tool_kind: Service/API
+summary: T-SQL geometry/geography functions in Fabric Warehouse, without spatial column types or indexes.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://learn.microsoft.com/fabric/data-warehouse/
+notes: Store WKB/WKT, convert on query
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 694

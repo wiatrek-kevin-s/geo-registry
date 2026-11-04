@@ -1,0 +1,23 @@
+id: arcgis-velocity
+kind: tool
+name: ArcGIS Velocity
+category: Commercial GIS platforms & APIs
+subcategory: Esri ArcGIS
+tool_kind: Service/API
+summary: Cloud service for ingesting, analyzing and visualizing real-time and big IoT streams.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.esri.com/en-us/arcgis/products/arcgis-velocity/overview
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1371

@@ -1,0 +1,21 @@
+id: vespucci
+kind: tool
+name: Vespucci
+category: OSM & Overture tooling
+subcategory: Editors
+tool_kind: Application
+summary: Full OSM editor for Android with offline support and validators.
+open_source: 'yes'
+license: Apache-2.0
+language: Java
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://vespucci.io/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1214

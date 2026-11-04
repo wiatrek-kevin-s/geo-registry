@@ -1,0 +1,23 @@
+id: txgio-datahub
+kind: data
+name: TxGIO DataHub
+summary: Texas Geographic Information Office portal for state lidar, orthoimagery, parcels, addresses
+  and more.
+publisher: Texas Geographic Information Office
+themes:
+- texas
+- open-data-sources
+coverage:
+  region: Texas
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://data.geographic.texas.gov/
+  auth: none
+notes: Formerly TNRIS; REST API and bulk downloader
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1334

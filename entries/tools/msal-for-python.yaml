@@ -1,0 +1,23 @@
+id: msal-for-python
+kind: tool
+name: MSAL for Python
+category: Connections & storage
+subcategory: Identity & document stores
+tool_kind: Library
+summary: Microsoft Authentication Library for getting Entra ID tokens, including device-code and interactive
+  flows.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/AzureAD/microsoft-authentication-library-for-python
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1441

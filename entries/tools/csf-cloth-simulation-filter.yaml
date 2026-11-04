@@ -1,0 +1,31 @@
+id: csf-cloth-simulation-filter
+kind: tool
+name: CSF (Cloth Simulation Filter)
+category: Point clouds, LiDAR & 3D
+subcategory: Ground classification
+tool_kind: Library
+summary: Ground filtering by simulating a cloth draped over the inverted point cloud.
+open_source: 'yes'
+license: Apache-2.0
+language: C++;Python
+interfaces:
+- Python
+- R
+- C/C++
+- plugin
+call:
+- python
+- r
+- c-cpp
+- plugin
+install:
+  pip: cloth-simulation-filter
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/jianboqi/CSF
+notes: pip package cloth-simulation-filter; also in PDAL filters.csf and CloudCompare.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 568

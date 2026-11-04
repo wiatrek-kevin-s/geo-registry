@@ -1,0 +1,25 @@
+id: giro3d
+kind: tool
+name: Giro3D
+category: Point clouds, LiDAR & 3D
+subcategory: Web viewers & engines
+tool_kind: Library
+summary: Three.js-based web library for 2D/3D maps, point clouds and 3D Tiles.
+open_source: 'yes'
+license: MIT
+language: TypeScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://giro3d.org
+notes: Modern iTowns-derived alternative.
+also_categories:
+- Display & visualization
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 606

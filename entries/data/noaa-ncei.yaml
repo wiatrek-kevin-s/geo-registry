@@ -1,0 +1,22 @@
+id: noaa-ncei
+kind: data
+name: NOAA NCEI
+summary: National archive of climate, ocean, geophysical and weather observations.
+publisher: National Oceanic and Atmospheric Administration
+themes:
+- us-federal-noaa
+- open-data-sources
+coverage:
+  region: United States
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.ncei.noaa.gov/
+  auth: none
+notes: Climate Data Online API
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1258

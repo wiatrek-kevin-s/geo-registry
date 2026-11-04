@@ -1,0 +1,25 @@
+id: py3dtiles
+kind: tool
+name: Py3DTiles
+category: Point clouds, LiDAR & 3D
+subcategory: 3D tiles & streaming formats
+tool_kind: Toolkit/CLI
+summary: Python library and CLI that converts point clouds and meshes into 3D Tiles.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- CLI
+- Python
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://py3dtiles.org
+notes: Local LAS-to-3D Tiles conversion without Cesium ion.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 614

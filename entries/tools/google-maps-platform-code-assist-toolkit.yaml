@@ -1,0 +1,22 @@
+id: google-maps-platform-code-assist-toolkit
+kind: tool
+name: Google Maps Platform Code Assist toolkit
+category: AI, agents & MCP for GIS
+subcategory: Vendor/location MCP servers
+tool_kind: Server
+summary: Experimental MCP server giving coding agents Google Maps Platform docs and code samples.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- MCP
+call:
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://developers.google.com/maps/ai/mcp
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1522

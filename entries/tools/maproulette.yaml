@@ -1,0 +1,23 @@
+id: maproulette
+kind: tool
+name: MapRoulette
+category: OSM & Overture tooling
+subcategory: QA & coordination
+tool_kind: Application
+summary: Micro-task platform that serves OSM fix-up challenges one at a time.
+open_source: 'yes'
+license: Apache-2.0
+language: Scala;JavaScript
+interfaces:
+- GUI
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://maproulette.org/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1221

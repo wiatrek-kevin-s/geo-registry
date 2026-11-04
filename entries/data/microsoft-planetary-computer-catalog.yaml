@@ -1,0 +1,22 @@
+id: microsoft-planetary-computer-catalog
+kind: data
+name: Microsoft Planetary Computer catalog
+summary: STAC catalog of petabytes of Earth data stored as COGs and Zarr on Azure.
+publisher: Microsoft
+themes:
+- catalogs
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Multiple
+license_original: Mixed
+access:
+- type: http
+  url: https://planetarycomputer.microsoft.com/
+  auth: none
+notes: Hub retired; STAC API and data remain
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1328

@@ -1,0 +1,24 @@
+id: lidar360
+kind: tool
+name: LiDAR360
+category: Point clouds, LiDAR & 3D
+subcategory: Lidar processing suites
+tool_kind: Application
+summary: Point cloud processing suite for airborne, mobile and terrestrial lidar including forestry and
+  terrain modules.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://www.greenvalleyintl.com/LiDAR360/
+notes: GreenValley International product.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 564

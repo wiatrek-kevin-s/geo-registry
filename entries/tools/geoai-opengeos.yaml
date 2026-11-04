@@ -1,0 +1,27 @@
+id: geoai-opengeos
+kind: tool
+name: GeoAI (opengeos)
+category: AI, agents & MCP for GIS
+subcategory: LLM GIS agents & research
+tool_kind: Library
+summary: Python toolkit for imagery download, training, inference and QGIS integration, with MCP and agent
+  components.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+- MCP
+- plugin
+call:
+- python
+- mcp
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/opengeos/geoai
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1562

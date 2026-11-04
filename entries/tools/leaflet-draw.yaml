@@ -1,0 +1,25 @@
+id: leaflet-draw
+kind: tool
+name: Leaflet.draw
+category: Display & visualization
+subcategory: Leaflet plugins
+tool_kind: Extension
+summary: Adds toolbars for drawing and editing polygons, lines, markers and circles on Leaflet maps.
+open_source: 'yes'
+license: MIT
+language: JavaScript
+interfaces:
+- JS
+- plugin
+call:
+- js
+- plugin
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/Leaflet/Leaflet.draw
+notes: Older; Geoman is the more maintained alternative
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1031

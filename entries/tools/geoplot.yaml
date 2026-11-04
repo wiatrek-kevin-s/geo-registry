@@ -1,0 +1,22 @@
+id: geoplot
+kind: tool
+name: geoplot
+category: Display & visualization
+subcategory: Python notebook & app mapping
+tool_kind: Library
+summary: High-level geospatial plotting built on Cartopy and Matplotlib.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://residentmario.github.io/geoplot/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1103

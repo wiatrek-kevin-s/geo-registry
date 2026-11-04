@@ -1,0 +1,25 @@
+id: go-pmtiles
+kind: tool
+name: go-pmtiles
+category: Servers, standards, tiles & catalogs
+subcategory: Tile generation & packaging
+tool_kind: Toolkit/CLI
+summary: CLI and server for creating, extracting, inspecting, converting and serving PMTiles archives.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Go
+interfaces:
+- CLI
+- REST
+call:
+- cli
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/protomaps/go-pmtiles
+notes: pmtiles extract pulls regional basemaps from planet files
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 925

@@ -1,0 +1,23 @@
+id: gstools
+kind: tool
+name: GSTools
+category: Desktop GIS & analysis engines
+subcategory: Geostatistics & interpolation
+tool_kind: Library
+summary: Geostatistical toolbox for covariance models, variogram estimation, kriging and random-field
+  generation.
+open_source: 'yes'
+license: LGPL-3.0-or-later
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/GeoStat-Framework/GSTools
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 319

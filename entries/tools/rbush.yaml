@@ -1,0 +1,23 @@
+id: rbush
+kind: tool
+name: RBush
+category: Core libraries & formats
+subcategory: Spatial indexing
+tool_kind: Library
+summary: High-performance JavaScript R-tree for 2D points and rectangles.
+open_source: 'yes'
+license: MIT
+language: JavaScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/mourner/rbush
+notes: Fast client-side hit testing.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 99

@@ -1,0 +1,30 @@
+id: geomesa
+kind: tool
+name: GeoMesa
+category: Spatial databases & query engines
+subcategory: Big data / distributed
+tool_kind: Platform
+summary: Indexes and queries spatio-temporal data on HBase, Accumulo, Cassandra, Kafka and filesystem
+  stores.
+open_source: 'yes'
+license: Apache-2.0
+language: Scala;Java
+interfaces:
+- CLI
+- Java
+- Python
+- OGC
+call:
+- python
+- cli
+- ogc
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://www.geomesa.org
+notes: GeoServer plugin; JVM heavy
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 676

@@ -1,0 +1,25 @@
+id: kili-technology
+kind: tool
+name: Kili Technology
+category: Imagery, remote sensing & GeoAI
+subcategory: Labeling & training data
+tool_kind: Platform
+summary: Commercial labeling platform with geospatial image annotation support.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+- REST
+- Python
+call:
+- python
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://kili-technology.com
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 526

@@ -1,0 +1,30 @@
+id: manifold-system-release-9
+kind: tool
+name: Manifold System (Release 9)
+category: Desktop GIS & analysis engines
+subcategory: Commercial desktop GIS
+tool_kind: Application
+summary: Highly parallel Windows GIS with a built-in spatial SQL engine and GPU acceleration; also sold
+  as the Manifold Viewer/SQL engine.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++; C#
+interfaces:
+- GUI
+- SQL
+- Python
+- plugin
+call:
+- python
+- sql
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://manifold.net
+notes: Very fast SQL-centric engine; Windows only
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 260

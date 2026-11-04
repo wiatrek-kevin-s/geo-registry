@@ -1,0 +1,23 @@
+id: wms-web-map-service
+kind: tool
+name: WMS (Web Map Service)
+category: Servers, standards, tiles & catalogs
+subcategory: OGC web service standards
+tool_kind: Format/Standard
+summary: Returns rendered map images for requested layers, extent and style.
+open_source: 'yes'
+license: LicenseRef-OGC-Document
+license_original: OGC document licence
+interfaces:
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.ogc.org/standards/wms
+notes: Most widely deployed OGC service
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 969

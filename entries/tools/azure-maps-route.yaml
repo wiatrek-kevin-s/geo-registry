@@ -1,0 +1,24 @@
+id: azure-maps-route
+kind: tool
+name: Azure Maps Route
+category: Routing, networks, geocoding & LRS
+subcategory: Commercial routing APIs
+tool_kind: Service/API
+summary: Microsoft Azure routing, route matrix and range services.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- JS
+call:
+- rest
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://learn.microsoft.com/en-us/azure/azure-maps/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 853

@@ -1,0 +1,26 @@
+id: tileserver-rs
+kind: tool
+name: tileserver-rs
+category: Servers, standards, tiles & catalogs
+subcategory: Tile servers
+tool_kind: Server
+summary: Rust tile server for PMTiles, MBTiles, PostGIS and COG with native raster rendering and static
+  map images.
+open_source: 'yes'
+license: MIT
+language: Rust
+interfaces:
+- CLI
+- REST
+call:
+- cli
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/vinayakkulkarni/tileserver-rs
+notes: Newer project; Rust alternative to TileServer GL
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 912

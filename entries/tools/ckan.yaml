@@ -1,0 +1,28 @@
+id: ckan
+kind: tool
+name: CKAN
+category: Servers, standards, tiles & catalogs
+subcategory: Metadata catalogs & data portals
+tool_kind: Platform
+summary: Open data portal software for publishing, cataloguing and searching datasets.
+open_source: 'yes'
+license: AGPL-3.0-only
+language: Python
+interfaces:
+- REST
+- Python
+- GUI
+- plugin
+call:
+- python
+- rest
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://ckan.org
+notes: Action API is easy to script
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 935

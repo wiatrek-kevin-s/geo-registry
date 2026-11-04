@@ -1,0 +1,23 @@
+id: disy-geospatial-integration-for-talend-lrs
+kind: tool
+name: disy GeoSpatial Integration for Talend (LRS)
+category: Routing, networks, geocoding & LRS
+subcategory: Linear referencing (LRS)
+tool_kind: Extension
+summary: Spatial ETL components for Talend including linear reference system transformations.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Java
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: unknown
+url: https://www.disy.net/en/company/press/spatial-etl-with-talend-new-version-of-geospatial-integration-supports-linear-reference-system/
+notes: Status unverified
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 873

@@ -1,0 +1,22 @@
+id: thunderforest
+kind: tool
+name: Thunderforest
+category: Display & visualization
+subcategory: Basemap providers
+tool_kind: Service/API
+summary: Hosted OSM-based specialty basemaps such as OpenCycleMap, Transport and Outdoors.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.thunderforest.com/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1174

@@ -1,0 +1,29 @@
+id: carto
+kind: tool
+name: CARTO
+category: Commercial GIS platforms & APIs
+subcategory: Cloud/web GIS & analytics
+tool_kind: Platform
+summary: Cloud-native spatial analytics platform running on BigQuery, Snowflake, Databricks and Redshift.
+open_source: partial
+license: LicenseRef-Multiple
+license_original: Proprietary (platform); open libs
+interfaces:
+- SQL
+- REST
+- JS
+- MCP
+call:
+- rest
+- js
+- sql
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://carto.com/
+notes: CARTO AI Agents and MCP server
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1413

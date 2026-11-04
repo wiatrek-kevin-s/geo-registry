@@ -1,0 +1,23 @@
+id: robust-predicates
+kind: tool
+name: robust-predicates
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: Port of Shewchuk's robust geometric predicates for exact orientation and in-circle tests.
+open_source: 'yes'
+license: Unlicense
+language: JavaScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/mourner/robust-predicates
+notes: Numerical robustness for JS geometry.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 30

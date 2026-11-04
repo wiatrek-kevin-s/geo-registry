@@ -1,0 +1,28 @@
+id: koop
+kind: tool
+name: Koop
+category: Servers, standards, tiles & catalogs
+subcategory: Map & feature servers
+tool_kind: Server
+summary: Node.js server that translates arbitrary data sources into Esri FeatureServer-compatible REST
+  endpoints.
+open_source: 'yes'
+license: Apache-2.0
+language: JavaScript
+interfaces:
+- REST
+- JS
+- plugin
+call:
+- rest
+- js
+- plugin
+wrapped_by_columbus: false
+project_status: maintained
+url: https://koopjs.github.io
+notes: Bridges any source into ArcGIS clients
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 904

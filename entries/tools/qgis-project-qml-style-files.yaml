@@ -1,0 +1,21 @@
+id: qgis-project-qml-style-files
+kind: tool
+name: QGIS project / QML style files
+category: Core libraries & formats
+subcategory: Metadata & catalog formats
+tool_kind: Format/Standard
+summary: XML project (.qgs/.qgz) and layer style (.qml) files produced by QGIS.
+open_source: 'yes'
+license: GPL-2.0-or-later
+license_original: GPL-2.0-or-later (QGIS)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://docs.qgis.org
+notes: Agent can write QGIS projects.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 213

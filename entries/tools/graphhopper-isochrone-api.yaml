@@ -1,0 +1,24 @@
+id: graphhopper-isochrone-api
+kind: tool
+name: GraphHopper Isochrone API
+category: Routing, networks, geocoding & LRS
+subcategory: Routing engines
+tool_kind: Service/API
+summary: GraphHopper endpoint computing reachable areas in time or distance, available self-hosted or
+  through the hosted API.
+open_source: partial
+license: Apache-2.0
+language: Java
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://docs.graphhopper.com/
+notes: Open engine; hosted version paid
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 770

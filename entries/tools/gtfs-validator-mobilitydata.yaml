@@ -1,0 +1,25 @@
+id: gtfs-validator-mobilitydata
+kind: tool
+name: GTFS Validator (MobilityData)
+category: Routing, networks, geocoding & LRS
+subcategory: Transit data & tools
+tool_kind: Toolkit/CLI
+summary: Canonical validator checking GTFS feeds against the specification and best practices.
+open_source: 'yes'
+license: Apache-2.0
+language: Java
+interfaces:
+- CLI
+- GUI
+- REST
+call:
+- cli
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/MobilityData/gtfs-validator
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 804

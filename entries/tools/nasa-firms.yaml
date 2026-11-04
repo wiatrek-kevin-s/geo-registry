@@ -1,0 +1,26 @@
+id: nasa-firms
+kind: tool
+name: NASA FIRMS
+category: Open data sources
+subcategory: US federal – NASA
+tool_kind: Service/API
+summary: Near-real-time active fire detections from MODIS and VIIRS.
+open_source: 'yes'
+license: LicenseRef-Public-Domain
+license_original: Public domain
+interfaces:
+- REST
+- OGC
+- download
+call:
+- rest
+- ogc
+- download
+wrapped_by_columbus: false
+project_status: active
+url: https://firms.modaps.eosdis.nasa.gov/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1269

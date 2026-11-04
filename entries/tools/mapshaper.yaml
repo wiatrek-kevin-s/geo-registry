@@ -1,0 +1,26 @@
+id: mapshaper
+kind: tool
+name: Mapshaper
+category: Display & visualization
+subcategory: Data viewers & editors
+tool_kind: Toolkit/CLI
+summary: Web app and CLI for simplifying, editing, clipping and converting Shapefile, GeoJSON and TopoJSON.
+open_source: 'yes'
+license: MPL-2.0
+language: JavaScript
+interfaces:
+- CLI
+- GUI
+- JS
+call:
+- cli
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://mapshaper.org/
+notes: Agent can run its CLI for simplification
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1151

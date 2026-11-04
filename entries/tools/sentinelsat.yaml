@@ -1,0 +1,25 @@
+id: sentinelsat
+kind: tool
+name: sentinelsat
+category: Imagery, remote sensing & GeoAI
+subcategory: Imagery tiling & serving
+tool_kind: Library
+summary: Formerly searched and downloaded Sentinel data from the Copernicus SciHub API.
+open_source: 'yes'
+license: GPL-3.0-or-later
+language: Python
+interfaces:
+- Python
+- CLI
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: archived
+url: https://github.com/sentinelsat/sentinelsat
+notes: SciHub retired; use CDSE
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 442

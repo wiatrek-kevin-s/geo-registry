@@ -1,0 +1,24 @@
+id: postgis-linear-referencing-functions
+kind: tool
+name: PostGIS linear referencing functions
+category: Routing, networks, geocoding & LRS
+subcategory: Linear referencing (LRS)
+tool_kind: Extension
+summary: PostGIS functions such as ST_LineInterpolatePoint, ST_LineLocatePoint, ST_LineSubstring and ST_LocateAlong
+  for measured geometry.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: C;SQL
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://postgis.net/docs/reference.html#Linear_Referencing
+notes: Open SQL path for LRS event work
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 861

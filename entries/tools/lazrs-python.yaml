@@ -1,0 +1,23 @@
+id: lazrs-python
+kind: tool
+name: lazrs-python
+category: Point clouds, LiDAR & 3D
+subcategory: LAS/LAZ libraries
+tool_kind: Library
+summary: Python bindings to the Rust laz-rs codec that give laspy fast, parallel LAZ compression.
+open_source: 'yes'
+license: MIT
+language: Rust;Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/laspy/laspy
+notes: Pip-installable LAZ backend; no C++ build needed.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 543

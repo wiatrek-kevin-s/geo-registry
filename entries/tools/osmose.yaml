@@ -1,0 +1,23 @@
+id: osmose
+kind: tool
+name: Osmose
+category: OSM & Overture tooling
+subcategory: QA & coordination
+tool_kind: Service/API
+summary: QA engine that detects OSM data issues and publishes them on a map and API.
+open_source: 'yes'
+license: GPL-3.0-only
+language: Python
+interfaces:
+- GUI
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://osmose.openstreetmap.fr/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1222

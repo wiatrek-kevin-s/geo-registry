@@ -1,0 +1,22 @@
+id: satlaspretrain
+kind: data
+name: SatlasPretrain
+summary: AI2 large-scale remote sensing pretraining dataset and pretrained backbones for Sentinel-2 and
+  NAIP.
+publisher: Unknown
+themes:
+- geoai-deep-learning
+- imagery-remote-sensing-geoai
+coverage:
+  region: Unspecified
+license: Apache-2.0
+access:
+- type: http
+  url: https://github.com/allenai/satlaspretrain_models
+  auth: none
+notes: Weights ODC-BY
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 450

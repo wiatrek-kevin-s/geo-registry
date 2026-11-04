@@ -1,0 +1,21 @@
+id: arnold-all-road-network-of-linear-referenced-data
+kind: tool
+name: ARNOLD (All Road Network of Linear Referenced Data)
+category: Routing, networks, geocoding & LRS
+subcategory: Linear referencing (LRS)
+tool_kind: Format/Standard
+summary: FHWA requirement that states submit an all-public-roads LRS network for HPMS reporting.
+open_source: 'yes'
+license: LicenseRef-Public-Domain
+license_original: Public domain
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://www.fhwa.dot.gov/policyinformation/hpms/arnold.cfm
+notes: Why US DOTs (e.g. TxDOT) maintain LRS
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 874

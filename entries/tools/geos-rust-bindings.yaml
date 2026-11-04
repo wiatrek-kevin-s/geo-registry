@@ -1,0 +1,23 @@
+id: geos-rust-bindings
+kind: tool
+name: geos (Rust bindings)
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: Rust bindings to the GEOS C API.
+open_source: 'yes'
+license: MIT
+language: Rust
+interfaces:
+- Rust
+call:
+- rust
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/georust/geos
+notes: Gives Rust access to GEOS semantics.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 13

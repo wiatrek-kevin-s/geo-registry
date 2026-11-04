@@ -1,0 +1,21 @@
+id: maxar-open-data-program
+kind: data
+name: Maxar Open Data Program
+summary: Free pre/post-event high-resolution imagery released for disasters, catalogued as STAC.
+publisher: Maxar
+themes:
+- commercial-imagery-providers
+- imagery-remote-sensing-geoai
+coverage:
+  region: Unspecified
+license: CC-BY-NC-4.0
+access:
+- type: http
+  url: https://registry.opendata.aws/maxar-open-data/
+  auth: none
+notes: Check continuity after rebrand
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 481

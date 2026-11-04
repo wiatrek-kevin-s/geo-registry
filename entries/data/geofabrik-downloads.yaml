@@ -1,0 +1,21 @@
+id: geofabrik-downloads
+kind: data
+name: Geofabrik Downloads
+summary: Daily OSM extracts by continent, country and US state in PBF and shapefile, with update diffs.
+publisher: Geofabrik
+themes:
+- downloads-distributions
+- osm-overture-tooling
+coverage:
+  region: Unspecified
+license: ODbL-1.0
+access:
+- type: http
+  url: https://download.geofabrik.de/
+  auth: none
+notes: Texas extract is the practical start for Austin users
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1226

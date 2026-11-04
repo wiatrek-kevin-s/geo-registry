@@ -1,0 +1,28 @@
+id: flatgeobuf
+kind: tool
+name: FlatGeobuf
+category: Core libraries & formats
+subcategory: Vector formats
+tool_kind: Format/Standard
+summary: Binary FlatBuffers-based vector format with optional packed R-tree index for streaming.
+open_source: 'yes'
+license: BSD-2-Clause
+interfaces:
+- JS
+- Python
+- Rust
+- C/C++
+call:
+- python
+- js
+- c-cpp
+- rust
+wrapped_by_columbus: false
+project_status: active
+url: https://flatgeobuf.org
+notes: Fast HTTP range reads of vectors.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 167

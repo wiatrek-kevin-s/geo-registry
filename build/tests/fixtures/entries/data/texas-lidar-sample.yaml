@@ -1,0 +1,30 @@
+id: texas-lidar-sample
+kind: data
+name: Texas Lidar Sample
+summary: Fixture airborne lidar point clouds for a Texas county, streamed as EPT.
+publisher: Fixture Publisher
+themes:
+- lidar-data-sources
+- point-clouds-lidar-3d
+coverage:
+  region: Texas
+  bbox: [-98.2, 30.0, -97.4, 30.6]
+license: CC0-1.0
+update: irregular
+access:
+- type: ept
+  url: https://example.org/ept/texas-sample/ept.json
+  auth: none
+recipe:
+  tool: pointcloud_pipeline
+  steps:
+  - read the EPT index limited to the request bbox
+  - filter to ground returns
+  - write LAZ
+formats_out:
+- LAZ
+notes: Test fixture only.
+last_verified: 2026-10-01
+status: active
+review:
+  state: reviewed

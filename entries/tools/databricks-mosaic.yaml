@@ -1,0 +1,27 @@
+id: databricks-mosaic
+kind: tool
+name: Databricks Mosaic
+category: Spatial databases & query engines
+subcategory: Big data / distributed
+tool_kind: Library
+summary: Databricks Labs library for spatial indexing, joins and raster ops on Spark.
+open_source: partial
+license: LicenseRef-Databricks
+language: Scala;Python
+interfaces:
+- Python
+- SQL
+- R
+call:
+- python
+- r
+- sql
+wrapped_by_columbus: false
+project_status: archived
+url: https://github.com/databrickslabs/mosaic
+notes: Maintenance mode, retires with DBR 13.3 (Aug 2026)
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 679

@@ -1,0 +1,23 @@
+id: ogc-dggs-abstract-specification
+kind: tool
+name: OGC DGGS Abstract Specification
+category: Core libraries & formats
+subcategory: Discrete global grids & geocodes
+tool_kind: Format/Standard
+summary: OGC abstract specification (ISO 19170-1) defining discrete global grid systems.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open standard
+interfaces:
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://www.ogc.org/standards/dggs
+notes: Formal framework for H3/S2-style grids.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 118

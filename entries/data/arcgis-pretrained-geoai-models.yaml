@@ -1,0 +1,23 @@
+id: arcgis-pretrained-geoai-models
+kind: data
+name: ArcGIS pretrained GeoAI models
+summary: 100+ ready-to-use deep learning packages in Living Atlas for feature extraction, change detection
+  and classification.
+publisher: Esri
+themes:
+- esri-ai
+- ai-agents-mcp-for-gis
+coverage:
+  region: Unspecified
+license: LicenseRef-Proprietary
+license_original: Proprietary
+access:
+- type: http
+  url: https://livingatlas.arcgis.com/
+  auth: none
+notes: Run in Pro or arcgis.learn; Image Analyst licence needed
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1488

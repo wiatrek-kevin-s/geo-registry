@@ -1,0 +1,21 @@
+id: wkt-crs-iso-19162
+kind: tool
+name: WKT-CRS (ISO 19162)
+category: Core libraries & formats
+subcategory: Projection & CRS
+tool_kind: Format/Standard
+summary: Well-known text encoding for describing coordinate reference systems and transformations.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open standard
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://www.ogc.org/standards/wkt-crs
+notes: Preferred CRS interchange over PROJ strings.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 44

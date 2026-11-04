@@ -1,0 +1,21 @@
+id: blacksky
+kind: data
+name: BlackSky
+summary: High-revisit optical imagery and analytics through the Spectra platform.
+publisher: BlackSky
+themes:
+- commercial-imagery-providers
+- imagery-remote-sensing-geoai
+coverage:
+  region: Unspecified
+license: LicenseRef-Proprietary
+license_original: Proprietary
+access:
+- type: http
+  url: https://www.blacksky.com
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 486

@@ -1,0 +1,20 @@
+id: global-forest-watch
+kind: data
+name: Global Forest Watch
+summary: Forest change, tree cover loss and alerts with a data API.
+publisher: Unknown
+themes:
+- global-land-cover
+- open-data-sources
+coverage:
+  region: Global
+license: CC-BY-4.0
+access:
+- type: http
+  url: https://www.globalforestwatch.org/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1304

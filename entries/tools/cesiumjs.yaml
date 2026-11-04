@@ -1,0 +1,25 @@
+id: cesiumjs
+kind: tool
+name: CesiumJS
+category: Point clouds, LiDAR & 3D
+subcategory: Web viewers & engines
+tool_kind: Library
+summary: JavaScript library for 3D globes and maps that streams 3D Tiles, terrain and imagery.
+open_source: 'yes'
+license: Apache-2.0
+language: JavaScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://cesium.com/platform/cesiumjs/
+notes: Main open 3D Tiles client; also listed under visualization.
+also_categories:
+- Display & visualization
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 600

@@ -1,0 +1,30 @@
+id: supermap-idesktopx
+kind: tool
+name: SuperMap iDesktopX
+category: Desktop GIS & analysis engines
+subcategory: Commercial desktop GIS
+tool_kind: Application
+summary: SuperMap's cross-platform desktop GIS for 2D/3D data processing, spatial analysis and mapping,
+  with an AI assistant.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Java; C++
+interfaces:
+- GUI
+- Java
+- Python
+- plugin
+call:
+- python
+- java
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://www.supermap.com
+notes: Major Chinese GIS vendor
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 266

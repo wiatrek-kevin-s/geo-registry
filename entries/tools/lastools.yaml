@@ -1,0 +1,29 @@
+id: lastools
+kind: tool
+name: LAStools
+category: Point clouds, LiDAR & 3D
+subcategory: Lidar processing suites
+tool_kind: Toolkit/CLI
+summary: Fast command-line lidar tools for tiling, ground classification, DEM creation and QA; core tools
+  LGPL, most analysis tools licensed.
+open_source: partial
+license: LicenseRef-Multiple
+license_original: LGPL-2.1 / Proprietary
+language: C++
+interfaces:
+- CLI
+- GUI
+- plugin
+call:
+- cli
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://lastools.github.io
+notes: Tools like lasground, las2dem, lasclip need a license for commercial or government use; unlicensed
+  output may be distorted.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 552

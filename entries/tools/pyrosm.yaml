@@ -1,0 +1,25 @@
+id: pyrosm
+kind: tool
+name: pyrosm
+category: Routing, networks, geocoding & LRS
+subcategory: Accessibility & transport modeling
+tool_kind: Library
+summary: Fast OSM PBF reader that extracts street networks, buildings and POIs into GeoPandas and graph
+  objects.
+open_source: 'yes'
+license: BSD-3-Clause AND MIT AND ISC
+language: Python;Cython
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://pyrosm.readthedocs.io/
+also_categories:
+- OSM & Overture tooling
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 790

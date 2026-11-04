@@ -1,0 +1,23 @@
+id: datashader
+kind: tool
+name: Datashader
+category: Display & visualization
+subcategory: Python notebook & app mapping
+tool_kind: Library
+summary: Rasterizes huge point, line and grid datasets into images for accurate large-data visualization.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://datashader.org/
+notes: Billions of points on a laptop
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1097

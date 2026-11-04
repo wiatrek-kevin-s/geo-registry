@@ -1,0 +1,25 @@
+id: thredds-data-server
+kind: tool
+name: THREDDS Data Server
+category: Servers, standards, tiles & catalogs
+subcategory: Map & feature servers
+tool_kind: Server
+summary: Serves NetCDF and gridded scientific data via OPeNDAP, WMS, WCS and HTTP subsetting.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Java
+interfaces:
+- REST
+- OGC
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://www.unidata.ucar.edu/software/tds/
+notes: Common for climate/met data
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 907

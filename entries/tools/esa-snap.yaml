@@ -1,0 +1,28 @@
+id: esa-snap
+kind: tool
+name: ESA SNAP
+category: Imagery, remote sensing & GeoAI
+subcategory: Remote sensing processing
+tool_kind: Application
+summary: ESA desktop toolbox for processing Sentinel and other mission data, with graph-based batch processing.
+open_source: 'yes'
+license: GPL-3.0-only
+language: Java
+interfaces:
+- GUI
+- CLI
+- Python
+- Java
+call:
+- python
+- cli
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://step.esa.int/main/toolboxes/snap/
+notes: gpt CLI runs XML graphs headless; heavy JVM install
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 361

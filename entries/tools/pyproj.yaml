@@ -1,0 +1,23 @@
+id: pyproj
+kind: tool
+name: pyproj
+category: Core libraries & formats
+subcategory: Projection & CRS
+tool_kind: Library
+summary: Python interface to PROJ for CRS definitions, transformations and geodesic calculations.
+open_source: 'yes'
+license: MIT
+language: Python/Cython
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/pyproj4/pyproj
+notes: Standard CRS handling in Python.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 33

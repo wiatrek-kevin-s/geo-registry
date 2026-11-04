@@ -1,0 +1,22 @@
+id: geogpt
+kind: data
+name: GeoGPT
+summary: Open geoscience LLMs (Llama3.1-70B/Qwen2.5-72B fine-tunes) plus QA datasets and RAG.
+publisher: Unknown
+themes:
+- llm-gis-agents-research
+- ai-agents-mcp-for-gis
+coverage:
+  region: Unspecified
+license: NOASSERTION
+license_original: Unknown
+access:
+- type: http
+  url: https://github.com/GeoGPT-Research-Project/GeoGPT
+  auth: none
+notes: 70B weights too big for laptops
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1556

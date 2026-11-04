@@ -1,0 +1,24 @@
+id: azure-maps
+kind: tool
+name: Azure Maps
+category: Commercial GIS platforms & APIs
+subcategory: Microsoft
+tool_kind: Service/API
+summary: Microsoft cloud location APIs for maps, search, routing, weather and geofencing.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- JS
+call:
+- rest
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://azure.microsoft.com/en-us/products/azure-maps
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1402

@@ -1,0 +1,30 @@
+id: arcgis-pro
+kind: tool
+name: ArcGIS Pro
+category: Desktop GIS & analysis engines
+subcategory: Commercial desktop GIS
+tool_kind: Application
+summary: Esri's flagship 64-bit desktop GIS for 2D/3D mapping, editing, geoprocessing and sharing to ArcGIS
+  Online/Enterprise.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++; C#; Python
+interfaces:
+- GUI
+- Python
+- plugin
+call:
+- python
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://www.esri.com/en-us/arcgis/products/arcgis-pro/overview
+notes: Dominant in enterprise; scriptable via ArcPy; Windows only
+also_categories:
+- Commercial GIS platforms & APIs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 251

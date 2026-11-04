@@ -1,0 +1,21 @@
+id: s-57-s-101
+kind: tool
+name: S-57 / S-101
+category: Core libraries & formats
+subcategory: Vector formats
+tool_kind: Format/Standard
+summary: IHO standards for electronic navigational charts.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open standard (IHO)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://iho.int
+notes: Marine charting.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 187

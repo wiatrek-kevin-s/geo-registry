@@ -1,0 +1,28 @@
+id: global-mapper
+kind: tool
+name: Global Mapper
+category: Desktop GIS & analysis engines
+subcategory: Commercial desktop GIS
+tool_kind: Application
+summary: Affordable Windows GIS from Blue Marble for viewing, converting and analysing vector, raster,
+  terrain and LiDAR data.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+- Python
+- plugin
+call:
+- python
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://www.bluemarblegeo.com/global-mapper/
+notes: Broad format support; Python scripting available
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 257

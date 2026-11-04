@@ -1,0 +1,24 @@
+id: apple-mapkit-js
+kind: tool
+name: Apple MapKit JS
+category: Display & visualization
+subcategory: Web map libraries
+tool_kind: Service/API
+summary: Embeds Apple Maps in web pages with annotations, overlays and search.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: JavaScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://developer.apple.com/maps/web/
+notes: Requires Apple Developer token
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1027

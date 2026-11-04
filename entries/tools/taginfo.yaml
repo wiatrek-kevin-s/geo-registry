@@ -1,0 +1,24 @@
+id: taginfo
+kind: tool
+name: Taginfo
+category: OSM & Overture tooling
+subcategory: Query services
+tool_kind: Service/API
+summary: Statistics service showing how OSM tags and values are used, with an API.
+open_source: 'yes'
+license: GPL-3.0-only
+language: Ruby;C++
+interfaces:
+- REST
+- GUI
+call:
+- rest
+wrapped_by_columbus: false
+project_status: maintained
+url: https://taginfo.openstreetmap.org/
+notes: Helps an agent pick the right tags
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1208

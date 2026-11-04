@@ -1,0 +1,21 @@
+id: osm-pbf-osm-xml
+kind: tool
+name: OSM PBF / OSM XML
+category: Core libraries & formats
+subcategory: Vector formats
+tool_kind: Format/Standard
+summary: OpenStreetMap data encodings in compressed Protocol Buffers or XML.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open specification
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://wiki.openstreetmap.org/wiki/PBF_Format
+notes: OSM extracts.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 184

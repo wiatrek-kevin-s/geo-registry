@@ -1,0 +1,25 @@
+id: mapwindow-gis
+kind: tool
+name: MapWindow GIS
+category: Desktop GIS & analysis engines
+subcategory: Open-source desktop GIS
+tool_kind: Application
+summary: Windows desktop GIS built on the MapWinGIS ActiveX control, with plugins for hydrology and other
+  analysis.
+open_source: 'yes'
+license: MPL-1.1
+language: C#
+interfaces:
+- GUI
+- plugin
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://www.mapwindow.org
+notes: Windows only; .NET stack
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 231

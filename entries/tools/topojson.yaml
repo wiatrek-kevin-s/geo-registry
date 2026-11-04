@@ -1,0 +1,23 @@
+id: topojson
+kind: tool
+name: TopoJSON
+category: Core libraries & formats
+subcategory: Vector formats
+tool_kind: Format/Standard
+summary: JSON extension of GeoJSON that encodes shared topology arcs to shrink file size.
+open_source: 'yes'
+license: BSD-3-Clause
+license_original: BSD-3-Clause (spec and reference)
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/topojson/topojson
+notes: Compact boundary data.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 166

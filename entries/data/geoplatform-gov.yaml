@@ -1,0 +1,21 @@
+id: geoplatform-gov
+kind: data
+name: GeoPlatform.gov
+summary: Federal geospatial catalog and NGDA dataset hub.
+publisher: Unknown
+themes:
+- us-federal-catalogs
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.geoplatform.gov/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1291

@@ -1,0 +1,22 @@
+id: opencities-map
+kind: tool
+name: OpenCities Map
+category: Commercial GIS platforms & APIs
+subcategory: Bentley
+tool_kind: Application
+summary: MicroStation-based GIS/CAD application for municipal mapping and Oracle Spatial editing.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://www.bentley.com/software/opencities-map/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1391

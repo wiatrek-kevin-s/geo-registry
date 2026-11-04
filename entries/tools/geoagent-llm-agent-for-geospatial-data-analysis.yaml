@@ -1,0 +1,25 @@
+id: geoagent-llm-agent-for-geospatial-data-analysis
+kind: tool
+name: GeoAgent (LLM agent for geospatial data analysis)
+category: AI, agents & MCP for GIS
+subcategory: LLM GIS agents & research
+tool_kind: Toolkit/CLI
+summary: Research agent pairing LLMs with code interpreter, static analysis and retrieval for geospatial
+  Python tasks.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: unknown
+url: https://arxiv.org/abs/2410.18792
+notes: Paper; code availability not confirmed
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1555

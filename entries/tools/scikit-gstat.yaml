@@ -1,0 +1,22 @@
+id: scikit-gstat
+kind: tool
+name: scikit-gstat
+category: Desktop GIS & analysis engines
+subcategory: Geostatistics & interpolation
+tool_kind: Library
+summary: Variogram estimation and kriging with an object-oriented, scipy-style API.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/mmaelicke/scikit-gstat
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 320

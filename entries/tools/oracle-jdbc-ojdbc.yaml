@@ -1,0 +1,26 @@
+id: oracle-jdbc-ojdbc
+kind: tool
+name: Oracle JDBC (ojdbc)
+category: Connections & storage
+subcategory: Database drivers
+tool_kind: Library
+summary: Oracle's JDBC driver for Java applications.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary (FUTC)
+language: Java
+interfaces:
+- Java
+- SQL
+call:
+- sql
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://www.oracle.com/database/technologies/appdev/jdbc.html
+notes: JVM dependency
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1423

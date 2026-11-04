@@ -1,0 +1,22 @@
+id: usgs-water-data-apis-nwis
+kind: data
+name: USGS Water Data APIs (NWIS)
+summary: Streamflow, gage height, groundwater and water-quality time series for monitoring sites.
+publisher: U.S. Geological Survey
+themes:
+- us-federal-hydrography
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://api.waterdata.usgs.gov/
+  auth: none
+notes: OGC API-Features endpoints
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1239

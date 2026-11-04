@@ -1,0 +1,21 @@
+id: olmoearth
+kind: data
+name: OlmoEarth
+summary: AI2 Earth observation foundation model family and platform succeeding Satlas work.
+publisher: Unknown
+themes:
+- geoai-deep-learning
+- imagery-remote-sensing-geoai
+coverage:
+  region: Unspecified
+license: LicenseRef-OlmoEarth-Artifact-License
+access:
+- type: http
+  url: https://github.com/allenai/olmoearth_pretrain
+  auth: none
+notes: Custom AI2 artifact licence; check terms
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 451

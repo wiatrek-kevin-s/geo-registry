@@ -1,0 +1,22 @@
+id: stplanr
+kind: tool
+name: stplanr
+category: Routing, networks, geocoding & LRS
+subcategory: Accessibility & transport modeling
+tool_kind: Library
+summary: 'R toolkit for sustainable transport planning: desire lines, route networks and flow aggregation.'
+open_source: 'yes'
+license: MIT
+language: R
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/ropensci/stplanr
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 795

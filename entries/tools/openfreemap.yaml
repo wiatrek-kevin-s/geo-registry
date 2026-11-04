@@ -1,0 +1,22 @@
+id: openfreemap
+kind: tool
+name: OpenFreeMap
+category: Display & visualization
+subcategory: Basemap providers
+tool_kind: Service/API
+summary: Free self-hostable vector-tile basemaps from OSM data with no API key or limits.
+open_source: 'yes'
+license: MIT
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://openfreemap.org/
+notes: Keyless default basemap option
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1170

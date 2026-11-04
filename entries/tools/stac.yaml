@@ -1,0 +1,22 @@
+id: stac
+kind: tool
+name: STAC
+category: Core libraries & formats
+subcategory: Raster formats
+tool_kind: Format/Standard
+summary: SpatioTemporal Asset Catalog JSON specification describing geospatial assets for search.
+open_source: 'yes'
+license: Apache-2.0
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://stacspec.org
+notes: Agent-friendly imagery discovery.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 157

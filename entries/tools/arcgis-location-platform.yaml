@@ -1,0 +1,27 @@
+id: arcgis-location-platform
+kind: tool
+name: ArcGIS Location Platform
+category: Commercial GIS platforms & APIs
+subcategory: Esri ArcGIS
+tool_kind: Service/API
+summary: Pay-as-you-go developer platform for basemaps, geocoding, routing, places and data hosting.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- JS
+- Python
+call:
+- python
+- rest
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://location.arcgis.com/
+notes: Has beta MCP support for location services
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1378

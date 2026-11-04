@@ -1,0 +1,23 @@
+id: openstreetmap-mcp-server-cyanheads
+kind: tool
+name: openstreetmap-mcp-server (cyanheads)
+category: AI, agents & MCP for GIS
+subcategory: Vendor/location MCP servers
+tool_kind: Server
+summary: MCP for Nominatim geocoding and Overpass queries over STDIO or HTTP.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: TypeScript
+interfaces:
+- MCP
+call:
+- mcp
+wrapped_by_columbus: false
+project_status: unknown
+url: https://github.com/cyanheads/openstreetmap-mcp-server
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1539

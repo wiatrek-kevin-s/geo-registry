@@ -1,0 +1,22 @@
+id: utfgrid
+kind: tool
+name: UTFGrid
+category: Servers, standards, tiles & catalogs
+subcategory: Tile, style & catalog specs
+tool_kind: Format/Standard
+summary: Tiled JSON grid encoding attribute lookups for raster tile interactivity.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: archived
+url: https://github.com/mapbox/utfgrid-spec
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1007

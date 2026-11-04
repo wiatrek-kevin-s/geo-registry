@@ -1,0 +1,22 @@
+id: openlr-tomtom-java
+kind: tool
+name: OpenLR (TomTom Java)
+category: Routing, networks, geocoding & LRS
+subcategory: Network & traffic referencing standards
+tool_kind: Library
+summary: TomTom's reference Java implementation for encoding and decoding OpenLR references.
+open_source: 'yes'
+license: Apache-2.0
+language: Java
+interfaces:
+- Java
+call:
+- java
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/tomtom-international/openlr
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 879

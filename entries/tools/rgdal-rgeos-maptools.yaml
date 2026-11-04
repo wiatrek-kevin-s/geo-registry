@@ -1,0 +1,22 @@
+id: rgdal-rgeos-maptools
+kind: tool
+name: rgdal / rgeos / maptools
+category: Desktop GIS & analysis engines
+subcategory: R spatial packages
+tool_kind: Library
+summary: Legacy R bindings to GDAL, GEOS and map utilities, retired from CRAN in 2023.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: R; C++
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: archived
+notes: Retired; replaced by sf/terra
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 336

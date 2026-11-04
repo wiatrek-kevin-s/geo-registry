@@ -1,0 +1,27 @@
+id: brazil-data-cube
+kind: tool
+name: Brazil Data Cube
+category: Imagery, remote sensing & GeoAI
+subcategory: Cloud EO platforms
+tool_kind: Platform
+summary: INPE platform producing analysis-ready data cubes for Brazil with STAC services.
+open_source: partial
+license: NOASSERTION
+license_original: Unknown
+language: Python
+interfaces:
+- REST
+- Python
+- R
+call:
+- python
+- rest
+- r
+wrapped_by_columbus: false
+project_status: maintained
+url: https://data.inpe.br/bdc/web/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 414

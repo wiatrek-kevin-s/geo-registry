@@ -1,0 +1,24 @@
+id: apache-solr-spatial
+kind: tool
+name: Apache Solr spatial
+category: Spatial databases & query engines
+subcategory: NoSQL / search / KV
+tool_kind: Database
+summary: Lucene-based search server with LatLonPointSpatialField, RPT shape fields and geofilt/bbox queries.
+open_source: 'yes'
+license: Apache-2.0
+language: Java
+interfaces:
+- REST
+- Java
+call:
+- rest
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://solr.apache.org/guide/solr/latest/query-guide/spatial-search.html
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 717

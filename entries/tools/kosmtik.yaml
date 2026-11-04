@@ -1,0 +1,21 @@
+id: kosmtik
+kind: tool
+name: Kosmtik
+category: Display & visualization
+subcategory: Cartographic renderers
+tool_kind: Application
+summary: Lightweight editor for designing CartoCSS/Mapnik map styles with live preview.
+open_source: 'yes'
+license: WTFPL
+language: JavaScript
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/kosmtik/kosmtik
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1183

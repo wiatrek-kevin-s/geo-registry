@@ -1,0 +1,24 @@
+id: apache-doris-spatial-functions
+kind: tool
+name: Apache Doris spatial functions
+category: Spatial databases & query engines
+subcategory: Big data / distributed
+tool_kind: Extension
+summary: MPP analytics database providing ST_ point, polygon and distance functions.
+open_source: 'yes'
+license: Apache-2.0
+language: C++;Java
+interfaces:
+- SQL
+- JDBC
+call:
+- sql
+- jdbc
+wrapped_by_columbus: false
+project_status: active
+url: https://doris.apache.org
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 687

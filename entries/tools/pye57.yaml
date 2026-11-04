@@ -1,0 +1,23 @@
+id: pye57
+kind: tool
+name: pye57
+category: Point clouds, LiDAR & 3D
+subcategory: LAS/LAZ libraries
+tool_kind: Library
+summary: Python wrapper around libE57Format for reading and writing E57 files.
+open_source: 'yes'
+license: MIT
+language: Python;C++
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/davidcaron/pye57
+notes: Lets an agent open terrestrial scanner exports.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 550

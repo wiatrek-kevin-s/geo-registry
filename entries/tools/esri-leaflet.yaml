@@ -1,0 +1,27 @@
+id: esri-leaflet
+kind: tool
+name: Esri Leaflet
+category: Display & visualization
+subcategory: Leaflet plugins
+tool_kind: Extension
+summary: Leaflet plugins for consuming ArcGIS feature, map and image services and Esri basemaps.
+open_source: 'yes'
+license: Apache-2.0
+language: JavaScript
+interfaces:
+- JS
+- REST
+- plugin
+call:
+- rest
+- js
+- plugin
+wrapped_by_columbus: false
+project_status: maintained
+url: https://esri.github.io/esri-leaflet/
+notes: Lightweight ArcGIS REST display without the full Esri SDK
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1036

@@ -1,0 +1,25 @@
+id: ogc-api-common
+kind: tool
+name: OGC API – Common
+category: Servers, standards, tiles & catalogs
+subcategory: OGC API standards
+tool_kind: Format/Standard
+summary: Shared building blocks (landing page, conformance, collections) used by all OGC API standards.
+open_source: 'yes'
+license: LicenseRef-OGC-Document
+license_original: OGC document licence
+interfaces:
+- OGC
+- REST
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://ogcapi.ogc.org
+notes: OpenAPI-described; easy for agents to call
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 989

@@ -1,0 +1,21 @@
+id: grib-grib2
+kind: tool
+name: GRIB / GRIB2
+category: Core libraries & formats
+subcategory: Raster formats
+tool_kind: Format/Standard
+summary: WMO binary format for gridded meteorological data such as forecasts.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open standard (WMO)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://community.wmo.int
+notes: Weather model outputs.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 140

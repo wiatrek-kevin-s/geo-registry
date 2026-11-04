@@ -1,0 +1,22 @@
+id: tidytransit
+kind: tool
+name: tidytransit
+category: Routing, networks, geocoding & LRS
+subcategory: Transit data & tools
+tool_kind: Library
+summary: R package to read GTFS and compute service frequencies, headways and travel times.
+open_source: 'yes'
+license: GPL-3.0
+language: R
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/r-transit/tidytransit
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 811

@@ -1,0 +1,23 @@
+id: jsts
+kind: tool
+name: JSTS
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: JavaScript port of JTS for geometry predicates and overlay operations in browsers and Node.
+open_source: 'yes'
+license: EPL-1.0 OR BSD-3-Clause
+language: JavaScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/bjornharrtell/jsts
+notes: Robust overlays in a JS frontend.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 5

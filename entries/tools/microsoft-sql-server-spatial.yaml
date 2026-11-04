@@ -1,0 +1,27 @@
+id: microsoft-sql-server-spatial
+kind: tool
+name: Microsoft SQL Server spatial
+category: Spatial databases & query engines
+subcategory: Commercial RDBMS
+tool_kind: Database
+summary: geometry and geography CLR types with spatial indexes in SQL Server and Azure SQL.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++;.NET
+interfaces:
+- SQL
+- Python
+- REST
+call:
+- python
+- rest
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://learn.microsoft.com/sql/relational-databases/spatial/spatial-data-sql-server
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 699

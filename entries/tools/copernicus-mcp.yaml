@@ -1,0 +1,23 @@
+id: copernicus-mcp
+kind: tool
+name: copernicus-mcp
+category: AI, agents & MCP for GIS
+subcategory: Earth observation MCP servers
+tool_kind: Server
+summary: MCP for searching and downloading Sentinel data from the Copernicus Data Space OData API.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: Python
+interfaces:
+- MCP
+call:
+- mcp
+wrapped_by_columbus: false
+project_status: unknown
+url: https://github.com/wb1016/copernicus-mcp
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1546

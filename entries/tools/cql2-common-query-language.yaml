@@ -1,0 +1,23 @@
+id: cql2-common-query-language
+kind: tool
+name: CQL2 (Common Query Language)
+category: Servers, standards, tiles & catalogs
+subcategory: OGC web service standards
+tool_kind: Format/Standard
+summary: Text and JSON filter language used by OGC API – Features and STAC API.
+open_source: 'yes'
+license: LicenseRef-OGC-Document
+license_original: OGC document licence
+interfaces:
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://www.ogc.org/standards/cql2
+notes: LLM-friendly filter syntax for agents
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 988

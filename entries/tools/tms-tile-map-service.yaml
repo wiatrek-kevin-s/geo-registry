@@ -1,0 +1,23 @@
+id: tms-tile-map-service
+kind: tool
+name: TMS (Tile Map Service)
+category: Servers, standards, tiles & catalogs
+subcategory: Tile, style & catalog specs
+tool_kind: Format/Standard
+summary: OSGeo specification for tile addressing with a bottom-left origin and service metadata documents.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: archived
+url: https://wiki.osgeo.org/wiki/Tile_Map_Service_Specification
+notes: Still common in MBTiles row order
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1001

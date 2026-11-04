@@ -1,0 +1,22 @@
+id: pyroutelib3
+kind: tool
+name: pyroutelib3
+category: Routing, networks, geocoding & LRS
+subcategory: Routing engines
+tool_kind: Library
+summary: Pure-Python A* router over OSM data for simple offline routing.
+open_source: 'yes'
+license: GPL-3.0-or-later
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/MKuranowski/pyroutelib3
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 767

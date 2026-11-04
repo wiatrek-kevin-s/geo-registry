@@ -1,0 +1,21 @@
+id: openeo-web-editor
+kind: tool
+name: openEO Web Editor
+category: Imagery, remote sensing & GeoAI
+subcategory: Cloud EO platforms
+tool_kind: Application
+summary: Browser-based interface for building and running openEO workflows visually.
+open_source: 'yes'
+license: Apache-2.0
+language: JavaScript
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/Open-EO/openeo-web-editor
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 404

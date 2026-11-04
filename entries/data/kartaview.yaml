@@ -1,0 +1,21 @@
+id: kartaview
+kind: data
+name: KartaView
+summary: Crowdsourced street-level imagery platform, formerly OpenStreetCam.
+publisher: Unknown
+themes:
+- global-street-level
+- open-data-sources
+coverage:
+  region: Global
+license: CC-BY-SA-4.0
+access:
+- type: http
+  url: https://kartaview.org/
+  auth: none
+notes: Grab-run
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1326

@@ -1,0 +1,29 @@
+id: google-bigquery-gis
+kind: tool
+name: Google BigQuery GIS
+category: Spatial databases & query engines
+subcategory: Cloud warehouses
+tool_kind: Service/API
+summary: GEOGRAPHY type and ST_ functions on spheroidal data inside BigQuery.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- SQL
+- Python
+- REST
+- CLI
+call:
+- python
+- cli
+- rest
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://cloud.google.com/bigquery/docs/geospatial-intro
+notes: bq CLI available to agents
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 691

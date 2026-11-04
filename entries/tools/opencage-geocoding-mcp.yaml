@@ -1,0 +1,22 @@
+id: opencage-geocoding-mcp
+kind: tool
+name: OpenCage Geocoding MCP
+category: AI, agents & MCP for GIS
+subcategory: Vendor/location MCP servers
+tool_kind: Server
+summary: Official OpenCage MCP for forward/reverse geocoding with quota checks.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+interfaces:
+- MCP
+call:
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/OpenCageData/opencage-geocoding-mcp
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1536

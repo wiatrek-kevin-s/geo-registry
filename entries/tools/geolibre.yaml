@@ -1,0 +1,31 @@
+id: geolibre
+kind: tool
+name: GeoLibre
+category: Desktop GIS & analysis engines
+subcategory: Whitebox & Rust GIS engines
+tool_kind: Platform
+summary: Lightweight cloud-native GIS that runs in the browser, as a Tauri desktop app, on mobile and
+  in Jupyter, using MapLibre and DuckDB.
+open_source: 'yes'
+license: MIT
+language: TypeScript; Rust; Python
+interfaces:
+- GUI
+- JS
+- Python
+- R
+- plugin
+call:
+- python
+- js
+- r
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://geolibre.app
+notes: 1.0 released 2026; TypeScript plugin model
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 249

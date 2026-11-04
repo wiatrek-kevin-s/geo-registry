@@ -1,0 +1,21 @@
+id: neon-aop-lidar
+kind: data
+name: NEON AOP lidar
+summary: Airborne lidar and derived products over NEON ecological field sites in the US.
+publisher: Unknown
+themes:
+- lidar-data-sources
+- point-clouds-lidar-3d
+coverage:
+  region: United States
+license: CC0-1.0
+access:
+- type: http
+  url: https://www.neonscience.org/data-collection/airborne-remote-sensing
+  auth: none
+notes: Research-grade ecological lidar.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 639

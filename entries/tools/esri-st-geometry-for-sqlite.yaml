@@ -1,0 +1,25 @@
+id: esri-st-geometry-for-sqlite
+kind: tool
+name: Esri ST_Geometry for SQLite
+category: Spatial databases & query engines
+subcategory: Embedded / file databases
+tool_kind: Extension
+summary: Esri loadable library adding the ST_Geometry type and functions to SQLite databases for ArcGIS
+  use.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: maintained
+url: https://pro.arcgis.com/en/pro-app/latest/help/data/databases/databases-and-arcgis.htm
+notes: Ships with ArcGIS Pro
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 674

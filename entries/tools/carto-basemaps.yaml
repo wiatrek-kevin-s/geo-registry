@@ -1,0 +1,23 @@
+id: carto-basemaps
+kind: tool
+name: CARTO basemaps
+category: Display & visualization
+subcategory: Basemap providers
+tool_kind: Service/API
+summary: Light, dark and Voyager basemaps hosted by CARTO, free within usage limits.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/CartoDB/basemap-styles
+notes: Commercial use needs licence
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1175

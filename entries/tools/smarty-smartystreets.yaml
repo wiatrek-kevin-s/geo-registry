@@ -1,0 +1,28 @@
+id: smarty-smartystreets
+kind: tool
+name: Smarty (SmartyStreets)
+category: Routing, networks, geocoding & LRS
+subcategory: Geocoding services
+tool_kind: Service/API
+summary: Address validation, USPS standardization and rooftop geocoding API.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- Python
+- JS
+- Java
+call:
+- python
+- rest
+- js
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://www.smarty.com/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 841

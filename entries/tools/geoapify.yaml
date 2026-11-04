@@ -1,0 +1,23 @@
+id: geoapify
+kind: tool
+name: Geoapify
+category: Commercial GIS platforms & APIs
+subcategory: Location & mapping APIs
+tool_kind: Service/API
+summary: Developer APIs for geocoding, places, routing, isolines and map tiles built on open data.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.geoapify.com/
+notes: Generous free tier
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1410

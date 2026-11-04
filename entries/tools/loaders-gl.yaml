@@ -1,0 +1,26 @@
+id: loaders-gl
+kind: tool
+name: loaders.gl
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Framework-agnostic loaders for many geospatial and 3D formats from the vis.gl suite.
+open_source: 'yes'
+license: MIT
+language: JavaScript/TypeScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://loaders.gl
+notes: Broad format support in JS.
+also_categories:
+- Point clouds, LiDAR & 3D
+- Display & visualization
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 89

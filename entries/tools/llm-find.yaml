@@ -1,0 +1,23 @@
+id: llm-find
+kind: tool
+name: LLM-Find
+category: AI, agents & MCP for GIS
+subcategory: LLM GIS agents & research
+tool_kind: Toolkit/CLI
+summary: Penn State autonomous GIS agent framework for finding and retrieving geospatial data.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: unknown
+url: https://giscience.psu.edu/llm-find-an-autonomous-gis-agent-framework-for-geospatial-data-retrieval/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1553

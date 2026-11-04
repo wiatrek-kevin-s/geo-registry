@@ -1,0 +1,26 @@
+id: pci-geomatica
+kind: tool
+name: PCI Geomatica
+category: Imagery, remote sensing & GeoAI
+subcategory: Commercial RS software
+tool_kind: Application
+summary: CATALYST desktop and Python environment for orthorectification, mosaicking, SAR and image analysis.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+- Python
+- CLI
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://catalyst.earth/products/geomatica/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 472

@@ -1,0 +1,23 @@
+id: eo-browser
+kind: tool
+name: EO Browser
+category: Imagery, remote sensing & GeoAI
+subcategory: Cloud EO platforms
+tool_kind: Application
+summary: Web application for browsing and visualising satellite imagery from Sentinel Hub collections.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: JavaScript
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://apps.sentinel-hub.com/eo-browser/
+notes: Being replaced by CDSE Browser
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 401

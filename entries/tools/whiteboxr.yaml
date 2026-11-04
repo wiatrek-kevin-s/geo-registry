@@ -1,0 +1,23 @@
+id: whiteboxr
+kind: tool
+name: whiteboxR
+category: Desktop GIS & analysis engines
+subcategory: Whitebox & Rust GIS engines
+tool_kind: Library
+summary: R package wrapping the WhiteboxTools executable so its tools can be called from R.
+open_source: 'yes'
+license: MIT
+language: R
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/opengeos/whiteboxR
+notes: R access to Whitebox
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 246

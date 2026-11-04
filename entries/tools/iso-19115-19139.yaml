@@ -1,0 +1,23 @@
+id: iso-19115-19139
+kind: tool
+name: ISO 19115 / 19139
+category: Core libraries & formats
+subcategory: Metadata & catalog formats
+tool_kind: Format/Standard
+summary: ISO geographic metadata model and XML encoding used in catalogs and CSW.
+open_source: 'yes'
+license: LicenseRef-ISO-Standard
+license_original: ISO standard
+interfaces:
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.iso.org/standard/53798.html
+notes: Metadata generation tasks.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 211

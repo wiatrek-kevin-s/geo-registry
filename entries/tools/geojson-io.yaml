@@ -1,0 +1,22 @@
+id: geojson-io
+kind: tool
+name: geojson.io
+category: Display & visualization
+subcategory: Data viewers & editors
+tool_kind: Application
+summary: Browser tool for drawing, editing and converting small GeoJSON datasets on a map.
+open_source: 'yes'
+license: ISC
+language: TypeScript
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://geojson.io/
+notes: Rebuilt in 2026 on Placemark code
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1149

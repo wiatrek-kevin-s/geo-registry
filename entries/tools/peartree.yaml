@@ -1,0 +1,22 @@
+id: peartree
+kind: tool
+name: peartree
+category: Routing, networks, geocoding & LRS
+subcategory: Transit data & tools
+tool_kind: Library
+summary: Converts GTFS feeds into directed NetworkX graphs for transit network analysis.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/kuanb/peartree
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 809

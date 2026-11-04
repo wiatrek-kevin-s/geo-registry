@@ -1,0 +1,24 @@
+id: rapid
+kind: tool
+name: Rapid
+category: OSM & Overture tooling
+subcategory: Editors
+tool_kind: Application
+summary: iD-derived web editor that adds AI-detected roads, buildings and open datasets for review.
+open_source: 'yes'
+license: ISC
+language: JavaScript
+interfaces:
+- GUI
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://rapideditor.org/
+notes: Meta; conflates ML features into OSM
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1213

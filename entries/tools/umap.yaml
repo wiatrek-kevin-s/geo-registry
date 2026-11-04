@@ -1,0 +1,21 @@
+id: umap
+kind: tool
+name: uMap
+category: Display & visualization
+subcategory: Hosted web map makers
+tool_kind: Application
+summary: Self-hostable web app for creating OpenStreetMap-based maps with custom layers and sharing.
+open_source: 'yes'
+license: AGPL-3.0-or-later
+language: Python;JavaScript
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/umap-project/umap
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1148

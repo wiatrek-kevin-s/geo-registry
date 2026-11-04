@@ -1,0 +1,25 @@
+id: ogc-api-3d-geovolumes
+kind: tool
+name: OGC API - 3D GeoVolumes
+category: Point clouds, LiDAR & 3D
+subcategory: 3D tiles & streaming formats
+tool_kind: Format/Standard
+summary: OGC API draft for discovering and accessing 3D content collections like 3D Tiles and I3S.
+open_source: 'yes'
+license: NOASSERTION
+license_original: n/a
+interfaces:
+- OGC
+- REST
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: unknown
+url: https://ogcapi.ogc.org/geovolumes/
+notes: Status of the standard not confirmed.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 611

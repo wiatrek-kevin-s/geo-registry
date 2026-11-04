@@ -1,0 +1,23 @@
+id: geoext
+kind: tool
+name: GeoExt
+category: Display & visualization
+subcategory: Web GIS application frameworks
+tool_kind: Library
+summary: Combines OpenLayers with the Ext JS UI framework for rich web GIS clients.
+open_source: 'yes'
+license: GPL-3.0
+language: JavaScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: maintained
+url: https://geoext.github.io/geoext/
+notes: BSD option only with commercial Ext JS licence
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1160

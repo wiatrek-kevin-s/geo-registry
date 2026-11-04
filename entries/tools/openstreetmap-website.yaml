@@ -1,0 +1,23 @@
+id: openstreetmap-website
+kind: tool
+name: openstreetmap-website
+category: OSM & Overture tooling
+subcategory: Query services
+tool_kind: Application
+summary: The Rails application behind openstreetmap.org, including the editing API and map pages.
+open_source: 'yes'
+license: GPL-2.0-only
+language: Ruby
+interfaces:
+- REST
+- GUI
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/openstreetmap/openstreetmap-website
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1207

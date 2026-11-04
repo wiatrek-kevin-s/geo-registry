@@ -1,0 +1,23 @@
+id: flatbush
+kind: tool
+name: Flatbush
+category: Core libraries & formats
+subcategory: Spatial indexing
+tool_kind: Library
+summary: Static packed Hilbert R-tree for very fast indexing of 2D data in JS.
+open_source: 'yes'
+license: ISC
+language: JavaScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/mourner/flatbush
+notes: Same idea used in FlatGeobuf.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 100

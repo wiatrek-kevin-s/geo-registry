@@ -1,0 +1,19 @@
+id: overture-schema
+kind: tool
+name: Overture schema
+category: OSM & Overture tooling
+subcategory: Overture Maps
+tool_kind: Format/Standard
+summary: Published schema defining Overture themes, types and properties.
+open_source: 'yes'
+license: MIT
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/OvertureMaps/schema
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1234

@@ -1,0 +1,23 @@
+id: libpysal
+kind: tool
+name: libpysal
+category: Desktop GIS & analysis engines
+subcategory: Spatial statistics (Python / PySAL)
+tool_kind: Library
+summary: Core PySAL library for spatial weights, graph construction, I/O and computational geometry.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/pysal/libpysal
+notes: Base for all PySAL packages
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 305

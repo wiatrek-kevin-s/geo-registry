@@ -1,0 +1,21 @@
+id: fcc-national-broadband-map
+kind: data
+name: FCC National Broadband Map
+summary: Location-level broadband availability data.
+publisher: Federal Communications Commission
+themes:
+- us-federal-telecom
+- open-data-sources
+coverage:
+  region: United States
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://broadbandmap.fcc.gov/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1289

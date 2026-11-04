@@ -1,0 +1,24 @@
+id: foursquare-studio
+kind: tool
+name: Foursquare Studio
+category: Display & visualization
+subcategory: Hosted web map makers
+tool_kind: Platform
+summary: Commercial kepler.gl-based platform for large-scale geospatial visualization and analysis.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: unknown
+url: https://studio.foursquare.com/
+notes: Product status uncertain
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1138

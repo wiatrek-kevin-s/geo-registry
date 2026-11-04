@@ -1,0 +1,23 @@
+id: geo-georust
+kind: tool
+name: geo (GeoRust)
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: Rust crate of geometry types and algorithms such as area, simplification, boolean ops and distance.
+open_source: 'yes'
+license: MIT OR Apache-2.0
+language: Rust
+interfaces:
+- Rust
+call:
+- rust
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/georust/geo
+notes: Core for a Rust-based app like RustGIS.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 11

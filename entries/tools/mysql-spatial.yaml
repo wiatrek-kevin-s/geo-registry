@@ -1,0 +1,26 @@
+id: mysql-spatial
+kind: tool
+name: MySQL spatial
+category: Spatial databases & query engines
+subcategory: Open-source RDBMS
+tool_kind: Database
+summary: Spatial types, SRID-aware geography functions and R-tree indexes in MySQL 8+.
+open_source: partial
+license: GPL-2.0-only
+language: C++
+interfaces:
+- SQL
+- Python
+- Java
+call:
+- python
+- sql
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://dev.mysql.com/doc/refman/8.4/en/spatial-types.html
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 707

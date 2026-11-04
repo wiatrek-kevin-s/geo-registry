@@ -1,0 +1,23 @@
+id: sextante
+kind: tool
+name: SEXTANTE
+category: Desktop GIS & analysis engines
+subcategory: Open-source desktop GIS
+tool_kind: Library
+summary: Former Java geoprocessing framework with hundreds of algorithms that fed gvSIG and inspired QGIS
+  Processing.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: Java
+interfaces:
+- Java
+call:
+- java
+wrapped_by_columbus: false
+project_status: archived
+notes: Historical; ideas absorbed into QGIS Processing
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 239

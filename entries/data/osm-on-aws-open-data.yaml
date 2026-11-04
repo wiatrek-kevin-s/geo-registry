@@ -1,0 +1,21 @@
+id: osm-on-aws-open-data
+kind: data
+name: OSM on AWS (Open Data)
+summary: Weekly OSM planet and history in PBF and ORC on Amazon S3.
+publisher: Unknown
+themes:
+- downloads-distributions
+- osm-overture-tooling
+coverage:
+  region: Unspecified
+license: ODbL-1.0
+access:
+- type: http
+  url: https://registry.opendata.aws/osm/
+  auth: none
+notes: Athena/DuckDB-queryable
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1228

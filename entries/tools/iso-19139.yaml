@@ -1,0 +1,21 @@
+id: iso-19139
+kind: tool
+name: ISO 19139
+category: Servers, standards, tiles & catalogs
+subcategory: Tile, style & catalog specs
+tool_kind: Format/Standard
+summary: XML schema implementation of the ISO 19115:2003 metadata model used widely in CSW catalogs.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary (ISO)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.iso.org/standard/67253.html
+notes: Legacy but still dominant in SDIs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1009

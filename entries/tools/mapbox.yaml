@@ -1,0 +1,28 @@
+id: mapbox
+kind: tool
+name: Mapbox
+category: Commercial GIS platforms & APIs
+subcategory: Location & mapping APIs
+tool_kind: Platform
+summary: Location platform for vector tiles, custom map styles, geocoding, navigation and SDKs.
+open_source: partial
+license: LicenseRef-Multiple
+license_original: Proprietary (GL JS v2+); BSD for some libs
+language: C++; JS
+interfaces:
+- REST
+- JS
+- MCP
+call:
+- rest
+- js
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://www.mapbox.com/
+notes: Official MCP server
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1406

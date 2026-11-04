@@ -1,0 +1,26 @@
+id: transitland
+kind: tool
+name: Transitland
+category: Routing, networks, geocoding & LRS
+subcategory: Transit data & tools
+tool_kind: Platform
+summary: Aggregated catalog and API of transit feeds worldwide with GTFS, GTFS-RT and GBFS data, run by
+  Interline.
+open_source: partial
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Go
+interfaces:
+- REST
+- GUI
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.transit.land/
+notes: API free tier; data licences vary by feed
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 814

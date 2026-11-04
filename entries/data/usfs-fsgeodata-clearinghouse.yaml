@@ -1,0 +1,21 @@
+id: usfs-fsgeodata-clearinghouse
+kind: data
+name: USFS FSGeodata Clearinghouse
+summary: Forest Service boundaries, roads, trails, vegetation and fire datasets.
+publisher: U.S. Forest Service
+themes:
+- us-federal-usfs
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://data.fs.usda.gov/geodata/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1281

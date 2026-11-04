@@ -1,0 +1,31 @@
+id: wherobots
+kind: tool
+name: Wherobots
+category: Spatial databases & query engines
+subcategory: Big data / distributed
+tool_kind: Platform
+summary: Managed cloud spatial compute platform by the creators of Apache Sedona, including raster and
+  GeoParquet/Iceberg.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Scala;Python
+interfaces:
+- SQL
+- Python
+- REST
+call:
+- python
+- rest
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://wherobots.com
+notes: Hosted Sedona
+also_categories:
+- Commercial GIS platforms & APIs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 685

@@ -1,0 +1,23 @@
+id: esa-snappy
+kind: tool
+name: esa_snappy
+category: Imagery, remote sensing & GeoAI
+subcategory: Remote sensing processing
+tool_kind: Library
+summary: Python bridge for calling SNAP operators and reading products from Python.
+open_source: 'yes'
+license: GPL-3.0-only
+language: Python;Java
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/senbox-org/esa-snappy
+notes: Fiddly JVM bridge; gpt CLI often simpler
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 362

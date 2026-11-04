@@ -1,0 +1,26 @@
+id: erdas-imagine
+kind: tool
+name: ERDAS IMAGINE
+category: Imagery, remote sensing & GeoAI
+subcategory: Commercial RS software
+tool_kind: Application
+summary: Hexagon desktop suite for image processing, classification, photogrammetry and spatial modelling.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://hexagon.com/products/erdas-imagine
+also_categories:
+- Commercial GIS platforms & APIs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 471

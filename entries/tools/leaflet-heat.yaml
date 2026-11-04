@@ -1,0 +1,24 @@
+id: leaflet-heat
+kind: tool
+name: Leaflet.heat
+category: Display & visualization
+subcategory: Leaflet plugins
+tool_kind: Extension
+summary: Draws fast canvas heatmaps from point data on Leaflet maps.
+open_source: 'yes'
+license: BSD-2-Clause
+language: JavaScript
+interfaces:
+- JS
+- plugin
+call:
+- js
+- plugin
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/Leaflet/Leaflet.heat
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1034

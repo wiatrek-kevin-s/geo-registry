@@ -1,0 +1,27 @@
+id: leaflet-timedimension
+kind: tool
+name: Leaflet.TimeDimension
+category: Display & visualization
+subcategory: Leaflet plugins
+tool_kind: Extension
+summary: Adds time sliders and playback controls for time-enabled WMS and GeoJSON layers in Leaflet.
+open_source: 'yes'
+license: MIT
+language: JavaScript
+interfaces:
+- JS
+- OGC
+- plugin
+call:
+- js
+- ogc
+- plugin
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/socib/Leaflet.TimeDimension
+notes: Animates WMS-T layers
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1038

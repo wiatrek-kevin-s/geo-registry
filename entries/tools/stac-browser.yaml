@@ -1,0 +1,21 @@
+id: stac-browser
+kind: tool
+name: STAC Browser
+category: Imagery, remote sensing & GeoAI
+subcategory: STAC ecosystem
+tool_kind: Application
+summary: Vue web app for browsing static STAC catalogs and STAC APIs.
+open_source: 'yes'
+license: Apache-2.0
+language: JavaScript
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/radiantearth/stac-browser
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 428

@@ -1,0 +1,28 @@
+id: pmtiles-libraries
+kind: tool
+name: PMTiles libraries
+category: Servers, standards, tiles & catalogs
+subcategory: Tile generation & packaging
+tool_kind: Library
+summary: Reference readers and writers for the PMTiles format in JS, Python and C++ plus MapLibre and
+  Leaflet adapters.
+open_source: 'yes'
+license: BSD-3-Clause
+language: JavaScript; Python; C/C++
+interfaces:
+- JS
+- Python
+- C/C++
+call:
+- python
+- js
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/protomaps/PMTiles
+notes: Serverless tiles from a single file
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 926

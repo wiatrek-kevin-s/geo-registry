@@ -1,0 +1,23 @@
+id: cartopy
+kind: tool
+name: Cartopy
+category: Display & visualization
+subcategory: Python notebook & app mapping
+tool_kind: Library
+summary: Matplotlib-based library for projected static maps and cartographic transforms.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://scitools.org.uk/cartopy/
+notes: Publication-quality static maps
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1101

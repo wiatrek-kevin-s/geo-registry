@@ -1,0 +1,27 @@
+id: invest
+kind: tool
+name: InVEST
+category: Desktop GIS & analysis engines
+subcategory: Python vector analysis
+tool_kind: Application
+summary: Natural Capital Project suite of models mapping ecosystem services such as carbon, water yield
+  and habitat quality.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- GUI
+- Python
+- CLI
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/natcap/invest
+notes: Ready-made models callable from CLI
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 294

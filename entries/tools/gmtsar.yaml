@@ -1,0 +1,22 @@
+id: gmtsar
+kind: tool
+name: GMTSAR
+category: Imagery, remote sensing & GeoAI
+subcategory: SAR processing
+tool_kind: Toolkit/CLI
+summary: InSAR processing system built on GMT for interferograms and time series.
+open_source: 'yes'
+license: GPL-3.0
+language: C
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/gmtsar/gmtsar
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 497

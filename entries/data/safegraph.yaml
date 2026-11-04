@@ -1,0 +1,21 @@
+id: safegraph
+kind: data
+name: SafeGraph
+summary: Commercial POI places and footprints data.
+publisher: SafeGraph
+themes:
+- commercial
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Proprietary
+license_original: Proprietary
+access:
+- type: http
+  url: https://www.safegraph.com/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1360

@@ -1,0 +1,22 @@
+id: github-rest-api
+kind: tool
+name: GitHub REST API
+category: Connections & storage
+subcategory: Data versioning & Git
+tool_kind: Service/API
+summary: REST API for repositories, files, issues and releases on GitHub.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://docs.github.com/rest
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1468

@@ -1,0 +1,24 @@
+id: arcgis-security-and-authentication-oauth-2-0-api-keys
+kind: tool
+name: ArcGIS security and authentication (OAuth 2.0, API keys)
+category: Connections & storage
+subcategory: Esri connections & auth
+tool_kind: Service/API
+summary: OAuth 2.0 user and app logins, API keys and tokens for ArcGIS Online, Enterprise and Location
+  Platform.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://developers.arcgis.com/documentation/security-and-authentication/
+notes: Desktop app should use OAuth PKCE with a registered client ID
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1433

@@ -1,0 +1,26 @@
+id: mapwingis
+kind: tool
+name: MapWinGIS
+category: Desktop GIS & analysis engines
+subcategory: Open-source desktop GIS
+tool_kind: Library
+summary: Windows mapping and GIS ActiveX/COM control used to embed maps and basic GIS functions in .NET
+  or C++ applications.
+open_source: 'yes'
+license: MPL-1.1
+language: C++
+interfaces:
+- C/C++
+- plugin
+call:
+- c-cpp
+- plugin
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/MapWindow/MapWinGIS
+notes: Embeddable GIS for Windows desktop apps
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 232

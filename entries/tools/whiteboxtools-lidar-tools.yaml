@@ -1,0 +1,30 @@
+id: whiteboxtools-lidar-tools
+kind: tool
+name: WhiteboxTools LiDAR tools
+category: Point clouds, LiDAR & 3D
+subcategory: Lidar processing suites
+tool_kind: Toolkit/CLI
+summary: LiDAR toolset within WhiteboxTools Open Core for gridding, ground filtering, classification and
+  tiling LAS/LAZ.
+open_source: 'yes'
+license: MIT
+language: Rust
+interfaces:
+- CLI
+- Python
+- R
+- plugin
+call:
+- python
+- cli
+- r
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://www.whiteboxgeo.com/manual/wbt_book/available_tools/lidar_tools.html
+notes: Overlaps the WhiteboxTools row elsewhere; Rust single binary easy to call.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 556

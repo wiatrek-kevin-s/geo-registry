@@ -1,0 +1,20 @@
+id: openaerialmap
+kind: data
+name: OpenAerialMap
+summary: Open community repository of drone and aerial imagery with TMS access.
+publisher: Unknown
+themes:
+- global-imagery
+- open-data-sources
+coverage:
+  region: Global
+license: CC-BY-4.0
+access:
+- type: http
+  url: https://openaerialmap.org/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1324

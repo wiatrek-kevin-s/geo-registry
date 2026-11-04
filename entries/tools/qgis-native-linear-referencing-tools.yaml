@@ -1,0 +1,23 @@
+id: qgis-native-linear-referencing-tools
+kind: tool
+name: QGIS native linear referencing tools
+category: Routing, networks, geocoding & LRS
+subcategory: Linear referencing (LRS)
+tool_kind: Application
+summary: QGIS Processing algorithms for M values, points along geometry, line substring and interpolation.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: C++
+interfaces:
+- GUI
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://qgis.org/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 865

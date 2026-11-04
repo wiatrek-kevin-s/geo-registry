@@ -1,0 +1,22 @@
+id: texas-dshs-gis
+kind: data
+name: Texas DSHS GIS
+summary: Health facility, regional and public-health geographic data from DSHS.
+publisher: Texas Department of State Health Services
+themes:
+- texas
+- open-data-sources
+coverage:
+  region: Texas
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.dshs.texas.gov/
+  auth: none
+notes: Unsure of a dedicated GIS portal
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1348

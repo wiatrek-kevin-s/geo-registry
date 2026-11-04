@@ -1,0 +1,22 @@
+id: streamlit
+kind: tool
+name: Streamlit
+category: Display & visualization
+subcategory: Python notebook & app mapping
+tool_kind: Platform
+summary: Turns Python scripts into shareable web apps, with built-in simple maps and pydeck support.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://streamlit.io/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1099

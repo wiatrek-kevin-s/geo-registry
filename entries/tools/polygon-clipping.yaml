@@ -1,0 +1,23 @@
+id: polygon-clipping
+kind: tool
+name: polygon-clipping
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: JavaScript library for polygon union, intersection, difference and XOR on GeoJSON-like coordinates.
+open_source: 'yes'
+license: MIT
+language: JavaScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/mfogel/polygon-clipping
+notes: Used by Turf for boolean ops.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 16

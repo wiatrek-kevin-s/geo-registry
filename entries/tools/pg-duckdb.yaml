@@ -1,0 +1,23 @@
+id: pg-duckdb
+kind: tool
+name: pg_duckdb
+category: Spatial databases & query engines
+subcategory: PostgreSQL ecosystem
+tool_kind: Extension
+summary: Embeds DuckDB in PostgreSQL so Postgres can query Parquet/GeoParquet and lake files.
+open_source: 'yes'
+license: MIT
+language: C++
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/duckdb/pg_duckdb
+notes: Bridge Postgres and GeoParquet
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 658

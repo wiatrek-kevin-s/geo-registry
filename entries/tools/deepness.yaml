@@ -1,0 +1,24 @@
+id: deepness
+kind: tool
+name: Deepness
+category: Imagery, remote sensing & GeoAI
+subcategory: GeoAI / deep learning
+tool_kind: Extension
+summary: QGIS plugin running ONNX deep learning models for segmentation, detection and regression on rasters.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- plugin
+- GUI
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/PUTvision/qgis-plugin-deepness
+notes: Local ONNX inference
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 467

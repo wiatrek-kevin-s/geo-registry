@@ -1,0 +1,21 @@
+id: advan
+kind: data
+name: Advan
+summary: Foot-traffic and mobility patterns data (formerly SafeGraph Patterns).
+publisher: Advan
+themes:
+- commercial
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Proprietary
+license_original: Proprietary
+access:
+- type: http
+  url: https://advanresearch.com/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1361

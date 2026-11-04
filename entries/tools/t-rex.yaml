@@ -1,0 +1,25 @@
+id: t-rex
+kind: tool
+name: t-rex
+category: Servers, standards, tiles & catalogs
+subcategory: Map & feature servers
+tool_kind: Server
+summary: Generates and serves Mapbox Vector Tiles from PostGIS and GDAL data sources.
+open_source: 'yes'
+license: MIT
+language: Rust
+interfaces:
+- CLI
+- REST
+call:
+- cli
+- rest
+wrapped_by_columbus: false
+project_status: archived
+url: https://github.com/t-rex-tileserver/t-rex
+notes: Unmaintained; use BBOX or Martin
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 900

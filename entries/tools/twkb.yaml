@@ -1,0 +1,23 @@
+id: twkb
+kind: tool
+name: TWKB
+category: Core libraries & formats
+subcategory: Vector formats
+tool_kind: Format/Standard
+summary: Tiny Well-Known Binary, a compressed variable-precision geometry encoding.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open specification
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/TWKB/Specification
+notes: Compact transfer.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 177

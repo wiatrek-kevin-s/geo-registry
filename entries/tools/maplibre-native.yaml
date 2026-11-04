@@ -1,0 +1,27 @@
+id: maplibre-native
+kind: tool
+name: MapLibre Native
+category: Display & visualization
+subcategory: MapLibre/OpenLayers ecosystem
+tool_kind: Library
+summary: Native renderer for MapLibre styles on Android, iOS, desktop and headless server environments.
+open_source: 'yes'
+license: BSD-2-Clause
+language: C++
+interfaces:
+- C/C++
+- Java
+- JS
+call:
+- js
+- c-cpp
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://maplibre.org/projects/native/
+notes: Can render static map images headlessly for reports
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1040

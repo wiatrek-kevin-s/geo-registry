@@ -1,0 +1,27 @@
+id: geocodio
+kind: tool
+name: Geocodio
+category: Routing, networks, geocoding & LRS
+subcategory: Geocoding services
+tool_kind: Service/API
+summary: US and Canada geocoding API with batch upload and data appends such as census, districts and
+  timezones.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- Python
+- JS
+call:
+- python
+- rest
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://www.geocod.io/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 832

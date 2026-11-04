@@ -1,0 +1,23 @@
+id: spatialite-database
+kind: tool
+name: SpatiaLite database
+category: Core libraries & formats
+subcategory: Vector formats
+tool_kind: Format/Standard
+summary: SQLite database file with SpatiaLite geometry tables and spatial indexes.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open (SQLite-based)
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.gaia-gis.it/fossil/libspatialite
+notes: Alternative to GeoPackage.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 186

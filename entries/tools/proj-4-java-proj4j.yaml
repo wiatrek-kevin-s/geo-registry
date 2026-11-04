@@ -1,0 +1,23 @@
+id: proj-4-java-proj4j
+kind: tool
+name: PROJ.4 Java / Proj4J
+category: Core libraries & formats
+subcategory: Projection & CRS
+tool_kind: Library
+summary: Java port of PROJ.4 projection routines maintained under LocationTech.
+open_source: 'yes'
+license: Apache-2.0
+language: Java
+interfaces:
+- Java
+call:
+- java
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/locationtech/proj4j
+notes: Lightweight JVM CRS alternative.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 37

@@ -1,0 +1,26 @@
+id: lakefs
+kind: tool
+name: lakeFS
+category: Connections & storage
+subcategory: Data versioning & Git
+tool_kind: Server
+summary: Git-like branching and commits over object storage data lakes.
+open_source: 'yes'
+license: Apache-2.0
+language: Go
+interfaces:
+- REST
+- CLI
+- Python
+call:
+- python
+- cli
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://lakefs.io/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1474

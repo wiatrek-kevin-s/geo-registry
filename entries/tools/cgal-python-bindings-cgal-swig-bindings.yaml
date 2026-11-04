@@ -1,0 +1,23 @@
+id: cgal-python-bindings-cgal-swig-bindings
+kind: tool
+name: CGAL Python bindings (cgal-swig-bindings)
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: SWIG-based Python bindings for selected CGAL packages.
+open_source: 'yes'
+license: GPL-3.0-or-later
+language: C++/Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/CGAL/cgal-swig-bindings
+notes: Partial coverage of CGAL.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 27

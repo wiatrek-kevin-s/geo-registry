@@ -1,0 +1,27 @@
+id: geonetwork
+kind: tool
+name: GeoNetwork
+category: Servers, standards, tiles & catalogs
+subcategory: Metadata catalogs & data portals
+tool_kind: Application
+summary: Metadata catalog for spatial data with ISO 19115/19139 editing, harvesting and CSW/OGC API Records
+  search.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: Java
+interfaces:
+- REST
+- OGC
+- GUI
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://geonetwork-opensource.org
+notes: Standard SDI catalog; INSPIRE support
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 932

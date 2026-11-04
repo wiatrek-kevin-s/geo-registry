@@ -1,0 +1,22 @@
+id: deck-gl-community
+kind: tool
+name: deck.gl-community
+category: Display & visualization
+subcategory: vis.gl / large-data WebGL
+tool_kind: Library
+summary: Community-maintained add-on layers for deck.gl, including editable layers and graph layers.
+open_source: 'yes'
+license: MIT
+language: TypeScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/visgl/deck.gl-community
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1055

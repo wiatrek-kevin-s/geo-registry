@@ -1,0 +1,21 @@
+id: tiger-line-road-features
+kind: data
+name: TIGER/Line road features
+summary: Census Bureau nationwide road centerlines with address ranges used for geocoding and routing.
+publisher: Unknown
+themes:
+- network-traffic-referencing-standards
+- routing-networks-geocoding-lrs
+coverage:
+  region: United States
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 888

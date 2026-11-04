@@ -1,0 +1,23 @@
+id: ibm-db2-spatial-analytics
+kind: tool
+name: IBM Db2 Spatial Analytics
+category: Spatial databases & query engines
+subcategory: Commercial RDBMS
+tool_kind: Extension
+summary: Spatial data types and functions for Db2 (formerly Spatial Extender).
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.ibm.com/docs/en/db2
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 702

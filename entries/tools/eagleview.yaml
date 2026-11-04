@@ -1,0 +1,23 @@
+id: eagleview
+kind: tool
+name: EagleView
+category: Commercial GIS platforms & APIs
+subcategory: Imagery & data vendors
+tool_kind: Service/API
+summary: Aerial oblique and orthogonal imagery plus property measurement data, common in county assessment.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- GUI
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.eagleview.com/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1419

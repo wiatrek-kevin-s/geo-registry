@@ -1,0 +1,22 @@
+id: hifld-open
+kind: data
+name: HIFLD Open
+summary: Former federal portal of open infrastructure layers such as hospitals, power and schools.
+publisher: Unknown
+themes:
+- us-federal-infrastructure
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.napsgfoundation.org/hifld_open/
+  auth: none
+notes: Discontinued Aug–Sep 2025; archives on Data Lumos and Source Cooperative
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1285

@@ -1,0 +1,23 @@
+id: openeo-processes-dask
+kind: tool
+name: openeo-processes-dask
+category: Imagery, remote sensing & GeoAI
+subcategory: Cloud EO platforms
+tool_kind: Library
+summary: Dask/xarray implementation of openEO processes enabling local execution of process graphs.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/Open-EO/openeo-processes-dask
+notes: Local openEO execution
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 405

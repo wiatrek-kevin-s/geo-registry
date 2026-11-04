@@ -1,0 +1,23 @@
+id: dggridr
+kind: tool
+name: dggridR
+category: Core libraries & formats
+subcategory: Discrete global grids & geocodes
+tool_kind: Library
+summary: R package wrapping DGGRID for binning data into equal-area hexagonal grids.
+open_source: 'yes'
+license: MIT
+language: R/C++
+interfaces:
+- R
+call:
+- r
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/r-barnes/dggridR
+notes: Equal-area binning in R.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 121

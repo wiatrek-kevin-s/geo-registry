@@ -1,0 +1,30 @@
+id: pygeoapi
+kind: tool
+name: pygeoapi
+category: Servers, standards, tiles & catalogs
+subcategory: Map & feature servers
+tool_kind: Server
+summary: Python server implementing many OGC API standards (Features, Coverages, Records, Processes, EDR,
+  Tiles, Maps) via a YAML config.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- REST
+- OGC
+- Python
+- plugin
+call:
+- python
+- rest
+- ogc
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://pygeoapi.io
+notes: Easy to embed in a Python sidecar; MCP experiments exist
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 898

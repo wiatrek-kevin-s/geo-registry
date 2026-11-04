@@ -1,0 +1,23 @@
+id: 2d-tile-matrix-set
+kind: tool
+name: 2D Tile Matrix Set
+category: Servers, standards, tiles & catalogs
+subcategory: OGC web service standards
+tool_kind: Format/Standard
+summary: Defines tile matrix sets such as WebMercatorQuad and the tiling grids used by WMTS and OGC API
+  – Tiles.
+open_source: 'yes'
+license: LicenseRef-OGC-Document
+license_original: OGC document licence
+interfaces:
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://www.ogc.org/standards/tms
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 987

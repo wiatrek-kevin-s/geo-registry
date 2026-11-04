@@ -1,0 +1,23 @@
+id: stac-index
+kind: data
+name: STAC Index
+summary: Directory of public STAC catalogs, APIs and tools.
+publisher: Unknown
+themes:
+- stac-ecosystem
+- imagery-remote-sensing-geoai
+- open-data-sources
+coverage:
+  region: Unspecified
+license: NOASSERTION
+license_original: Unknown
+access:
+- type: http
+  url: https://stacindex.org
+  auth: none
+notes: Discover STAC endpoints
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 431

@@ -1,0 +1,22 @@
+id: sql-server-management-studio
+kind: tool
+name: SQL Server Management Studio
+category: Spatial databases & query engines
+subcategory: Client tools
+tool_kind: Application
+summary: SQL Server client with a Spatial results tab for geometry/geography columns.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C#
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://learn.microsoft.com/ssms/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 745

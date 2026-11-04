@@ -1,0 +1,23 @@
+id: pyogrio
+kind: tool
+name: pyogrio
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Fast vectorized vector IO for GeoPandas using GDAL with Arrow support.
+open_source: 'yes'
+license: MIT
+language: Python/Cython
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/geopandas/pyogrio
+notes: Default GeoPandas IO engine.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 53

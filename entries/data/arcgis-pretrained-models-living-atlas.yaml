@@ -1,0 +1,23 @@
+id: arcgis-pretrained-models-living-atlas
+kind: data
+name: ArcGIS Pretrained Models (Living Atlas)
+summary: Esri catalog of ready-to-use deep learning packages for features like buildings, trees and land
+  cover.
+publisher: Esri
+themes:
+- geoai-deep-learning
+- imagery-remote-sensing-geoai
+coverage:
+  region: Unspecified
+license: LicenseRef-Proprietary
+license_original: Proprietary
+access:
+- type: http
+  url: https://livingatlas.arcgis.com/en/browse/?q=dlpk
+  auth: none
+notes: dlpk format, ArcGIS only
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 465

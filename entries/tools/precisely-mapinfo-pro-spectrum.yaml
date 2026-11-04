@@ -1,0 +1,24 @@
+id: precisely-mapinfo-pro-spectrum
+kind: tool
+name: Precisely (MapInfo Pro, Spectrum)
+category: Commercial GIS platforms & APIs
+subcategory: Location & mapping APIs
+tool_kind: Platform
+summary: Data-integrity company offering MapInfo Pro desktop GIS, Spectrum spatial servers, geocoding
+  and address data.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.precisely.com/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1412

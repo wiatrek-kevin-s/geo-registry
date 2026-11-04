@@ -1,0 +1,23 @@
+id: laz-rs
+kind: tool
+name: laz-rs
+category: Point clouds, LiDAR & 3D
+subcategory: LAS/LAZ libraries
+tool_kind: Library
+summary: Pure Rust implementation of LASzip compression and decompression.
+open_source: 'yes'
+license: Apache-2.0
+language: Rust
+interfaces:
+- Rust
+call:
+- rust
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/laz-rs/laz-rs
+notes: Embeddable LAZ codec for a Rust desktop app.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 544

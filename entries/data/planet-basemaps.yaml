@@ -1,0 +1,22 @@
+id: planet-basemaps
+kind: data
+name: Planet basemaps
+summary: Mosaicked PlanetScope imagery basemaps updated monthly or more often.
+publisher: Planet Labs
+themes:
+- commercial
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Proprietary
+license_original: Proprietary
+access:
+- type: http
+  url: https://www.planet.com/
+  auth: none
+notes: Free NICFI tropics program ended
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1362

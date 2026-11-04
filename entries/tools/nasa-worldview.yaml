@@ -1,0 +1,24 @@
+id: nasa-worldview
+kind: tool
+name: NASA Worldview
+category: Imagery, remote sensing & GeoAI
+subcategory: Cloud EO platforms
+tool_kind: Application
+summary: Web app for browsing near-real-time global satellite imagery layers from NASA GIBS.
+open_source: 'yes'
+license: NASA-1.3
+language: JavaScript
+interfaces:
+- GUI
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://worldview.earthdata.nasa.gov
+notes: GIBS WMTS usable as basemap
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 409

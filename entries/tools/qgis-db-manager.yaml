@@ -1,0 +1,25 @@
+id: qgis-db-manager
+kind: tool
+name: QGIS DB Manager
+category: Spatial databases & query engines
+subcategory: Client tools
+tool_kind: Application
+summary: QGIS panel for running SQL against PostGIS, SpatiaLite, GeoPackage and Oracle and loading results
+  as layers.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: Python;C++
+interfaces:
+- GUI
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://qgis.org
+notes: Overlaps desktop category
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 748

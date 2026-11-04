@@ -1,0 +1,25 @@
+id: planetary-computer-python
+kind: tool
+name: planetary-computer (Python)
+category: Imagery, remote sensing & GeoAI
+subcategory: Cloud EO platforms
+tool_kind: Library
+summary: Helper library that signs Planetary Computer asset URLs for authenticated access.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+- CLI
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/microsoft/planetary-computer-sdk-for-python
+notes: Needed with pystac-client on MPC
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 396

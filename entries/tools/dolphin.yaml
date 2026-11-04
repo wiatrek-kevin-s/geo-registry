@@ -1,0 +1,24 @@
+id: dolphin
+kind: tool
+name: Dolphin
+category: Imagery, remote sensing & GeoAI
+subcategory: SAR processing
+tool_kind: Library
+summary: Phase-linking InSAR processor for distributed scatterer time series.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- Python
+- CLI
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/isce-framework/dolphin
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 501

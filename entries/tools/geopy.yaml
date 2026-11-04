@@ -1,0 +1,23 @@
+id: geopy
+kind: tool
+name: geopy
+category: Routing, networks, geocoding & LRS
+subcategory: Geocoding engines & libraries
+tool_kind: Library
+summary: Python client for many geocoding services plus geodesic distance calculations.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/geopy/geopy
+notes: One API for agents to hit many geocoders
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 825

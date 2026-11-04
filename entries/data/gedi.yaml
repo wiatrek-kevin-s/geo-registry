@@ -1,0 +1,23 @@
+id: gedi
+kind: data
+name: GEDI
+summary: NASA full-waveform lidar on the ISS measuring forest canopy structure.
+publisher: Unknown
+themes:
+- lidar-data-sources
+- point-clouds-lidar-3d
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://gedi.umd.edu
+  auth: none
+notes: Global canopy height.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 642

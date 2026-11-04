@@ -1,0 +1,27 @@
+id: gdal-ogr-measured-geometry-support
+kind: tool
+name: GDAL/OGR measured geometry support
+category: Routing, networks, geocoding & LRS
+subcategory: Linear referencing (LRS)
+tool_kind: Library
+summary: GDAL reads and writes M-aware geometries across formats, preserving route measures.
+open_source: 'yes'
+license: MIT
+language: C++
+interfaces:
+- CLI
+- Python
+- C/C++
+call:
+- python
+- cli
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://gdal.org/
+notes: Needed to keep M values intact
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 866

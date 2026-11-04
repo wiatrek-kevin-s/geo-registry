@@ -1,0 +1,23 @@
+id: ames-stereo-pipeline
+kind: tool
+name: Ames Stereo Pipeline
+category: Imagery, remote sensing & GeoAI
+subcategory: Photogrammetry & drone
+tool_kind: Toolkit/CLI
+summary: NASA tools for producing DEMs from satellite and planetary stereo imagery.
+open_source: 'yes'
+license: Apache-2.0
+language: C++
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/NeoGeographyToolkit/StereoPipeline
+notes: Satellite stereo DEMs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 518

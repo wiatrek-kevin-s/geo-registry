@@ -1,0 +1,24 @@
+id: untwine
+kind: tool
+name: untwine
+category: Point clouds, LiDAR & 3D
+subcategory: Indexing & cloud-optimized
+tool_kind: Toolkit/CLI
+summary: Converts LAS/LAZ point clouds into Cloud Optimized Point Cloud (COPC) files efficiently on limited
+  memory.
+open_source: 'yes'
+license: GPL-3.0
+language: C++
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/hobuinc/untwine
+notes: Bundled with QGIS for COPC indexing; commercial license available from Hobu.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 533

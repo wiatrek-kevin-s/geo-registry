@@ -1,0 +1,25 @@
+id: 1spatial-1integrate-lrs
+kind: tool
+name: 1Spatial 1Integrate (LRS)
+category: Routing, networks, geocoding & LRS
+subcategory: Linear referencing (LRS)
+tool_kind: Application
+summary: Rules-based spatial data validation and integration engine with linear reference system support.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: Java
+interfaces:
+- GUI
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://1spatial.com/
+notes: LRS support announced as feature; URL is company site
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 869

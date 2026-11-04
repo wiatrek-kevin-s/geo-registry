@@ -1,0 +1,20 @@
+id: gtfs-schedule
+kind: tool
+name: GTFS Schedule
+category: Routing, networks, geocoding & LRS
+subcategory: Transit data & tools
+tool_kind: Format/Standard
+summary: Standard zipped CSV format for public transit schedules, stops, routes and shapes.
+open_source: 'yes'
+license: Apache-2.0
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://gtfs.org/
+notes: Spec maintained by MobilityData
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 801

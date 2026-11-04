@@ -1,0 +1,22 @@
+id: ptv-developer
+kind: tool
+name: PTV Developer
+category: Routing, networks, geocoding & LRS
+subcategory: Commercial routing APIs
+tool_kind: Service/API
+summary: PTV routing, truck routing and tour optimization APIs for logistics.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://developer.myptv.com/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 855

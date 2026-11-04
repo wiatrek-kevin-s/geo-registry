@@ -1,0 +1,22 @@
+id: copernicus-dem
+kind: data
+name: Copernicus DEM
+summary: Global 30 m and 90 m DSM derived from TanDEM-X.
+publisher: Unknown
+themes:
+- global-elevation
+- open-data-sources
+coverage:
+  region: Global
+license: LicenseRef-Copernicus-DEM
+license_original: Copernicus DEM licence
+access:
+- type: http
+  url: https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM
+  auth: none
+notes: GLO-30 free; COGs on AWS
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1296

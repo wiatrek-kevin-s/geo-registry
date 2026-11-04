@@ -1,0 +1,23 @@
+id: wps-web-processing-service
+kind: tool
+name: WPS (Web Processing Service)
+category: Servers, standards, tiles & catalogs
+subcategory: OGC web service standards
+tool_kind: Format/Standard
+summary: Describes and executes geoprocessing operations remotely over HTTP.
+open_source: 'yes'
+license: LicenseRef-OGC-Document
+license_original: OGC document licence
+interfaces:
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.ogc.org/standards/wps
+notes: Superseded by OGC API – Processes
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 974

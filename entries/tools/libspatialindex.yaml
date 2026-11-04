@@ -1,0 +1,23 @@
+id: libspatialindex
+kind: tool
+name: libspatialindex
+category: Core libraries & formats
+subcategory: Spatial indexing
+tool_kind: Library
+summary: C++ library implementing R-tree, MVR-tree and TPR-tree spatial indexes.
+open_source: 'yes'
+license: MIT
+language: C++
+interfaces:
+- C/C++
+call:
+- c-cpp
+wrapped_by_columbus: false
+project_status: maintained
+url: https://libspatialindex.org
+notes: Backend of Python Rtree.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 96

@@ -1,0 +1,23 @@
+id: citygml-tools
+kind: tool
+name: citygml-tools
+category: Point clouds, LiDAR & 3D
+subcategory: City models
+tool_kind: Toolkit/CLI
+summary: CLI for upgrading, validating, reprojecting and converting CityGML, including to CityJSON.
+open_source: 'yes'
+license: Apache-2.0
+language: Java
+interfaces:
+- CLI
+call:
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/citygml4j/citygml-tools
+notes: Batch CityGML conversion.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 628

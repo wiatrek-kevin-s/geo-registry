@@ -1,0 +1,23 @@
+id: citygml4j
+kind: tool
+name: citygml4j
+category: Point clouds, LiDAR & 3D
+subcategory: City models
+tool_kind: Library
+summary: Java library for reading, writing and processing CityGML.
+open_source: 'yes'
+license: Apache-2.0
+language: Java
+interfaces:
+- Java
+call:
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/citygml4j/citygml4j
+notes: JVM CityGML API.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 627

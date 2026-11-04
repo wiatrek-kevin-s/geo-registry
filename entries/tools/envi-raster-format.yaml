@@ -1,0 +1,21 @@
+id: envi-raster-format
+kind: tool
+name: ENVI raster format
+category: Core libraries & formats
+subcategory: Raster formats
+tool_kind: Format/Standard
+summary: Flat binary raster with text header used by L3Harris ENVI.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary (documented header)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://gdal.org/en/stable/drivers/raster/envi.html
+notes: Hyperspectral data.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 150

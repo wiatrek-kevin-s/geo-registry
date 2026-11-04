@@ -1,0 +1,21 @@
+id: terrain-rgb-terrarium
+kind: tool
+name: Terrain-RGB / Terrarium
+category: Core libraries & formats
+subcategory: Raster formats
+tool_kind: Format/Standard
+summary: Encodings that pack elevation values into PNG/WebP RGB tiles for web maps.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open (documented)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://docs.mapbox.com/data/tilesets/reference/mapbox-terrain-rgb-v1
+notes: Common for 3D terrain tiles.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 156

@@ -1,0 +1,22 @@
+id: clay-foundation-model
+kind: data
+name: Clay Foundation Model
+summary: Open multi-sensor Earth observation foundation model producing embeddings for downstream tasks.
+publisher: Unknown
+themes:
+- geoai-deep-learning
+- imagery-remote-sensing-geoai
+- ai-agents-mcp-for-gis
+coverage:
+  region: Unspecified
+license: Apache-2.0
+access:
+- type: http
+  url: https://github.com/Clay-foundation/model
+  auth: none
+notes: Embeddings useful for similarity search
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 449

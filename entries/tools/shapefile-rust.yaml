@@ -1,0 +1,23 @@
+id: shapefile-rust
+kind: tool
+name: shapefile (Rust)
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Pure Rust reader and writer for ESRI Shapefiles.
+open_source: 'yes'
+license: MIT
+language: Rust
+interfaces:
+- Rust
+call:
+- rust
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/tmontaigu/shapefile-rs
+notes: No-GDAL Shapefile IO.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 59

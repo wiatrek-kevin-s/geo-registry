@@ -1,0 +1,27 @@
+id: tileserver-gl
+kind: tool
+name: TileServer GL
+category: Servers, standards, tiles & catalogs
+subcategory: Tile servers
+tool_kind: Server
+summary: Serves vector MBTiles/PMTiles and renders raster tiles and static maps from MapLibre GL styles.
+open_source: 'yes'
+license: BSD-2-Clause
+language: JavaScript
+interfaces:
+- CLI
+- REST
+- OGC
+call:
+- cli
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/maptiler/tileserver-gl
+notes: Server-side raster rendering of vector styles; WMTS output
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 911

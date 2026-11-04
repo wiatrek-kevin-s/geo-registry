@@ -1,0 +1,30 @@
+id: envi
+kind: tool
+name: ENVI
+category: Desktop GIS & analysis engines
+subcategory: Commercial desktop GIS
+tool_kind: Application
+summary: NV5 Geospatial's remote sensing analysis software for multispectral, hyperspectral, SAR and LiDAR
+  image processing.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: IDL; C
+interfaces:
+- GUI
+- Python
+- plugin
+call:
+- python
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://www.nv5geospatialsoftware.com/Products/ENVI
+notes: Also listed under imagery; ENVI Py and IDL APIs
+also_categories:
+- Imagery, remote sensing & GeoAI
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 271

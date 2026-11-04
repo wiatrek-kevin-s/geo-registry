@@ -1,0 +1,23 @@
+id: hortonmachine
+kind: tool
+name: HortonMachine
+category: Desktop GIS & analysis engines
+subcategory: Terrain & hydrology engines
+tool_kind: Library
+summary: Java library of geomorphology, hydrology and LiDAR tools, usable from gvSIG, uDig or scripts.
+open_source: 'yes'
+license: GPL-3.0-only
+language: Java
+interfaces:
+- Java
+call:
+- java
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/moovida/hortonmachine
+notes: JVM; heir to JGrass
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 285

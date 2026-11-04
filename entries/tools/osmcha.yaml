@@ -1,0 +1,24 @@
+id: osmcha
+kind: tool
+name: OSMCha
+category: OSM & Overture tooling
+subcategory: QA & coordination
+tool_kind: Application
+summary: Changeset analysis tool that flags suspicious OSM edits for review.
+open_source: 'yes'
+license: BSD-2-Clause
+language: Python;JavaScript
+interfaces:
+- GUI
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://osmcha.org/
+notes: Vandalism and quality review
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1220

@@ -1,0 +1,21 @@
+id: maidenhead-locator-system
+kind: tool
+name: Maidenhead Locator System
+category: Core libraries & formats
+subcategory: Discrete global grids & geocodes
+tool_kind: Format/Standard
+summary: Amateur radio grid square locator encoding latitude/longitude in alternating letter/digit pairs.
+open_source: 'yes'
+license: LicenseRef-Public-Domain
+license_original: Public domain
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://en.wikipedia.org/wiki/Maidenhead_Locator_System
+notes: Niche but common in radio.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 115

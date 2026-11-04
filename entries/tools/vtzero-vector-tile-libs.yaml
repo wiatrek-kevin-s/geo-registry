@@ -1,0 +1,23 @@
+id: vtzero-vector-tile-libs
+kind: tool
+name: vtzero / vector-tile libs
+category: Core libraries & formats
+subcategory: Tile formats
+tool_kind: Library
+summary: Minimalist C++ library for encoding and decoding MVT.
+open_source: 'yes'
+license: BSD-2-Clause
+language: C++
+interfaces:
+- C/C++
+call:
+- c-cpp
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/mapbox/vtzero
+notes: Low-level MVT handling.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 210

@@ -1,0 +1,27 @@
+id: addok
+kind: tool
+name: Addok
+category: Routing, networks, geocoding & LRS
+subcategory: Geocoding engines & libraries
+tool_kind: Server
+summary: Lightweight Redis-backed geocoder used by France's national address API.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- REST
+- Python
+- CLI
+call:
+- python
+- cli
+- rest
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/addok/addok
+notes: Easy local deploy for country address sets
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 824

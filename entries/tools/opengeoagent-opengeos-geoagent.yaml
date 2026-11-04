@@ -1,0 +1,26 @@
+id: opengeoagent-opengeos-geoagent
+kind: tool
+name: OpenGeoAgent (opengeos GeoAgent)
+category: AI, agents & MCP for GIS
+subcategory: QGIS AI & MCP
+tool_kind: Library
+summary: Multimodal agent framework giving geospatial Python packages, map widgets and a QGIS plugin a
+  common LLM tool interface.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+- plugin
+call:
+- python
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/opengeos/GeoAgent
+notes: From Qiusheng Wu
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1503

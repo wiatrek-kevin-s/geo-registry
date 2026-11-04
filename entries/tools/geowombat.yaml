@@ -1,0 +1,23 @@
+id: geowombat
+kind: tool
+name: GeoWombat
+category: Desktop GIS & analysis engines
+subcategory: Python raster & array analysis
+tool_kind: Library
+summary: xarray/Dask utilities for large-scale satellite imagery processing, mosaicking and machine learning.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/jgrss/geowombat
+notes: Imagery-heavy
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 302

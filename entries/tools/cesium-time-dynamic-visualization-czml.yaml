@@ -1,0 +1,21 @@
+id: cesium-time-dynamic-visualization-czml
+kind: tool
+name: Cesium time-dynamic visualization (CZML)
+category: Display & visualization
+subcategory: Time & animation
+tool_kind: Format/Standard
+summary: JSON format for describing time-varying scenes and paths animated in CesiumJS.
+open_source: 'yes'
+license: Apache-2.0
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/AnalyticalGraphicsInc/czml-writer/wiki/CZML-Guide
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1185

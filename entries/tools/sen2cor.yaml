@@ -1,0 +1,26 @@
+id: sen2cor
+kind: tool
+name: Sen2Cor
+category: Imagery, remote sensing & GeoAI
+subcategory: Atmospheric correction
+tool_kind: Toolkit/CLI
+summary: ESA processor turning Sentinel-2 Level-1C top-of-atmosphere data into Level-2A surface reflectance
+  with scene classification.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- CLI
+- plugin
+call:
+- cli
+- plugin
+wrapped_by_columbus: false
+project_status: maintained
+url: https://step.esa.int/main/toolboxes/sen2cor/
+notes: Mostly superseded by ready-made L2A products
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 363

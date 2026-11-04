@@ -1,0 +1,23 @@
+id: sentinelhub-py
+kind: tool
+name: sentinelhub-py
+category: Imagery, remote sensing & GeoAI
+subcategory: Remote sensing processing
+tool_kind: Library
+summary: Python client for Sentinel Hub processing, catalog, batch and statistical APIs.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/sentinel-hub/sentinelhub-py
+notes: Also works against CDSE Sentinel Hub endpoints
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 366

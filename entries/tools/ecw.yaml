@@ -1,0 +1,23 @@
+id: ecw
+kind: tool
+name: ECW
+category: Core libraries & formats
+subcategory: Raster formats
+tool_kind: Format/Standard
+summary: Hexagon wavelet-compressed imagery format read via the ERDAS ECW/JP2 SDK.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- C/C++
+call:
+- c-cpp
+wrapped_by_columbus: false
+project_status: maintained
+url: https://hexagon.com
+notes: Licensed SDK needed for writing.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 145

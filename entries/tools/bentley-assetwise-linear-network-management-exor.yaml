@@ -1,0 +1,23 @@
+id: bentley-assetwise-linear-network-management-exor
+kind: tool
+name: Bentley AssetWise Linear Network Management (Exor)
+category: Routing, networks, geocoding & LRS
+subcategory: Linear referencing (LRS)
+tool_kind: Application
+summary: Enterprise road network and LRS management system (formerly Exor) for highway agencies.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.bentley.com/products/assetwise-linear-network-management/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 867

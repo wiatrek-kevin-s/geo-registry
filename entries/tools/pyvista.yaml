@@ -1,0 +1,26 @@
+id: pyvista
+kind: tool
+name: PyVista
+category: Point clouds, LiDAR & 3D
+subcategory: Point cloud & mesh libraries
+tool_kind: Library
+summary: Pythonic interface to VTK for 3D meshing, plotting and analysis of spatial data.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+- GUI
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://pyvista.org
+notes: Quick 3D plots of DEMs, meshes and point clouds.
+also_categories:
+- Display & visualization
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 575

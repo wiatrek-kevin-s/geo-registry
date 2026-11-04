@@ -1,0 +1,31 @@
+id: qgis
+kind: tool
+name: QGIS
+category: Desktop GIS & analysis engines
+subcategory: Open-source desktop GIS
+tool_kind: Application
+summary: Full-featured cross-platform desktop GIS for viewing, editing, analysing and publishing vector
+  and raster data; 4.x line moved to Qt6.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: C++; Python
+interfaces:
+- GUI
+- Python
+- C/C++
+- plugin
+- CLI
+call:
+- python
+- cli
+- c-cpp
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://qgis.org
+notes: De facto open desktop GIS; PyQGIS and Processing make it scriptable by an agent
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 222

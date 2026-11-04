@@ -1,0 +1,23 @@
+id: carmen
+kind: tool
+name: Carmen
+category: Routing, networks, geocoding & LRS
+subcategory: Geocoding engines & libraries
+tool_kind: Library
+summary: Mapbox's former open-source geocoder built on vector tiles.
+open_source: 'yes'
+license: BSD-2-Clause
+language: JS
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: archived
+url: https://github.com/mapbox/carmen
+notes: License and status unverified
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 829

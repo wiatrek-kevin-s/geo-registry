@@ -1,0 +1,21 @@
+id: cityjson
+kind: tool
+name: CityJSON
+category: Point clouds, LiDAR & 3D
+subcategory: City models
+tool_kind: Format/Standard
+summary: Compact JSON encoding of the CityGML data model, adopted as an OGC community standard.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://www.cityjson.org
+notes: Easier to parse than CityGML.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 620

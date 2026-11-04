@@ -1,0 +1,23 @@
+id: census-data-api-acs
+kind: tool
+name: Census Data API (ACS)
+category: Open data sources
+subcategory: US federal – census
+tool_kind: Service/API
+summary: API for American Community Survey, decennial and other Census tables by geography.
+open_source: 'yes'
+license: LicenseRef-Public-Domain
+license_original: Public domain
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.census.gov/data/developers.html
+notes: Free key; tidycensus/cenpy clients
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1251

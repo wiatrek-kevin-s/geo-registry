@@ -1,0 +1,22 @@
+id: odc-stac
+kind: tool
+name: odc-stac
+category: Imagery, remote sensing & GeoAI
+subcategory: STAC ecosystem
+tool_kind: Library
+summary: Loads STAC items into xarray datasets with reprojection and resampling, without an ODC database.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/opendatacube/odc-stac
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 433

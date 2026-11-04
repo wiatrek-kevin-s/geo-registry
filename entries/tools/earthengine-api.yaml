@@ -1,0 +1,27 @@
+id: earthengine-api
+kind: tool
+name: earthengine-api
+category: Imagery, remote sensing & GeoAI
+subcategory: Cloud EO platforms
+tool_kind: Library
+summary: Official Python and JavaScript client libraries for Google Earth Engine.
+open_source: 'yes'
+license: Apache-2.0
+language: Python;JavaScript
+interfaces:
+- Python
+- JS
+- CLI
+call:
+- python
+- cli
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/google/earthengine-api
+notes: earthengine CLI for task management
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 391

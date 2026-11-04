@@ -1,0 +1,27 @@
+id: fsq-spatial-studio-desktop-workbench-h3-hub
+kind: tool
+name: FSQ Spatial (Studio, Desktop, Workbench, H3 Hub)
+category: Commercial GIS platforms & APIs
+subcategory: Cloud/web GIS & analytics
+tool_kind: Platform
+summary: 'Foursquare''s spatial product family built from the Unfolded acquisition: Studio, Desktop, Workbench
+  and H3 Hub.'
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+- SQL
+- Python
+call:
+- python
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://foursquare.com/resources/blog/news/introducing-the-fsq-spatial-product-family
+notes: Studio is the former Unfolded Studio
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1414

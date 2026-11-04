@@ -1,0 +1,21 @@
+id: lightbox
+kind: data
+name: LightBox
+summary: Commercial US parcel, building and property data.
+publisher: LightBox
+themes:
+- commercial
+- open-data-sources
+coverage:
+  region: United States
+license: LicenseRef-Proprietary
+license_original: Proprietary
+access:
+- type: http
+  url: https://www.lightboxre.com/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1364

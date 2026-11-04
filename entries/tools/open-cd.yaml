@@ -1,0 +1,25 @@
+id: open-cd
+kind: tool
+name: Open-CD
+category: Imagery, remote sensing & GeoAI
+subcategory: Change detection
+tool_kind: Toolkit/CLI
+summary: OpenMMLab-based toolbox of deep learning change detection models and training configs.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+- CLI
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/likyoo/open-cd
+notes: GPU recommended
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 386

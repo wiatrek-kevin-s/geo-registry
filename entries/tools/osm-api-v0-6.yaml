@@ -1,0 +1,23 @@
+id: osm-api-v0-6
+kind: tool
+name: OSM API v0.6
+category: OSM & Overture tooling
+subcategory: Query services
+tool_kind: Service/API
+summary: Official read/write API of openstreetmap.org for map data, changesets, notes and users.
+open_source: 'yes'
+license: GPL-2.0-only
+language: Ruby
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://wiki.openstreetmap.org/wiki/API_v0.6
+notes: Editing API; not for bulk reads
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1206

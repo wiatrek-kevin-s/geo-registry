@@ -1,0 +1,29 @@
+id: supabase-postgis
+kind: tool
+name: Supabase (PostGIS)
+category: Spatial databases & query engines
+subcategory: Managed PostgreSQL
+tool_kind: Platform
+summary: Hosted Postgres platform with PostGIS available and auto-generated REST APIs.
+open_source: partial
+license: Apache-2.0
+language: TypeScript;Go
+interfaces:
+- SQL
+- REST
+- JS
+- Python
+call:
+- python
+- rest
+- js
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://supabase.com
+notes: Easy hosted PostGIS for app prototypes
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 663

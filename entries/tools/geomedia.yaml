@@ -1,0 +1,21 @@
+id: geomedia
+kind: tool
+name: GeoMedia
+category: Commercial GIS platforms & APIs
+subcategory: Hexagon
+tool_kind: Application
+summary: Hexagon's desktop GIS for data management, analysis and map production, strong on Oracle.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://hexagon.com/products/geomedia
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1387

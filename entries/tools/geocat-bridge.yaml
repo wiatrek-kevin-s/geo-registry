@@ -1,0 +1,25 @@
+id: geocat-bridge
+kind: tool
+name: GeoCat Bridge
+category: Servers, standards, tiles & catalogs
+subcategory: Metadata catalogs & data portals
+tool_kind: Extension
+summary: QGIS plugin that publishes layers, styles and metadata to GeoServer, MapServer and GeoNetwork.
+open_source: partial
+license: LicenseRef-Multiple
+license_original: Proprietary (Enterprise); MIT (bridge-style library)
+language: Python
+interfaces:
+- plugin
+- GUI
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://geocat.net/bridge/
+notes: Style conversion library is open
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 940

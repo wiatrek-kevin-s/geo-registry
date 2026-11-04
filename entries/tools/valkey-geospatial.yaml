@@ -1,0 +1,26 @@
+id: valkey-geospatial
+kind: tool
+name: Valkey geospatial
+category: Spatial databases & query engines
+subcategory: NoSQL / search / KV
+tool_kind: Database
+summary: Linux Foundation Redis fork retaining GEO commands for point search.
+open_source: 'yes'
+license: BSD-3-Clause
+language: C
+interfaces:
+- CLI
+- Python
+- JS
+call:
+- python
+- cli
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://valkey.io
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 719

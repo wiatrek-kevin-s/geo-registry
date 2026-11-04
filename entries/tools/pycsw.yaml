@@ -1,0 +1,29 @@
+id: pycsw
+kind: tool
+name: pycsw
+category: Servers, standards, tiles & catalogs
+subcategory: Metadata catalogs & data portals
+tool_kind: Server
+summary: Python metadata catalog server implementing CSW 2/3 and OGC API Records.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- OGC
+- REST
+- Python
+- CLI
+call:
+- python
+- cli
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://pycsw.org
+notes: Embeddable; also used by CKAN and GeoNode
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 933

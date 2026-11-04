@@ -1,0 +1,22 @@
+id: stackstac
+kind: tool
+name: stackstac
+category: Imagery, remote sensing & GeoAI
+subcategory: STAC ecosystem
+tool_kind: Library
+summary: Turns STAC items into lazy Dask-backed xarray DataArrays.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/gjoseph92/stackstac
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 434

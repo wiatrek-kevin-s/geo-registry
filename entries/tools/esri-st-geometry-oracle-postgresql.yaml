@@ -1,0 +1,24 @@
+id: esri-st-geometry-oracle-postgresql
+kind: tool
+name: Esri ST_Geometry (Oracle/PostgreSQL)
+category: Spatial databases & query engines
+subcategory: Esri enterprise
+tool_kind: Extension
+summary: Esri spatial type and SQL functions installed in Oracle and PostgreSQL enterprise geodatabases.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: maintained
+url: https://pro.arcgis.com/en/pro-app/latest/help/data/geodatabases/overview/the-esri-st-geometry-spatial-data-type.htm
+notes: Covers Oracle ST_Geometry
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 712

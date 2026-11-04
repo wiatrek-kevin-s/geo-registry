@@ -1,0 +1,23 @@
+id: aws-location-mcp-server
+kind: tool
+name: AWS Location MCP Server
+category: AI, agents & MCP for GIS
+subcategory: Vendor/location MCP servers
+tool_kind: Server
+summary: AWS Labs MCP server for Amazon Location geocoding, place search and routing.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- MCP
+call:
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://awslabs.github.io/mcp/servers/aws-location-mcp-server
+notes: Licence inferred from awslabs/mcp repo
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1523

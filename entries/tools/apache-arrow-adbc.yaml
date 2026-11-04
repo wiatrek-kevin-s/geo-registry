@@ -1,0 +1,32 @@
+id: apache-arrow-adbc
+kind: tool
+name: Apache Arrow ADBC
+category: Spatial databases & query engines
+subcategory: Drivers & connectors
+tool_kind: Library
+summary: Arrow-native database connectivity API with drivers for PostgreSQL, SQLite, Snowflake, BigQuery
+  and more.
+open_source: 'yes'
+license: Apache-2.0
+language: C++;Go;Rust;Python
+interfaces:
+- Python
+- R
+- Java
+- C/C++
+- Rust
+call:
+- python
+- r
+- c-cpp
+- rust
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://arrow.apache.org/adbc/
+notes: Columnar transfer of WKB/GeoArrow
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 732

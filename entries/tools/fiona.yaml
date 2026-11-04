@@ -1,0 +1,25 @@
+id: fiona
+kind: tool
+name: Fiona
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Pythonic vector IO built on GDAL/OGR for reading and writing features.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python/Cython
+interfaces:
+- Python
+- CLI
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/Toblerity/Fiona
+notes: Largely superseded by pyogrio in GeoPandas.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 52

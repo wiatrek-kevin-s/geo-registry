@@ -1,0 +1,25 @@
+id: libgeotiff
+kind: tool
+name: libgeotiff
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Library and tools (listgeo, geotifcp) for reading and writing GeoTIFF georeferencing tags.
+open_source: 'yes'
+license: MIT
+language: C
+interfaces:
+- C/C++
+- CLI
+call:
+- cli
+- c-cpp
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/OSGeo/libgeotiff
+notes: Used by GDAL and PDAL.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 66

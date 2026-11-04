@@ -1,0 +1,22 @@
+id: city-of-austin-open-data
+kind: data
+name: City of Austin Open Data
+summary: Austin datasets on permits, zoning, 311, transportation and boundaries.
+publisher: City of Austin
+themes:
+- texas
+- open-data-sources
+coverage:
+  region: Texas
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://data.austintexas.gov/
+  auth: none
+notes: Socrata SODA API
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1349

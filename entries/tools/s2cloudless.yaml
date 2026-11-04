@@ -1,0 +1,23 @@
+id: s2cloudless
+kind: tool
+name: s2cloudless
+category: Imagery, remote sensing & GeoAI
+subcategory: Cloud & atmospheric masking
+tool_kind: Library
+summary: Machine-learning cloud detector for Sentinel-2 imagery producing cloud probability masks.
+open_source: 'yes'
+license: CC-BY-SA-4.0
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/sentinel-hub/sentinel2-cloud-detector
+notes: Lightweight model runnable on CPU
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 367

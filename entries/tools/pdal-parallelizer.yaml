@@ -1,0 +1,25 @@
+id: pdal-parallelizer
+kind: tool
+name: pdal-parallelizer
+category: Point clouds, LiDAR & 3D
+subcategory: Core processing
+tool_kind: Toolkit/CLI
+summary: Splits PDAL pipelines across tiles and runs them in parallel with Dask.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python
+interfaces:
+- CLI
+- Python
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/meldig/pdal-parallelizer
+notes: Scales PDAL jobs on a multicore desktop.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 530

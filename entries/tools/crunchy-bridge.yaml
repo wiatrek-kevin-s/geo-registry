@@ -1,0 +1,25 @@
+id: crunchy-bridge
+kind: tool
+name: Crunchy Bridge
+category: Spatial databases & query engines
+subcategory: Managed PostgreSQL
+tool_kind: Service/API
+summary: Managed PostgreSQL from Crunchy Data with PostGIS and the Crunchy spatial tooling.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- SQL
+- REST
+call:
+- rest
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://www.crunchydata.com/products/crunchy-bridge
+notes: PostGIS-focused vendor
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 662

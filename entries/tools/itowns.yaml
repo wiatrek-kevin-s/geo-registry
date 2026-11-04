@@ -1,0 +1,26 @@
+id: itowns
+kind: tool
+name: iTowns
+category: Point clouds, LiDAR & 3D
+subcategory: Web viewers & engines
+tool_kind: Library
+summary: Three.js-based JavaScript framework from IGN for 3D geospatial visualization of terrain, point
+  clouds and 3D Tiles.
+open_source: 'yes'
+license: CECILL-B OR MIT
+language: JavaScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://www.itowns-project.org
+notes: Reads COPC, Potree and 3D Tiles.
+also_categories:
+- Display & visualization
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 605

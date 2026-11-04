@@ -1,0 +1,25 @@
+id: marble
+kind: tool
+name: Marble
+category: Desktop GIS & analysis engines
+subcategory: Open-source desktop GIS
+tool_kind: Application
+summary: KDE virtual globe and atlas application with offline maps, routing and a reusable map widget
+  library.
+open_source: 'yes'
+license: LGPL-2.1-or-later
+language: C++
+interfaces:
+- GUI
+- C/C++
+call:
+- c-cpp
+wrapped_by_columbus: false
+project_status: maintained
+url: https://marble.kde.org
+notes: More viewer than analysis engine
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 236

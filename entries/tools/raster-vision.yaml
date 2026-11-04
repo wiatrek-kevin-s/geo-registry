@@ -1,0 +1,24 @@
+id: raster-vision
+kind: tool
+name: Raster Vision
+category: Imagery, remote sensing & GeoAI
+subcategory: GeoAI / deep learning
+tool_kind: Toolkit/CLI
+summary: 'Framework for deep learning on satellite and aerial imagery: chip, train, predict and evaluate.'
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+- CLI
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/azavea/raster-vision
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 443

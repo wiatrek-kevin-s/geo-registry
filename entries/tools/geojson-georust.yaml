@@ -1,0 +1,23 @@
+id: geojson-georust
+kind: tool
+name: geojson (GeoRust)
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Rust crate for parsing and serialising GeoJSON.
+open_source: 'yes'
+license: MIT OR Apache-2.0
+language: Rust
+interfaces:
+- Rust
+call:
+- rust
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/georust/geojson
+notes: Basic Rust GeoJSON IO.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 57

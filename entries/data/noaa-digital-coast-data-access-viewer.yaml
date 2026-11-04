@@ -1,0 +1,22 @@
+id: noaa-digital-coast-data-access-viewer
+kind: data
+name: NOAA Digital Coast Data Access Viewer
+summary: NOAA portal for coastal lidar, imagery and land cover with custom download requests.
+publisher: National Oceanic and Atmospheric Administration
+themes:
+- lidar-data-sources
+- point-clouds-lidar-3d
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://coast.noaa.gov/dataviewer/
+  auth: none
+notes: Coastal and topobathy lidar.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 638

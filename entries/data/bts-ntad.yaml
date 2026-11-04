@@ -1,0 +1,21 @@
+id: bts-ntad
+kind: data
+name: BTS NTAD
+summary: National Transportation Atlas Database of roads, rail, ports, airports and transit.
+publisher: Bureau of Transportation Statistics
+themes:
+- us-federal-transportation
+- open-data-sources
+coverage:
+  region: United States
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.bts.gov/ntad
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1286

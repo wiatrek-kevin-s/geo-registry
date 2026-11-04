@@ -1,0 +1,26 @@
+id: terrascan-terrasolid
+kind: tool
+name: TerraScan (Terrasolid)
+category: Point clouds, LiDAR & 3D
+subcategory: Lidar processing suites
+tool_kind: Application
+summary: Production software for classifying, editing and extracting features from airborne and mobile
+  lidar.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+- plugin
+call:
+- plugin
+wrapped_by_columbus: false
+project_status: active
+url: https://terrasolid.com/products/terrascan/
+notes: Industry standard for lidar production; Terrasolid now part of Trimble.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 561

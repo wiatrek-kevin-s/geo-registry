@@ -1,0 +1,25 @@
+id: esri-sde-connection-file
+kind: tool
+name: Esri .sde connection file
+category: Connections & storage
+subcategory: Esri connections & auth
+tool_kind: Format/Standard
+summary: Binary file storing an ArcGIS database/enterprise-geodatabase connection (DBMS, instance, auth,
+  version).
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- Python
+- GUI
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/create-database-connection.htm
+notes: Opaque format; read via ArcPy Describe, or ask user for connection details
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1430

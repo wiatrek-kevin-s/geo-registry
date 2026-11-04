@@ -1,0 +1,28 @@
+id: heavydb-heavy-ai-ex-omniscidb-mapd
+kind: tool
+name: HeavyDB (HEAVY.AI, ex OmniSciDB/MapD)
+category: Spatial databases & query engines
+subcategory: Commercial RDBMS
+tool_kind: Database
+summary: GPU-accelerated columnar SQL database with geospatial types and functions; open core with commercial
+  Immerse UI.
+open_source: partial
+license: Apache-2.0
+language: C++;CUDA
+interfaces:
+- SQL
+- Python
+- REST
+call:
+- python
+- rest
+- sql
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/heavyai/heavydb
+notes: HEAVY.AI acquired by NVIDIA in 2025
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 706

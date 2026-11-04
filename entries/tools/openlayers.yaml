@@ -1,0 +1,26 @@
+id: openlayers
+kind: tool
+name: OpenLayers
+category: Display & visualization
+subcategory: Web map libraries
+tool_kind: Library
+summary: Full-featured browser mapping library with strong support for projections, OGC services and vector/raster
+  layers.
+open_source: 'yes'
+license: BSD-2-Clause
+language: JavaScript
+interfaces:
+- JS
+- OGC
+call:
+- js
+- ogc
+wrapped_by_columbus: false
+project_status: active
+url: https://openlayers.org/
+notes: Handles arbitrary CRS and WMS/WMTS/WFS well
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1016

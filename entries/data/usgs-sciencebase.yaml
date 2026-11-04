@@ -1,0 +1,21 @@
+id: usgs-sciencebase
+kind: data
+name: USGS ScienceBase
+summary: USGS data catalog and repository holding many science datasets.
+publisher: U.S. Geological Survey
+themes:
+- us-federal-imagery
+- open-data-sources
+coverage:
+  region: Unspecified
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://www.sciencebase.gov/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1243

@@ -1,0 +1,32 @@
+id: adbc-arrow-database-connectivity
+kind: tool
+name: ADBC (Arrow Database Connectivity)
+category: Connections & storage
+subcategory: Database drivers
+tool_kind: Library
+summary: Arrow-native database API and drivers (PostgreSQL, SQLite, Snowflake, Flight SQL) returning columnar
+  results.
+open_source: 'yes'
+license: Apache-2.0
+language: C++; Go; Python
+interfaces:
+- Python
+- C/C++
+- R
+- Rust
+- SQL
+call:
+- python
+- r
+- sql
+- c-cpp
+- rust
+wrapped_by_columbus: false
+project_status: active
+url: https://arrow.apache.org/adbc/
+notes: Fast bulk reads into GeoArrow pipelines
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1428

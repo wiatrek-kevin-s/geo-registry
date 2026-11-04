@@ -1,0 +1,23 @@
+id: spectral-python-spy
+kind: tool
+name: Spectral Python (SPy)
+category: Imagery, remote sensing & GeoAI
+subcategory: Hyperspectral
+tool_kind: Library
+summary: Python module for reading, displaying and classifying hyperspectral image data.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/spectralpython/spectral
+notes: Reads ENVI headers
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 379

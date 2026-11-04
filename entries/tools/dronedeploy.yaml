@@ -1,0 +1,23 @@
+id: dronedeploy
+kind: tool
+name: DroneDeploy
+category: Imagery, remote sensing & GeoAI
+subcategory: Photogrammetry & drone
+tool_kind: Platform
+summary: Cloud drone mapping platform for flight planning and processing.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- REST
+- GUI
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://www.dronedeploy.com
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 519

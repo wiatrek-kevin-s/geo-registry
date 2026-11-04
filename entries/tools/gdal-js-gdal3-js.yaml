@@ -1,0 +1,23 @@
+id: gdal-js-gdal3-js
+kind: tool
+name: GDAL JS (gdal3.js)
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: WebAssembly build of GDAL for format conversion in browsers and Node.
+open_source: 'yes'
+license: LGPL-2.1
+language: C++/JavaScript (WASM)
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/bugra9/gdal3.js
+notes: GDAL in a webview without native install.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 93

@@ -1,0 +1,21 @@
+id: fgdc-csdgm
+kind: tool
+name: FGDC CSDGM
+category: Servers, standards, tiles & catalogs
+subcategory: Tile, style & catalog specs
+tool_kind: Format/Standard
+summary: US federal content standard for digital geospatial metadata, largely superseded by ISO 19115.
+open_source: 'yes'
+license: LicenseRef-Public-Domain
+license_original: Public domain
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: archived
+url: https://www.fgdc.gov/metadata/csdgm-standard
+notes: Still found in US agency data
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1014

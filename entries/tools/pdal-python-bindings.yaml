@@ -1,0 +1,23 @@
+id: pdal-python-bindings
+kind: tool
+name: PDAL Python bindings
+category: Point clouds, LiDAR & 3D
+subcategory: Core processing
+tool_kind: Library
+summary: Python package that runs PDAL pipelines and returns point arrays as NumPy structured arrays.
+open_source: 'yes'
+license: BSD-3-Clause
+language: Python;C++
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/PDAL/python
+notes: Lets an agent drive PDAL in-process from Python.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 528

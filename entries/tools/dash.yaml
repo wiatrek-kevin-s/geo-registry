@@ -1,0 +1,22 @@
+id: dash
+kind: tool
+name: Dash
+category: Display & visualization
+subcategory: Python notebook & app mapping
+tool_kind: Platform
+summary: Framework for building analytic web apps in Python with Plotly charts and maps.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://dash.plotly.com/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1091

@@ -1,0 +1,21 @@
+id: projjson
+kind: tool
+name: PROJJSON
+category: Core libraries & formats
+subcategory: Projection & CRS
+tool_kind: Format/Standard
+summary: JSON encoding of CRS definitions mirroring WKT2, used by GeoParquet and PROJ.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open specification
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://proj.org/specifications/projjson.html
+notes: Machine-friendly CRS metadata.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 45

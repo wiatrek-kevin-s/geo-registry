@@ -1,0 +1,25 @@
+id: python-fmask
+kind: tool
+name: python-fmask
+category: Imagery, remote sensing & GeoAI
+subcategory: Cloud & atmospheric masking
+tool_kind: Library
+summary: Python implementation of the Fmask cloud masking algorithm for Landsat and Sentinel-2.
+open_source: 'yes'
+license: GPL-3.0-or-later
+language: Python
+interfaces:
+- Python
+- CLI
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/ubarsc/python-fmask
+notes: Pure-Python alternative to MATLAB Fmask
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 369

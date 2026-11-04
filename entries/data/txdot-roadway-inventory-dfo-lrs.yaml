@@ -1,0 +1,23 @@
+id: txdot-roadway-inventory-dfo-lrs
+kind: data
+name: TxDOT Roadway Inventory / DFO LRS
+summary: TxDOT's published route network with distance-from-origin measures used to locate roadway attributes
+  and crashes.
+publisher: Texas Department of Transportation
+themes:
+- linear-referencing-lrs
+- routing-networks-geocoding-lrs
+coverage:
+  region: Texas
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://gis-txdot.opendata.arcgis.com/
+  auth: none
+notes: Texas DOT open data; URL is open data hub
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 877

@@ -1,0 +1,35 @@
+id: h3
+kind: tool
+name: H3
+category: Core libraries & formats
+subcategory: Discrete global grids & geocodes
+tool_kind: Library
+summary: Hexagonal hierarchical global grid system from Uber for indexing and aggregating locations.
+open_source: 'yes'
+license: Apache-2.0
+language: C (bindings in Python, JS, Java, Go, R, others)
+interfaces:
+- C/C++
+- Python
+- JS
+- Java
+- R
+- SQL
+- CLI
+call:
+- python
+- cli
+- js
+- r
+- sql
+- c-cpp
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://h3geo.org
+notes: Widely used for binning; DuckDB/PostGIS extensions.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 103

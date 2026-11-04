@@ -1,0 +1,28 @@
+id: openeo
+kind: tool
+name: openEO
+category: Imagery, remote sensing & GeoAI
+subcategory: Cloud EO platforms
+tool_kind: Format/Standard
+summary: Open API standard for describing and running EO processing workflows on compatible cloud back-ends.
+open_source: 'yes'
+license: Apache-2.0
+interfaces:
+- REST
+- Python
+- R
+- JS
+call:
+- python
+- rest
+- js
+- r
+wrapped_by_columbus: false
+project_status: active
+url: https://openeo.org
+notes: One client for many back-ends
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 402

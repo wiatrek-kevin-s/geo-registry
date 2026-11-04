@@ -1,0 +1,26 @@
+id: isatis-neo
+kind: tool
+name: Isatis.neo
+category: Desktop GIS & analysis engines
+subcategory: Geostatistics & interpolation
+tool_kind: Application
+summary: Geovariances' commercial geostatistics package for variography, kriging, simulation and resource
+  estimation.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- GUI
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://www.geovariances.com
+notes: Mining/environmental geostats
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 325

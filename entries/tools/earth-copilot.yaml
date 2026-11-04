@@ -1,0 +1,22 @@
+id: earth-copilot
+kind: tool
+name: Earth Copilot
+category: AI, agents & MCP for GIS
+subcategory: LLM GIS agents & research
+tool_kind: Application
+summary: NASA/Microsoft agentic proof of concept answering questions over NASA Earth science data.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: unknown
+url: https://blogs.microsoft.com/blog/2024/11/14/from-questions-to-discoveries-nasas-new-earth-copilot-brings-microsoft-ai-capabilities-to-democratize-access-to-complex-data/
+notes: Source availability not confirmed
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1560

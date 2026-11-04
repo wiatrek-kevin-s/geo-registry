@@ -1,0 +1,22 @@
+id: stac-fastapi-pgstac
+kind: tool
+name: stac-fastapi-pgstac
+category: Imagery, remote sensing & GeoAI
+subcategory: STAC ecosystem
+tool_kind: Server
+summary: stac-fastapi backend using PostgreSQL/PostGIS via pgstac.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/stac-utils/stac-fastapi-pgstac
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 424

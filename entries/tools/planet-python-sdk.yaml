@@ -1,0 +1,24 @@
+id: planet-python-sdk
+kind: tool
+name: planet (Python SDK)
+category: Imagery, remote sensing & GeoAI
+subcategory: Commercial imagery providers
+tool_kind: Library
+summary: Official Python client and CLI for Planet APIs.
+open_source: 'yes'
+license: Apache-2.0
+language: Python
+interfaces:
+- Python
+- CLI
+call:
+- python
+- cli
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/planetlabs/planet-client-python
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 479

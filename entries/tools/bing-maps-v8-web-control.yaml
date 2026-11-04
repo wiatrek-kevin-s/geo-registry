@@ -1,0 +1,26 @@
+id: bing-maps-v8-web-control
+kind: tool
+name: Bing Maps V8 Web Control
+category: Display & visualization
+subcategory: Web map libraries
+tool_kind: Service/API
+summary: Microsoft's legacy web map control and APIs, being retired in favour of Azure Maps.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: JavaScript
+interfaces:
+- JS
+- REST
+call:
+- rest
+- js
+wrapped_by_columbus: false
+project_status: archived
+url: https://www.microsoft.com/en-us/maps/bing-maps/discontinued-services
+notes: Free accounts ended 2025; enterprise retirement scheduled for 2028
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1028

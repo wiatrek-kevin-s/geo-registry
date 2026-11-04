@@ -1,0 +1,22 @@
+id: maplibre-tile-mlt
+kind: tool
+name: MapLibre Tile (MLT)
+category: Core libraries & formats
+subcategory: Tile formats
+tool_kind: Format/Standard
+summary: New columnar vector tile format from MapLibre designed to succeed MVT with better compression.
+open_source: 'yes'
+license: Apache-2.0 OR MIT
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/maplibre/maplibre-tile-spec
+notes: Emerging; check renderer support.
+also_categories:
+- Servers, standards, tiles & catalogs
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 200

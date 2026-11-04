@@ -1,0 +1,27 @@
+id: open3d
+kind: tool
+name: Open3D
+category: Point clouds, LiDAR & 3D
+subcategory: Point cloud & mesh libraries
+tool_kind: Library
+summary: Library for 3D data processing including point cloud registration, reconstruction, meshing and
+  visualization.
+open_source: 'yes'
+license: MIT
+language: C++;Python
+interfaces:
+- Python
+- C/C++
+- GUI
+call:
+- python
+- c-cpp
+wrapped_by_columbus: false
+project_status: active
+url: https://www.open3d.org
+notes: pip-installable; strong for registration and normals.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 571

@@ -1,0 +1,26 @@
+id: osmosis
+kind: tool
+name: Osmosis
+category: OSM & Overture tooling
+subcategory: PBF processing
+tool_kind: Toolkit/CLI
+summary: Java command-line pipeline tool for reading, filtering, writing and replicating OSM data.
+open_source: 'yes'
+license: LicenseRef-Public-Domain
+license_original: Public domain
+language: Java
+interfaces:
+- CLI
+- Java
+call:
+- cli
+- java
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/openstreetmap/osmosis
+notes: Light-maintenance mode since 2018; JVM dependency
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1189

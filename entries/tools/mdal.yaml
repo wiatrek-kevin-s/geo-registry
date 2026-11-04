@@ -1,0 +1,23 @@
+id: mdal
+kind: tool
+name: MDAL
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Mesh data abstraction library reading 2D/3D unstructured meshes (UGRID, 2DM, SELAFIN, etc.).
+open_source: 'yes'
+license: MIT
+language: C++
+interfaces:
+- C/C++
+call:
+- c-cpp
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/lutraconsulting/MDAL
+notes: Mesh support in QGIS.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 68

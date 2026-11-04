@@ -1,0 +1,26 @@
+id: martin
+kind: tool
+name: Martin
+category: Servers, standards, tiles & catalogs
+subcategory: Tile servers
+tool_kind: Server
+summary: Fast vector tile server serving tiles from PostGIS, PMTiles and MBTiles, plus sprites, fonts
+  and styles.
+open_source: 'yes'
+license: Apache-2.0 OR MIT
+language: Rust
+interfaces:
+- CLI
+- REST
+call:
+- cli
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/maplibre/martin
+notes: Single binary; ideal local tile backend; includes martin-cp for tile packing
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 909

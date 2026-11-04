@@ -1,0 +1,23 @@
+id: regrid
+kind: data
+name: Regrid
+summary: Nationwide US parcel data with standardized schema and API.
+publisher: Regrid
+themes:
+- commercial
+- open-data-sources
+- commercial-gis-platforms-apis
+coverage:
+  region: United States
+license: LicenseRef-Proprietary
+license_original: Proprietary
+access:
+- type: http
+  url: https://regrid.com/
+  auth: none
+notes: Paid; nationwide parcels
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1358

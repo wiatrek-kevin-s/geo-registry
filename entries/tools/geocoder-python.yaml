@@ -1,0 +1,23 @@
+id: geocoder-python
+kind: tool
+name: geocoder (Python)
+category: Routing, networks, geocoding & LRS
+subcategory: Geocoding engines & libraries
+tool_kind: Library
+summary: Simple Python client for many geocoding providers.
+open_source: 'yes'
+license: MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: archived
+url: https://github.com/DenisCarriere/geocoder
+notes: No release since 2018
+status: retired
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 826

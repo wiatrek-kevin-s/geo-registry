@@ -1,0 +1,26 @@
+id: planetiler
+kind: tool
+name: Planetiler
+category: Servers, standards, tiles & catalogs
+subcategory: Tile generation & packaging
+tool_kind: Toolkit/CLI
+summary: Builds vector tile archives (MBTiles/PMTiles) from OpenStreetMap and other sources very quickly
+  on one machine.
+open_source: 'yes'
+license: Apache-2.0
+language: Java
+interfaces:
+- CLI
+- Java
+call:
+- cli
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/onthegomap/planetiler
+notes: Planet-scale basemap build in hours; JVM
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 922

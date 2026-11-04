@@ -1,0 +1,24 @@
+id: tileserver-php
+kind: tool
+name: TileServer PHP
+category: Servers, standards, tiles & catalogs
+subcategory: Tile servers
+tool_kind: Server
+summary: PHP script that serves MBTiles and tile directories as XYZ, TMS and WMTS.
+open_source: 'yes'
+license: BSD-2-Clause
+language: PHP
+interfaces:
+- REST
+- OGC
+call:
+- rest
+- ogc
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/maptiler/tileserver-php
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 915

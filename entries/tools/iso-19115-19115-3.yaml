@@ -1,0 +1,22 @@
+id: iso-19115-19115-3
+kind: tool
+name: ISO 19115 / 19115-3
+category: Servers, standards, tiles & catalogs
+subcategory: Tile, style & catalog specs
+tool_kind: Format/Standard
+summary: International metadata model describing geographic datasets and services; 19115-3 provides the
+  current XML encoding.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary (ISO)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.iso.org/standard/53798.html
+notes: Paid standard document
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1008

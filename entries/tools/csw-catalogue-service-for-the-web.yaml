@@ -1,0 +1,23 @@
+id: csw-catalogue-service-for-the-web
+kind: tool
+name: CSW (Catalogue Service for the Web)
+category: Servers, standards, tiles & catalogs
+subcategory: OGC web service standards
+tool_kind: Format/Standard
+summary: Searches and retrieves metadata records about datasets and services.
+open_source: 'yes'
+license: LicenseRef-OGC-Document
+license_original: OGC document licence
+interfaces:
+- OGC
+call:
+- ogc
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.ogc.org/standards/cat
+notes: Superseded by OGC API – Records
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 975

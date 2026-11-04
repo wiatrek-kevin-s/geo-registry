@@ -1,0 +1,26 @@
+id: oda-drawings-sdk-teigha
+kind: tool
+name: ODA Drawings SDK (Teigha)
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Commercial SDK from Open Design Alliance for reading and writing DWG/DGN files.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- C/C++
+- .NET
+call:
+- c-cpp
+- dotnet
+wrapped_by_columbus: false
+project_status: active
+url: https://www.opendesign.com
+notes: Used by GDAL DWG/DGNv8 drivers; paid membership.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 83

@@ -1,0 +1,26 @@
+id: esri-projection-engine-arcobjects-sdk
+kind: tool
+name: Esri Projection Engine / ArcObjects SDK
+category: Core libraries & formats
+subcategory: Data access & IO
+tool_kind: Library
+summary: Esri's proprietary projection and geometry engines embedded in ArcGIS SDKs.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: C++
+interfaces:
+- C/C++
+- .NET
+call:
+- c-cpp
+- dotnet
+wrapped_by_columbus: false
+project_status: active
+url: https://developers.arcgis.com
+notes: Commercial; reference for Esri-specific CRSs.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 94

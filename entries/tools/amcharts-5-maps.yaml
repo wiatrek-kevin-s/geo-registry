@@ -1,0 +1,23 @@
+id: amcharts-5-maps
+kind: tool
+name: amCharts 5 Maps
+category: Display & visualization
+subcategory: Charting & dataviz libraries with maps
+tool_kind: Library
+summary: Commercial JavaScript map charts with projections, choropleths and animations.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: TypeScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://www.amcharts.com/javascript-maps/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1124

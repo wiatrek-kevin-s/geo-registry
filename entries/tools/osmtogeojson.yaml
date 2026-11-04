@@ -1,0 +1,25 @@
+id: osmtogeojson
+kind: tool
+name: osmtogeojson
+category: OSM & Overture tooling
+subcategory: Cloud-native / analytics
+tool_kind: Library
+summary: Converts OSM XML or Overpass JSON into GeoJSON with multipolygon handling.
+open_source: 'yes'
+license: MIT
+language: JavaScript
+interfaces:
+- JS
+- CLI
+call:
+- cli
+- js
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/tyrasd/osmtogeojson
+notes: Turns Overpass results into GeoJSON
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1195

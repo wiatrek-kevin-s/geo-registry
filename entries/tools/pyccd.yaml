@@ -1,0 +1,24 @@
+id: pyccd
+kind: tool
+name: pyCCD
+category: Imagery, remote sensing & GeoAI
+subcategory: Change detection
+tool_kind: Library
+summary: Python implementation of the Continuous Change Detection and Classification (CCDC) algorithm
+  for time series.
+open_source: 'yes'
+license: Unlicense
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: low-activity
+url: https://github.com/repository-preservation/lcmap-pyccd
+notes: Pixel time-series change
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 383

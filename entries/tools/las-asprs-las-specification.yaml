@@ -1,0 +1,22 @@
+id: las-asprs-las-specification
+kind: tool
+name: LAS (ASPRS LAS specification)
+category: Point clouds, LiDAR & 3D
+subcategory: Formats
+tool_kind: Format/Standard
+summary: Binary exchange format for airborne and terrestrial lidar points with classification and return
+  attributes.
+open_source: 'yes'
+license: NOASSERTION
+license_original: n/a
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: maintained
+url: https://www.asprs.org/divisions-committees/lidar-division/laser-las-file-format-exchange-activities
+notes: Baseline format every tool must read.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 538

@@ -1,0 +1,25 @@
+id: mapbox-gl-js
+kind: tool
+name: Mapbox GL JS
+category: Display & visualization
+subcategory: Web map libraries
+tool_kind: Library
+summary: Mapbox's WebGL map renderer; source-available but proprietary licence and Mapbox account required
+  since v2.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: TypeScript
+interfaces:
+- JS
+call:
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://docs.mapbox.com/mapbox-gl-js/
+notes: Licence ties use to Mapbox services; MapLibre is the open fork
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1018

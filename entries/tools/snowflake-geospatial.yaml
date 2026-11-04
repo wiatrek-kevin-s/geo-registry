@@ -1,0 +1,26 @@
+id: snowflake-geospatial
+kind: tool
+name: Snowflake geospatial
+category: Spatial databases & query engines
+subcategory: Cloud warehouses
+tool_kind: Service/API
+summary: GEOGRAPHY and GEOMETRY types with ST_ and H3 functions in Snowflake.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- SQL
+- Python
+- REST
+call:
+- python
+- rest
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://docs.snowflake.com/en/sql-reference/data-types-geospatial
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 692

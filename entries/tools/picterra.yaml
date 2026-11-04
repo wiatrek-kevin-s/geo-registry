@@ -1,0 +1,23 @@
+id: picterra
+kind: tool
+name: Picterra
+category: Imagery, remote sensing & GeoAI
+subcategory: Labeling & training data
+tool_kind: Platform
+summary: Cloud platform for training custom object detectors on aerial and satellite imagery without code.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+- REST
+call:
+- rest
+wrapped_by_columbus: false
+project_status: active
+url: https://picterra.ch
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 527

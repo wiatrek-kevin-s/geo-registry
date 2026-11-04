@@ -1,0 +1,24 @@
+id: shiny
+kind: tool
+name: Shiny
+category: Display & visualization
+subcategory: R mapping
+tool_kind: Platform
+summary: Framework for interactive web apps in R, also available for Python (MIT).
+open_source: 'yes'
+license: GPL-3.0
+language: R
+interfaces:
+- R
+- Python
+call:
+- python
+- r
+wrapped_by_columbus: false
+project_status: active
+url: https://shiny.posit.co/
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1114

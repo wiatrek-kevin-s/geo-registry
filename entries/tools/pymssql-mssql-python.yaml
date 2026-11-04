@@ -1,0 +1,23 @@
+id: pymssql-mssql-python
+kind: tool
+name: pymssql / mssql-python
+category: Spatial databases & query engines
+subcategory: Drivers & connectors
+tool_kind: Library
+summary: Python drivers for SQL Server; Microsoft's mssql-python is the newer official one.
+open_source: 'yes'
+license: LicenseRef-Multiple
+license_original: LGPL-2.1 / MIT
+language: Python
+interfaces:
+- Python
+call:
+- python
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/microsoft/mssql-python
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 738

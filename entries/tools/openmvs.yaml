@@ -1,0 +1,26 @@
+id: openmvs
+kind: tool
+name: OpenMVS
+category: Imagery, remote sensing & GeoAI
+subcategory: Photogrammetry & drone
+tool_kind: Library
+summary: Multi-view stereo reconstruction for dense point clouds and textured meshes.
+open_source: 'yes'
+license: AGPL-3.0
+language: C++
+interfaces:
+- CLI
+- C/C++
+call:
+- cli
+- c-cpp
+wrapped_by_columbus: false
+project_status: maintained
+url: https://github.com/cdcseacave/openMVS
+also_categories:
+- Point clouds, LiDAR & 3D
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 516

@@ -1,0 +1,27 @@
+id: s2-geometry
+kind: tool
+name: S2 Geometry
+category: Core libraries & formats
+subcategory: Geometry & topology engines
+tool_kind: Library
+summary: Spherical geometry library with a hierarchical cell decomposition for indexing and region covering.
+open_source: 'yes'
+license: Apache-2.0
+language: C++ (Go, Java, Python ports)
+interfaces:
+- C/C++
+- Java
+- Python
+call:
+- python
+- c-cpp
+- java
+wrapped_by_columbus: false
+project_status: active
+url: https://s2geometry.io
+notes: Used by BigQuery GEOGRAPHY.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 19

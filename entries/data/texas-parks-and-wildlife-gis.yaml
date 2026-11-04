@@ -1,0 +1,21 @@
+id: texas-parks-and-wildlife-gis
+kind: data
+name: Texas Parks and Wildlife GIS
+summary: State parks, wildlife management areas, ecoregions and vegetation data.
+publisher: Texas Parks and Wildlife Department
+themes:
+- texas
+- open-data-sources
+coverage:
+  region: Texas
+license: LicenseRef-Public-Domain
+license_original: Public domain
+access:
+- type: http
+  url: https://tpwd.texas.gov/gis/
+  auth: none
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1344

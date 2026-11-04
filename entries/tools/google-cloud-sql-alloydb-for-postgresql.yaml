@@ -1,0 +1,25 @@
+id: google-cloud-sql-alloydb-for-postgresql
+kind: tool
+name: Google Cloud SQL / AlloyDB for PostgreSQL
+category: Spatial databases & query engines
+subcategory: Managed PostgreSQL
+tool_kind: Service/API
+summary: Google managed PostgreSQL services that support PostGIS.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- SQL
+- REST
+call:
+- rest
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://cloud.google.com/alloydb
+notes: Standard PostGIS client access
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 661

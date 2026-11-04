@@ -1,0 +1,24 @@
+id: overture-maps-transportation-schema
+kind: tool
+name: Overture Maps Transportation schema
+category: Routing, networks, geocoding & LRS
+subcategory: Network & traffic referencing standards
+tool_kind: Format/Standard
+summary: Overture schema for segments and connectors with linear-referenced attributes and GERS IDs over
+  global roads.
+open_source: 'yes'
+license: NOASSERTION
+license_original: Unknown
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://docs.overturemaps.org/guides/transportation/
+notes: Data under ODbL; uses linear referencing on segments
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 885

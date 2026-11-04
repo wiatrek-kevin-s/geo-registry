@@ -1,0 +1,23 @@
+id: 3d-tiles
+kind: tool
+name: 3D Tiles
+category: Core libraries & formats
+subcategory: Point cloud & 3D formats
+tool_kind: Format/Standard
+summary: OGC standard for streaming massive 3D content such as buildings, meshes and point clouds.
+open_source: 'yes'
+license: LicenseRef-Open-Specification
+license_original: Open standard (OGC)
+interfaces: []
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://www.ogc.org/standards/3dtiles
+notes: Cesium-driven 3D streaming.
+also_categories:
+- Point clouds, LiDAR & 3D
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 195

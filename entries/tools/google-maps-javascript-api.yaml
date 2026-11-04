@@ -1,0 +1,26 @@
+id: google-maps-javascript-api
+kind: tool
+name: Google Maps JavaScript API
+category: Display & visualization
+subcategory: Web map libraries
+tool_kind: Service/API
+summary: Google's hosted web map API with basemaps, markers, data layers, 3D maps and Places integration.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+language: JavaScript
+interfaces:
+- JS
+- REST
+call:
+- rest
+- js
+wrapped_by_columbus: false
+project_status: active
+url: https://developers.google.com/maps/documentation/javascript
+notes: Requires API key and billing
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1023

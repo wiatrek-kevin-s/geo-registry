@@ -1,0 +1,23 @@
+id: meshlab
+kind: tool
+name: MeshLab
+category: Point clouds, LiDAR & 3D
+subcategory: Desktop viewers & editors
+tool_kind: Application
+summary: Desktop system for cleaning, repairing, simplifying and texturing 3D triangle meshes and point
+  clouds.
+open_source: 'yes'
+license: GPL-3.0
+language: C++
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://www.meshlab.net
+notes: Standard mesh cleanup tool.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 586

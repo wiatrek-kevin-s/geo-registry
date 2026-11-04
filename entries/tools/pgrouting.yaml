@@ -1,0 +1,24 @@
+id: pgrouting
+kind: tool
+name: pgRouting
+category: Routing, networks, geocoding & LRS
+subcategory: Routing engines
+tool_kind: Extension
+summary: PostgreSQL/PostGIS extension providing shortest path, driving distance, TSP and other graph algorithms
+  in SQL.
+open_source: 'yes'
+license: GPL-2.0-or-later
+language: C++;C;SQL
+interfaces:
+- SQL
+call:
+- sql
+wrapped_by_columbus: false
+project_status: active
+url: https://github.com/pgRouting/pgrouting
+notes: Agent can route with plain SQL in PostGIS
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 759
