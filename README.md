@@ -127,8 +127,8 @@ verified sources. To review one, fix the fields, test each access URL, set
 `source_row` in place.
 
 Until the seed is retired, `entries/` must match `python seed/convert.py` output, and CI
-fails on drift. To review a seeded entry, change the converter (or move the entry out of
-the seed set with an override) in the same PR. See CONTRIBUTING.md.
+fails on drift. To review a seeded entry, add an override in `seed/overrides/<id>.yaml`
+(the fields to replace) and regenerate, in the same PR. See CONTRIBUTING.md.
 
 ## Recipes are declarative
 

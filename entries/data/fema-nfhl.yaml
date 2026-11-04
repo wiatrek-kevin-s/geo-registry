@@ -8,12 +8,27 @@ themes:
 - open-data-sources
 coverage:
   region: United States
+  bbox:
+  - -179.2
+  - -14.6
+  - 180.0
+  - 71.4
 license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
 - type: http
   url: https://www.fema.gov/flood-maps/national-flood-hazard-layer
   auth: none
+- type: arcgis-rest
+  url: https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer
+  index: '28'
+  auth: none
+  notes: Flood Hazard Zones (S_FLD_HAZ_AR). Always pass a bbox; the national layer is very large.
+recipe:
+  tool: registry_fetch
+  steps:
+  - Fetch access 1 with a bbox no larger than a county.
+  - Report the FLD_ZONE values found and the effective date fields with the result.
 notes: Key for Austin floodplain work
 status: active
 review:

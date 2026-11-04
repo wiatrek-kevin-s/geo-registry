@@ -31,6 +31,12 @@ import yaml
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_CSV = REPO_ROOT / "seed" / "geospatial-tool-atlas.csv"
 DEFAULT_OUT = REPO_ROOT / "entries"
+DEFAULT_OVERRIDES = REPO_ROOT / "seed" / "overrides"
+
+# Key order in written entries; keys an override adds go where they belong.
+KEY_ORDER = ["id", "kind", "name", "summary", "publisher", "category", "also_categories", "themes",
+             "coverage", "license", "license_original", "update", "access", "recipe", "formats_out",
+             "install", "call", "notes", "last_verified", "status", "replaced_by", "related", "review"]
 SOURCE_NAME = "geospatial-tool-atlas"
 
 EXPECTED_COLUMNS = [
@@ -578,6 +584,35 @@ def _str_presenter(dumper: yaml.SafeDumper, data: str):
 _Dumper.add_representer(str, _str_presenter)
 
 
+def apply_overrides(entries: dict[str, dict], folder: Path) -> list[str]:
+    """Hand-reviewed corrections to seeded entries: `seed/overrides/<id>.yaml`
+    holds the fields to replace (`review` is merged), so the converter keeps
+    the seed's other facts and the reviewed ones survive regeneration."""
+    problems: list[str] = []
+    by_id = {e["id"]: rel for rel, e in entries.items()}
+    for f in sorted(folder.glob("*.yaml")) if folder.exists() else []:
+        o = yaml.safe_load(f.read_text(encoding="utf-8")) or {}
+        oid = o.get("id")
+        if oid != f.stem:
+            problems.append(f"{f.name}: id must be {f.stem!r}")
+            continue
+        rel = by_id.get(oid)
+        if rel is None:
+            problems.append(f"{f.name}: no seeded entry {oid!r}")
+            continue
+        e = dict(entries[rel])
+        for k, v in o.items():
+            if k == "id":
+                continue
+            if k == "review" and isinstance(v, dict):
+                e["review"] = {**e.get("review", {}), **v}
+            else:
+                e[k] = v
+        order = {k: i for i, k in enumerate(KEY_ORDER)}
+        entries[rel] = dict(sorted(e.items(), key=lambda kv: order.get(kv[0], len(KEY_ORDER))))
+    return problems
+
+
 def dump_yaml(entry: dict) -> str:
     return yaml.dump(entry, Dumper=_Dumper, sort_keys=False, allow_unicode=True,
                      default_flow_style=False, width=100, indent=2)
@@ -646,6 +681,7 @@ def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--csv", type=Path, default=DEFAULT_CSV)
     ap.add_argument("--out", type=Path, default=DEFAULT_OUT)
+    ap.add_argument("--overrides", type=Path, default=DEFAULT_OVERRIDES)
     ap.add_argument("--check", action="store_true",
                     help="regenerate into a temp dir and diff against --out; exit 1 on drift")
     ap.add_argument("--quiet", action="store_true", help="suppress the summary")
@@ -656,6 +692,11 @@ def main(argv: list[str] | None = None) -> int:
         return 2
 
     entries, rep = convert(args.csv)
+    bad = apply_overrides(entries, args.overrides)
+    if bad:
+        for b in bad:
+            print(f"override: {b}", file=sys.stderr)
+        return 1
     if not args.quiet:
         print_summary(rep)
 

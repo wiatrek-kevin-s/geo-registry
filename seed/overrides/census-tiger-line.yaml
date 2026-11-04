@@ -1,0 +1,25 @@
+# Reviewed: TIGERweb's State_County service answers GeoJSON queries
+# (supportedQueryFormats JSON, geoJSON, PBF; maxRecordCount 100000).
+id: census-tiger-line
+coverage:
+  region: United States
+  bbox: [-179.2, 17.8, -64.5, 71.4]
+access:
+  - type: http
+    url: https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html
+    auth: none
+  - type: arcgis-rest
+    url: https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer
+    index: "1"
+    auth: none
+    notes: Current county boundaries (layer 1, Counties); layer 0 is States.
+recipe:
+  tool: registry_fetch
+  steps:
+    - Fetch access 1 with a bbox around the area of interest to get county boundaries in EPSG:4326.
+    - Reproject to the project's projected CRS before measuring areas or distances.
+last_verified: 2026-11-04
+review:
+  state: reviewed
+  reviewed_on: 2026-11-04
+  reviewed_by: columbus-maintainers

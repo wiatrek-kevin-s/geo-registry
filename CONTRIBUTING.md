@@ -46,8 +46,11 @@ CI runs `python seed/convert.py --check`. While the seed is the source of truth:
 - Fix systematic problems (licence mapping, region inference, slugging) in the converter
   and regenerate: `python seed/convert.py`.
 - Fix a single row's facts in the CSV and regenerate. Keep the CSV otherwise verbatim.
-- Hand-reviewed entries will move to an override mechanism (planned) so the converter
-  stops owning them.
+- Review a seeded entry with an override: `seed/overrides/<id>.yaml` holds `id` and the
+  fields to replace (tested `access` endpoints, `coverage`, `recipe`, `last_verified`;
+  `review` is merged, so set `state: reviewed`, `reviewed_by` and `reviewed_on` once a
+  person has checked it). Run `python seed/convert.py` and commit both the override and the
+  regenerated entry.
 
 ## Local checks
 

@@ -7,16 +7,34 @@ themes:
 - us-federal-census
 - open-data-sources
 coverage:
-  region: Unspecified
+  region: United States
+  bbox:
+  - -179.2
+  - 17.8
+  - -64.5
+  - 71.4
 license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
 - type: http
   url: https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html
   auth: none
+- type: arcgis-rest
+  url: https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer
+  index: '1'
+  auth: none
+  notes: Current county boundaries (layer 1, Counties); layer 0 is States.
+recipe:
+  tool: registry_fetch
+  steps:
+  - Fetch access 1 with a bbox around the area of interest to get county boundaries in EPSG:4326.
+  - Reproject to the project's projected CRS before measuring areas or distances.
 notes: Base for joins to ACS
+last_verified: 2026-11-04
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1249
+  reviewed_on: 2026-11-04
+  reviewed_by: columbus-maintainers

@@ -1,0 +1,22 @@
+# The NFHL map service publishes flood hazard zones (S_FLD_HAZ_AR) as
+# layer 28. Its REST endpoint disallows automated fetching of its own
+# description, so the layer number is from FEMA's published service
+# documentation and the entry stays seeded until a person confirms it.
+id: fema-nfhl
+coverage:
+  region: United States
+  bbox: [-179.2, -14.6, 180.0, 71.4]
+access:
+  - type: http
+    url: https://www.fema.gov/flood-maps/national-flood-hazard-layer
+    auth: none
+  - type: arcgis-rest
+    url: https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer
+    index: "28"
+    auth: none
+    notes: Flood Hazard Zones (S_FLD_HAZ_AR). Always pass a bbox; the national layer is very large.
+recipe:
+  tool: registry_fetch
+  steps:
+    - Fetch access 1 with a bbox no larger than a county.
+    - Report the FLD_ZONE values found and the effective date fields with the result.
