@@ -59,3 +59,30 @@ jobs:
           name: geo-registry-dist
           path: dist/
           if-no-files-found: error
+
+  publish:
+    name: Publish the index
+    # Every push to main republishes the rolling `index` release, which
+    # Columbus servers download (`columbus-mcp registry update`).
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: rust
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: geo-registry-dist
+          path: dist
+      - name: Check the manifest
+        working-directory: dist
+        run: sha256sum -c index.sha256
+      - name: Upload to the index release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view index >/dev/null 2>&1 || \
+            gh release create index --title "Registry index (rolling)" \
+              --notes "The current registry index, rebuilt on every change to main. Columbus servers download it with columbus-mcp registry update." --latest=false
+          gh release upload index dist/registry.sqlite dist/index.json dist/index.sha256 --clobber
