@@ -60,6 +60,46 @@ pub fn operation_card(entry: &Value) -> Value {
     Value::Object(c)
 }
 
+/// The card for an implementation: which engine, how it is called, which
+/// operation it implements (if mapped) and the engine version harvested.
+pub fn implementation_card(entry: &Value) -> Value {
+    let mut c = Map::new();
+    for key in ["id", "kind", "name", "software", "implements"] {
+        if let Some(v) = str_field(entry, key) {
+            c.insert(key.into(), Value::String(v.into()));
+        }
+    }
+    for key in ["call", "docs"] {
+        if let Some(v) = entry.get(key) {
+            c.insert(key.into(), v.clone());
+        }
+    }
+    if let Some(v) = entry.pointer("/harvest/engine_version") {
+        c.insert("engine_version".into(), v.clone());
+    }
+    c.insert(
+        "status".into(),
+        Value::String(str_field(entry, "status").unwrap_or("active").into()),
+    );
+    if let Some(r) = entry.pointer("/review/state") {
+        c.insert("review".into(), r.clone());
+    }
+    Value::Object(c)
+}
+
+/// Searchable text for an implementation: its parameter names and the
+/// operation it implements.
+fn implementation_terms(entry: &Value) -> String {
+    let mut parts: Vec<String> = Vec::new();
+    if let Some(p) = entry.get("parameters").and_then(Value::as_object) {
+        parts.extend(p.keys().map(|k| k.replace(['_', '-'], " ")));
+    }
+    if let Some(op) = str_field(entry, "implements") {
+        parts.push(op.replace('-', " "));
+    }
+    parts.join(" ")
+}
+
 /// Searchable text for an operation besides its name and summary: other
 /// names, parameter names and input/output types.
 fn operation_terms(entry: &Value) -> String {
@@ -271,9 +311,15 @@ pub fn write_sqlite(path: &Path, entries: &[Value], generated_at: &str) -> Resul
              software   TEXT NOT NULL,  -- tool entry id
              name       TEXT NOT NULL,
              status     TEXT NOT NULL,
+             card       TEXT NOT NULL,
              entry      TEXT NOT NULL
          );
-         CREATE INDEX implementations_op ON implementations(implements);",
+         CREATE INDEX implementations_op ON implementations(implements);
+         CREATE INDEX implementations_software ON implementations(software);
+         CREATE VIRTUAL TABLE implementations_fts USING fts5(
+             id UNINDEXED, name, call, software, terms,
+             tokenize = 'porter unicode61 remove_diacritics 2'
+         );",
     )?;
     let catalogue = sorted_by_id(entries.iter().filter(|e| is_catalogue(e)));
     let operations = sorted_by_id(entries.iter().filter(|e| kind_of(e) == Some("operation")));
@@ -346,17 +392,36 @@ pub fn write_sqlite(path: &Path, entries: &[Value], generated_at: &str) -> Resul
         }
 
         let mut ins = tx.prepare(
-            "INSERT INTO implementations (id, implements, software, name, status, entry)
-             VALUES (?1, ?2, ?3, ?4, ?5, ?6)",
+            "INSERT INTO implementations (id, implements, software, name, status, card, entry)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7)",
+        )?;
+        let mut fts = tx.prepare(
+            "INSERT INTO implementations_fts (id, name, call, software, terms)
+             VALUES (?1, ?2, ?3, ?4, ?5)",
         )?;
         for e in &implementations {
+            let id = str_field(e, "id").unwrap_or_default();
             ins.execute(params![
-                str_field(e, "id").unwrap_or_default(),
+                id,
                 str_field(e, "implements"),
                 str_field(e, "software").unwrap_or_default(),
                 str_field(e, "name").unwrap_or_default(),
                 str_field(e, "status").unwrap_or("active"),
+                implementation_card(e).to_string(),
                 e.to_string(),
+            ])?;
+            let call = e
+                .pointer("/call/name")
+                .and_then(Value::as_str)
+                .unwrap_or_default();
+            fts.execute(params![
+                id,
+                str_field(e, "name")
+                    .unwrap_or_default()
+                    .replace(['_', '.', ':'], " "),
+                call.replace(['_', '.', ':'], " "),
+                str_field(e, "software").unwrap_or_default(),
+                implementation_terms(e),
             ])?;
         }
     }
@@ -364,6 +429,7 @@ pub fn write_sqlite(path: &Path, entries: &[Value], generated_at: &str) -> Resul
     conn.execute_batch(
         "INSERT INTO entries_fts(entries_fts) VALUES ('optimize');
          INSERT INTO operations_fts(operations_fts) VALUES ('optimize');
+         INSERT INTO implementations_fts(implementations_fts) VALUES ('optimize');
          VACUUM;",
     )?;
     Ok(())
