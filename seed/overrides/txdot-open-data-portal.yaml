@@ -1,11 +1,25 @@
-# PROPOSED by agent research on 2026-11-05 for the Texas review batch. Not reviewed:
+# Researched by an agent on 2026-11-05 for the Texas review batch. Not reviewed:
 # review.state stays seeded until a person checks it. Evidence: reviews/texas-2026-11.md
+# Approved by the project lead (wiatrek-kevin-s) on 2026-11-05; endpoints answered the Health check that day.
 id: txdot-open-data-portal
 access:
-  - type: http
-    url: https://gis-txdot.opendata.arcgis.com/
-    auth: none
-  - type: arcgis-rest
-    url: https://services.arcgis.com/KTcxiTD9dsQw4r7Z/arcgis/rest/services
-    auth: none
-    notes: TxDOT's ArcGIS Online services (TxDOT_Roadways, Route_County, TxDOT_Proposed_Functional_Classification, ...).
+- type: http
+  url: https://gis-txdot.opendata.arcgis.com/
+  auth: none
+- type: arcgis-rest
+  url: https://services.arcgis.com/KTcxiTD9dsQw4r7Z/arcgis/rest/services
+  auth: none
+  notes: TxDOT's ArcGIS Online services (TxDOT_Roadways, Route_County, TxDOT_Proposed_Functional_Classification,
+    ...).
+coverage:
+  region: Texas
+  bbox:
+  - -106.916
+  - 25.665
+  - -93.478
+  - 36.727
+last_verified: '2026-11-05'
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

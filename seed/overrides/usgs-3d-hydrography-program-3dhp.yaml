@@ -1,8 +1,14 @@
-# PROPOSED by agent research on 2026-11-05 for US federal review batch 3. Not reviewed:
+# Researched by an agent on 2026-11-05 for US federal review batch 3. Not reviewed:
 # review.state stays seeded until a person checks it. Evidence: reviews/us-federal-batch-3-2026-11.md
+# Approved by the project lead (wiatrek-kevin-s) on 2026-11-05; endpoints answered the Health check that day.
 id: usgs-3d-hydrography-program-3dhp
 coverage:
   region: United States
+  bbox:
+  - -179.2
+  - 17.8
+  - -64.5
+  - 71.4
 access:
 - type: http
   url: https://www.usgs.gov/3d-hydrography-program
@@ -15,3 +21,8 @@ access:
   url: https://www.sciencebase.gov/catalog/item/6930876ed4be027594fed169
   auth: none
   notes: 3DHP downloadable data, 2025 annual product.
+last_verified: '2026-11-05'
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

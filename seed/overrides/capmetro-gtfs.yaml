@@ -1,9 +1,19 @@
-# PROPOSED by agent research on 2026-11-05 for the Texas review batch. Not reviewed:
+# Researched by an agent on 2026-11-05 for the Texas review batch. Not reviewed:
 # review.state stays seeded until a person checks it. Evidence: reviews/texas-2026-11.md
+# Approved by the project lead (wiatrek-kevin-s) on 2026-11-05; endpoints answered the Health check that day.
 id: capmetro-gtfs
 access:
-  - type: download
-    url: https://data.texas.gov/download/r4v4-vz24/application/zip
-    auth: none
-    notes: "Official GTFS schedule feed (Mobility Database mdb-150); validated with no errors on 2026-11-04. Licence terms: https://www.capmetro.org/metrolabs/ (not yet read)."
-formats_out: [GTFS]
+- type: download
+  url: https://data.texas.gov/download/r4v4-vz24/application/zip
+  auth: none
+  notes: 'Official GTFS schedule feed (Mobility Database mdb-150); validated with no errors on 2026-11-04. Licence
+    terms: https://www.capmetro.org/metrolabs/ (not yet read).'
+formats_out:
+- GTFS
+coverage:
+  region: Texas
+last_verified: '2026-11-05'
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

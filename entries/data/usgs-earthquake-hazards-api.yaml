@@ -8,6 +8,11 @@ themes:
 - open-data-sources
 coverage:
   region: Global
+  bbox:
+  - -180.0
+  - -90.0
+  - 180.0
+  - 90.0
 license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
@@ -16,8 +21,11 @@ access:
   auth: none
   notes: FDSN event web service (query, count); GeoJSON among the formats.
 notes: GeoJSON feeds
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1245
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

@@ -8,6 +8,11 @@ themes:
 - open-data-sources
 coverage:
   region: United States
+  bbox:
+  - -179.2
+  - 17.8
+  - -64.5
+  - 71.4
 license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
@@ -19,8 +24,11 @@ access:
   auth: none
   notes: LANDFIRE Product Service - layers and an area of interest in, a multi-band GeoTIFF out (asynchronous).
     Whether anonymous use is allowed is not yet tested.
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1248
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

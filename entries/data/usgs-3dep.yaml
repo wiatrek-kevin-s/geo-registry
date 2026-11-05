@@ -10,6 +10,11 @@ themes:
 - open-data-sources
 coverage:
   region: United States
+  bbox:
+  - -179.2
+  - 17.8
+  - -64.5
+  - 71.4
 license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
@@ -26,8 +31,11 @@ access:
   auth: none
   notes: Index of 3DEP projects and products.
 notes: Primary US lidar source.
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 634
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

@@ -8,6 +8,11 @@ themes:
 - osm-overture-tooling
 coverage:
   region: Global
+  bbox:
+  - -180.0
+  - -90.0
+  - 180.0
+  - 90.0
 license: ODbL-1.0
 access:
 - type: http
@@ -22,8 +27,11 @@ access:
 formats_out:
 - GeoParquet
 notes: Data (c) OpenStreetMap contributors, under the Open Database License; credit OpenStreetMap contributors.
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1194
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

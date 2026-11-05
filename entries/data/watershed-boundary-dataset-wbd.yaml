@@ -8,6 +8,11 @@ themes:
 - open-data-sources
 coverage:
   region: United States
+  bbox:
+  - -179.2
+  - 17.8
+  - -64.5
+  - 71.4
 license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
@@ -22,8 +27,11 @@ access:
   url: https://prd-tnm.s3.amazonaws.com/index.html?prefix=StagedProducts%2FHydrography%2FWBD%2F
   auth: none
   notes: Staged WBD downloads by HU2 and national.
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1238
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

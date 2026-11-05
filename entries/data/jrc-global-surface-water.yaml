@@ -8,6 +8,11 @@ themes:
 - open-data-sources
 coverage:
   region: Global
+  bbox:
+  - -180.0
+  - -90.0
+  - 180.0
+  - 90.0
 license: LicenseRef-Copernicus
 license_original: Copernicus free and open licence
 access:
@@ -22,8 +27,11 @@ access:
   url: https://storage.googleapis.com/water-world/downloads_ancillary/WMTS_Global_Surface_WaterV2024.xml
   auth: none
   notes: Display tiles (RGB, not for analysis).
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1303
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

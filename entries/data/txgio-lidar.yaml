@@ -8,6 +8,11 @@ themes:
 - open-data-sources
 coverage:
   region: Texas
+  bbox:
+  - -106.916
+  - 25.665
+  - -93.478
+  - 36.727
 license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
@@ -19,8 +24,11 @@ access:
   auth: none
   notes: Tile index of every lidar project TxGIO hosts. Item info read 2026-11-05 (no licence text in
     the item).
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1336
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

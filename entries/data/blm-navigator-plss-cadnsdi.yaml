@@ -8,6 +8,11 @@ themes:
 - open-data-sources
 coverage:
   region: United States (PLSS states)
+  bbox:
+  - -179.2
+  - 17.8
+  - -64.5
+  - 71.4
 license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
@@ -20,8 +25,11 @@ access:
   notes: National PLSS (townships, sections, intersected lands), NAD 83. New path from 2026-10-14; the
     old /arcgis/ path works until 2027-02-01 (BLM announcement).
 notes: PLSS not used in Texas
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1280
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

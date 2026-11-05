@@ -1,11 +1,20 @@
-# PROPOSED by agent research on 2026-11-05 for the Texas review batch. Not reviewed:
+# Researched by an agent on 2026-11-05 for the Texas review batch. Not reviewed:
 # review.state stays seeded until a person checks it. Evidence: reviews/texas-2026-11.md
+# Approved by the project lead (wiatrek-kevin-s) on 2026-11-05; endpoints answered the Health check that day.
 id: city-of-austin-open-data
 access:
-  - type: http
-    url: https://data.austintexas.gov/
-    auth: none
-  - type: api
-    url: https://data.austintexas.gov/api/views/g7cx-4kmk
-    auth: none
-    notes: "Socrata platform: dataset metadata at /api/views/<id>, rows at /resource/<id>.json (SODA). Identifier from the data.gov harvest record; not yet fetched."
+- type: http
+  url: https://data.austintexas.gov/
+  auth: none
+- type: api
+  url: https://data.austintexas.gov/api/views/g7cx-4kmk
+  auth: none
+  notes: 'Socrata platform: dataset metadata at /api/views/<id>, rows at /resource/<id>.json (SODA). Identifier
+    from the data.gov harvest record; not yet fetched.'
+coverage:
+  region: Texas
+last_verified: '2026-11-05'
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

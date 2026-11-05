@@ -1,11 +1,25 @@
-# PROPOSED by agent research on 2026-11-05 for the US federal review batch. Not reviewed:
+# Researched by an agent on 2026-11-05 for the US federal review batch. Not reviewed:
 # review.state stays seeded until a person checks it. Evidence: reviews/us-federal-2026-11.md
+# Approved by the project lead (wiatrek-kevin-s) on 2026-11-05; endpoints answered the Health check that day.
 id: usgs-national-map-basemaps
 access:
-  - type: http
-    url: https://basemap.nationalmap.gov/
-    auth: none
-  - type: arcgis-rest
-    url: https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer
-    auth: none
-    notes: Cached topographic base map (Web Mercator, 24 levels); refreshed 2026-09-04. Other base maps (imagery, shaded relief) are on the same server.
+- type: http
+  url: https://basemap.nationalmap.gov/
+  auth: none
+- type: arcgis-rest
+  url: https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer
+  auth: none
+  notes: Cached topographic base map (Web Mercator, 24 levels); refreshed 2026-09-04. Other base maps (imagery,
+    shaded relief) are on the same server.
+coverage:
+  region: United States
+  bbox:
+  - -179.2
+  - 17.8
+  - -64.5
+  - 71.4
+last_verified: '2026-11-05'
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

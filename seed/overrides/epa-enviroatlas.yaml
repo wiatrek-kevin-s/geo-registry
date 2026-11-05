@@ -1,8 +1,14 @@
-# PROPOSED by agent research on 2026-11-05 for US federal review batch 3. Not reviewed:
+# Researched by an agent on 2026-11-05 for US federal review batch 3. Not reviewed:
 # review.state stays seeded until a person checks it. Evidence: reviews/us-federal-batch-3-2026-11.md
+# Approved by the project lead (wiatrek-kevin-s) on 2026-11-05; endpoints answered the Health check that day.
 id: epa-enviroatlas
 coverage:
   region: United States
+  bbox:
+  - -179.2
+  - 17.8
+  - -64.5
+  - 71.4
 access:
 - type: http
   url: https://www.epa.gov/enviroatlas
@@ -12,3 +18,8 @@ access:
   auth: none
   notes: National (sub-watershed) and community layers; WMS and WFS links are on each service's page. EPA's web
     services page was updated 2026-09-30.
+last_verified: '2026-11-05'
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

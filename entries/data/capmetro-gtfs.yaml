@@ -18,8 +18,11 @@ access:
     Licence terms: https://www.capmetro.org/metrolabs/ (not yet read).'
 formats_out:
 - GTFS
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1355
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

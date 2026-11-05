@@ -1,12 +1,22 @@
-# PROPOSED by agent research on 2026-11-05 for the Texas review batch. Not reviewed:
+# Researched by an agent on 2026-11-05 for the Texas review batch. Not reviewed:
 # review.state stays seeded until a person checks it. Evidence: reviews/texas-2026-11.md
+# Approved by the project lead (wiatrek-kevin-s) on 2026-11-05; endpoints answered the Health check that day.
 id: city-of-austin-gis-arcgis
 access:
-  - type: arcgis-rest
-    url: https://services.arcgis.com/0L95CJ0VTaxqcmED/ArcGIS/rest/services
-    auth: none
-    notes: City of Austin's ArcGIS Online services (layers mostly in EPSG:2277, Texas Central ftUS). Example tested 2026-11-05 - INLANDWATERS_greater_austin_fema_floodplain/FeatureServer (query supported, 2000 records per request).
-  - type: http
-    url: https://www.austintexas.gov/department/gis-and-maps
-    auth: none
-notes: "Derived products should credit 'City of Austin, Geospatial Services - Data Development' (service copyright text)."
+- type: arcgis-rest
+  url: https://services.arcgis.com/0L95CJ0VTaxqcmED/ArcGIS/rest/services
+  auth: none
+  notes: City of Austin's ArcGIS Online services (layers mostly in EPSG:2277, Texas Central ftUS). Example tested
+    2026-11-05 - INLANDWATERS_greater_austin_fema_floodplain/FeatureServer (query supported, 2000 records per request).
+- type: http
+  url: https://www.austintexas.gov/department/gis-and-maps
+  auth: none
+notes: Derived products should credit 'City of Austin, Geospatial Services - Data Development' (service copyright
+  text).
+coverage:
+  region: Texas
+last_verified: '2026-11-05'
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

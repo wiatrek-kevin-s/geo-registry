@@ -9,6 +9,11 @@ themes:
 - osm-overture-tooling
 coverage:
   region: Global
+  bbox:
+  - -180.0
+  - -90.0
+  - 180.0
+  - 90.0
 license: LicenseRef-Multiple
 license_original: CDLA-Permissive-2.0; ODbL-1.0
 access:
@@ -27,8 +32,11 @@ access:
 notes: 'Themes (merged from their own entries): buildings ODbL-1.0, transportation ODbL-1.0, divisions
   ODbL-1.0, places CDLA-Permissive-2.0, addresses licence varies by source. Query with DuckDB on S3 or
   Azure.'
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1230
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

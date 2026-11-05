@@ -8,6 +8,11 @@ themes:
 - open-data-sources
 coverage:
   region: United States
+  bbox:
+  - -179.2
+  - 17.8
+  - -64.5
+  - 71.4
 license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
@@ -19,8 +24,11 @@ access:
   auth: none
   notes: File geodatabase (zip), updated 2026-09-30 per data.gov; a text-file version is also published.
 notes: Texas coverage partial
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1256
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

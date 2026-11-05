@@ -8,6 +8,11 @@ themes:
 - open-data-sources
 coverage:
   region: Texas
+  bbox:
+  - -106.916
+  - 25.665
+  - -93.478
+  - 36.727
 license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
@@ -24,8 +29,11 @@ access:
   auth: none
   notes: StratMap address points, most recent (from 9-1-1 districts). Tested 2026-11-05.
 notes: Statewide parcels from appraisal districts
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1335
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

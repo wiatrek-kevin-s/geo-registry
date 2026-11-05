@@ -1,15 +1,29 @@
-# PROPOSED by agent research on 2026-11-05 for the US federal review batch. Not reviewed:
+# Researched by an agent on 2026-11-05 for the US federal review batch. Not reviewed:
 # review.state stays seeded until a person checks it. Evidence: reviews/us-federal-2026-11.md
+# Approved by the project lead (wiatrek-kevin-s) on 2026-11-05; endpoints answered the Health check that day.
 id: usgs-3dep
 access:
-  - type: http
-    url: https://www.usgs.gov/3d-elevation-program
-    auth: none
-  - type: arcgis-rest
-    url: https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer
-    auth: none
-    notes: Bare-earth DEM from multi-resolution 3DEP sources; hillshade, slope, aspect and contour functions; WMS and WCS enabled. Tested 2026-11-05.
-  - type: arcgis-rest
-    url: https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer
-    auth: none
-    notes: Index of 3DEP projects and products.
+- type: http
+  url: https://www.usgs.gov/3d-elevation-program
+  auth: none
+- type: arcgis-rest
+  url: https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer
+  auth: none
+  notes: Bare-earth DEM from multi-resolution 3DEP sources; hillshade, slope, aspect and contour functions; WMS
+    and WCS enabled. Tested 2026-11-05.
+- type: arcgis-rest
+  url: https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer
+  auth: none
+  notes: Index of 3DEP projects and products.
+coverage:
+  region: United States
+  bbox:
+  - -179.2
+  - 17.8
+  - -64.5
+  - 71.4
+last_verified: '2026-11-05'
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

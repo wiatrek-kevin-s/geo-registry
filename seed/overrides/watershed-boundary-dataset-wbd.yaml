@@ -1,9 +1,15 @@
-# PROPOSED by agent research on 2026-11-05 for US federal review batch 3. Not reviewed:
+# Researched by an agent on 2026-11-05 for US federal review batch 3. Not reviewed:
 # review.state stays seeded until a person checks it. Evidence: reviews/us-federal-batch-3-2026-11.md
+# Approved by the project lead (wiatrek-kevin-s) on 2026-11-05; endpoints answered the Health check that day.
 id: watershed-boundary-dataset-wbd
 publisher: U.S. Geological Survey
 coverage:
   region: United States
+  bbox:
+  - -179.2
+  - 17.8
+  - -64.5
+  - 71.4
 access:
 - type: http
   url: https://www.usgs.gov/national-hydrography/watershed-boundary-dataset
@@ -16,3 +22,8 @@ access:
   url: https://prd-tnm.s3.amazonaws.com/index.html?prefix=StagedProducts%2FHydrography%2FWBD%2F
   auth: none
   notes: Staged WBD downloads by HU2 and national.
+last_verified: '2026-11-05'
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

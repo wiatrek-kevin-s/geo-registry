@@ -9,6 +9,11 @@ themes:
 - open-data-sources
 coverage:
   region: Texas
+  bbox:
+  - -106.916
+  - 25.665
+  - -93.478
+  - 36.727
 license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
@@ -21,8 +26,11 @@ access:
   notes: TxGIO (formerly TNRIS) data API behind the DataHub; only /areas is documented publicly. Not yet
     tested.
 notes: Formerly TNRIS; REST API and bulk downloader
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1334
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

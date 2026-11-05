@@ -9,6 +9,11 @@ themes:
 - routing-networks-geocoding-lrs
 coverage:
   region: Texas
+  bbox:
+  - -106.916
+  - 25.665
+  - -93.478
+  - 36.727
 license: LicenseRef-Public-Domain
 license_original: Public domain
 update: annual (roadway inventory); the service is updated by TxDOT TPP
@@ -25,8 +30,11 @@ access:
   notes: Annual roadway inventory (GIS linework and all inventory attributes), 2025 edition; other years
     from https://www.txdot.gov/inside-txdot/division/transportation-planning/roadway-inventory.html
 notes: Texas DOT open data; URL is open data hub
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 877
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

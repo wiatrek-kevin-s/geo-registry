@@ -8,6 +8,11 @@ themes:
 - open-data-sources
 coverage:
   region: Global
+  bbox:
+  - -180.0
+  - -90.0
+  - 180.0
+  - 90.0
 license: CC-BY-4.0
 access:
 - type: http
@@ -17,8 +22,11 @@ access:
   url: https://www.worldpop.org/rest/data
   auth: none
   notes: 'JSON catalogue: rest/data/pop/wpgp?iso3=XXX returns the GeoTIFF path for a country; no key mentioned.'
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1306
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

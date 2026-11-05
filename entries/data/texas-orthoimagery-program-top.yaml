@@ -26,8 +26,11 @@ access:
   auth: none
 notes: The current Texas Imagery Service needs an organization-specific link from TxGIO and is not open
   access.
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1337
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

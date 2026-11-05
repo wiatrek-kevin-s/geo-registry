@@ -8,6 +8,11 @@ themes:
 - open-data-sources
 coverage:
   region: Global
+  bbox:
+  - -180.0
+  - -90.0
+  - 180.0
+  - 90.0
 license: LicenseRef-Copernicus-DEM
 license_original: Copernicus DEM licence
 access:
@@ -24,8 +29,11 @@ access:
   auth: none
   notes: Earth Search collections cop-dem-glo-30 and cop-dem-glo-90.
 notes: GLO-30 free; COGs on AWS
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1296
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

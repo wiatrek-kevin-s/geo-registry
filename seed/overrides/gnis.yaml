@@ -1,13 +1,27 @@
-# PROPOSED by agent research on 2026-11-05 for the US federal review batch. Not reviewed:
+# Researched by an agent on 2026-11-05 for the US federal review batch. Not reviewed:
 # review.state stays seeded until a person checks it. Evidence: reviews/us-federal-2026-11.md
+# Approved by the project lead (wiatrek-kevin-s) on 2026-11-05; endpoints answered the Health check that day.
 id: gnis
 publisher: U.S. Geological Survey (U.S. Board on Geographic Names)
 access:
-  - type: http
-    url: https://www.usgs.gov/us-board-on-geographic-names/download-gnis-data
-    auth: none
-  - type: download
-    url: https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Topical/PopulatedPlaces_National_Text.zip
-    auth: none
-    notes: One of the national extracts (pipe-delimited text); DomesticNames and FullModel (GDB, GPKG) by state are in the same staged products folder.
+- type: http
+  url: https://www.usgs.gov/us-board-on-geographic-names/download-gnis-data
+  auth: none
+- type: download
+  url: https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Topical/PopulatedPlaces_National_Text.zip
+  auth: none
+  notes: One of the national extracts (pipe-delimited text); DomesticNames and FullModel (GDB, GPKG) by state are
+    in the same staged products folder.
 update: every other month
+coverage:
+  region: United States
+  bbox:
+  - -179.2
+  - 17.8
+  - -64.5
+  - 71.4
+last_verified: '2026-11-05'
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

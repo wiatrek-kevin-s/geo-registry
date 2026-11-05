@@ -1,5 +1,6 @@
-# PROPOSED by agent research on 2026-11-05 for global review batch 1. Not reviewed:
+# Researched by an agent on 2026-11-05 for global review batch 1. Not reviewed:
 # review.state stays seeded until a person checks it. Evidence: reviews/global-batch-1-2026-11.md
+# Approved by the project lead (wiatrek-kevin-s) on 2026-11-05; endpoints answered the Health check that day.
 id: esa-worldcover
 access:
 - type: http
@@ -14,3 +15,15 @@ access:
   url: https://services.terrascope.be/stac/
   auth: none
   notes: Terrascope STAC (listed on the AWS registry page).
+coverage:
+  region: Global
+  bbox:
+  - -180.0
+  - -90.0
+  - 180.0
+  - 90.0
+last_verified: '2026-11-05'
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'
