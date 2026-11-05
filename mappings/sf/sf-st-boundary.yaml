@@ -1,0 +1,6 @@
+id: sf-st-boundary
+implements: polygons-to-lines
+crosswalk:
+  layer: x
+effects: { modifies_input: false, network: false }
+review: { state: draft }

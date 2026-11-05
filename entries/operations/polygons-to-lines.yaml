@@ -1,0 +1,16 @@
+id: polygons-to-lines
+kind: operation
+name: Polygons To Lines
+aka: [Polygon To Line, boundary, outline]
+summary: The outlines of polygons as line features.
+group: vector/geometry
+inputs:
+  - { name: layer, type: vector, geometry: polygon }
+outputs:
+  - { name: output, type: vector, geometry: line }
+checks: [geometry.valid]
+pitfalls:
+  - Shared edges between neighbouring polygons appear once per polygon unless the engine builds a topology.
+related: [lines-to-polygons]
+status: active
+review: { state: draft }

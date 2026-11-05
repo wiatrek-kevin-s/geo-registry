@@ -1,0 +1,11 @@
+id: qgis-native-extractbylocation
+implements: select-by-location
+crosswalk:
+  layer: INPUT
+  mask: INTERSECT
+  output: OUTPUT
+  predicate: { param: PREDICATE, values: { intersects: 0, contains: 1, disjoint: 2, touches: 4, overlaps: 5, within: 6, crosses: 7 } }
+differences:
+  - PREDICATE takes a list; features meeting any of them are kept.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

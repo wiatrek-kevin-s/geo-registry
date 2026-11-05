@@ -1,0 +1,7 @@
+id: geopandas-geoseries-boundary
+implements: polygons-to-lines
+crosswalk: {}
+differences:
+  - A property of the GeoSeries; returns a GeoSeries without the other columns.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,11 @@
+id: qgis-native-countpointsinpolygon
+implements: count-points-in-polygon
+crosswalk:
+  polygons: POLYGONS
+  points: POINTS
+  output: OUTPUT
+  field: FIELD
+differences:
+  - CLASSFIELD counts distinct values of a field instead; WEIGHT sums a field.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

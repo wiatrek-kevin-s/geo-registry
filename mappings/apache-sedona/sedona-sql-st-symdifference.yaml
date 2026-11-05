@@ -1,0 +1,10 @@
+id: sedona-sql-st-symdifference
+implements: symmetric-difference
+crosswalk:
+  a: a
+  b: b
+differences:
+  - "Per pair of geometries: union each layer first to compare whole layers."
+  - "A Spark SQL function: arguments are columns or column names, run over a Spark DataFrame."
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,10 @@
+id: sf-st-filter
+implements: select-by-location
+crosswalk:
+  layer: x
+  mask: y
+  predicate: { note: ".predicate = st_within (or another st_ predicate function), passed through ...; st_intersects by default." }
+differences:
+  - Needs the dplyr package installed (sf only suggests it); without it the call fails.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

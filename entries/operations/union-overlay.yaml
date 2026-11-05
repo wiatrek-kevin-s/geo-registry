@@ -1,0 +1,17 @@
+id: union-overlay
+kind: operation
+name: Union
+aka: [overlay union, Union (Analysis), identity of both layers]
+summary: Splits two polygon layers where they overlap and keeps every piece, with the attributes of whichever layers cover it.
+group: vector/overlay
+inputs:
+  - { name: a, type: vector, geometry: polygon }
+  - { name: b, type: vector, geometry: polygon }
+outputs:
+  - { name: output, type: vector, geometry: polygon }
+checks: [crs.agreement, geometry.valid, extent.plausible]
+pitfalls:
+  - Not the same as merging shapes into one (that is dissolve, which many SQL and Python libraries call union).
+related: [intersect, symmetric-difference, dissolve]
+status: active
+review: { state: draft }

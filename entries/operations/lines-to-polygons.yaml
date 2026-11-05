@@ -1,0 +1,17 @@
+id: lines-to-polygons
+kind: operation
+name: Lines To Polygons
+aka: [Feature To Polygon, polygonize lines, close rings]
+summary: Polygons formed by closed lines, or by the areas that a network of lines encloses.
+group: vector/geometry
+inputs:
+  - { name: layer, type: vector, geometry: line }
+outputs:
+  - { name: output, type: vector, geometry: polygon }
+checks: [geometry.valid]
+pitfalls:
+  - Some engines turn each closed line into a polygon; others build polygons from every area the lines enclose together, which differs when lines cross.
+  - Lines that do not quite meet (an unsnapped gap) enclose nothing.
+related: [polygons-to-lines, raster-to-polygons]
+status: active
+review: { state: draft }

@@ -1,0 +1,9 @@
+id: shapely-symmetric-difference
+implements: symmetric-difference
+crosswalk:
+  a: a
+  b: b
+differences:
+  - "Per pair of geometries: union each layer first to compare whole layers."
+effects: { modifies_input: false, network: false }
+review: { state: draft }

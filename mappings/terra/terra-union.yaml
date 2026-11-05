@@ -1,0 +1,9 @@
+id: terra-union
+implements: union-overlay
+crosswalk:
+  a: x
+  b: y
+differences:
+  - With one SpatVector it splits its own overlapping polygons.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

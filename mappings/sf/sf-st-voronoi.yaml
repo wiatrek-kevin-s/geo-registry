@@ -1,0 +1,8 @@
+id: sf-st-voronoi
+implements: voronoi
+crosswalk:
+  layer: x
+differences:
+  - "Takes one geometry: combine the points first (st_union or st_combine); envelope sets the extent."
+effects: { modifies_input: false, network: false }
+review: { state: draft }

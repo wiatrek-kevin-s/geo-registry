@@ -1,0 +1,11 @@
+id: grass-v-select
+implements: select-by-location
+crosswalk:
+  layer: ainput
+  mask: binput
+  output: output
+  predicate: { param: operator, values: { intersects: intersects, within: within, contains: contains, touches: touches, crosses: crosses, overlaps: overlap, disjoint: disjoint } }
+differences:
+  - The default operator is overlap (GRASS's own test); intersects, within and the other GEOS predicates need GRASS built with GEOS.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

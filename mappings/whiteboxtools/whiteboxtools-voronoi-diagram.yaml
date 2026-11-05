@@ -1,0 +1,7 @@
+id: whiteboxtools-voronoi-diagram
+implements: voronoi
+crosswalk:
+  layer: input
+  output: output
+effects: { modifies_input: false, network: false }
+review: { state: draft }

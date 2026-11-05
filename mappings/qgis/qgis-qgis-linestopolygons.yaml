@@ -1,0 +1,9 @@
+id: qgis-qgis-linestopolygons
+implements: lines-to-polygons
+crosswalk:
+  layer: INPUT
+  output: OUTPUT
+differences:
+  - Closes each line into its own polygon (native:polygonize instead builds polygons from the areas lines enclose together).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

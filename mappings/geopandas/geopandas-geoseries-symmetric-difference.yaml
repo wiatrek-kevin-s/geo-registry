@@ -1,0 +1,8 @@
+id: geopandas-geoseries-symmetric-difference
+implements: symmetric-difference
+crosswalk:
+  b: other
+differences:
+  - Element-wise against another GeoSeries (aligned on the index) or one geometry; geopandas.overlay(how='symmetric_difference') works on whole layers.
+effects: { modifies_input: false, network: false }
+review: { state: draft }
