@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import hashlib
 import math
+import os
 import re
 from pathlib import Path
 from typing import Any
@@ -146,6 +147,12 @@ def write(software: str, entries: list[dict], root: Path = IMPLEMENTATIONS) -> d
     dupes = {i for i in ids if ids.count(i) > 1}
     if dupes:
         raise SystemExit(f"{software}: duplicate ids {sorted(dupes)}")
+    existing = list(folder.glob("*.yaml"))
+    gone = {p.name for p in existing} - {f"{i}.yaml" for i in ids}
+    if len(existing) >= 20 and len(gone) > len(existing) // 4 and not os.environ.get("HARVEST_ALLOW_SHRINK"):
+        # A provider that failed to load looks like a mass removal; keep the old files.
+        raise SystemExit(f"{software}: refusing to remove {len(gone)} of {len(existing)} implementations "
+                         "(set HARVEST_ALLOW_SHRINK=1 if the engine really dropped them)")
     counts = {"added": 0, "changed": 0, "unchanged": 0, "removed": 0}
     keep = set()
     for e in sorted(entries, key=lambda e: e["id"]):

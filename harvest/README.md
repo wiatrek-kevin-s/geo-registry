@@ -19,7 +19,7 @@ files, so re-harvesting after a release shows exactly what the release changed.
 | `turf.py` | Turf.js | its TypeScript declarations, read with TypeScript 5's parser (Turf is not run) | `implementations/turf-js/` |
 | `cli_packages.py` | TauDEM, LAStools (open programs) | the conda package's file list; by name only | `implementations/taudem/`, `implementations/lastools/` |
 | `duckdb_spatial.py` | DuckDB spatial extension | `duckdb_functions()` before and after `LOAD spatial` | `implementations/duckdb-spatial-extension/` |
-| `rustgis.py` | RustGIS | `rustgis.Session().tools()` (PyPI package) | `implementations/rustgis/` |
+| `rustgis_tools.py` | RustGIS | `rustgis.Session().tools()` (PyPI package) | `implementations/rustgis/` |
 | `arcgis_pro_export.py` + `arcgis_pro.py` | ArcGIS Pro | ArcPy (`ListTools`, `GetParameterInfo`), on a machine with Pro | `implementations/arcgis-pro/` |
 
 DuckDB spatial and RustGIS run only in the Engines workflow: DuckDB downloads its
