@@ -1,0 +1,9 @@
+id: whiteboxtools-fill-depressions-wang-and-liu
+implements: fill-sinks
+crosswalk:
+  raster: dem
+  output: output
+differences:
+  - Wang and Liu's priority-flood method; fix_flats adds a small gradient across flats.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

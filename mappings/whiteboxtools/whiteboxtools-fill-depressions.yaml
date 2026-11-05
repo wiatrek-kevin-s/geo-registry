@@ -5,5 +5,6 @@ crosswalk:
   output: output
 differences:
   - fix_flats (default true) adds a small gradient across flats; max_depth limits how deep a depression is filled.
+  - "WhiteboxTools 2.4.0: in the equivalence tests this tool panicked ('Error unwrapping output') in about a third of runs on a 20 by 20 raster, at random; FillDepressionsWangAndLiu and FillDepressionsPlanchonAndDarboux did not."
 effects: { modifies_input: false, network: false }
 review: { state: draft }

@@ -14,8 +14,9 @@ argument, a unit or value translated wrongly) shows up as a failure; an
 engine that cannot honour a canonical value (`unsupported`, `fixed`) is
 reported as skipped with the reason, which is the documented difference.
 A behaviour difference these tests found and the mapping records (a smoothed
-contour, a grid one cell short) is listed in KNOWN_DIFFERENCES and reported as
-"differs" with the reason, not as a failure.
+contour, a grid one cell short) is listed in KNOWN_DIFFERENCES, and an engine bug
+they hit at random in KNOWN_ERRORS (matched on the error's text); both are reported
+as "differs" with the reason, not as a failure.
 
 Engines not available on this machine are skipped. Needs geopandas and
 shapely in the running Python (rasterio, rioxarray, xarray-spatial, rasterstats
@@ -340,6 +341,14 @@ KNOWN_DIFFERENCES = {
         "without radius or min_points every cell is nodata",
     ("grass-r-watershed", "plane draining west"):
         "cells on the region's border drain straight out of it and do not feed their neighbours",
+}
+
+
+# Engine bugs the tests hit at random, recorded on the mapping: an error containing this
+# text is reported as "differs" with the reason instead of failing. (implementation id, case title)
+KNOWN_ERRORS = {
+    ("whiteboxtools-fill-depressions", "a plane has no sinks"): (
+        "Error unwrapping 'output'", "WhiteboxTools 2.4.0's FillDepressions panics at random on small rasters"),
 }
 
 
@@ -1015,6 +1024,10 @@ def main() -> int:
             except Unsupported as e:
                 rows.append((case, impl["id"], "skipped", str(e)))
             except Exception as e:  # noqa: BLE001 - any engine error is a failure to report
+                text, reason = KNOWN_ERRORS.get((impl["id"], case.title), (None, None))
+                if text and text in str(e):
+                    rows.append((case, impl["id"], "differs", f"engine error: {reason}"))
+                    continue
                 rows.append((case, impl["id"], "FAIL", f"{type(e).__name__}: {e}"[:300]))
                 failed += 1
         if any(math.isnan(v) for _, v in results):
