@@ -1,0 +1,20 @@
+id: grass-r-fillnulls
+kind: implementation
+name: r.fillnulls
+software: grass
+call: {interface: cli, name: r.fillnulls}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  method: {type: string, required: true, default: rst, values: [bilinear, bicubic, rst]}
+  tension: {type: float, default: 40.0}
+  smooth: {type: float, default: 0.1}
+  edge: {type: integer, default: 3, values: [2-100]}
+  npmin: {type: integer, default: 600, values: [2-10000]}
+  segmax: {type: integer, default: 300, values: [2-10000]}
+  lambda: {type: float, default: 0.01}
+  memory: {type: integer, default: 300}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

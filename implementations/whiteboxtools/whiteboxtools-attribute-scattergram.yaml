@@ -1,0 +1,14 @@
+id: whiteboxtools-attribute-scattergram
+kind: implementation
+name: AttributeScattergram
+software: whiteboxtools
+call: {interface: cli, name: AttributeScattergram}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Vector:Any', required: true}
+  fieldx: {type: VectorAttributeField, required: true}
+  fieldy: {type: VectorAttributeField, required: true}
+  output: {type: 'NewFile:Html', required: true, note: output}
+  trendline: {type: Boolean, default: 'false'}
+status: active
+review: {state: harvested, source: whitebox}

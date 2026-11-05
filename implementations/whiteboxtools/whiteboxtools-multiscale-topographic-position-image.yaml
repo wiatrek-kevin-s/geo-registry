@@ -1,0 +1,15 @@
+id: whiteboxtools-multiscale-topographic-position-image
+kind: implementation
+name: MultiscaleTopographicPositionImage
+software: whiteboxtools
+call: {interface: cli, name: MultiscaleTopographicPositionImage}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  local: {type: 'ExistingFile:Raster', required: true}
+  meso: {type: 'ExistingFile:Raster', required: true}
+  broad: {type: 'ExistingFile:Raster', required: true}
+  hillshade: {type: 'ExistingFile:Raster'}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  lightness: {type: Float, default: '1.2'}
+status: active
+review: {state: harvested, source: whitebox}

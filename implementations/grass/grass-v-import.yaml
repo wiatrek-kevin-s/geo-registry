@@ -1,0 +1,21 @@
+id: grass-v-import
+kind: implementation
+name: v.import
+software: grass
+call: {interface: cli, name: v.import}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: datasource name}
+  layer: {type: string, note: datasource_layer name; multiple values}
+  output: {type: string, note: output vector}
+  extent: {type: string, default: input, values: [input, region]}
+  encoding: {type: string}
+  snap: {type: float, default: -1.0}
+  epsg: {type: integer, values: [1-1000000]}
+  datum_trans: {type: integer, values: [-1-100]}
+  flag_f: {type: boolean, note: flag -f}
+  flag_l: {type: boolean, note: flag -l}
+  flag_o: {type: boolean, note: flag -o}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,21 @@
+id: qgis-gdal-gridaverage
+kind: implementation
+name: gdal:gridaverage
+software: qgis
+call: {interface: qgis-process, name: 'gdal:gridaverage'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ANGLE: {type: number, required: true, default: 0.0}
+  CREATION_OPTIONS: {type: string, default: ''}
+  DATA_TYPE: {type: enum, required: true, default: 5, values: [0, 1, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9], note: '0 Byte, 1 Int16,
+      10 CFloat64, 11 Int8, 2 UInt16, 3 UInt32, 4 Int32, 5 Float32, 6 Float64, 7 CInt16, 8 CInt32, 9 CFloat32'}
+  EXTRA: {type: string}
+  INPUT: {type: source, required: true}
+  MIN_POINTS: {type: number, required: true, default: 0}
+  NODATA: {type: number, required: true, default: 0.0}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  RADIUS_1: {type: number, required: true, default: 0.0}
+  RADIUS_2: {type: number, required: true, default: 0.0}
+  Z_FIELD: {type: field}
+status: active
+review: {state: harvested, source: qgis}

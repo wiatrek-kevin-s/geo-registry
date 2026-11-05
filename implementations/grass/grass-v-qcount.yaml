@@ -1,0 +1,16 @@
+id: grass-v-qcount
+kind: implementation
+name: v.qcount
+software: grass
+call: {interface: cli, name: v.qcount}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '-1', note: layer_all name}
+  output: {type: string, note: output vector}
+  nquadrats: {type: integer, required: true}
+  radius: {type: float, required: true}
+  flag_g: {type: boolean, note: flag -g}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

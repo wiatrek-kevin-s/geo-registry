@@ -1,0 +1,12 @@
+id: whiteboxtools-count-if
+kind: implementation
+name: CountIf
+software: whiteboxtools
+call: {interface: cli, name: CountIf}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  inputs: {type: 'FileList:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  value: {type: Float, required: true}
+status: active
+review: {state: harvested, source: whitebox}

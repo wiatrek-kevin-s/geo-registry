@@ -1,0 +1,12 @@
+id: grass-g-download-project
+kind: implementation
+name: g.download.project
+software: grass
+call: {interface: cli, name: g.download.project}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  url: {type: string, required: true}
+  name: {type: string, note: location name}
+  path: {type: string, note: dbase name}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,14 @@
+id: qgis-native-filterbygeometry
+kind: implementation
+name: native:filterbygeometry
+software: qgis
+call: {interface: qgis-process, name: 'native:filterbygeometry'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  LINES: {type: sink, note: output}
+  NO_GEOMETRY: {type: sink, note: output}
+  POINTS: {type: sink, note: output}
+  POLYGONS: {type: sink, note: output}
+status: active
+review: {state: harvested, source: qgis}

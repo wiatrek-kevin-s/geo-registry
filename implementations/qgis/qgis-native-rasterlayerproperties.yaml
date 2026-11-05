@@ -1,0 +1,11 @@
+id: qgis-native-rasterlayerproperties
+kind: implementation
+name: native:rasterlayerproperties
+software: qgis
+call: {interface: qgis-process, name: 'native:rasterlayerproperties'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BAND: {type: band}
+  INPUT: {type: raster, required: true}
+status: active
+review: {state: harvested, source: qgis}

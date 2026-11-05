@@ -1,0 +1,14 @@
+id: whiteboxtools-lidar-thin-high-density
+kind: implementation
+name: LidarThinHighDensity
+software: whiteboxtools
+call: {interface: cli, name: LidarThinHighDensity}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar', required: true}
+  output: {type: 'NewFile:Lidar', required: true, note: output}
+  resolution: {type: Float, default: '1.0'}
+  density: {type: Float, required: true}
+  save_filtered: {type: Boolean, default: 'false'}
+status: active
+review: {state: harvested, source: whitebox}

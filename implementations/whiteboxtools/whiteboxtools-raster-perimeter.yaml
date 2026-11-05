@@ -1,0 +1,14 @@
+id: whiteboxtools-raster-perimeter
+kind: implementation
+name: RasterPerimeter
+software: whiteboxtools
+call: {interface: cli, name: RasterPerimeter}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', note: output}
+  out_text: {type: Boolean, required: true}
+  units: {type: OptionList, default: grid cells, values: [grid cells, map units]}
+  zero_back: {type: Boolean, required: true}
+status: active
+review: {state: harvested, source: whitebox}

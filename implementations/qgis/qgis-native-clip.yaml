@@ -1,0 +1,12 @@
+id: qgis-native-clip
+kind: implementation
+name: native:clip
+software: qgis
+call: {interface: qgis-process, name: 'native:clip'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  OVERLAY: {type: source, required: true}
+status: active
+review: {state: harvested, source: qgis}

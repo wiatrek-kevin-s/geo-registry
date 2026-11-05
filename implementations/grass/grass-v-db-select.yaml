@@ -1,0 +1,24 @@
+id: grass-v-db-select
+kind: implementation
+name: v.db.select
+software: grass
+call: {interface: cli, name: v.db.select}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '1', note: layer name}
+  columns: {type: string, note: dbcolumn name; multiple values}
+  where: {type: string, note: sql_query name}
+  group: {type: string}
+  format: {type: string, required: true, default: plain, values: [plain, csv, json, vertical]}
+  separator: {type: string, note: separator name}
+  vertical_separator: {type: string, note: separator name}
+  null_value: {type: string}
+  file: {type: string, note: output file}
+  flag_r: {type: boolean, note: flag -r}
+  flag_c: {type: boolean, note: flag -c}
+  flag_e: {type: boolean, note: flag -e}
+  flag_f: {type: boolean, note: flag -f}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

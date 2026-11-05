@@ -1,0 +1,12 @@
+id: whiteboxtools-atan2
+kind: implementation
+name: Atan2
+software: whiteboxtools
+call: {interface: cli, name: Atan2}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input_y: {type: 'ExistingFileOrFloat:Raster', required: true}
+  input_x: {type: 'ExistingFileOrFloat:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

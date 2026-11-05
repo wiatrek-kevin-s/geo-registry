@@ -1,0 +1,12 @@
+id: qgis-native-raisewarning
+kind: implementation
+name: native:raisewarning
+software: qgis
+call: {interface: qgis-process, name: 'native:raisewarning'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CONDITION: {type: expression}
+  MESSAGE: {type: string, required: true}
+notes: Deprecated in QGIS.
+status: active
+review: {state: harvested, source: qgis}

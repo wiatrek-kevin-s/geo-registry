@@ -1,0 +1,15 @@
+id: qgis-native-httprequest
+kind: implementation
+name: native:httprequest
+software: qgis
+call: {interface: qgis-process, name: 'native:httprequest'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  AUTH_CONFIG: {type: authcfg}
+  DATA: {type: string}
+  FAIL_ON_ERROR: {type: boolean, required: true, default: false}
+  METHOD: {type: enum, required: true, default: 0, values: [0, 1], note: '0 GET, 1 POST'}
+  OUTPUT: {type: fileDestination, note: output}
+  URL: {type: string, required: true}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,16 @@
+id: qgis-native-dbscanclustering
+kind: implementation
+name: native:dbscanclustering
+software: qgis
+call: {interface: qgis-process, name: 'native:dbscanclustering'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  DBSCAN*: {type: boolean, required: true, default: false}
+  EPS: {type: distance, required: true, default: 1}
+  FIELD_NAME: {type: string, required: true, default: CLUSTER_ID}
+  INPUT: {type: source, required: true}
+  MIN_SIZE: {type: number, required: true, default: 5}
+  OUTPUT: {type: sink, required: true, note: output}
+  SIZE_FIELD_NAME: {type: string, required: true, default: CLUSTER_SIZE}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,11 @@
+id: qgis-native-b3dmtogltf
+kind: implementation
+name: native:b3dmtogltf
+software: qgis
+call: {interface: qgis-process, name: 'native:b3dmtogltf'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: file, required: true}
+  OUTPUT: {type: fileDestination, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

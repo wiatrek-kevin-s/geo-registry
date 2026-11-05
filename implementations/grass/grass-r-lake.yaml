@@ -1,0 +1,17 @@
+id: grass-r-lake
+kind: implementation
+name: r.lake
+software: grass
+call: {interface: cli, name: r.lake}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  elevation: {type: string, required: true, note: cell name}
+  water_level: {type: float, required: true}
+  lake: {type: string, note: output cell}
+  coordinates: {type: float, note: coords name}
+  seed: {type: string, note: cell name}
+  flag_n: {type: boolean, note: flag -n}
+  flag_o: {type: boolean, note: flag -o}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

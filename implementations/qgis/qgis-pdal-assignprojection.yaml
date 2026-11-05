@@ -1,0 +1,13 @@
+id: qgis-pdal-assignprojection
+kind: implementation
+name: pdal:assignprojection
+software: qgis
+call: {interface: qgis-process, name: 'pdal:assignprojection'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CRS: {type: crs, required: true, default: 'EPSG:4326'}
+  INPUT: {type: pointcloud, required: true}
+  OUTPUT: {type: pointCloudDestination, required: true, note: output}
+  VPC_OUTPUT_FORMAT: {type: enum, required: true, default: COPC, values: [0, 1, 2], note: '0 COPC, 1 LAZ, 2 LAS'}
+status: active
+review: {state: harvested, source: qgis}

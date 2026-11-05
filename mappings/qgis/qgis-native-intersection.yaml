@@ -1,0 +1,8 @@
+id: qgis-native-intersection
+implements: intersect
+crosswalk:
+  a: INPUT
+  b: OVERLAY
+  output: OUTPUT
+effects: { modifies_input: false, network: false }
+review: { state: draft }

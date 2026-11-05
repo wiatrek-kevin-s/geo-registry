@@ -1,0 +1,13 @@
+id: whiteboxtools-extend-vector-lines
+kind: implementation
+name: ExtendVectorLines
+software: whiteboxtools
+call: {interface: cli, name: ExtendVectorLines}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Vector:Line', required: true}
+  output: {type: 'NewFile:Vector:Line', required: true, note: output}
+  dist: {type: Float, required: true}
+  extend: {type: OptionList, default: both ends, values: [both ends, line start, line end]}
+status: active
+review: {state: harvested, source: whitebox}

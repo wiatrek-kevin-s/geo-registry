@@ -1,0 +1,13 @@
+id: grass-t-unregister
+kind: implementation
+name: t.unregister
+software: grass
+call: {interface: cli, name: t.unregister}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, note: stds name}
+  file: {type: string, note: file name}
+  type: {type: string, default: raster, values: [raster, vector, raster_3d]}
+  maps: {type: string, note: map name; multiple values}
+status: active
+review: {state: harvested, source: grass}

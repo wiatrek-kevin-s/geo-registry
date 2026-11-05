@@ -1,0 +1,13 @@
+id: grass-d-geodesic
+kind: implementation
+name: d.geodesic
+software: grass
+call: {interface: cli, name: d.geodesic}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  coordinates: {type: float, required: true, note: coords name}
+  line_color: {type: string, default: black, note: color name}
+  text_color: {type: string, note: color name}
+  units: {type: string, default: meters, values: [meters, kilometers, feet, miles]}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,18 @@
+id: grass-t-sample
+kind: implementation
+name: t.sample
+software: grass
+call: {interface: cli, name: t.sample}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  inputs: {type: string, required: true, note: stds name; multiple values}
+  sample: {type: string, required: true, note: stds name}
+  intype: {type: string, default: strds, values: [strds, stvds, str3ds]}
+  samtype: {type: string, default: strds, values: [strds, stvds, str3ds]}
+  method: {type: string, default: 'during,overlap,contain,equal', values: [start, during, overlap, contain, equal, follows,
+      precedes], note: multiple values}
+  separator: {type: string, default: pipe, note: separator name}
+  flag_c: {type: boolean, note: flag -c}
+  flag_s: {type: boolean, note: flag -s}
+status: active
+review: {state: harvested, source: grass}

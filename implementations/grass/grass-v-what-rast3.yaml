@@ -1,0 +1,14 @@
+id: grass-v-what-rast3
+kind: implementation
+name: v.what.rast3
+software: grass
+call: {interface: cli, name: v.what.rast3}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '1', note: layer name}
+  raster_3d: {type: string, required: true, note: grid3 name}
+  column: {type: string, required: true, note: dbcolumn name}
+  where: {type: string, note: sql_query name}
+status: active
+review: {state: harvested, source: grass}

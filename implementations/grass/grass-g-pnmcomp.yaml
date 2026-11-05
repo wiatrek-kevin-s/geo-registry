@@ -1,0 +1,18 @@
+id: grass-g-pnmcomp
+kind: implementation
+name: g.pnmcomp
+software: grass
+call: {interface: cli, name: g.pnmcomp}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: file name; multiple values}
+  mask: {type: string, note: file name; multiple values}
+  opacity: {type: float, note: multiple values}
+  output: {type: string, required: true, note: output file}
+  output_mask: {type: string, note: output file}
+  width: {type: integer, required: true}
+  height: {type: integer, required: true}
+  bgcolor: {type: string, note: color name}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

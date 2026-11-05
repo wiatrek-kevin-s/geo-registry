@@ -1,0 +1,16 @@
+id: qgis-qgis-barplot
+kind: implementation
+name: qgis:barplot
+software: qgis
+call: {interface: qgis-process, name: 'qgis:barplot'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  NAME_FIELD: {type: field, required: true}
+  OUTPUT: {type: fileDestination, required: true, note: output}
+  TITLE: {type: string}
+  VALUE_FIELD: {type: field, required: true}
+  XAXIS_TITLE: {type: string}
+  YAXIS_TITLE: {type: string}
+status: active
+review: {state: harvested, source: qgis}

@@ -185,7 +185,8 @@ An implementation is one engine's tool: `gdal vector buffer`, `shapely.buffer`,
 engine to describe its own tools (GDAL's `--json-usage`, PostGIS's catalogue, Python
 introspection) and writes `implementations/<software>/<id>.yaml` with the parameters,
 types, defaults, choices and, for SQL, every overload. Today: GDAL, PDAL, PostGIS
-(geometry and raster), Shapely and GeoPandas, about 1,040 tools. See
+(geometry and raster), Shapely, GeoPandas, QGIS Processing, GRASS and WhiteboxTools,
+about 2,490 tools; ArcGIS Pro has a harvester that runs on a machine with Pro. See
 [harvest/README.md](harvest/README.md).
 
 What a person knows goes in `mappings/<software>/<id>.yaml`, merged at build time:
@@ -218,9 +219,10 @@ review: { state: draft }
 - Validation checks every crosswalk against both sides: the operation's parameters and
   the engine's harvested ones. After a re-harvest, a stale mapping fails with the file
   and the parameter.
-- `checks/equivalence.py` runs every mapped GDAL, Shapely, GeoPandas and PostGIS
-  implementation on the same small inputs and compares the results; an engine that cannot
-  honour a value is reported as skipped with the reason.
+- `checks/equivalence.py` runs every mapped GDAL, Shapely, GeoPandas, PostGIS, QGIS and
+  WhiteboxTools implementation on the same small inputs (vector shapes, a tilted elevation
+  raster) and compares the results; an engine that cannot honour a value is reported as
+  skipped with the reason.
 
 Search them with `geo-registry search "buffer" --kind implementation`.
 

@@ -1,0 +1,13 @@
+id: qgis-native-printlayoutmapextenttolayer
+kind: implementation
+name: native:printlayoutmapextenttolayer
+software: qgis
+call: {interface: qgis-process, name: 'native:printlayoutmapextenttolayer'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CRS: {type: crs}
+  LAYOUT: {type: layout, required: true}
+  MAP: {type: layoutitem}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,30 @@
+id: grass-v-lrs-label
+kind: implementation
+name: v.lrs.label
+software: grass
+call: {interface: cli, name: v.lrs.label}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  output: {type: string, required: true, note: output vector}
+  llayer: {type: string, default: '1', note: layer name}
+  rsdriver: {type: string, default: sqlite, values: [dbf, ogr, pg, sqlite]}
+  rsdatabase: {type: string, default: $GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db}
+  rstable: {type: string, required: true}
+  labels: {type: string, note: output paint/labels}
+  offset: {type: string, default: '50,100,25,25', note: multiple values}
+  xoffset: {type: float, default: 25.0}
+  yoffset: {type: float, default: 5.0}
+  reference: {type: string, default: center, values: [center, left, right, upper, lower]}
+  font: {type: string, default: standard}
+  size: {type: integer, default: 100, values: [1-1000]}
+  color: {type: string, default: black, note: color name}
+  width: {type: integer, default: 1, values: [1-100]}
+  highlight_color: {type: string, default: none, note: color_none name}
+  highlight_width: {type: integer, default: 0, values: [0-100]}
+  bgcolor: {type: string, default: none, note: color_none name}
+  border: {type: string, default: none, note: color_none name}
+  opaque: {type: string, default: 'yes', values: ['yes', 'no']}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

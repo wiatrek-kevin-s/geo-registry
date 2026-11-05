@@ -1,0 +1,15 @@
+id: qgis-gdal-nearblack
+kind: implementation
+name: gdal:nearblack
+software: qgis
+call: {interface: qgis-process, name: 'gdal:nearblack'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CREATION_OPTIONS: {type: string, default: ''}
+  EXTRA: {type: string}
+  INPUT: {type: raster, required: true}
+  NEAR: {type: number, required: true, default: 15}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  WHITE: {type: boolean, required: true, default: false}
+status: active
+review: {state: harvested, source: qgis}

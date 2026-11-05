@@ -1,0 +1,13 @@
+id: grass-d-labels
+kind: implementation
+name: d.labels
+software: grass
+call: {interface: cli, name: d.labels}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  labels: {type: string, required: true, note: paint/labels name}
+  minreg: {type: float}
+  maxreg: {type: float}
+  flag_i: {type: boolean, note: flag -i}
+status: active
+review: {state: harvested, source: grass}

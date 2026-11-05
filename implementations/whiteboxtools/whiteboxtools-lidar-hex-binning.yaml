@@ -1,0 +1,13 @@
+id: whiteboxtools-lidar-hex-binning
+kind: implementation
+name: LidarHexBinning
+software: whiteboxtools
+call: {interface: cli, name: LidarHexBinning}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar', required: true}
+  output: {type: 'NewFile:Vector:Polygon', required: true, note: output}
+  width: {type: Float, required: true}
+  orientation: {type: OptionList, default: horizontal, values: [horizontal, vertical]}
+status: active
+review: {state: harvested, source: whitebox}

@@ -1,0 +1,13 @@
+id: qgis-native-orthogonalize
+kind: implementation
+name: native:orthogonalize
+software: qgis
+call: {interface: qgis-process, name: 'native:orthogonalize'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ANGLE_TOLERANCE: {type: number, required: true, default: 15.0}
+  INPUT: {type: source, required: true}
+  MAX_ITERATIONS: {type: number, required: true, default: 1000}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

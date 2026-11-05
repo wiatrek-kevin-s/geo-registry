@@ -1,0 +1,14 @@
+id: grass-g-gui-photo2image
+kind: implementation
+name: g.gui.photo2image
+software: grass
+call: {interface: cli, name: g.gui.photo2image}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  group: {type: string, required: true, note: group name}
+  raster: {type: string, required: true, note: cell name}
+  camera: {type: string, required: true}
+  order: {type: string, required: true, default: '1'}
+  extension: {type: string, required: true, default: _ip2i_out}
+status: active
+review: {state: harvested, source: grass}

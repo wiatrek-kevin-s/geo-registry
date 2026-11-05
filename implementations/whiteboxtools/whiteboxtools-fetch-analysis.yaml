@@ -1,0 +1,13 @@
+id: whiteboxtools-fetch-analysis
+kind: implementation
+name: FetchAnalysis
+software: whiteboxtools
+call: {interface: cli, name: FetchAnalysis}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  azimuth: {type: Float, default: '0.0'}
+  hgt_inc: {type: Float, default: '0.05'}
+status: active
+review: {state: harvested, source: whitebox}

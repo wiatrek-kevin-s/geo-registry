@@ -1,0 +1,23 @@
+id: grass-v-category
+kind: implementation
+name: v.category
+software: grass
+call: {interface: cli, name: v.category}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '1', note: layer name; multiple values}
+  type: {type: string, default: 'point,line,centroid,face', values: [point, line, boundary, centroid, area, face, kernel],
+    note: multiple values}
+  ids: {type: string}
+  output: {type: string, note: output vector}
+  option: {type: string, required: true, values: [add, del, chlayer, sum, report, print, layers, transfer]}
+  cat: {type: integer, default: 1, note: cat name}
+  step: {type: integer, default: 1}
+  format: {type: string, required: true, default: plain, values: [plain, csv, json]}
+  separator: {type: string, note: separator name}
+  flag_g: {type: boolean, note: flag -g}
+  flag_t: {type: boolean, note: flag -t}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

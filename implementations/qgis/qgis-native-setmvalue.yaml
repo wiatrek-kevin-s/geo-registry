@@ -1,0 +1,12 @@
+id: qgis-native-setmvalue
+kind: implementation
+name: native:setmvalue
+software: qgis
+call: {interface: qgis-process, name: 'native:setmvalue'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  M_VALUE: {type: number, required: true, default: 0.0}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

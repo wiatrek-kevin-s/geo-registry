@@ -1,0 +1,18 @@
+id: qgis-native-stdbscanclustering
+kind: implementation
+name: native:stdbscanclustering
+software: qgis
+call: {interface: qgis-process, name: 'native:stdbscanclustering'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  DATETIME_FIELD: {type: field, required: true}
+  DBSCAN*: {type: boolean, default: false}
+  EPS: {type: distance, required: true, default: 1}
+  EPS2: {type: duration, required: true, default: 0}
+  FIELD_NAME: {type: string, required: true, default: CLUSTER_ID}
+  INPUT: {type: source, required: true}
+  MIN_SIZE: {type: number, required: true, default: 5}
+  OUTPUT: {type: sink, required: true, note: output}
+  SIZE_FIELD_NAME: {type: string, required: true, default: CLUSTER_SIZE}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,13 @@
+id: whiteboxtools-wilcoxon-signed-rank-test
+kind: implementation
+name: WilcoxonSignedRankTest
+software: whiteboxtools
+call: {interface: cli, name: WilcoxonSignedRankTest}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input1: {type: 'ExistingFile:Raster', required: true}
+  input2: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Html', required: true, note: output}
+  num_samples: {type: Integer}
+status: active
+review: {state: harvested, source: whitebox}

@@ -1,0 +1,16 @@
+id: grass-v-db-update
+kind: implementation
+name: v.db.update
+software: grass
+call: {interface: cli, name: v.db.update}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: vector name}
+  layer: {type: string, required: true, default: '1', note: layer name}
+  column: {type: string, required: true, note: dbcolumn name}
+  value: {type: string}
+  query_column: {type: string, note: dbcolumn name}
+  where: {type: string, note: sql_query name}
+  sqliteextra: {type: string, note: bin name}
+status: active
+review: {state: harvested, source: grass}

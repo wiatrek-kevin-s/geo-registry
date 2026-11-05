@@ -1,0 +1,13 @@
+id: grass-v-out-dxf
+kind: implementation
+name: v.out.dxf
+software: grass
+call: {interface: cli, name: v.out.dxf}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '-1', note: layer_all name}
+  output: {type: string, required: true, note: output file}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

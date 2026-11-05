@@ -1,0 +1,18 @@
+id: qgis-native-buffer
+kind: implementation
+name: native:buffer
+software: qgis
+call: {interface: qgis-process, name: 'native:buffer'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  DISSOLVE: {type: boolean, required: true, default: false}
+  DISTANCE: {type: distance, required: true, default: 10}
+  END_CAP_STYLE: {type: enum, required: true, default: 0, values: [0, 1, 2], note: '0 Round, 1 Flat, 2 Square'}
+  INPUT: {type: source, required: true}
+  JOIN_STYLE: {type: enum, required: true, default: 0, values: [0, 1, 2], note: '0 Round, 1 Miter, 2 Bevel'}
+  MITER_LIMIT: {type: number, required: true, default: 2}
+  OUTPUT: {type: sink, required: true, note: output}
+  SEGMENTS: {type: number, required: true, default: 5}
+  SEPARATE_DISJOINT: {type: boolean, required: true, default: false}
+status: active
+review: {state: harvested, source: qgis}

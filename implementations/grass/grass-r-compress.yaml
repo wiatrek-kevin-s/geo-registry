@@ -1,0 +1,13 @@
+id: grass-r-compress
+kind: implementation
+name: r.compress
+software: grass
+call: {interface: cli, name: r.compress}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: cell name; multiple values}
+  flag_u: {type: boolean, note: flag -u}
+  flag_p: {type: boolean, note: flag -p}
+  flag_g: {type: boolean, note: flag -g}
+status: active
+review: {state: harvested, source: grass}

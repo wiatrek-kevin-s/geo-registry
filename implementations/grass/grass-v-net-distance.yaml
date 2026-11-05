@@ -1,0 +1,27 @@
+id: grass-v-net-distance
+kind: implementation
+name: v.net.distance
+software: grass
+call: {interface: cli, name: v.net.distance}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  output: {type: string, required: true, note: output vector}
+  arc_layer: {type: string, default: '1', note: layer name}
+  arc_type: {type: string, default: 'line,boundary', values: [line, boundary], note: multiple values}
+  node_layer: {type: string, default: '2', note: layer name}
+  from_layer: {type: string, default: '1', note: layer name}
+  from_cats: {type: string, note: cats name}
+  from_where: {type: string, note: sql_query name}
+  to_layer: {type: string, default: '1', note: layer name}
+  to_type: {type: string, default: point, values: [point, line, boundary], note: multiple values}
+  to_cats: {type: string, note: cats name}
+  to_where: {type: string, note: sql_query name}
+  arc_column: {type: string, note: dbcolumn name}
+  arc_backward_column: {type: string, note: dbcolumn name}
+  node_column: {type: string, note: dbcolumn name}
+  flag_g: {type: boolean, note: flag -g}
+  flag_l: {type: boolean, note: flag -l}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

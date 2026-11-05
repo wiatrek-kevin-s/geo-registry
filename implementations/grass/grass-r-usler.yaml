@@ -1,0 +1,13 @@
+id: grass-r-usler
+kind: implementation
+name: r.usler
+software: grass
+call: {interface: cli, name: r.usler}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  method: {type: string, required: true, default: morgan, values: [roose, morgan, foster, elswaify]}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

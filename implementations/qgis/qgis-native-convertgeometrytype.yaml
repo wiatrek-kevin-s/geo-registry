@@ -1,0 +1,13 @@
+id: qgis-native-convertgeometrytype
+kind: implementation
+name: native:convertgeometrytype
+software: qgis
+call: {interface: qgis-process, name: 'native:convertgeometrytype'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  TYPE: {type: enum, required: true, values: [0, 1, 2, 3, 4], note: '0 Centroids, 1 Nodes, 2 Linestrings, 3 Multilinestrings,
+      4 Polygons'}
+status: active
+review: {state: harvested, source: qgis}

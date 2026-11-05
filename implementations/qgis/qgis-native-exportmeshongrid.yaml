@@ -1,0 +1,18 @@
+id: qgis-native-exportmeshongrid
+kind: implementation
+name: native:exportmeshongrid
+software: qgis
+call: {interface: qgis-process, name: 'native:exportmeshongrid'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CRS_OUTPUT: {type: crs}
+  DATASET_GROUPS: {type: meshdatasetgroups, required: true, note: 'default []'}
+  DATASET_TIME: {type: meshdatasettime, required: true}
+  EXTENT: {type: extent}
+  GRID_SPACING: {type: distance, required: true, default: 10}
+  INPUT: {type: mesh, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  VECTOR_OPTION: {type: enum, required: true, default: 0, values: [0, 1, 2], note: '0 Cartesian (x,y), 1 Polar (magnitude,degree),
+      2 Cartesian and Polar'}
+status: active
+review: {state: harvested, source: qgis}

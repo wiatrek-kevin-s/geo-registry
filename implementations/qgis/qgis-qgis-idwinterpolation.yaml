@@ -1,0 +1,14 @@
+id: qgis-qgis-idwinterpolation
+kind: implementation
+name: qgis:idwinterpolation
+software: qgis
+call: {interface: qgis-process, name: 'qgis:idwinterpolation'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  DISTANCE_COEFFICIENT: {type: number, required: true, default: 2.0}
+  EXTENT: {type: extent, required: true}
+  INTERPOLATION_DATA: {type: idw_interpolation_data, required: true}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  PIXEL_SIZE: {type: number, required: true, default: 0.1}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,20 @@
+id: grass-t-register
+kind: implementation
+name: t.register
+software: grass
+call: {interface: cli, name: t.register}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, note: stds name}
+  maps: {type: string, note: map name; multiple values}
+  type: {type: string, default: raster, values: [raster, vector, raster_3d]}
+  file: {type: string, note: file name}
+  start: {type: string}
+  end: {type: string}
+  unit: {type: string, values: [years, months, days, hours, minutes, seconds]}
+  increment: {type: string}
+  separator: {type: string, default: pipe, note: separator name}
+  flag_i: {type: boolean, note: flag -i}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

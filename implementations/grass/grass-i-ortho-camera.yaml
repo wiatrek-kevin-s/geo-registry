@@ -1,0 +1,16 @@
+id: grass-i-ortho-camera
+kind: implementation
+name: i.ortho.camera
+software: grass
+call: {interface: cli, name: i.ortho.camera}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  group: {type: string, note: group name}
+  camera: {type: string, required: true, note: camera name}
+  name: {type: string}
+  id: {type: string}
+  clf: {type: float}
+  pp: {type: float, note: coords name}
+  fid: {type: float, note: coords name; multiple values}
+status: active
+review: {state: harvested, source: grass}

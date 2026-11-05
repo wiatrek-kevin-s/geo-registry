@@ -1,0 +1,14 @@
+id: qgis-native-smoothgeometry
+kind: implementation
+name: native:smoothgeometry
+software: qgis
+call: {interface: qgis-process, name: 'native:smoothgeometry'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  ITERATIONS: {type: number, required: true, default: 1}
+  MAX_ANGLE: {type: number, required: true, default: 180.0}
+  OFFSET: {type: number, required: true, default: 0.25}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

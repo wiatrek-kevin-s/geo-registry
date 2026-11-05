@@ -1,0 +1,20 @@
+id: qgis-native-reclassifybytable
+kind: implementation
+name: native:reclassifybytable
+software: qgis
+call: {interface: qgis-process, name: 'native:reclassifybytable'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CREATION_OPTIONS: {type: string}
+  DATA_TYPE: {type: enum, required: true, default: 5, values: [0, 1, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9], note: '0 Byte, 1 Int16,
+      10 CFloat64, 11 Int8, 2 UInt16, 3 Int32, 4 UInt32, 5 Float32, 6 Float64, 7 CInt16, 8 CInt32, 9 CFloat32'}
+  INPUT_RASTER: {type: raster, required: true}
+  NODATA_FOR_MISSING: {type: boolean, required: true, default: false}
+  NO_DATA: {type: number, required: true, default: -9999}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  RANGE_BOUNDARIES: {type: enum, required: true, default: 0, values: [0, 1, 2, 3], note: '0 min < value <= max, 1 min <= value
+      < max, 2 min <= value <= max, 3 min < value < max'}
+  RASTER_BAND: {type: band, required: true, default: 1}
+  TABLE: {type: matrix, required: true}
+status: active
+review: {state: harvested, source: qgis}

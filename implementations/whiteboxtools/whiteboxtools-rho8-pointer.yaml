@@ -1,0 +1,12 @@
+id: whiteboxtools-rho8-pointer
+kind: implementation
+name: Rho8Pointer
+software: whiteboxtools
+call: {interface: cli, name: Rho8Pointer}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  esri_pntr: {type: Boolean, default: 'false'}
+status: active
+review: {state: harvested, source: whitebox}

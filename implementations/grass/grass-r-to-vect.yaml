@@ -1,0 +1,20 @@
+id: grass-r-to-vect
+kind: implementation
+name: r.to.vect
+software: grass
+call: {interface: cli, name: r.to.vect}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output vector}
+  type: {type: string, required: true, values: [point, line, area]}
+  column: {type: string, default: value, note: dbcolumn name}
+  flag_s: {type: boolean, note: flag -s}
+  flag_v: {type: boolean, note: flag -v}
+  flag_z: {type: boolean, note: flag -z}
+  flag_b: {type: boolean, note: flag -b}
+  flag_c: {type: boolean, note: flag -c}
+  flag_t: {type: boolean, note: flag -t}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,14 @@
+id: grass-r-buildvrt
+kind: implementation
+name: r.buildvrt
+software: grass
+call: {interface: cli, name: r.buildvrt}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, note: cell name; multiple values}
+  file: {type: string, note: file name}
+  output: {type: string, required: true, note: output cell}
+  title: {type: string}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

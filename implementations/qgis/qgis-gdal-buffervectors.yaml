@@ -1,0 +1,17 @@
+id: qgis-gdal-buffervectors
+kind: implementation
+name: gdal:buffervectors
+software: qgis
+call: {interface: qgis-process, name: 'gdal:buffervectors'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  DISSOLVE: {type: boolean, required: true, default: false}
+  DISTANCE: {type: distance, required: true, default: 10.0}
+  EXPLODE_COLLECTIONS: {type: boolean, required: true, default: false}
+  FIELD: {type: field}
+  GEOMETRY: {type: string, required: true, default: geometry}
+  INPUT: {type: source, required: true}
+  OPTIONS: {type: string, default: ''}
+  OUTPUT: {type: vectorDestination, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

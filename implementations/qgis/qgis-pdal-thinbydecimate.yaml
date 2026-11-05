@@ -1,0 +1,15 @@
+id: qgis-pdal-thinbydecimate
+kind: implementation
+name: pdal:thinbydecimate
+software: qgis
+call: {interface: qgis-process, name: 'pdal:thinbydecimate'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  FILTER_EXPRESSION: {type: expression}
+  FILTER_EXTENT: {type: extent}
+  INPUT: {type: pointcloud, required: true}
+  OUTPUT: {type: pointCloudDestination, required: true, note: output}
+  POINTS_NUMBER: {type: number, required: true, default: 1}
+  VPC_OUTPUT_FORMAT: {type: enum, required: true, default: COPC, values: [0, 1, 2], note: '0 COPC, 1 LAZ, 2 LAS'}
+status: active
+review: {state: harvested, source: qgis}

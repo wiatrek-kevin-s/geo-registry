@@ -1,0 +1,19 @@
+id: qgis-native-hublines
+kind: implementation
+name: native:hublines
+software: qgis
+call: {interface: qgis-process, name: 'native:hublines'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ANTIMERIDIAN_SPLIT: {type: boolean, required: true, default: false}
+  GEODESIC: {type: boolean, required: true, default: false}
+  GEODESIC_DISTANCE: {type: distance, required: true, default: 1000}
+  HUBS: {type: source, required: true}
+  HUB_FIELD: {type: field, required: true}
+  HUB_FIELDS: {type: field, note: multiple values}
+  OUTPUT: {type: sink, required: true, note: output}
+  SPOKES: {type: source, required: true}
+  SPOKE_FIELD: {type: field, required: true}
+  SPOKE_FIELDS: {type: field, note: multiple values}
+status: active
+review: {state: harvested, source: qgis}

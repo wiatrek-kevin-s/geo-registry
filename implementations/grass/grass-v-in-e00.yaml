@@ -1,0 +1,13 @@
+id: grass-v-in-e00
+kind: implementation
+name: v.in.e00
+software: grass
+call: {interface: cli, name: v.in.e00}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: bin name}
+  type: {type: string, required: true, default: point, values: [point, line, area], note: multiple values}
+  output: {type: string, required: true, note: output vector}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

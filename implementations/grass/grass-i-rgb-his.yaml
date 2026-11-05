@@ -1,0 +1,16 @@
+id: grass-i-rgb-his
+kind: implementation
+name: i.rgb.his
+software: grass
+call: {interface: cli, name: i.rgb.his}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  red: {type: string, required: true, note: cell name}
+  green: {type: string, required: true, note: cell name}
+  blue: {type: string, required: true, note: cell name}
+  hue: {type: string, required: true, note: output cell}
+  intensity: {type: string, required: true, note: output cell}
+  saturation: {type: string, required: true, note: output cell}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

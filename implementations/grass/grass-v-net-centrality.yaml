@@ -1,0 +1,27 @@
+id: grass-v-net-centrality
+kind: implementation
+name: v.net.centrality
+software: grass
+call: {interface: cli, name: v.net.centrality}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  arc_layer: {type: string, default: '1', note: layer name}
+  node_layer: {type: string, default: '2', note: layer name}
+  output: {type: string, required: true, note: output vector}
+  cats: {type: string, note: cats name}
+  where: {type: string, note: sql_query name}
+  arc_column: {type: string, note: dbcolumn name}
+  arc_backward_column: {type: string, note: dbcolumn name}
+  node_column: {type: string}
+  degree: {type: string, note: dbcolumn name}
+  closeness: {type: string, note: dbcolumn name}
+  betweenness: {type: string, note: dbcolumn name}
+  eigenvector: {type: string, note: dbcolumn name}
+  iterations: {type: integer, default: 1000}
+  error: {type: float, default: 0.1}
+  flag_g: {type: boolean, note: flag -g}
+  flag_a: {type: boolean, note: flag -a}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

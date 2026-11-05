@@ -1,0 +1,11 @@
+id: whiteboxtools-find-patch-or-class-edge-cells
+kind: implementation
+name: FindPatchOrClassEdgeCells
+software: whiteboxtools
+call: {interface: cli, name: FindPatchOrClassEdgeCells}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

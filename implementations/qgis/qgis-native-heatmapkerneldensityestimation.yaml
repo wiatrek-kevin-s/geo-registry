@@ -1,0 +1,19 @@
+id: qgis-native-heatmapkerneldensityestimation
+kind: implementation
+name: native:heatmapkerneldensityestimation
+software: qgis
+call: {interface: qgis-process, name: 'native:heatmapkerneldensityestimation'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  DECAY: {type: number, default: 0.0}
+  INPUT: {type: source, required: true}
+  KERNEL: {type: enum, required: true, default: 0, values: [0, 1, 2, 3, 4], note: '0 Quartic, 1 Triangular, 2 Uniform, 3 Triweight,
+      4 Epanechnikov'}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  OUTPUT_VALUE: {type: enum, required: true, default: 0, values: [0, 1], note: '0 Raw, 1 Scaled'}
+  PIXEL_SIZE: {type: heatmappixelsize, required: true, default: 0.1}
+  RADIUS: {type: distance, required: true, default: 100.0}
+  RADIUS_FIELD: {type: field}
+  WEIGHT_FIELD: {type: field}
+status: active
+review: {state: harvested, source: qgis}

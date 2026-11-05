@@ -1,0 +1,12 @@
+id: qgis-native-raisemessage
+kind: implementation
+name: native:raisemessage
+software: qgis
+call: {interface: qgis-process, name: 'native:raisemessage'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CONDITION: {type: expression}
+  MESSAGE: {type: string, required: true}
+notes: Deprecated in QGIS.
+status: active
+review: {state: harvested, source: qgis}

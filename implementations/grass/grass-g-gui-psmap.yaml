@@ -1,0 +1,10 @@
+id: grass-g-gui-psmap
+kind: implementation
+name: g.gui.psmap
+software: grass
+call: {interface: cli, name: g.gui.psmap}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  file: {type: string, note: file name}
+status: active
+review: {state: harvested, source: grass}

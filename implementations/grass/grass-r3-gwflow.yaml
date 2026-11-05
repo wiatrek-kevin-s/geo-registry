@@ -1,0 +1,29 @@
+id: grass-r3-gwflow
+kind: implementation
+name: r3.gwflow
+software: grass
+call: {interface: cli, name: r3.gwflow}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  phead: {type: string, required: true, note: grid3 name}
+  status: {type: string, required: true, note: grid3 name}
+  hc_x: {type: string, required: true, note: grid3 name}
+  hc_y: {type: string, required: true, note: grid3 name}
+  hc_z: {type: string, required: true, note: grid3 name}
+  sink: {type: string, note: grid3 name}
+  yield: {type: string, required: true, note: grid3 name}
+  recharge: {type: string, note: grid3 name}
+  output: {type: string, required: true, note: output grid3}
+  velocity_x: {type: string, note: output grid3}
+  velocity_y: {type: string, note: output grid3}
+  velocity_z: {type: string, note: output grid3}
+  budget: {type: string, note: output grid3}
+  dtime: {type: float, required: true, default: 86400.0}
+  maxit: {type: integer, default: 10000}
+  error: {type: float, default: 1.0e-06}
+  solver: {type: string, default: cg, values: [cg, pcg, cholesky]}
+  flag_m: {type: boolean, note: flag -m}
+  flag_f: {type: boolean, note: flag -f}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

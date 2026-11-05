@@ -1,0 +1,16 @@
+id: whiteboxtools-multiscale-std-dev-normals-signature
+kind: implementation
+name: MultiscaleStdDevNormalsSignature
+software: whiteboxtools
+call: {interface: cli, name: MultiscaleStdDevNormalsSignature}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  points: {type: 'ExistingFile:Vector:Point', required: true}
+  output: {type: 'NewFile:Html', required: true, note: output}
+  min_scale: {type: Integer, default: '1'}
+  step: {type: Integer, default: '1'}
+  num_steps: {type: Integer, required: true, default: '10'}
+  step_nonlinearity: {type: Float, required: true, default: '1.0'}
+status: active
+review: {state: harvested, source: whitebox}

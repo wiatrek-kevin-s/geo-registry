@@ -1,0 +1,13 @@
+id: whiteboxtools-aggregate-raster
+kind: implementation
+name: AggregateRaster
+software: whiteboxtools
+call: {interface: cli, name: AggregateRaster}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  agg_factor: {type: Integer, default: '2'}
+  type: {type: OptionList, default: mean, values: [mean, sum, maximum, minimum, range]}
+status: active
+review: {state: harvested, source: whitebox}

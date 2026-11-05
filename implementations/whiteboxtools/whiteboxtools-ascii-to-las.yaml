@@ -1,0 +1,12 @@
+id: whiteboxtools-ascii-to-las
+kind: implementation
+name: AsciiToLas
+software: whiteboxtools
+call: {interface: cli, name: AsciiToLas}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  inputs: {type: 'FileList:Csv', required: true}
+  pattern: {type: String, required: true}
+  proj: {type: String}
+status: active
+review: {state: harvested, source: whitebox}

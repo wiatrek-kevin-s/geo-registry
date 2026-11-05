@@ -1,0 +1,18 @@
+id: qgis-native-package
+kind: implementation
+name: native:package
+software: qgis
+call: {interface: qgis-process, name: 'native:package'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CRS: {type: crs}
+  EXPORT_RELATED_LAYERS: {type: boolean, required: true, default: false}
+  EXTENT: {type: extent}
+  LAYERS: {type: multilayer, required: true}
+  OUTPUT: {type: fileDestination, required: true, note: output}
+  OVERWRITE: {type: boolean, required: true, default: false}
+  SAVE_METADATA: {type: boolean, required: true, default: true}
+  SAVE_STYLES: {type: boolean, required: true, default: true}
+  SELECTED_FEATURES_ONLY: {type: boolean, required: true, default: false}
+status: active
+review: {state: harvested, source: qgis}

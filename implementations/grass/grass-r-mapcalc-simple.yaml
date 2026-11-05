@@ -1,0 +1,23 @@
+id: grass-r-mapcalc-simple
+kind: implementation
+name: r.mapcalc.simple
+software: grass
+call: {interface: cli, name: r.mapcalc.simple}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  expression: {type: string, required: true}
+  a: {type: string, note: cell name}
+  b: {type: string, note: cell name}
+  c: {type: string, note: cell name}
+  d: {type: string, note: cell name}
+  e: {type: string, note: cell name}
+  f: {type: string, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  seed: {type: integer}
+  nprocs: {type: integer, default: 0}
+  flag_s: {type: boolean, note: flag -s}
+  flag_q: {type: boolean, note: flag -q}
+  flag_c: {type: boolean, note: flag -c}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

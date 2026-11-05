@@ -1,0 +1,12 @@
+id: qgis-native-removepartsbylength
+kind: implementation
+name: native:removepartsbylength
+software: qgis
+call: {interface: qgis-process, name: 'native:removepartsbylength'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  MIN_LENGTH: {type: distance, required: true, default: 0.0}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

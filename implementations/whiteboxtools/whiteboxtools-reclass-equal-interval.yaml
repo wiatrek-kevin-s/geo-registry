@@ -1,0 +1,14 @@
+id: whiteboxtools-reclass-equal-interval
+kind: implementation
+name: ReclassEqualInterval
+software: whiteboxtools
+call: {interface: cli, name: ReclassEqualInterval}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  interval: {type: Float, required: true, default: '10.0'}
+  start_val: {type: Float}
+  end_val: {type: Float}
+status: active
+review: {state: harvested, source: whitebox}

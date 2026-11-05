@@ -1,0 +1,12 @@
+id: grass-g-gui-mapswipe
+kind: implementation
+name: g.gui.mapswipe
+software: grass
+call: {interface: cli, name: g.gui.mapswipe}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  first: {type: string, note: cell name}
+  second: {type: string, note: cell name}
+  mode: {type: string, default: swipe, values: [swipe, mirror]}
+status: active
+review: {state: harvested, source: grass}

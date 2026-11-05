@@ -1,0 +1,14 @@
+id: grass-d-rast
+kind: implementation
+name: d.rast
+software: grass
+call: {interface: cli, name: d.rast}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: cell name}
+  values: {type: string, note: multiple values}
+  bgcolor: {type: string, default: white, note: color name}
+  flag_n: {type: boolean, note: flag -n}
+  flag_i: {type: boolean, note: flag -i}
+status: active
+review: {state: harvested, source: grass}

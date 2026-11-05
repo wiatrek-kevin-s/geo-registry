@@ -1,0 +1,18 @@
+id: qgis-native-dtmslopebasedfilter
+kind: implementation
+name: native:dtmslopebasedfilter
+software: qgis
+call: {interface: qgis-process, name: 'native:dtmslopebasedfilter'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BAND: {type: band, required: true, default: 1}
+  CREATION_OPTIONS: {type: string}
+  FILTER_MODIFICATION: {type: enum, required: true, default: 0, values: [0, 1, 2], note: '0 None, 1 Relax filter, 2 Amplify'}
+  INPUT: {type: raster, required: true}
+  OUTPUT_GROUND: {type: rasterDestination, note: output}
+  OUTPUT_NONGROUND: {type: rasterDestination, note: output}
+  RADIUS: {type: number, required: true, default: 5}
+  STANDARD_DEVIATION: {type: number, required: true, default: 0.1}
+  TERRAIN_SLOPE: {type: number, required: true, default: 30}
+status: active
+review: {state: harvested, source: qgis}

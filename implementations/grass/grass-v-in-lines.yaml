@@ -1,0 +1,14 @@
+id: grass-v-in-lines
+kind: implementation
+name: v.in.lines
+software: grass
+call: {interface: cli, name: v.in.lines}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: file name}
+  output: {type: string, required: true, note: output vector}
+  separator: {type: string, default: pipe, note: separator name}
+  flag_z: {type: boolean, note: flag -z}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

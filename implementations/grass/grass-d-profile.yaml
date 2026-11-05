@@ -1,0 +1,12 @@
+id: grass-d-profile
+kind: implementation
+name: d.profile
+software: grass
+call: {interface: cli, name: d.profile}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: cell name}
+  coordinates: {type: float, required: true, note: coords name; multiple values}
+  flag_r: {type: boolean, note: flag -r}
+status: active
+review: {state: harvested, source: grass}

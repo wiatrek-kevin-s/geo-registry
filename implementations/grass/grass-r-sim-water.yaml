@@ -1,0 +1,38 @@
+id: grass-r-sim-water
+kind: implementation
+name: r.sim.water
+software: grass
+call: {interface: cli, name: r.sim.water}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  elevation: {type: string, required: true, note: cell name}
+  dx: {type: string, note: cell name}
+  dy: {type: string, note: cell name}
+  rain: {type: string, note: cell name}
+  rain_value: {type: float, default: 50.0}
+  infil: {type: string, note: cell name}
+  infil_value: {type: float, default: 0.0}
+  man: {type: string, note: cell name}
+  man_value: {type: float, default: 0.1}
+  flow_control: {type: string, note: cell name}
+  observation: {type: string, note: vector name}
+  depth: {type: string, note: output cell}
+  discharge: {type: string, note: output cell}
+  error: {type: string, note: output cell}
+  walkers_output: {type: string, note: output vector}
+  logfile: {type: string, note: output file}
+  nwalkers: {type: integer}
+  niterations: {type: integer, default: 10}
+  mintimestep: {type: float, default: 0.0}
+  output_step: {type: integer, default: 2}
+  diffusion_coeff: {type: float, default: 0.8}
+  hmax: {type: float, default: 0.3}
+  halpha: {type: float, default: 4.0}
+  hbeta: {type: float, default: 0.5}
+  random_seed: {type: integer}
+  nprocs: {type: integer, default: 1}
+  flag_t: {type: boolean, note: flag -t}
+  flag_s: {type: boolean, note: flag -s}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

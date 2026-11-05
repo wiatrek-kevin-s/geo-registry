@@ -1,0 +1,15 @@
+id: qgis-qgis-tininterpolation
+kind: implementation
+name: qgis:tininterpolation
+software: qgis
+call: {interface: qgis-process, name: 'qgis:tininterpolation'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  EXTENT: {type: extent, required: true}
+  INTERPOLATION_DATA: {type: idw_interpolation_data, required: true}
+  METHOD: {type: enum, required: true, default: 0, values: [0, 1], note: '0 Linear, 1 Clough-Toucher (cubic)'}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  PIXEL_SIZE: {type: number, required: true, default: 0.1}
+  TRIANGULATION: {type: sink, note: output}
+status: active
+review: {state: harvested, source: qgis}

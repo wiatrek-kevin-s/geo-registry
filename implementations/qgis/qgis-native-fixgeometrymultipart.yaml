@@ -1,0 +1,15 @@
+id: qgis-native-fixgeometrymultipart
+kind: implementation
+name: native:fixgeometrymultipart
+software: qgis
+call: {interface: qgis-process, name: 'native:fixgeometrymultipart'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ERRORS: {type: source, required: true}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  REPORT: {type: sink, required: true, note: output}
+  TOLERANCE: {type: number, required: true, default: 8}
+  UNIQUE_ID: {type: field, required: true, default: id}
+status: active
+review: {state: harvested, source: qgis}

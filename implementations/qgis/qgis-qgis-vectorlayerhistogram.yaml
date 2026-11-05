@@ -1,0 +1,13 @@
+id: qgis-qgis-vectorlayerhistogram
+kind: implementation
+name: qgis:vectorlayerhistogram
+software: qgis
+call: {interface: qgis-process, name: 'qgis:vectorlayerhistogram'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BINS: {type: number, required: true, default: 10}
+  FIELD: {type: field, required: true}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: fileDestination, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

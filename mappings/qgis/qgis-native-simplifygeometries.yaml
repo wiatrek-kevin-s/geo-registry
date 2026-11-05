@@ -1,0 +1,13 @@
+id: qgis-native-simplifygeometries
+implements: simplify
+crosswalk:
+  layer: INPUT
+  output: OUTPUT
+  tolerance: TOLERANCE
+  unit: { fixed: crs-units, note: Tolerance is in the layer's CRS units; convert it first. }
+presets:
+  METHOD: 0
+differences:
+  - METHOD also offers snap-to-grid and Visvalingam (area) simplification; this mapping uses Douglas-Peucker.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

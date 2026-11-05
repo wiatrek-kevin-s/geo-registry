@@ -1,0 +1,12 @@
+id: grass-g-dirseps
+kind: implementation
+name: g.dirseps
+software: grass
+call: {interface: cli, name: g.dirseps}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  path: {type: string}
+  flag_h: {type: boolean, note: flag -h}
+  flag_g: {type: boolean, note: flag -g}
+status: active
+review: {state: harvested, source: grass}

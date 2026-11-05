@@ -1,0 +1,16 @@
+id: qgis-native-checkgeometrysliverpolygon
+kind: implementation
+name: native:checkgeometrysliverpolygon
+software: qgis
+call: {interface: qgis-process, name: 'native:checkgeometrysliverpolygon'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ERRORS: {type: sink, required: true, note: output}
+  INPUT: {type: source, required: true}
+  MAX_AREA: {type: number, required: true, default: 0}
+  MAX_THINNESS: {type: number, required: true, default: 20}
+  OUTPUT: {type: sink, note: output}
+  TOLERANCE: {type: number, required: true, default: 8}
+  UNIQUE_ID: {type: field, required: true}
+status: active
+review: {state: harvested, source: qgis}

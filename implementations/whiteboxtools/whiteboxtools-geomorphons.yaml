@@ -1,0 +1,17 @@
+id: whiteboxtools-geomorphons
+kind: implementation
+name: Geomorphons
+software: whiteboxtools
+call: {interface: cli, name: Geomorphons}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  search: {type: Integer, required: true, default: '50'}
+  threshold: {type: Float, required: true, default: '0.0'}
+  fdist: {type: Integer, required: true, default: '0'}
+  skip: {type: Integer, required: true, default: '0'}
+  forms: {type: Boolean, default: 'true'}
+  residuals: {type: Boolean, default: 'false'}
+status: active
+review: {state: harvested, source: whitebox}

@@ -1,0 +1,23 @@
+id: grass-g-gui-tplot
+kind: implementation
+name: g.gui.tplot
+software: grass
+call: {interface: cli, name: g.gui.tplot}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  stvds: {type: string, note: stvds name; multiple values}
+  strds: {type: string, note: strds name; multiple values}
+  coordinates: {type: float, note: coords name}
+  cats: {type: string}
+  attr: {type: string}
+  output: {type: string, note: output file}
+  csv: {type: string, note: output file}
+  title: {type: string}
+  xlabel: {type: string}
+  ylabel: {type: string}
+  size: {type: string}
+  flag_h: {type: boolean, note: flag -h}
+  flag_l: {type: boolean, note: flag -l}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

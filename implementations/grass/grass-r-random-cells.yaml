@@ -1,0 +1,14 @@
+id: grass-r-random-cells
+kind: implementation
+name: r.random.cells
+software: grass
+call: {interface: cli, name: r.random.cells}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  output: {type: string, required: true, note: output cell}
+  distance: {type: float, required: true}
+  ncells: {type: integer, values: [1-]}
+  seed: {type: integer}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

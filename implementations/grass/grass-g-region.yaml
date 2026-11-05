@@ -1,0 +1,51 @@
+id: grass-g-region
+kind: implementation
+name: g.region
+software: grass
+call: {interface: cli, name: g.region}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  region: {type: string, note: windows name}
+  raster: {type: string, note: cell name; multiple values}
+  raster_3d: {type: string, note: grid3 name}
+  vector: {type: string, note: vector name; multiple values}
+  n: {type: string}
+  s: {type: string}
+  e: {type: string}
+  w: {type: string}
+  t: {type: string}
+  b: {type: string}
+  rows: {type: integer}
+  cols: {type: integer}
+  res: {type: string}
+  res3: {type: string}
+  nsres: {type: string}
+  ewres: {type: string}
+  nsres3: {type: string}
+  ewres3: {type: string}
+  tbres: {type: string}
+  zoom: {type: string, note: cell name}
+  align: {type: string, note: cell name}
+  grow: {type: integer}
+  save: {type: string, note: output windows}
+  format: {type: string, required: true, default: plain, values: [plain, shell, json]}
+  flag_d: {type: boolean, note: flag -d}
+  flag_s: {type: boolean, note: flag -s}
+  flag_p: {type: boolean, note: flag -p}
+  flag_l: {type: boolean, note: flag -l}
+  flag_e: {type: boolean, note: flag -e}
+  flag_c: {type: boolean, note: flag -c}
+  flag_t: {type: boolean, note: flag -t}
+  flag_w: {type: boolean, note: flag -w}
+  flag_m: {type: boolean, note: flag -m}
+  flag_n: {type: boolean, note: flag -n}
+  flag_3: {type: boolean, note: flag -3}
+  flag_b: {type: boolean, note: flag -b}
+  flag_g: {type: boolean, note: flag -g}
+  flag_f: {type: boolean, note: flag -f}
+  flag_a: {type: boolean, note: flag -a}
+  flag_u: {type: boolean, note: flag -u}
+  flag_o: {type: boolean, note: flag -o}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

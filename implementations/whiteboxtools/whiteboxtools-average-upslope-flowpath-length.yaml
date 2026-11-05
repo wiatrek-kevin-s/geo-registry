@@ -1,0 +1,11 @@
+id: whiteboxtools-average-upslope-flowpath-length
+kind: implementation
+name: AverageUpslopeFlowpathLength
+software: whiteboxtools
+call: {interface: cli, name: AverageUpslopeFlowpathLength}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

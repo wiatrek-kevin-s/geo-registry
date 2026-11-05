@@ -1,0 +1,15 @@
+id: grass-d-info
+kind: implementation
+name: d.info
+software: grass
+call: {interface: cli, name: d.info}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  flag_r: {type: boolean, note: flag -r}
+  flag_d: {type: boolean, note: flag -d}
+  flag_f: {type: boolean, note: flag -f}
+  flag_e: {type: boolean, note: flag -e}
+  flag_b: {type: boolean, note: flag -b}
+  flag_g: {type: boolean, note: flag -g}
+status: active
+review: {state: harvested, source: grass}

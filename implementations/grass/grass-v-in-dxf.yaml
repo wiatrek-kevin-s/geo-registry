@@ -1,0 +1,20 @@
+id: grass-v-in-dxf
+kind: implementation
+name: v.in.dxf
+software: grass
+call: {interface: cli, name: v.in.dxf}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: file name}
+  output: {type: string, required: true, note: output vector}
+  layers: {type: string, note: multiple values}
+  flag_e: {type: boolean, note: flag -e}
+  flag_t: {type: boolean, note: flag -t}
+  flag_b: {type: boolean, note: flag -b}
+  flag_f: {type: boolean, note: flag -f}
+  flag_l: {type: boolean, note: flag -l}
+  flag_i: {type: boolean, note: flag -i}
+  flag_1: {type: boolean, note: flag -1}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

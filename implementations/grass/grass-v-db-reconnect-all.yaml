@@ -1,0 +1,16 @@
+id: grass-v-db-reconnect-all
+kind: implementation
+name: v.db.reconnect.all
+software: grass
+call: {interface: cli, name: v.db.reconnect.all}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  old_database: {type: string, note: dbname name}
+  old_schema: {type: string}
+  new_driver: {type: string}
+  new_database: {type: string, note: dbname name}
+  new_schema: {type: string}
+  flag_c: {type: boolean, note: flag -c}
+  flag_d: {type: boolean, note: flag -d}
+status: active
+review: {state: harvested, source: grass}

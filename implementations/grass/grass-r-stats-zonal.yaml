@@ -1,0 +1,17 @@
+id: grass-r-stats-zonal
+kind: implementation
+name: r.stats.zonal
+software: grass
+call: {interface: cli, name: r.stats.zonal}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  base: {type: string, required: true, note: cell name}
+  cover: {type: string, required: true, note: cell name}
+  method: {type: string, required: true, values: [count, sum, min, max, range, average, avedev, variance, stddev, skewness,
+      kurtosis, variance2, stddev2, skewness2, kurtosis2]}
+  output: {type: string, required: true, note: output cell}
+  flag_c: {type: boolean, note: flag -c}
+  flag_r: {type: boolean, note: flag -r}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

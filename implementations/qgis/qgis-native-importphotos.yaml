@@ -1,0 +1,13 @@
+id: qgis-native-importphotos
+kind: implementation
+name: native:importphotos
+software: qgis
+call: {interface: qgis-process, name: 'native:importphotos'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  FOLDER: {type: file, required: true}
+  INVALID: {type: sink, note: output}
+  OUTPUT: {type: sink, note: output}
+  RECURSIVE: {type: boolean, required: true, default: false}
+status: active
+review: {state: harvested, source: qgis}

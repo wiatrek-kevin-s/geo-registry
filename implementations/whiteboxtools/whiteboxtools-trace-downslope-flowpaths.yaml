@@ -1,0 +1,14 @@
+id: whiteboxtools-trace-downslope-flowpaths
+kind: implementation
+name: TraceDownslopeFlowpaths
+software: whiteboxtools
+call: {interface: cli, name: TraceDownslopeFlowpaths}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  seed_pts: {type: 'ExistingFile:Vector:Point', required: true}
+  d8_pntr: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  esri_pntr: {type: Boolean, default: 'false'}
+  zero_background: {type: Boolean}
+status: active
+review: {state: harvested, source: whitebox}

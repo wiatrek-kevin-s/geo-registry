@@ -1,0 +1,12 @@
+id: qgis-native-splitlinesbylength
+kind: implementation
+name: native:splitlinesbylength
+software: qgis
+call: {interface: qgis-process, name: 'native:splitlinesbylength'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  LENGTH: {type: distance, required: true, default: 10}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

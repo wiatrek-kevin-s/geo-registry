@@ -1,0 +1,12 @@
+id: grass-t-rast-to-rast3
+kind: implementation
+name: t.rast.to.rast3
+software: grass
+call: {interface: cli, name: t.rast.to.rast3}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: strds name}
+  output: {type: string, required: true, note: output grid3}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

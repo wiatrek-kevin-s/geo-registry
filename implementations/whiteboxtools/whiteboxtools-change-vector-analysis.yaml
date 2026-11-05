@@ -1,0 +1,13 @@
+id: whiteboxtools-change-vector-analysis
+kind: implementation
+name: ChangeVectorAnalysis
+software: whiteboxtools
+call: {interface: cli, name: ChangeVectorAnalysis}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  date1: {type: 'FileList:Raster', required: true}
+  date2: {type: 'FileList:Raster', required: true}
+  magnitude: {type: 'NewFile:Raster', required: true, note: output}
+  direction: {type: 'NewFile:Raster', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

@@ -1,6 +1,7 @@
 name: Engines
 
-# Runs real GIS engines (GDAL, PDAL, Shapely, GeoPandas, PostGIS) from conda-forge:
+# Runs real GIS engines from conda-forge (GDAL, PDAL, Shapely, GeoPandas, PostGIS,
+# QGIS, GRASS, WhiteboxTools):
 # - equivalence: every mapped implementation is run on the same small inputs
 #   and must agree (checks/equivalence.py);
 # - harvest: the harvesters are re-run against the newest engine releases and,
@@ -41,16 +42,20 @@ jobs:
         with:
           environment-file: harvest/environment.yml
           cache-environment: true
-      - name: PostGIS
+      - name: PostGIS, QGIS, WhiteboxTools
         shell: bash -el {0}
         run: |
-          micromamba create -y -q -f harvest/environment-postgis.yml
-          echo "PGBIN=$MAMBA_ROOT_PREFIX/envs/geo-registry-postgis/bin" >> "$GITHUB_ENV"
+          for e in postgis qgis whitebox; do micromamba create -y -q -f "harvest/environment-$e.yml"; done
+          envs="$MAMBA_ROOT_PREFIX/envs"
+          echo "PGBIN=$envs/geo-registry-postgis/bin" >> "$GITHUB_ENV"
+          echo "QGIS_PROCESS=$envs/geo-registry-qgis/bin/qgis_process" >> "$GITHUB_ENV"
+          echo "WBT=$envs/geo-registry-whitebox/bin/whitebox_tools" >> "$GITHUB_ENV"
       - name: Run every mapped implementation on the same inputs
         shell: bash -el {0}
         run: |
           dsn=$(harvest/start-postgis.sh "$PGBIN" "$RUNNER_TEMP/pg")
-          python -I checks/equivalence.py dist --gdal "$(which gdal)" --psql "$PGBIN/psql" --dsn "$dsn"
+          python -I checks/equivalence.py dist --gdal "$(which gdal)" --psql "$PGBIN/psql" --dsn "$dsn" \
+            --qgis-process "$QGIS_PROCESS" --wbt "$WBT"
 
   harvest:
     name: Re-harvest engines
@@ -67,10 +72,14 @@ jobs:
       - name: Engines
         shell: bash -el {0}
         run: |
-          micromamba create -y -q -f harvest/environment-pdal.yml
-          micromamba create -y -q -f harvest/environment-postgis.yml
-          echo "PGBIN=$MAMBA_ROOT_PREFIX/envs/geo-registry-postgis/bin" >> "$GITHUB_ENV"
-          echo "PDAL=$MAMBA_ROOT_PREFIX/envs/geo-registry-pdal/bin/pdal" >> "$GITHUB_ENV"
+          for e in pdal postgis qgis grass whitebox; do micromamba create -y -q -f "harvest/environment-$e.yml"; done
+          envs="$MAMBA_ROOT_PREFIX/envs"
+          echo "PGBIN=$envs/geo-registry-postgis/bin" >> "$GITHUB_ENV"
+          echo "PDAL=$envs/geo-registry-pdal/bin/pdal" >> "$GITHUB_ENV"
+          echo "QGIS_PROCESS=$envs/geo-registry-qgis/bin/qgis_process" >> "$GITHUB_ENV"
+          echo "GRASS=$envs/geo-registry-grass/bin/grass" >> "$GITHUB_ENV"
+          echo "GRASS_PROJ=$envs/geo-registry-grass/share/proj" >> "$GITHUB_ENV"
+          echo "WBT=$envs/geo-registry-whitebox/bin/whitebox_tools" >> "$GITHUB_ENV"
       - name: Harvest
         shell: bash -el {0}
         run: |
@@ -79,6 +88,9 @@ jobs:
           python harvest/pdal.py --pdal "$PDAL" | tee -a "$RUNNER_TEMP/summary.txt"
           python harvest/postgis.py --psql "$PGBIN/psql" --dsn "$dsn" | tee -a "$RUNNER_TEMP/summary.txt"
           python harvest/python_libs.py | tee -a "$RUNNER_TEMP/summary.txt"
+          python harvest/qgis.py --qgis-process "$QGIS_PROCESS" | tee -a "$RUNNER_TEMP/summary.txt"
+          PROJ_DATA="$GRASS_PROJ" python harvest/grass.py --grass "$GRASS" | grep -v '^  skipped' | tee -a "$RUNNER_TEMP/summary.txt"
+          python harvest/whitebox.py --wbt "$WBT" | tee -a "$RUNNER_TEMP/summary.txt"
           {
             echo "Re-harvested from the newest engine releases on conda-forge:"
             echo

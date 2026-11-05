@@ -1,0 +1,10 @@
+id: whiteboxtools-add-point-coordinates-to-table
+kind: implementation
+name: AddPointCoordinatesToTable
+software: whiteboxtools
+call: {interface: cli, name: AddPointCoordinatesToTable}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Vector:Point', required: true}
+status: active
+review: {state: harvested, source: whitebox}

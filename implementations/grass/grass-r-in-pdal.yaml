@@ -1,0 +1,38 @@
+id: grass-r-in-pdal
+kind: implementation
+name: r.in.pdal
+software: grass
+call: {interface: cli, name: r.in.pdal}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, note: bin name}
+  output: {type: string, note: output cell}
+  file: {type: string, note: file name}
+  method: {type: string, default: mean, values: [n, min, max, range, sum, mean, stddev, variance, coeff_var, median, mode,
+      percentile, skewness, trimmean, sidnmax, sidnmin, ev1, ev2, ev3]}
+  type: {type: string, default: FCELL, values: [CELL, FCELL, DCELL]}
+  base_raster: {type: string, note: cell name}
+  zrange: {type: float}
+  zscale: {type: float, default: 1.0}
+  irange: {type: float}
+  iscale: {type: float, default: 1.0}
+  drange: {type: float}
+  dscale: {type: float}
+  input_srs: {type: string}
+  pth: {type: integer, values: [1-100]}
+  trim: {type: float, values: [0-50]}
+  resolution: {type: float}
+  return_filter: {type: string, values: [first, last, mid]}
+  class_filter: {type: integer, note: multiple values}
+  dimension: {type: string, default: z, values: [z, intensity, number, returns, direction, angle, class, source]}
+  user_dimension: {type: string}
+  flag_w: {type: boolean, note: flag -w}
+  flag_e: {type: boolean, note: flag -e}
+  flag_n: {type: boolean, note: flag -n}
+  flag_o: {type: boolean, note: flag -o}
+  flag_d: {type: boolean, note: flag -d}
+  flag_p: {type: boolean, note: flag -p}
+  flag_g: {type: boolean, note: flag -g}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

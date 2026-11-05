@@ -1,0 +1,20 @@
+id: grass-r-composite
+kind: implementation
+name: r.composite
+software: grass
+call: {interface: cli, name: r.composite}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  red: {type: string, required: true, note: cell name}
+  green: {type: string, required: true, note: cell name}
+  blue: {type: string, required: true, note: cell name}
+  levels: {type: integer, default: 32, values: [1-256]}
+  level_red: {type: integer, values: [1-256]}
+  level_green: {type: integer, values: [1-256]}
+  level_blue: {type: integer, values: [1-256]}
+  output: {type: string, required: true, note: output cell}
+  flag_d: {type: boolean, note: flag -d}
+  flag_c: {type: boolean, note: flag -c}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

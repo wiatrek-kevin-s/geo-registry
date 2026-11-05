@@ -1,0 +1,15 @@
+id: whiteboxtools-lidar-tile
+kind: implementation
+name: LidarTile
+software: whiteboxtools
+call: {interface: cli, name: LidarTile}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar', required: true}
+  width: {type: Float, default: '1000.0'}
+  height: {type: Float, default: '1000.0'}
+  origin_x: {type: Float, default: '0.0'}
+  origin_y: {type: Float, default: '0.0'}
+  min_points: {type: Integer, default: '2'}
+status: active
+review: {state: harvested, source: whitebox}

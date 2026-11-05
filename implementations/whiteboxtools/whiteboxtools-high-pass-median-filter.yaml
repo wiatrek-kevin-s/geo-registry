@@ -1,0 +1,14 @@
+id: whiteboxtools-high-pass-median-filter
+kind: implementation
+name: HighPassMedianFilter
+software: whiteboxtools
+call: {interface: cli, name: HighPassMedianFilter}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  filterx: {type: Integer, default: '11'}
+  filtery: {type: Integer, default: '11'}
+  sig_digits: {type: Integer, default: '2'}
+status: active
+review: {state: harvested, source: whitebox}

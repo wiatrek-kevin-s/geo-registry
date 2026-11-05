@@ -1,0 +1,10 @@
+id: qgis-native-reprojectlayer
+implements: reproject
+crosswalk:
+  layer: INPUT
+  output: OUTPUT
+  crs: TARGET_CRS
+differences:
+  - OPERATION can force one coordinate operation (a specific datum transformation) instead of the one PROJ picks.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

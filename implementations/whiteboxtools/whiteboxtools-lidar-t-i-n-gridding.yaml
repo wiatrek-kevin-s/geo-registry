@@ -1,0 +1,19 @@
+id: whiteboxtools-lidar-t-i-n-gridding
+kind: implementation
+name: LidarTINGridding
+software: whiteboxtools
+call: {interface: cli, name: LidarTINGridding}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar'}
+  output: {type: 'NewFile:Raster', note: output}
+  parameter: {type: OptionList, default: elevation, values: [elevation, intensity, class, return_number, number_of_returns,
+      scan angle, rgb, user data]}
+  returns: {type: OptionList, default: all, values: [all, last, first]}
+  resolution: {type: Float, default: '1.0'}
+  exclude_cls: {type: String, default: '7,18'}
+  minz: {type: Float}
+  maxz: {type: Float}
+  max_triangle_edge_length: {type: Float}
+status: active
+review: {state: harvested, source: whitebox}

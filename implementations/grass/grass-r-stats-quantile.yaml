@@ -1,0 +1,22 @@
+id: grass-r-stats-quantile
+kind: implementation
+name: r.stats.quantile
+software: grass
+call: {interface: cli, name: r.stats.quantile}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  base: {type: string, required: true, note: cell name}
+  cover: {type: string, required: true, note: cell name}
+  quantiles: {type: integer}
+  percentiles: {type: float, default: '50', note: multiple values}
+  bins: {type: integer, default: 1000}
+  output: {type: string, note: output cell; multiple values}
+  file: {type: string, note: output file}
+  separator: {type: string, note: separator name}
+  format: {type: string, required: true, default: plain, values: [plain, csv, json]}
+  flag_r: {type: boolean, note: flag -r}
+  flag_p: {type: boolean, note: flag -p}
+  flag_t: {type: boolean, note: flag -t}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

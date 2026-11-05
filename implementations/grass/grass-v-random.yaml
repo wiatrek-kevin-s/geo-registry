@@ -1,0 +1,24 @@
+id: grass-v-random
+kind: implementation
+name: v.random
+software: grass
+call: {interface: cli, name: v.random}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  output: {type: string, required: true, note: output vector}
+  npoints: {type: integer, required: true}
+  restrict: {type: string, note: vector name}
+  layer: {type: string, default: '-1', note: layer_all name}
+  cats: {type: string, note: cats name}
+  where: {type: string, note: sql_query name}
+  zmin: {type: float, default: 0.0}
+  zmax: {type: float, default: 0.0}
+  seed: {type: integer}
+  column: {type: string, note: dbcolumn name}
+  column_type: {type: string, default: double precision, values: [integer, double precision]}
+  flag_z: {type: boolean, note: flag -z}
+  flag_a: {type: boolean, note: flag -a}
+  flag_b: {type: boolean, note: flag -b}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

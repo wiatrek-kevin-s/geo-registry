@@ -1,0 +1,18 @@
+id: qgis-gdal-onesidebuffer
+kind: implementation
+name: gdal:onesidebuffer
+software: qgis
+call: {interface: qgis-process, name: 'gdal:onesidebuffer'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BUFFER_SIDE: {type: enum, required: true, default: 0, values: [0, 1], note: '0 Right, 1 Left'}
+  DISSOLVE: {type: boolean, required: true, default: false}
+  DISTANCE: {type: distance, required: true, default: 10}
+  EXPLODE_COLLECTIONS: {type: boolean, required: true, default: false}
+  FIELD: {type: field}
+  GEOMETRY: {type: string, required: true, default: geometry}
+  INPUT: {type: source, required: true}
+  OPTIONS: {type: string, default: ''}
+  OUTPUT: {type: vectorDestination, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,17 @@
+id: grass-i-evapo-pt
+kind: implementation
+name: i.evapo.pt
+software: grass
+call: {interface: cli, name: i.evapo.pt}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  net_radiation: {type: string, required: true, note: cell name}
+  soil_heatflux: {type: string, required: true, note: cell name}
+  air_temperature: {type: string, required: true, note: cell name}
+  atmospheric_pressure: {type: string, required: true, note: cell name}
+  priestley_taylor_coeff: {type: float, required: true, default: 1.26}
+  output: {type: string, required: true, note: output cell}
+  flag_z: {type: boolean, note: flag -z}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

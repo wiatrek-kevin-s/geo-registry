@@ -1,0 +1,15 @@
+id: grass-t-remove
+kind: implementation
+name: t.remove
+software: grass
+call: {interface: cli, name: t.remove}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  inputs: {type: string, note: stds name; multiple values}
+  type: {type: string, default: strds, values: [strds, str3ds, stvds]}
+  file: {type: string, note: file name}
+  flag_r: {type: boolean, note: flag -r}
+  flag_f: {type: boolean, note: flag -f}
+  flag_d: {type: boolean, note: flag -d}
+status: active
+review: {state: harvested, source: grass}

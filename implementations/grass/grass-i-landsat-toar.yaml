@@ -1,0 +1,27 @@
+id: grass-i-landsat-toar
+kind: implementation
+name: i.landsat.toar
+software: grass
+call: {interface: cli, name: i.landsat.toar}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  metfile: {type: string, note: file name}
+  sensor: {type: string, values: [mss1, mss2, mss3, mss4, mss5, tm4, tm5, tm7, oli8]}
+  method: {type: string, default: uncorrected, values: [uncorrected, dos1, dos2, dos2b, dos3, dos4]}
+  date: {type: string}
+  sun_elevation: {type: float}
+  product_date: {type: string}
+  gain: {type: string}
+  percent: {type: float, default: 0.01}
+  pixel: {type: integer, default: 1000}
+  rayleigh: {type: float, default: 0.0}
+  lsatmet: {type: string, values: [number, creation, date, sun_elev, sensor, bands, sunaz, time], note: multiple values}
+  scale: {type: float, default: 1.0}
+  flag_r: {type: boolean, note: flag -r}
+  flag_n: {type: boolean, note: flag -n}
+  flag_p: {type: boolean, note: flag -p}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

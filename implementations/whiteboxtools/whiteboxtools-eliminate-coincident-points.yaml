@@ -1,0 +1,12 @@
+id: whiteboxtools-eliminate-coincident-points
+kind: implementation
+name: EliminateCoincidentPoints
+software: whiteboxtools
+call: {interface: cli, name: EliminateCoincidentPoints}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Vector:Point', required: true}
+  output: {type: 'NewFile:Vector:Point', required: true, note: output}
+  tolerance: {type: Float, required: true}
+status: active
+review: {state: harvested, source: whitebox}

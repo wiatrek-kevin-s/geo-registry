@@ -1,0 +1,29 @@
+id: grass-r-slope-aspect
+kind: implementation
+name: r.slope.aspect
+software: grass
+call: {interface: cli, name: r.slope.aspect}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  elevation: {type: string, required: true, note: cell name}
+  slope: {type: string, note: output cell}
+  aspect: {type: string, note: output cell}
+  format: {type: string, default: degrees, values: [degrees, percent]}
+  precision: {type: string, default: FCELL, values: [CELL, FCELL, DCELL]}
+  pcurvature: {type: string, note: output cell}
+  tcurvature: {type: string, note: output cell}
+  dx: {type: string, note: output cell}
+  dy: {type: string, note: output cell}
+  dxx: {type: string, note: output cell}
+  dyy: {type: string, note: output cell}
+  dxy: {type: string, note: output cell}
+  zscale: {type: float, default: 1.0}
+  min_slope: {type: float, default: 0.0}
+  nprocs: {type: integer, default: 0}
+  memory: {type: integer, default: 300}
+  flag_a: {type: boolean, note: flag -a}
+  flag_e: {type: boolean, note: flag -e}
+  flag_n: {type: boolean, note: flag -n}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,16 @@
+id: qgis-native-createpointslayerfromtable
+kind: implementation
+name: native:createpointslayerfromtable
+software: qgis
+call: {interface: qgis-process, name: 'native:createpointslayerfromtable'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  MFIELD: {type: field}
+  OUTPUT: {type: sink, required: true, note: output}
+  TARGET_CRS: {type: crs, required: true, default: 'EPSG:4326'}
+  XFIELD: {type: field, required: true}
+  YFIELD: {type: field, required: true}
+  ZFIELD: {type: field}
+status: active
+review: {state: harvested, source: qgis}

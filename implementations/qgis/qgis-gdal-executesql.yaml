@@ -1,0 +1,14 @@
+id: qgis-gdal-executesql
+kind: implementation
+name: gdal:executesql
+software: qgis
+call: {interface: qgis-process, name: 'gdal:executesql'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  DIALECT: {type: enum, required: true, default: 0, values: [0, 1, 2], note: '0 None, 1 OGR SQL, 2 SQLite'}
+  INPUT: {type: source, required: true}
+  OPTIONS: {type: string, default: ''}
+  OUTPUT: {type: vectorDestination, required: true, note: output}
+  SQL: {type: string, required: true, default: ''}
+status: active
+review: {state: harvested, source: qgis}

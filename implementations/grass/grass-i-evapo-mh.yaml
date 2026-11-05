@@ -1,0 +1,19 @@
+id: grass-i-evapo-mh
+kind: implementation
+name: i.evapo.mh
+software: grass
+call: {interface: cli, name: i.evapo.mh}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  netradiation_diurnal: {type: string, required: true, note: cell name}
+  average_temperature: {type: string, required: true, note: cell name}
+  minimum_temperature: {type: string, required: true, note: cell name}
+  maximum_temperature: {type: string, required: true, note: cell name}
+  precipitation: {type: string, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  flag_z: {type: boolean, note: flag -z}
+  flag_h: {type: boolean, note: flag -h}
+  flag_s: {type: boolean, note: flag -s}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

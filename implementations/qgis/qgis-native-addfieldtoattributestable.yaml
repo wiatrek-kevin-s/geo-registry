@@ -1,0 +1,19 @@
+id: qgis-native-addfieldtoattributestable
+kind: implementation
+name: native:addfieldtoattributestable
+software: qgis
+call: {interface: qgis-process, name: 'native:addfieldtoattributestable'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  FIELD_ALIAS: {type: string}
+  FIELD_COMMENT: {type: string}
+  FIELD_LENGTH: {type: number, required: true, default: 10}
+  FIELD_NAME: {type: string, required: true}
+  FIELD_PRECISION: {type: number, required: true, default: 0}
+  FIELD_TYPE: {type: enum, required: true, default: 0, values: [0, 1, 10, 2, 3, 4, 5, 6, 7, 8, 9], note: '0 Integer (32 bit),
+      1 Decimal (double), 10 Decimal (double) List, 2 Text (string), 3 Boolean, 4 Date, 5 Time, 6 Date & Time, 7 Binary Object
+      (BLOB), 8 String List, 9 Integer List'}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

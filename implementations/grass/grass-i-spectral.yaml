@@ -1,0 +1,19 @@
+id: grass-i-spectral
+kind: implementation
+name: i.spectral
+software: grass
+call: {interface: cli, name: i.spectral}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  group: {type: string, note: group name}
+  subgroup: {type: string, note: subgroup name}
+  raster: {type: string, note: cell name; multiple values}
+  coordinates: {type: float, required: true, note: coords name; multiple values}
+  output: {type: string, note: output file}
+  format: {type: string, default: png, values: [png, eps, svg]}
+  flag_c: {type: boolean, note: flag -c}
+  flag_g: {type: boolean, note: flag -g}
+  flag_t: {type: boolean, note: flag -t}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

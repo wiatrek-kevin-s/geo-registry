@@ -1,0 +1,15 @@
+id: qgis-native-hypsometriccurves
+kind: implementation
+name: native:hypsometriccurves
+software: qgis
+call: {interface: qgis-process, name: 'native:hypsometriccurves'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BOUNDARY_LAYER: {type: source, required: true}
+  INPUT_DEM: {type: raster, required: true}
+  OUTPUT: {type: sink, note: output}
+  OUTPUT_DIRECTORY: {type: folderDestination, note: output}
+  STEP: {type: number, required: true, default: 100}
+  USE_PERCENTAGE: {type: boolean, required: true, default: false}
+status: active
+review: {state: harvested, source: qgis}

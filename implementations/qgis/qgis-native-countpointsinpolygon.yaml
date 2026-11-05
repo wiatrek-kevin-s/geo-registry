@@ -1,0 +1,15 @@
+id: qgis-native-countpointsinpolygon
+kind: implementation
+name: native:countpointsinpolygon
+software: qgis
+call: {interface: qgis-process, name: 'native:countpointsinpolygon'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CLASSFIELD: {type: field}
+  FIELD: {type: string, required: true, default: NUMPOINTS}
+  OUTPUT: {type: sink, required: true, note: output}
+  POINTS: {type: source, required: true}
+  POLYGONS: {type: source, required: true}
+  WEIGHT: {type: field}
+status: active
+review: {state: harvested, source: qgis}

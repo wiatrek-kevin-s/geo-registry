@@ -1,0 +1,12 @@
+id: whiteboxtools-find-parallel-flow
+kind: implementation
+name: FindParallelFlow
+software: whiteboxtools
+call: {interface: cli, name: FindParallelFlow}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  d8_pntr: {type: 'ExistingFile:Raster', required: true}
+  streams: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

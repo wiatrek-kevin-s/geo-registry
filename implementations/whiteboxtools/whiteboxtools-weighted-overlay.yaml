@@ -1,0 +1,15 @@
+id: whiteboxtools-weighted-overlay
+kind: implementation
+name: WeightedOverlay
+software: whiteboxtools
+call: {interface: cli, name: WeightedOverlay}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  factors: {type: 'FileList:Raster', required: true}
+  weights: {type: String, required: true}
+  cost: {type: String}
+  constraints: {type: 'FileList:Raster'}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  scale_max: {type: Float, default: '1.0'}
+status: active
+review: {state: harvested, source: whitebox}

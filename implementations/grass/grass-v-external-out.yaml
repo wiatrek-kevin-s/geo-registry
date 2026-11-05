@@ -1,0 +1,22 @@
+id: grass-v-external-out
+kind: implementation
+name: v.external.out
+software: grass
+call: {interface: cli, name: v.external.out}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  output: {type: string}
+  format: {type: string, default: ESRI_Shapefile, values: [AmigoCloud, CSV, Carto, DGN, DXF, ESRI_Shapefile, Elasticsearch,
+      FlatGeobuf, GML, GPKG, GPSBabel, GPX, GeoJSON, GeoJSONSeq, GeoRSS, JML, JSONFG, KML, LIBKML, MBTiles, MEM, MVT, MapInfo_File,
+      MapML, MiraMonVector, NGW, ODS, OGR_GMT, OpenFileGDB, PCIDSK, PDS4, PGDUMP, PMTiles, S57, SQLite, Selafin, VDV, VICAR,
+      WAsP, XLSX, PostgreSQL]}
+  options: {type: string, note: multiple values}
+  loadsettings: {type: string, note: file name}
+  savesettings: {type: string, note: output file}
+  flag_f: {type: boolean, note: flag -f}
+  flag_r: {type: boolean, note: flag -r}
+  flag_p: {type: boolean, note: flag -p}
+  flag_g: {type: boolean, note: flag -g}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

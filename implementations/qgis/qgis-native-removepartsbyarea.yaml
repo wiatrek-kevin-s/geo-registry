@@ -1,0 +1,12 @@
+id: qgis-native-removepartsbyarea
+kind: implementation
+name: native:removepartsbyarea
+software: qgis
+call: {interface: qgis-process, name: 'native:removepartsbyarea'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  MIN_AREA: {type: area, required: true, default: 0.0}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

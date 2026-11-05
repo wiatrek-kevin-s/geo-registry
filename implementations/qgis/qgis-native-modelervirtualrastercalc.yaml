@@ -1,0 +1,16 @@
+id: qgis-native-modelervirtualrastercalc
+kind: implementation
+name: native:modelervirtualrastercalc
+software: qgis
+call: {interface: qgis-process, name: 'native:modelervirtualrastercalc'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CELL_SIZE: {type: number}
+  CRS: {type: crs}
+  EXPRESSION: {type: expression, required: true}
+  EXTENT: {type: extent}
+  LAYERS: {type: multilayer, required: true}
+  LAYER_NAME: {type: string}
+notes: Deprecated in QGIS.
+status: active
+review: {state: harvested, source: qgis}

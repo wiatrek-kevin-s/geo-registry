@@ -1,0 +1,21 @@
+id: grass-r-sunhours
+kind: implementation
+name: r.sunhours
+software: grass
+call: {interface: cli, name: r.sunhours}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  elevation: {type: string, note: output cell}
+  azimuth: {type: string, note: output cell}
+  sunhour: {type: string, note: output cell}
+  year: {type: integer, required: true, values: [1950-2050]}
+  month: {type: integer, values: [1-12]}
+  day: {type: integer, required: true, values: [1-366]}
+  hour: {type: integer, default: 12, values: [0-24]}
+  minute: {type: integer, default: 0, values: [0-60]}
+  second: {type: integer, default: 0, values: [0-60]}
+  flag_t: {type: boolean, note: flag -t}
+  flag_s: {type: boolean, note: flag -s}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

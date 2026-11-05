@@ -1,0 +1,15 @@
+id: qgis-native-fuzzifyrasterlinearmembership
+kind: implementation
+name: native:fuzzifyrasterlinearmembership
+software: qgis
+call: {interface: qgis-process, name: 'native:fuzzifyrasterlinearmembership'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BAND: {type: band, required: true, default: 1}
+  CREATION_OPTIONS: {type: string}
+  FUZZYHIGHBOUND: {type: number, required: true, default: 1}
+  FUZZYLOWBOUND: {type: number, required: true, default: 0}
+  INPUT: {type: raster, required: true}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

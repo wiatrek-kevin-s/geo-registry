@@ -1,0 +1,12 @@
+id: grass-v-overlay
+implements: intersect
+crosswalk:
+  a: ainput
+  b: binput
+  output: output
+presets:
+  operator: and
+differences:
+  - The b input must be areas; the same module also does union (or), erase (not) and symmetric difference (xor).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

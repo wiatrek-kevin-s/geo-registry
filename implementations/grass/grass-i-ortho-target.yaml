@@ -1,0 +1,12 @@
+id: grass-i-ortho-target
+kind: implementation
+name: i.ortho.target
+software: grass
+call: {interface: cli, name: i.ortho.target}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  group: {type: string, required: true, note: group name}
+  target_project: {type: string, required: true, note: location name}
+  target_mapset: {type: string, required: true, note: mapset name}
+status: active
+review: {state: harvested, source: grass}

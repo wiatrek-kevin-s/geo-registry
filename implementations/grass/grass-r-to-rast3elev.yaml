@@ -1,0 +1,19 @@
+id: grass-r-to-rast3elev
+kind: implementation
+name: r.to.rast3elev
+software: grass
+call: {interface: cli, name: r.to.rast3elev}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name; multiple values}
+  elevation: {type: string, required: true, note: cell name; multiple values}
+  output: {type: string, required: true, note: output grid3}
+  upper: {type: float}
+  lower: {type: float}
+  tilesize: {type: integer, default: 32}
+  flag_u: {type: boolean, note: flag -u}
+  flag_l: {type: boolean, note: flag -l}
+  flag_m: {type: boolean, note: flag -m}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

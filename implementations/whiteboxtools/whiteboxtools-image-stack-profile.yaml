@@ -1,0 +1,12 @@
+id: whiteboxtools-image-stack-profile
+kind: implementation
+name: ImageStackProfile
+software: whiteboxtools
+call: {interface: cli, name: ImageStackProfile}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  inputs: {type: 'FileList:Raster', required: true}
+  points: {type: 'ExistingFile:Vector:Point', required: true}
+  output: {type: 'NewFile:Html', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

@@ -1,0 +1,15 @@
+id: grass-r-buffer
+kind: implementation
+name: r.buffer
+software: grass
+call: {interface: cli, name: r.buffer}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  distances: {type: float, required: true, note: multiple values}
+  units: {type: string, default: meters, values: [meters, kilometers, feet, miles, nautmiles]}
+  flag_z: {type: boolean, note: flag -z}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

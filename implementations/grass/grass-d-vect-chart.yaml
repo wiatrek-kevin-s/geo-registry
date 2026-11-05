@@ -1,0 +1,28 @@
+id: grass-d-vect-chart
+kind: implementation
+name: d.vect.chart
+software: grass
+call: {interface: cli, name: d.vect.chart}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: vector name}
+  type: {type: string, default: 'point,line,boundary,centroid', values: [point, line, boundary, centroid, area], note: multiple
+      values}
+  layer: {type: string, default: '1', note: layer name}
+  chart_type: {type: string, default: pie, values: [pie, bar]}
+  columns: {type: string, required: true, note: dbcolumn name; multiple values}
+  size_column: {type: string, note: dbcolumn name}
+  size: {type: integer, default: 40}
+  scale: {type: float, default: 1.0}
+  outline_color: {type: string, default: black, note: color name}
+  colors: {type: string, default: black, note: color name; multiple values}
+  max_ref: {type: float, note: multiple values}
+  legend_title: {type: string}
+  legend_symbol_size: {type: integer, default: 20}
+  flag_c: {type: boolean, note: flag -c}
+  flag_l: {type: boolean, note: flag -l}
+  flag_n: {type: boolean, note: flag -n}
+  flag_s: {type: boolean, note: flag -s}
+  flag_3: {type: boolean, note: flag -3}
+status: active
+review: {state: harvested, source: grass}

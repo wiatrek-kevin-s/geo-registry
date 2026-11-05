@@ -1,0 +1,13 @@
+id: whiteboxtools-unnest-basins
+kind: implementation
+name: UnnestBasins
+software: whiteboxtools
+call: {interface: cli, name: UnnestBasins}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  d8_pntr: {type: 'ExistingFile:Raster', required: true}
+  pour_pts: {type: 'ExistingFile:Vector:Point', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  esri_pntr: {type: Boolean, default: 'false'}
+status: active
+review: {state: harvested, source: whitebox}

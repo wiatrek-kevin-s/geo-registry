@@ -1,0 +1,13 @@
+id: grass-g-gui-animation
+kind: implementation
+name: g.gui.animation
+software: grass
+call: {interface: cli, name: g.gui.animation}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  raster: {type: string, note: cell name; multiple values}
+  vector: {type: string, note: vector name; multiple values}
+  strds: {type: string, note: strds name}
+  stvds: {type: string, note: stvds name}
+status: active
+review: {state: harvested, source: grass}

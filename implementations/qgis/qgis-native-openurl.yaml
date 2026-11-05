@@ -1,0 +1,10 @@
+id: qgis-native-openurl
+kind: implementation
+name: native:openurl
+software: qgis
+call: {interface: qgis-process, name: 'native:openurl'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  URL: {type: string, required: true}
+status: active
+review: {state: harvested, source: qgis}

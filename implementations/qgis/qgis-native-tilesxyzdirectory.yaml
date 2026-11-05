@@ -1,0 +1,26 @@
+id: qgis-native-tilesxyzdirectory
+kind: implementation
+name: native:tilesxyzdirectory
+software: qgis
+call: {interface: qgis-process, name: 'native:tilesxyzdirectory'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ANTIALIAS: {type: boolean, required: true, default: true}
+  BACKGROUND_COLOR: {type: color, default: '#00000000'}
+  DPI: {type: number, required: true, default: 96}
+  EXTENT: {type: extent, required: true}
+  HTML_ATTRIBUTION: {type: string}
+  HTML_OSM: {type: boolean, required: true, default: false}
+  HTML_TITLE: {type: string}
+  METATILESIZE: {type: number, required: true, default: 4}
+  OUTPUT_DIRECTORY: {type: folderDestination, required: true, note: output}
+  OUTPUT_HTML: {type: fileDestination, note: output}
+  QUALITY: {type: number, required: true, default: 75}
+  TILE_FORMAT: {type: enum, required: true, default: 0, values: [0, 1], note: '0 PNG, 1 JPG'}
+  TILE_HEIGHT: {type: number, required: true, default: 256}
+  TILE_WIDTH: {type: number, required: true, default: 256}
+  TMS_CONVENTION: {type: boolean, required: true, default: false}
+  ZOOM_MAX: {type: number, required: true, default: 12}
+  ZOOM_MIN: {type: number, required: true, default: 12}
+status: active
+review: {state: harvested, source: qgis}

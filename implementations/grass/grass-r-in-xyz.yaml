@@ -1,0 +1,31 @@
+id: grass-r-in-xyz
+kind: implementation
+name: r.in.xyz
+software: grass
+call: {interface: cli, name: r.in.xyz}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: bin name}
+  output: {type: string, required: true, note: output cell}
+  method: {type: string, default: mean, values: [n, min, max, range, sum, mean, stddev, variance, coeff_var, median, percentile,
+      skewness, trimmean]}
+  separator: {type: string, default: pipe, note: separator name}
+  x: {type: integer, default: 1}
+  y: {type: integer, default: 2}
+  z: {type: integer, default: 3}
+  skip: {type: integer, default: 0}
+  zrange: {type: float}
+  zscale: {type: float, default: 1.0}
+  value_column: {type: integer, default: 0}
+  vrange: {type: float}
+  vscale: {type: float, default: 1.0}
+  type: {type: string, default: FCELL, values: [CELL, FCELL, DCELL]}
+  percent: {type: integer, default: 100, values: [1-100]}
+  pth: {type: integer, values: [1-100]}
+  trim: {type: float, values: [0-50]}
+  flag_s: {type: boolean, note: flag -s}
+  flag_g: {type: boolean, note: flag -g}
+  flag_i: {type: boolean, note: flag -i}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

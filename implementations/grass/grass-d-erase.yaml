@@ -1,0 +1,11 @@
+id: grass-d-erase
+kind: implementation
+name: d.erase
+software: grass
+call: {interface: cli, name: d.erase}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  bgcolor: {type: string, default: white, note: color name}
+  flag_f: {type: boolean, note: flag -f}
+status: active
+review: {state: harvested, source: grass}

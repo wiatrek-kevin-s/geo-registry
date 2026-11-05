@@ -1,0 +1,23 @@
+id: whiteboxtools-lidar-rbf-interpolation
+kind: implementation
+name: LidarRbfInterpolation
+software: whiteboxtools
+call: {interface: cli, name: LidarRbfInterpolation}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar'}
+  output: {type: 'NewFile:Raster', note: output}
+  parameter: {type: OptionList, default: elevation, values: [elevation, intensity, class, return_number, number_of_returns,
+      scan angle, rgb, user data]}
+  returns: {type: OptionList, default: all, values: [all, last, first]}
+  resolution: {type: Float, default: '1.0'}
+  num_points: {type: Integer, required: true, default: '20'}
+  exclude_cls: {type: String}
+  minz: {type: Float}
+  maxz: {type: Float}
+  func_type: {type: OptionList, default: ThinPlateSpline, values: [ThinPlateSpline, PolyHarmonic, Gaussian, MultiQuadric,
+      InverseMultiQuadric]}
+  poly_order: {type: OptionList, default: none, values: [none, constant, affine]}
+  weight: {type: Float, required: true, default: '5'}
+status: active
+review: {state: harvested, source: whitebox}

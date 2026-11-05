@@ -1,0 +1,13 @@
+id: qgis-native-renametablefield
+kind: implementation
+name: native:renametablefield
+software: qgis
+call: {interface: qgis-process, name: 'native:renametablefield'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  FIELD: {type: field, required: true}
+  INPUT: {type: source, required: true}
+  NEW_NAME: {type: string, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

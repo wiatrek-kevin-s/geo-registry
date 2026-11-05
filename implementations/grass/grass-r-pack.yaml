@@ -1,0 +1,13 @@
+id: grass-r-pack
+kind: implementation
+name: r.pack
+software: grass
+call: {interface: cli, name: r.pack}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string, note: output file}
+  flag_c: {type: boolean, note: flag -c}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,11 @@
+id: grass-db-createdb
+kind: implementation
+name: db.createdb
+software: grass
+call: {interface: cli, name: db.createdb}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  driver: {type: string, required: true, default: sqlite, values: [dbf, ogr, pg, sqlite], note: dbdriver name}
+  database: {type: string, required: true, note: dbname name}
+status: active
+review: {state: harvested, source: grass}

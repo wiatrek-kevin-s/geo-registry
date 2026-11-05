@@ -1,0 +1,12 @@
+id: whiteboxtools-max-branch-length
+kind: implementation
+name: MaxBranchLength
+software: whiteboxtools
+call: {interface: cli, name: MaxBranchLength}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  log: {type: Boolean}
+status: active
+review: {state: harvested, source: whitebox}

@@ -1,0 +1,12 @@
+id: whiteboxtools-erase-polygon-from-raster
+kind: implementation
+name: ErasePolygonFromRaster
+software: whiteboxtools
+call: {interface: cli, name: ErasePolygonFromRaster}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  polygons: {type: 'ExistingFile:Vector:Polygon', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

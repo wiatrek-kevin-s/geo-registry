@@ -1,0 +1,13 @@
+id: qgis-gdal-clipvectorbyextent
+kind: implementation
+name: gdal:clipvectorbyextent
+software: qgis
+call: {interface: qgis-process, name: 'gdal:clipvectorbyextent'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  EXTENT: {type: extent, required: true}
+  INPUT: {type: source, required: true}
+  OPTIONS: {type: string, default: ''}
+  OUTPUT: {type: vectorDestination, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

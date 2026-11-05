@@ -1,0 +1,32 @@
+id: grass-r-walk
+kind: implementation
+name: r.walk
+software: grass
+call: {interface: cli, name: r.walk}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  elevation: {type: string, required: true, note: cell name}
+  friction: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  solver: {type: string, note: cell name}
+  nearest: {type: string, note: output cell}
+  outdir: {type: string, note: output cell}
+  start_points: {type: string, note: vector name}
+  stop_points: {type: string, note: vector name}
+  start_raster: {type: string, note: cell name}
+  start_coordinates: {type: float, note: coords name; multiple values}
+  stop_coordinates: {type: float, note: coords name; multiple values}
+  max_cost: {type: integer, default: 0}
+  null_cost: {type: float}
+  memory: {type: integer, default: 300}
+  walk_coeff: {type: string, default: '0.72,6.0,1.9998,-1.9998'}
+  lambda: {type: float, default: 1.0}
+  slope_factor: {type: float, default: -0.2125}
+  flag_k: {type: boolean, note: flag -k}
+  flag_n: {type: boolean, note: flag -n}
+  flag_r: {type: boolean, note: flag -r}
+  flag_i: {type: boolean, note: flag -i}
+  flag_b: {type: boolean, note: flag -b}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

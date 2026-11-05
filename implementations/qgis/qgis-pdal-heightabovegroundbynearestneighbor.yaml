@@ -1,0 +1,15 @@
+id: qgis-pdal-heightabovegroundbynearestneighbor
+kind: implementation
+name: pdal:heightabovegroundbynearestneighbor
+software: qgis
+call: {interface: qgis-process, name: 'pdal:heightabovegroundbynearestneighbor'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  COUNT: {type: number, required: true, default: 1}
+  INPUT: {type: pointcloud, required: true}
+  MAX_DISTANCE: {type: number, required: true, default: 0.0}
+  OUTPUT: {type: pointCloudDestination, required: true, note: output}
+  REPLACE_Z: {type: boolean, required: true, default: true}
+  VPC_OUTPUT_FORMAT: {type: enum, required: true, default: COPC, values: [0, 1, 2], note: '0 COPC, 1 LAZ, 2 LAS'}
+status: active
+review: {state: harvested, source: qgis}

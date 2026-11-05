@@ -1,0 +1,26 @@
+id: grass-v-lrs-create
+kind: implementation
+name: v.lrs.create
+software: grass
+call: {interface: cli, name: v.lrs.create}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  in_lines: {type: string, required: true, note: vector name}
+  out_lines: {type: string, required: true, note: output vector}
+  err: {type: string, note: output vector}
+  points: {type: string, required: true, note: vector name}
+  llayer: {type: string, default: '1', note: layer name}
+  player: {type: string, default: '1', note: layer name}
+  lidcol: {type: string, required: true}
+  pidcol: {type: string, required: true}
+  start_mp: {type: string, default: start_mp}
+  start_off: {type: string, default: start_off}
+  end_mp: {type: string, default: end_mp}
+  end_off: {type: string, default: end_off}
+  rsdriver: {type: string, default: sqlite, values: [dbf, ogr, pg, sqlite]}
+  rsdatabase: {type: string, default: $GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db}
+  rstable: {type: string, required: true}
+  threshold: {type: float, default: 1.0}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

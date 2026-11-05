@@ -1,0 +1,14 @@
+id: grass-r-surf-idw
+kind: implementation
+name: r.surf.idw
+software: grass
+call: {interface: cli, name: r.surf.idw}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  npoints: {type: integer, default: 12}
+  flag_e: {type: boolean, note: flag -e}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

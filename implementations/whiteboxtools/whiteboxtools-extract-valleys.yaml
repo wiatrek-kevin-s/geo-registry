@@ -1,0 +1,14 @@
+id: whiteboxtools-extract-valleys
+kind: implementation
+name: ExtractValleys
+software: whiteboxtools
+call: {interface: cli, name: ExtractValleys}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  variant: {type: OptionList, required: true, default: LQ, values: [LQ, JandR, PandD]}
+  line_thin: {type: Boolean, default: 'true'}
+  filter: {type: Integer, default: '5'}
+status: active
+review: {state: harvested, source: whitebox}

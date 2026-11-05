@@ -1,0 +1,19 @@
+id: grass-g-cairocomp
+kind: implementation
+name: g.cairocomp
+software: grass
+call: {interface: cli, name: g.cairocomp}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: file name; multiple values}
+  output: {type: string, required: true, note: output file}
+  visual: {type: integer}
+  screen: {type: integer}
+  opacity: {type: float, note: multiple values}
+  width: {type: integer, required: true}
+  height: {type: integer, required: true}
+  bgcolor: {type: string, note: color name}
+  flag_d: {type: boolean, note: flag -d}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

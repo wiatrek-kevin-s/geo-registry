@@ -1,0 +1,14 @@
+id: grass-i-tasscap
+kind: implementation
+name: i.tasscap
+software: grass
+call: {interface: cli, name: i.tasscap}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name; multiple values}
+  output: {type: string, required: true, note: output cell}
+  sensor: {type: string, required: true, values: [landsat4_tm, landsat5_tm, landsat7_etm, landsat8_oli, modis, sentinel2,
+      worldview2]}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

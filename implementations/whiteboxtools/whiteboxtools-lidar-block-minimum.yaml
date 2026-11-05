@@ -1,0 +1,12 @@
+id: whiteboxtools-lidar-block-minimum
+kind: implementation
+name: LidarBlockMinimum
+software: whiteboxtools
+call: {interface: cli, name: LidarBlockMinimum}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar'}
+  output: {type: 'NewFile:Raster', note: output}
+  resolution: {type: Float, default: '1.0'}
+status: active
+review: {state: harvested, source: whitebox}

@@ -1,0 +1,12 @@
+id: grass-d-graph
+kind: implementation
+name: d.graph
+software: grass
+call: {interface: cli, name: d.graph}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, note: file name}
+  color: {type: string, default: black, note: color name}
+  flag_m: {type: boolean, note: flag -m}
+status: active
+review: {state: harvested, source: grass}

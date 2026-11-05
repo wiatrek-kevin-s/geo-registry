@@ -1,0 +1,10 @@
+id: grass-d-what-vect
+kind: implementation
+name: d.what.vect
+software: grass
+call: {interface: cli, name: d.what.vect}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: vector name; multiple values}
+status: active
+review: {state: harvested, source: grass}

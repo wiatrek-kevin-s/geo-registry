@@ -1,0 +1,14 @@
+id: whiteboxtools-burn-streams-at-roads
+kind: implementation
+name: BurnStreamsAtRoads
+software: whiteboxtools
+call: {interface: cli, name: BurnStreamsAtRoads}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  streams: {type: 'ExistingFile:Vector:Line', required: true}
+  roads: {type: 'ExistingFile:Vector:Line', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  width: {type: Float}
+status: active
+review: {state: harvested, source: whitebox}

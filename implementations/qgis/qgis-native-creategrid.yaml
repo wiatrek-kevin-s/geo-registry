@@ -1,0 +1,18 @@
+id: qgis-native-creategrid
+kind: implementation
+name: native:creategrid
+software: qgis
+call: {interface: qgis-process, name: 'native:creategrid'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CRS: {type: crs, required: true, default: ProjectCrs}
+  EXTENT: {type: extent, required: true}
+  HOVERLAY: {type: distance, required: true, default: 0}
+  HSPACING: {type: distance, required: true, default: 1}
+  OUTPUT: {type: sink, required: true, note: output}
+  TYPE: {type: enum, required: true, default: 0, values: [0, 1, 2, 3, 4], note: '0 Point, 1 Line, 2 Rectangle (Polygon), 3
+      Diamond (Polygon), 4 Hexagon (Polygon)'}
+  VOVERLAY: {type: distance, required: true, default: 0}
+  VSPACING: {type: distance, required: true, default: 1}
+status: active
+review: {state: harvested, source: qgis}

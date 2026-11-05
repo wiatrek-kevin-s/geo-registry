@@ -1,0 +1,14 @@
+id: qgis-native-voronoipolygons
+kind: implementation
+name: native:voronoipolygons
+software: qgis
+call: {interface: qgis-process, name: 'native:voronoipolygons'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BUFFER: {type: number, required: true, default: 0}
+  COPY_ATTRIBUTES: {type: boolean, required: true, default: true}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  TOLERANCE: {type: number, default: 0}
+status: active
+review: {state: harvested, source: qgis}

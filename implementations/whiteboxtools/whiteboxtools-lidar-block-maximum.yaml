@@ -1,0 +1,12 @@
+id: whiteboxtools-lidar-block-maximum
+kind: implementation
+name: LidarBlockMaximum
+software: whiteboxtools
+call: {interface: cli, name: LidarBlockMaximum}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar'}
+  output: {type: 'NewFile:Raster', note: output}
+  resolution: {type: Float, default: '1.0'}
+status: active
+review: {state: harvested, source: whitebox}

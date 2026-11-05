@@ -1,0 +1,10 @@
+id: grass-g-findetc
+kind: implementation
+name: g.findetc
+software: grass
+call: {interface: cli, name: g.findetc}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  file: {type: string, required: true}
+status: active
+review: {state: harvested, source: grass}

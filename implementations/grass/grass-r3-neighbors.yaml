@@ -1,0 +1,16 @@
+id: grass-r3-neighbors
+kind: implementation
+name: r3.neighbors
+software: grass
+call: {interface: cli, name: r3.neighbors}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: grid3 name}
+  output: {type: string, required: true, note: output grid3}
+  method: {type: string, required: true, values: [average, median, mode, minimum, maximum, range, stddev, sum, count, variance,
+      diversity, interspersion, quart1, quart3, perc90, quantile]}
+  quantile: {type: float, values: [0.0-1.0]}
+  window: {type: integer, required: true}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

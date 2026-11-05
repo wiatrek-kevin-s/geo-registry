@@ -1,0 +1,13 @@
+id: qgis-native-bookmarkstolayer
+kind: implementation
+name: native:bookmarkstolayer
+software: qgis
+call: {interface: qgis-process, name: 'native:bookmarkstolayer'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CRS: {type: crs, required: true, default: ''}
+  OUTPUT: {type: sink, required: true, note: output}
+  SOURCE: {type: enum, required: true, values: [0, 1], note: '0 Project bookmarks, 1 User bookmarks; multiple values; default
+      [0, 1]'}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,80 @@
+id: grass-d-vect
+kind: implementation
+name: d.vect
+software: grass
+call: {interface: cli, name: d.vect}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '1', note: layer_all name}
+  display: {type: string, required: true, default: shape, values: [shape, cat, topo, vert, dir, zcoor], note: multiple values}
+  type: {type: string, default: 'point,line,area,face', values: [point, line, boundary, centroid, area, face], note: multiple
+      values}
+  cats: {type: string, note: cats name}
+  where: {type: string, note: sql_query name}
+  color: {type: string, default: '0:29:57', note: color_none name}
+  fill_color: {type: string, default: '0:103:204', note: color_none name}
+  rgb_column: {type: string, note: dbcolumn name}
+  zcolor: {type: string, values: [aspect, aspectcolr, bcyr, bgyr, blues, byg, byr, celsius, corine, curvature, differences,
+      elevation, etopo2, evi, fahrenheit, forest_cover, gdd, grass, greens, grey, grey.eq, grey.log, grey1.0, grey255, gyr,
+      haxby, inferno, kelvin, magma, ndvi, ndwi, nlcd, oranges, plasma, population, population_dens, precipitation, precipitation_daily,
+      precipitation_monthly, rainbow, ramp, random, reds, roygbiv, rstcurv, ryb, ryg, sepia, slope, soilmoisture, srtm, srtm_percent,
+      srtm_plus, terrain, viridis, water, wave], note: colortable name}
+  width: {type: integer, default: 0}
+  width_column: {type: string, note: dbcolumn name}
+  width_scale: {type: float, default: 1.0}
+  icon: {type: string, default: basic/x, values: [basic/arrow, basic/arrow1, basic/arrow2, basic/arrow3, basic/box, basic/circle,
+      basic/cross1, basic/cross2, basic/cross3, basic/diamond, basic/hexagon, basic/marker, basic/octagon, basic/pin, basic/pin_dot,
+      basic/point, basic/pushpin, basic/star, basic/triangle, basic/x, demo/muchomurka, demo/smrk, extra/4pt_star, extra/adcp,
+      extra/airport, extra/alpha_flag, extra/bridge, extra/dim_arrow, extra/dive_flag, extra/fiducial, extra/fish, extra/half-box,
+      extra/half-circle, extra/offbox_ne, extra/offbox_nw, extra/offbox_se, extra/offbox_sw, extra/pentagon, extra/ping, extra/ring,
+      extra/simple_zia, extra/target, geology/circle_cross, geology/half-arrow_left, geology/half-arrow_right, geology/strike_box,
+      geology/strike_circle, geology/strike_cleavage, geology/strike_half-bowtie, geology/strike_line, geology/strike_parallel,
+      geology/strike_triangle, legend/area, legend/area_curved, legend/line, legend/line_crooked, n_arrows/basic_compass,
+      n_arrows/fancy_compass, n_arrows/n_arrow1a, n_arrows/n_arrow1b, n_arrows/n_arrow2, n_arrows/n_arrow3, n_arrows/n_arrow4,
+      n_arrows/n_arrow5, n_arrows/n_arrow6, n_arrows/n_arrow7a, n_arrows/n_arrow7b, n_arrows/n_arrow8a, n_arrows/n_arrow8b,
+      n_arrows/n_arrow9]}
+  size: {type: float, default: 5.0}
+  size_column: {type: string, note: dbcolumn name}
+  rotation_column: {type: string, note: dbcolumn name}
+  icon_area: {type: string, default: legend/area, values: [basic/arrow, basic/arrow1, basic/arrow2, basic/arrow3, basic/box,
+      basic/circle, basic/cross1, basic/cross2, basic/cross3, basic/diamond, basic/hexagon, basic/marker, basic/octagon, basic/pin,
+      basic/pin_dot, basic/point, basic/pushpin, basic/star, basic/triangle, basic/x, demo/muchomurka, demo/smrk, extra/4pt_star,
+      extra/adcp, extra/airport, extra/alpha_flag, extra/bridge, extra/dim_arrow, extra/dive_flag, extra/fiducial, extra/fish,
+      extra/half-box, extra/half-circle, extra/offbox_ne, extra/offbox_nw, extra/offbox_se, extra/offbox_sw, extra/pentagon,
+      extra/ping, extra/ring, extra/simple_zia, extra/target, geology/circle_cross, geology/half-arrow_left, geology/half-arrow_right,
+      geology/strike_box, geology/strike_circle, geology/strike_cleavage, geology/strike_half-bowtie, geology/strike_line,
+      geology/strike_parallel, geology/strike_triangle, legend/area, legend/area_curved, legend/line, legend/line_crooked,
+      n_arrows/basic_compass, n_arrows/fancy_compass, n_arrows/n_arrow1a, n_arrows/n_arrow1b, n_arrows/n_arrow2, n_arrows/n_arrow3,
+      n_arrows/n_arrow4, n_arrows/n_arrow5, n_arrows/n_arrow6, n_arrows/n_arrow7a, n_arrows/n_arrow7b, n_arrows/n_arrow8a,
+      n_arrows/n_arrow8b, n_arrows/n_arrow9]}
+  icon_line: {type: string, default: legend/line, values: [basic/arrow, basic/arrow1, basic/arrow2, basic/arrow3, basic/box,
+      basic/circle, basic/cross1, basic/cross2, basic/cross3, basic/diamond, basic/hexagon, basic/marker, basic/octagon, basic/pin,
+      basic/pin_dot, basic/point, basic/pushpin, basic/star, basic/triangle, basic/x, demo/muchomurka, demo/smrk, extra/4pt_star,
+      extra/adcp, extra/airport, extra/alpha_flag, extra/bridge, extra/dim_arrow, extra/dive_flag, extra/fiducial, extra/fish,
+      extra/half-box, extra/half-circle, extra/offbox_ne, extra/offbox_nw, extra/offbox_se, extra/offbox_sw, extra/pentagon,
+      extra/ping, extra/ring, extra/simple_zia, extra/target, geology/circle_cross, geology/half-arrow_left, geology/half-arrow_right,
+      geology/strike_box, geology/strike_circle, geology/strike_cleavage, geology/strike_half-bowtie, geology/strike_line,
+      geology/strike_parallel, geology/strike_triangle, legend/area, legend/area_curved, legend/line, legend/line_crooked,
+      n_arrows/basic_compass, n_arrows/fancy_compass, n_arrows/n_arrow1a, n_arrows/n_arrow1b, n_arrows/n_arrow2, n_arrows/n_arrow3,
+      n_arrows/n_arrow4, n_arrows/n_arrow5, n_arrows/n_arrow6, n_arrows/n_arrow7a, n_arrows/n_arrow7b, n_arrows/n_arrow8a,
+      n_arrows/n_arrow8b, n_arrows/n_arrow9]}
+  legend_label: {type: string}
+  label_layer: {type: string, default: '1', note: layer name}
+  attribute_column: {type: string, note: dbcolumn name}
+  label_color: {type: string, default: red, note: color name}
+  label_bgcolor: {type: string, default: none, note: color_none name}
+  label_bcolor: {type: string, default: none, note: color_none name}
+  label_size: {type: integer, default: 8}
+  font: {type: string}
+  encoding: {type: string}
+  xref: {type: string, default: left, values: [left, center, right]}
+  yref: {type: string, default: center, values: [top, center, bottom]}
+  minreg: {type: float}
+  maxreg: {type: float}
+  flag_c: {type: boolean, note: flag -c}
+  flag_i: {type: boolean, note: flag -i}
+  flag_r: {type: boolean, note: flag -r}
+  flag_s: {type: boolean, note: flag -s}
+status: active
+review: {state: harvested, source: grass}

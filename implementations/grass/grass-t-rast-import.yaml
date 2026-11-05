@@ -1,0 +1,23 @@
+id: grass-t-rast-import
+kind: implementation
+name: t.rast.import
+software: grass
+call: {interface: cli, name: t.rast.import}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: file name}
+  output: {type: string, required: true, note: output strds}
+  basename: {type: string}
+  directory: {type: string, required: true, default: /tmp, note: dir name}
+  title: {type: string}
+  description: {type: string}
+  project: {type: string}
+  memory: {type: integer, default: 300}
+  flag_r: {type: boolean, note: flag -r}
+  flag_l: {type: boolean, note: flag -l}
+  flag_e: {type: boolean, note: flag -e}
+  flag_o: {type: boolean, note: flag -o}
+  flag_c: {type: boolean, note: flag -c}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

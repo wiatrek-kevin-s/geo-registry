@@ -1,0 +1,24 @@
+id: grass-v-extrude
+kind: implementation
+name: v.extrude
+software: grass
+call: {interface: cli, name: v.extrude}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '-1', note: layer_all name}
+  cats: {type: string, note: cats name}
+  where: {type: string, note: sql_query name}
+  type: {type: string, default: 'point,line,area', values: [point, line, area], note: multiple values}
+  output: {type: string, required: true, note: output vector}
+  zshift: {type: float, default: 0.0}
+  height: {type: float}
+  height_column: {type: string, note: dbcolumn name}
+  elevation: {type: string, note: cell name}
+  method: {type: string, default: nearest, values: [nearest, bilinear, bicubic]}
+  scale: {type: float, default: 1.0}
+  null_value: {type: float}
+  flag_t: {type: boolean, note: flag -t}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

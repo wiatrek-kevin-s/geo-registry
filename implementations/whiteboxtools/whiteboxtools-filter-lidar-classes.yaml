@@ -1,0 +1,12 @@
+id: whiteboxtools-filter-lidar-classes
+kind: implementation
+name: FilterLidarClasses
+software: whiteboxtools
+call: {interface: cli, name: FilterLidarClasses}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar', required: true}
+  output: {type: 'NewFile:Lidar', required: true, note: output}
+  exclude_cls: {type: String}
+status: active
+review: {state: harvested, source: whitebox}

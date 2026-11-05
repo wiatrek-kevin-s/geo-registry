@@ -1,0 +1,11 @@
+id: grass-d-fontlist
+kind: implementation
+name: d.fontlist
+software: grass
+call: {interface: cli, name: d.fontlist}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  flag_l: {type: boolean, note: flag -l}
+  flag_v: {type: boolean, note: flag -v}
+status: active
+review: {state: harvested, source: grass}

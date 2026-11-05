@@ -1,0 +1,6 @@
+id: grass-r-info
+implements: describe-raster
+crosswalk:
+  raster: map
+effects: { modifies_input: false, network: false }
+review: { state: draft }

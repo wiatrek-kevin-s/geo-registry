@@ -1,0 +1,26 @@
+id: qgis-gdal-retile
+kind: implementation
+name: gdal:retile
+software: qgis
+call: {interface: qgis-process, name: 'gdal:retile'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CREATION_OPTIONS: {type: string, default: ''}
+  DATA_TYPE: {type: enum, required: true, default: 5, values: [0, 1, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9], note: '0 Byte, 1 Int16,
+      10 CFloat64, 11 Int8, 2 UInt16, 3 UInt32, 4 Int32, 5 Float32, 6 Float64, 7 CInt16, 8 CInt32, 9 CFloat32'}
+  DELIMITER: {type: string, default: ;}
+  DIR_FOR_ROW: {type: boolean, required: true, default: false}
+  EXTRA: {type: string}
+  INPUT: {type: multilayer, required: true}
+  LEVELS: {type: number, required: true, default: 1}
+  ONLY_PYRAMIDS: {type: boolean, required: true, default: false}
+  OUTPUT: {type: folderDestination, required: true, note: output}
+  OUTPUT_CSV: {type: fileDestination, note: output}
+  OVERLAP: {type: number, required: true, default: 0}
+  RESAMPLING: {type: enum, required: true, default: 0, values: [0, 1, 2, 3, 4], note: '0 Nearest Neighbour, 1 Bilinear (2x2
+      Kernel), 2 Cubic (4x4 Kernel), 3 Cubic B-Spline (4x4 Kernel), 4 Lanczos (6x6 Kernel)'}
+  SOURCE_CRS: {type: crs}
+  TILE_SIZE_X: {type: number, required: true, default: 256}
+  TILE_SIZE_Y: {type: number, required: true, default: 256}
+status: active
+review: {state: harvested, source: qgis}

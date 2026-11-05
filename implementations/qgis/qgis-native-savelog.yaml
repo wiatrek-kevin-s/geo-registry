@@ -1,0 +1,12 @@
+id: qgis-native-savelog
+kind: implementation
+name: native:savelog
+software: qgis
+call: {interface: qgis-process, name: 'native:savelog'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  OUTPUT: {type: fileDestination, required: true, note: output}
+  USE_HTML: {type: boolean, required: true, default: false}
+notes: Deprecated in QGIS.
+status: active
+review: {state: harvested, source: qgis}

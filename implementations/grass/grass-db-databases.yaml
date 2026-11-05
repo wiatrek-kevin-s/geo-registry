@@ -1,0 +1,11 @@
+id: grass-db-databases
+kind: implementation
+name: db.databases
+software: grass
+call: {interface: cli, name: db.databases}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  driver: {type: string, default: sqlite, values: [dbf, ogr, pg, sqlite], note: dbdriver name}
+  location: {type: string}
+status: active
+review: {state: harvested, source: grass}

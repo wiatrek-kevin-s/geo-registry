@@ -1,0 +1,12 @@
+id: whiteboxtools-weighted-sum
+kind: implementation
+name: WeightedSum
+software: whiteboxtools
+call: {interface: cli, name: WeightedSum}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  inputs: {type: 'FileList:Raster', required: true}
+  weights: {type: String, required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

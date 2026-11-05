@@ -1,0 +1,13 @@
+id: grass-d-rgb
+kind: implementation
+name: d.rgb
+software: grass
+call: {interface: cli, name: d.rgb}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  red: {type: string, required: true, note: cell name}
+  green: {type: string, required: true, note: cell name}
+  blue: {type: string, required: true, note: cell name}
+  flag_n: {type: boolean, note: flag -n}
+status: active
+review: {state: harvested, source: grass}

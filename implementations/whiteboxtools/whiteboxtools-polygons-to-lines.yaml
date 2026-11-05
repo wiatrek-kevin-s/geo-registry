@@ -1,0 +1,11 @@
+id: whiteboxtools-polygons-to-lines
+kind: implementation
+name: PolygonsToLines
+software: whiteboxtools
+call: {interface: cli, name: PolygonsToLines}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Vector:Polygon', required: true}
+  output: {type: 'NewFile:Vector:Line', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

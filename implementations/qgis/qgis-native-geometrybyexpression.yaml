@@ -1,0 +1,15 @@
+id: qgis-native-geometrybyexpression
+kind: implementation
+name: native:geometrybyexpression
+software: qgis
+call: {interface: qgis-process, name: 'native:geometrybyexpression'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  EXPRESSION: {type: expression, required: true, default: '@geometry'}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  OUTPUT_GEOMETRY: {type: enum, required: true, default: 0, values: [0, 1, 2], note: '0 Polygon, 1 Line, 2 Point'}
+  WITH_M: {type: boolean, required: true, default: false}
+  WITH_Z: {type: boolean, required: true, default: false}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,17 @@
+id: qgis-native-meshexportcrosssection
+kind: implementation
+name: native:meshexportcrosssection
+software: qgis
+call: {interface: qgis-process, name: 'native:meshexportcrosssection'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  COORDINATES_DIGITS: {type: number, required: true, default: 2}
+  DATASET_DIGITS: {type: number, required: true, default: 2}
+  DATASET_GROUPS: {type: meshdatasetgroups, required: true, note: 'default []'}
+  DATASET_TIME: {type: meshdatasettime, required: true}
+  INPUT: {type: mesh, required: true}
+  INPUT_LINES: {type: source, required: true}
+  OUTPUT: {type: fileDestination, required: true, note: output}
+  RESOLUTION: {type: distance, required: true, default: 10.0}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,16 @@
+id: qgis-native-fillsinkswangliu
+kind: implementation
+name: native:fillsinkswangliu
+software: qgis
+call: {interface: qgis-process, name: 'native:fillsinkswangliu'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BAND: {type: band, required: true, default: 1}
+  CREATION_OPTIONS: {type: string}
+  INPUT: {type: raster, required: true}
+  MIN_SLOPE: {type: number, required: true, default: 0.1}
+  OUTPUT_FILLED_DEM: {type: rasterDestination, note: output}
+  OUTPUT_FLOW_DIRECTIONS: {type: rasterDestination, note: output}
+  OUTPUT_WATERSHED_BASINS: {type: rasterDestination, note: output}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,17 @@
+id: grass-i-biomass
+kind: implementation
+name: i.biomass
+software: grass
+call: {interface: cli, name: i.biomass}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  fpar: {type: string, required: true, note: cell name}
+  lightuse_efficiency: {type: string, required: true, note: cell name}
+  latitude: {type: string, required: true, note: cell name}
+  dayofyear: {type: string, required: true, note: cell name}
+  transmissivity_singleway: {type: string, required: true, note: cell name}
+  water_availability: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

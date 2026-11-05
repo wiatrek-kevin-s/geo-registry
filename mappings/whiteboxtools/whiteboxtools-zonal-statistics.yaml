@@ -1,0 +1,11 @@
+id: whiteboxtools-zonal-statistics
+implements: zonal-statistics
+crosswalk:
+  raster: input
+  zones: { param: features, note: "A raster of zone ids, not polygons: rasterize the zones onto the input's grid first." }
+  output: output
+  stats: { param: stat, values: { mean: mean, min: minimum, max: maximum, std: standard deviation, sum: total }, unsupported: [count] }
+differences:
+  - Zones are a raster, not polygons, and it computes one statistic per run.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

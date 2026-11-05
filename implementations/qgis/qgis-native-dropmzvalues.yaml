@@ -1,0 +1,13 @@
+id: qgis-native-dropmzvalues
+kind: implementation
+name: native:dropmzvalues
+software: qgis
+call: {interface: qgis-process, name: 'native:dropmzvalues'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  DROP_M_VALUES: {type: boolean, required: true, default: false}
+  DROP_Z_VALUES: {type: boolean, required: true, default: false}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

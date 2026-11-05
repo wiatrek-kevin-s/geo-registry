@@ -1,0 +1,13 @@
+id: whiteboxtools-cost-distance
+kind: implementation
+name: CostDistance
+software: whiteboxtools
+call: {interface: cli, name: CostDistance}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  source: {type: 'ExistingFile:Raster', required: true}
+  cost: {type: 'ExistingFile:Raster', required: true}
+  out_accum: {type: 'NewFile:Raster', required: true, note: output}
+  out_backlink: {type: 'NewFile:Raster', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

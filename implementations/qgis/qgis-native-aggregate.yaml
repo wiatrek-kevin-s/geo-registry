@@ -1,0 +1,13 @@
+id: qgis-native-aggregate
+kind: implementation
+name: native:aggregate
+software: qgis
+call: {interface: qgis-process, name: 'native:aggregate'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  AGGREGATES: {type: aggregates, required: true}
+  GROUP_BY: {type: expression, required: true, default: 'NULL'}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

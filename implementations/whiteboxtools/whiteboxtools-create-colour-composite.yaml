@@ -1,0 +1,16 @@
+id: whiteboxtools-create-colour-composite
+kind: implementation
+name: CreateColourComposite
+software: whiteboxtools
+call: {interface: cli, name: CreateColourComposite}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  red: {type: 'ExistingFile:Raster', required: true}
+  green: {type: 'ExistingFile:Raster', required: true}
+  blue: {type: 'ExistingFile:Raster', required: true}
+  opacity: {type: 'ExistingFile:Raster'}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  enhance: {type: Boolean, default: 'true'}
+  zeros: {type: Boolean, default: 'false'}
+status: active
+review: {state: harvested, source: whitebox}

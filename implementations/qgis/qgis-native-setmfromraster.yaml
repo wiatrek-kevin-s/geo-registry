@@ -1,0 +1,16 @@
+id: qgis-native-setmfromraster
+kind: implementation
+name: native:setmfromraster
+software: qgis
+call: {interface: qgis-process, name: 'native:setmfromraster'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BAND: {type: band, required: true, default: 1}
+  INPUT: {type: source, required: true}
+  NODATA: {type: number, required: true, default: 0.0}
+  OFFSET: {type: number, required: true, default: 0.0}
+  OUTPUT: {type: sink, required: true, note: output}
+  RASTER: {type: raster, required: true}
+  SCALE: {type: number, required: true, default: 1.0}
+status: active
+review: {state: harvested, source: qgis}

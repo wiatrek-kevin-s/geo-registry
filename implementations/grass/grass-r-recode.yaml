@@ -1,0 +1,16 @@
+id: grass-r-recode
+kind: implementation
+name: r.recode
+software: grass
+call: {interface: cli, name: r.recode}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  rules: {type: string, required: true, note: file name}
+  title: {type: string}
+  flag_a: {type: boolean, note: flag -a}
+  flag_d: {type: boolean, note: flag -d}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

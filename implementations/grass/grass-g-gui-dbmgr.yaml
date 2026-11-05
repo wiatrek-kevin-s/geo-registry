@@ -1,0 +1,10 @@
+id: grass-g-gui-dbmgr
+kind: implementation
+name: g.gui.dbmgr
+software: grass
+call: {interface: cli, name: g.gui.dbmgr}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: vector name}
+status: active
+review: {state: harvested, source: grass}

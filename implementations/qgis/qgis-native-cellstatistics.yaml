@@ -1,0 +1,17 @@
+id: qgis-native-cellstatistics
+kind: implementation
+name: native:cellstatistics
+software: qgis
+call: {interface: qgis-process, name: 'native:cellstatistics'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CREATION_OPTIONS: {type: string}
+  IGNORE_NODATA: {type: boolean, required: true, default: true}
+  INPUT: {type: multilayer, required: true}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  OUTPUT_NODATA_VALUE: {type: number, required: true, default: -9999}
+  REFERENCE_LAYER: {type: raster, required: true}
+  STATISTIC: {type: enum, required: true, default: 0, values: [0, 1, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9], note: '0 Sum, 1 Count,
+      10 Range, 11 Variety, 2 Mean, 3 Median, 4 Standard deviation, 5 Variance, 6 Minimum, 7 Maximum, 8 Minority, 9 Majority'}
+status: active
+review: {state: harvested, source: qgis}

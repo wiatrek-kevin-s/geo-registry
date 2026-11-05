@@ -1,0 +1,14 @@
+id: whiteboxtools-create-plane
+kind: implementation
+name: CreatePlane
+software: whiteboxtools
+call: {interface: cli, name: CreatePlane}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  base: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  gradient: {type: Float, required: true, default: '15.0'}
+  aspect: {type: Float, required: true, default: '90.0'}
+  constant: {type: Float, required: true, default: '0.0'}
+status: active
+review: {state: harvested, source: whitebox}

@@ -1,0 +1,13 @@
+id: qgis-native-linesubstring
+kind: implementation
+name: native:linesubstring
+software: qgis
+call: {interface: qgis-process, name: 'native:linesubstring'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  END_DISTANCE: {type: distance, required: true, default: 1.0}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  START_DISTANCE: {type: distance, required: true, default: 0.0}
+status: active
+review: {state: harvested, source: qgis}

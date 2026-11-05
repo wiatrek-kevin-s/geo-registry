@@ -1,0 +1,42 @@
+id: grass-r-sun
+kind: implementation
+name: r.sun
+software: grass
+call: {interface: cli, name: r.sun}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  elevation: {type: string, required: true, note: cell name}
+  aspect: {type: string, note: cell name}
+  aspect_value: {type: float, default: 270.0}
+  slope: {type: string, note: cell name}
+  slope_value: {type: float, default: 0.0}
+  linke: {type: string, note: cell name}
+  linke_value: {type: float, default: 3.0}
+  albedo: {type: string, note: cell name}
+  albedo_value: {type: float, default: 0.2}
+  lat: {type: string, note: cell name}
+  long: {type: string, note: cell name}
+  coeff_bh: {type: string, note: cell name}
+  coeff_dh: {type: string, note: cell name}
+  horizon_basename: {type: string, note: cell name}
+  horizon_step: {type: float}
+  incidout: {type: string, note: output cell}
+  beam_rad: {type: string, note: output cell}
+  diff_rad: {type: string, note: output cell}
+  refl_rad: {type: string, note: output cell}
+  glob_rad: {type: string, note: output cell}
+  insol_time: {type: string, note: output cell}
+  day: {type: integer, required: true, values: [1-365]}
+  step: {type: float, default: 0.5}
+  declination: {type: float}
+  solar_constant: {type: float, default: 1367.0}
+  time: {type: float, values: [0-24]}
+  nprocs: {type: integer, default: 1, values: [1-1000]}
+  distance_step: {type: float, default: 1.0}
+  npartitions: {type: integer, default: 1}
+  civil_time: {type: float}
+  flag_p: {type: boolean, note: flag -p}
+  flag_m: {type: boolean, note: flag -m}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

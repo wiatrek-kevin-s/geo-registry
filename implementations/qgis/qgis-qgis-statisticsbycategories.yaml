@@ -1,0 +1,13 @@
+id: qgis-qgis-statisticsbycategories
+kind: implementation
+name: qgis:statisticsbycategories
+software: qgis
+call: {interface: qgis-process, name: 'qgis:statisticsbycategories'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CATEGORIES_FIELD_NAME: {type: field, required: true, note: multiple values}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  VALUES_FIELD_NAME: {type: field}
+status: active
+review: {state: harvested, source: qgis}

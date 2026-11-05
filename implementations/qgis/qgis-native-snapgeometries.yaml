@@ -1,0 +1,17 @@
+id: qgis-native-snapgeometries
+kind: implementation
+name: native:snapgeometries
+software: qgis
+call: {interface: qgis-process, name: 'native:snapgeometries'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BEHAVIOR: {type: enum, required: true, values: [0, 1, 2, 3, 4, 5, 6, 7], note: '0 Prefer aligning nodes, insert extra vertices
+      where required, 1 Prefer closest point, insert extra vertices where required, 2 Prefer aligning nodes, don''t insert
+      new vertices, 3 Prefer closest point, don''t insert new vertices, 4 Move end points only, prefer aligning nodes, 5 Move
+      end points only, p'}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  REFERENCE_LAYER: {type: source, required: true}
+  TOLERANCE: {type: distance, required: true, default: 10.0}
+status: active
+review: {state: harvested, source: qgis}

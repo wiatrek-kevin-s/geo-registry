@@ -1,0 +1,11 @@
+id: qgis-pdal-info
+kind: implementation
+name: pdal:info
+software: qgis
+call: {interface: qgis-process, name: 'pdal:info'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: pointcloud, required: true}
+  OUTPUT: {type: fileDestination, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

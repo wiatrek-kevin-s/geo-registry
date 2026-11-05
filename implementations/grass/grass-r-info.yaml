@@ -1,0 +1,16 @@
+id: grass-r-info
+kind: implementation
+name: r.info
+software: grass
+call: {interface: cli, name: r.info}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: cell name}
+  format: {type: string, values: [plain, shell, json]}
+  flag_g: {type: boolean, note: flag -g}
+  flag_r: {type: boolean, note: flag -r}
+  flag_s: {type: boolean, note: flag -s}
+  flag_e: {type: boolean, note: flag -e}
+  flag_h: {type: boolean, note: flag -h}
+status: active
+review: {state: harvested, source: grass}

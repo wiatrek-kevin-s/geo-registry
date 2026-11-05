@@ -1,0 +1,11 @@
+id: whiteboxtools-upslope-depression-storage
+kind: implementation
+name: UpslopeDepressionStorage
+software: whiteboxtools
+call: {interface: cli, name: UpslopeDepressionStorage}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

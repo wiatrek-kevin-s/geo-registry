@@ -1,0 +1,14 @@
+id: qgis-native-extrude
+kind: implementation
+name: native:extrude
+software: qgis
+call: {interface: qgis-process, name: 'native:extrude'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  EXTRUDE_X: {type: number, required: true, default: 0.0}
+  EXTRUDE_Y: {type: number, required: true, default: 0.0}
+  EXTRUDE_Z: {type: number, required: true, default: 0.0}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,28 @@
+id: qgis-gdal-cliprasterbymasklayer
+kind: implementation
+name: gdal:cliprasterbymasklayer
+software: qgis
+call: {interface: qgis-process, name: 'gdal:cliprasterbymasklayer'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ALPHA_BAND: {type: boolean, required: true, default: false}
+  CREATION_OPTIONS: {type: string, default: ''}
+  CROP_TO_CUTLINE: {type: boolean, required: true, default: true}
+  DATA_TYPE: {type: enum, required: true, default: 0, values: [0, 1, 10, 11, 12, 2, 3, 4, 5, 6, 7, 8, 9], note: '0 Use Input
+      Layer Data Type, 1 Byte, 10 CFloat32, 11 CFloat64, 12 Int8, 2 Int16, 3 UInt16, 4 UInt32, 5 Int32, 6 Float32, 7 Float64,
+      8 CInt16, 9 CInt32'}
+  EXTRA: {type: string}
+  INPUT: {type: raster, required: true}
+  KEEP_RESOLUTION: {type: boolean, required: true, default: false}
+  MASK: {type: source, required: true}
+  MULTITHREADING: {type: boolean, required: true, default: false}
+  NODATA: {type: number}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  SET_RESOLUTION: {type: boolean, required: true, default: false}
+  SOURCE_CRS: {type: crs}
+  TARGET_CRS: {type: crs}
+  TARGET_EXTENT: {type: extent}
+  X_RESOLUTION: {type: number}
+  Y_RESOLUTION: {type: number}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,12 @@
+id: qgis-qgis-texttofloat
+kind: implementation
+name: qgis:texttofloat
+software: qgis
+call: {interface: qgis-process, name: 'qgis:texttofloat'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  FIELD: {type: field, required: true}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

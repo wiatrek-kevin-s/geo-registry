@@ -1,0 +1,14 @@
+id: whiteboxtools-multidirectional-hillshade
+kind: implementation
+name: MultidirectionalHillshade
+software: whiteboxtools
+call: {interface: cli, name: MultidirectionalHillshade}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  altitude: {type: Float, default: '45.0'}
+  zfactor: {type: Float}
+  full_mode: {type: Boolean, default: 'false'}
+status: active
+review: {state: harvested, source: whitebox}

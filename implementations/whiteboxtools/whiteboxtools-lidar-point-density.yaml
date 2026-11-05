@@ -1,0 +1,17 @@
+id: whiteboxtools-lidar-point-density
+kind: implementation
+name: LidarPointDensity
+software: whiteboxtools
+call: {interface: cli, name: LidarPointDensity}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar'}
+  output: {type: 'NewFile:Raster', note: output}
+  returns: {type: OptionList, default: all, values: [all, last, first]}
+  resolution: {type: Float, default: '1.0'}
+  radius: {type: Float, default: '2.5'}
+  exclude_cls: {type: String}
+  minz: {type: Float}
+  maxz: {type: Float}
+status: active
+review: {state: harvested, source: whitebox}

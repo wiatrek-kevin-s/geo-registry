@@ -1,0 +1,11 @@
+id: whiteboxtools-convert-raster-format
+kind: implementation
+name: ConvertRasterFormat
+software: whiteboxtools
+call: {interface: cli, name: ConvertRasterFormat}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

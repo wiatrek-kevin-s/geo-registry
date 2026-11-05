@@ -1,0 +1,15 @@
+id: qgis-pdal-filternoisestatistical
+kind: implementation
+name: pdal:filternoisestatistical
+software: qgis
+call: {interface: qgis-process, name: 'pdal:filternoisestatistical'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: pointcloud, required: true}
+  MEAN_K: {type: number, required: true, default: 8}
+  MULTIPLIER: {type: number, required: true, default: 2.0}
+  OUTPUT: {type: pointCloudDestination, required: true, note: output}
+  REMOVE_NOISE_POINTS: {type: boolean, required: true, default: false}
+  VPC_OUTPUT_FORMAT: {type: enum, required: true, default: COPC, values: [0, 1, 2], note: '0 COPC, 1 LAZ, 2 LAS'}
+status: active
+review: {state: harvested, source: qgis}

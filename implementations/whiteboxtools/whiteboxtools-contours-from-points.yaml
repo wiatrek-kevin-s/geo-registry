@@ -1,0 +1,17 @@
+id: whiteboxtools-contours-from-points
+kind: implementation
+name: ContoursFromPoints
+software: whiteboxtools
+call: {interface: cli, name: ContoursFromPoints}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Vector:Point', required: true}
+  field: {type: VectorAttributeField}
+  use_z: {type: Boolean, default: 'false'}
+  output: {type: 'NewFile:Vector:Line', required: true, note: output}
+  max_triangle_edge_length: {type: Float}
+  interval: {type: Float, required: true, default: '10.0'}
+  base: {type: Float, default: '0.0'}
+  smooth: {type: Integer, default: '5'}
+status: active
+review: {state: harvested, source: whitebox}

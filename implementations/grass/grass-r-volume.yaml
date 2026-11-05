@@ -1,0 +1,18 @@
+id: grass-r-volume
+kind: implementation
+name: r.volume
+software: grass
+call: {interface: cli, name: r.volume}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  clump: {type: string, note: cell name}
+  centroids: {type: string, note: output vector}
+  output: {type: string, note: output file}
+  separator: {type: string, note: separator name}
+  format: {type: string, required: true, default: plain, values: [plain, csv, json]}
+  flag_f: {type: boolean, note: flag -f}
+  flag_p: {type: boolean, note: flag -p}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

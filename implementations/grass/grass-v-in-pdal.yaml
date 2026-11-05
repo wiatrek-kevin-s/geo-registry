@@ -1,0 +1,25 @@
+id: grass-v-in-pdal
+kind: implementation
+name: v.in.pdal
+software: grass
+call: {interface: cli, name: v.in.pdal}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: file name}
+  output: {type: string, required: true, note: output vector}
+  id_layer: {type: string, note: layer name}
+  return_layer: {type: string, note: layer name}
+  class_layer: {type: string, note: layer name}
+  rgb_layer: {type: string, note: layer name}
+  spatial: {type: float}
+  zrange: {type: float}
+  return_filter: {type: string, values: [first, last, mid]}
+  class_filter: {type: integer, note: multiple values}
+  input_srs: {type: string}
+  flag_w: {type: boolean, note: flag -w}
+  flag_o: {type: boolean, note: flag -o}
+  flag_c: {type: boolean, note: flag -c}
+  flag_r: {type: boolean, note: flag -r}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,16 @@
+id: qgis-native-printlayouttoimage
+kind: implementation
+name: native:printlayouttoimage
+software: qgis
+call: {interface: qgis-process, name: 'native:printlayouttoimage'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ANTIALIAS: {type: boolean, required: true, default: true}
+  DPI: {type: number}
+  GEOREFERENCE: {type: boolean, required: true, default: true}
+  INCLUDE_METADATA: {type: boolean, required: true, default: true}
+  LAYERS: {type: multilayer}
+  LAYOUT: {type: layout, required: true}
+  OUTPUT: {type: fileDestination, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

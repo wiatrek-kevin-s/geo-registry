@@ -1,0 +1,15 @@
+id: qgis-native-angletonearest
+kind: implementation
+name: native:angletonearest
+software: qgis
+call: {interface: qgis-process, name: 'native:angletonearest'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  APPLY_SYMBOLOGY: {type: boolean, required: true, default: true}
+  FIELD_NAME: {type: string, required: true, default: rotation}
+  INPUT: {type: source, required: true}
+  MAX_DISTANCE: {type: distance}
+  OUTPUT: {type: sink, required: true, note: output}
+  REFERENCE_LAYER: {type: source, required: true}
+status: active
+review: {state: harvested, source: qgis}

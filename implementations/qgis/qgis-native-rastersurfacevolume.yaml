@@ -1,0 +1,16 @@
+id: qgis-native-rastersurfacevolume
+kind: implementation
+name: native:rastersurfacevolume
+software: qgis
+call: {interface: qgis-process, name: 'native:rastersurfacevolume'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BAND: {type: band, required: true, default: 1}
+  INPUT: {type: raster, required: true}
+  LEVEL: {type: number, required: true, default: 0}
+  METHOD: {type: enum, required: true, values: [0, 1, 2, 3], note: '0 Count Only Above Base Level, 1 Count Only Below Base
+      Level, 2 Subtract Volumes Below Base Level, 3 Add Volumes Below Base Level'}
+  OUTPUT_HTML_FILE: {type: fileDestination, note: output}
+  OUTPUT_TABLE: {type: sink, note: output}
+status: active
+review: {state: harvested, source: qgis}

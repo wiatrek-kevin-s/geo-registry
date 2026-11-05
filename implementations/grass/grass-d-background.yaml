@@ -1,0 +1,10 @@
+id: grass-d-background
+kind: implementation
+name: d.background
+software: grass
+call: {interface: cli, name: d.background}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  color: {type: string, required: true, note: color name}
+status: active
+review: {state: harvested, source: grass}

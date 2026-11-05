@@ -1,0 +1,17 @@
+id: grass-r-in-ascii
+kind: implementation
+name: r.in.ascii
+software: grass
+call: {interface: cli, name: r.in.ascii}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: file name}
+  output: {type: string, required: true, note: output cell}
+  type: {type: string, values: [CELL, FCELL, DCELL]}
+  title: {type: string}
+  multiplier: {type: float}
+  null_value: {type: string}
+  flag_s: {type: boolean, note: flag -s}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,12 @@
+id: qgis-native-copylayermetadata
+kind: implementation
+name: native:copylayermetadata
+software: qgis
+call: {interface: qgis-process, name: 'native:copylayermetadata'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  DEFAULT: {type: boolean, required: true, default: false}
+  SOURCE: {type: layer, required: true}
+  TARGET: {type: layer, required: true}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,17 @@
+id: grass-ps-map
+kind: implementation
+name: ps.map
+software: grass
+call: {interface: cli, name: ps.map}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: file name}
+  output: {type: string, required: true, note: output file}
+  copies: {type: integer, values: [1-20]}
+  flag_r: {type: boolean, note: flag -r}
+  flag_p: {type: boolean, note: flag -p}
+  flag_e: {type: boolean, note: flag -e}
+  flag_b: {type: boolean, note: flag -b}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

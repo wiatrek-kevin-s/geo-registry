@@ -1,0 +1,13 @@
+id: grass-m-measure
+kind: implementation
+name: m.measure
+software: grass
+call: {interface: cli, name: m.measure}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  coordinates: {type: float, required: true, note: coords name; multiple values}
+  units: {type: string, values: [miles, feet, meters, kilometers, acres, hectares]}
+  format: {type: string, required: true, default: plain, values: [plain, shell, json]}
+  flag_g: {type: boolean, note: flag -g}
+status: active
+review: {state: harvested, source: grass}

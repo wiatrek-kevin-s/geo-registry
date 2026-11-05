@@ -1,0 +1,12 @@
+id: qgis-native-setzvalue
+kind: implementation
+name: native:setzvalue
+software: qgis
+call: {interface: qgis-process, name: 'native:setzvalue'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  Z_VALUE: {type: number, required: true, default: 0.0}
+status: active
+review: {state: harvested, source: qgis}

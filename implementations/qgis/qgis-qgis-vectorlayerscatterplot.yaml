@@ -1,0 +1,19 @@
+id: qgis-qgis-vectorlayerscatterplot
+kind: implementation
+name: qgis:vectorlayerscatterplot
+software: qgis
+call: {interface: qgis-process, name: 'qgis:vectorlayerscatterplot'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  HOVERTEXT: {type: expression}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: fileDestination, required: true, note: output}
+  TITLE: {type: string}
+  XAXIS_LOG: {type: boolean, required: true, default: false}
+  XAXIS_TITLE: {type: string}
+  XFIELD: {type: field, required: true}
+  YAXIS_LOG: {type: boolean, required: true, default: false}
+  YAXIS_TITLE: {type: string}
+  YFIELD: {type: field, required: true}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,23 @@
+id: grass-i-vi
+kind: implementation
+name: i.vi
+software: grass
+call: {interface: cli, name: i.vi}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  output: {type: string, required: true, note: output cell}
+  viname: {type: string, required: true, default: ndvi, values: [arvi, ci, dvi, evi, evi2, gvi, gari, gemi, ipvi, msavi, msavi2,
+      ndvi, ndwi, pvi, savi, sr, vari, wdvi]}
+  red: {type: string, note: cell name}
+  nir: {type: string, note: cell name}
+  green: {type: string, note: cell name}
+  blue: {type: string, note: cell name}
+  band5: {type: string, note: cell name}
+  band7: {type: string, note: cell name}
+  soil_line_slope: {type: float}
+  soil_line_intercept: {type: float}
+  soil_noise_reduction: {type: float}
+  storage_bit: {type: integer, default: 8, values: ['7', '8', '10', '16']}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

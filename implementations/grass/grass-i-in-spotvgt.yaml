@@ -1,0 +1,13 @@
+id: grass-i-in-spotvgt
+kind: implementation
+name: i.in.spotvgt
+software: grass
+call: {interface: cli, name: i.in.spotvgt}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: file name}
+  output: {type: string, note: output cell}
+  flag_a: {type: boolean, note: flag -a}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

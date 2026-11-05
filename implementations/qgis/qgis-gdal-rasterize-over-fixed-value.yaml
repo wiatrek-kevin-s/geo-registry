@@ -1,0 +1,14 @@
+id: qgis-gdal-rasterize-over-fixed-value
+kind: implementation
+name: gdal:rasterize_over_fixed_value
+software: qgis
+call: {interface: qgis-process, name: 'gdal:rasterize_over_fixed_value'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ADD: {type: boolean, required: true, default: false}
+  BURN: {type: number, required: true, default: 0.0}
+  EXTRA: {type: string}
+  INPUT: {type: source, required: true}
+  INPUT_RASTER: {type: raster, required: true}
+status: active
+review: {state: harvested, source: qgis}

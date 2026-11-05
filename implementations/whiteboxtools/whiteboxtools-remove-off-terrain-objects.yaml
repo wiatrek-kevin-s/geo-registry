@@ -1,0 +1,13 @@
+id: whiteboxtools-remove-off-terrain-objects
+kind: implementation
+name: RemoveOffTerrainObjects
+software: whiteboxtools
+call: {interface: cli, name: RemoveOffTerrainObjects}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  filter: {type: Integer, required: true, default: '11'}
+  slope: {type: Float, required: true, default: '15.0'}
+status: active
+review: {state: harvested, source: whitebox}

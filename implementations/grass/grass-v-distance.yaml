@@ -1,0 +1,28 @@
+id: grass-v-distance
+kind: implementation
+name: v.distance
+software: grass
+call: {interface: cli, name: v.distance}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  from: {type: string, required: true, note: vector name}
+  from_layer: {type: string, default: '1', note: layer name}
+  from_type: {type: string, default: 'point,line,area', values: [point, line, boundary, centroid, area], note: multiple values}
+  to: {type: string, required: true, note: vector name}
+  to_layer: {type: string, default: '1', note: layer name}
+  to_type: {type: string, default: 'point,line,area', values: [point, line, boundary, centroid, area], note: multiple values}
+  output: {type: string, note: output vector}
+  dmax: {type: float, default: -1.0}
+  dmin: {type: float, default: -1.0}
+  upload: {type: string, required: true, values: [cat, dist, to_x, to_y, to_along, to_angle, to_attr], note: multiple values}
+  column: {type: string, note: dbcolumn name; multiple values}
+  to_column: {type: string, note: dbcolumn name}
+  table: {type: string, note: dbtable name}
+  separator: {type: string, default: pipe, note: separator name}
+  format: {type: string, required: true, default: plain, values: [plain, json]}
+  flag_p: {type: boolean, note: flag -p}
+  flag_a: {type: boolean, note: flag -a}
+  flag_s: {type: boolean, note: flag -s}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

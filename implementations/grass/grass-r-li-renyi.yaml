@@ -1,0 +1,14 @@
+id: grass-r-li-renyi
+kind: implementation
+name: r.li.renyi
+software: grass
+call: {interface: cli, name: r.li.renyi}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  config: {type: string, required: true, note: file name}
+  alpha: {type: string, required: true}
+  output: {type: string, required: true, note: output cell}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

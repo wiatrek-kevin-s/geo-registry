@@ -1,0 +1,17 @@
+id: qgis-qgis-rectanglesovalsdiamondsvariable
+kind: implementation
+name: qgis:rectanglesovalsdiamondsvariable
+software: qgis
+call: {interface: qgis-process, name: 'qgis:rectanglesovalsdiamondsvariable'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  HEIGHT: {type: field, required: true}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  ROTATION: {type: field}
+  SEGMENTS: {type: number, required: true, default: 36}
+  SHAPE: {type: enum, required: true, values: [0, 1, 2], note: '0 Rectangles, 1 Diamonds, 2 Ovals'}
+  WIDTH: {type: field, required: true}
+notes: Deprecated in QGIS.
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,22 @@
+id: qgis-gdal-hillshade
+kind: implementation
+name: gdal:hillshade
+software: qgis
+call: {interface: qgis-process, name: 'gdal:hillshade'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ALTITUDE: {type: number, required: true, default: 45.0}
+  AZIMUTH: {type: number, required: true, default: 315.0}
+  BAND: {type: band, required: true, default: 1}
+  COMBINED: {type: boolean, required: true, default: false}
+  COMPUTE_EDGES: {type: boolean, required: true, default: false}
+  CREATION_OPTIONS: {type: string, default: ''}
+  EXTRA: {type: string}
+  INPUT: {type: raster, required: true}
+  MULTIDIRECTIONAL: {type: boolean, required: true, default: false}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  SCALE: {type: number, required: true, default: 1.0}
+  ZEVENBERGEN: {type: boolean, required: true, default: false}
+  Z_FACTOR: {type: number, required: true, default: 1.0}
+status: active
+review: {state: harvested, source: qgis}

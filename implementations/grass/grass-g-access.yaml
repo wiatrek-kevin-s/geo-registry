@@ -1,0 +1,11 @@
+id: grass-g-access
+kind: implementation
+name: g.access
+software: grass
+call: {interface: cli, name: g.access}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  group: {type: string, values: [grant, revoke]}
+  other: {type: string, values: [grant, revoke]}
+status: active
+review: {state: harvested, source: grass}

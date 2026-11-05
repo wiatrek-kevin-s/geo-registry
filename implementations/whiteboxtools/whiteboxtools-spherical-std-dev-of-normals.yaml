@@ -1,0 +1,12 @@
+id: whiteboxtools-spherical-std-dev-of-normals
+kind: implementation
+name: SphericalStdDevOfNormals
+software: whiteboxtools
+call: {interface: cli, name: SphericalStdDevOfNormals}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  filter: {type: Integer, default: '11'}
+status: active
+review: {state: harvested, source: whitebox}

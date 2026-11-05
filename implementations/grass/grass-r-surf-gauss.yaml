@@ -1,0 +1,14 @@
+id: grass-r-surf-gauss
+kind: implementation
+name: r.surf.gauss
+software: grass
+call: {interface: cli, name: r.surf.gauss}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  output: {type: string, required: true, note: output cell}
+  mean: {type: float, default: 0.0}
+  sigma: {type: float, default: 1.0}
+  seed: {type: integer}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

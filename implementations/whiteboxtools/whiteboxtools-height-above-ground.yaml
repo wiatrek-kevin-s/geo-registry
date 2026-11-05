@@ -1,0 +1,11 @@
+id: whiteboxtools-height-above-ground
+kind: implementation
+name: HeightAboveGround
+software: whiteboxtools
+call: {interface: cli, name: HeightAboveGround}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar'}
+  output: {type: 'NewFile:Lidar', note: output}
+status: active
+review: {state: harvested, source: whitebox}

@@ -1,0 +1,23 @@
+id: grass-v-select
+kind: implementation
+name: v.select
+software: grass
+call: {interface: cli, name: v.select}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  ainput: {type: string, required: true, note: vector name}
+  alayer: {type: string, default: '1', note: layer name}
+  atype: {type: string, default: 'point,line,area', values: [point, line, boundary, centroid, area], note: multiple values}
+  binput: {type: string, required: true, note: vector name}
+  blayer: {type: string, default: '1', note: layer name}
+  btype: {type: string, default: 'point,line,area', values: [point, line, boundary, centroid, area], note: multiple values}
+  output: {type: string, required: true, note: output vector}
+  operator: {type: string, required: true, default: overlap, values: [overlap, equals, disjoint, intersects, touches, crosses,
+      within, contains, overlaps, relate]}
+  relate: {type: string}
+  flag_t: {type: boolean, note: flag -t}
+  flag_c: {type: boolean, note: flag -c}
+  flag_r: {type: boolean, note: flag -r}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

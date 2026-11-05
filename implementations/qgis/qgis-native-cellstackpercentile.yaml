@@ -1,0 +1,18 @@
+id: qgis-native-cellstackpercentile
+kind: implementation
+name: native:cellstackpercentile
+software: qgis
+call: {interface: qgis-process, name: 'native:cellstackpercentile'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CREATION_OPTIONS: {type: string}
+  IGNORE_NODATA: {type: boolean, required: true, default: true}
+  INPUT: {type: multilayer, required: true}
+  METHOD: {type: enum, required: true, default: 0, values: [0, 1, 2], note: '0 Nearest rank, 1 Inclusive linear interpolation
+      (PERCENTILE.INC), 2 Exclusive linear interpolation (PERCENTILE.EXC)'}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  OUTPUT_NODATA_VALUE: {type: number, required: true, default: -9999}
+  PERCENTILE: {type: number, required: true, default: 0.25}
+  REFERENCE_LAYER: {type: raster, required: true}
+status: active
+review: {state: harvested, source: qgis}

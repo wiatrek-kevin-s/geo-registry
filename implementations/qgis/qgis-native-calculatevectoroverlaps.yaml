@@ -1,0 +1,13 @@
+id: qgis-native-calculatevectoroverlaps
+kind: implementation
+name: native:calculatevectoroverlaps
+software: qgis
+call: {interface: qgis-process, name: 'native:calculatevectoroverlaps'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  GRID_SIZE: {type: number}
+  INPUT: {type: source, required: true}
+  LAYERS: {type: multilayer, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

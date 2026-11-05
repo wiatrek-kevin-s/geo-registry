@@ -1,0 +1,18 @@
+id: grass-r-describe
+kind: implementation
+name: r.describe
+software: grass
+call: {interface: cli, name: r.describe}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: cell name}
+  null_value: {type: string, default: '*'}
+  nsteps: {type: integer, default: 255}
+  format: {type: string, required: true, default: plain, values: [plain, json]}
+  flag_1: {type: boolean, note: flag -1}
+  flag_r: {type: boolean, note: flag -r}
+  flag_n: {type: boolean, note: flag -n}
+  flag_d: {type: boolean, note: flag -d}
+  flag_i: {type: boolean, note: flag -i}
+status: active
+review: {state: harvested, source: grass}

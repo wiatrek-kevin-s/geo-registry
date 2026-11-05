@@ -1,0 +1,18 @@
+id: qgis-native-addautoincrementalfield
+kind: implementation
+name: native:addautoincrementalfield
+software: qgis
+call: {interface: qgis-process, name: 'native:addautoincrementalfield'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  FIELD_NAME: {type: string, required: true, default: AUTO}
+  GROUP_FIELDS: {type: field, note: multiple values}
+  INPUT: {type: source, required: true}
+  MODULUS: {type: number, default: 0}
+  OUTPUT: {type: sink, required: true, note: output}
+  SORT_ASCENDING: {type: boolean, required: true, default: true}
+  SORT_EXPRESSION: {type: expression}
+  SORT_NULLS_FIRST: {type: boolean, required: true, default: false}
+  START: {type: number, default: 0}
+status: active
+review: {state: harvested, source: qgis}

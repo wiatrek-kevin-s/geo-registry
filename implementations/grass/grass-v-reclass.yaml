@@ -1,0 +1,17 @@
+id: grass-v-reclass
+kind: implementation
+name: v.reclass
+software: grass
+call: {interface: cli, name: v.reclass}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '1', note: layer name}
+  type: {type: string, default: 'point,line,boundary,centroid', values: [point, line, boundary, centroid], note: multiple
+      values}
+  output: {type: string, required: true, note: output vector}
+  column: {type: string, note: dbcolumn name}
+  rules: {type: string, note: file name}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

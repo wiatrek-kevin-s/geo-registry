@@ -1,0 +1,12 @@
+id: grass-t-vect-algebra
+kind: implementation
+name: t.vect.algebra
+software: grass
+call: {interface: cli, name: t.vect.algebra}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  expression: {type: string, required: true}
+  basename: {type: string, required: true}
+  flag_s: {type: boolean, note: flag -s}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,13 @@
+id: qgis-native-exportaddgeometrycolumns
+kind: implementation
+name: native:exportaddgeometrycolumns
+software: qgis
+call: {interface: qgis-process, name: 'native:exportaddgeometrycolumns'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  METHOD: {type: enum, required: true, default: 0, values: [0, 1, 2], note: '0 Cartesian Calculations in Layer''s CRS, 1 Cartesian
+      Calculations in Project''s CRS, 2 Ellipsoidal Calculations'}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

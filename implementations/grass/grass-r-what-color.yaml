@@ -1,0 +1,14 @@
+id: grass-r-what-color
+kind: implementation
+name: r.what.color
+software: grass
+call: {interface: cli, name: r.what.color}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  value: {type: float, note: multiple values}
+  format: {type: string, default: '%d:%d:%d'}
+  color_format: {type: string, required: true, default: hex, values: [rgb, hex, hsv, triplet]}
+  flag_i: {type: boolean, note: flag -i}
+status: active
+review: {state: harvested, source: grass}

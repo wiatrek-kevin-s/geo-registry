@@ -1,0 +1,13 @@
+id: qgis-native-rasterlayeruniquevaluesreport
+kind: implementation
+name: native:rasterlayeruniquevaluesreport
+software: qgis
+call: {interface: qgis-process, name: 'native:rasterlayeruniquevaluesreport'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BAND: {type: band, required: true, default: 1}
+  INPUT: {type: raster, required: true}
+  OUTPUT_HTML_FILE: {type: fileDestination, note: output}
+  OUTPUT_TABLE: {type: sink, note: output}
+status: active
+review: {state: harvested, source: qgis}

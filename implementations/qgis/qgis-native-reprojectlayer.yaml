@@ -1,0 +1,15 @@
+id: qgis-native-reprojectlayer
+kind: implementation
+name: native:reprojectlayer
+software: qgis
+call: {interface: qgis-process, name: 'native:reprojectlayer'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CONVERT_CURVED_GEOMETRIES: {type: boolean, required: true, default: false}
+  INPUT: {type: source, required: true}
+  OPERATION: {type: coordinateoperation}
+  OUTPUT: {type: sink, required: true, note: output}
+  TARGET_CRS: {type: crs, required: true, default: 'EPSG:4326'}
+  TRANSFORM_Z: {type: boolean, required: true, default: false}
+status: active
+review: {state: harvested, source: qgis}

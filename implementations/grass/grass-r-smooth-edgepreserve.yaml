@@ -1,0 +1,19 @@
+id: grass-r-smooth-edgepreserve
+kind: implementation
+name: r.smooth.edgepreserve
+software: grass
+call: {interface: cli, name: r.smooth.edgepreserve}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  threshold: {type: float, required: true, default: 5.0, values: [0.000000001-]}
+  lambda: {type: float, required: true, default: 0.1, values: [0-1]}
+  steps: {type: integer, required: true, default: 10, values: [1-]}
+  function: {type: string, required: true, default: tukey, values: [exponential, quadratic, tukey]}
+  memory: {type: integer, default: 300}
+  nprocs: {type: integer, default: 0}
+  flag_p: {type: boolean, note: flag -p}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

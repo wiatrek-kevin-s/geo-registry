@@ -1,0 +1,18 @@
+id: qgis-native-distancematrix
+kind: implementation
+name: native:distancematrix
+software: qgis
+call: {interface: qgis-process, name: 'native:distancematrix'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  INPUT_FIELD: {type: field, required: true}
+  MATRIX_TYPE: {type: enum, required: true, default: 0, values: [0, 1, 2], note: '0 Linear (N*k x 3) distance matrix, 1 Standard
+      (N x T) distance matrix, 2 Summary distance matrix (mean, std. dev., min, max)'}
+  NEAREST_POINTS: {type: number, required: true, default: 0}
+  OUTPUT: {type: sink, required: true, note: output}
+  TARGET: {type: source, required: true}
+  TARGET_FIELD: {type: field, required: true}
+  USE_ELLIPSOID: {type: boolean, required: true, default: true}
+status: active
+review: {state: harvested, source: qgis}

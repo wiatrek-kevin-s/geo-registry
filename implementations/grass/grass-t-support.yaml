@@ -1,0 +1,17 @@
+id: grass-t-support
+kind: implementation
+name: t.support
+software: grass
+call: {interface: cli, name: t.support}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: stds name}
+  semantictype: {type: string, default: mean, values: [min, max, sum, mean]}
+  type: {type: string, default: strds, values: [strds, stvds, str3ds]}
+  title: {type: string}
+  description: {type: string}
+  aggr_type: {type: string}
+  flag_m: {type: boolean, note: flag -m}
+  flag_u: {type: boolean, note: flag -u}
+status: active
+review: {state: harvested, source: grass}

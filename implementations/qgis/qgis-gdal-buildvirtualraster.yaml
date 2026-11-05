@@ -1,0 +1,20 @@
+id: qgis-gdal-buildvirtualraster
+kind: implementation
+name: gdal:buildvirtualraster
+software: qgis
+call: {interface: qgis-process, name: 'gdal:buildvirtualraster'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ADD_ALPHA: {type: boolean, required: true, default: false}
+  ASSIGN_CRS: {type: crs}
+  EXTRA: {type: string}
+  INPUT: {type: multilayer, required: true}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  PROJ_DIFFERENCE: {type: boolean, required: true, default: false}
+  RESAMPLING: {type: enum, required: true, default: 0, values: [0, 1, 2, 3, 4, 5, 6], note: '0 Nearest Neighbour, 1 Bilinear
+      (2x2 Kernel), 2 Cubic (4x4 Kernel), 3 Cubic B-Spline (4x4 Kernel), 4 Lanczos (6x6 Kernel), 5 Average, 6 Mode'}
+  RESOLUTION: {type: enum, required: true, default: 0, values: [0, 1, 2], note: '0 Average, 1 Highest, 2 Lowest'}
+  SEPARATE: {type: boolean, required: true, default: true}
+  SRC_NODATA: {type: string}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,18 @@
+id: grass-v-out-pov
+kind: implementation
+name: v.out.pov
+software: grass
+call: {interface: cli, name: v.out.pov}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '-1', note: layer_all name}
+  type: {type: string, default: 'point,line,area,face', values: [point, line, boundary, centroid, area, face, kernel], note: multiple
+      values}
+  output: {type: string, required: true, note: output file}
+  size: {type: string, default: '10'}
+  zmod: {type: string}
+  objmod: {type: string}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

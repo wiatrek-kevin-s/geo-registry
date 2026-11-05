@@ -1,0 +1,24 @@
+id: grass-r-ros
+kind: implementation
+name: r.ros
+software: grass
+call: {interface: cli, name: r.ros}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  model: {type: string, required: true, note: cell name}
+  moisture_1h: {type: string, note: cell name}
+  moisture_10h: {type: string, note: cell name}
+  moisture_100h: {type: string, note: cell name}
+  moisture_live: {type: string, required: true, note: cell name}
+  velocity: {type: string, note: cell name}
+  direction: {type: string, note: cell name}
+  slope: {type: string, note: cell name}
+  aspect: {type: string, note: cell name}
+  elevation: {type: string, note: cell name}
+  base_ros: {type: string, required: true, note: output cell}
+  max_ros: {type: string, required: true, note: output cell}
+  direction_ros: {type: string, required: true, note: output cell}
+  spotting_distance: {type: string, note: output cell}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

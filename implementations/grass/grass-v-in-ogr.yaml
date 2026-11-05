@@ -1,0 +1,36 @@
+id: grass-v-in-ogr
+kind: implementation
+name: v.in.ogr
+software: grass
+call: {interface: cli, name: v.in.ogr}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: datasource name}
+  gdal_config: {type: string}
+  gdal_doo: {type: string}
+  layer: {type: string, note: datasource_layer name; multiple values}
+  output: {type: string, note: output vector}
+  spatial: {type: float, note: multiple values}
+  where: {type: string, note: sql_query name}
+  min_area: {type: float, default: 0.0001}
+  type: {type: string, values: [point, line, boundary, centroid], note: multiple values}
+  snap: {type: float, default: -1.0}
+  project: {type: string}
+  columns: {type: string, note: dbcolumn name; multiple values}
+  encoding: {type: string}
+  key: {type: string}
+  geometry: {type: string, note: dbcolumn name}
+  flag_f: {type: boolean, note: flag -f}
+  flag_l: {type: boolean, note: flag -l}
+  flag_c: {type: boolean, note: flag -c}
+  flag_2: {type: boolean, note: flag -2}
+  flag_t: {type: boolean, note: flag -t}
+  flag_o: {type: boolean, note: flag -o}
+  flag_j: {type: boolean, note: flag -j}
+  flag_r: {type: boolean, note: flag -r}
+  flag_e: {type: boolean, note: flag -e}
+  flag_w: {type: boolean, note: flag -w}
+  flag_i: {type: boolean, note: flag -i}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

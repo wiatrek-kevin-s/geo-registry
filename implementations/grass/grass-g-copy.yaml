@@ -1,0 +1,16 @@
+id: grass-g-copy
+kind: implementation
+name: g.copy
+software: grass
+call: {interface: cli, name: g.copy}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  raster: {type: string, note: cell name}
+  raster_3d: {type: string, note: grid3 name}
+  vector: {type: string, note: vector name}
+  label: {type: string, note: paint/labels name}
+  region: {type: string, note: windows name}
+  group: {type: string, note: group name}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

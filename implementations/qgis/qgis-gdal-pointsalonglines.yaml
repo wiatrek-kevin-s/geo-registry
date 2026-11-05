@@ -1,0 +1,14 @@
+id: qgis-gdal-pointsalonglines
+kind: implementation
+name: gdal:pointsalonglines
+software: qgis
+call: {interface: qgis-process, name: 'gdal:pointsalonglines'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  DISTANCE: {type: number, required: true, default: 0.5}
+  GEOMETRY: {type: string, required: true, default: geometry}
+  INPUT: {type: source, required: true}
+  OPTIONS: {type: string, default: ''}
+  OUTPUT: {type: vectorDestination, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

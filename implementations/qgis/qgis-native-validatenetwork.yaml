@@ -1,0 +1,20 @@
+id: qgis-native-validatenetwork
+kind: implementation
+name: native:validatenetwork
+software: qgis
+call: {interface: qgis-process, name: 'native:validatenetwork'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  DIRECTION_FIELD: {type: field}
+  ENDPOINTS_ONLY: {type: boolean, required: true, default: false}
+  INPUT: {type: source, required: true}
+  OUTPUT_INVALID_NETWORK: {type: sink, note: output}
+  OUTPUT_INVALID_NODES: {type: sink, note: output}
+  TOLERANCE: {type: distance, required: true, default: 0}
+  TOLERANCE_NODE_NODE: {type: distance}
+  TOLERANCE_NODE_SEGMENT: {type: distance}
+  VALUE_BACKWARD: {type: string}
+  VALUE_BOTH: {type: string}
+  VALUE_FORWARD: {type: string}
+status: active
+review: {state: harvested, source: qgis}

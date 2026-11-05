@@ -1,0 +1,25 @@
+id: grass-d-northarrow
+kind: implementation
+name: d.northarrow
+software: grass
+call: {interface: cli, name: d.northarrow}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  style: {type: string, default: 1a, values: [1a, 1b, '2', '3', '4', '5', '6', 7a, 7b, 8a, 8b, '9', fancy_compass, basic_compass,
+      arrow1, arrow2, arrow3, star], note: northarrow name}
+  at: {type: float, default: '85.0,15.0', values: [0-100]}
+  rotation: {type: float, default: 0.0}
+  label: {type: string, default: N}
+  color: {type: string, default: black, note: color_none name}
+  fill_color: {type: string, default: black, note: color_none name}
+  text_color: {type: string, note: color name}
+  width: {type: float, default: 0.0}
+  font: {type: string}
+  fontsize: {type: float, default: 14.0, values: [1-360]}
+  path: {type: string, note: font name}
+  charset: {type: string}
+  flag_t: {type: boolean, note: flag -t}
+  flag_w: {type: boolean, note: flag -w}
+  flag_r: {type: boolean, note: flag -r}
+status: active
+review: {state: harvested, source: grass}

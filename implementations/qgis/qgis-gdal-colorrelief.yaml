@@ -1,0 +1,18 @@
+id: qgis-gdal-colorrelief
+kind: implementation
+name: gdal:colorrelief
+software: qgis
+call: {interface: qgis-process, name: 'gdal:colorrelief'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BAND: {type: band, required: true, default: 1}
+  COLOR_TABLE: {type: file, required: true}
+  COMPUTE_EDGES: {type: boolean, required: true, default: false}
+  CREATION_OPTIONS: {type: string, default: ''}
+  EXTRA: {type: string}
+  INPUT: {type: raster, required: true}
+  MATCH_MODE: {type: enum, required: true, default: 2, values: [0, 1, 2], note: '0 Use strict color matching, 1 Use closest
+      RGBA quadruplet, 2 Use smoothly blended colors'}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

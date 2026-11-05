@@ -1,0 +1,14 @@
+id: grass-r-basins-fill
+kind: implementation
+name: r.basins.fill
+software: grass
+call: {interface: cli, name: r.basins.fill}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  cnetwork: {type: string, required: true, note: cell name}
+  tnetwork: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  number: {type: integer, required: true}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,18 @@
+id: qgis-qgis-boxplot
+kind: implementation
+name: qgis:boxplot
+software: qgis
+call: {interface: qgis-process, name: 'qgis:boxplot'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  MSD: {type: enum, required: true, default: 0, values: [0, 1, 2], note: '0 Show Mean, 1 Show Standard Deviation, 2 Don''t
+      show Mean and Standard Deviation'}
+  NAME_FIELD: {type: field, required: true}
+  OUTPUT: {type: fileDestination, required: true, note: output}
+  TITLE: {type: string}
+  VALUE_FIELD: {type: field, required: true}
+  XAXIS_TITLE: {type: string}
+  YAXIS_TITLE: {type: string}
+status: active
+review: {state: harvested, source: qgis}

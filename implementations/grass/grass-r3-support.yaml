@@ -1,0 +1,22 @@
+id: grass-r3-support
+kind: implementation
+name: r3.support
+software: grass
+call: {interface: cli, name: r3.support}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: grid3 name}
+  title: {type: string}
+  history: {type: string}
+  unit: {type: string}
+  vunit: {type: string}
+  source1: {type: string}
+  source2: {type: string}
+  description: {type: string}
+  raster: {type: string, note: cell name}
+  loadhistory: {type: string, note: file name}
+  savehistory: {type: string, note: output file}
+  flag_s: {type: boolean, note: flag -s}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

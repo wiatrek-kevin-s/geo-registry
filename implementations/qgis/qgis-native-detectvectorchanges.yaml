@@ -1,0 +1,17 @@
+id: qgis-native-detectvectorchanges
+kind: implementation
+name: native:detectvectorchanges
+software: qgis
+call: {interface: qgis-process, name: 'native:detectvectorchanges'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ADDED: {type: sink, note: output}
+  COMPARE_ATTRIBUTES: {type: field, note: multiple values}
+  DELETED: {type: sink, note: output}
+  MATCH_TYPE: {type: enum, required: true, default: 1, values: [0, 1], note: '0 Exact Match, 1 Tolerant Match (Topological
+      Equality)'}
+  ORIGINAL: {type: source, required: true}
+  REVISED: {type: source, required: true}
+  UNCHANGED: {type: sink, note: output}
+status: active
+review: {state: harvested, source: qgis}

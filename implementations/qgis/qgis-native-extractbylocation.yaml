@@ -1,0 +1,14 @@
+id: qgis-native-extractbylocation
+kind: implementation
+name: native:extractbylocation
+software: qgis
+call: {interface: qgis-process, name: 'native:extractbylocation'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  INTERSECT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  PREDICATE: {type: enum, required: true, default: '', values: [0, 1, 2, 3, 4, 5, 6, 7], note: '0 intersect, 1 contain, 2
+      disjoint, 3 equal, 4 touch, 5 overlap, 6 are within, 7 cross; multiple values'}
+status: active
+review: {state: harvested, source: qgis}

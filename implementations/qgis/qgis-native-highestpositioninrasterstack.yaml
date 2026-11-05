@@ -1,0 +1,15 @@
+id: qgis-native-highestpositioninrasterstack
+kind: implementation
+name: native:highestpositioninrasterstack
+software: qgis
+call: {interface: qgis-process, name: 'native:highestpositioninrasterstack'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CREATION_OPTIONS: {type: string}
+  IGNORE_NODATA: {type: boolean, required: true, default: false}
+  INPUT_RASTERS: {type: multilayer, required: true}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  OUTPUT_NODATA_VALUE: {type: number, default: -9999}
+  REFERENCE_LAYER: {type: raster, required: true}
+status: active
+review: {state: harvested, source: qgis}

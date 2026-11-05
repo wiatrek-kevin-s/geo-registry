@@ -1,0 +1,13 @@
+id: whiteboxtools-split-colour-composite
+kind: implementation
+name: SplitColourComposite
+software: whiteboxtools
+call: {interface: cli, name: SplitColourComposite}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  red: {type: 'NewFile:Raster', note: output}
+  green: {type: 'NewFile:Raster', note: output}
+  blue: {type: 'NewFile:Raster', note: output}
+status: active
+review: {state: harvested, source: whitebox}

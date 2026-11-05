@@ -1,0 +1,12 @@
+id: whiteboxtools-flatten-lakes
+kind: implementation
+name: FlattenLakes
+software: whiteboxtools
+call: {interface: cli, name: FlattenLakes}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  lakes: {type: 'ExistingFile:Vector:Polygon', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

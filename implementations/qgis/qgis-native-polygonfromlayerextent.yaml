@@ -1,0 +1,12 @@
+id: qgis-native-polygonfromlayerextent
+kind: implementation
+name: native:polygonfromlayerextent
+software: qgis
+call: {interface: qgis-process, name: 'native:polygonfromlayerextent'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: layer, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  ROUND_TO: {type: distance, required: true, default: 0}
+status: active
+review: {state: harvested, source: qgis}

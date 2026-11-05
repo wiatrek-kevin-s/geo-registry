@@ -1,0 +1,13 @@
+id: grass-r-li-padrange
+kind: implementation
+name: r.li.padrange
+software: grass
+call: {interface: cli, name: r.li.padrange}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  config: {type: string, required: true, note: file name}
+  output: {type: string, required: true, note: output cell}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

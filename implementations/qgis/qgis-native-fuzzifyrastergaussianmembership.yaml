@@ -1,0 +1,15 @@
+id: qgis-native-fuzzifyrastergaussianmembership
+kind: implementation
+name: native:fuzzifyrastergaussianmembership
+software: qgis
+call: {interface: qgis-process, name: 'native:fuzzifyrastergaussianmembership'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BAND: {type: band, required: true, default: 1}
+  CREATION_OPTIONS: {type: string}
+  FUZZYMIDPOINT: {type: number, required: true, default: 10}
+  FUZZYSPREAD: {type: number, required: true, default: 0.01}
+  INPUT: {type: raster, required: true}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

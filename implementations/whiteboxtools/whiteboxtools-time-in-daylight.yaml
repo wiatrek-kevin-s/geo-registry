@@ -1,0 +1,20 @@
+id: whiteboxtools-time-in-daylight
+kind: implementation
+name: TimeInDaylight
+software: whiteboxtools
+call: {interface: cli, name: TimeInDaylight}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  az_fraction: {type: Float, required: true, default: '10.0'}
+  max_dist: {type: Float, required: true, default: '100.0'}
+  lat: {type: Float, required: true}
+  long: {type: Float, required: true}
+  utc_offset: {type: String, default: '00:00'}
+  start_day: {type: Integer, default: '1'}
+  end_day: {type: Integer, default: '365'}
+  start_time: {type: String, default: '00:00:00'}
+  end_time: {type: String, default: '23:59:59'}
+status: active
+review: {state: harvested, source: whitebox}

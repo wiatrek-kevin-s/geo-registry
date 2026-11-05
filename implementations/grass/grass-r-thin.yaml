@@ -1,0 +1,13 @@
+id: grass-r-thin
+kind: implementation
+name: r.thin
+software: grass
+call: {interface: cli, name: r.thin}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  iterations: {type: integer, default: 200}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

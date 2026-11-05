@@ -1,0 +1,17 @@
+id: qgis-native-splitvectorlayer
+kind: implementation
+name: native:splitvectorlayer
+software: qgis
+call: {interface: qgis-process, name: 'native:splitvectorlayer'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  FIELD: {type: field, required: true}
+  FILE_TYPE: {type: enum, default: 0, values: [0, 1, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 2, 20, 21, 22, 23, 24, 25, 26,
+      3, 4, 5, 6, 7, 8, 9], note: '0 gpkg, 1 shp, 10 gdb, 11 geojson, 12 geojsonl, 13 geojsons, 14 gml, 15 gpkg.zip, 16 gpx,
+      17 ipc, 18 json, 19 kml, 2 000, 20 ods, 21 parquet, 22 sql, 23 sqlite, 24 tab, 25 xlsx, 26 xml, 3 arrow, 4 arrows, 5
+      csv, 6 dgn, 7 dxf, 8 feather, 9 fgb'}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: folderDestination, required: true, note: output}
+  PREFIX_FIELD: {type: boolean, required: true, default: true}
+status: active
+review: {state: harvested, source: qgis}

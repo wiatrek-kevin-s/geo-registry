@@ -1,0 +1,20 @@
+id: grass-r-topmodel
+kind: implementation
+name: r.topmodel
+software: grass
+call: {interface: cli, name: r.topmodel}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  parameters: {type: string, required: true, note: file name}
+  topidxstats: {type: string, required: true, note: file name}
+  input: {type: string, required: true, note: file name}
+  output: {type: string, required: true, note: output file}
+  timestep: {type: integer}
+  topidxclass: {type: integer}
+  topidx: {type: string, note: cell name}
+  ntopidxclasses: {type: integer, default: 30}
+  outtopidxstats: {type: string, note: output file}
+  flag_p: {type: boolean, note: flag -p}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

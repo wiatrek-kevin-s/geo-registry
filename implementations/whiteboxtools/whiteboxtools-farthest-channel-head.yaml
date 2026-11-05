@@ -1,0 +1,14 @@
+id: whiteboxtools-farthest-channel-head
+kind: implementation
+name: FarthestChannelHead
+software: whiteboxtools
+call: {interface: cli, name: FarthestChannelHead}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  d8_pntr: {type: 'ExistingFile:Raster', required: true}
+  streams: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  esri_pntr: {type: Boolean, default: 'false'}
+  zero_background: {type: Boolean}
+status: active
+review: {state: harvested, source: whitebox}

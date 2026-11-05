@@ -1,0 +1,15 @@
+id: grass-r-surf-random
+kind: implementation
+name: r.surf.random
+software: grass
+call: {interface: cli, name: r.surf.random}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  output: {type: string, required: true, note: output cell}
+  min: {type: float, default: 0.0}
+  max: {type: float, default: 100.0}
+  seed: {type: integer}
+  flag_i: {type: boolean, note: flag -i}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

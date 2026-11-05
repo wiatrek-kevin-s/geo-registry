@@ -1,0 +1,16 @@
+id: qgis-gdal-gdalinfo
+kind: implementation
+name: gdal:gdalinfo
+software: qgis
+call: {interface: qgis-process, name: 'gdal:gdalinfo'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  EXTRA: {type: string}
+  INPUT: {type: raster, required: true}
+  MIN_MAX: {type: boolean, required: true, default: false}
+  NOGCP: {type: boolean, required: true, default: false}
+  NO_METADATA: {type: boolean, required: true, default: false}
+  OUTPUT: {type: fileDestination, required: true, note: output}
+  STATS: {type: boolean, required: true, default: false}
+status: active
+review: {state: harvested, source: qgis}

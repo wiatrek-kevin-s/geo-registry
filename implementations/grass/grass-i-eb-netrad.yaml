@@ -1,0 +1,20 @@
+id: grass-i-eb-netrad
+kind: implementation
+name: i.eb.netrad
+software: grass
+call: {interface: cli, name: i.eb.netrad}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  albedo: {type: string, required: true, note: cell name}
+  ndvi: {type: string, required: true, note: cell name}
+  temperature: {type: string, required: true, note: cell name}
+  localutctime: {type: string, required: true, note: cell name}
+  temperaturedifference2m: {type: string, required: true, note: cell name}
+  emissivity: {type: string, required: true, note: cell name}
+  transmissivity_singleway: {type: string, required: true, note: cell name}
+  dayofyear: {type: string, required: true, note: cell name}
+  sunzenithangle: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

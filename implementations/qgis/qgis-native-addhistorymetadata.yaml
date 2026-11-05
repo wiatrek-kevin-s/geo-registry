@@ -1,0 +1,11 @@
+id: qgis-native-addhistorymetadata
+kind: implementation
+name: native:addhistorymetadata
+software: qgis
+call: {interface: qgis-process, name: 'native:addhistorymetadata'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  HISTORY: {type: string, required: true}
+  INPUT: {type: layer, required: true}
+status: active
+review: {state: harvested, source: qgis}

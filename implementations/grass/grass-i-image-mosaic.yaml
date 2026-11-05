@@ -1,0 +1,13 @@
+id: grass-i-image-mosaic
+kind: implementation
+name: i.image.mosaic
+software: grass
+call: {interface: cli, name: i.image.mosaic}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name; multiple values}
+  output: {type: string, required: true, note: output cell}
+  nprocs: {type: integer, default: 0}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

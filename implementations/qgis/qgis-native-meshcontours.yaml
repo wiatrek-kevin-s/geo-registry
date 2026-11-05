@@ -1,0 +1,19 @@
+id: qgis-native-meshcontours
+kind: implementation
+name: native:meshcontours
+software: qgis
+call: {interface: qgis-process, name: 'native:meshcontours'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CONTOUR_LEVEL_LIST: {type: string}
+  CRS_OUTPUT: {type: crs}
+  DATASET_GROUPS: {type: meshdatasetgroups, required: true, note: 'default []'}
+  DATASET_TIME: {type: meshdatasettime, required: true}
+  INCREMENT: {type: number}
+  INPUT: {type: mesh, required: true}
+  MAXIMUM: {type: number}
+  MINIMUM: {type: number}
+  OUTPUT_LINES: {type: sink, required: true, note: output}
+  OUTPUT_POLYGONS: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

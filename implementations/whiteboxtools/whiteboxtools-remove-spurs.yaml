@@ -1,0 +1,12 @@
+id: whiteboxtools-remove-spurs
+kind: implementation
+name: RemoveSpurs
+software: whiteboxtools
+call: {interface: cli, name: RemoveSpurs}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  iterations: {type: Integer, required: true, default: '10'}
+status: active
+review: {state: harvested, source: whitebox}

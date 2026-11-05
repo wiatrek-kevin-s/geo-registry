@@ -1,0 +1,11 @@
+id: grass-v-db-join
+implements: attribute-join
+crosswalk:
+  left: map
+  right: other_table
+  left_key: column
+  right_key: other_column
+differences:
+  - Adds the other table's columns to the map's own attribute table in place; there is no separate output.
+effects: { modifies_input: true, network: false }
+review: { state: draft }

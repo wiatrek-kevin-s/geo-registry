@@ -1,0 +1,11 @@
+id: whiteboxtools-polygonize
+kind: implementation
+name: Polygonize
+software: whiteboxtools
+call: {interface: cli, name: Polygonize}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  inputs: {type: 'FileList:Vector:Line', required: true}
+  output: {type: 'NewFile:Vector:Polygon', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

@@ -1,0 +1,14 @@
+id: grass-r-to-rast3
+kind: implementation
+name: r.to.rast3
+software: grass
+call: {interface: cli, name: r.to.rast3}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name; multiple values}
+  output: {type: string, required: true, note: output grid3}
+  tilesize: {type: integer, default: 32}
+  flag_m: {type: boolean, note: flag -m}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,38 @@
+id: grass-r-solute-transport
+kind: implementation
+name: r.solute.transport
+software: grass
+call: {interface: cli, name: r.solute.transport}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  c: {type: string, required: true, note: cell name}
+  phead: {type: string, required: true, note: cell name}
+  hc_x: {type: string, required: true, note: cell name}
+  hc_y: {type: string, required: true, note: cell name}
+  status: {type: string, required: true, note: cell name}
+  diff_x: {type: string, required: true, note: cell name}
+  diff_y: {type: string, required: true, note: cell name}
+  q: {type: string, note: cell name}
+  cin: {type: string, note: raster name}
+  cs: {type: string, required: true, note: raster name}
+  rd: {type: string, required: true, note: cell name}
+  nf: {type: string, required: true, note: cell name}
+  top: {type: string, required: true, note: cell name}
+  bottom: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  vx: {type: string, note: output cell}
+  vy: {type: string, note: output cell}
+  dtime: {type: float, required: true, default: 86400.0}
+  maxit: {type: integer, default: 10000}
+  error: {type: float, default: 1.0e-06}
+  solver: {type: string, default: bicgstab, values: [gauss, lu, jacobi, sor, bicgstab]}
+  relax: {type: float, default: 1.0}
+  al: {type: float, default: 0.0}
+  at: {type: float, default: 0.0}
+  loops: {type: float, default: 1.0}
+  stab: {type: string, default: full, values: [full, exp]}
+  flag_f: {type: boolean, note: flag -f}
+  flag_c: {type: boolean, note: flag -c}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

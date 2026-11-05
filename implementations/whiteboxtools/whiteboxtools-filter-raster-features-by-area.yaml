@@ -1,0 +1,13 @@
+id: whiteboxtools-filter-raster-features-by-area
+kind: implementation
+name: FilterRasterFeaturesByArea
+software: whiteboxtools
+call: {interface: cli, name: FilterRasterFeaturesByArea}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  threshold: {type: Integer, required: true}
+  background: {type: OptionList, default: zero, values: [zero, nodata]}
+status: active
+review: {state: harvested, source: whitebox}

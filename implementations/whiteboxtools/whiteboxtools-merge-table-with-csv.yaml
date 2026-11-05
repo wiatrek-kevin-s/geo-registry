@@ -1,0 +1,14 @@
+id: whiteboxtools-merge-table-with-csv
+kind: implementation
+name: MergeTableWithCsv
+software: whiteboxtools
+call: {interface: cli, name: MergeTableWithCsv}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Vector:Any', required: true}
+  pkey: {type: VectorAttributeField, required: true}
+  csv: {type: 'ExistingFile:Csv', required: true}
+  fkey: {type: VectorAttributeField, required: true}
+  import_field: {type: VectorAttributeField}
+status: active
+review: {state: harvested, source: whitebox}

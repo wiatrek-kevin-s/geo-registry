@@ -1,0 +1,11 @@
+id: qgis-gdal-extractprojection
+kind: implementation
+name: gdal:extractprojection
+software: qgis
+call: {interface: qgis-process, name: 'gdal:extractprojection'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: raster, required: true}
+  PRJ_FILE_CREATE: {type: boolean, required: true, default: false}
+status: active
+review: {state: harvested, source: qgis}

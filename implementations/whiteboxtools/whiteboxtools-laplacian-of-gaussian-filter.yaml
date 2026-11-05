@@ -1,0 +1,12 @@
+id: whiteboxtools-laplacian-of-gaussian-filter
+kind: implementation
+name: LaplacianOfGaussianFilter
+software: whiteboxtools
+call: {interface: cli, name: LaplacianOfGaussianFilter}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  sigma: {type: Float, default: '0.75'}
+status: active
+review: {state: harvested, source: whitebox}

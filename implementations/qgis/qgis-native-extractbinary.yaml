@@ -1,0 +1,13 @@
+id: qgis-native-extractbinary
+kind: implementation
+name: native:extractbinary
+software: qgis
+call: {interface: qgis-process, name: 'native:extractbinary'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  FIELD: {type: field, required: true}
+  FILENAME: {type: expression, required: true}
+  FOLDER: {type: folderDestination, required: true, note: output}
+  INPUT: {type: source, required: true}
+status: active
+review: {state: harvested, source: qgis}

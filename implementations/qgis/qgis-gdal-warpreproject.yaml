@@ -1,0 +1,26 @@
+id: qgis-gdal-warpreproject
+kind: implementation
+name: gdal:warpreproject
+software: qgis
+call: {interface: qgis-process, name: 'gdal:warpreproject'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CREATION_OPTIONS: {type: string, default: ''}
+  DATA_TYPE: {type: enum, required: true, default: 0, values: [0, 1, 10, 11, 12, 2, 3, 4, 5, 6, 7, 8, 9], note: '0 Use Input
+      Layer Data Type, 1 Byte, 10 CFloat32, 11 CFloat64, 12 Int8, 2 Int16, 3 UInt16, 4 UInt32, 5 Int32, 6 Float32, 7 Float64,
+      8 CInt16, 9 CInt32'}
+  EXTRA: {type: string}
+  INPUT: {type: raster, required: true}
+  MULTITHREADING: {type: boolean, required: true, default: false}
+  NODATA: {type: number}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  RESAMPLING: {type: enum, required: true, default: 0, values: [0, 1, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9], note: '0 Nearest Neighbour,
+      1 Bilinear (2x2 Kernel), 10 First Quartile (Q1), 11 Third Quartile (Q3), 2 Cubic (4x4 Kernel), 3 Cubic B-Spline (4x4
+      Kernel), 4 Lanczos (6x6 Kernel), 5 Average, 6 Mode, 7 Maximum, 8 Minimum, 9 Median'}
+  SOURCE_CRS: {type: crs}
+  TARGET_CRS: {type: crs}
+  TARGET_EXTENT: {type: extent}
+  TARGET_EXTENT_CRS: {type: crs}
+  TARGET_RESOLUTION: {type: number}
+status: active
+review: {state: harvested, source: qgis}

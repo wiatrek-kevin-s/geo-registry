@@ -1,0 +1,15 @@
+id: qgis-native-extractmvalues
+kind: implementation
+name: native:extractmvalues
+software: qgis
+call: {interface: qgis-process, name: 'native:extractmvalues'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  COLUMN_PREFIX: {type: string, default: m_}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  SUMMARIES: {type: enum, required: true, values: [0, 1, 10, 11, 12, 13, 14, 15, 2, 3, 4, 5, 6, 7, 8, 9], note: '0 First,
+      1 Last, 10 Minority, 11 Majority, 12 Variety, 13 Q1, 14 Q3, 15 IQR, 2 Count, 3 Sum, 4 Mean, 5 Median, 6 St dev (pop),
+      7 Minimum, 8 Maximum, 9 Range; multiple values; default [0]'}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,15 @@
+id: grass-v-normal
+kind: implementation
+name: v.normal
+software: grass
+call: {interface: cli, name: v.normal}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '1', note: layer name}
+  tests: {type: string, required: true, note: multiple values}
+  column: {type: string, required: true, note: dbcolumn name}
+  flag_r: {type: boolean, note: flag -r}
+  flag_l: {type: boolean, note: flag -l}
+status: active
+review: {state: harvested, source: grass}

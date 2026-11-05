@@ -1,0 +1,12 @@
+id: grass-v-db-dropcolumn
+kind: implementation
+name: v.db.dropcolumn
+software: grass
+call: {interface: cli, name: v.db.dropcolumn}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '1', note: layer name}
+  columns: {type: string, required: true, note: dbcolumn name; multiple values}
+status: active
+review: {state: harvested, source: grass}

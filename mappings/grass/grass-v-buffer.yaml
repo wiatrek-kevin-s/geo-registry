@@ -1,0 +1,9 @@
+id: grass-v-buffer
+implements: buffer
+crosswalk:
+  layer: input
+  output: output
+  distance: distance
+  unit: { fixed: crs-units, note: Distance is in the map units of the GRASS project. }
+effects: { modifies_input: false, network: false }
+review: { state: draft }
