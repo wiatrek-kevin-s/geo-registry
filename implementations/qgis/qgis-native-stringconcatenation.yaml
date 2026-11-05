@@ -1,0 +1,12 @@
+id: qgis-native-stringconcatenation
+kind: implementation
+name: native:stringconcatenation
+software: qgis
+call: {interface: qgis-process, name: 'native:stringconcatenation'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT_1: {type: string, required: true}
+  INPUT_2: {type: string, required: true}
+notes: Deprecated in QGIS.
+status: active
+review: {state: harvested, source: qgis}

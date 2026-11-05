@@ -1,0 +1,14 @@
+id: whiteboxtools-fill-depressions
+kind: implementation
+name: FillDepressions
+software: whiteboxtools
+call: {interface: cli, name: FillDepressions}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  fix_flats: {type: Boolean, default: 'true'}
+  flat_increment: {type: Float}
+  max_depth: {type: Float}
+status: active
+review: {state: harvested, source: whitebox}

@@ -39,6 +39,9 @@ pub fn search(db: &Path, query: &str, kind: Option<&str>, limit: usize) -> Resul
     if kind == Some("operation") {
         return search_operations(&conn, &q, limit);
     }
+    if kind == Some("implementation") {
+        return search_implementations(&conn, &q, limit);
+    }
     let mut stmt = conn.prepare(
         "SELECT bm25(entries_fts, 0.0, 10.0, 4.0, 2.0, 3.0, 1.0) AS score, e.card
            FROM entries_fts
@@ -88,10 +91,56 @@ fn search_operations(conn: &Connection, q: &str, limit: usize) -> Result<Vec<Hit
     Ok(hits)
 }
 
+/// Implementations: name 10, call 6, software 2, parameter names and operation 1.
+fn search_implementations(conn: &Connection, q: &str, limit: usize) -> Result<Vec<Hit>> {
+    let mut stmt = conn.prepare(
+        "SELECT bm25(implementations_fts, 0.0, 10.0, 6.0, 2.0, 1.0) AS score, i.card
+           FROM implementations_fts
+           JOIN implementations i ON i.id = implementations_fts.id
+          WHERE implementations_fts MATCH ?1
+          ORDER BY (i.status = 'retired'), score, i.id
+          LIMIT ?2",
+    )?;
+    let rows = stmt.query_map(params![q, limit as i64], |r| {
+        Ok((r.get::<_, f64>(0)?, r.get::<_, String>(1)?))
+    })?;
+    let mut hits = Vec::new();
+    for row in rows {
+        let (score, card) = row?;
+        hits.push(Hit {
+            rank: -score,
+            card: serde_json::from_str(&card)?,
+        });
+    }
+    Ok(hits)
+}
+
 /// One-line rendering of a hit for the terminal.
 pub fn render(i: usize, h: &Hit) -> String {
     let c = &h.card;
     let s = |k: &str| c.get(k).and_then(Value::as_str).unwrap_or("").to_string();
+    if s("kind") == "implementation" {
+        let call = c
+            .pointer("/call/name")
+            .and_then(Value::as_str)
+            .unwrap_or("");
+        let op = c
+            .get("implements")
+            .and_then(Value::as_str)
+            .map(|o| format!("implements {o}"))
+            .unwrap_or_else(|| "not mapped to an operation".into());
+        return format!(
+            "{:>2}. {} [{}] {:.2}\n    implementation | {} {} | {} | {}",
+            i + 1,
+            call,
+            s("id"),
+            h.rank,
+            s("software"),
+            s("engine_version"),
+            op,
+            s("review")
+        );
+    }
     if s("kind") == "operation" {
         let runs = c
             .pointer("/columbus/tool")

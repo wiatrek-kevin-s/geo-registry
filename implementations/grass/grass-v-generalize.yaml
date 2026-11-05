@@ -1,0 +1,32 @@
+id: grass-v-generalize
+kind: implementation
+name: v.generalize
+software: grass
+call: {interface: cli, name: v.generalize}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '-1', note: layer_all name}
+  type: {type: string, default: 'line,boundary,area', values: [line, boundary, area], note: multiple values}
+  output: {type: string, required: true, note: output vector}
+  error: {type: string, note: output vector}
+  method: {type: string, required: true, values: [douglas, douglas_reduction, lang, reduction, reumann, boyle, sliding_averaging,
+      distance_weighting, chaiken, hermite, snakes, network, displacement]}
+  threshold: {type: float, required: true, values: [0-1000000000]}
+  look_ahead: {type: integer, default: 7}
+  reduction: {type: float, default: 50.0, values: [0-100]}
+  slide: {type: float, default: 0.5, values: [0-1]}
+  angle_thresh: {type: float, default: 3.0, values: [0-180]}
+  degree_thresh: {type: integer, default: 0}
+  closeness_thresh: {type: float, default: 0.0, values: [0-1]}
+  betweeness_thresh: {type: float, default: 0.0}
+  alpha: {type: float, default: 1.0}
+  beta: {type: float, default: 1.0}
+  iterations: {type: integer, default: 1}
+  cats: {type: string, note: cats name}
+  where: {type: string, note: sql_query name}
+  flag_l: {type: boolean, note: flag -l}
+  flag_t: {type: boolean, note: flag -t}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

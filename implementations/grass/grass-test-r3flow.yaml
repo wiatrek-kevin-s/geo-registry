@@ -1,0 +1,12 @@
+id: grass-test-r3flow
+kind: implementation
+name: test.r3flow
+software: grass
+call: {interface: cli, name: test.r3flow}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  test: {type: string, required: true, values: [interpolation, gradient]}
+  coordinates: {type: float, note: multiple values}
+  input: {type: string, note: grid3 name; multiple values}
+status: active
+review: {state: harvested, source: grass}

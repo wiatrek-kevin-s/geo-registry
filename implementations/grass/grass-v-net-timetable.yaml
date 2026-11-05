@@ -1,0 +1,23 @@
+id: grass-v-net-timetable
+kind: implementation
+name: v.net.timetable
+software: grass
+call: {interface: cli, name: v.net.timetable}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '1', note: layer name}
+  output: {type: string, required: true, note: output vector}
+  arc_layer: {type: string, default: '1', note: layer name}
+  node_layer: {type: string, default: '2', note: layer name}
+  arc_column: {type: string}
+  arc_backward_column: {type: string}
+  node_column: {type: string}
+  walk_layer: {type: string, default: '-1', note: layer_all name}
+  route_id: {type: string, required: true, default: route_id, note: dbcolumn name}
+  stop_time: {type: string, required: true, default: stop_time, note: dbcolumn name}
+  to_stop: {type: string, required: true, default: to_stop, note: dbcolumn name}
+  walk_length: {type: string, required: true, default: length, note: dbcolumn name}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

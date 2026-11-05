@@ -1,0 +1,22 @@
+id: gdal-dataset-identify
+kind: implementation
+name: gdal dataset identify
+software: gdal
+call: {interface: cli, name: gdal dataset identify}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  filename: {type: string_list, required: true}
+  output-format: {type: string}
+  creation-option: {type: string_list}
+  layer-creation-option: {type: string_list}
+  output-layer: {type: string}
+  overwrite: {type: boolean, default: false}
+  recursive: {type: boolean}
+  force-recursive: {type: boolean}
+  detailed: {type: boolean}
+  report-failures: {type: boolean}
+  output-string: {type: string, note: output}
+  output: {type: dataset, note: input and output; vector dataset}
+docs: https://gdal.org/programs/gdal_dataset_identify.html
+status: active
+review: {state: harvested, source: gdal}

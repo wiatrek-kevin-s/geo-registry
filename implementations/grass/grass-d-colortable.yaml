@@ -1,0 +1,14 @@
+id: grass-d-colortable
+kind: implementation
+name: d.colortable
+software: grass
+call: {interface: cli, name: d.colortable}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: cell name}
+  color: {type: string, default: white, note: color name}
+  lines: {type: integer, values: [1-1000]}
+  columns: {type: integer, values: [1-1000]}
+  flag_n: {type: boolean, note: flag -n}
+status: active
+review: {state: harvested, source: grass}

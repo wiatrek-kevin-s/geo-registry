@@ -1,0 +1,35 @@
+id: gdal-raster-footprint
+kind: implementation
+name: gdal raster footprint
+software: gdal
+call: {interface: cli, name: gdal raster footprint}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  open-option: {type: string_list}
+  input-format: {type: string_list}
+  input: {type: dataset_list, required: true, note: raster dataset}
+  output-format: {type: string}
+  creation-option: {type: string_list}
+  layer-creation-option: {type: string_list}
+  append: {type: boolean, default: false}
+  overwrite: {type: boolean, default: false}
+  output-layer: {type: string, default: footprint}
+  band: {type: integer_list}
+  combine-bands: {type: string, default: union, values: [union, intersection]}
+  overview: {type: integer, note: at least 0; exclusive group overview-srcnodata}
+  input-nodata: {type: real_list, note: exclusive group overview-srcnodata}
+  coordinate-system: {type: string, values: [georeferenced, pixel]}
+  output-crs: {type: string}
+  split-multipolygons: {type: boolean}
+  convex-hull: {type: boolean}
+  densify-distance: {type: real, note: more than 0.0}
+  simplify-tolerance: {type: real, note: more than 0.0}
+  min-ring-area: {type: real, note: at least 0.0}
+  max-points: {type: string, default: '100'}
+  location-field: {type: string, default: location, note: exclusive group location}
+  no-location-field: {type: boolean, note: exclusive group location}
+  absolute-path: {type: boolean}
+  output: {type: dataset, required: true, note: input and output; vector dataset}
+docs: https://gdal.org/programs/gdal_raster_footprint.html
+status: active
+review: {state: harvested, source: gdal}

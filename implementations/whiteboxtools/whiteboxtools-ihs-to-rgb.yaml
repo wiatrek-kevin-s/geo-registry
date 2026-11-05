@@ -1,0 +1,16 @@
+id: whiteboxtools-ihs-to-rgb
+kind: implementation
+name: IhsToRgb
+software: whiteboxtools
+call: {interface: cli, name: IhsToRgb}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  intensity: {type: 'ExistingFile:Raster', required: true}
+  hue: {type: 'ExistingFile:Raster', required: true}
+  saturation: {type: 'ExistingFile:Raster', required: true}
+  red: {type: 'NewFile:Raster', note: output}
+  green: {type: 'NewFile:Raster', note: output}
+  blue: {type: 'NewFile:Raster', note: output}
+  output: {type: 'NewFile:Raster', note: output}
+status: active
+review: {state: harvested, source: whitebox}

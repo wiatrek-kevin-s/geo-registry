@@ -1,0 +1,24 @@
+id: grass-i-ortho-init
+kind: implementation
+name: i.ortho.init
+software: grass
+call: {interface: cli, name: i.ortho.init}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  group: {type: string, required: true, note: group name}
+  xc: {type: float}
+  yc: {type: float}
+  zc: {type: float}
+  xc_sd: {type: float}
+  yc_sd: {type: float}
+  zc_sd: {type: float}
+  omega: {type: float}
+  phi: {type: float}
+  kappa: {type: float}
+  omega_sd: {type: float}
+  phi_sd: {type: float}
+  kappa_sd: {type: float}
+  flag_r: {type: boolean, note: flag -r}
+  flag_p: {type: boolean, note: flag -p}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,10 @@
+id: grass-v-dissolve
+implements: dissolve
+crosswalk:
+  layer: input
+  output: output
+  by: column
+differences:
+  - Without a column it dissolves areas sharing the same category number.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

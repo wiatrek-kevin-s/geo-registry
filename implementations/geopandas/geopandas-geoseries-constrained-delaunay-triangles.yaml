@@ -1,0 +1,9 @@
+id: geopandas-geoseries-constrained-delaunay-triangles
+kind: implementation
+name: GeoSeries.constrained_delaunay_triangles
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.constrained_delaunay_triangles}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-libs}

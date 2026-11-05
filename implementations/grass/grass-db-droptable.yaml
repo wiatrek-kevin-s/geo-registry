@@ -1,0 +1,13 @@
+id: grass-db-droptable
+kind: implementation
+name: db.droptable
+software: grass
+call: {interface: cli, name: db.droptable}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  driver: {type: string, note: dbdriver name}
+  database: {type: string, note: dbname name}
+  table: {type: string, required: true, note: dbtable name}
+  flag_f: {type: boolean, note: flag -f}
+status: active
+review: {state: harvested, source: grass}

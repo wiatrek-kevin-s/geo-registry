@@ -1,0 +1,17 @@
+id: grass-r-series-interp
+kind: implementation
+name: r.series.interp
+software: grass
+call: {interface: cli, name: r.series.interp}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, note: cell name; multiple values}
+  datapos: {type: float, note: multiple values}
+  infile: {type: string, note: file name}
+  output: {type: string, note: output cell; multiple values}
+  samplingpos: {type: float, note: multiple values}
+  outfile: {type: string, note: file name}
+  method: {type: string, default: linear, values: [linear]}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

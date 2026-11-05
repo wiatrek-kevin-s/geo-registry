@@ -1,0 +1,14 @@
+id: shapely-to-wkt
+kind: implementation
+name: shapely.to_wkt
+software: shapely
+call: {interface: python, name: shapely.to_wkt}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geometry: {type: any, required: true}
+  rounding_precision: {type: integer, default: 6}
+  trim: {type: boolean, default: true}
+  output_dimension: {type: any}
+  old_3d: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-libs}

@@ -1,0 +1,15 @@
+id: pdal-writers-draco
+kind: implementation
+name: writers.draco
+software: pdal
+call: {interface: pdal-pipeline, name: writers.draco}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  filename: {type: option}
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  dimensions: {type: option}
+  quantization: {type: option}
+docs: https://pdal.org/en/master/stages/writers.draco.html
+status: active
+review: {state: harvested, source: pdal}

@@ -1,0 +1,19 @@
+id: postgis-st-perimeter
+kind: implementation
+name: st_perimeter
+software: postgis
+call: {interface: sql, name: st_perimeter}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geog: {type: geography}
+  use_spheroid: {type: boolean, default: 'true'}
+signatures:
+- arguments:
+  - {name: geog, type: geography}
+  - {name: use_spheroid, type: boolean, default: 'true'}
+  returns: double precision
+- arguments:
+  - {type: geometry}
+  returns: double precision
+status: active
+review: {state: harvested, source: postgis}

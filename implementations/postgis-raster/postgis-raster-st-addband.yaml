@@ -1,0 +1,66 @@
+id: postgis-raster-st-addband
+kind: implementation
+name: st_addband
+software: postgis-raster
+call: {interface: sql, name: st_addband}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  addbandargset: {type: 'addbandarg[]'}
+  index: {type: integer, default: 'NULL::integer'}
+  outdbfile: {type: text}
+  outdbindex: {type: 'integer[]'}
+  nodataval: {type: double precision, default: 'NULL::double precision'}
+  pixeltype: {type: text}
+  initialvalue: {type: double precision, default: '''0''::numeric'}
+  torast: {type: raster}
+  fromrast: {type: raster}
+  fromband: {type: integer, default: '1'}
+  torastindex: {type: integer, default: 'NULL::integer'}
+  fromrasts: {type: 'raster[]'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: addbandargset, type: 'addbandarg[]'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: index, type: integer}
+  - {name: outdbfile, type: text}
+  - {name: outdbindex, type: 'integer[]'}
+  - {name: nodataval, type: double precision, default: 'NULL::double precision'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: index, type: integer}
+  - {name: pixeltype, type: text}
+  - {name: initialvalue, type: double precision, default: '''0''::numeric'}
+  - {name: nodataval, type: double precision, default: 'NULL::double precision'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: outdbfile, type: text}
+  - {name: outdbindex, type: 'integer[]'}
+  - {name: index, type: integer, default: 'NULL::integer'}
+  - {name: nodataval, type: double precision, default: 'NULL::double precision'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: pixeltype, type: text}
+  - {name: initialvalue, type: double precision, default: '''0''::numeric'}
+  - {name: nodataval, type: double precision, default: 'NULL::double precision'}
+  returns: raster
+- arguments:
+  - {name: torast, type: raster}
+  - {name: fromrast, type: raster}
+  - {name: fromband, type: integer, default: '1'}
+  - {name: torastindex, type: integer, default: 'NULL::integer'}
+  returns: raster
+- arguments:
+  - {name: torast, type: raster}
+  - {name: fromrasts, type: 'raster[]'}
+  - {name: fromband, type: integer, default: '1'}
+  - {name: torastindex, type: integer, default: 'NULL::integer'}
+  returns: raster
+status: active
+review: {state: harvested, source: postgis}

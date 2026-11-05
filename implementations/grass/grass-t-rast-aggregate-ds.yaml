@@ -1,0 +1,25 @@
+id: grass-t-rast-aggregate-ds
+kind: implementation
+name: t.rast.aggregate.ds
+software: grass
+call: {interface: cli, name: t.rast.aggregate.ds}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: strds name}
+  sample: {type: string, required: true, note: stds name}
+  type: {type: string, default: strds, values: [strds, stvds, str3ds]}
+  output: {type: string, required: true, note: output strds}
+  basename: {type: string, required: true}
+  suffix: {type: string, default: gran}
+  method: {type: string, required: true, default: average, values: [average, count, median, mode, minimum, min_raster, maximum,
+      max_raster, stddev, range, sum, variance, diversity, slope, offset, detcoeff, quart1, quart3, perc90, quantile, skewness,
+      kurtosis]}
+  offset: {type: integer, default: 0}
+  nprocs: {type: integer, default: 1}
+  sampling: {type: string, default: contains, values: [equal, overlaps, overlapped, starts, started, finishes, finished, during,
+      contains], note: multiple values}
+  where: {type: string}
+  flag_n: {type: boolean, note: flag -n}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

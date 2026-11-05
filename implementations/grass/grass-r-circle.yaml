@@ -1,0 +1,16 @@
+id: grass-r-circle
+kind: implementation
+name: r.circle
+software: grass
+call: {interface: cli, name: r.circle}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  output: {type: string, required: true, note: output cell}
+  coordinates: {type: float, required: true, note: coords name}
+  min: {type: float}
+  max: {type: float}
+  multiplier: {type: float}
+  flag_b: {type: boolean, note: flag -b}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,14 @@
+id: whiteboxtools-edge-density
+kind: implementation
+name: EdgeDensity
+software: whiteboxtools
+call: {interface: cli, name: EdgeDensity}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  filter: {type: Integer, default: '11'}
+  norm_diff: {type: Float, default: '5.0'}
+  zfactor: {type: Float}
+status: active
+review: {state: harvested, source: whitebox}

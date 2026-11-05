@@ -1,0 +1,20 @@
+id: qgis-pdal-compare
+kind: implementation
+name: pdal:compare
+software: qgis
+call: {interface: qgis-process, name: 'pdal:compare'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CYLINDER_HALF_LENGTH: {type: distance, required: true, default: 5.0}
+  CYLINDER_ORIENTATION: {type: enum, required: true, default: 0, values: [0, 1, 2], note: '0 Up, 1 Origin, 2 None'}
+  CYLINDER_RADIUS: {type: distance, required: true, default: 2.0}
+  FILTER_EXPRESSION: {type: expression}
+  FILTER_EXTENT: {type: extent}
+  INPUT: {type: pointcloud, required: true}
+  INPUT_COMPARE: {type: pointcloud, required: true}
+  NORMAL_RADIUS: {type: distance, required: true, default: 2.0}
+  OUTPUT: {type: pointCloudDestination, required: true, note: output}
+  REGISTRATION_ERROR: {type: number, required: true, default: 0.0}
+  SUBSAMPLING_CELL_SIZE: {type: distance, required: true, default: 0.0}
+status: active
+review: {state: harvested, source: qgis}

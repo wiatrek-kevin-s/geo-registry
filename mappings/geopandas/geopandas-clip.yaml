@@ -1,0 +1,9 @@
+id: geopandas-clip
+implements: clip
+crosswalk:
+  layer: gdf
+  mask: mask
+differences:
+  - The mask may also be a shapely geometry or a bounding box.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

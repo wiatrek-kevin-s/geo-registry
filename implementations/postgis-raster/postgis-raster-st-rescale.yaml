@@ -1,0 +1,29 @@
+id: postgis-raster-st-rescale
+kind: implementation
+name: st_rescale
+software: postgis-raster
+call: {interface: sql, name: st_rescale}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  scalex: {type: double precision}
+  scaley: {type: double precision}
+  algorithm: {type: text, default: '''NearestNeighbour''::text'}
+  maxerr: {type: double precision, default: '0.125'}
+  scalexy: {type: double precision}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: scalex, type: double precision}
+  - {name: scaley, type: double precision}
+  - {name: algorithm, type: text, default: '''NearestNeighbour''::text'}
+  - {name: maxerr, type: double precision, default: '0.125'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: scalexy, type: double precision}
+  - {name: algorithm, type: text, default: '''NearestNeighbour''::text'}
+  - {name: maxerr, type: double precision, default: '0.125'}
+  returns: raster
+status: active
+review: {state: harvested, source: postgis}

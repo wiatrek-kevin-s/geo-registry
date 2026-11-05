@@ -1,0 +1,25 @@
+id: grass-r3-out-vtk
+kind: implementation
+name: r3.out.vtk
+software: grass
+call: {interface: cli, name: r3.out.vtk}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, note: grid3 name; multiple values}
+  output: {type: string, note: output file}
+  'null': {type: float, default: -99999.99}
+  top: {type: string, note: cell name}
+  bottom: {type: string, note: cell name}
+  rgbmaps: {type: string, note: grid3 name; multiple values}
+  vectormaps: {type: string, note: output vector; multiple values}
+  zscale: {type: float, default: 1.0}
+  precision: {type: integer, default: 12, values: [0-20]}
+  flag_p: {type: boolean, note: flag -p}
+  flag_s: {type: boolean, note: flag -s}
+  flag_m: {type: boolean, note: flag -m}
+  flag_o: {type: boolean, note: flag -o}
+  flag_c: {type: boolean, note: flag -c}
+  flag_l: {type: boolean, note: flag -l}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

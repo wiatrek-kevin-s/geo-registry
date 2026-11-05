@@ -1,0 +1,23 @@
+id: gdal-raster-rgb-to-palette
+kind: implementation
+name: gdal raster rgb-to-palette
+software: gdal
+call: {interface: cli, name: gdal raster rgb-to-palette}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  input-format: {type: string_list}
+  open-option: {type: string_list}
+  input: {type: dataset_list, required: true, note: raster dataset}
+  output-format: {type: string}
+  creation-option: {type: string_list}
+  overwrite: {type: boolean, default: false, note: exclusive group overwrite-append}
+  append: {type: boolean, default: false, note: exclusive group overwrite-append}
+  color-count: {type: integer, default: 256, note: from 2 to 256}
+  color-map: {type: string}
+  output-nodata: {type: integer, note: from 0 to 255}
+  no-dither: {type: boolean}
+  bit-depth: {type: integer, default: 5, values: ['5', '8']}
+  output: {type: dataset, required: true, note: input and output; raster dataset}
+docs: https://gdal.org/programs/gdal_raster_rgb_to_palette.html
+status: active
+review: {state: harvested, source: gdal}

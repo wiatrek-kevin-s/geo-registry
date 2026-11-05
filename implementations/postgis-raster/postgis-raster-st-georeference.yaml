@@ -1,0 +1,16 @@
+id: postgis-raster-st-georeference
+kind: implementation
+name: st_georeference
+software: postgis-raster
+call: {interface: sql, name: st_georeference}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  format: {type: text, default: '''GDAL''::text'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: format, type: text, default: '''GDAL''::text'}
+  returns: text
+status: active
+review: {state: harvested, source: postgis}

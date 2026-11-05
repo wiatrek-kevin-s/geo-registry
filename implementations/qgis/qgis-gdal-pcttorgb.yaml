@@ -1,0 +1,13 @@
+id: qgis-gdal-pcttorgb
+kind: implementation
+name: gdal:pcttorgb
+software: qgis
+call: {interface: qgis-process, name: 'gdal:pcttorgb'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BAND: {type: band, required: true, default: 1}
+  INPUT: {type: raster, required: true}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  RGBA: {type: boolean, required: true, default: false}
+status: active
+review: {state: harvested, source: qgis}

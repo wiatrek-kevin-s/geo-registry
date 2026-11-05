@@ -1,0 +1,13 @@
+id: qgis-native-joinattributestable
+implements: attribute-join
+crosswalk:
+  left: INPUT
+  right: INPUT_2
+  output: OUTPUT
+  left_key: FIELD
+  right_key: FIELD_2
+  how: { param: DISCARD_NONMATCHING, values: { left: false, inner: true } }
+differences:
+  - By default (METHOD 1) takes only the first matching row, so duplicate keys do not multiply rows, unlike Columbus's join.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,16 @@
+id: whiteboxtools-multiscale-std-dev-normals
+kind: implementation
+name: MultiscaleStdDevNormals
+software: whiteboxtools
+call: {interface: cli, name: MultiscaleStdDevNormals}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  out_mag: {type: 'NewFile:Raster', required: true, note: output}
+  out_scale: {type: 'NewFile:Raster', required: true, note: output}
+  min_scale: {type: Integer, default: '1'}
+  step: {type: Integer, default: '1'}
+  num_steps: {type: Integer, required: true, default: '10'}
+  step_nonlinearity: {type: Float, required: true, default: '1.0'}
+status: active
+review: {state: harvested, source: whitebox}

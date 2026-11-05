@@ -1,0 +1,23 @@
+id: pdal-readers-ept
+kind: implementation
+name: readers.ept
+software: pdal
+call: {interface: pdal-pipeline, name: readers.ept}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  filename: {type: option}
+  count: {type: option, default: '18446744073709551615'}
+  override_srs: {type: option}
+  default_srs: {type: option}
+  bounds: {type: option}
+  origin: {type: option}
+  requests: {type: option, default: '15'}
+  resolution: {type: option}
+  addons: {type: option}
+  polygon: {type: option}
+  ogr: {type: option}
+  ignore_unreadable: {type: option}
+docs: https://pdal.org/en/master/stages/readers.ept.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

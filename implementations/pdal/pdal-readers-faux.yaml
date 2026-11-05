@@ -1,0 +1,25 @@
+id: pdal-readers-faux
+kind: implementation
+name: readers.faux
+software: pdal
+call: {interface: pdal-pipeline, name: readers.faux}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  filename: {type: option}
+  count: {type: option, default: '18446744073709551615'}
+  override_srs: {type: option}
+  default_srs: {type: option}
+  bounds: {type: option, default: '([0, 1], [0, 1], [0, 1])'}
+  mean_x: {type: option}
+  mean_y: {type: option}
+  mean_z: {type: option}
+  stdev_x: {type: option, default: '1'}
+  stdev_y: {type: option, default: '1'}
+  stdev_z: {type: option, default: '1'}
+  mode: {type: option}
+  number_of_returns: {type: option}
+  seed: {type: option}
+docs: https://pdal.org/en/master/stages/readers.faux.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

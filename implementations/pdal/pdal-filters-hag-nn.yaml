@@ -1,0 +1,16 @@
+id: pdal-filters-hag-nn
+kind: implementation
+name: filters.hag_nn
+software: pdal
+call: {interface: pdal-pipeline, name: filters.hag_nn}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  count: {type: option, default: '1'}
+  max_distance: {type: option}
+  allow_extrapolation: {type: option, default: 'true'}
+  class: {type: option, default: '2'}
+docs: https://pdal.org/en/master/stages/filters.hag_nn.html
+status: active
+review: {state: harvested, source: pdal}

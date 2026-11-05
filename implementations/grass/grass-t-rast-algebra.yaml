@@ -1,0 +1,17 @@
+id: grass-t-rast-algebra
+kind: implementation
+name: t.rast.algebra
+software: grass
+call: {interface: cli, name: t.rast.algebra}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  expression: {type: string, required: true}
+  basename: {type: string, required: true}
+  suffix: {type: string, default: num}
+  nprocs: {type: integer, default: 1}
+  flag_s: {type: boolean, note: flag -s}
+  flag_n: {type: boolean, note: flag -n}
+  flag_g: {type: boolean, note: flag -g}
+  flag_d: {type: boolean, note: flag -d}
+status: active
+review: {state: harvested, source: grass}

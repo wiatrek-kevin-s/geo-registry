@@ -1,0 +1,14 @@
+id: qgis-qgis-pointsdisplacement
+kind: implementation
+name: qgis:pointsdisplacement
+software: qgis
+call: {interface: qgis-process, name: 'qgis:pointsdisplacement'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  DISTANCE: {type: distance, required: true, default: 1.0}
+  HORIZONTAL: {type: boolean, required: true}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  PROXIMITY: {type: distance, required: true, default: 1.0}
+status: active
+review: {state: harvested, source: qgis}

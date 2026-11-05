@@ -1,0 +1,15 @@
+id: grass-v-clip
+kind: implementation
+name: v.clip
+software: grass
+call: {interface: cli, name: v.clip}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  clip: {type: string, required: true, note: vector name}
+  output: {type: string, required: true, note: output vector}
+  flag_d: {type: boolean, note: flag -d}
+  flag_r: {type: boolean, note: flag -r}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

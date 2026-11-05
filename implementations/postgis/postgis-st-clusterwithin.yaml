@@ -1,0 +1,19 @@
+id: postgis-st-clusterwithin
+kind: implementation
+name: st_clusterwithin
+software: postgis
+call: {interface: sql, name: st_clusterwithin}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  - {type: double precision}
+  returns: geometry[] (aggregate)
+- arguments:
+  - {type: 'geometry[]'}
+  - {type: double precision}
+  returns: geometry[]
+notes: Has an aggregate form.
+status: active
+review: {state: harvested, source: postgis}

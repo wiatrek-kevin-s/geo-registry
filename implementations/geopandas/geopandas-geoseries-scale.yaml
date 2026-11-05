@@ -1,0 +1,13 @@
+id: geopandas-geoseries-scale
+kind: implementation
+name: GeoSeries.scale
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.scale}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  xfact: {type: number, default: 1.0}
+  yfact: {type: number, default: 1.0}
+  zfact: {type: number, default: 1.0}
+  origin: {type: string, default: center}
+status: active
+review: {state: harvested, source: python-libs}

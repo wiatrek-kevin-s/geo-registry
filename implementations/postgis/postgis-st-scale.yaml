@@ -1,0 +1,31 @@
+id: postgis-st-scale
+kind: implementation
+name: st_scale
+software: postgis
+call: {interface: sql, name: st_scale}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  origin: {type: geometry}
+signatures:
+- arguments:
+  - {type: geometry}
+  - {type: double precision}
+  - {type: double precision}
+  returns: geometry
+- arguments:
+  - {type: geometry}
+  - {type: double precision}
+  - {type: double precision}
+  - {type: double precision}
+  returns: geometry
+- arguments:
+  - {type: geometry}
+  - {type: geometry}
+  returns: geometry
+- arguments:
+  - {type: geometry}
+  - {type: geometry}
+  - {name: origin, type: geometry}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

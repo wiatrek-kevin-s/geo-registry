@@ -1,0 +1,13 @@
+id: qgis-native-difference
+kind: implementation
+name: native:difference
+software: qgis
+call: {interface: qgis-process, name: 'native:difference'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  GRID_SIZE: {type: number}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  OVERLAY: {type: source, required: true}
+status: active
+review: {state: harvested, source: qgis}

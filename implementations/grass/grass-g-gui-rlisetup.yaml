@@ -1,0 +1,9 @@
+id: grass-g-gui-rlisetup
+kind: implementation
+name: g.gui.rlisetup
+software: grass
+call: {interface: cli, name: g.gui.rlisetup}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters: {}
+status: active
+review: {state: harvested, source: grass}

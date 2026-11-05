@@ -1,0 +1,14 @@
+id: pdal-filters-h3
+kind: implementation
+name: filters.h3
+software: pdal
+call: {interface: pdal-pipeline, name: filters.h3}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  resolution: {type: option}
+docs: https://pdal.org/en/master/stages/filters.h3.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

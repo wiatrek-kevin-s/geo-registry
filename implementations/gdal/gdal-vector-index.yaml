@@ -1,0 +1,33 @@
+id: gdal-vector-index
+kind: implementation
+name: gdal vector index
+software: gdal
+call: {interface: cli, name: gdal vector index}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  input: {type: dataset_list, required: true, note: vector dataset}
+  output-format: {type: string}
+  creation-option: {type: string_list}
+  layer-creation-option: {type: string_list}
+  overwrite: {type: boolean, default: false, note: exclusive group overwrite-update}
+  update: {type: boolean, default: false, note: exclusive group overwrite-update}
+  overwrite-layer: {type: boolean, default: false}
+  append: {type: boolean, default: false}
+  output-layer: {type: string}
+  recursive: {type: boolean}
+  filename-filter: {type: string_list}
+  location-name: {type: string, default: location}
+  absolute-path: {type: boolean}
+  output-crs: {type: string}
+  metadata: {type: string_list}
+  source-crs-field-name: {type: string}
+  source-crs-format: {type: string, default: auto, values: [auto, WKT, EPSG, PROJ]}
+  source-layer-name: {type: string_list}
+  source-layer-index: {type: integer_list}
+  accept-different-crs: {type: boolean}
+  accept-different-schemas: {type: boolean}
+  dataset-name-only: {type: boolean}
+  output: {type: dataset, required: true, note: input and output; vector dataset}
+docs: https://gdal.org/programs/gdal_vector_index.html
+status: active
+review: {state: harvested, source: gdal}

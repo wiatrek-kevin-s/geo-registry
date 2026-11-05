@@ -1,0 +1,12 @@
+id: qgis-native-renamelayer
+kind: implementation
+name: native:renamelayer
+software: qgis
+call: {interface: qgis-process, name: 'native:renamelayer'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: layer, required: true}
+  NAME: {type: string, required: true}
+notes: Deprecated in QGIS.
+status: active
+review: {state: harvested, source: qgis}

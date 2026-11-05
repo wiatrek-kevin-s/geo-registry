@@ -1,0 +1,19 @@
+id: grass-t-vect-what-strds
+kind: implementation
+name: t.vect.what.strds
+software: grass
+call: {interface: cli, name: t.vect.what.strds}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: stvds name}
+  strds: {type: string, required: true, note: strds name}
+  column: {type: string}
+  method: {type: string, required: true, default: disabled, values: [disabled, average, count, median, mode, minimum, min_raster,
+      maximum, max_raster, stddev, range, sum, variance, diversity, slope, offset, detcoeff, quart1, quart3, perc90, quantile,
+      skewness, kurtosis]}
+  where: {type: string, note: sql_query name}
+  t_where: {type: string}
+  sampling: {type: string, default: start, values: [start, during, overlap, contain, equal, follows, precedes], note: multiple
+      values}
+status: active
+review: {state: harvested, source: grass}

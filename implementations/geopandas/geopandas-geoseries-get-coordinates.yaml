@@ -1,0 +1,13 @@
+id: geopandas-geoseries-get-coordinates
+kind: implementation
+name: GeoSeries.get_coordinates
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.get_coordinates}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  include_z: {type: boolean, default: false}
+  ignore_index: {type: boolean, default: false}
+  index_parts: {type: boolean, default: false}
+  include_m: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-libs}

@@ -1,0 +1,11 @@
+id: qgis-native-boundary
+kind: implementation
+name: native:boundary
+software: qgis
+call: {interface: qgis-process, name: 'native:boundary'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

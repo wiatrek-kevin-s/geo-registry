@@ -1,0 +1,10 @@
+id: gdal-vector-simplify
+implements: simplify
+crosswalk:
+  layer: input
+  output: output
+  tolerance: tolerance
+  unit: { fixed: crs-units, note: Tolerance is in the layer's CRS units; convert it first. }
+  preserve_topology: { fixed: true }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

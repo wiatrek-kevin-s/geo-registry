@@ -1,0 +1,20 @@
+id: grass-i-ortho-rectify
+kind: implementation
+name: i.ortho.rectify
+software: grass
+call: {interface: cli, name: i.ortho.rectify}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  group: {type: string, required: true, note: group name}
+  input: {type: string, note: cell name; multiple values}
+  extension: {type: string, required: true}
+  resolution: {type: float}
+  memory: {type: integer, default: 300}
+  method: {type: string, default: nearest, values: [nearest, linear, cubic, lanczos, linear_f, cubic_f, lanczos_f]}
+  angle: {type: string, note: output cell}
+  flag_c: {type: boolean, note: flag -c}
+  flag_a: {type: boolean, note: flag -a}
+  flag_p: {type: boolean, note: flag -p}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

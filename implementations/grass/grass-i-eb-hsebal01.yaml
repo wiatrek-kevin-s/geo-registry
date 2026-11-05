@@ -1,0 +1,23 @@
+id: grass-i-eb-hsebal01
+kind: implementation
+name: i.eb.hsebal01
+software: grass
+call: {interface: cli, name: i.eb.hsebal01}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  netradiation: {type: string, required: true, note: cell name}
+  soilheatflux: {type: string, required: true, note: cell name}
+  aerodynresistance: {type: string, required: true, note: cell name}
+  temperaturemeansealevel: {type: string, required: true, note: cell name}
+  vapourpressureactual: {type: string, required: true, note: cell name}
+  frictionvelocitystar: {type: float, required: true, default: 0.32407}
+  row_wet_pixel: {type: float}
+  column_wet_pixel: {type: float}
+  row_dry_pixel: {type: float}
+  column_dry_pixel: {type: float}
+  output: {type: string, required: true, note: output cell}
+  flag_a: {type: boolean, note: flag -a}
+  flag_c: {type: boolean, note: flag -c}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

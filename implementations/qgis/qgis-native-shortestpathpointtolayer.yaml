@@ -1,0 +1,25 @@
+id: qgis-native-shortestpathpointtolayer
+kind: implementation
+name: native:shortestpathpointtolayer
+software: qgis
+call: {interface: qgis-process, name: 'native:shortestpathpointtolayer'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  DEFAULT_DIRECTION: {type: enum, required: true, default: 2, values: [0, 1, 2], note: '0 Forward direction, 1 Backward direction,
+      2 Both directions'}
+  DEFAULT_SPEED: {type: number, required: true, default: 50}
+  DIRECTION_FIELD: {type: field}
+  END_POINTS: {type: source, required: true}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  OUTPUT_NON_ROUTABLE: {type: sink, note: output}
+  POINT_TOLERANCE: {type: distance}
+  SPEED_FIELD: {type: field}
+  START_POINT: {type: point, required: true}
+  STRATEGY: {type: enum, required: true, default: 0, values: [0, 1], note: '0 Shortest, 1 Fastest'}
+  TOLERANCE: {type: distance, required: true, default: 0}
+  VALUE_BACKWARD: {type: string}
+  VALUE_BOTH: {type: string}
+  VALUE_FORWARD: {type: string}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,22 @@
+id: whiteboxtools-radial-basis-function-interpolation
+kind: implementation
+name: RadialBasisFunctionInterpolation
+software: whiteboxtools
+call: {interface: cli, name: RadialBasisFunctionInterpolation}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Vector:Point', required: true}
+  field: {type: VectorAttributeField, required: true}
+  use_z: {type: Boolean, default: 'false'}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  radius: {type: Float}
+  min_points: {type: Integer}
+  func_type: {type: OptionList, default: ThinPlateSpline, values: [ThinPlateSpline, PolyHarmonic, Gaussian, MultiQuadric,
+      InverseMultiQuadric]}
+  poly_order: {type: OptionList, default: none, values: [none, constant, affine]}
+  weight: {type: Float, required: true, default: '0.1'}
+  cell_size: {type: Float}
+  base: {type: 'ExistingFile:Raster'}
+  use_data_hull: {type: Boolean, default: 'false'}
+status: active
+review: {state: harvested, source: whitebox}

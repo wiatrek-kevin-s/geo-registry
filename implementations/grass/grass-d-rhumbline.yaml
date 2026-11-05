@@ -1,0 +1,11 @@
+id: grass-d-rhumbline
+kind: implementation
+name: d.rhumbline
+software: grass
+call: {interface: cli, name: d.rhumbline}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  coordinates: {type: float, required: true, note: coords name}
+  line_color: {type: string, default: black, note: color name}
+status: active
+review: {state: harvested, source: grass}

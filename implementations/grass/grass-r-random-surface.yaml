@@ -1,0 +1,17 @@
+id: grass-r-random-surface
+kind: implementation
+name: r.random.surface
+software: grass
+call: {interface: cli, name: r.random.surface}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  output: {type: string, required: true, note: output cell; multiple values}
+  distance: {type: float, default: 0.0}
+  exponent: {type: float, default: 1.0}
+  flat: {type: float, default: 0.0}
+  seed: {type: integer}
+  high: {type: integer, default: 255}
+  flag_u: {type: boolean, note: flag -u}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

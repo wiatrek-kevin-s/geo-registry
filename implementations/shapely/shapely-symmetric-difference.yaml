@@ -1,0 +1,12 @@
+id: shapely-symmetric-difference
+kind: implementation
+name: shapely.symmetric_difference
+software: shapely
+call: {interface: python, name: shapely.symmetric_difference}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  a: {type: any, required: true}
+  b: {type: any, required: true}
+  grid_size: {type: any}
+status: active
+review: {state: harvested, source: python-libs}

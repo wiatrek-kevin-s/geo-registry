@@ -1,0 +1,14 @@
+id: geopandas-read-parquet
+kind: implementation
+name: geopandas.read_parquet
+software: geopandas
+call: {interface: python, name: geopandas.read_parquet}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  path: {type: any, required: true}
+  columns: {type: any}
+  storage_options: {type: any}
+  bbox: {type: any}
+  to_pandas_kwargs: {type: any}
+status: active
+review: {state: harvested, source: python-libs}

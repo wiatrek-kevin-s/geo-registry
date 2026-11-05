@@ -1,0 +1,10 @@
+id: qgis-native-dissolve
+implements: dissolve
+crosswalk:
+  layer: INPUT
+  output: OUTPUT
+  by: FIELD
+differences:
+  - SEPARATE_DISJOINT keeps parts that do not touch as separate features.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

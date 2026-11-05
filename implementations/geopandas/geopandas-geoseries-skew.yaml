@@ -1,0 +1,13 @@
+id: geopandas-geoseries-skew
+kind: implementation
+name: GeoSeries.skew
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.skew}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  xs: {type: number, default: 0.0}
+  ys: {type: number, default: 0.0}
+  origin: {type: string, default: center}
+  use_radians: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-libs}

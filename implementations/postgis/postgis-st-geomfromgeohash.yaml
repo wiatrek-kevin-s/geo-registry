@@ -1,0 +1,14 @@
+id: postgis-st-geomfromgeohash
+kind: implementation
+name: st_geomfromgeohash
+software: postgis
+call: {interface: sql, name: st_geomfromgeohash}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: text}
+  - {type: integer, default: 'NULL::integer'}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

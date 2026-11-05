@@ -1,0 +1,9 @@
+id: geopandas-geoseries-extract-unique-points
+kind: implementation
+name: GeoSeries.extract_unique_points
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.extract_unique_points}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-libs}

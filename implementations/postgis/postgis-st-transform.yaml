@@ -1,0 +1,32 @@
+id: postgis-st-transform
+kind: implementation
+name: st_transform
+software: postgis
+call: {interface: sql, name: st_transform}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geom: {type: geometry}
+  from_proj: {type: text}
+  to_proj: {type: text}
+  to_srid: {type: integer}
+signatures:
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: from_proj, type: text}
+  - {name: to_proj, type: text}
+  returns: geometry
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: from_proj, type: text}
+  - {name: to_srid, type: integer}
+  returns: geometry
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: to_proj, type: text}
+  returns: geometry
+- arguments:
+  - {type: geometry}
+  - {type: integer}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

@@ -1,0 +1,14 @@
+id: qgis-gdal-rasterize-over
+kind: implementation
+name: gdal:rasterize_over
+software: qgis
+call: {interface: qgis-process, name: 'gdal:rasterize_over'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ADD: {type: boolean, required: true, default: false}
+  EXTRA: {type: string}
+  FIELD: {type: field, required: true}
+  INPUT: {type: source, required: true}
+  INPUT_RASTER: {type: raster, required: true}
+status: active
+review: {state: harvested, source: qgis}

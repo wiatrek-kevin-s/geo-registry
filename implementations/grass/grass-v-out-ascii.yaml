@@ -1,0 +1,24 @@
+id: grass-v-out-ascii
+kind: implementation
+name: v.out.ascii
+software: grass
+call: {interface: cli, name: v.out.ascii}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '1', note: layer_all name}
+  type: {type: string, default: 'point,line,boundary,centroid,area,face,kernel', values: [point, line, boundary, centroid,
+      area, face, kernel], note: multiple values}
+  output: {type: string, note: output file}
+  columns: {type: string, note: dbcolumn name; multiple values}
+  cats: {type: string, note: cats name}
+  where: {type: string, note: sql_query name}
+  format: {type: string, required: true, default: point, values: [point, standard, wkt]}
+  separator: {type: string, default: pipe, note: separator name}
+  precision: {type: integer, default: 8, values: [0-32]}
+  flag_o: {type: boolean, note: flag -o}
+  flag_c: {type: boolean, note: flag -c}
+  flag_r: {type: boolean, note: flag -r}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

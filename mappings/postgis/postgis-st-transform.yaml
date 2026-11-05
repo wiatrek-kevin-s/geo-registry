@@ -1,0 +1,9 @@
+id: postgis-st-transform
+implements: reproject
+crosswalk:
+  layer: "#1"
+  crs: { param: "#2", note: "An SRID (4326), or to_proj for a PROJ string; the SRID must be in spatial_ref_sys." }
+differences:
+  - Uses the database's spatial_ref_sys and PROJ; results can differ from GDAL where the transformation chosen differs.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

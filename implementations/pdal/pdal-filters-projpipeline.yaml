@@ -1,0 +1,16 @@
+id: pdal-filters-projpipeline
+kind: implementation
+name: filters.projpipeline
+software: pdal
+call: {interface: pdal-pipeline, name: filters.projpipeline}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  out_srs: {type: option}
+  reverse_transfo: {type: option, default: 'false'}
+  coord_op: {type: option}
+docs: https://pdal.org/en/master/stages/filters.projpipeline.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

@@ -1,0 +1,12 @@
+id: gdal-vector-layer-algebra
+implements: intersect
+crosswalk:
+  a: input
+  b: method
+  output: output
+presets:
+  operation: intersection
+differences:
+  - The same command also does union, erase, identity, update, clip and symmetric difference by its operation argument.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,13 @@
+id: whiteboxtools-clump
+kind: implementation
+name: Clump
+software: whiteboxtools
+call: {interface: cli, name: Clump}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  diag: {type: Boolean, required: true, default: 'true'}
+  zero_back: {type: Boolean, required: true}
+status: active
+review: {state: harvested, source: whitebox}

@@ -1,0 +1,9 @@
+id: geopandas-geoseries-to-wkt
+kind: implementation
+name: GeoSeries.to_wkt
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.to_wkt}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-libs}

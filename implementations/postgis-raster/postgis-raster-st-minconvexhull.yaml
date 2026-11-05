@@ -1,0 +1,16 @@
+id: postgis-raster-st-minconvexhull
+kind: implementation
+name: st_minconvexhull
+software: postgis-raster
+call: {interface: sql, name: st_minconvexhull}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  nband: {type: integer, default: 'NULL::integer'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer, default: 'NULL::integer'}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

@@ -1,0 +1,17 @@
+id: whiteboxtools-lidar-point-stats
+kind: implementation
+name: LidarPointStats
+software: whiteboxtools
+call: {interface: cli, name: LidarPointStats}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar'}
+  resolution: {type: Float, default: '1.0'}
+  num_points: {type: Boolean, default: 'True'}
+  num_pulses: {type: Boolean}
+  avg_points_per_pulse: {type: Boolean, default: 'True'}
+  z_range: {type: Boolean}
+  intensity_range: {type: Boolean}
+  predom_class: {type: Boolean}
+status: active
+review: {state: harvested, source: whitebox}

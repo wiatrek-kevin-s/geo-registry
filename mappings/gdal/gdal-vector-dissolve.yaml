@@ -1,0 +1,3 @@
+id: gdal-vector-dissolve
+notes: Not the Dissolve operation despite its name. It merges the parts of each multipart feature; it does not merge features by attribute.
+review: { state: draft }

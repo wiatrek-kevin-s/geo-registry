@@ -1,0 +1,12 @@
+id: whiteboxtools-lidar-tile-footprint
+kind: implementation
+name: LidarTileFootprint
+software: whiteboxtools
+call: {interface: cli, name: LidarTileFootprint}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar'}
+  output: {type: 'NewFile:Vector:Polygon', required: true, note: output}
+  hull: {type: Boolean, default: 'false'}
+status: active
+review: {state: harvested, source: whitebox}

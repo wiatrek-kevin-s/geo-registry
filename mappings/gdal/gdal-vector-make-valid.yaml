@@ -1,0 +1,7 @@
+id: gdal-vector-make-valid
+implements: make-valid
+crosswalk:
+  layer: input
+  output: output
+effects: { modifies_input: false, network: false }
+review: { state: draft }

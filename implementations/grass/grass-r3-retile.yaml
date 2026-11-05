@@ -1,0 +1,14 @@
+id: grass-r3-retile
+kind: implementation
+name: r3.retile
+software: grass
+call: {interface: cli, name: r3.retile}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: grid3 name}
+  output: {type: string, required: true, note: output grid3}
+  tiledimension: {type: string, default: default}
+  flag_c: {type: boolean, note: flag -c}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

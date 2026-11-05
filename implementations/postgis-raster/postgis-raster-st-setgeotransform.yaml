@@ -1,0 +1,26 @@
+id: postgis-raster-st-setgeotransform
+kind: implementation
+name: st_setgeotransform
+software: postgis-raster
+call: {interface: sql, name: st_setgeotransform}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  imag: {type: double precision}
+  jmag: {type: double precision}
+  theta_i: {type: double precision}
+  theta_ij: {type: double precision}
+  xoffset: {type: double precision}
+  yoffset: {type: double precision}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: imag, type: double precision}
+  - {name: jmag, type: double precision}
+  - {name: theta_i, type: double precision}
+  - {name: theta_ij, type: double precision}
+  - {name: xoffset, type: double precision}
+  - {name: yoffset, type: double precision}
+  returns: raster
+status: active
+review: {state: harvested, source: postgis}

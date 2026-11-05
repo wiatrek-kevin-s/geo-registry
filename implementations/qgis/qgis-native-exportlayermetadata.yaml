@@ -1,0 +1,11 @@
+id: qgis-native-exportlayermetadata
+kind: implementation
+name: native:exportlayermetadata
+software: qgis
+call: {interface: qgis-process, name: 'native:exportlayermetadata'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: layer, required: true}
+  OUTPUT: {type: fileDestination, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

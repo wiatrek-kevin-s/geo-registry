@@ -1,0 +1,14 @@
+id: grass-d-his
+kind: implementation
+name: d.his
+software: grass
+call: {interface: cli, name: d.his}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  hue: {type: string, required: true, note: cell name}
+  intensity: {type: string, note: cell name}
+  saturation: {type: string, note: cell name}
+  brighten: {type: integer, default: 0, values: [-99-99]}
+  flag_n: {type: boolean, note: flag -n}
+status: active
+review: {state: harvested, source: grass}

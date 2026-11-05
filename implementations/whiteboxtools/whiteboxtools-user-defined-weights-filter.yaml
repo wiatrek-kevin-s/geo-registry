@@ -1,0 +1,14 @@
+id: whiteboxtools-user-defined-weights-filter
+kind: implementation
+name: UserDefinedWeightsFilter
+software: whiteboxtools
+call: {interface: cli, name: UserDefinedWeightsFilter}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  weights: {type: 'ExistingFile:Csv', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  center: {type: OptionList, default: center, values: [center, upper-left, upper-right, lower-left, lower-right]}
+  normalize: {type: Boolean, default: 'false'}
+status: active
+review: {state: harvested, source: whitebox}

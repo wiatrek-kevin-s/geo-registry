@@ -1,0 +1,13 @@
+id: pdal-writers-fbi
+kind: implementation
+name: writers.fbi
+software: pdal
+call: {interface: pdal-pipeline, name: writers.fbi}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  filename: {type: option}
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+docs: https://pdal.org/en/master/stages/writers.fbi.html
+status: active
+review: {state: harvested, source: pdal}

@@ -1,0 +1,17 @@
+id: grass-r-carve
+kind: implementation
+name: r.carve
+software: grass
+call: {interface: cli, name: r.carve}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  raster: {type: string, required: true, note: cell name}
+  vector: {type: string, required: true, note: vector name}
+  output: {type: string, required: true, note: output cell}
+  points: {type: string, note: output vector}
+  width: {type: float}
+  depth: {type: float}
+  flag_n: {type: boolean, note: flag -n}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

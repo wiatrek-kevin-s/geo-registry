@@ -1,0 +1,22 @@
+id: postgis-st-asmvtgeom
+kind: implementation
+name: st_asmvtgeom
+software: postgis
+call: {interface: sql, name: st_asmvtgeom}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geom: {type: geometry}
+  bounds: {type: box2d}
+  extent: {type: integer, default: '4096'}
+  buffer: {type: integer, default: '256'}
+  clip_geom: {type: boolean, default: 'true'}
+signatures:
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: bounds, type: box2d}
+  - {name: extent, type: integer, default: '4096'}
+  - {name: buffer, type: integer, default: '256'}
+  - {name: clip_geom, type: boolean, default: 'true'}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

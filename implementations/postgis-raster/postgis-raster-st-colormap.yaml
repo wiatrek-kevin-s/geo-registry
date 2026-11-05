@@ -1,0 +1,25 @@
+id: postgis-raster-st-colormap
+kind: implementation
+name: st_colormap
+software: postgis-raster
+call: {interface: sql, name: st_colormap}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  colormap: {type: text, default: '''grayscale''::text'}
+  method: {type: text, default: '''INTERPOLATE''::text'}
+  nband: {type: integer, default: '1'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: colormap, type: text}
+  - {name: method, type: text, default: '''INTERPOLATE''::text'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer, default: '1'}
+  - {name: colormap, type: text, default: '''grayscale''::text'}
+  - {name: method, type: text, default: '''INTERPOLATE''::text'}
+  returns: raster
+status: active
+review: {state: harvested, source: postgis}

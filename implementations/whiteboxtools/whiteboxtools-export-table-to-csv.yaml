@@ -1,0 +1,12 @@
+id: whiteboxtools-export-table-to-csv
+kind: implementation
+name: ExportTableToCsv
+software: whiteboxtools
+call: {interface: cli, name: ExportTableToCsv}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Vector:Any', required: true}
+  output: {type: 'NewFile:Csv', required: true, note: output}
+  headers: {type: Boolean, default: 'true'}
+status: active
+review: {state: harvested, source: whitebox}

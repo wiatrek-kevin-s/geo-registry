@@ -1,0 +1,12 @@
+id: shapely-buffer
+implements: buffer
+crosswalk:
+  layer: geometry
+  distance: distance
+  unit: { fixed: crs-units, note: Shapely has no CRS; distance is in the coordinates' units. }
+  dissolve: { fixed: false, note: Union the results with shapely.union_all. }
+  segments: quad_segs
+differences:
+  - Works on geometries, not layers, and knows no CRS.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,15 @@
+id: pdal-filters-hag-delaunay
+kind: implementation
+name: filters.hag_delaunay
+software: pdal
+call: {interface: pdal-pipeline, name: filters.hag_delaunay}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  count: {type: option, default: '10'}
+  allow_extrapolation: {type: option, default: 'true'}
+  class: {type: option, default: '2'}
+docs: https://pdal.org/en/master/stages/filters.hag_delaunay.html
+status: active
+review: {state: harvested, source: pdal}

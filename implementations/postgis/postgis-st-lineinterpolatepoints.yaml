@@ -1,0 +1,27 @@
+id: postgis-st-lineinterpolatepoints
+kind: implementation
+name: st_lineinterpolatepoints
+software: postgis
+call: {interface: sql, name: st_lineinterpolatepoints}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  use_spheroid: {type: boolean, default: 'true'}
+  repeat: {type: boolean, default: 'true'}
+signatures:
+- arguments:
+  - {type: geography}
+  - {type: double precision}
+  - {name: use_spheroid, type: boolean, default: 'true'}
+  - {name: repeat, type: boolean, default: 'true'}
+  returns: geography
+- arguments:
+  - {type: geometry}
+  - {type: double precision}
+  - {name: repeat, type: boolean, default: 'true'}
+  returns: geometry
+- arguments:
+  - {type: text}
+  - {type: double precision}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

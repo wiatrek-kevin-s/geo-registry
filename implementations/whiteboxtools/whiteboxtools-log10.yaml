@@ -1,0 +1,11 @@
+id: whiteboxtools-log10
+kind: implementation
+name: Log10
+software: whiteboxtools
+call: {interface: cli, name: Log10}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

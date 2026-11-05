@@ -1,0 +1,15 @@
+id: grass-d-where
+kind: implementation
+name: d.where
+software: grass
+call: {interface: cli, name: d.where}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  at: {type: float, note: multiple values}
+  input: {type: string, note: file name}
+  flag_d: {type: boolean, note: flag -d}
+  flag_l: {type: boolean, note: flag -l}
+  flag_w: {type: boolean, note: flag -w}
+  flag_f: {type: boolean, note: flag -f}
+status: active
+review: {state: harvested, source: grass}

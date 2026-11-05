@@ -1,0 +1,11 @@
+id: shapely-symmetric-difference-all
+kind: implementation
+name: shapely.symmetric_difference_all
+software: shapely
+call: {interface: python, name: shapely.symmetric_difference_all}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geometries: {type: any, required: true}
+  axis: {type: any}
+status: active
+review: {state: harvested, source: python-libs}

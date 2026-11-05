@@ -1,0 +1,14 @@
+id: grass-r-unpack
+kind: implementation
+name: r.unpack
+software: grass
+call: {interface: cli, name: r.unpack}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: bin name}
+  output: {type: string, note: output cell}
+  flag_o: {type: boolean, note: flag -o}
+  flag_p: {type: boolean, note: flag -p}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

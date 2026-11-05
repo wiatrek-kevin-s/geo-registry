@@ -1,0 +1,19 @@
+id: grass-i-evapo-pm
+kind: implementation
+name: i.evapo.pm
+software: grass
+call: {interface: cli, name: i.evapo.pm}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  elevation: {type: string, required: true, note: cell name}
+  temperature: {type: string, required: true, note: cell name}
+  relativehumidity: {type: string, required: true, note: cell name}
+  windspeed: {type: string, required: true, note: cell name}
+  netradiation: {type: string, required: true, note: cell name}
+  cropheight: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  flag_z: {type: boolean, note: flag -z}
+  flag_n: {type: boolean, note: flag -n}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

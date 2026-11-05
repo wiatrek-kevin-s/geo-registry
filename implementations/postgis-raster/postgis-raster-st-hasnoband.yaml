@@ -1,0 +1,16 @@
+id: postgis-raster-st-hasnoband
+kind: implementation
+name: st_hasnoband
+software: postgis-raster
+call: {interface: sql, name: st_hasnoband}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  nband: {type: integer, default: '1'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer, default: '1'}
+  returns: boolean
+status: active
+review: {state: harvested, source: postgis}

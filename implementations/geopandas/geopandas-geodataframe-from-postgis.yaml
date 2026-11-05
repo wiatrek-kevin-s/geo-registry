@@ -1,0 +1,18 @@
+id: geopandas-geodataframe-from-postgis
+kind: implementation
+name: GeoDataFrame.from_postgis
+software: geopandas
+call: {interface: python, name: geopandas.GeoDataFrame.from_postgis}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  sql: {type: str | sqlalchemy.text, required: true}
+  con: {type: any, required: true}
+  geom_col: {type: str, default: geom}
+  crs: {type: Any | None}
+  index_col: {type: 'str | list[str] | None'}
+  coerce_float: {type: bool, default: true}
+  parse_dates: {type: list | dict | None}
+  params: {type: list | tuple | dict | None}
+  chunksize: {type: int | None}
+status: active
+review: {state: harvested, source: python-libs}

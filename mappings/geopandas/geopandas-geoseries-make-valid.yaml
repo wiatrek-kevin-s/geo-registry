@@ -1,0 +1,5 @@
+id: geopandas-geoseries-make-valid
+implements: make-valid
+crosswalk: {}
+effects: { modifies_input: false, network: false }
+review: { state: draft }

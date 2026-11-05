@@ -1,0 +1,9 @@
+id: geopandas-geoseries-representative-point
+kind: implementation
+name: GeoSeries.representative_point
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.representative_point}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-libs}

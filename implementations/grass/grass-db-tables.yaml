@@ -1,0 +1,13 @@
+id: grass-db-tables
+kind: implementation
+name: db.tables
+software: grass
+call: {interface: cli, name: db.tables}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  driver: {type: string, default: sqlite, values: [dbf, ogr, pg, sqlite], note: dbdriver name}
+  database: {type: string, default: $GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db, note: dbname name}
+  flag_p: {type: boolean, note: flag -p}
+  flag_s: {type: boolean, note: flag -s}
+status: active
+review: {state: harvested, source: grass}

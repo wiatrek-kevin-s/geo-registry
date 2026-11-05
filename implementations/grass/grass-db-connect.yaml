@@ -1,0 +1,18 @@
+id: grass-db-connect
+kind: implementation
+name: db.connect
+software: grass
+call: {interface: cli, name: db.connect}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  driver: {type: string, default: sqlite, values: [dbf, ogr, pg, sqlite], note: dbdriver name}
+  database: {type: string, default: $GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db, note: dbname name}
+  schema: {type: string}
+  group: {type: string}
+  format: {type: string, required: true, default: plain, values: [plain, shell, json]}
+  flag_p: {type: boolean, note: flag -p}
+  flag_g: {type: boolean, note: flag -g}
+  flag_c: {type: boolean, note: flag -c}
+  flag_d: {type: boolean, note: flag -d}
+status: active
+review: {state: harvested, source: grass}

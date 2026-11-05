@@ -1,0 +1,12 @@
+id: geopandas-geoseries-intersection
+kind: implementation
+name: GeoSeries.intersection
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.intersection}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  other: {type: any, required: true}
+  align: {type: any}
+  grid_size: {type: any}
+status: active
+review: {state: harvested, source: python-libs}

@@ -1,0 +1,12 @@
+id: whiteboxtools-flightline-overlap
+kind: implementation
+name: FlightlineOverlap
+software: whiteboxtools
+call: {interface: cli, name: FlightlineOverlap}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar'}
+  output: {type: 'NewFile:Raster', note: output}
+  resolution: {type: Float, default: '1.0'}
+status: active
+review: {state: harvested, source: whitebox}

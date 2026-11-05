@@ -1,0 +1,13 @@
+id: grass-r3-gradient
+kind: implementation
+name: r3.gradient
+software: grass
+call: {interface: cli, name: r3.gradient}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: grid3 name}
+  output: {type: string, required: true, note: output grid3; multiple values}
+  blocksize: {type: string, default: '30,30,20', note: multiple values}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

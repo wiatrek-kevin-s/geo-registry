@@ -1,0 +1,11 @@
+id: geopandas-geoseries-simplify-coverage
+kind: implementation
+name: GeoSeries.simplify_coverage
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.simplify_coverage}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  tolerance: {type: any, required: true}
+  simplify_boundary: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-libs}

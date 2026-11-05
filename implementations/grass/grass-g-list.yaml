@@ -1,0 +1,25 @@
+id: grass-g-list
+kind: implementation
+name: g.list
+software: grass
+call: {interface: cli, name: g.list}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  type: {type: string, required: true, values: [raster, raster_3d, vector, label, region, group, all], note: multiple values}
+  pattern: {type: string}
+  exclude: {type: string}
+  mapset: {type: string, note: mapset name; multiple values}
+  separator: {type: string, default: newline, note: separator name}
+  region: {type: string, note: windows name}
+  output: {type: string, note: output file}
+  format: {type: string, values: [plain, shell, json]}
+  flag_i: {type: boolean, note: flag -i}
+  flag_r: {type: boolean, note: flag -r}
+  flag_e: {type: boolean, note: flag -e}
+  flag_t: {type: boolean, note: flag -t}
+  flag_m: {type: boolean, note: flag -m}
+  flag_p: {type: boolean, note: flag -p}
+  flag_f: {type: boolean, note: flag -f}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,15 @@
+id: whiteboxtools-block-maximum-gridding
+kind: implementation
+name: BlockMaximumGridding
+software: whiteboxtools
+call: {interface: cli, name: BlockMaximumGridding}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Vector:Point', required: true}
+  field: {type: VectorAttributeField, required: true}
+  use_z: {type: Boolean, default: 'false'}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  cell_size: {type: Float}
+  base: {type: 'ExistingFile:Raster'}
+status: active
+review: {state: harvested, source: whitebox}

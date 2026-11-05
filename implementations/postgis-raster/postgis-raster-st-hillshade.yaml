@@ -1,0 +1,40 @@
+id: postgis-raster-st-hillshade
+kind: implementation
+name: st_hillshade
+software: postgis-raster
+call: {interface: sql, name: st_hillshade}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  nband: {type: integer, default: '1'}
+  customextent: {type: raster}
+  pixeltype: {type: text, default: '''32BF''::text'}
+  azimuth: {type: double precision, default: '315.0'}
+  altitude: {type: double precision, default: '45.0'}
+  max_bright: {type: double precision, default: '255.0'}
+  scale: {type: double precision, default: '1.0'}
+  interpolate_nodata: {type: boolean, default: 'false'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: customextent, type: raster}
+  - {name: pixeltype, type: text, default: '''32BF''::text'}
+  - {name: azimuth, type: double precision, default: '315.0'}
+  - {name: altitude, type: double precision, default: '45.0'}
+  - {name: max_bright, type: double precision, default: '255.0'}
+  - {name: scale, type: double precision, default: '1.0'}
+  - {name: interpolate_nodata, type: boolean, default: 'false'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer, default: '1'}
+  - {name: pixeltype, type: text, default: '''32BF''::text'}
+  - {name: azimuth, type: double precision, default: '315.0'}
+  - {name: altitude, type: double precision, default: '45.0'}
+  - {name: max_bright, type: double precision, default: '255.0'}
+  - {name: scale, type: double precision, default: '1.0'}
+  - {name: interpolate_nodata, type: boolean, default: 'false'}
+  returns: raster
+status: active
+review: {state: harvested, source: postgis}

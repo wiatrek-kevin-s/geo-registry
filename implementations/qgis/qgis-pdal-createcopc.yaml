@@ -1,0 +1,11 @@
+id: qgis-pdal-createcopc
+kind: implementation
+name: pdal:createcopc
+software: qgis
+call: {interface: qgis-process, name: 'pdal:createcopc'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  LAYERS: {type: multilayer, required: true}
+  OUTPUT: {type: folderDestination, note: output}
+status: active
+review: {state: harvested, source: qgis}

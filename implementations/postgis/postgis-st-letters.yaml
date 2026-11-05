@@ -1,0 +1,16 @@
+id: postgis-st-letters
+kind: implementation
+name: st_letters
+software: postgis
+call: {interface: sql, name: st_letters}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  letters: {type: text}
+  font: {type: json, default: 'NULL::json'}
+signatures:
+- arguments:
+  - {name: letters, type: text}
+  - {name: font, type: json, default: 'NULL::json'}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

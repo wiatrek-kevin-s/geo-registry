@@ -1,0 +1,26 @@
+id: gdal-raster-polygonize
+kind: implementation
+name: gdal raster polygonize
+software: gdal
+call: {interface: cli, name: gdal raster polygonize}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  input-format: {type: string_list}
+  open-option: {type: string_list}
+  input: {type: dataset_list, required: true, note: raster dataset}
+  output-format: {type: string}
+  output-open-option: {type: string_list}
+  creation-option: {type: string_list}
+  layer-creation-option: {type: string_list}
+  overwrite: {type: boolean, default: false}
+  update: {type: boolean, default: false}
+  overwrite-layer: {type: boolean, default: false}
+  append: {type: boolean, default: false, note: exclusive group append-upsert}
+  output-layer: {type: string}
+  band: {type: integer, default: 1}
+  attribute-name: {type: string, default: DN}
+  connect-diagonal-pixels: {type: boolean, default: false}
+  output: {type: dataset, required: true, note: input and output; vector dataset}
+docs: https://gdal.org/programs/gdal_raster_polygonize.html
+status: active
+review: {state: harvested, source: gdal}

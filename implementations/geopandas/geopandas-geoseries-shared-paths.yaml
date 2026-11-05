@@ -1,0 +1,11 @@
+id: geopandas-geoseries-shared-paths
+kind: implementation
+name: GeoSeries.shared_paths
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.shared_paths}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  other: {type: any, required: true}
+  align: {type: any}
+status: active
+review: {state: harvested, source: python-libs}

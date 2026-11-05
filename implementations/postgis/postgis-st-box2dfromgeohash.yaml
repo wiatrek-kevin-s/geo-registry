@@ -1,0 +1,14 @@
+id: postgis-st-box2dfromgeohash
+kind: implementation
+name: st_box2dfromgeohash
+software: postgis
+call: {interface: sql, name: st_box2dfromgeohash}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: text}
+  - {type: integer, default: 'NULL::integer'}
+  returns: box2d
+status: active
+review: {state: harvested, source: postgis}

@@ -1,0 +1,38 @@
+id: gdal-raster-viewshed
+kind: implementation
+name: gdal raster viewshed
+software: gdal
+call: {interface: cli, name: gdal raster viewshed}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  input-format: {type: string_list}
+  open-option: {type: string_list}
+  input: {type: dataset_list, required: true, note: raster dataset}
+  output-format: {type: string}
+  creation-option: {type: string_list}
+  overwrite: {type: boolean, default: false, note: exclusive group overwrite-append}
+  append: {type: boolean, default: false, note: exclusive group overwrite-append}
+  position: {type: real_list}
+  height: {type: real}
+  sd-filename: {type: dataset, note: raster dataset}
+  target-height: {type: real, default: 0.0}
+  mode: {type: string, default: normal, values: [normal, DEM, ground, cumulative]}
+  max-distance: {type: real, note: at least 0.0}
+  min-distance: {type: real, note: at least 0.0}
+  start-angle: {type: real, note: from 0.0 to 360.0}
+  end-angle: {type: real, note: from 0.0 to 360.0}
+  high-pitch: {type: real, note: from -90.0 to 90.0}
+  low-pitch: {type: real, note: from -90.0 to 90.0}
+  curvature-coefficient: {type: real, note: at least 0.0}
+  band: {type: integer, default: 1}
+  visible-value: {type: real, default: 255.0, note: from 0.0 to 255.0}
+  invisible-value: {type: real, default: 0.0, note: from 0.0 to 255.0}
+  maybe-visible-value: {type: real, default: 2.0, note: from 0.0 to 255.0}
+  out-of-range-value: {type: real, default: 0.0}
+  output-nodata: {type: real, note: from 0.0 to 255.0}
+  observer-spacing: {type: integer, default: 10, note: at least 1}
+  num-threads: {type: string, default: '3'}
+  output: {type: dataset, required: true, note: input and output; raster dataset}
+docs: https://gdal.org/programs/gdal_raster_viewshed.html
+status: active
+review: {state: harvested, source: gdal}

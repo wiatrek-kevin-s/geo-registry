@@ -1,0 +1,11 @@
+id: whiteboxtools-breach-single-cell-pits
+kind: implementation
+name: BreachSingleCellPits
+software: whiteboxtools
+call: {interface: cli, name: BreachSingleCellPits}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

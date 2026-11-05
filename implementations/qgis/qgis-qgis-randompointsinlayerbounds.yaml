@@ -1,0 +1,13 @@
+id: qgis-qgis-randompointsinlayerbounds
+kind: implementation
+name: qgis:randompointsinlayerbounds
+software: qgis
+call: {interface: qgis-process, name: 'qgis:randompointsinlayerbounds'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  MIN_DISTANCE: {type: distance, required: true, default: 0}
+  OUTPUT: {type: sink, required: true, note: output}
+  POINTS_NUMBER: {type: number, required: true, default: 1}
+status: active
+review: {state: harvested, source: qgis}

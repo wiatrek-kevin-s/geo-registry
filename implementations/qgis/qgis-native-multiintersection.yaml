@@ -1,0 +1,13 @@
+id: qgis-native-multiintersection
+kind: implementation
+name: native:multiintersection
+software: qgis
+call: {interface: qgis-process, name: 'native:multiintersection'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  OVERLAYS: {type: multilayer, required: true}
+  OVERLAY_FIELDS_PREFIX: {type: string}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,12 @@
+id: whiteboxtools-hypsometric-analysis
+kind: implementation
+name: HypsometricAnalysis
+software: whiteboxtools
+call: {interface: cli, name: HypsometricAnalysis}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  inputs: {type: 'FileList:Raster', required: true}
+  watershed: {type: 'FileList:Raster'}
+  output: {type: 'NewFile:Html', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

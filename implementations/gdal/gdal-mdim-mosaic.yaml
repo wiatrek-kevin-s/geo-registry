@@ -1,0 +1,18 @@
+id: gdal-mdim-mosaic
+kind: implementation
+name: gdal mdim mosaic
+software: gdal
+call: {interface: cli, name: gdal mdim mosaic}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  output-format: {type: string}
+  open-option: {type: string_list}
+  input-format: {type: string_list}
+  input: {type: dataset_list, required: true, note: multidim_raster dataset}
+  creation-option: {type: string_list}
+  overwrite: {type: boolean, default: false}
+  array: {type: string_list}
+  output: {type: dataset, required: true, note: input and output; multidim_raster dataset}
+docs: https://gdal.org/programs/gdal_mdim_mosaic.html
+status: active
+review: {state: harvested, source: gdal}

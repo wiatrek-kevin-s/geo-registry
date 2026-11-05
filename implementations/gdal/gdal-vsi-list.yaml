@@ -1,0 +1,18 @@
+id: gdal-vsi-list
+kind: implementation
+name: gdal vsi list
+software: gdal
+call: {interface: cli, name: gdal vsi list}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  filename: {type: string, required: true}
+  output-format: {type: string, values: [json, text]}
+  long-listing: {type: boolean}
+  recursive: {type: boolean}
+  depth: {type: integer, note: at least 1}
+  absolute-path: {type: boolean}
+  tree: {type: boolean}
+  output-string: {type: string, note: output}
+docs: https://gdal.org/programs/gdal_vsi_list.html
+status: active
+review: {state: harvested, source: gdal}

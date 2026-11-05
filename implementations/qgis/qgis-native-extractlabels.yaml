@@ -1,0 +1,15 @@
+id: qgis-native-extractlabels
+kind: implementation
+name: native:extractlabels
+software: qgis
+call: {interface: qgis-process, name: 'native:extractlabels'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  DPI: {type: number, default: 96.0}
+  EXTENT: {type: extent, required: true}
+  INCLUDE_UNPLACED: {type: boolean, required: true, default: true}
+  MAP_THEME: {type: maptheme}
+  OUTPUT: {type: sink, required: true, note: output}
+  SCALE: {type: scale, required: true}
+status: active
+review: {state: harvested, source: qgis}

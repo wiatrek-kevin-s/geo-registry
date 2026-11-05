@@ -1,0 +1,13 @@
+id: whiteboxtools-visibility-index
+kind: implementation
+name: VisibilityIndex
+software: whiteboxtools
+call: {interface: cli, name: VisibilityIndex}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  height: {type: Float, required: true, default: '2.0'}
+  res_factor: {type: Integer, required: true, default: '2'}
+status: active
+review: {state: harvested, source: whitebox}

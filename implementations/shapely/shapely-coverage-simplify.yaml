@@ -1,0 +1,12 @@
+id: shapely-coverage-simplify
+kind: implementation
+name: shapely.coverage_simplify
+software: shapely
+call: {interface: python, name: shapely.coverage_simplify}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geometry: {type: any, required: true}
+  tolerance: {type: any, required: true}
+  simplify_boundary: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-libs}

@@ -1,0 +1,15 @@
+id: whiteboxtools-attribute-correlation-neighbourhood-analysis
+kind: implementation
+name: AttributeCorrelationNeighbourhoodAnalysis
+software: whiteboxtools
+call: {interface: cli, name: AttributeCorrelationNeighbourhoodAnalysis}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Vector:Any', required: true}
+  field1: {type: VectorAttributeField, required: true}
+  field2: {type: VectorAttributeField, required: true}
+  radius: {type: Float}
+  min_points: {type: Integer}
+  stat: {type: OptionList, default: pearson, values: [pearson, kendall, spearman]}
+status: active
+review: {state: harvested, source: whitebox}

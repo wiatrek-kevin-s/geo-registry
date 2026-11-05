@@ -1,0 +1,13 @@
+id: qgis-gdal-dataset-identify
+kind: implementation
+name: gdal:dataset_identify
+software: qgis
+call: {interface: qgis-process, name: 'gdal:dataset_identify'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  DETAILS: {type: boolean, required: true, default: true}
+  INPUT: {type: file, required: true}
+  OUTPUT: {type: vectorDestination, required: true, note: output}
+  RECURSIVE: {type: boolean, required: true, default: true}
+status: active
+review: {state: harvested, source: qgis}

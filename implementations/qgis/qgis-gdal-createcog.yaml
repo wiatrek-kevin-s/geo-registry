@@ -1,0 +1,12 @@
+id: qgis-gdal-createcog
+kind: implementation
+name: gdal:createcog
+software: qgis
+call: {interface: qgis-process, name: 'gdal:createcog'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CREATION_OPTIONS: {type: string, default: ''}
+  LAYERS: {type: multilayer, required: true}
+  OUTPUT: {type: folderDestination, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

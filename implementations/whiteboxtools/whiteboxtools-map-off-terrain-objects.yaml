@@ -1,0 +1,13 @@
+id: whiteboxtools-map-off-terrain-objects
+kind: implementation
+name: MapOffTerrainObjects
+software: whiteboxtools
+call: {interface: cli, name: MapOffTerrainObjects}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  max_slope: {type: Float, required: true, default: '40.0'}
+  min_size: {type: Integer, required: true, default: '1'}
+status: active
+review: {state: harvested, source: whitebox}

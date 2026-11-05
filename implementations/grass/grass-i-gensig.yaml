@@ -1,0 +1,14 @@
+id: grass-i-gensig
+kind: implementation
+name: i.gensig
+software: grass
+call: {interface: cli, name: i.gensig}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  trainingmap: {type: string, required: true, note: cell name}
+  group: {type: string, required: true, note: group name}
+  subgroup: {type: string, required: true, note: subgroup name}
+  signaturefile: {type: string, required: true, note: output signatures/sig}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

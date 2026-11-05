@@ -1,0 +1,16 @@
+id: postgis-st-aslatlontext
+kind: implementation
+name: st_aslatlontext
+software: postgis
+call: {interface: sql, name: st_aslatlontext}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geom: {type: geometry}
+  tmpl: {type: text, default: '''''::text'}
+signatures:
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: tmpl, type: text, default: '''''::text'}
+  returns: text
+status: active
+review: {state: harvested, source: postgis}

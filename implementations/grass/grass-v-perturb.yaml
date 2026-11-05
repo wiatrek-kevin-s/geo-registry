@@ -1,0 +1,19 @@
+id: grass-v-perturb
+kind: implementation
+name: v.perturb
+software: grass
+call: {interface: cli, name: v.perturb}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '-1', note: layer_all name}
+  output: {type: string, required: true, note: output vector}
+  distribution: {type: string, default: uniform, values: [uniform, normal]}
+  parameters: {type: float, required: true, note: multiple values}
+  minimum: {type: float, default: 0.0}
+  seed: {type: integer}
+  flag_s: {type: boolean, note: flag -s}
+  flag_b: {type: boolean, note: flag -b}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

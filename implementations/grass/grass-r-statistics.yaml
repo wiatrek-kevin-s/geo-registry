@@ -1,0 +1,16 @@
+id: grass-r-statistics
+kind: implementation
+name: r.statistics
+software: grass
+call: {interface: cli, name: r.statistics}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  base: {type: string, required: true, note: cell name}
+  cover: {type: string, required: true, note: cell name}
+  method: {type: string, required: true, values: [diversity, average, mode, median, avedev, stddev, variance, skewness, kurtosis,
+      min, max, sum]}
+  output: {type: string, required: true, note: output cell}
+  flag_c: {type: boolean, note: flag -c}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

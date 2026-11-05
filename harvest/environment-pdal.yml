@@ -1,0 +1,6 @@
+# PDAL in its own environment: its conda-forge builds can lag the newest GDAL.
+name: geo-registry-pdal
+channels:
+  - conda-forge
+dependencies:
+  - pdal

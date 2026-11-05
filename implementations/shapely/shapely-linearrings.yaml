@@ -1,0 +1,15 @@
+id: shapely-linearrings
+kind: implementation
+name: shapely.linearrings
+software: shapely
+call: {interface: python, name: shapely.linearrings}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  coords: {type: any, required: true}
+  y: {type: any}
+  z: {type: any}
+  indices: {type: any}
+  handle_nan: {type: integer, note: 'default <HandleNaN.allow: 0>'}
+  out: {type: any}
+status: active
+review: {state: harvested, source: python-libs}

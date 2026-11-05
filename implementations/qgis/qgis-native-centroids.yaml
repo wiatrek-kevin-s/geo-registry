@@ -1,0 +1,12 @@
+id: qgis-native-centroids
+kind: implementation
+name: native:centroids
+software: qgis
+call: {interface: qgis-process, name: 'native:centroids'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ALL_PARTS: {type: boolean, required: true, default: false}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

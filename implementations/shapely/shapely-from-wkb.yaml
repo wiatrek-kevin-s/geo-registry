@@ -1,0 +1,11 @@
+id: shapely-from-wkb
+kind: implementation
+name: shapely.from_wkb
+software: shapely
+call: {interface: python, name: shapely.from_wkb}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geometry: {type: any, required: true}
+  on_invalid: {type: string, default: raise}
+status: active
+review: {state: harvested, source: python-libs}

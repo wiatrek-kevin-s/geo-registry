@@ -171,3 +171,138 @@ fn validate_reports_bad_entries() {
     assert!(err.contains("recipe.tool"), "{err}");
     assert!(err.contains("'nope' does not resolve"), "{err}");
 }
+
+/// Copy the fixture entries (all kinds) into `dst/entries`.
+fn copy_entries(dst: &Path) {
+    for sub in ["data", "tools", "operations"] {
+        let to = dst.join("entries").join(sub);
+        fs::create_dir_all(&to).unwrap();
+        for e in fs::read_dir(fixture_entries().join(sub)).unwrap() {
+            let p = e.unwrap().path();
+            fs::copy(&p, to.join(p.file_name().unwrap())).unwrap();
+        }
+    }
+}
+
+const HARVESTED: &str = "id: vft-buffer\nkind: implementation\nname: vft buffer\n\
+    software: vector-fixture-tool\ncall: {interface: cli, name: vft buffer}\n\
+    harvest: {harvester: test, engine_version: '1.0'}\n\
+    parameters:\n  in: {type: dataset, required: true}\n  dist: {type: real, required: true}\n\
+    status: active\nreview: {state: harvested, source: test}\n";
+
+fn write(path: PathBuf, text: &str) {
+    fs::create_dir_all(path.parent().unwrap()).unwrap();
+    fs::write(path, text).unwrap();
+}
+
+#[test]
+fn implementations_merge_mappings_and_are_indexed() {
+    let dir = tempfile::tempdir().unwrap();
+    copy_entries(dir.path());
+    let root = dir.path();
+    write(
+        root.join("implementations/vector-fixture-tool/vft-buffer.yaml"),
+        HARVESTED,
+    );
+    write(
+        root.join("mappings/vector-fixture-tool/vft-buffer.yaml"),
+        "id: vft-buffer\nimplements: buffer-fixture\n\
+         crosswalk: {layer: in, distance: dist}\nreview: {state: draft}\n",
+    );
+    let entries = root.join("entries");
+    let out = run(&[
+        "validate",
+        "--entries",
+        s(&entries),
+        "--schema",
+        s(&schema()),
+    ]);
+    assert!(
+        out.status.success(),
+        "{}",
+        String::from_utf8_lossy(&out.stderr)
+    );
+    let dist = root.join("dist");
+    let out = run(&[
+        "build",
+        "--entries",
+        s(&entries),
+        "--schema",
+        s(&schema()),
+        "--out",
+        s(&dist),
+    ]);
+    assert!(
+        out.status.success(),
+        "{}",
+        String::from_utf8_lossy(&out.stderr)
+    );
+    let conn = rusqlite::Connection::open(dist.join("registry.sqlite")).unwrap();
+    let (op, entry): (String, String) = conn
+        .query_row(
+            "SELECT implements, entry FROM implementations WHERE id = 'vft-buffer'",
+            [],
+            |r| Ok((r.get(0)?, r.get(1)?)),
+        )
+        .unwrap();
+    assert_eq!(op, "buffer-fixture");
+    let entry: serde_json::Value = serde_json::from_str(&entry).unwrap();
+    assert_eq!(entry["crosswalk"]["distance"], "dist");
+    assert_eq!(entry["review"]["state"], "draft"); // the mapping's review state
+    let out = run(&[
+        "search",
+        "vft",
+        "--kind",
+        "implementation",
+        "--db",
+        s(&dist.join("registry.sqlite")),
+    ]);
+    let text = String::from_utf8_lossy(&out.stdout);
+    assert!(text.contains("implements buffer-fixture"), "{text}");
+}
+
+#[test]
+fn bad_mappings_and_folders_are_reported() {
+    let dir = tempfile::tempdir().unwrap();
+    copy_entries(dir.path());
+    let root = dir.path();
+    write(
+        root.join("implementations/vector-fixture-tool/vft-buffer.yaml"),
+        HARVESTED,
+    );
+    // In the wrong folder for its software.
+    write(
+        root.join("implementations/raster-fixture-tool/vft-buffer2.yaml"),
+        &HARVESTED.replace("id: vft-buffer", "id: vft-buffer2"),
+    );
+    // Sets a harvested field, and maps to a parameter the engine lacks.
+    write(
+        root.join("mappings/vector-fixture-tool/vft-buffer.yaml"),
+        "id: vft-buffer\nimplements: buffer-fixture\nparameters: {}\n\
+         crosswalk: {distance: radius}\n",
+    );
+    // No harvested implementation (renamed or removed by the engine).
+    write(
+        root.join("mappings/vector-fixture-tool/vft-gone.yaml"),
+        "id: vft-gone\nimplements: buffer-fixture\n",
+    );
+    let out = run(&[
+        "validate",
+        "--entries",
+        s(&root.join("entries")),
+        "--schema",
+        s(&schema()),
+    ]);
+    assert_eq!(out.status.code(), Some(1));
+    let err = String::from_utf8_lossy(&out.stderr);
+    assert!(err.contains("does not match its folder"), "{err}");
+    assert!(err.contains("may not set 'parameters'"), "{err}");
+    assert!(
+        err.contains("not a parameter of this implementation"),
+        "{err}"
+    );
+    assert!(
+        err.contains("no harvested implementation 'vft-gone'"),
+        "{err}"
+    );
+}

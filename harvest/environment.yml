@@ -1,0 +1,13 @@
+# Engines the harvesters and equivalence tests run against, from conda-forge.
+# Unpinned on purpose: the weekly harvest picks up new releases, and the
+# pull request it opens shows exactly what each release changed.
+name: geo-registry-engines
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.12
+  - gdal>=3.11
+  - shapely>=2
+  - geopandas>=1
+  - pyogrio
+  - pyyaml

@@ -1,0 +1,16 @@
+id: grass-m-cogo
+kind: implementation
+name: m.cogo
+software: grass
+call: {interface: cli, name: m.cogo}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, default: '-', note: file name}
+  output: {type: string, default: '-', note: output file}
+  coordinates: {type: float, default: '0.0,0.0', note: coords name}
+  flag_l: {type: boolean, note: flag -l}
+  flag_r: {type: boolean, note: flag -r}
+  flag_c: {type: boolean, note: flag -c}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,17 @@
+id: pdal-filters-geomdistance
+kind: implementation
+name: filters.geomdistance
+software: pdal
+call: {interface: pdal-pipeline, name: filters.geomdistance}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  geometry: {type: option}
+  dimension: {type: option, default: distance}
+  ring: {type: option, default: 'false'}
+  ogr: {type: option}
+docs: https://pdal.org/en/master/stages/filters.geomdistance.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

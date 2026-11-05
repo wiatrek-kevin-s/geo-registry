@@ -1,0 +1,12 @@
+id: qgis-native-surfacetopolygon
+kind: implementation
+name: native:surfacetopolygon
+software: qgis
+call: {interface: qgis-process, name: 'native:surfacetopolygon'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CRS_OUTPUT: {type: crs}
+  INPUT: {type: mesh, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

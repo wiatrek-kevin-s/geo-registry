@@ -1,0 +1,13 @@
+id: grass-i-target
+kind: implementation
+name: i.target
+software: grass
+call: {interface: cli, name: i.target}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  group: {type: string, required: true, note: group name}
+  location: {type: string}
+  mapset: {type: string}
+  flag_c: {type: boolean, note: flag -c}
+status: active
+review: {state: harvested, source: grass}

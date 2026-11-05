@@ -1,0 +1,17 @@
+id: qgis-native-modelerrastercalc
+kind: implementation
+name: native:modelerrastercalc
+software: qgis
+call: {interface: qgis-process, name: 'native:modelerrastercalc'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CELL_SIZE: {type: number}
+  CREATION_OPTIONS: {type: string}
+  CRS: {type: crs}
+  EXPRESSION: {type: expression, required: true}
+  EXTENT: {type: extent}
+  LAYERS: {type: multilayer, required: true}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+notes: Deprecated in QGIS.
+status: active
+review: {state: harvested, source: qgis}

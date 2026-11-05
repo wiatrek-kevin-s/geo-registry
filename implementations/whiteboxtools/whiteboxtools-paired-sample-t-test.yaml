@@ -1,0 +1,13 @@
+id: whiteboxtools-paired-sample-t-test
+kind: implementation
+name: PairedSampleTTest
+software: whiteboxtools
+call: {interface: cli, name: PairedSampleTTest}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input1: {type: 'ExistingFile:Raster', required: true}
+  input2: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Html', required: true, note: output}
+  num_samples: {type: Integer}
+status: active
+review: {state: harvested, source: whitebox}

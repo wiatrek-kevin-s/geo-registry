@@ -1,0 +1,13 @@
+id: whiteboxtools-las-to-zlidar
+kind: implementation
+name: LasToZlidar
+software: whiteboxtools
+call: {interface: cli, name: LasToZlidar}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  inputs: {type: 'FileList:Lidar'}
+  outdir: {type: Directory}
+  compress: {type: OptionList, default: brotli, values: [brotli, deflate]}
+  level: {type: Integer, default: '5'}
+status: active
+review: {state: harvested, source: whitebox}

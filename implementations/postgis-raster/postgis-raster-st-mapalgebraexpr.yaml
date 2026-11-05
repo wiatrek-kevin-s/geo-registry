@@ -1,0 +1,58 @@
+id: postgis-raster-st-mapalgebraexpr
+kind: implementation
+name: st_mapalgebraexpr
+software: postgis-raster
+call: {interface: sql, name: st_mapalgebraexpr}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  band: {type: integer}
+  pixeltype: {type: text, default: 'NULL::text'}
+  expression: {type: text}
+  nodataval: {type: double precision, default: 'NULL::double precision'}
+  rast1: {type: raster}
+  band1: {type: integer}
+  rast2: {type: raster}
+  band2: {type: integer}
+  extenttype: {type: text, default: '''INTERSECTION''::text'}
+  nodata1expr: {type: text, default: 'NULL::text'}
+  nodata2expr: {type: text, default: 'NULL::text'}
+  nodatanodataval: {type: double precision, default: 'NULL::double precision'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: band, type: integer}
+  - {name: pixeltype, type: text}
+  - {name: expression, type: text}
+  - {name: nodataval, type: double precision, default: 'NULL::double precision'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: pixeltype, type: text}
+  - {name: expression, type: text}
+  - {name: nodataval, type: double precision, default: 'NULL::double precision'}
+  returns: raster
+- arguments:
+  - {name: rast1, type: raster}
+  - {name: band1, type: integer}
+  - {name: rast2, type: raster}
+  - {name: band2, type: integer}
+  - {name: expression, type: text}
+  - {name: pixeltype, type: text, default: 'NULL::text'}
+  - {name: extenttype, type: text, default: '''INTERSECTION''::text'}
+  - {name: nodata1expr, type: text, default: 'NULL::text'}
+  - {name: nodata2expr, type: text, default: 'NULL::text'}
+  - {name: nodatanodataval, type: double precision, default: 'NULL::double precision'}
+  returns: raster
+- arguments:
+  - {name: rast1, type: raster}
+  - {name: rast2, type: raster}
+  - {name: expression, type: text}
+  - {name: pixeltype, type: text, default: 'NULL::text'}
+  - {name: extenttype, type: text, default: '''INTERSECTION''::text'}
+  - {name: nodata1expr, type: text, default: 'NULL::text'}
+  - {name: nodata2expr, type: text, default: 'NULL::text'}
+  - {name: nodatanodataval, type: double precision, default: 'NULL::double precision'}
+  returns: raster
+status: active
+review: {state: harvested, source: postgis}

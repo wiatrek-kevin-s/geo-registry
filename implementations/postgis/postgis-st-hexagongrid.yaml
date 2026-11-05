@@ -1,0 +1,16 @@
+id: postgis-st-hexagongrid
+kind: implementation
+name: st_hexagongrid
+software: postgis
+call: {interface: sql, name: st_hexagongrid}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  size: {type: double precision}
+  bounds: {type: geometry}
+signatures:
+- arguments:
+  - {name: size, type: double precision}
+  - {name: bounds, type: geometry}
+  returns: SETOF record
+status: active
+review: {state: harvested, source: postgis}

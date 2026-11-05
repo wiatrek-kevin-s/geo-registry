@@ -1,0 +1,11 @@
+id: geopandas-geoseries-distance
+kind: implementation
+name: GeoSeries.distance
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.distance}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  other: {type: any, required: true}
+  align: {type: any}
+status: active
+review: {state: harvested, source: python-libs}

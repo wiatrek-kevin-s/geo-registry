@@ -1,0 +1,17 @@
+id: grass-g-mapset
+kind: implementation
+name: g.mapset
+software: grass
+call: {interface: cli, name: g.mapset}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  mapset: {type: string, required: true, note: output mapset}
+  project: {type: string, note: location name}
+  dbase: {type: string, note: dbase name}
+  format: {type: string, required: true, default: plain, values: [plain, json]}
+  flag_c: {type: boolean, note: flag -c}
+  flag_l: {type: boolean, note: flag -l}
+  flag_p: {type: boolean, note: flag -p}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

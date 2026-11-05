@@ -1,0 +1,18 @@
+id: postgis-st-asgeobuf
+kind: implementation
+name: st_asgeobuf
+software: postgis
+call: {interface: sql, name: st_asgeobuf}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: anyelement}
+  returns: bytea (aggregate)
+- arguments:
+  - {type: anyelement}
+  - {type: text}
+  returns: bytea (aggregate)
+notes: Has an aggregate form.
+status: active
+review: {state: harvested, source: postgis}

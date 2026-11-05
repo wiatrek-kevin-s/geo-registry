@@ -1,0 +1,39 @@
+id: postgis-raster-st-aspng
+kind: implementation
+name: st_aspng
+software: postgis-raster
+call: {interface: sql, name: st_aspng}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  nband: {type: integer}
+  compression: {type: integer}
+  options: {type: 'text[]', default: 'NULL::text[]'}
+  nbands: {type: 'integer[]'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: compression, type: integer}
+  returns: bytea
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: options, type: 'text[]', default: 'NULL::text[]'}
+  returns: bytea
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nbands, type: 'integer[]'}
+  - {name: compression, type: integer}
+  returns: bytea
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nbands, type: 'integer[]'}
+  - {name: options, type: 'text[]', default: 'NULL::text[]'}
+  returns: bytea
+- arguments:
+  - {name: rast, type: raster}
+  - {name: options, type: 'text[]', default: 'NULL::text[]'}
+  returns: bytea
+status: active
+review: {state: harvested, source: postgis}

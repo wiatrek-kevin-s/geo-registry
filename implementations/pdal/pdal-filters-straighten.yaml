@@ -1,0 +1,16 @@
+id: pdal-filters-straighten
+kind: implementation
+name: filters.straighten
+software: pdal
+call: {interface: pdal-pipeline, name: filters.straighten}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  polyline: {type: option}
+  reverse: {type: option, default: 'false'}
+  offset: {type: option, default: '0'}
+docs: https://pdal.org/en/master/stages/filters.straighten.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

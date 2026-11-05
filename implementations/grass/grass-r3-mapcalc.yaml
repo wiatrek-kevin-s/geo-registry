@@ -1,0 +1,17 @@
+id: grass-r3-mapcalc
+kind: implementation
+name: r3.mapcalc
+software: grass
+call: {interface: cli, name: r3.mapcalc}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  expression: {type: string}
+  region: {type: string, default: current, values: [current, intersect, union]}
+  file: {type: string, note: file name}
+  seed: {type: integer}
+  nprocs: {type: integer, default: 0}
+  flag_s: {type: boolean, note: flag -s}
+  flag_l: {type: boolean, note: flag -l}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

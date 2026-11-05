@@ -1,0 +1,20 @@
+id: gdal-mdim-info
+kind: implementation
+name: gdal mdim info
+software: gdal
+call: {interface: cli, name: gdal mdim info}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  open-option: {type: string_list}
+  input-format: {type: string_list}
+  input: {type: dataset, required: true, note: multidim_raster dataset}
+  summary: {type: boolean, note: exclusive group structure_detailed}
+  detailed: {type: boolean, note: exclusive group structure_detailed}
+  array: {type: string}
+  limit: {type: integer}
+  array-option: {type: string_list}
+  stats: {type: boolean}
+  output-string: {type: string, note: output}
+docs: https://gdal.org/programs/gdal_mdim_info.html
+status: active
+review: {state: harvested, source: gdal}

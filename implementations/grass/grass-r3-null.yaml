@@ -1,0 +1,12 @@
+id: grass-r3-null
+kind: implementation
+name: r3.null
+software: grass
+call: {interface: cli, name: r3.null}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: grid3 name}
+  setnull: {type: string, note: multiple values}
+  'null': {type: float}
+status: active
+review: {state: harvested, source: grass}

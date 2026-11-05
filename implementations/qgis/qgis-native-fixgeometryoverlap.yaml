@@ -1,0 +1,17 @@
+id: qgis-native-fixgeometryoverlap
+kind: implementation
+name: native:fixgeometryoverlap
+software: qgis
+call: {interface: qgis-process, name: 'native:fixgeometryoverlap'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ERRORS: {type: source, required: true}
+  ERROR_VALUE_ID: {type: field, required: true, default: gc_error}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  OVERLAP_FEATURE_UNIQUE_IDX: {type: field, required: true}
+  REPORT: {type: sink, required: true, note: output}
+  TOLERANCE: {type: number, required: true, default: 8}
+  UNIQUE_ID: {type: field, required: true}
+status: active
+review: {state: harvested, source: qgis}

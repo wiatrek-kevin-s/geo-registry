@@ -1,0 +1,12 @@
+id: qgis-gdal-buildvirtualvector
+kind: implementation
+name: gdal:buildvirtualvector
+software: qgis
+call: {interface: qgis-process, name: 'gdal:buildvirtualvector'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: multilayer, required: true}
+  OUTPUT: {type: vectorDestination, required: true, note: output}
+  UNIONED: {type: boolean, required: true, default: false}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,14 @@
+id: qgis-pdal-tile
+kind: implementation
+name: pdal:tile
+software: qgis
+call: {interface: qgis-process, name: 'pdal:tile'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CRS: {type: crs}
+  LAYERS: {type: multilayer, required: true}
+  LENGTH: {type: number, required: true, default: 1000.0}
+  OUTPUT: {type: folderDestination, required: true, note: output}
+  VPC_OUTPUT_FORMAT: {type: enum, required: true, default: COPC, values: [0, 1, 2], note: '0 COPC, 1 LAZ, 2 LAS'}
+status: active
+review: {state: harvested, source: qgis}

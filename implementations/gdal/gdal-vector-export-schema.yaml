@@ -1,0 +1,15 @@
+id: gdal-vector-export-schema
+kind: implementation
+name: gdal vector export-schema
+software: gdal
+call: {interface: cli, name: gdal vector export-schema}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  open-option: {type: string_list}
+  input-format: {type: string_list}
+  input: {type: dataset_list, required: true, note: vector dataset}
+  input-layer: {type: string_list}
+  output-string: {type: string, note: output}
+docs: https://gdal.org/programs/gdal_vector_export_schema.html
+status: active
+review: {state: harvested, source: gdal}

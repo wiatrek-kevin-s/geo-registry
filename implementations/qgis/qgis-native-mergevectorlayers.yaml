@@ -1,0 +1,13 @@
+id: qgis-native-mergevectorlayers
+kind: implementation
+name: native:mergevectorlayers
+software: qgis
+call: {interface: qgis-process, name: 'native:mergevectorlayers'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ADD_SOURCE_FIELDS: {type: boolean, required: true, default: true}
+  CRS: {type: crs}
+  LAYERS: {type: multilayer, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

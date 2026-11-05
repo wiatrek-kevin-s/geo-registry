@@ -1,0 +1,11 @@
+id: whiteboxtools-in-place-add
+kind: implementation
+name: InPlaceAdd
+software: whiteboxtools
+call: {interface: cli, name: InPlaceAdd}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input1: {type: 'ExistingFile:Raster', required: true}
+  input2: {type: 'ExistingFileOrFloat:Raster', required: true}
+status: active
+review: {state: harvested, source: whitebox}

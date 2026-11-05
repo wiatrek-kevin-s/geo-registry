@@ -1,0 +1,11 @@
+id: shapely-coverage-invalid-edges
+kind: implementation
+name: shapely.coverage_invalid_edges
+software: shapely
+call: {interface: python, name: shapely.coverage_invalid_edges}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geometry: {type: any, required: true}
+  gap_width: {type: number, default: 0.0}
+status: active
+review: {state: harvested, source: python-libs}

@@ -1,0 +1,12 @@
+id: geopandas-geoseries-translate
+kind: implementation
+name: GeoSeries.translate
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.translate}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  xoff: {type: number, default: 0.0}
+  yoff: {type: number, default: 0.0}
+  zoff: {type: number, default: 0.0}
+status: active
+review: {state: harvested, source: python-libs}

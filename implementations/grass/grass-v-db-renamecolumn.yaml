@@ -1,0 +1,12 @@
+id: grass-v-db-renamecolumn
+kind: implementation
+name: v.db.renamecolumn
+software: grass
+call: {interface: cli, name: v.db.renamecolumn}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '1', note: layer name}
+  column: {type: string, required: true}
+status: active
+review: {state: harvested, source: grass}

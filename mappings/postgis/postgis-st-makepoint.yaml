@@ -1,0 +1,8 @@
+id: postgis-st-makepoint
+implements: table-to-points
+crosswalk:
+  x_field: "#1"
+  y_field: "#2"
+  crs: { note: "Wrap the point in ST_SetSRID(point, srid); ST_MakePoint gives it no CRS." }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

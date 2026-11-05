@@ -1,0 +1,20 @@
+id: grass-t-rast-export
+kind: implementation
+name: t.rast.export
+software: grass
+call: {interface: cli, name: t.rast.export}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: strds name}
+  output: {type: string, required: true, note: output file}
+  directory: {type: string, default: ./, note: dir name}
+  compression: {type: string, default: bzip2, values: ['no', gzip, bzip2]}
+  format: {type: string, default: GTiff, values: [GTiff, AAIGrid, pack]}
+  type: {type: string, values: [Byte, Int16, UInt16, Int32, UInt32, Float32, Float64, CInt16, CInt32, CFloat32, CFloat64]}
+  createopt: {type: string, note: multiple values}
+  metaopt: {type: string, note: multiple values}
+  nodata: {type: float}
+  where: {type: string}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

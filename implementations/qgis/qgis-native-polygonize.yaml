@@ -1,0 +1,12 @@
+id: qgis-native-polygonize
+kind: implementation
+name: native:polygonize
+software: qgis
+call: {interface: qgis-process, name: 'native:polygonize'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  KEEP_FIELDS: {type: boolean, required: true, default: false}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

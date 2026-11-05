@@ -1,0 +1,26 @@
+id: grass-r-support
+kind: implementation
+name: r.support
+software: grass
+call: {interface: cli, name: r.support}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: cell name}
+  title: {type: string}
+  history: {type: string}
+  units: {type: string}
+  vdatum: {type: string}
+  source1: {type: string}
+  source2: {type: string}
+  description: {type: string}
+  raster: {type: string, note: cell name}
+  loadhistory: {type: string, note: file name}
+  savehistory: {type: string, note: output file}
+  semantic_label: {type: string}
+  flag_b: {type: boolean, note: flag -b}
+  flag_s: {type: boolean, note: flag -s}
+  flag_n: {type: boolean, note: flag -n}
+  flag_d: {type: boolean, note: flag -d}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

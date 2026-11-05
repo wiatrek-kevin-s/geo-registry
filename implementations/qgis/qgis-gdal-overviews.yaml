@@ -1,0 +1,18 @@
+id: qgis-gdal-overviews
+kind: implementation
+name: gdal:overviews
+software: qgis
+call: {interface: qgis-process, name: 'gdal:overviews'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CLEAN: {type: boolean, required: true, default: false}
+  EXTRA: {type: string}
+  FORMAT: {type: enum, default: 0, values: [0, 1, 2], note: '0 Internal (if possible), 1 External (GTiff .ovr), 2 External
+      (ERDAS Imagine .aux)'}
+  INPUT: {type: raster, required: true}
+  LEVELS: {type: string}
+  RESAMPLING: {type: enum, values: [0, 1, 2, 3, 4, 5, 6, 7, 8], note: '0 Nearest Neighbour (default), 1 Average, 2 Gaussian,
+      3 Cubic (4x4 Kernel), 4 Cubic B-Spline (4x4 Kernel), 5 Lanczos (6x6 Kernel), 6 Average MP, 7 Average in Mag/Phase Space,
+      8 Mode'}
+status: active
+review: {state: harvested, source: qgis}

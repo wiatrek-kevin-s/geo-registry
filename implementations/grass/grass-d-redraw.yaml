@@ -1,0 +1,9 @@
+id: grass-d-redraw
+kind: implementation
+name: d.redraw
+software: grass
+call: {interface: cli, name: d.redraw}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters: {}
+status: active
+review: {state: harvested, source: grass}

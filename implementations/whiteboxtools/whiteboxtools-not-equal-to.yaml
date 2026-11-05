@@ -1,0 +1,12 @@
+id: whiteboxtools-not-equal-to
+kind: implementation
+name: NotEqualTo
+software: whiteboxtools
+call: {interface: cli, name: NotEqualTo}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input1: {type: 'ExistingFileOrFloat:Raster', required: true}
+  input2: {type: 'ExistingFileOrFloat:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

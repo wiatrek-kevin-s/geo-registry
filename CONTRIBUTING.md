@@ -55,6 +55,22 @@ established mirror before merging.
 
 Do not write implementation entries by hand; they come from the engine harvesters.
 
+## Mapping an implementation to an operation
+
+1. Find the harvested file, e.g. `implementations/gdal/gdal-vector-clip.yaml`, and read
+   its parameters.
+2. Create `mappings/<software>/<same id>.yaml` with `id`, `implements`, a `crosswalk`
+   for every port and parameter of the operation the engine can take, and `differences`
+   in your own words. Use `fixed` or `unsupported` rather than leaving a parameter out
+   when the engine cannot honour it; that is how Columbus knows not to drop it silently.
+3. A tool whose name suggests an operation it is not gets a mapping with only `notes`.
+4. Add or extend a case in `checks/equivalence.py` when the operation has none, and run
+   it (see `harvest/README.md` for the engines). Mappings start as `review.state:
+   draft`; a person who knows both engines sets `reviewed`.
+
+A mapping may set only `implements`, `crosswalk`, `presets`, `differences`, `effects`,
+`requires`, `notes` and `review`; everything else belongs to the harvester.
+
 ## Seeded entries and the converter
 
 `seed/convert.py` regenerates all seeded entries from `seed/geospatial-tool-atlas.csv`, and

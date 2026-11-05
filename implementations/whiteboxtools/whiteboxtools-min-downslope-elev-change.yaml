@@ -1,0 +1,11 @@
+id: whiteboxtools-min-downslope-elev-change
+kind: implementation
+name: MinDownslopeElevChange
+software: whiteboxtools
+call: {interface: cli, name: MinDownslopeElevChange}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

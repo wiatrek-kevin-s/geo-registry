@@ -1,0 +1,23 @@
+id: gdal-raster-aspect
+kind: implementation
+name: gdal raster aspect
+software: gdal
+call: {interface: cli, name: gdal raster aspect}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  input-format: {type: string_list}
+  open-option: {type: string_list}
+  input: {type: dataset_list, required: true, note: raster dataset}
+  output-format: {type: string}
+  creation-option: {type: string_list}
+  overwrite: {type: boolean, default: false, note: exclusive group overwrite-append}
+  append: {type: boolean, default: false, note: exclusive group overwrite-append}
+  band: {type: integer, default: 1}
+  convention: {type: string, default: azimuth, values: [azimuth, trigonometric-angle]}
+  gradient-alg: {type: string, default: Horn, values: [Horn, ZevenbergenThorne]}
+  zero-for-flat: {type: boolean}
+  no-edges: {type: boolean}
+  output: {type: dataset, required: true, note: input and output; raster dataset}
+docs: https://gdal.org/programs/gdal_raster_aspect.html
+status: active
+review: {state: harvested, source: gdal}

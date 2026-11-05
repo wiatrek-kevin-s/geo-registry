@@ -1,0 +1,13 @@
+id: pdal-writers-null
+kind: implementation
+name: writers.null
+software: pdal
+call: {interface: pdal-pipeline, name: writers.null}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+docs: https://pdal.org/en/master/stages/writers.null.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

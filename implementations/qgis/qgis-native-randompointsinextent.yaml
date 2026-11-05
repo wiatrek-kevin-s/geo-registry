@@ -1,0 +1,15 @@
+id: qgis-native-randompointsinextent
+kind: implementation
+name: native:randompointsinextent
+software: qgis
+call: {interface: qgis-process, name: 'native:randompointsinextent'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  EXTENT: {type: extent, required: true}
+  MAX_ATTEMPTS: {type: number, default: 200}
+  MIN_DISTANCE: {type: distance, default: 0}
+  OUTPUT: {type: sink, required: true, note: output}
+  POINTS_NUMBER: {type: number, required: true, default: 1}
+  TARGET_CRS: {type: crs, required: true, default: ProjectCrs}
+status: active
+review: {state: harvested, source: qgis}

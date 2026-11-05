@@ -1,0 +1,17 @@
+id: grass-r-regression-multi
+kind: implementation
+name: r.regression.multi
+software: grass
+call: {interface: cli, name: r.regression.multi}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  mapx: {type: string, required: true, note: cell name; multiple values}
+  mapy: {type: string, required: true, note: cell name}
+  residuals: {type: string, note: output cell}
+  estimates: {type: string, note: output cell}
+  output: {type: string, note: output file}
+  format: {type: string, required: true, default: shell, values: [shell, json]}
+  flag_g: {type: boolean, note: flag -g}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

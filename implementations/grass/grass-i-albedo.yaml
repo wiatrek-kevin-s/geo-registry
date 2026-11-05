@@ -1,0 +1,19 @@
+id: grass-i-albedo
+kind: implementation
+name: i.albedo
+software: grass
+call: {interface: cli, name: i.albedo}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name; multiple values}
+  output: {type: string, required: true, note: output cell}
+  flag_m: {type: boolean, note: flag -m}
+  flag_n: {type: boolean, note: flag -n}
+  flag_l: {type: boolean, note: flag -l}
+  flag_8: {type: boolean, note: flag -8}
+  flag_a: {type: boolean, note: flag -a}
+  flag_c: {type: boolean, note: flag -c}
+  flag_d: {type: boolean, note: flag -d}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

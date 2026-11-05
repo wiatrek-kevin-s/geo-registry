@@ -1,0 +1,14 @@
+id: whiteboxtools-mosaic-with-feathering
+kind: implementation
+name: MosaicWithFeathering
+software: whiteboxtools
+call: {interface: cli, name: MosaicWithFeathering}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input1: {type: 'ExistingFile:Raster', required: true}
+  input2: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  method: {type: OptionList, default: cc, values: [nn, bilinear, cc]}
+  weight: {type: Float, default: '4.0'}
+status: active
+review: {state: harvested, source: whitebox}

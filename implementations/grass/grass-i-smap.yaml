@@ -1,0 +1,17 @@
+id: grass-i-smap
+kind: implementation
+name: i.smap
+software: grass
+call: {interface: cli, name: i.smap}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  group: {type: string, required: true, note: group name}
+  subgroup: {type: string, required: true, note: subgroup name}
+  signaturefile: {type: string, required: true, note: signatures/sigset name}
+  output: {type: string, required: true, note: output cell}
+  goodness: {type: string, note: output cell}
+  blocksize: {type: integer, default: 1024}
+  flag_m: {type: boolean, note: flag -m}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

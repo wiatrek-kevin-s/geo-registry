@@ -1,0 +1,15 @@
+id: grass-r-object-geometry
+kind: implementation
+name: r.object.geometry
+software: grass
+call: {interface: cli, name: r.object.geometry}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string, note: output file}
+  separator: {type: string, default: pipe, note: separator name}
+  format: {type: string, required: true, default: plain, values: [plain, json]}
+  flag_m: {type: boolean, note: flag -m}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

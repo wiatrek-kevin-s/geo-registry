@@ -1,0 +1,12 @@
+id: gdal-vsi-sozip-list
+kind: implementation
+name: gdal vsi sozip list
+software: gdal
+call: {interface: cli, name: gdal vsi sozip list}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  input: {type: string, required: true}
+  output-string: {type: string, note: output}
+docs: https://gdal.org/programs/gdal_vsi_sozip.html
+status: active
+review: {state: harvested, source: gdal}

@@ -1,0 +1,10 @@
+id: qgis-native-condition
+kind: implementation
+name: native:condition
+software: qgis
+call: {interface: qgis-process, name: 'native:condition'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters: {}
+notes: Deprecated in QGIS.
+status: active
+review: {state: harvested, source: qgis}

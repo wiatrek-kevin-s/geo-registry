@@ -1,0 +1,17 @@
+id: qgis-native-roundrastervalues
+kind: implementation
+name: native:roundrastervalues
+software: qgis
+call: {interface: qgis-process, name: 'native:roundrastervalues'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BAND: {type: band, required: true, default: 1}
+  BASE_N: {type: number, required: true, default: 10}
+  CREATION_OPTIONS: {type: string}
+  DECIMAL_PLACES: {type: number, required: true, default: 2}
+  INPUT: {type: raster, required: true}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  ROUNDING_DIRECTION: {type: enum, required: true, default: 1, values: [0, 1, 2], note: '0 Round up, 1 Round to nearest, 2
+      Round down'}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,7 @@
+id: shapely-union-all
+implements: dissolve
+crosswalk:
+  layer: geometries
+  by: { note: Merges everything into one geometry; group the geometries first to dissolve by field. }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

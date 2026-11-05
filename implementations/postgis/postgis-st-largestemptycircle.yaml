@@ -1,0 +1,18 @@
+id: postgis-st-largestemptycircle
+kind: implementation
+name: st_largestemptycircle
+software: postgis
+call: {interface: sql, name: st_largestemptycircle}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geom: {type: geometry}
+  tolerance: {type: double precision, default: '0.0'}
+  boundary: {type: geometry, default: '''0101000000000000000000F87F000000000000F87F''::geometry'}
+signatures:
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: tolerance, type: double precision, default: '0.0'}
+  - {name: boundary, type: geometry, default: '''0101000000000000000000F87F000000000000F87F''::geometry'}
+  returns: record
+status: active
+review: {state: harvested, source: postgis}

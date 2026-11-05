@@ -1,0 +1,13 @@
+id: gdal-vector-buffer
+implements: buffer
+crosswalk:
+  layer: input
+  output: output
+  distance: distance
+  unit: { fixed: crs-units, note: Distance is in the layer's CRS units; convert it first. }
+  dissolve: { fixed: false, note: No dissolve; union the output afterwards. }
+  segments: quadrant-segments
+differences:
+  - Distance is in the layer's CRS units, so data in a geographic CRS is buffered in degrees.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

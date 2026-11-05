@@ -1,0 +1,16 @@
+id: postgis-raster-st-bandnodatavalue
+kind: implementation
+name: st_bandnodatavalue
+software: postgis-raster
+call: {interface: sql, name: st_bandnodatavalue}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  band: {type: integer, default: '1'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: band, type: integer, default: '1'}
+  returns: double precision
+status: active
+review: {state: harvested, source: postgis}

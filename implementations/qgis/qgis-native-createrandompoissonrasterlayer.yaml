@@ -1,0 +1,17 @@
+id: qgis-native-createrandompoissonrasterlayer
+kind: implementation
+name: native:createrandompoissonrasterlayer
+software: qgis
+call: {interface: qgis-process, name: 'native:createrandompoissonrasterlayer'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CREATION_OPTIONS: {type: string}
+  EXTENT: {type: extent, required: true}
+  MEAN: {type: number, required: true, default: 1.0}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  OUTPUT_TYPE: {type: enum, required: true, default: 0, values: [0, 1, 2, 3, 4, 5], note: '0 Integer16, 1 Unsigned Integer16,
+      2 Integer32, 3 Unsigned Integer32, 4 Float32, 5 Float64'}
+  PIXEL_SIZE: {type: number, required: true, default: 1}
+  TARGET_CRS: {type: crs, required: true, default: ProjectCrs}
+status: active
+review: {state: harvested, source: qgis}

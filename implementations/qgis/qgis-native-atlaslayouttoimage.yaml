@@ -1,0 +1,24 @@
+id: qgis-native-atlaslayouttoimage
+kind: implementation
+name: native:atlaslayouttoimage
+software: qgis
+call: {interface: qgis-process, name: 'native:atlaslayouttoimage'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ANTIALIAS: {type: boolean, required: true, default: true}
+  COVERAGE_LAYER: {type: vector}
+  DPI: {type: number}
+  EXTENSION: {type: enum, required: true, default: 0, values: [0, 1, 10, 11, 12, 13, 14, 15, 16, 2, 3, 4, 5, 6, 7, 8, 9],
+    note: '0 PNG, 1 BMP, 10 PPM, 11 TIF, 12 TIFF, 13 WBMP, 14 WEBP, 15 XBM, 16 XPM, 2 CUR, 3 ICNS, 4 ICO, 5 JFIF, 6 JPEG,
+      7 JPG, 8 PBM, 9 PGM'}
+  FILENAME_EXPRESSION: {type: expression, required: true, default: '''output_''||@atlas_featurenumber'}
+  FILTER_EXPRESSION: {type: expression}
+  FOLDER: {type: file, required: true}
+  GEOREFERENCE: {type: boolean, required: true, default: true}
+  INCLUDE_METADATA: {type: boolean, required: true, default: true}
+  LAYERS: {type: multilayer}
+  LAYOUT: {type: layout, required: true}
+  SORTBY_EXPRESSION: {type: expression}
+  SORTBY_REVERSE: {type: boolean, required: true, default: false}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,12 @@
+id: qgis-native-hillshade
+implements: hillshade
+crosswalk:
+  raster: INPUT
+  output: OUTPUT
+  azimuth: AZIMUTH
+  altitude: V_ANGLE
+  z_unit: { fixed: crs-units, note: "Elevation is taken in the CRS's horizontal units; otherwise set Z_FACTOR." }
+differences:
+  - Defaults to azimuth 300 and altitude 40 (Columbus and GDAL use 315 and 45).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

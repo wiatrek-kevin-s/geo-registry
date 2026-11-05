@@ -1,0 +1,16 @@
+id: qgis-native-shortestline
+kind: implementation
+name: native:shortestline
+software: qgis
+call: {interface: qgis-process, name: 'native:shortestline'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  DESTINATION: {type: source, required: true}
+  DISTANCE: {type: distance}
+  METHOD: {type: enum, required: true, default: 0, values: [0, 1], note: '0 Distance to Nearest Point on feature, 1 Distance
+      to Feature Centroid'}
+  NEIGHBORS: {type: number, required: true, default: 1}
+  OUTPUT: {type: sink, required: true, note: output}
+  SOURCE: {type: source, required: true}
+status: active
+review: {state: harvested, source: qgis}

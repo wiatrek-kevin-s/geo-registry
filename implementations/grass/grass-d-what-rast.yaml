@@ -1,0 +1,10 @@
+id: grass-d-what-rast
+kind: implementation
+name: d.what.rast
+software: grass
+call: {interface: cli, name: d.what.rast}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: cell name; multiple values}
+status: active
+review: {state: harvested, source: grass}

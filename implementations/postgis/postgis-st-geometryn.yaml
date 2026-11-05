@@ -1,0 +1,14 @@
+id: postgis-st-geometryn
+kind: implementation
+name: st_geometryn
+software: postgis
+call: {interface: sql, name: st_geometryn}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  - {type: integer}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

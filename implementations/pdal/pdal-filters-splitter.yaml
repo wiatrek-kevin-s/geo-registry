@@ -1,0 +1,16 @@
+id: pdal-filters-splitter
+kind: implementation
+name: filters.splitter
+software: pdal
+call: {interface: pdal-pipeline, name: filters.splitter}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  length: {type: option, default: '1000'}
+  origin_x: {type: option, default: NaN}
+  origin_y: {type: option, default: NaN}
+  buffer: {type: option, default: '0'}
+docs: https://pdal.org/en/master/stages/filters.splitter.html
+status: active
+review: {state: harvested, source: pdal}

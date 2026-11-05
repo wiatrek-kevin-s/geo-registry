@@ -1,0 +1,14 @@
+id: whiteboxtools-construct-vector-t-i-n
+kind: implementation
+name: ConstructVectorTIN
+software: whiteboxtools
+call: {interface: cli, name: ConstructVectorTIN}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Vector:Point', required: true}
+  field: {type: VectorAttributeField}
+  use_z: {type: Boolean, default: 'false'}
+  output: {type: 'NewFile:Vector:Polygon', required: true, note: output}
+  max_triangle_edge_length: {type: Float}
+status: active
+review: {state: harvested, source: whitebox}

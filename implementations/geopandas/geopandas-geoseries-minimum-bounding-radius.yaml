@@ -1,0 +1,9 @@
+id: geopandas-geoseries-minimum-bounding-radius
+kind: implementation
+name: GeoSeries.minimum_bounding_radius
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.minimum_bounding_radius}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-libs}

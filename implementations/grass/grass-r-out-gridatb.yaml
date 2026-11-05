@@ -1,0 +1,12 @@
+id: grass-r-out-gridatb
+kind: implementation
+name: r.out.gridatb
+software: grass
+call: {interface: cli, name: r.out.gridatb}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output file}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

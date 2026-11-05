@@ -1,0 +1,11 @@
+id: grass-g-gui-timeline
+kind: implementation
+name: g.gui.timeline
+software: grass
+call: {interface: cli, name: g.gui.timeline}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  inputs: {type: string, note: stds name; multiple values}
+  flag_3: {type: boolean, note: flag -3}
+status: active
+review: {state: harvested, source: grass}

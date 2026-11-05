@@ -1,0 +1,19 @@
+id: grass-v-net-components
+kind: implementation
+name: v.net.components
+software: grass
+call: {interface: cli, name: v.net.components}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  arc_layer: {type: string, default: '1', note: layer name}
+  node_layer: {type: string, default: '2', note: layer name}
+  arc_column: {type: string, note: dbcolumn name}
+  arc_backward_column: {type: string, note: dbcolumn name}
+  node_column: {type: string}
+  output: {type: string, required: true, note: output vector}
+  method: {type: string, required: true, values: [weak, strong]}
+  flag_a: {type: boolean, note: flag -a}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

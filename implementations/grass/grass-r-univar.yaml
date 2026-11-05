@@ -1,0 +1,21 @@
+id: grass-r-univar
+kind: implementation
+name: r.univar
+software: grass
+call: {interface: cli, name: r.univar}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: cell name; multiple values}
+  zones: {type: string, note: cell name}
+  output: {type: string, note: output file}
+  percentile: {type: float, default: '90', values: [0-100], note: multiple values}
+  nprocs: {type: integer, default: 0}
+  separator: {type: string, note: separator name}
+  format: {type: string, required: true, default: plain, values: [plain, shell, csv, json]}
+  flag_g: {type: boolean, note: flag -g}
+  flag_e: {type: boolean, note: flag -e}
+  flag_t: {type: boolean, note: flag -t}
+  flag_r: {type: boolean, note: flag -r}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,21 @@
+id: grass-v-proj
+kind: implementation
+name: v.proj
+software: grass
+call: {interface: cli, name: v.proj}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  project: {type: string, required: true, note: location name}
+  mapset: {type: string, note: mapset name}
+  input: {type: string, note: vector name}
+  dbase: {type: string, note: dbase name}
+  smax: {type: float, default: 10000.0}
+  output: {type: string, note: output vector}
+  pipeline: {type: string}
+  flag_l: {type: boolean, note: flag -l}
+  flag_z: {type: boolean, note: flag -z}
+  flag_w: {type: boolean, note: flag -w}
+  flag_b: {type: boolean, note: flag -b}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,14 @@
+id: grass-db-dropcolumn
+kind: implementation
+name: db.dropcolumn
+software: grass
+call: {interface: cli, name: db.dropcolumn}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  table: {type: string, required: true, note: dbtable name}
+  column: {type: string, required: true, note: dbcolumn name}
+  database: {type: string, note: dbname name}
+  driver: {type: string, values: [dbf, odbc, ogr, sqlite, pg], note: dbdriver name}
+  flag_f: {type: boolean, note: flag -f}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,24 @@
+id: gdal-vector-info
+kind: implementation
+name: gdal vector info
+software: gdal
+call: {interface: cli, name: gdal vector info}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  output-format: {type: string, values: [json, text]}
+  open-option: {type: string_list}
+  input-format: {type: string_list}
+  input: {type: dataset_list, required: true, note: vector dataset}
+  input-layer: {type: string_list, note: exclusive group layer-sql}
+  features: {type: boolean, note: exclusive group summary-features}
+  summary: {type: boolean, note: exclusive group summary-features}
+  limit: {type: integer, note: at least 0}
+  sql: {type: string, note: exclusive group layer-sql}
+  where: {type: string}
+  fid: {type: integer, note: exclusive group layer-sql}
+  dialect: {type: string}
+  crs-format: {type: string, default: AUTO, values: [AUTO, WKT2, PROJJSON]}
+  output-string: {type: string, note: output}
+docs: https://gdal.org/programs/gdal_vector_info.html
+status: active
+review: {state: harvested, source: gdal}

@@ -1,0 +1,12 @@
+id: qgis-qgis-polarplot
+kind: implementation
+name: qgis:polarplot
+software: qgis
+call: {interface: qgis-process, name: 'qgis:polarplot'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: fileDestination, required: true, note: output}
+  VALUE_FIELD: {type: field, required: true}
+status: active
+review: {state: harvested, source: qgis}

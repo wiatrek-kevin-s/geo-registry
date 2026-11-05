@@ -1,0 +1,16 @@
+id: postgis-raster-st-fromgdalraster
+kind: implementation
+name: st_fromgdalraster
+software: postgis-raster
+call: {interface: sql, name: st_fromgdalraster}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  gdaldata: {type: bytea}
+  srid: {type: integer, default: 'NULL::integer'}
+signatures:
+- arguments:
+  - {name: gdaldata, type: bytea}
+  - {name: srid, type: integer, default: 'NULL::integer'}
+  returns: raster
+status: active
+review: {state: harvested, source: postgis}

@@ -1,0 +1,16 @@
+id: whiteboxtools-vector-points-to-raster
+kind: implementation
+name: VectorPointsToRaster
+software: whiteboxtools
+call: {interface: cli, name: VectorPointsToRaster}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Vector:Point', required: true}
+  field: {type: VectorAttributeField, default: FID}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  assign: {type: OptionList, default: last, values: [first, last, min, max, sum, number]}
+  nodata: {type: Boolean, default: 'true'}
+  cell_size: {type: Float}
+  base: {type: 'ExistingFile:Raster'}
+status: active
+review: {state: harvested, source: whitebox}

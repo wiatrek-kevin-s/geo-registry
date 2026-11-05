@@ -1,0 +1,12 @@
+id: whiteboxtools-gamma-correction
+kind: implementation
+name: GammaCorrection
+software: whiteboxtools
+call: {interface: cli, name: GammaCorrection}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  gamma: {type: Float, default: '0.5'}
+status: active
+review: {state: harvested, source: whitebox}

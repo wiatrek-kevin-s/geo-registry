@@ -1,0 +1,28 @@
+id: grass-r3-in-bin
+kind: implementation
+name: r3.in.bin
+software: grass
+call: {interface: cli, name: r3.in.bin}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: bin name}
+  output: {type: string, required: true, note: output grid3}
+  bytes: {type: integer, required: true, values: ['1', '2', '4', '8']}
+  order: {type: string, default: native, values: [big, little, native, swap]}
+  north: {type: float, required: true}
+  south: {type: float, required: true}
+  east: {type: float, required: true}
+  west: {type: float, required: true}
+  bottom: {type: float, required: true}
+  top: {type: float, required: true}
+  rows: {type: integer, required: true}
+  cols: {type: integer, required: true}
+  depths: {type: integer, required: true}
+  'null': {type: float}
+  flag_r: {type: boolean, note: flag -r}
+  flag_d: {type: boolean, note: flag -d}
+  flag_i: {type: boolean, note: flag -i}
+  flag_s: {type: boolean, note: flag -s}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,22 @@
+id: gdal-raster-update
+kind: implementation
+name: gdal raster update
+software: gdal
+call: {interface: cli, name: gdal raster update}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  input-format: {type: string_list}
+  open-option: {type: string_list}
+  input: {type: dataset_list, required: true, note: raster dataset}
+  geometry: {type: string, note: exclusive group bbox-geometry-like}
+  geometry-crs: {type: string}
+  resampling: {type: string, default: nearest, values: [nearest, bilinear, cubic, cubicspline, lanczos, average, rms, mode,
+      min, max, med, q1, q3, sum]}
+  warp-option: {type: string_list}
+  transform-option: {type: string_list}
+  error-threshold: {type: real, note: at least 0.0}
+  no-update-overviews: {type: boolean}
+  output: {type: dataset, required: true, note: input and output; raster dataset}
+docs: https://gdal.org/programs/gdal_raster_update.html
+status: active
+review: {state: harvested, source: gdal}

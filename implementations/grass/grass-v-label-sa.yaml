@@ -1,0 +1,29 @@
+id: grass-v-label-sa
+kind: implementation
+name: v.label.sa
+software: grass
+call: {interface: cli, name: v.label.sa}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: vector name}
+  type: {type: string, default: 'point,line,area', values: [point, line, area], note: multiple values}
+  layer: {type: string, default: '1', note: layer name}
+  column: {type: string, required: true}
+  labels: {type: string, required: true}
+  font: {type: string, required: true}
+  size: {type: float, default: 100.0}
+  isize: {type: float, default: 10.0}
+  charset: {type: string, default: UTF-8}
+  color: {type: string, default: black, values: [aqua, black, blue, brown, cyan, gray, green, grey, indigo, magenta, orange,
+      purple, red, violet, white, yellow]}
+  hcolor: {type: string, default: none, values: [none, aqua, black, blue, brown, cyan, gray, green, grey, indigo, magenta,
+      orange, purple, red, violet, white, yellow]}
+  hwidth: {type: float, default: 0.0}
+  background: {type: string, default: none, values: [none, aqua, black, blue, brown, cyan, gray, green, grey, indigo, magenta,
+      orange, purple, red, violet, white, yellow]}
+  opaque: {type: string, default: 'yes', values: ['yes', 'no']}
+  border: {type: string, default: none, values: [none, aqua, black, blue, brown, cyan, gray, green, grey, indigo, magenta,
+      orange, purple, red, violet, white, yellow]}
+  width: {type: float, default: 0.0}
+status: active
+review: {state: harvested, source: grass}

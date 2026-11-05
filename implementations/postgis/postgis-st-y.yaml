@@ -1,0 +1,13 @@
+id: postgis-st-y
+kind: implementation
+name: st_y
+software: postgis
+call: {interface: sql, name: st_y}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  returns: double precision
+status: active
+review: {state: harvested, source: postgis}

@@ -1,0 +1,20 @@
+id: whiteboxtools-embankment-mapping
+kind: implementation
+name: EmbankmentMapping
+software: whiteboxtools
+call: {interface: cli, name: EmbankmentMapping}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  road_vec: {type: 'ExistingFile:Vector:Line', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  search_dist: {type: Float, required: true, default: '2.5'}
+  min_road_width: {type: Float, required: true, default: '6.0'}
+  typical_width: {type: Float, required: true, default: '30.0'}
+  max_height: {type: Float, required: true, default: '2.0'}
+  max_width: {type: Float, required: true, default: '60.0'}
+  max_increment: {type: Float, required: true, default: '0.05'}
+  spillout_slope: {type: Float, required: true, default: '4.0'}
+  remove_embankments: {type: Boolean, default: 'false'}
+status: active
+review: {state: harvested, source: whitebox}

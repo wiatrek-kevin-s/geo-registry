@@ -1,0 +1,14 @@
+id: whiteboxtools-csv-points-to-vector
+kind: implementation
+name: CsvPointsToVector
+software: whiteboxtools
+call: {interface: cli, name: CsvPointsToVector}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Csv', required: true}
+  output: {type: 'NewFile:Vector:Any', required: true, note: output}
+  xfield: {type: Integer, default: '0'}
+  yfield: {type: Integer, default: '1'}
+  epsg: {type: Integer}
+status: active
+review: {state: harvested, source: whitebox}

@@ -1,0 +1,13 @@
+id: grass-t-merge
+kind: implementation
+name: t.merge
+software: grass
+call: {interface: cli, name: t.merge}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  inputs: {type: string, required: true, note: stds name; multiple values}
+  output: {type: string, required: true, note: output stds}
+  type: {type: string, default: strds, values: [strds, stvds, str3ds]}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,11 @@
+id: qgis-native-spatialiteexecutesqlregistered
+kind: implementation
+name: native:spatialiteexecutesqlregistered
+software: qgis
+call: {interface: qgis-process, name: 'native:spatialiteexecutesqlregistered'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  DATABASE: {type: providerconnection, required: true}
+  SQL: {type: string, required: true}
+status: active
+review: {state: harvested, source: qgis}

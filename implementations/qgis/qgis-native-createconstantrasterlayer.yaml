@@ -1,0 +1,17 @@
+id: qgis-native-createconstantrasterlayer
+kind: implementation
+name: native:createconstantrasterlayer
+software: qgis
+call: {interface: qgis-process, name: 'native:createconstantrasterlayer'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CREATION_OPTIONS: {type: string}
+  EXTENT: {type: extent, required: true}
+  NUMBER: {type: number, required: true, default: 1}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  OUTPUT_TYPE: {type: enum, required: true, default: 5, values: [0, 1, 2, 3, 4, 5, 6], note: '0 Byte, 1 Integer16, 2 Unsigned
+      Integer16, 3 Integer32, 4 Unsigned Integer32, 5 Float32, 6 Float64'}
+  PIXEL_SIZE: {type: number, required: true, default: 1}
+  TARGET_CRS: {type: crs, required: true, default: ProjectCrs}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,22 @@
+id: postgis-raster-st-bandmetadata
+kind: implementation
+name: st_bandmetadata
+software: postgis-raster
+call: {interface: sql, name: st_bandmetadata}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  band: {type: 'integer | integer[]', default: '1'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: band, type: integer, default: '1'}
+  returns: TABLE(pixeltype text, nodatavalue double precision, isoutdb boolean, path text, outdbbandnum integer, filesize
+    bigint, filetimestamp bigint)
+- arguments:
+  - {name: rast, type: raster}
+  - {name: band, type: 'integer[]'}
+  returns: TABLE(bandnum integer, pixeltype text, nodatavalue double precision, isoutdb boolean, path text, outdbbandnum integer,
+    filesize bigint, filetimestamp bigint)
+status: active
+review: {state: harvested, source: postgis}

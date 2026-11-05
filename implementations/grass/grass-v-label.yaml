@@ -1,0 +1,33 @@
+id: grass-v-label
+kind: implementation
+name: v.label
+software: grass
+call: {interface: cli, name: v.label}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  labels: {type: string}
+  map: {type: string, required: true, note: vector name}
+  column: {type: string, required: true, note: dbcolumn name}
+  type: {type: string, default: 'point,line,boundary,centroid', values: [point, line, boundary, centroid], note: multiple
+      values}
+  layer: {type: string, default: '1', note: layer name}
+  where: {type: string, note: sql_query name}
+  xoffset: {type: float, default: 0.0}
+  yoffset: {type: float, default: 0.0}
+  reference: {type: string, default: center, values: [center, left, right, upper, lower], note: multiple values}
+  font: {type: string, default: standard}
+  size: {type: float, default: 100.0}
+  space: {type: float}
+  fontsize: {type: integer, values: [1-1000]}
+  color: {type: string, default: black, note: color name}
+  rotation: {type: float, default: 0.0, values: [0-360]}
+  width: {type: float, default: 1.0, values: [0-25]}
+  highlight_color: {type: string, default: none, note: color_none name}
+  highlight_width: {type: float, default: 0.0}
+  bgcolor: {type: string, default: none, note: color_none name}
+  border: {type: string, default: none, note: color_none name}
+  opaque: {type: string, default: 'yes', values: ['yes', 'no']}
+  flag_a: {type: boolean, note: flag -a}
+  flag_c: {type: boolean, note: flag -c}
+status: active
+review: {state: harvested, source: grass}

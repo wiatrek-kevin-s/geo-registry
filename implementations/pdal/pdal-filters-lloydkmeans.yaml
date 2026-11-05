@@ -1,0 +1,15 @@
+id: pdal-filters-lloydkmeans
+kind: implementation
+name: filters.lloydkmeans
+software: pdal
+call: {interface: pdal-pipeline, name: filters.lloydkmeans}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  k: {type: option, default: '10'}
+  dimensions: {type: option, default: 'X, Y, Z'}
+  maxiters: {type: option, default: '10'}
+docs: https://pdal.org/en/master/stages/filters.lloydkmeans.html
+status: active
+review: {state: harvested, source: pdal}

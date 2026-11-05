@@ -1,0 +1,30 @@
+id: gdal-raster-info
+kind: implementation
+name: gdal raster info
+software: gdal
+call: {interface: cli, name: gdal raster info}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  input-format: {type: string_list}
+  open-option: {type: string_list}
+  input: {type: dataset_list, required: true, note: raster dataset}
+  output-format: {type: string, values: [json, text]}
+  min-max: {type: boolean}
+  stats: {type: boolean, note: exclusive group stats}
+  approx-stats: {type: boolean, note: exclusive group stats}
+  hist: {type: boolean}
+  no-gcp: {type: boolean}
+  no-md: {type: boolean}
+  no-ct: {type: boolean}
+  no-fl: {type: boolean}
+  checksum: {type: boolean}
+  list-mdd: {type: boolean}
+  metadata-domain: {type: string}
+  no-nodata: {type: boolean}
+  no-mask: {type: boolean}
+  subdataset: {type: integer, note: at least 1}
+  crs-format: {type: string, default: AUTO, values: [AUTO, WKT2, PROJJSON]}
+  output-string: {type: string, note: output}
+docs: https://gdal.org/programs/gdal_raster_info.html
+status: active
+review: {state: harvested, source: gdal}

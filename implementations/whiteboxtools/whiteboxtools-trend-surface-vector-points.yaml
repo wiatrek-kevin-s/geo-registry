@@ -1,0 +1,14 @@
+id: whiteboxtools-trend-surface-vector-points
+kind: implementation
+name: TrendSurfaceVectorPoints
+software: whiteboxtools
+call: {interface: cli, name: TrendSurfaceVectorPoints}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Vector:Point', required: true}
+  field: {type: VectorAttributeField, required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  order: {type: Integer, default: '1'}
+  cell_size: {type: Float, required: true}
+status: active
+review: {state: harvested, source: whitebox}

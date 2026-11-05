@@ -1,0 +1,35 @@
+id: grass-r-sim-sediment
+kind: implementation
+name: r.sim.sediment
+software: grass
+call: {interface: cli, name: r.sim.sediment}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  elevation: {type: string, required: true, note: cell name}
+  water_depth: {type: string, required: true, note: cell name}
+  dx: {type: string, note: cell name}
+  dy: {type: string, note: cell name}
+  detachment_coeff: {type: string, required: true, note: cell name}
+  transport_coeff: {type: string, required: true, note: cell name}
+  shear_stress: {type: string, required: true, note: cell name}
+  man: {type: string, note: cell name}
+  man_value: {type: float, default: 0.1}
+  observation: {type: string, note: vector name}
+  transport_capacity: {type: string, note: output cell}
+  tlimit_erosion_deposition: {type: string, note: output cell}
+  sediment_concentration: {type: string, note: output cell}
+  sediment_flux: {type: string, note: output cell}
+  erosion_deposition: {type: string, note: output cell}
+  logfile: {type: string, note: output file}
+  walkers_output: {type: string, note: output vector}
+  nwalkers: {type: integer}
+  niterations: {type: integer, default: 10}
+  mintimestep: {type: float, default: 0.0}
+  output_step: {type: integer, default: 2}
+  diffusion_coeff: {type: float, default: 0.8}
+  random_seed: {type: integer}
+  nprocs: {type: integer, default: 1}
+  flag_s: {type: boolean, note: flag -s}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

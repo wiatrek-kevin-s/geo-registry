@@ -1,0 +1,13 @@
+id: postgis-st-startpoint
+kind: implementation
+name: st_startpoint
+software: postgis
+call: {interface: sql, name: st_startpoint}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

@@ -1,0 +1,19 @@
+id: whiteboxtools-flow-accumulation-full-workflow
+kind: implementation
+name: FlowAccumulationFullWorkflow
+software: whiteboxtools
+call: {interface: cli, name: FlowAccumulationFullWorkflow}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  out_dem: {type: 'NewFile:Raster', required: true, note: output}
+  out_pntr: {type: 'NewFile:Raster', required: true, note: output}
+  out_accum: {type: 'NewFile:Raster', required: true, note: output}
+  out_type: {type: OptionList, default: Specific Contributing Area, values: [Cells, Specific Contributing Area, Catchment
+        Area]}
+  correct_pntr: {type: Boolean}
+  log: {type: Boolean}
+  clip: {type: Boolean}
+  esri_pntr: {type: Boolean, default: 'false'}
+status: active
+review: {state: harvested, source: whitebox}

@@ -1,0 +1,124 @@
+id: postgis-raster-st-mapalgebra
+kind: implementation
+name: st_mapalgebra
+software: postgis-raster
+call: {interface: sql, name: st_mapalgebra}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  nband: {type: 'integer | integer[]'}
+  callbackfunc: {type: regprocedure}
+  mask: {type: 'double precision[]'}
+  weighted: {type: boolean}
+  pixeltype: {type: text, default: 'NULL::text'}
+  extenttype: {type: text}
+  customextent: {type: raster, default: 'NULL::raster'}
+  userargs: {type: 'text[]', default: 'NULL::text[]'}
+  distancex: {type: integer, default: '0'}
+  distancey: {type: integer, default: '0'}
+  expression: {type: text}
+  nodataval: {type: double precision, default: 'NULL::double precision'}
+  rast1: {type: raster}
+  band1: {type: integer}
+  rast2: {type: raster}
+  band2: {type: integer}
+  nodata1expr: {type: text, default: 'NULL::text'}
+  nodata2expr: {type: text, default: 'NULL::text'}
+  nodatanodataval: {type: double precision, default: 'NULL::double precision'}
+  nband1: {type: integer}
+  nband2: {type: integer}
+  rastbandargset: {type: 'rastbandarg[]'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: callbackfunc, type: regprocedure}
+  - {name: mask, type: 'double precision[]'}
+  - {name: weighted, type: boolean}
+  - {name: pixeltype, type: text, default: 'NULL::text'}
+  - {name: extenttype, type: text, default: '''INTERSECTION''::text'}
+  - {name: customextent, type: raster, default: 'NULL::raster'}
+  - {name: userargs, type: 'text[]', default: 'NULL::text[]'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: callbackfunc, type: regprocedure}
+  - {name: pixeltype, type: text, default: 'NULL::text'}
+  - {name: extenttype, type: text, default: '''FIRST''::text'}
+  - {name: customextent, type: raster, default: 'NULL::raster'}
+  - {name: distancex, type: integer, default: '0'}
+  - {name: distancey, type: integer, default: '0'}
+  - {name: userargs, type: 'text[]', default: 'NULL::text[]'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: pixeltype, type: text}
+  - {name: expression, type: text}
+  - {name: nodataval, type: double precision, default: 'NULL::double precision'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: 'integer[]'}
+  - {name: callbackfunc, type: regprocedure}
+  - {name: pixeltype, type: text, default: 'NULL::text'}
+  - {name: extenttype, type: text, default: '''FIRST''::text'}
+  - {name: customextent, type: raster, default: 'NULL::raster'}
+  - {name: distancex, type: integer, default: '0'}
+  - {name: distancey, type: integer, default: '0'}
+  - {name: userargs, type: 'text[]', default: 'NULL::text[]'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: pixeltype, type: text}
+  - {name: expression, type: text}
+  - {name: nodataval, type: double precision, default: 'NULL::double precision'}
+  returns: raster
+- arguments:
+  - {name: rast1, type: raster}
+  - {name: band1, type: integer}
+  - {name: rast2, type: raster}
+  - {name: band2, type: integer}
+  - {name: expression, type: text}
+  - {name: pixeltype, type: text, default: 'NULL::text'}
+  - {name: extenttype, type: text, default: '''INTERSECTION''::text'}
+  - {name: nodata1expr, type: text, default: 'NULL::text'}
+  - {name: nodata2expr, type: text, default: 'NULL::text'}
+  - {name: nodatanodataval, type: double precision, default: 'NULL::double precision'}
+  returns: raster
+- arguments:
+  - {name: rast1, type: raster}
+  - {name: nband1, type: integer}
+  - {name: rast2, type: raster}
+  - {name: nband2, type: integer}
+  - {name: callbackfunc, type: regprocedure}
+  - {name: pixeltype, type: text, default: 'NULL::text'}
+  - {name: extenttype, type: text, default: '''INTERSECTION''::text'}
+  - {name: customextent, type: raster, default: 'NULL::raster'}
+  - {name: distancex, type: integer, default: '0'}
+  - {name: distancey, type: integer, default: '0'}
+  - {name: userargs, type: 'text[]', default: 'NULL::text[]'}
+  returns: raster
+- arguments:
+  - {name: rast1, type: raster}
+  - {name: rast2, type: raster}
+  - {name: expression, type: text}
+  - {name: pixeltype, type: text, default: 'NULL::text'}
+  - {name: extenttype, type: text, default: '''INTERSECTION''::text'}
+  - {name: nodata1expr, type: text, default: 'NULL::text'}
+  - {name: nodata2expr, type: text, default: 'NULL::text'}
+  - {name: nodatanodataval, type: double precision, default: 'NULL::double precision'}
+  returns: raster
+- arguments:
+  - {name: rastbandargset, type: 'rastbandarg[]'}
+  - {name: callbackfunc, type: regprocedure}
+  - {name: pixeltype, type: text, default: 'NULL::text'}
+  - {name: extenttype, type: text, default: '''INTERSECTION''::text'}
+  - {name: customextent, type: raster, default: 'NULL::raster'}
+  - {name: distancex, type: integer, default: '0'}
+  - {name: distancey, type: integer, default: '0'}
+  - {name: userargs, type: 'text[]', default: 'NULL::text[]'}
+  returns: raster
+status: active
+review: {state: harvested, source: postgis}

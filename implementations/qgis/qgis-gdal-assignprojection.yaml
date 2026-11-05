@@ -1,0 +1,11 @@
+id: qgis-gdal-assignprojection
+kind: implementation
+name: gdal:assignprojection
+software: qgis
+call: {interface: qgis-process, name: 'gdal:assignprojection'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CRS: {type: crs, required: true}
+  INPUT: {type: raster, required: true}
+status: active
+review: {state: harvested, source: qgis}

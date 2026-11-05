@@ -1,0 +1,11 @@
+id: shapely-to-geojson
+kind: implementation
+name: shapely.to_geojson
+software: shapely
+call: {interface: python, name: shapely.to_geojson}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geometry: {type: any, required: true}
+  indent: {type: any}
+status: active
+review: {state: harvested, source: python-libs}

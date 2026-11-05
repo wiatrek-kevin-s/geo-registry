@@ -1,0 +1,16 @@
+id: grass-v-what-strds
+kind: implementation
+name: v.what.strds
+software: grass
+call: {interface: cli, name: v.what.strds}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  strds: {type: string, required: true, note: strds name; multiple values}
+  output: {type: string, note: output vector}
+  where: {type: string, note: sql_query name}
+  t_where: {type: string}
+  flag_u: {type: boolean, note: flag -u}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

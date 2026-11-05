@@ -1,0 +1,19 @@
+id: grass-v-out-vtk
+kind: implementation
+name: v.out.vtk
+software: grass
+call: {interface: cli, name: v.out.vtk}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '1', note: layer name}
+  output: {type: string, note: output file}
+  type: {type: string, default: 'point,kernel,centroid,line,boundary,area,face', values: [point, kernel, centroid, line, boundary,
+      area, face], note: multiple values}
+  precision: {type: integer}
+  zscale: {type: float, default: 1.0}
+  flag_c: {type: boolean, note: flag -c}
+  flag_n: {type: boolean, note: flag -n}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

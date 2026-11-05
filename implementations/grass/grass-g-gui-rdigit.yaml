@@ -1,0 +1,14 @@
+id: grass-g-gui-rdigit
+kind: implementation
+name: g.gui.rdigit
+software: grass
+call: {interface: cli, name: g.gui.rdigit}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  create: {type: string, note: output cell}
+  base: {type: string, note: cell name}
+  type: {type: string, default: CELL, values: [CELL, FCELL, DCELL]}
+  edit: {type: string, note: cell name}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,18 @@
+id: qgis-gdal-tileindex
+kind: implementation
+name: gdal:tileindex
+software: qgis
+call: {interface: qgis-process, name: 'gdal:tileindex'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ABSOLUTE_PATH: {type: boolean, required: true, default: false}
+  CRS_FIELD_NAME: {type: string}
+  CRS_FORMAT: {type: enum, required: true, default: 0, values: [0, 1, 2, 3], note: '0 Auto, 1 Well-known text (WKT), 2 EPSG,
+      3 Proj.4'}
+  LAYERS: {type: multilayer, required: true}
+  OUTPUT: {type: vectorDestination, required: true, note: output}
+  PATH_FIELD_NAME: {type: string, required: true, default: location}
+  PROJ_DIFFERENCE: {type: boolean, required: true, default: false}
+  TARGET_CRS: {type: crs}
+status: active
+review: {state: harvested, source: qgis}

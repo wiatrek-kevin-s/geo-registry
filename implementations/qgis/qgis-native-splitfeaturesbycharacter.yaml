@@ -1,0 +1,14 @@
+id: qgis-native-splitfeaturesbycharacter
+kind: implementation
+name: native:splitfeaturesbycharacter
+software: qgis
+call: {interface: qgis-process, name: 'native:splitfeaturesbycharacter'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CHAR: {type: string, required: true}
+  FIELD: {type: field, required: true}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  REGEX: {type: boolean, required: true}
+status: active
+review: {state: harvested, source: qgis}

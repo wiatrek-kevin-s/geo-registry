@@ -1,0 +1,16 @@
+id: qgis-native-pointstopath
+kind: implementation
+name: native:pointstopath
+software: qgis
+call: {interface: qgis-process, name: 'native:pointstopath'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CLOSE_PATH: {type: boolean, required: true, default: false}
+  GROUP_EXPRESSION: {type: expression}
+  INPUT: {type: source, required: true}
+  NATURAL_SORT: {type: boolean, required: true, default: false}
+  ORDER_EXPRESSION: {type: expression}
+  OUTPUT: {type: sink, required: true, note: output}
+  OUTPUT_TEXT_DIR: {type: folderDestination, note: output}
+status: active
+review: {state: harvested, source: qgis}

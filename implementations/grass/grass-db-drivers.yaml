@@ -1,0 +1,11 @@
+id: grass-db-drivers
+kind: implementation
+name: db.drivers
+software: grass
+call: {interface: cli, name: db.drivers}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  flag_f: {type: boolean, note: flag -f}
+  flag_p: {type: boolean, note: flag -p}
+status: active
+review: {state: harvested, source: grass}

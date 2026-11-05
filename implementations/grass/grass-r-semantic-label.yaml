@@ -1,0 +1,12 @@
+id: grass-r-semantic-label
+kind: implementation
+name: r.semantic.label
+software: grass
+call: {interface: cli, name: r.semantic.label}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: cell name; multiple values}
+  semantic_label: {type: string, note: multiple values}
+  operation: {type: string, required: true, default: add, values: [add, remove, print]}
+status: active
+review: {state: harvested, source: grass}

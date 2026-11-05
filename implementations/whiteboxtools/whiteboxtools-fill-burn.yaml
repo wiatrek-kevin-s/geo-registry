@@ -1,0 +1,12 @@
+id: whiteboxtools-fill-burn
+kind: implementation
+name: FillBurn
+software: whiteboxtools
+call: {interface: cli, name: FillBurn}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  streams: {type: 'ExistingFile:Vector:Line', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

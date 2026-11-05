@@ -1,0 +1,16 @@
+id: qgis-native-distancetonearesthub
+kind: implementation
+name: native:distancetonearesthub
+software: qgis
+call: {interface: qgis-process, name: 'native:distancetonearesthub'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  FIELD: {type: field, required: true}
+  HUBS: {type: source, required: true}
+  INPUT: {type: source, required: true}
+  OUTPUT_LINES: {type: sink, note: output}
+  OUTPUT_POINTS: {type: sink, note: output}
+  UNIT: {type: enum, required: true, default: 0, values: [0, 1, 2, 3, 4], note: '0 Meters, 1 Feet, 2 Miles, 3 Kilometers,
+      4 Layer Units'}
+status: active
+review: {state: harvested, source: qgis}

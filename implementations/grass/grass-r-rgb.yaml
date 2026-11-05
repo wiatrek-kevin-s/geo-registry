@@ -1,0 +1,14 @@
+id: grass-r-rgb
+kind: implementation
+name: r.rgb
+software: grass
+call: {interface: cli, name: r.rgb}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  red: {type: string, note: output cell}
+  green: {type: string, note: output cell}
+  blue: {type: string, note: output cell}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

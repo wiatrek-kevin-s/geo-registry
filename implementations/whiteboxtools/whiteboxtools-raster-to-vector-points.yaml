@@ -1,0 +1,11 @@
+id: whiteboxtools-raster-to-vector-points
+kind: implementation
+name: RasterToVectorPoints
+software: whiteboxtools
+call: {interface: cli, name: RasterToVectorPoints}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Vector:Point', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

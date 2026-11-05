@@ -1,0 +1,13 @@
+id: qgis-native-extractbyexpression
+kind: implementation
+name: native:extractbyexpression
+software: qgis
+call: {interface: qgis-process, name: 'native:extractbyexpression'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  EXPRESSION: {type: expression, required: true}
+  FAIL_OUTPUT: {type: sink, note: output}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

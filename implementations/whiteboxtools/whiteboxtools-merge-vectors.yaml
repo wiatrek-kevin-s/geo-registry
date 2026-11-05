@@ -1,0 +1,11 @@
+id: whiteboxtools-merge-vectors
+kind: implementation
+name: MergeVectors
+software: whiteboxtools
+call: {interface: cli, name: MergeVectors}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  inputs: {type: 'FileList:Vector:Any', required: true}
+  output: {type: 'NewFile:Vector:Any', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

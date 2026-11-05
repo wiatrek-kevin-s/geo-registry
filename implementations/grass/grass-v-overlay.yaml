@@ -1,0 +1,21 @@
+id: grass-v-overlay
+kind: implementation
+name: v.overlay
+software: grass
+call: {interface: cli, name: v.overlay}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  ainput: {type: string, required: true, note: vector name}
+  alayer: {type: string, default: '1', note: layer name}
+  atype: {type: string, default: auto, values: [line, area, auto], note: multiple values}
+  binput: {type: string, required: true, note: vector name}
+  blayer: {type: string, default: '1', note: layer name}
+  btype: {type: string, default: area, values: [area], note: multiple values}
+  operator: {type: string, required: true, values: [and, or, not, xor]}
+  output: {type: string, required: true, note: output vector}
+  olayer: {type: string, default: '1,0,0', note: layer name; multiple values}
+  snap: {type: float, default: 1.0e-08}
+  flag_t: {type: boolean, note: flag -t}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

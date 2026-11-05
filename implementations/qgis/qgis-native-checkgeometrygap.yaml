@@ -1,0 +1,18 @@
+id: qgis-native-checkgeometrygap
+kind: implementation
+name: native:checkgeometrygap
+software: qgis
+call: {interface: qgis-process, name: 'native:checkgeometrygap'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ALLOWED_GAPS_BUFFER: {type: distance}
+  ALLOWED_GAPS_LAYER: {type: vector}
+  ERRORS: {type: sink, note: output}
+  GAP_THRESHOLD: {type: number, required: true, default: 0}
+  INPUT: {type: source, required: true}
+  NEIGHBORS: {type: sink, required: true, note: output}
+  OUTPUT: {type: sink, required: true, note: output}
+  TOLERANCE: {type: number, required: true, default: 8}
+  UNIQUE_ID: {type: field, required: true}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,17 @@
+id: grass-i-colors-enhance
+kind: implementation
+name: i.colors.enhance
+software: grass
+call: {interface: cli, name: i.colors.enhance}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  red: {type: string, required: true, note: cell name}
+  green: {type: string, required: true, note: cell name}
+  blue: {type: string, required: true, note: cell name}
+  strength: {type: float, default: 98.0, values: [0-100]}
+  flag_f: {type: boolean, note: flag -f}
+  flag_p: {type: boolean, note: flag -p}
+  flag_r: {type: boolean, note: flag -r}
+  flag_s: {type: boolean, note: flag -s}
+status: active
+review: {state: harvested, source: grass}

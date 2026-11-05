@@ -1,0 +1,13 @@
+id: grass-g-filename
+kind: implementation
+name: g.filename
+software: grass
+call: {interface: cli, name: g.filename}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  element: {type: string, required: true}
+  file: {type: string, required: true}
+  mapset: {type: string}
+  flag_c: {type: boolean, note: flag -c}
+status: active
+review: {state: harvested, source: grass}

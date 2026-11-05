@@ -1,0 +1,13 @@
+id: geopandas-points-from-xy
+kind: implementation
+name: geopandas.points_from_xy
+software: geopandas
+call: {interface: python, name: geopandas.points_from_xy}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  x: {type: npt.ArrayLike, required: true}
+  y: {type: npt.ArrayLike, required: true}
+  z: {type: npt.ArrayLike}
+  crs: {type: Any | None}
+status: active
+review: {state: harvested, source: python-libs}

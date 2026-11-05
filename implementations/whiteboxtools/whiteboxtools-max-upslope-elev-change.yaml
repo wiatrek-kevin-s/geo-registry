@@ -1,0 +1,11 @@
+id: whiteboxtools-max-upslope-elev-change
+kind: implementation
+name: MaxUpslopeElevChange
+software: whiteboxtools
+call: {interface: cli, name: MaxUpslopeElevChange}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

@@ -1,0 +1,17 @@
+id: grass-r-reclass-area
+kind: implementation
+name: r.reclass.area
+software: grass
+call: {interface: cli, name: r.reclass.area}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  value: {type: float, required: true}
+  mode: {type: string, required: true, values: [lesser, greater]}
+  method: {type: string, default: reclass, values: [reclass, rmarea]}
+  flag_c: {type: boolean, note: flag -c}
+  flag_d: {type: boolean, note: flag -d}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

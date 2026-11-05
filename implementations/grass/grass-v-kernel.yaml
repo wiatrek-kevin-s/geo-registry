@@ -1,0 +1,25 @@
+id: grass-v-kernel
+kind: implementation
+name: v.kernel
+software: grass
+call: {interface: cli, name: v.kernel}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  net: {type: string, note: vector name}
+  output: {type: string, note: output cell}
+  net_output: {type: string, note: output vector}
+  radius: {type: float, required: true}
+  dsize: {type: float, default: 0.0}
+  segmax: {type: float, default: 100.0}
+  distmax: {type: float, default: 100.0}
+  multiplier: {type: float, default: 1.0}
+  node: {type: string, default: none, values: [none, split]}
+  kernel: {type: string, default: gaussian, values: [uniform, triangular, epanechnikov, quartic, triweight, gaussian, cosine]}
+  flag_o: {type: boolean, note: flag -o}
+  flag_q: {type: boolean, note: flag -q}
+  flag_n: {type: boolean, note: flag -n}
+  flag_m: {type: boolean, note: flag -m}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

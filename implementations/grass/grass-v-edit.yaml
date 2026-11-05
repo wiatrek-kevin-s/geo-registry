@@ -1,0 +1,35 @@
+id: grass-v-edit
+kind: implementation
+name: v.edit
+software: grass
+call: {interface: cli, name: v.edit}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '1', note: layer name}
+  type: {type: string, default: 'point,line,boundary,centroid', values: [point, line, boundary, centroid], note: multiple
+      values}
+  tool: {type: string, required: true, values: [create, add, delete, copy, move, flip, catadd, catdel, merge, break, snap,
+      connect, extend, extendstart, extendend, chtype, vertexadd, vertexdel, vertexmove, areadel, zbulk, select]}
+  input: {type: string, note: file name}
+  move: {type: float}
+  threshold: {type: float, default: '-1,0,0', note: multiple values}
+  ids: {type: string}
+  cats: {type: string, note: cats name}
+  coords: {type: float, note: multiple values}
+  bbox: {type: float}
+  polygon: {type: float, note: multiple values}
+  where: {type: string, note: sql_query name}
+  query: {type: string, values: [length, dangle]}
+  bgmap: {type: string, note: vector name; multiple values}
+  snap: {type: string, default: 'no', values: ['no', node, vertex]}
+  zbulk: {type: float}
+  flag_r: {type: boolean, note: flag -r}
+  flag_c: {type: boolean, note: flag -c}
+  flag_n: {type: boolean, note: flag -n}
+  flag_b: {type: boolean, note: flag -b}
+  flag_1: {type: boolean, note: flag -1}
+  flag_p: {type: boolean, note: flag -p}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

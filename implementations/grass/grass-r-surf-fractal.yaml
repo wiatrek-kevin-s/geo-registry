@@ -1,0 +1,14 @@
+id: grass-r-surf-fractal
+kind: implementation
+name: r.surf.fractal
+software: grass
+call: {interface: cli, name: r.surf.fractal}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  output: {type: string, required: true, note: output cell}
+  dimension: {type: float, default: 2.05}
+  number: {type: integer, default: 0}
+  seed: {type: integer}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

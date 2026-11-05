@@ -1,0 +1,19 @@
+id: grass-r-param-scale
+kind: implementation
+name: r.param.scale
+software: grass
+call: {interface: cli, name: r.param.scale}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  slope_tolerance: {type: float, default: 1.0}
+  curvature_tolerance: {type: float, default: 0.0001}
+  size: {type: integer, default: 3, values: [3-499]}
+  method: {type: string, default: elev, values: [elev, slope, aspect, profc, planc, longc, crosc, minic, maxic, feature]}
+  exponent: {type: float, default: 0.0}
+  zscale: {type: float, default: 1.0}
+  flag_c: {type: boolean, note: flag -c}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

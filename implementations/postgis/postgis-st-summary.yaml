@@ -1,0 +1,16 @@
+id: postgis-st-summary
+kind: implementation
+name: st_summary
+software: postgis
+call: {interface: sql, name: st_summary}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geography}
+  returns: text
+- arguments:
+  - {type: geometry}
+  returns: text
+status: active
+review: {state: harvested, source: postgis}

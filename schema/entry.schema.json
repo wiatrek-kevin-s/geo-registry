@@ -359,7 +359,7 @@
       }
     },
     "crosswalkItem": {
-      "description": "How a canonical parameter maps onto the engine: the engine parameter's name, or a mapping with value translation and the canonical values the engine cannot honour.",
+      "description": "How a canonical parameter maps onto the engine: the engine parameter's name (or #N, the Nth argument, for SQL functions whose arguments have no names), or an object: `param` with value translation and the canonical values the engine cannot honour; or `fixed` when the engine has no argument and always behaves one way; or only a `note` when it takes a conversion the caller must do.",
       "oneOf": [
         { "type": "string", "minLength": 1 },
         {
@@ -368,7 +368,16 @@
           "properties": {
             "param": { "type": "string", "minLength": 1 },
             "values": { "type": "object", "additionalProperties": { "$ref": "#/$defs/scalar" } },
-            "unsupported": { "type": "array", "items": { "$ref": "#/$defs/scalar" }, "uniqueItems": true }
+            "unsupported": { "type": "array", "items": { "$ref": "#/$defs/scalar" }, "uniqueItems": true },
+            "fixed": {
+              "description": "The engine has no argument for this: it always behaves as this canonical value. Any other value is unsupported. `crs-units` means a distance is taken in the layer's CRS units, so the caller converts it first.",
+              "$ref": "#/$defs/scalar"
+            },
+            "pass": {
+              "description": "For a field parameter: pass the field's name (the default) or its values.",
+              "enum": ["name", "values"]
+            },
+            "note": { "type": "string", "maxLength": 300 }
           }
         }
       ]
@@ -389,7 +398,7 @@
           "additionalProperties": false,
           "required": ["interface", "name"],
           "properties": {
-            "interface": { "enum": ["python", "cli", "qgis-process", "sql", "rest", "r", "js", "java", "dotnet", "other"] },
+            "interface": { "enum": ["python", "cli", "qgis-process", "pdal-pipeline", "sql", "rest", "r", "js", "java", "dotnet", "other"] },
             "name": { "$ref": "#/$defs/nonEmptyString" }
           }
         },
@@ -405,13 +414,44 @@
         },
         "parameters": {
           "type": "object",
-          "propertyNames": { "type": "string", "pattern": "^[A-Za-z_][A-Za-z0-9_.:-]*$" },
+          "propertyNames": { "type": "string", "pattern": "^\\S+$", "maxLength": 128 },
           "additionalProperties": { "$ref": "#/$defs/engineParam" }
+        },
+        "signatures": {
+          "description": "For SQL functions and other overloaded calls: each overload's arguments in order, and what it returns. `parameters` then lists the named arguments across all overloads.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["arguments"],
+            "properties": {
+              "arguments": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["type"],
+                  "properties": {
+                    "name": { "type": "string" },
+                    "type": { "$ref": "#/$defs/nonEmptyString" },
+                    "default": { "type": "string" }
+                  }
+                }
+              },
+              "returns": { "type": "string" }
+            }
+          }
         },
         "crosswalk": {
           "type": "object",
           "propertyNames": { "$ref": "#/$defs/paramName" },
           "additionalProperties": { "$ref": "#/$defs/crosswalkItem" }
+        },
+        "presets": {
+          "description": "Engine arguments set to these values when this implementation runs its operation, e.g. operation: intersection for GDAL's layer-algebra.",
+          "type": "object",
+          "propertyNames": { "type": "string", "pattern": "^\\S+$", "maxLength": 128 },
+          "additionalProperties": { "$ref": "#/$defs/scalar" }
         },
         "differences": {
           "type": "array",

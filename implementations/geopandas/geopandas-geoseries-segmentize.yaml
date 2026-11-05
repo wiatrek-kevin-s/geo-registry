@@ -1,0 +1,10 @@
+id: geopandas-geoseries-segmentize
+kind: implementation
+name: GeoSeries.segmentize
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.segmentize}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  max_segment_length: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-libs}

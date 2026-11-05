@@ -1,0 +1,12 @@
+id: whiteboxtools-lidar-tophat-transform
+kind: implementation
+name: LidarTophatTransform
+software: whiteboxtools
+call: {interface: cli, name: LidarTophatTransform}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar', required: true}
+  output: {type: 'NewFile:Lidar', required: true, note: output}
+  radius: {type: Float, required: true, default: '1.0'}
+status: active
+review: {state: harvested, source: whitebox}

@@ -1,0 +1,12 @@
+id: grass-i-band-library
+kind: implementation
+name: i.band.library
+software: grass
+call: {interface: cli, name: i.band.library}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  pattern: {type: string}
+  operation: {type: string, default: print, values: [print]}
+  flag_e: {type: boolean, note: flag -e}
+status: active
+review: {state: harvested, source: grass}

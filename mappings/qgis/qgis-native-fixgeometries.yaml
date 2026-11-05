@@ -1,0 +1,9 @@
+id: qgis-native-fixgeometries
+implements: make-valid
+crosswalk:
+  layer: INPUT
+  output: OUTPUT
+differences:
+  - Defaults to the structure method; GDAL, Shapely and PostGIS default to linework, which can give different shapes.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

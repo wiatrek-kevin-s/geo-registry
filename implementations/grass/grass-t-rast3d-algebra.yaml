@@ -1,0 +1,15 @@
+id: grass-t-rast3d-algebra
+kind: implementation
+name: t.rast3d.algebra
+software: grass
+call: {interface: cli, name: t.rast3d.algebra}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  expression: {type: string, required: true}
+  basename: {type: string, required: true}
+  nprocs: {type: integer, default: 1}
+  flag_s: {type: boolean, note: flag -s}
+  flag_n: {type: boolean, note: flag -n}
+  flag_g: {type: boolean, note: flag -g}
+status: active
+review: {state: harvested, source: grass}

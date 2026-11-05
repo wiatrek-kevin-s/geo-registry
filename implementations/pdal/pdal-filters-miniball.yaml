@@ -1,0 +1,14 @@
+id: pdal-filters-miniball
+kind: implementation
+name: filters.miniball
+software: pdal
+call: {interface: pdal-pipeline, name: filters.miniball}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  knn: {type: option, default: '8'}
+  threads: {type: option, default: '1'}
+docs: https://pdal.org/en/master/stages/filters.miniball.html
+status: active
+review: {state: harvested, source: pdal}

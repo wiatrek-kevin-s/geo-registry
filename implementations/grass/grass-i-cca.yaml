@@ -1,0 +1,14 @@
+id: grass-i-cca
+kind: implementation
+name: i.cca
+software: grass
+call: {interface: cli, name: i.cca}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  group: {type: string, required: true, note: group name}
+  subgroup: {type: string, required: true, note: subgroup name}
+  signature: {type: string, required: true, note: signatures/sig name}
+  output: {type: string, required: true, note: output cell}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

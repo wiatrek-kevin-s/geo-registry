@@ -1,0 +1,13 @@
+id: postgis-st-buffer
+implements: buffer
+crosswalk:
+  layer: geom
+  distance: radius
+  unit: { fixed: crs-units, note: "On geometry, CRS units; on geography, metres." }
+  dissolve: { fixed: false, note: Aggregate with ST_Union. }
+  segments: quadsegs
+differences:
+  - On a geometry column the distance is in CRS units (degrees for EPSG:4326); cast to geography for metres.
+  - Caps and joins go in the options text ('endcap=flat join=mitre').
+effects: { modifies_input: false, network: false }
+review: { state: draft }

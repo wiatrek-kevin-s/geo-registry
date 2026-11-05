@@ -1,0 +1,15 @@
+id: whiteboxtools-image-correlation-neighbourhood-analysis
+kind: implementation
+name: ImageCorrelationNeighbourhoodAnalysis
+software: whiteboxtools
+call: {interface: cli, name: ImageCorrelationNeighbourhoodAnalysis}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input1: {type: 'ExistingFile:Raster', required: true}
+  input2: {type: 'ExistingFile:Raster', required: true}
+  output1: {type: 'NewFile:Raster', required: true, note: output}
+  output2: {type: 'NewFile:Raster', required: true, note: output}
+  filter: {type: Integer, default: '11'}
+  stat: {type: OptionList, default: pearson, values: [pearson, kendall, spearman]}
+status: active
+review: {state: harvested, source: whitebox}

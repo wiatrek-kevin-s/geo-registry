@@ -1,0 +1,15 @@
+id: qgis-native-transect
+kind: implementation
+name: native:transect
+software: qgis
+call: {interface: qgis-process, name: 'native:transect'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ANGLE: {type: number, required: true, default: 90.0}
+  DIRECTION: {type: enum, default: 0, values: [0, 1], note: '0 Right to Left, 1 Left to Right'}
+  INPUT: {type: source, required: true}
+  LENGTH: {type: distance, required: true, default: 5.0}
+  OUTPUT: {type: sink, required: true, note: output}
+  SIDE: {type: enum, required: true, default: 2, values: [0, 1, 2], note: '0 Left, 1 Right, 2 Both'}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,12 @@
+id: whiteboxtools-mosaic
+kind: implementation
+name: Mosaic
+software: whiteboxtools
+call: {interface: cli, name: Mosaic}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  inputs: {type: 'FileList:Raster'}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  method: {type: OptionList, default: nn, values: [nn, bilinear, cc]}
+status: active
+review: {state: harvested, source: whitebox}

@@ -1,0 +1,13 @@
+id: pdal-filters-returns
+kind: implementation
+name: filters.returns
+software: pdal
+call: {interface: pdal-pipeline, name: filters.returns}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  groups: {type: option, default: last}
+docs: https://pdal.org/en/master/stages/filters.returns.html
+status: active
+review: {state: harvested, source: pdal}

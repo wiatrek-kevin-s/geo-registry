@@ -1,0 +1,16 @@
+id: grass-r-blend
+kind: implementation
+name: r.blend
+software: grass
+call: {interface: cli, name: r.blend}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  first: {type: string, required: true, note: cell name}
+  second: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  percent: {type: float, default: 50.0, values: [0-100]}
+  nprocs: {type: integer, default: 0}
+  flag_c: {type: boolean, note: flag -c}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

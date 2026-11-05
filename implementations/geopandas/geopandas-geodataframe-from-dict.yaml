@@ -1,0 +1,12 @@
+id: geopandas-geodataframe-from-dict
+kind: implementation
+name: GeoDataFrame.from_dict
+software: geopandas
+call: {interface: python, name: geopandas.GeoDataFrame.from_dict}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  data: {type: dict, required: true}
+  geometry: {type: any}
+  crs: {type: Any | None}
+status: active
+review: {state: harvested, source: python-libs}

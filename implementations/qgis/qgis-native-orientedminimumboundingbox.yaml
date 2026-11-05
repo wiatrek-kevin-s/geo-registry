@@ -1,0 +1,11 @@
+id: qgis-native-orientedminimumboundingbox
+kind: implementation
+name: native:orientedminimumboundingbox
+software: qgis
+call: {interface: qgis-process, name: 'native:orientedminimumboundingbox'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

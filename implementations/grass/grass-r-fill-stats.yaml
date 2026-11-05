@@ -1,0 +1,24 @@
+id: grass-r-fill-stats
+kind: implementation
+name: r.fill.stats
+software: grass
+call: {interface: cli, name: r.fill.stats}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  uncertainty: {type: string, note: output cell}
+  distance: {type: float, required: true, default: 3.0}
+  mode: {type: string, required: true, default: wmean, values: [wmean, mean, median, mode]}
+  minimum: {type: float}
+  maximum: {type: float}
+  power: {type: float, required: true, default: 2.0}
+  cells: {type: integer, required: true, default: 8}
+  flag_m: {type: boolean, note: flag -m}
+  flag_k: {type: boolean, note: flag -k}
+  flag_w: {type: boolean, note: flag -w}
+  flag_u: {type: boolean, note: flag -u}
+  flag_s: {type: boolean, note: flag -s}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

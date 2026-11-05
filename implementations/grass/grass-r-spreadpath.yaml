@@ -1,0 +1,14 @@
+id: grass-r-spreadpath
+kind: implementation
+name: r.spreadpath
+software: grass
+call: {interface: cli, name: r.spreadpath}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  x_input: {type: string, required: true, note: cell name}
+  y_input: {type: string, required: true, note: cell name}
+  coordinates: {type: float, note: coords name; multiple values}
+  output: {type: string, required: true, note: output cell}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

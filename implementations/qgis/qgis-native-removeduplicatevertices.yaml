@@ -1,0 +1,13 @@
+id: qgis-native-removeduplicatevertices
+kind: implementation
+name: native:removeduplicatevertices
+software: qgis
+call: {interface: qgis-process, name: 'native:removeduplicatevertices'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  TOLERANCE: {type: distance, required: true, default: 1.0e-06}
+  USE_Z_VALUE: {type: boolean, required: true, default: false}
+status: active
+review: {state: harvested, source: qgis}

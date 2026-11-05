@@ -1,0 +1,20 @@
+id: pdal-filters-overlay
+kind: implementation
+name: filters.overlay
+software: pdal
+call: {interface: pdal-pipeline, name: filters.overlay}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  dimension: {type: option}
+  datasource: {type: option}
+  column: {type: option}
+  query: {type: option}
+  layer: {type: option}
+  bounds: {type: option}
+  threads: {type: option, default: '1'}
+docs: https://pdal.org/en/master/stages/filters.overlay.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

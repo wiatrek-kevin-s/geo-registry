@@ -1,0 +1,27 @@
+id: grass-t-rast-accumulate
+kind: implementation
+name: t.rast.accumulate
+software: grass
+call: {interface: cli, name: t.rast.accumulate}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: strds name}
+  output: {type: string, required: true, note: output strds}
+  lower: {type: string, note: strds name}
+  upper: {type: string, note: strds name}
+  start: {type: string, required: true}
+  stop: {type: string}
+  cycle: {type: string, required: true}
+  offset: {type: string}
+  granularity: {type: string, default: 1 day}
+  basename: {type: string, required: true}
+  suffix: {type: string, default: gran}
+  limits: {type: float, required: true}
+  scale: {type: float}
+  shift: {type: float}
+  method: {type: string, default: mean, values: [mean, gdd, bedd, huglin]}
+  flag_n: {type: boolean, note: flag -n}
+  flag_r: {type: boolean, note: flag -r}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

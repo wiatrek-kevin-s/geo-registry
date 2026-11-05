@@ -1,0 +1,20 @@
+id: grass-d-path
+kind: implementation
+name: d.path
+software: grass
+call: {interface: cli, name: d.path}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: vector name}
+  arc_type: {type: string, default: 'line,boundary', values: [line, boundary], note: multiple values}
+  coordinates: {type: float, required: true, note: coords name}
+  arc_layer: {type: string, default: '1', note: layer name}
+  node_layer: {type: string, default: '2', note: layer name}
+  arc_column: {type: string}
+  arc_backward_column: {type: string}
+  node_column: {type: string}
+  highlight_color: {type: string, default: red, note: color name}
+  flag_g: {type: boolean, note: flag -g}
+  flag_b: {type: boolean, note: flag -b}
+status: active
+review: {state: harvested, source: grass}

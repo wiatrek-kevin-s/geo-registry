@@ -1,0 +1,11 @@
+id: grass-g-gui-vdigit
+kind: implementation
+name: g.gui.vdigit
+software: grass
+call: {interface: cli, name: g.gui.vdigit}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: vector name}
+  flag_c: {type: boolean, note: flag -c}
+status: active
+review: {state: harvested, source: grass}

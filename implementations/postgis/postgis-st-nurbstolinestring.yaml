@@ -1,0 +1,16 @@
+id: postgis-st-nurbstolinestring
+kind: implementation
+name: st_nurbstolinestring
+software: postgis
+call: {interface: sql, name: st_nurbstolinestring}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  nurbscurve: {type: geometry}
+  num_segments: {type: integer, default: '32'}
+signatures:
+- arguments:
+  - {name: nurbscurve, type: geometry}
+  - {name: num_segments, type: integer, default: '32'}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

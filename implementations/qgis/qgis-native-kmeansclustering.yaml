@@ -1,0 +1,15 @@
+id: qgis-native-kmeansclustering
+kind: implementation
+name: native:kmeansclustering
+software: qgis
+call: {interface: qgis-process, name: 'native:kmeansclustering'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CLUSTERS: {type: number, required: true, default: 5}
+  FIELD_NAME: {type: string, required: true, default: CLUSTER_ID}
+  INPUT: {type: source, required: true}
+  METHOD: {type: enum, required: true, default: 0, values: [0, 1], note: '0 Farthest points, 1 K-means++'}
+  OUTPUT: {type: sink, required: true, note: output}
+  SIZE_FIELD_NAME: {type: string, required: true, default: CLUSTER_SIZE}
+status: active
+review: {state: harvested, source: qgis}

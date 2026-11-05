@@ -1,0 +1,12 @@
+id: qgis-native-densifygeometriesgivenaninterval
+kind: implementation
+name: native:densifygeometriesgivenaninterval
+software: qgis
+call: {interface: qgis-process, name: 'native:densifygeometriesgivenaninterval'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  INTERVAL: {type: distance, required: true, default: 1}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

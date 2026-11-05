@@ -1,0 +1,39 @@
+id: grass-v-surf-rst
+kind: implementation
+name: v.surf.rst
+software: grass
+call: {interface: cli, name: v.surf.rst}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '1', note: layer name}
+  zcolumn: {type: string, note: dbcolumn name}
+  where: {type: string, note: sql_query name}
+  elevation: {type: string, note: output cell}
+  slope: {type: string, note: output cell}
+  aspect: {type: string, note: output cell}
+  pcurvature: {type: string, note: output cell}
+  tcurvature: {type: string, note: output cell}
+  mcurvature: {type: string, note: output cell}
+  deviations: {type: string, note: output vector}
+  cvdev: {type: string, note: output vector}
+  treeseg: {type: string, note: output vector}
+  overwin: {type: string, note: output vector}
+  nprocs: {type: integer, default: 1}
+  mask: {type: string, note: cell name}
+  tension: {type: float, default: 40.0}
+  smooth: {type: float}
+  smooth_column: {type: string}
+  segmax: {type: integer, default: 40}
+  npmin: {type: integer, default: 300}
+  dmin: {type: float}
+  dmax: {type: float}
+  zscale: {type: float, default: 1.0}
+  theta: {type: float}
+  scalex: {type: float}
+  flag_c: {type: boolean, note: flag -c}
+  flag_t: {type: boolean, note: flag -t}
+  flag_d: {type: boolean, note: flag -d}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

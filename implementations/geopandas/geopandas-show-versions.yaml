@@ -1,0 +1,9 @@
+id: geopandas-show-versions
+kind: implementation
+name: geopandas.show_versions
+software: geopandas
+call: {interface: python, name: geopandas.show_versions}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-libs}

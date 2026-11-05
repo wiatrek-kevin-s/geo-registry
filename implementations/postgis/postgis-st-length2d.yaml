@@ -1,0 +1,13 @@
+id: postgis-st-length2d
+kind: implementation
+name: st_length2d
+software: postgis
+call: {interface: sql, name: st_length2d}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  returns: double precision
+status: active
+review: {state: harvested, source: postgis}

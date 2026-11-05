@@ -1,0 +1,15 @@
+id: whiteboxtools-lidar-segmentation-based-filter
+kind: implementation
+name: LidarSegmentationBasedFilter
+software: whiteboxtools
+call: {interface: cli, name: LidarSegmentationBasedFilter}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar', required: true}
+  output: {type: 'NewFile:Lidar', required: true, note: output}
+  radius: {type: Float, required: true, default: '5.0'}
+  norm_diff: {type: Float, default: '2.0'}
+  maxzdiff: {type: Float, default: '1.0'}
+  classify: {type: Boolean}
+status: active
+review: {state: harvested, source: whitebox}

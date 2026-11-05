@@ -1,0 +1,11 @@
+id: whiteboxtools-modify-no-data-value
+kind: implementation
+name: ModifyNoDataValue
+software: whiteboxtools
+call: {interface: cli, name: ModifyNoDataValue}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  new_value: {type: Float, default: '-32768.0'}
+status: active
+review: {state: harvested, source: whitebox}

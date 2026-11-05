@@ -1,0 +1,15 @@
+id: qgis-qgis-distancetonearesthublinetohub
+kind: implementation
+name: qgis:distancetonearesthublinetohub
+software: qgis
+call: {interface: qgis-process, name: 'qgis:distancetonearesthublinetohub'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  FIELD: {type: field, required: true}
+  HUBS: {type: source, required: true}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  UNIT: {type: enum, required: true, values: [0, 1, 2, 3, 4], note: '0 Meters, 1 Feet, 2 Miles, 3 Kilometers, 4 Layer units'}
+notes: Deprecated in QGIS.
+status: active
+review: {state: harvested, source: qgis}

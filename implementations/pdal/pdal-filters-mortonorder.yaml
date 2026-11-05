@@ -1,0 +1,13 @@
+id: pdal-filters-mortonorder
+kind: implementation
+name: filters.mortonorder
+software: pdal
+call: {interface: pdal-pipeline, name: filters.mortonorder}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  reverse: {type: option, default: 'false'}
+docs: https://pdal.org/en/master/stages/filters.mortonorder.html
+status: active
+review: {state: harvested, source: pdal}

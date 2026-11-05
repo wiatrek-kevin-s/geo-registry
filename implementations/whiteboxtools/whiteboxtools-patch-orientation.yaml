@@ -1,0 +1,10 @@
+id: whiteboxtools-patch-orientation
+kind: implementation
+name: PatchOrientation
+software: whiteboxtools
+call: {interface: cli, name: PatchOrientation}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Vector:Polygon', required: true}
+status: active
+review: {state: harvested, source: whitebox}

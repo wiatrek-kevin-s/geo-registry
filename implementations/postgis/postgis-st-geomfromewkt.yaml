@@ -1,0 +1,13 @@
+id: postgis-st-geomfromewkt
+kind: implementation
+name: st_geomfromewkt
+software: postgis
+call: {interface: sql, name: st_geomfromewkt}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: text}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

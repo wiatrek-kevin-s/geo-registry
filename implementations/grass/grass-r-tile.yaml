@@ -1,0 +1,14 @@
+id: grass-r-tile
+kind: implementation
+name: r.tile
+software: grass
+call: {interface: cli, name: r.tile}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string, required: true}
+  width: {type: integer, required: true}
+  height: {type: integer, required: true}
+  overlap: {type: integer}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,21 @@
+id: grass-r-resamp-bspline
+kind: implementation
+name: r.resamp.bspline
+software: grass
+call: {interface: cli, name: r.resamp.bspline}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  grid: {type: string, note: output vector}
+  mask: {type: string, note: cell name}
+  ew_step: {type: float}
+  ns_step: {type: float}
+  method: {type: string, default: bicubic, values: [bilinear, bicubic]}
+  lambda: {type: float, default: 0.01}
+  memory: {type: integer, default: 300}
+  flag_n: {type: boolean, note: flag -n}
+  flag_c: {type: boolean, note: flag -c}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

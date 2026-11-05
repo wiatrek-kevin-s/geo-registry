@@ -1,0 +1,18 @@
+id: postgis-st-force4d
+kind: implementation
+name: st_force4d
+software: postgis
+call: {interface: sql, name: st_force4d}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geom: {type: geometry}
+  zvalue: {type: double precision, default: '0.0'}
+  mvalue: {type: double precision, default: '0.0'}
+signatures:
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: zvalue, type: double precision, default: '0.0'}
+  - {name: mvalue, type: double precision, default: '0.0'}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

@@ -1,0 +1,14 @@
+id: postgis-st-node
+kind: implementation
+name: st_node
+software: postgis
+call: {interface: sql, name: st_node}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  g: {type: geometry}
+signatures:
+- arguments:
+  - {name: g, type: geometry}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

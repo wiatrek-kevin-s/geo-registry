@@ -1,0 +1,17 @@
+id: grass-g-message
+kind: implementation
+name: g.message
+software: grass
+call: {interface: cli, name: g.message}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  message: {type: string, required: true}
+  debug: {type: integer, default: 1, values: [0-5]}
+  flag_w: {type: boolean, note: flag -w}
+  flag_e: {type: boolean, note: flag -e}
+  flag_d: {type: boolean, note: flag -d}
+  flag_p: {type: boolean, note: flag -p}
+  flag_i: {type: boolean, note: flag -i}
+  flag_v: {type: boolean, note: flag -v}
+status: active
+review: {state: harvested, source: grass}

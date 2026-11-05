@@ -1,0 +1,16 @@
+id: grass-test-raster3d-lib
+kind: implementation
+name: test.raster3d.lib
+software: grass
+call: {interface: cli, name: test.raster3d.lib}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  unit: {type: string, values: [coord, putget, large]}
+  depths: {type: integer, default: 20}
+  rows: {type: integer, default: 5400}
+  cols: {type: integer, default: 10800}
+  tile_size: {type: integer, default: 32}
+  flag_u: {type: boolean, note: flag -u}
+  flag_l: {type: boolean, note: flag -l}
+status: active
+review: {state: harvested, source: grass}

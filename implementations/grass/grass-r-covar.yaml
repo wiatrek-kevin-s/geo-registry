@@ -1,0 +1,11 @@
+id: grass-r-covar
+kind: implementation
+name: r.covar
+software: grass
+call: {interface: cli, name: r.covar}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: cell name; multiple values}
+  flag_r: {type: boolean, note: flag -r}
+status: active
+review: {state: harvested, source: grass}

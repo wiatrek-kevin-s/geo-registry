@@ -1,0 +1,14 @@
+id: whiteboxtools-sediment-transport-index
+kind: implementation
+name: SedimentTransportIndex
+software: whiteboxtools
+call: {interface: cli, name: SedimentTransportIndex}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  sca: {type: 'ExistingFile:Raster', required: true}
+  slope: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  sca_exponent: {type: Float, required: true, default: '0.4'}
+  slope_exponent: {type: Float, required: true, default: '1.3'}
+status: active
+review: {state: harvested, source: whitebox}

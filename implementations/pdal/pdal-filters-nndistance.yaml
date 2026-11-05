@@ -1,0 +1,14 @@
+id: pdal-filters-nndistance
+kind: implementation
+name: filters.nndistance
+software: pdal
+call: {interface: pdal-pipeline, name: filters.nndistance}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  mode: {type: option, default: kthavg}
+  k: {type: option, default: '10'}
+docs: https://pdal.org/en/master/stages/filters.nndistance.html
+status: active
+review: {state: harvested, source: pdal}

@@ -1,0 +1,16 @@
+id: qgis-gdal-sieve
+kind: implementation
+name: gdal:sieve
+software: qgis
+call: {interface: qgis-process, name: 'gdal:sieve'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  EIGHT_CONNECTEDNESS: {type: boolean, required: true, default: false}
+  EXTRA: {type: string}
+  INPUT: {type: raster, required: true}
+  MASK_LAYER: {type: raster}
+  NO_MASK: {type: boolean, required: true, default: false}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  THRESHOLD: {type: number, required: true, default: 10}
+status: active
+review: {state: harvested, source: qgis}

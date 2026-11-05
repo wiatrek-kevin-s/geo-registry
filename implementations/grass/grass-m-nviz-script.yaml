@@ -1,0 +1,23 @@
+id: grass-m-nviz-script
+kind: implementation
+name: m.nviz.script
+software: grass
+call: {interface: cli, name: m.nviz.script}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output file}
+  name: {type: string}
+  route: {type: string, note: multiple values}
+  dist: {type: float, required: true}
+  ht: {type: float, required: true}
+  frames: {type: integer, required: true}
+  start: {type: integer}
+  flag_f: {type: boolean, note: flag -f}
+  flag_c: {type: boolean, note: flag -c}
+  flag_k: {type: boolean, note: flag -k}
+  flag_o: {type: boolean, note: flag -o}
+  flag_e: {type: boolean, note: flag -e}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

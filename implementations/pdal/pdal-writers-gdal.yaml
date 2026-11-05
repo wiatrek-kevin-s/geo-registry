@@ -1,0 +1,35 @@
+id: pdal-writers-gdal
+kind: implementation
+name: writers.gdal
+software: pdal
+call: {interface: pdal-pipeline, name: writers.gdal}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  filename: {type: option}
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  resolution: {type: option}
+  radius: {type: option}
+  power: {type: option, default: '1'}
+  gdaldriver: {type: option, default: GTiff}
+  gdalopts: {type: option}
+  output_type: {type: option, default: all}
+  data_type: {type: option, default: double}
+  window_size: {type: option}
+  nodata: {type: option, default: NaN}
+  dimension: {type: option, default: Z}
+  bounds: {type: option}
+  origin_x: {type: option}
+  origin_y: {type: option}
+  width: {type: option}
+  height: {type: option}
+  override_srs: {type: option}
+  default_srs: {type: option}
+  metadata: {type: option}
+  pdal_metadata: {type: option, default: 'false'}
+  binmode: {type: option, default: 'false'}
+  allow_empty: {type: option, default: 'false'}
+docs: https://pdal.org/en/master/stages/writers.gdal.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

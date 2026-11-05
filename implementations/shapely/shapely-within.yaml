@@ -1,0 +1,11 @@
+id: shapely-within
+kind: implementation
+name: shapely.within
+software: shapely
+call: {interface: python, name: shapely.within}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  a: {type: any, required: true}
+  b: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-libs}

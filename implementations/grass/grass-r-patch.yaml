@@ -1,0 +1,16 @@
+id: grass-r-patch
+kind: implementation
+name: r.patch
+software: grass
+call: {interface: cli, name: r.patch}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name; multiple values}
+  output: {type: string, required: true, note: output cell}
+  nprocs: {type: integer, default: 0}
+  memory: {type: integer, default: 300}
+  flag_z: {type: boolean, note: flag -z}
+  flag_s: {type: boolean, note: flag -s}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

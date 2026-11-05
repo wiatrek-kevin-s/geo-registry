@@ -1,0 +1,14 @@
+id: postgis-st-length2dspheroid
+kind: implementation
+name: st_length2dspheroid
+software: postgis
+call: {interface: sql, name: st_length2dspheroid}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  - {type: spheroid}
+  returns: double precision
+status: active
+review: {state: harvested, source: postgis}

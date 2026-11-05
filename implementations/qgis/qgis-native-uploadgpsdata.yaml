@@ -1,0 +1,13 @@
+id: qgis-native-uploadgpsdata
+kind: implementation
+name: native:uploadgpsdata
+software: qgis
+call: {interface: qgis-process, name: 'native:uploadgpsdata'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  DEVICE: {type: string, required: true}
+  FEATURE_TYPE: {type: enum, required: true, default: 0, values: [0, 1, 2], note: '0 Waypoints, 1 Routes, 2 Tracks'}
+  INPUT: {type: file, required: true}
+  PORT: {type: string, required: true}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,16 @@
+id: grass-r-quantile
+kind: implementation
+name: r.quantile
+software: grass
+call: {interface: cli, name: r.quantile}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  quantiles: {type: integer, default: 4}
+  percentiles: {type: float, note: multiple values}
+  bins: {type: integer, default: 1000000}
+  file: {type: string, note: output file}
+  flag_r: {type: boolean, note: flag -r}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

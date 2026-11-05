@@ -1,0 +1,13 @@
+id: qgis-native-pixelstopoints
+kind: implementation
+name: native:pixelstopoints
+software: qgis
+call: {interface: qgis-process, name: 'native:pixelstopoints'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  FIELD_NAME: {type: string, required: true, default: VALUE}
+  INPUT_RASTER: {type: raster, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  RASTER_BAND: {type: band, required: true, default: 1}
+status: active
+review: {state: harvested, source: qgis}

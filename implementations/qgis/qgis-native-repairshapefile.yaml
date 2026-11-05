@@ -1,0 +1,10 @@
+id: qgis-native-repairshapefile
+kind: implementation
+name: native:repairshapefile
+software: qgis
+call: {interface: qgis-process, name: 'native:repairshapefile'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: file, required: true}
+status: active
+review: {state: harvested, source: qgis}

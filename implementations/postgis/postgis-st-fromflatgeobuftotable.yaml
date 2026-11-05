@@ -1,0 +1,15 @@
+id: postgis-st-fromflatgeobuftotable
+kind: implementation
+name: st_fromflatgeobuftotable
+software: postgis
+call: {interface: sql, name: st_fromflatgeobuftotable}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: text}
+  - {type: text}
+  - {type: bytea}
+  returns: void
+status: active
+review: {state: harvested, source: postgis}

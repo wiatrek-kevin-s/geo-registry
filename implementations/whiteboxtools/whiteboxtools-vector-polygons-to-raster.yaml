@@ -1,0 +1,15 @@
+id: whiteboxtools-vector-polygons-to-raster
+kind: implementation
+name: VectorPolygonsToRaster
+software: whiteboxtools
+call: {interface: cli, name: VectorPolygonsToRaster}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Vector:Polygon', required: true}
+  field: {type: VectorAttributeField, default: FID}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  nodata: {type: Boolean, default: 'true'}
+  cell_size: {type: Float}
+  base: {type: 'ExistingFile:Raster'}
+status: active
+review: {state: harvested, source: whitebox}

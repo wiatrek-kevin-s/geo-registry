@@ -1,0 +1,14 @@
+id: qgis-native-minimumboundinggeometry
+kind: implementation
+name: native:minimumboundinggeometry
+software: qgis
+call: {interface: qgis-process, name: 'native:minimumboundinggeometry'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  FIELD: {type: field}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  TYPE: {type: enum, required: true, values: [0, 1, 2, 3], note: '0 Envelope (Bounding Box), 1 Minimum Oriented Rectangle,
+      2 Minimum Enclosing Circle, 3 Convex Hull'}
+status: active
+review: {state: harvested, source: qgis}

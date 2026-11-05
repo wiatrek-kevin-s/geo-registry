@@ -1,0 +1,23 @@
+id: grass-v-net
+kind: implementation
+name: v.net
+software: grass
+call: {interface: cli, name: v.net}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, note: vector name}
+  points: {type: string, note: vector name}
+  output: {type: string, note: output vector}
+  operation: {type: string, required: true, values: [nodes, connect, arcs, report, nreport, turntable]}
+  arc_layer: {type: string, default: '1', note: output layer}
+  arc_type: {type: string, default: 'line,boundary', values: [line, boundary], note: multiple values}
+  node_layer: {type: string, default: '2', note: output layer}
+  threshold: {type: float}
+  file: {type: string, note: file name}
+  turn_layer: {type: string, default: '3', note: layer name}
+  turn_cat_layer: {type: string, default: '4', note: layer name}
+  flag_c: {type: boolean, note: flag -c}
+  flag_s: {type: boolean, note: flag -s}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

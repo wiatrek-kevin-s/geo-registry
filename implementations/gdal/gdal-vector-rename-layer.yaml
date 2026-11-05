@@ -1,0 +1,32 @@
+id: gdal-vector-rename-layer
+kind: implementation
+name: gdal vector rename-layer
+software: gdal
+call: {interface: cli, name: gdal vector rename-layer}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  input-format: {type: string_list}
+  open-option: {type: string_list}
+  input: {type: dataset_list, required: true, note: vector dataset}
+  output-format: {type: string}
+  output-open-option: {type: string_list}
+  creation-option: {type: string_list}
+  layer-creation-option: {type: string_list}
+  overwrite: {type: boolean, default: false}
+  update: {type: boolean, default: false}
+  overwrite-layer: {type: boolean, default: false}
+  append: {type: boolean, default: false, note: exclusive group append-upsert}
+  upsert: {type: boolean, note: exclusive group append-upsert}
+  output-layer: {type: string}
+  skip-errors: {type: boolean}
+  input-layer: {type: string}
+  ascii: {type: boolean}
+  lower-case: {type: boolean}
+  filename-compatible: {type: boolean}
+  reserved-characters: {type: string}
+  replacement-character: {type: string}
+  max-length: {type: integer, note: at least 1}
+  output: {type: dataset, required: true, note: input and output; vector dataset}
+docs: https://gdal.org/programs/gdal_vector_rename_layer.html
+status: active
+review: {state: harvested, source: gdal}

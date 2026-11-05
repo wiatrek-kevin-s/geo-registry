@@ -1,0 +1,11 @@
+id: grass-d-to-rast
+kind: implementation
+name: d.to.rast
+software: grass
+call: {interface: cli, name: d.to.rast}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  output: {type: string, required: true, note: output cell}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

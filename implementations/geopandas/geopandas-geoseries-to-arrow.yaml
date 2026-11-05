@@ -1,0 +1,12 @@
+id: geopandas-geoseries-to-arrow
+kind: implementation
+name: GeoSeries.to_arrow
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.to_arrow}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  geometry_encoding: {type: string, default: WKB}
+  interleaved: {type: boolean, default: true}
+  include_z: {type: any}
+status: active
+review: {state: harvested, source: python-libs}

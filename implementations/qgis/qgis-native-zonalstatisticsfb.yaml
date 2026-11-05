@@ -1,0 +1,17 @@
+id: qgis-native-zonalstatisticsfb
+kind: implementation
+name: native:zonalstatisticsfb
+software: qgis
+call: {interface: qgis-process, name: 'native:zonalstatisticsfb'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  COLUMN_PREFIX: {type: string, required: true, default: _}
+  INPUT: {type: source, required: true}
+  INPUT_RASTER: {type: raster, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  RASTER_BAND: {type: band, required: true, default: 1}
+  STATISTICS: {type: enum, required: true, values: [0, 1, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9], note: '0 Count, 1 Sum, 10 Variety,
+      11 Variance, 2 Mean, 3 Median, 4 St dev, 5 Minimum, 6 Maximum, 7 Range, 8 Minority, 9 Majority; multiple values; default
+      [0, 1, 2]'}
+status: active
+review: {state: harvested, source: qgis}

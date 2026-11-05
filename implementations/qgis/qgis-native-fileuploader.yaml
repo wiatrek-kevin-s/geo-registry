@@ -1,0 +1,12 @@
+id: qgis-native-fileuploader
+kind: implementation
+name: native:fileuploader
+software: qgis
+call: {interface: qgis-process, name: 'native:fileuploader'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  FILE: {type: file, required: true}
+  FORM_NAME: {type: string}
+  URL: {type: string, required: true}
+status: active
+review: {state: harvested, source: qgis}

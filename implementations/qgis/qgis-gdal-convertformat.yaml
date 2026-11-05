@@ -1,0 +1,13 @@
+id: qgis-gdal-convertformat
+kind: implementation
+name: gdal:convertformat
+software: qgis
+call: {interface: qgis-process, name: 'gdal:convertformat'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CONVERT_ALL_LAYERS: {type: boolean, required: true, default: false}
+  INPUT: {type: source, required: true}
+  OPTIONS: {type: string, default: ''}
+  OUTPUT: {type: vectorDestination, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

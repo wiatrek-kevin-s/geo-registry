@@ -1,0 +1,17 @@
+id: postgis-st-coverageunion
+kind: implementation
+name: st_coverageunion
+software: postgis
+call: {interface: sql, name: st_coverageunion}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  returns: geometry (aggregate)
+- arguments:
+  - {type: 'geometry[]'}
+  returns: geometry
+notes: Has an aggregate form.
+status: active
+review: {state: harvested, source: postgis}

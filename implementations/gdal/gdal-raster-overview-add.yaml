@@ -1,0 +1,19 @@
+id: gdal-raster-overview-add
+kind: implementation
+name: gdal raster overview add
+software: gdal
+call: {interface: cli, name: gdal raster overview add}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  open-option: {type: string_list}
+  input: {type: dataset_list, required: true, note: raster dataset}
+  overview-src: {type: dataset_list, note: raster dataset; exclusive group overview-src-levels}
+  external: {type: boolean}
+  resampling: {type: string, values: [nearest, average, cubic, cubicspline, lanczos, bilinear, gauss, average_magphase, rms,
+      mode]}
+  levels: {type: integer_list, note: at least 2; exclusive group overview-src-levels}
+  min-size: {type: integer, note: at least 1}
+  creation-option: {type: string_list}
+docs: https://gdal.org/programs/gdal_raster_overview_add.html
+status: active
+review: {state: harvested, source: gdal}

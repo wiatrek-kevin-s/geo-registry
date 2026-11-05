@@ -1,0 +1,23 @@
+id: postgis-raster-st-dumpvalues
+kind: implementation
+name: st_dumpvalues
+software: postgis-raster
+call: {interface: sql, name: st_dumpvalues}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  nband: {type: 'integer | integer[]', default: 'NULL::integer[]'}
+  exclude_nodata_value: {type: boolean, default: 'true'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: exclude_nodata_value, type: boolean, default: 'true'}
+  returns: double precision[]
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: 'integer[]', default: 'NULL::integer[]'}
+  - {name: exclude_nodata_value, type: boolean, default: 'true'}
+  returns: TABLE(nband integer, valarray double precision[])
+status: active
+review: {state: harvested, source: postgis}

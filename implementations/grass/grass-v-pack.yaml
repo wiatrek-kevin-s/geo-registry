@@ -1,0 +1,13 @@
+id: grass-v-pack
+kind: implementation
+name: v.pack
+software: grass
+call: {interface: cli, name: v.pack}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  output: {type: string, note: output file}
+  flag_c: {type: boolean, note: flag -c}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

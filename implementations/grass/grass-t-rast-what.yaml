@@ -1,0 +1,24 @@
+id: grass-t-rast-what
+kind: implementation
+name: t.rast.what
+software: grass
+call: {interface: cli, name: t.rast.what}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  points: {type: string, note: vector name}
+  coordinates: {type: float, note: coords name}
+  strds: {type: string, required: true, note: strds name}
+  output: {type: string, default: '-', note: output file}
+  where: {type: string}
+  null_value: {type: string}
+  separator: {type: string, default: pipe, note: separator name}
+  order: {type: string, default: start_time, values: [id, name, creator, mapset, creation_time, modification_time, start_time,
+      end_time, north, south, west, east, min, max], note: multiple values}
+  layout: {type: string, default: row, values: [row, col, timerow]}
+  nprocs: {type: integer, default: 1}
+  flag_n: {type: boolean, note: flag -n}
+  flag_i: {type: boolean, note: flag -i}
+  flag_v: {type: boolean, note: flag -v}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

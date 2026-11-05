@@ -1,0 +1,11 @@
+id: geopandas-geoseries-concave-hull
+kind: implementation
+name: GeoSeries.concave_hull
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.concave_hull}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  ratio: {type: number, default: 0.0}
+  allow_holes: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-libs}

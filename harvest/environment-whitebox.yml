@@ -1,0 +1,6 @@
+# WhiteboxTools, for the harvest and equivalence tests.
+name: geo-registry-whitebox
+channels:
+  - conda-forge
+dependencies:
+  - whitebox_tools

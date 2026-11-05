@@ -1,0 +1,20 @@
+id: gdal-vsi-sozip-create
+kind: implementation
+name: gdal vsi sozip create
+software: gdal
+call: {interface: cli, name: gdal vsi sozip create}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  input: {type: string_list, required: true}
+  output: {type: string, required: true}
+  overwrite: {type: boolean, default: false}
+  recursive: {type: boolean}
+  no-paths: {type: boolean}
+  enable-sozip: {type: string, default: auto, values: [auto, 'yes', 'no']}
+  sozip-chunk-size: {type: string, default: '32768'}
+  sozip-min-file-size: {type: string, default: 1 MB}
+  content-type: {type: string}
+  output-string: {type: string, note: output}
+docs: https://gdal.org/programs/gdal_vsi_sozip.html
+status: active
+review: {state: harvested, source: gdal}

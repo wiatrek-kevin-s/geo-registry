@@ -1,0 +1,41 @@
+id: qgis-gdal-importvectorintopostgisdatabaseavailableconnections
+kind: implementation
+name: gdal:importvectorintopostgisdatabaseavailableconnections
+software: qgis
+call: {interface: qgis-process, name: 'gdal:importvectorintopostgisdatabaseavailableconnections'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ADDFIELDS: {type: boolean, required: true, default: false}
+  APPEND: {type: boolean, required: true, default: false}
+  A_SRS: {type: crs, default: ''}
+  CLIP: {type: boolean, required: true, default: false}
+  DATABASE: {type: providerconnection, required: true}
+  DIM: {type: enum, required: true, default: 0, values: [0, 1, 2], note: '0 2, 1 3, 2 4'}
+  GEOCOLUMN: {type: string, default: geom}
+  GT: {type: string, default: ''}
+  GTYPE: {type: enum, required: true, default: 0, values: [0, 1, 10, 11, 12, 13, 14, 15, 16, 2, 3, 4, 5, 6, 7, 8, 9], note: '0
+      , 1 NONE, 10 CIRCULARSTRING, 11 COMPOUNDCURVE, 12 CURVEPOLYGON, 13 MULTICURVE, 14 MULTISURFACE, 15 CONVERT_TO_LINEAR,
+      16 CONVERT_TO_CURVE, 2 GEOMETRY, 3 POINT, 4 LINESTRING, 5 POLYGON, 6 GEOMETRYCOLLECTION, 7 MULTIPOINT, 8 MULTIPOLYGON,
+      9 MULTILINESTRING'}
+  INDEX: {type: boolean, required: true, default: false}
+  INPUT: {type: source, required: true}
+  LAUNDER: {type: boolean, required: true, default: false}
+  MAKEVALID: {type: boolean, required: true, default: false}
+  OPTIONS: {type: string, default: ''}
+  OVERWRITE: {type: boolean, required: true, default: true}
+  PK: {type: string, default: id}
+  PRECISION: {type: boolean, required: true, default: true}
+  PRIMARY_KEY: {type: field}
+  PROMOTETOMULTI: {type: boolean, required: true, default: true}
+  SCHEMA: {type: databaseschema, default: public}
+  SEGMENTIZE: {type: string, default: ''}
+  SHAPE_ENCODING: {type: string, default: ''}
+  SIMPLIFY: {type: string, default: ''}
+  SKIPFAILURES: {type: boolean, required: true, default: false}
+  SPAT: {type: extent}
+  S_SRS: {type: crs, default: ''}
+  TABLE: {type: databasetable}
+  T_SRS: {type: crs, default: ''}
+  WHERE: {type: string, default: ''}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,12 @@
+id: geopandas-read-feather
+kind: implementation
+name: geopandas.read_feather
+software: geopandas
+call: {interface: python, name: geopandas.read_feather}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  path: {type: any, required: true}
+  columns: {type: any}
+  to_pandas_kwargs: {type: any}
+status: active
+review: {state: harvested, source: python-libs}

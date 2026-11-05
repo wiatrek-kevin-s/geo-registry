@@ -1,0 +1,11 @@
+id: geopandas-geoseries-set-precision
+kind: implementation
+name: GeoSeries.set_precision
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.set_precision}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  grid_size: {type: any, required: true}
+  mode: {type: string, default: valid_output}
+status: active
+review: {state: harvested, source: python-libs}

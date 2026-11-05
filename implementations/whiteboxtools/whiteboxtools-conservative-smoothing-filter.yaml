@@ -1,0 +1,13 @@
+id: whiteboxtools-conservative-smoothing-filter
+kind: implementation
+name: ConservativeSmoothingFilter
+software: whiteboxtools
+call: {interface: cli, name: ConservativeSmoothingFilter}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  filterx: {type: Integer, default: '3'}
+  filtery: {type: Integer, default: '3'}
+status: active
+review: {state: harvested, source: whitebox}

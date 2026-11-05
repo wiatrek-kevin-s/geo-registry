@@ -1,0 +1,13 @@
+id: grass-v-db-droptable
+kind: implementation
+name: v.db.droptable
+software: grass
+call: {interface: cli, name: v.db.droptable}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: vector name}
+  table: {type: string, note: dbtable name}
+  layer: {type: string, default: '1', note: layer name}
+  flag_f: {type: boolean, note: flag -f}
+status: active
+review: {state: harvested, source: grass}

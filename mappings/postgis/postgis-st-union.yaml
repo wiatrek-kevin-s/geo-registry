@@ -1,0 +1,9 @@
+id: postgis-st-union
+implements: dissolve
+crosswalk:
+  layer: "#1"
+  by: { note: Use the aggregate form with GROUP BY the fields. }
+differences:
+  - Dissolving is the aggregate form, ST_Union(geom) with GROUP BY; the two-argument form unions just two geometries.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

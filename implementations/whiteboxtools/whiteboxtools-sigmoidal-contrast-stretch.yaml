@@ -1,0 +1,14 @@
+id: whiteboxtools-sigmoidal-contrast-stretch
+kind: implementation
+name: SigmoidalContrastStretch
+software: whiteboxtools
+call: {interface: cli, name: SigmoidalContrastStretch}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  cutoff: {type: Float, default: '0.0'}
+  gain: {type: Float, required: true, default: '1.0'}
+  num_tones: {type: Integer, required: true, default: '256'}
+status: active
+review: {state: harvested, source: whitebox}

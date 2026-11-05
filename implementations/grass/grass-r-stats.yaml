@@ -1,0 +1,30 @@
+id: grass-r-stats
+kind: implementation
+name: r.stats
+software: grass
+call: {interface: cli, name: r.stats}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name; multiple values}
+  output: {type: string, note: output file}
+  separator: {type: string, note: separator name}
+  null_value: {type: string, default: '*'}
+  nsteps: {type: integer, default: 255}
+  sort: {type: string, values: [asc, desc]}
+  format: {type: string, required: true, default: plain, values: [plain, csv, json]}
+  flag_a: {type: boolean, note: flag -a}
+  flag_c: {type: boolean, note: flag -c}
+  flag_p: {type: boolean, note: flag -p}
+  flag_l: {type: boolean, note: flag -l}
+  flag_1: {type: boolean, note: flag -1}
+  flag_g: {type: boolean, note: flag -g}
+  flag_x: {type: boolean, note: flag -x}
+  flag_A: {type: boolean, note: flag -A}
+  flag_r: {type: boolean, note: flag -r}
+  flag_n: {type: boolean, note: flag -n}
+  flag_N: {type: boolean, note: flag -N}
+  flag_C: {type: boolean, note: flag -C}
+  flag_i: {type: boolean, note: flag -i}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

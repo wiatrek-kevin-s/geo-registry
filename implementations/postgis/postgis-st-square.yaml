@@ -1,0 +1,20 @@
+id: postgis-st-square
+kind: implementation
+name: st_square
+software: postgis
+call: {interface: sql, name: st_square}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  size: {type: double precision}
+  cell_i: {type: integer}
+  cell_j: {type: integer}
+  origin: {type: geometry, default: '''010100000000000000000000000000000000000000''::geometry'}
+signatures:
+- arguments:
+  - {name: size, type: double precision}
+  - {name: cell_i, type: integer}
+  - {name: cell_j, type: integer}
+  - {name: origin, type: geometry, default: '''010100000000000000000000000000000000000000''::geometry'}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

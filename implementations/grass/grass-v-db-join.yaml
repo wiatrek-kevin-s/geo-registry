@@ -1,0 +1,16 @@
+id: grass-v-db-join
+kind: implementation
+name: v.db.join
+software: grass
+call: {interface: cli, name: v.db.join}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '1', note: layer name}
+  column: {type: string, required: true, note: dbcolumn name}
+  other_table: {type: string, required: true, note: dbtable name}
+  other_column: {type: string, required: true, note: dbcolumn name}
+  subset_columns: {type: string, note: dbcolumn name; multiple values}
+  exclude_columns: {type: string, note: dbcolumn name; multiple values}
+status: active
+review: {state: harvested, source: grass}

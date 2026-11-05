@@ -1,0 +1,11 @@
+id: geopandas-geoseries-to-crs
+kind: implementation
+name: GeoSeries.to_crs
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.to_crs}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  crs: {type: Any | None}
+  epsg: {type: int | None}
+status: active
+review: {state: harvested, source: python-libs}

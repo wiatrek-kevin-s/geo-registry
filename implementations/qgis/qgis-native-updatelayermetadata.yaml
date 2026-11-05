@@ -1,0 +1,11 @@
+id: qgis-native-updatelayermetadata
+kind: implementation
+name: native:updatelayermetadata
+software: qgis
+call: {interface: qgis-process, name: 'native:updatelayermetadata'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  SOURCE: {type: layer, required: true}
+  TARGET: {type: layer, required: true}
+status: active
+review: {state: harvested, source: qgis}

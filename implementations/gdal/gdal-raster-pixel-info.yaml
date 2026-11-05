@@ -1,0 +1,28 @@
+id: gdal-raster-pixel-info
+kind: implementation
+name: gdal raster pixel-info
+software: gdal
+call: {interface: cli, name: gdal raster pixel-info}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  output-format: {type: string}
+  open-option: {type: string_list}
+  input-format: {type: string_list}
+  input: {type: dataset_list, required: true, note: raster dataset}
+  position-dataset: {type: dataset, note: vector dataset; exclusive group position-dataset-pos}
+  input-layer: {type: string_list}
+  creation-option: {type: string_list}
+  layer-creation-option: {type: string_list}
+  overwrite: {type: boolean, default: false}
+  band: {type: integer_list}
+  overview: {type: integer, note: at least 0}
+  position: {type: real_list, note: exclusive group position-dataset-pos}
+  position-crs: {type: string}
+  resampling: {type: string, default: nearest, values: [nearest, bilinear, cubic, cubicspline]}
+  promote-pixel-value-to-z: {type: boolean}
+  include-field: {type: string_list, default: ALL}
+  output-string: {type: string, note: output}
+  output: {type: dataset, note: input and output; vector dataset}
+docs: https://gdal.org/programs/gdal_raster_pixel_info.html
+status: active
+review: {state: harvested, source: gdal}

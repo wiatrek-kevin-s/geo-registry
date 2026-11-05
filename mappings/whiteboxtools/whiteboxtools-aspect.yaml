@@ -1,0 +1,7 @@
+id: whiteboxtools-aspect
+implements: aspect
+crosswalk:
+  raster: dem
+  output: output
+effects: { modifies_input: false, network: false }
+review: { state: draft }

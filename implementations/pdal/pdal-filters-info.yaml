@@ -1,0 +1,15 @@
+id: pdal-filters-info
+kind: implementation
+name: filters.info
+software: pdal
+call: {interface: pdal-pipeline, name: filters.info}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  point: {type: option}
+  query: {type: option}
+docs: https://pdal.org/en/master/stages/filters.info.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

@@ -1,0 +1,32 @@
+id: gdal-raster-contour
+kind: implementation
+name: gdal raster contour
+software: gdal
+call: {interface: cli, name: gdal raster contour}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  input-format: {type: string_list}
+  open-option: {type: string_list}
+  input: {type: dataset_list, required: true, note: raster dataset}
+  output-format: {type: string}
+  output-open-option: {type: string_list}
+  creation-option: {type: string_list}
+  layer-creation-option: {type: string_list}
+  overwrite: {type: boolean, default: false}
+  output-layer: {type: string}
+  band: {type: integer, default: 1}
+  elevation-name: {type: string}
+  min-name: {type: string}
+  max-name: {type: string}
+  3d: {type: boolean}
+  input-nodata: {type: real}
+  interval: {type: real, note: more than 0.0; exclusive group levels}
+  levels: {type: string_list, note: exclusive group levels}
+  exp-base: {type: integer, note: exclusive group levels}
+  offset: {type: real}
+  polygonize: {type: boolean}
+  group-transactions: {type: integer, note: at least 0}
+  output: {type: dataset, required: true, note: input and output; vector dataset}
+docs: https://gdal.org/programs/gdal_raster_contour.html
+status: active
+review: {state: harvested, source: gdal}

@@ -1,0 +1,13 @@
+id: whiteboxtools-principal-component-analysis
+kind: implementation
+name: PrincipalComponentAnalysis
+software: whiteboxtools
+call: {interface: cli, name: PrincipalComponentAnalysis}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  inputs: {type: 'FileList:Raster', required: true}
+  output: {type: 'NewFile:Html', required: true, note: output}
+  num_comp: {type: Integer}
+  standardized: {type: Boolean}
+status: active
+review: {state: harvested, source: whitebox}

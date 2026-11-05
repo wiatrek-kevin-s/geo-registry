@@ -1,0 +1,16 @@
+id: postgis-raster-st-bandfiletimestamp
+kind: implementation
+name: st_bandfiletimestamp
+software: postgis-raster
+call: {interface: sql, name: st_bandfiletimestamp}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  band: {type: integer, default: '1'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: band, type: integer, default: '1'}
+  returns: bigint
+status: active
+review: {state: harvested, source: postgis}

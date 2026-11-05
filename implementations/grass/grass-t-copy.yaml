@@ -1,0 +1,14 @@
+id: grass-t-copy
+kind: implementation
+name: t.copy
+software: grass
+call: {interface: cli, name: t.copy}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: stds name}
+  type: {type: string, default: strds, values: [strds, str3ds, stvds]}
+  output: {type: string, required: true, note: output stds}
+  flag_c: {type: boolean, note: flag -c}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

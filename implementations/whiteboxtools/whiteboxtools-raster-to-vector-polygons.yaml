@@ -1,0 +1,11 @@
+id: whiteboxtools-raster-to-vector-polygons
+kind: implementation
+name: RasterToVectorPolygons
+software: whiteboxtools
+call: {interface: cli, name: RasterToVectorPolygons}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Vector:Polygon', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

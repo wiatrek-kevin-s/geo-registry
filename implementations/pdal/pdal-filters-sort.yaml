@@ -1,0 +1,15 @@
+id: pdal-filters-sort
+kind: implementation
+name: filters.sort
+software: pdal
+call: {interface: pdal-pipeline, name: filters.sort}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  dimensions: {type: option}
+  order: {type: option, default: ASCDESC}
+  algorithm: {type: option, default: NORMALSTABLE}
+docs: https://pdal.org/en/master/stages/filters.sort.html
+status: active
+review: {state: harvested, source: pdal}

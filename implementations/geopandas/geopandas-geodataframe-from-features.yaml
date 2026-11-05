@@ -1,0 +1,12 @@
+id: geopandas-geodataframe-from-features
+kind: implementation
+name: GeoDataFrame.from_features
+software: geopandas
+call: {interface: python, name: geopandas.GeoDataFrame.from_features}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  features: {type: any, required: true}
+  crs: {type: Any | None}
+  columns: {type: 'Iterable[str] | None'}
+status: active
+review: {state: harvested, source: python-libs}

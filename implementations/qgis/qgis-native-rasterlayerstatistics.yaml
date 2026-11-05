@@ -1,0 +1,12 @@
+id: qgis-native-rasterlayerstatistics
+kind: implementation
+name: native:rasterlayerstatistics
+software: qgis
+call: {interface: qgis-process, name: 'native:rasterlayerstatistics'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BAND: {type: band, required: true, default: 1}
+  INPUT: {type: raster, required: true}
+  OUTPUT_HTML_FILE: {type: fileDestination, note: output}
+status: active
+review: {state: harvested, source: qgis}

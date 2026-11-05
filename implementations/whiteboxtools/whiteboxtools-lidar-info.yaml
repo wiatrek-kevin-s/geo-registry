@@ -1,0 +1,14 @@
+id: whiteboxtools-lidar-info
+kind: implementation
+name: LidarInfo
+software: whiteboxtools
+call: {interface: cli, name: LidarInfo}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar', required: true}
+  output: {type: 'NewFile:Html', required: true, note: output}
+  density: {type: Boolean, default: 'true'}
+  vlr: {type: Boolean, default: 'true'}
+  geokeys: {type: Boolean, default: 'true'}
+status: active
+review: {state: harvested, source: whitebox}

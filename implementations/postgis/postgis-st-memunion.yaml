@@ -1,0 +1,14 @@
+id: postgis-st-memunion
+kind: implementation
+name: st_memunion
+software: postgis
+call: {interface: sql, name: st_memunion}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  returns: geometry (aggregate)
+notes: Has an aggregate form.
+status: active
+review: {state: harvested, source: postgis}

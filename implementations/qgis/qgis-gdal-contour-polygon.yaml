@@ -1,0 +1,20 @@
+id: qgis-gdal-contour-polygon
+kind: implementation
+name: gdal:contour_polygon
+software: qgis
+call: {interface: qgis-process, name: 'gdal:contour_polygon'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BAND: {type: band, required: true, default: 1}
+  CREATE_3D: {type: boolean, required: true, default: false}
+  EXTRA: {type: string}
+  FIELD_NAME_MAX: {type: string, default: ELEV_MAX}
+  FIELD_NAME_MIN: {type: string, default: ELEV_MIN}
+  IGNORE_NODATA: {type: boolean, required: true, default: false}
+  INPUT: {type: raster, required: true}
+  INTERVAL: {type: number, required: true, default: 10.0}
+  NODATA: {type: number}
+  OFFSET: {type: number, default: 0.0}
+  OUTPUT: {type: vectorDestination, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

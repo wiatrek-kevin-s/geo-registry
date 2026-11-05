@@ -1,0 +1,35 @@
+id: gdal-raster-reproject
+kind: implementation
+name: gdal raster reproject
+software: gdal
+call: {interface: cli, name: gdal raster reproject}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  input-format: {type: string_list}
+  open-option: {type: string_list}
+  input: {type: dataset_list, required: true, note: raster dataset}
+  output-format: {type: string}
+  creation-option: {type: string_list}
+  overwrite: {type: boolean, default: false, note: exclusive group overwrite-append}
+  append: {type: boolean, default: false, note: exclusive group overwrite-append}
+  input-crs: {type: string}
+  like: {type: dataset, note: raster dataset}
+  output-crs: {type: string}
+  resampling: {type: string, default: nearest, values: [nearest, bilinear, cubic, cubicspline, lanczos, average, rms, mode,
+      min, max, med, q1, q3, sum]}
+  resolution: {type: real_list, note: more than 0.0; exclusive group resolution-size}
+  size: {type: integer_list, note: at least 0; exclusive group resolution-size}
+  bbox: {type: real_list}
+  bbox-crs: {type: string}
+  target-aligned-pixels: {type: boolean}
+  input-nodata: {type: string_list}
+  output-nodata: {type: string_list}
+  add-alpha: {type: boolean}
+  warp-option: {type: string_list}
+  transform-option: {type: string_list}
+  error-threshold: {type: real, note: at least 0.0}
+  num-threads: {type: string, default: ALL_CPUS}
+  output: {type: dataset, required: true, note: input and output; raster dataset}
+docs: https://gdal.org/programs/gdal_raster_reproject.html
+status: active
+review: {state: harvested, source: gdal}

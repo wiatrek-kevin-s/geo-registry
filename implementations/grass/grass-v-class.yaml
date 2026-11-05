@@ -1,0 +1,18 @@
+id: grass-v-class
+kind: implementation
+name: v.class
+software: grass
+call: {interface: cli, name: v.class}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '1', note: layer name}
+  column: {type: string, required: true, note: dbcolumn name}
+  where: {type: string, note: sql_query name}
+  algorithm: {type: string, required: true, values: [int, std, qua, equ, dis]}
+  nbclasses: {type: integer, required: true, values: [2-]}
+  separator: {type: string, default: comma, note: separator name}
+  format: {type: string, required: true, default: plain, values: [plain, csv, json, list]}
+  flag_b: {type: boolean, note: flag -b}
+status: active
+review: {state: harvested, source: grass}

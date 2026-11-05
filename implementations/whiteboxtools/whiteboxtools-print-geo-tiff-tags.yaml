@@ -1,0 +1,10 @@
+id: whiteboxtools-print-geo-tiff-tags
+kind: implementation
+name: PrintGeoTiffTags
+software: whiteboxtools
+call: {interface: cli, name: PrintGeoTiffTags}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+status: active
+review: {state: harvested, source: whitebox}

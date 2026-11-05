@@ -1,0 +1,11 @@
+id: whiteboxtools-zlidar-to-las
+kind: implementation
+name: ZlidarToLas
+software: whiteboxtools
+call: {interface: cli, name: ZlidarToLas}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  inputs: {type: 'FileList:Lidar'}
+  outdir: {type: Directory}
+status: active
+review: {state: harvested, source: whitebox}

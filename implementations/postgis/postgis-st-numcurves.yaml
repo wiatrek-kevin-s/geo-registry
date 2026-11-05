@@ -1,0 +1,14 @@
+id: postgis-st-numcurves
+kind: implementation
+name: st_numcurves
+software: postgis
+call: {interface: sql, name: st_numcurves}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geometry: {type: geometry}
+signatures:
+- arguments:
+  - {name: geometry, type: geometry}
+  returns: integer
+status: active
+review: {state: harvested, source: postgis}

@@ -1,0 +1,17 @@
+id: grass-v-hull
+kind: implementation
+name: v.hull
+software: grass
+call: {interface: cli, name: v.hull}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '-1', note: layer_all name}
+  output: {type: string, required: true, note: output vector}
+  cats: {type: string, note: cats name}
+  where: {type: string, note: sql_query name}
+  flag_r: {type: boolean, note: flag -r}
+  flag_f: {type: boolean, note: flag -f}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

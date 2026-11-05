@@ -1,0 +1,28 @@
+id: grass-g-proj
+kind: implementation
+name: g.proj
+software: grass
+call: {interface: cli, name: g.proj}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  georef: {type: string}
+  wkt: {type: string}
+  srid: {type: string}
+  proj4: {type: string}
+  epsg: {type: integer, values: [1-1000000]}
+  list_codes: {type: string, values: [EPSG, ESRI, IAU_2015, IGNF, NKG, NRCAN, OGC, PROJ]}
+  datum: {type: string}
+  datum_trans: {type: integer, default: 0, values: [-1-100]}
+  project: {type: string}
+  format: {type: string, required: true, default: plain, values: [plain, shell, wkt, projjson, proj4]}
+  flag_p: {type: boolean, note: flag -p}
+  flag_g: {type: boolean, note: flag -g}
+  flag_d: {type: boolean, note: flag -d}
+  flag_j: {type: boolean, note: flag -j}
+  flag_f: {type: boolean, note: flag -f}
+  flag_w: {type: boolean, note: flag -w}
+  flag_e: {type: boolean, note: flag -e}
+  flag_t: {type: boolean, note: flag -t}
+  flag_c: {type: boolean, note: flag -c}
+status: active
+review: {state: harvested, source: grass}

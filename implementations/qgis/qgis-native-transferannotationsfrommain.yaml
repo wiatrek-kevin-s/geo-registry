@@ -1,0 +1,10 @@
+id: qgis-native-transferannotationsfrommain
+kind: implementation
+name: native:transferannotationsfrommain
+software: qgis
+call: {interface: qgis-process, name: 'native:transferannotationsfrommain'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  LAYER_NAME: {type: string, required: true, default: Annotations}
+status: active
+review: {state: harvested, source: qgis}

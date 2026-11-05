@@ -1,0 +1,34 @@
+id: postgis-st-astwkb
+kind: implementation
+name: st_astwkb
+software: postgis
+call: {interface: sql, name: st_astwkb}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geom: {type: 'geometry | geometry[]'}
+  prec: {type: integer, default: 'NULL::integer'}
+  prec_z: {type: integer, default: 'NULL::integer'}
+  prec_m: {type: integer, default: 'NULL::integer'}
+  with_sizes: {type: boolean, default: 'NULL::boolean'}
+  with_boxes: {type: boolean, default: 'NULL::boolean'}
+  ids: {type: 'bigint[]'}
+signatures:
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: prec, type: integer, default: 'NULL::integer'}
+  - {name: prec_z, type: integer, default: 'NULL::integer'}
+  - {name: prec_m, type: integer, default: 'NULL::integer'}
+  - {name: with_sizes, type: boolean, default: 'NULL::boolean'}
+  - {name: with_boxes, type: boolean, default: 'NULL::boolean'}
+  returns: bytea
+- arguments:
+  - {name: geom, type: 'geometry[]'}
+  - {name: ids, type: 'bigint[]'}
+  - {name: prec, type: integer, default: 'NULL::integer'}
+  - {name: prec_z, type: integer, default: 'NULL::integer'}
+  - {name: prec_m, type: integer, default: 'NULL::integer'}
+  - {name: with_sizes, type: boolean, default: 'NULL::boolean'}
+  - {name: with_boxes, type: boolean, default: 'NULL::boolean'}
+  returns: bytea
+status: active
+review: {state: harvested, source: postgis}

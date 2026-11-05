@@ -1,0 +1,18 @@
+id: pdal-filters-outlier
+kind: implementation
+name: filters.outlier
+software: pdal
+call: {interface: pdal-pipeline, name: filters.outlier}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  method: {type: option, default: statistical}
+  min_k: {type: option, default: '2'}
+  radius: {type: option, default: '1'}
+  mean_k: {type: option, default: '8'}
+  multiplier: {type: option, default: '2'}
+  class: {type: option, default: '7'}
+docs: https://pdal.org/en/master/stages/filters.outlier.html
+status: active
+review: {state: harvested, source: pdal}

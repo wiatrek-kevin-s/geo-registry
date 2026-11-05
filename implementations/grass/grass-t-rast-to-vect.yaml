@@ -1,0 +1,24 @@
+id: grass-t-rast-to-vect
+kind: implementation
+name: t.rast.to.vect
+software: grass
+call: {interface: cli, name: t.rast.to.vect}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: strds name}
+  output: {type: string, required: true, note: output stvds}
+  where: {type: string}
+  type: {type: string, required: true, values: [point, line, area]}
+  basename: {type: string, required: true}
+  suffix: {type: string, default: gran}
+  column: {type: string, default: value}
+  nprocs: {type: integer, default: 1}
+  flag_n: {type: boolean, note: flag -n}
+  flag_t: {type: boolean, note: flag -t}
+  flag_s: {type: boolean, note: flag -s}
+  flag_z: {type: boolean, note: flag -z}
+  flag_b: {type: boolean, note: flag -b}
+  flag_v: {type: boolean, note: flag -v}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,13 @@
+id: grass-r-in-srtm
+kind: implementation
+name: r.in.srtm
+software: grass
+call: {interface: cli, name: r.in.srtm}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: file name}
+  output: {type: string, note: output cell}
+  flag_1: {type: boolean, note: flag -1}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

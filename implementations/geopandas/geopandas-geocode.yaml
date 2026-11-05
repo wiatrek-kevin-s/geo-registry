@@ -1,0 +1,11 @@
+id: geopandas-geocode
+kind: implementation
+name: geopandas.geocode
+software: geopandas
+call: {interface: python, name: geopandas.geocode}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  strings: {type: any, required: true}
+  provider: {type: any}
+status: active
+review: {state: harvested, source: python-libs}

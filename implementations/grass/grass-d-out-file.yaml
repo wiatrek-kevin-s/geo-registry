@@ -1,0 +1,13 @@
+id: grass-d-out-file
+kind: implementation
+name: d.out.file
+software: grass
+call: {interface: cli, name: d.out.file}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  output: {type: string, required: true, note: output file}
+  format: {type: string, required: true, default: png, values: [png, jpg, bmp, gif, tif]}
+  size: {type: integer}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

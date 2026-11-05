@@ -1,0 +1,15 @@
+id: geopandas-geodataframe-to-parquet
+kind: implementation
+name: GeoDataFrame.to_parquet
+software: geopandas
+call: {interface: python, name: geopandas.GeoDataFrame.to_parquet}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  path: {type: os.PathLike | typing.IO, required: true}
+  index: {type: bool | None}
+  compression: {type: str, default: snappy}
+  geometry_encoding: {type: PARQUET_GEOMETRY_ENCODINGS, default: WKB}
+  write_covering_bbox: {type: bool, default: false}
+  schema_version: {type: SUPPORTED_VERSIONS_LITERAL | None}
+status: active
+review: {state: harvested, source: python-libs}

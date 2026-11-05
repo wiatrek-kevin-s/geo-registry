@@ -1,0 +1,19 @@
+id: pdal-writers-arrow
+kind: implementation
+name: writers.arrow
+software: pdal
+call: {interface: pdal-pipeline, name: writers.arrow}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  filename: {type: option}
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  format: {type: option, default: feather}
+  geoarrow_dimension_name: {type: option, default: xyz}
+  batch_size: {type: option, default: '262144'}
+  write_pipeline_metadata: {type: option, default: 'true'}
+  geoparquet_version: {type: option, default: 1.0.0}
+docs: https://pdal.org/en/master/stages/writers.arrow.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

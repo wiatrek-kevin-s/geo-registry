@@ -1,0 +1,27 @@
+id: qgis-gdal-gdal2tiles
+kind: implementation
+name: gdal:gdal2tiles
+software: qgis
+call: {interface: qgis-process, name: 'gdal:gdal2tiles'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BING_KEY: {type: string}
+  COPYRIGHT: {type: string}
+  GOOGLE_KEY: {type: string}
+  INPUT: {type: raster, required: true}
+  KML: {type: boolean, required: true, default: false}
+  NODATA: {type: number, default: 0}
+  NO_KML: {type: boolean, required: true, default: false}
+  OUTPUT: {type: folderDestination, required: true, note: output}
+  PROFILE: {type: enum, required: true, default: 0, values: [0, 1, 2], note: '0 Mercator, 1 Geodetic, 2 Raster'}
+  RESAMPLING: {type: enum, required: true, default: 0, values: [0, 1, 2, 3, 4, 5, 6], note: '0 Average, 1 Nearest Neighbour,
+      2 Bilinear (2x2 Kernel), 3 Cubic (4x4 Kernel), 4 Cubic B-Spline (4x4 Kernel), 5 Lanczos (6x6 Kernel), 6 Antialias'}
+  RESUME: {type: boolean, required: true, default: false}
+  SOURCE_CRS: {type: crs}
+  TITLE: {type: string}
+  URL: {type: string}
+  VIEWER: {type: enum, required: true, default: 0, values: [0, 1, 2, 3, 4], note: '0 All, 1 GoogleMaps, 2 OpenLayers, 3 Leaflet,
+      4 None'}
+  ZOOM: {type: string, default: ''}
+status: active
+review: {state: harvested, source: qgis}

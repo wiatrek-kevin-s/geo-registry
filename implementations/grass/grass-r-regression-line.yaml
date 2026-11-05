@@ -1,0 +1,15 @@
+id: grass-r-regression-line
+kind: implementation
+name: r.regression.line
+software: grass
+call: {interface: cli, name: r.regression.line}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  mapx: {type: string, required: true, note: cell name}
+  mapy: {type: string, required: true, note: cell name}
+  output: {type: string, note: output file}
+  format: {type: string, required: true, default: plain, values: [plain, shell, json]}
+  flag_g: {type: boolean, note: flag -g}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

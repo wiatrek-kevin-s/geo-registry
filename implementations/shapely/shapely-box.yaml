@@ -1,0 +1,14 @@
+id: shapely-box
+kind: implementation
+name: shapely.box
+software: shapely
+call: {interface: python, name: shapely.box}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  xmin: {type: any, required: true}
+  ymin: {type: any, required: true}
+  xmax: {type: any, required: true}
+  ymax: {type: any, required: true}
+  ccw: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-libs}

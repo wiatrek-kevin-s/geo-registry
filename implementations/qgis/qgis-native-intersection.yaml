@@ -1,0 +1,16 @@
+id: qgis-native-intersection
+kind: implementation
+name: native:intersection
+software: qgis
+call: {interface: qgis-process, name: 'native:intersection'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  GRID_SIZE: {type: number}
+  INPUT: {type: source, required: true}
+  INPUT_FIELDS: {type: field, note: multiple values}
+  OUTPUT: {type: sink, required: true, note: output}
+  OVERLAY: {type: source, required: true}
+  OVERLAY_FIELDS: {type: field, note: multiple values}
+  OVERLAY_FIELDS_PREFIX: {type: string}
+status: active
+review: {state: harvested, source: qgis}

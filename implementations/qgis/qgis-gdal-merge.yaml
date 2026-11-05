@@ -1,0 +1,19 @@
+id: qgis-gdal-merge
+kind: implementation
+name: gdal:merge
+software: qgis
+call: {interface: qgis-process, name: 'gdal:merge'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CREATION_OPTIONS: {type: string, default: ''}
+  DATA_TYPE: {type: enum, required: true, default: 5, values: [0, 1, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9], note: '0 Byte, 1 Int16,
+      10 CFloat64, 11 Int8, 2 UInt16, 3 UInt32, 4 Int32, 5 Float32, 6 Float64, 7 CInt16, 8 CInt32, 9 CFloat32'}
+  EXTRA: {type: string}
+  INPUT: {type: multilayer, required: true}
+  NODATA_INPUT: {type: number}
+  NODATA_OUTPUT: {type: number}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  PCT: {type: boolean, required: true, default: false}
+  SEPARATE: {type: boolean, required: true, default: false}
+status: active
+review: {state: harvested, source: qgis}

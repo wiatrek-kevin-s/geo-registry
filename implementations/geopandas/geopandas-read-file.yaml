@@ -1,0 +1,15 @@
+id: geopandas-read-file
+kind: implementation
+name: geopandas.read_file
+software: geopandas
+call: {interface: python, name: geopandas.read_file}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  filename: {type: any, required: true}
+  bbox: {type: any}
+  mask: {type: any}
+  columns: {type: any}
+  rows: {type: any}
+  engine: {type: any}
+status: active
+review: {state: harvested, source: python-libs}

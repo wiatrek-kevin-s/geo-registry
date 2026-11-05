@@ -1,0 +1,16 @@
+id: qgis-qgis-regularpoints
+kind: implementation
+name: qgis:regularpoints
+software: qgis
+call: {interface: qgis-process, name: 'qgis:regularpoints'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CRS: {type: crs, required: true, default: ProjectCrs}
+  EXTENT: {type: extent, required: true}
+  INSET: {type: distance, required: true, default: 0.0}
+  IS_SPACING: {type: boolean, required: true, default: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  RANDOMIZE: {type: boolean, required: true, default: false}
+  SPACING: {type: distance, required: true, default: 100}
+status: active
+review: {state: harvested, source: qgis}

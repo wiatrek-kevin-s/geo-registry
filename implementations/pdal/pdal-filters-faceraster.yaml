@@ -1,0 +1,20 @@
+id: pdal-filters-faceraster
+kind: implementation
+name: filters.faceraster
+software: pdal
+call: {interface: pdal-pipeline, name: filters.faceraster}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  resolution: {type: option}
+  origin_x: {type: option}
+  origin_y: {type: option}
+  width: {type: option}
+  height: {type: option}
+  mesh: {type: option}
+  nodata: {type: option, default: NaN}
+  max_triangle_edge_length: {type: option, default: Infinity}
+docs: https://pdal.org/en/master/stages/filters.faceraster.html
+status: active
+review: {state: harvested, source: pdal}

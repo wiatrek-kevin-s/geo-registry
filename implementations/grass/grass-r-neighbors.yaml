@@ -1,0 +1,25 @@
+id: grass-r-neighbors
+kind: implementation
+name: r.neighbors
+software: grass
+call: {interface: cli, name: r.neighbors}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  selection: {type: string, note: cell name}
+  output: {type: string, required: true, note: output cell; multiple values}
+  size: {type: integer, default: 3}
+  method: {type: string, default: average, values: [average, median, mode, minimum, maximum, range, stddev, sum, count, variance,
+      diversity, interspersion, quart1, quart3, perc90, quantile], note: multiple values}
+  weighting_function: {type: string, default: none, values: [none, gaussian, exponential, file]}
+  weighting_factor: {type: float}
+  weight: {type: string, note: file name}
+  quantile: {type: float, values: [0.0-1.0], note: multiple values}
+  title: {type: string}
+  nprocs: {type: integer, default: 0}
+  memory: {type: integer, default: 300}
+  flag_a: {type: boolean, note: flag -a}
+  flag_c: {type: boolean, note: flag -c}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

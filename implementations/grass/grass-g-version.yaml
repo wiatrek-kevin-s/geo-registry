@@ -1,0 +1,16 @@
+id: grass-g-version
+kind: implementation
+name: g.version
+software: grass
+call: {interface: cli, name: g.version}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  format: {type: string, default: plain, values: [plain, shell, json]}
+  flag_c: {type: boolean, note: flag -c}
+  flag_x: {type: boolean, note: flag -x}
+  flag_b: {type: boolean, note: flag -b}
+  flag_r: {type: boolean, note: flag -r}
+  flag_e: {type: boolean, note: flag -e}
+  flag_g: {type: boolean, note: flag -g}
+status: active
+review: {state: harvested, source: grass}

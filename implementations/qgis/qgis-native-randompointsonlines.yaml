@@ -1,0 +1,17 @@
+id: qgis-native-randompointsonlines
+kind: implementation
+name: native:randompointsonlines
+software: qgis
+call: {interface: qgis-process, name: 'native:randompointsonlines'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INCLUDE_LINE_ATTRIBUTES: {type: boolean, required: true, default: true}
+  INPUT: {type: source, required: true}
+  MAX_TRIES_PER_POINT: {type: number, default: 10}
+  MIN_DISTANCE: {type: distance, default: 0}
+  MIN_DISTANCE_GLOBAL: {type: distance, default: 0}
+  OUTPUT: {type: sink, required: true, note: output}
+  POINTS_NUMBER: {type: number, required: true, default: 1}
+  SEED: {type: number}
+status: active
+review: {state: harvested, source: qgis}

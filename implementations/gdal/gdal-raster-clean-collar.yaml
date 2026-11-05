@@ -1,0 +1,24 @@
+id: gdal-raster-clean-collar
+kind: implementation
+name: gdal raster clean-collar
+software: gdal
+call: {interface: cli, name: gdal raster clean-collar}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  open-option: {type: string_list}
+  input-format: {type: string_list}
+  input: {type: dataset, required: true, note: raster dataset}
+  output-format: {type: string}
+  creation-option: {type: string_list}
+  overwrite: {type: boolean, default: false}
+  update: {type: boolean, default: false}
+  color: {type: string_list, default: black}
+  color-threshold: {type: integer, default: 15, note: at least 0}
+  pixel-distance: {type: integer, default: 2, note: at least 0}
+  add-alpha: {type: boolean, note: exclusive group addalpha-addmask}
+  add-mask: {type: boolean, note: exclusive group addalpha-addmask}
+  algorithm: {type: string, default: floodfill, values: [floodfill, twopasses]}
+  output: {type: dataset, note: input and output; raster dataset}
+docs: https://gdal.org/programs/gdal_raster_clean_collar.html
+status: active
+review: {state: harvested, source: gdal}

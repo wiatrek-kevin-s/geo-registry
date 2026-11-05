@@ -1,0 +1,30 @@
+id: qgis-gdal-rastercalculator
+kind: implementation
+name: gdal:rastercalculator
+software: qgis
+call: {interface: qgis-process, name: 'gdal:rastercalculator'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BAND_A: {type: band, required: true}
+  BAND_B: {type: band}
+  BAND_C: {type: band}
+  BAND_D: {type: band}
+  BAND_E: {type: band}
+  BAND_F: {type: band}
+  CREATION_OPTIONS: {type: string, default: ''}
+  EXTENT_OPT: {type: enum, required: true, default: 0, values: [0, 1, 2, 3], note: '0 Ignore, 1 Fail, 2 Union, 3 Intersect'}
+  EXTRA: {type: string}
+  FORMULA: {type: string, required: true, default: A*2}
+  INPUT_A: {type: raster, required: true}
+  INPUT_B: {type: raster}
+  INPUT_C: {type: raster}
+  INPUT_D: {type: raster}
+  INPUT_E: {type: raster}
+  INPUT_F: {type: raster}
+  NO_DATA: {type: number}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  PROJWIN: {type: extent}
+  RTYPE: {type: enum, required: true, default: 5, values: [0, 1, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9], note: '0 Byte, 1 Int16,
+      10 CFloat64, 11 Int8, 2 UInt16, 3 UInt32, 4 Int32, 5 Float32, 6 Float64, 7 CInt16, 8 CInt32, 9 CFloat32'}
+status: active
+review: {state: harvested, source: qgis}

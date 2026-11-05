@@ -1,0 +1,19 @@
+id: pdal-filters-stats
+kind: implementation
+name: filters.stats
+software: pdal
+call: {interface: pdal-pipeline, name: filters.stats}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  dimensions: {type: option}
+  enumerate: {type: option}
+  global: {type: option}
+  count: {type: option}
+  advanced: {type: option}
+  commonsrs: {type: option, default: 'EPSG:4326'}
+docs: https://pdal.org/en/master/stages/filters.stats.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

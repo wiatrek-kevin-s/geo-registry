@@ -1,0 +1,14 @@
+id: shapely-voronoi-polygons
+kind: implementation
+name: shapely.voronoi_polygons
+software: shapely
+call: {interface: python, name: shapely.voronoi_polygons}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geometry: {type: any, required: true}
+  tolerance: {type: number, default: 0.0}
+  extend_to: {type: any}
+  only_edges: {type: boolean, default: false}
+  ordered: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-libs}

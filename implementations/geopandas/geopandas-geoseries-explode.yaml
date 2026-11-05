@@ -1,0 +1,11 @@
+id: geopandas-geoseries-explode
+kind: implementation
+name: GeoSeries.explode
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.explode}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  ignore_index: {type: boolean, default: false}
+  index_parts: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-libs}

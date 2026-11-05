@@ -1,0 +1,13 @@
+id: grass-v-to-lines
+kind: implementation
+name: v.to.lines
+software: grass
+call: {interface: cli, name: v.to.lines}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  output: {type: string, required: true, note: output vector}
+  method: {type: string, default: delaunay, values: [delaunay]}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

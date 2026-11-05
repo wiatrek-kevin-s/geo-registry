@@ -1,0 +1,17 @@
+id: grass-r-relief
+kind: implementation
+name: r.relief
+software: grass
+call: {interface: cli, name: r.relief}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  altitude: {type: float, default: 30.0, values: [0-90]}
+  azimuth: {type: float, default: 270.0, values: [0-360]}
+  zscale: {type: float, default: 1.0}
+  scale: {type: float, default: 1.0}
+  units: {type: string, values: [intl, survey]}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

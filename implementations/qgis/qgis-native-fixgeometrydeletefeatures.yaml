@@ -1,0 +1,14 @@
+id: qgis-native-fixgeometrydeletefeatures
+kind: implementation
+name: native:fixgeometrydeletefeatures
+software: qgis
+call: {interface: qgis-process, name: 'native:fixgeometrydeletefeatures'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ERRORS: {type: source, required: true}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  REPORT: {type: sink, required: true, note: output}
+  UNIQUE_ID: {type: field, required: true}
+status: active
+review: {state: harvested, source: qgis}

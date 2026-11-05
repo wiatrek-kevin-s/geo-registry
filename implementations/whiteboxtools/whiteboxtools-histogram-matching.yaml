@@ -1,0 +1,12 @@
+id: whiteboxtools-histogram-matching
+kind: implementation
+name: HistogramMatching
+software: whiteboxtools
+call: {interface: cli, name: HistogramMatching}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  histo_file: {type: 'ExistingFile:Text', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

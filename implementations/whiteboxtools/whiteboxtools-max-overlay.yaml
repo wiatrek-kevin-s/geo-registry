@@ -1,0 +1,11 @@
+id: whiteboxtools-max-overlay
+kind: implementation
+name: MaxOverlay
+software: whiteboxtools
+call: {interface: cli, name: MaxOverlay}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  inputs: {type: 'FileList:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

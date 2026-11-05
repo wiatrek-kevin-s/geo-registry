@@ -1,0 +1,11 @@
+id: qgis-native-definecurrentprojection
+kind: implementation
+name: native:definecurrentprojection
+software: qgis
+call: {interface: qgis-process, name: 'native:definecurrentprojection'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CRS: {type: crs, required: true, default: ''}
+  INPUT: {type: vector, required: true}
+status: active
+review: {state: harvested, source: qgis}

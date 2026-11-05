@@ -1,0 +1,13 @@
+id: grass-t-select
+kind: implementation
+name: t.select
+software: grass
+call: {interface: cli, name: t.select}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  type: {type: string, default: strds, values: [strds, stvds, str3ds]}
+  expression: {type: string, required: true}
+  flag_s: {type: boolean, note: flag -s}
+  flag_d: {type: boolean, note: flag -d}
+status: active
+review: {state: harvested, source: grass}

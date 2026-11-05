@@ -1,0 +1,17 @@
+id: grass-r-in-png
+kind: implementation
+name: r.in.png
+software: grass
+call: {interface: cli, name: r.in.png}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: bin name}
+  output: {type: string, required: true, note: output cell}
+  title: {type: string}
+  gamma: {type: float}
+  alpha: {type: float}
+  flag_f: {type: boolean, note: flag -f}
+  flag_h: {type: boolean, note: flag -h}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

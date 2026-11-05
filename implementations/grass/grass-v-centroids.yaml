@@ -1,0 +1,16 @@
+id: grass-v-centroids
+kind: implementation
+name: v.centroids
+software: grass
+call: {interface: cli, name: v.centroids}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  output: {type: string, required: true, note: output vector}
+  option: {type: string, default: add, values: [add]}
+  layer: {type: string, default: '1', note: layer name}
+  cat: {type: integer, default: 1, note: cat name}
+  step: {type: integer, default: 1}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

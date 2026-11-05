@@ -1,0 +1,16 @@
+id: grass-t-create
+kind: implementation
+name: t.create
+software: grass
+call: {interface: cli, name: t.create}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  output: {type: string, required: true, note: output stds}
+  type: {type: string, default: strds, values: [strds, stvds, str3ds]}
+  temporaltype: {type: string, default: absolute, values: [absolute, relative]}
+  semantictype: {type: string, required: true, default: mean, values: [min, max, sum, mean]}
+  title: {type: string, required: true}
+  description: {type: string, required: true}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

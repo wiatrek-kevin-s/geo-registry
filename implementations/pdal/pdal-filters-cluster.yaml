@@ -1,0 +1,16 @@
+id: pdal-filters-cluster
+kind: implementation
+name: filters.cluster
+software: pdal
+call: {interface: pdal-pipeline, name: filters.cluster}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  min_points: {type: option, default: '1'}
+  max_points: {type: option, default: '18446744073709551615'}
+  tolerance: {type: option, default: '1'}
+  is3d: {type: option, default: 'true'}
+docs: https://pdal.org/en/master/stages/filters.cluster.html
+status: active
+review: {state: harvested, source: pdal}

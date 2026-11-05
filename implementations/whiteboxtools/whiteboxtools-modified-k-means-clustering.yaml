@@ -1,0 +1,16 @@
+id: whiteboxtools-modified-k-means-clustering
+kind: implementation
+name: ModifiedKMeansClustering
+software: whiteboxtools
+call: {interface: cli, name: ModifiedKMeansClustering}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  inputs: {type: 'FileList:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  out_html: {type: 'NewFile:Html', note: output}
+  start_clusters: {type: Integer, default: '1000'}
+  merge_dist: {type: Float}
+  max_iterations: {type: Integer, default: '10'}
+  class_change: {type: Float, default: '2.0'}
+status: active
+review: {state: harvested, source: whitebox}

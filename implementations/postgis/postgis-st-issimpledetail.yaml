@@ -1,0 +1,18 @@
+id: postgis-st-issimpledetail
+kind: implementation
+name: st_issimpledetail
+software: postgis
+call: {interface: sql, name: st_issimpledetail}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geom: {type: geometry}
+  findalllocations: {type: integer, default: '0'}
+  boundarynoderule: {type: integer, default: '1'}
+signatures:
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: findalllocations, type: integer, default: '0'}
+  - {name: boundarynoderule, type: integer, default: '1'}
+  returns: record
+status: active
+review: {state: harvested, source: postgis}

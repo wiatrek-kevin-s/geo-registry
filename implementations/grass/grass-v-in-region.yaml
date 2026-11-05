@@ -1,0 +1,14 @@
+id: grass-v-in-region
+kind: implementation
+name: v.in.region
+software: grass
+call: {interface: cli, name: v.in.region}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  output: {type: string, required: true, note: output vector}
+  type: {type: string, default: area, values: [line, area]}
+  cat: {type: integer, default: 1, note: cat name}
+  flag_d: {type: boolean, note: flag -d}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

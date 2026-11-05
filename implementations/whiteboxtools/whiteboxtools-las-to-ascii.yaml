@@ -1,0 +1,10 @@
+id: whiteboxtools-las-to-ascii
+kind: implementation
+name: LasToAscii
+software: whiteboxtools
+call: {interface: cli, name: LasToAscii}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  inputs: {type: 'FileList:Lidar', required: true}
+status: active
+review: {state: harvested, source: whitebox}

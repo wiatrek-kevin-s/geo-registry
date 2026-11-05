@@ -1,0 +1,14 @@
+id: grass-db-describe
+kind: implementation
+name: db.describe
+software: grass
+call: {interface: cli, name: db.describe}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  table: {type: string, required: true, note: dbtable name}
+  driver: {type: string, default: sqlite, values: [dbf, ogr, pg, sqlite], note: dbdriver name}
+  database: {type: string, default: $GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db, note: dbname name}
+  format: {type: string, required: true, default: plain, values: [plain, json]}
+  flag_c: {type: boolean, note: flag -c}
+status: active
+review: {state: harvested, source: grass}

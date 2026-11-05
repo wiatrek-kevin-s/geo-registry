@@ -1,0 +1,13 @@
+id: whiteboxtools-clip-raster-to-polygon
+kind: implementation
+name: ClipRasterToPolygon
+software: whiteboxtools
+call: {interface: cli, name: ClipRasterToPolygon}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  polygons: {type: 'ExistingFile:Vector:Polygon', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  maintain_dimensions: {type: Boolean, default: 'false'}
+status: active
+review: {state: harvested, source: whitebox}

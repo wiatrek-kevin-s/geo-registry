@@ -1,0 +1,14 @@
+id: pdal-writers-sbet
+kind: implementation
+name: writers.sbet
+software: pdal
+call: {interface: pdal-pipeline, name: writers.sbet}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  filename: {type: option}
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  angles_are_degrees: {type: option, default: 'true'}
+docs: https://pdal.org/en/master/stages/writers.sbet.html
+status: active
+review: {state: harvested, source: pdal}

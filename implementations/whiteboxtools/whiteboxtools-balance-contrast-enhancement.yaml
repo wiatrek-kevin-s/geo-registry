@@ -1,0 +1,12 @@
+id: whiteboxtools-balance-contrast-enhancement
+kind: implementation
+name: BalanceContrastEnhancement
+software: whiteboxtools
+call: {interface: cli, name: BalanceContrastEnhancement}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  band_mean: {type: Float, default: '100.0'}
+status: active
+review: {state: harvested, source: whitebox}

@@ -1,0 +1,48 @@
+id: postgis-st-asgml
+kind: implementation
+name: st_asgml
+software: postgis
+call: {interface: sql, name: st_asgml}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geog: {type: geography}
+  maxdecimaldigits: {type: integer, default: '15'}
+  options: {type: integer, default: '0'}
+  nprefix: {type: text}
+  id: {type: text}
+  geom: {type: geometry}
+  version: {type: integer}
+signatures:
+- arguments:
+  - {name: geog, type: geography}
+  - {name: maxdecimaldigits, type: integer, default: '15'}
+  - {name: options, type: integer, default: '0'}
+  - {name: nprefix, type: text, default: '''gml''::text'}
+  - {name: id, type: text, default: '''''::text'}
+  returns: text
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: maxdecimaldigits, type: integer, default: '15'}
+  - {name: options, type: integer, default: '0'}
+  returns: text
+- arguments:
+  - {type: text}
+  returns: text
+- arguments:
+  - {name: version, type: integer}
+  - {name: geog, type: geography}
+  - {name: maxdecimaldigits, type: integer, default: '15'}
+  - {name: options, type: integer, default: '0'}
+  - {name: nprefix, type: text, default: '''gml''::text'}
+  - {name: id, type: text, default: '''''::text'}
+  returns: text
+- arguments:
+  - {name: version, type: integer}
+  - {name: geom, type: geometry}
+  - {name: maxdecimaldigits, type: integer, default: '15'}
+  - {name: options, type: integer, default: '0'}
+  - {name: nprefix, type: text, default: 'NULL::text'}
+  - {name: id, type: text, default: 'NULL::text'}
+  returns: text
+status: active
+review: {state: harvested, source: postgis}

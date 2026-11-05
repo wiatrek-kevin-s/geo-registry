@@ -1,0 +1,34 @@
+id: postgis-st-affine
+kind: implementation
+name: st_affine
+software: postgis
+call: {interface: sql, name: st_affine}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  - {type: double precision}
+  - {type: double precision}
+  - {type: double precision}
+  - {type: double precision}
+  - {type: double precision}
+  - {type: double precision}
+  returns: geometry
+- arguments:
+  - {type: geometry}
+  - {type: double precision}
+  - {type: double precision}
+  - {type: double precision}
+  - {type: double precision}
+  - {type: double precision}
+  - {type: double precision}
+  - {type: double precision}
+  - {type: double precision}
+  - {type: double precision}
+  - {type: double precision}
+  - {type: double precision}
+  - {type: double precision}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

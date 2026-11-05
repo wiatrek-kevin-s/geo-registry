@@ -1,0 +1,6 @@
+# QGIS, for qgis_process (harvest and equivalence tests); runs headless.
+name: geo-registry-qgis
+channels:
+  - conda-forge
+dependencies:
+  - qgis

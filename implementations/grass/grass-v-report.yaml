@@ -1,0 +1,17 @@
+id: grass-v-report
+kind: implementation
+name: v.report
+software: grass
+call: {interface: cli, name: v.report}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '1', note: layer name}
+  option: {type: string, required: true, values: [area, length, coor]}
+  units: {type: string, values: [miles, feet, meters, kilometers, acres, hectares, percent]}
+  sort: {type: string, values: [asc, desc]}
+  separator: {type: string, default: pipe, note: separator name}
+  flag_c: {type: boolean, note: flag -c}
+  flag_d: {type: boolean, note: flag -d}
+status: active
+review: {state: harvested, source: grass}

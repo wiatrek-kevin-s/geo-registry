@@ -1,0 +1,19 @@
+id: grass-t-rast3d-mapcalc
+kind: implementation
+name: t.rast3d.mapcalc
+software: grass
+call: {interface: cli, name: t.rast3d.mapcalc}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  inputs: {type: string, required: true, note: str3ds name; multiple values}
+  expression: {type: string, required: true}
+  method: {type: string, default: 'during,overlap,contain,equal', values: [start, during, overlap, contain, equal, follows,
+      precedes], note: multiple values}
+  output: {type: string, required: true, note: output str3ds}
+  basename: {type: string, required: true}
+  nprocs: {type: integer, default: 1}
+  flag_n: {type: boolean, note: flag -n}
+  flag_s: {type: boolean, note: flag -s}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

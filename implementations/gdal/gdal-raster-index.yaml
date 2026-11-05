@@ -1,0 +1,35 @@
+id: gdal-raster-index
+kind: implementation
+name: gdal raster index
+software: gdal
+call: {interface: cli, name: gdal raster index}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  input: {type: dataset_list, required: true, note: raster dataset}
+  output-format: {type: string}
+  creation-option: {type: string_list}
+  layer-creation-option: {type: string_list}
+  overwrite: {type: boolean, default: false, note: exclusive group overwrite-update}
+  update: {type: boolean, default: false, note: exclusive group overwrite-update}
+  overwrite-layer: {type: boolean, default: false}
+  append: {type: boolean, default: false}
+  output-layer: {type: string}
+  recursive: {type: boolean}
+  filename-filter: {type: string_list}
+  min-pixel-size: {type: real, note: more than 0.0}
+  max-pixel-size: {type: real, note: more than 0.0}
+  location-name: {type: string, default: location}
+  absolute-path: {type: boolean}
+  output-crs: {type: string}
+  metadata: {type: string_list}
+  skip-errors: {type: boolean}
+  profile: {type: string, default: none, values: [none, STAC-GeoParquet]}
+  base-url: {type: string}
+  id-method: {type: string, default: filename, values: [filename, md5, metadata-item]}
+  id-metadata-item: {type: string, default: id}
+  source-crs-field-name: {type: string}
+  source-crs-format: {type: string, default: auto, values: [auto, WKT, EPSG, PROJ]}
+  output: {type: dataset, required: true, note: input and output; vector dataset}
+docs: https://gdal.org/programs/gdal_raster_index.html
+status: active
+review: {state: harvested, source: gdal}

@@ -1,0 +1,25 @@
+id: postgis-st-estimatedextent
+kind: implementation
+name: st_estimatedextent
+software: postgis
+call: {interface: sql, name: st_estimatedextent}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: text}
+  - {type: text}
+  returns: box2d
+- arguments:
+  - {type: text}
+  - {type: text}
+  - {type: text}
+  returns: box2d
+- arguments:
+  - {type: text}
+  - {type: text}
+  - {type: text}
+  - {type: boolean}
+  returns: box2d
+status: active
+review: {state: harvested, source: postgis}

@@ -1,0 +1,25 @@
+id: pdal-readers-nitf
+kind: implementation
+name: readers.nitf
+software: pdal
+call: {interface: pdal-pipeline, name: readers.nitf}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  filename: {type: option}
+  count: {type: option, default: '18446744073709551615'}
+  override_srs: {type: option}
+  default_srs: {type: option}
+  extra_dims: {type: option}
+  compression: {type: option, default: EITHER}
+  use_eb_vlr: {type: option}
+  ignore_vlr: {type: option}
+  ignore_missing_vlrs: {type: option}
+  start: {type: option}
+  fix_dims: {type: option, default: 'true'}
+  nosrs: {type: option}
+  threads: {type: option, default: '7'}
+  srs_vlr_order: {type: option}
+docs: https://pdal.org/en/master/stages/readers.nitf.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

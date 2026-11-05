@@ -1,0 +1,20 @@
+id: grass-v-univar
+kind: implementation
+name: v.univar
+software: grass
+call: {interface: cli, name: v.univar}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '1', note: layer name}
+  type: {type: string, default: 'point,line,area', values: [point, line, boundary, centroid, area], note: multiple values}
+  column: {type: string, note: dbcolumn name}
+  where: {type: string, note: sql_query name}
+  percentile: {type: integer, default: 90, values: [0-100]}
+  format: {type: string, required: true, default: plain, values: [plain, shell, json]}
+  flag_g: {type: boolean, note: flag -g}
+  flag_e: {type: boolean, note: flag -e}
+  flag_w: {type: boolean, note: flag -w}
+  flag_d: {type: boolean, note: flag -d}
+status: active
+review: {state: harvested, source: grass}

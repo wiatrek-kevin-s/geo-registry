@@ -1,0 +1,27 @@
+id: pdal-readers-tindex
+kind: implementation
+name: readers.tindex
+software: pdal
+call: {interface: pdal-pipeline, name: readers.tindex}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  filename: {type: option}
+  count: {type: option, default: '18446744073709551615'}
+  override_srs: {type: option}
+  default_srs: {type: option}
+  lyr_name: {type: option, default: pdal}
+  srs_column: {type: option}
+  tindex_name: {type: option, default: location}
+  sql: {type: option}
+  bounds: {type: option}
+  polygon: {type: option}
+  ogr: {type: option}
+  t_srs: {type: option, default: 'EPSG:4326'}
+  filter_srs: {type: option, default: 'EPSG:4326'}
+  where: {type: option}
+  dialect: {type: option, default: OGRSQL}
+  reader_args: {type: option}
+docs: https://pdal.org/en/master/stages/readers.tindex.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

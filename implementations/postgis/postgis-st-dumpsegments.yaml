@@ -1,0 +1,13 @@
+id: postgis-st-dumpsegments
+kind: implementation
+name: st_dumpsegments
+software: postgis
+call: {interface: sql, name: st_dumpsegments}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  returns: SETOF geometry_dump
+status: active
+review: {state: harvested, source: postgis}

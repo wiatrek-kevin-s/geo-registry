@@ -1,0 +1,27 @@
+id: grass-r-report
+kind: implementation
+name: r.report
+software: grass
+call: {interface: cli, name: r.report}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: cell name; multiple values}
+  units: {type: string, default: 'cells,percent', values: [miles, meters, kilometers, acres, hectares, cells, percent], note: multiple
+      values}
+  output: {type: string, note: output file}
+  null_value: {type: string, default: '*'}
+  page_length: {type: integer, default: 0}
+  page_width: {type: integer, default: 79}
+  nsteps: {type: integer, default: 255}
+  sort: {type: string, values: [asc, desc]}
+  format: {type: string, required: true, default: plain, values: [plain, json]}
+  flag_h: {type: boolean, note: flag -h}
+  flag_f: {type: boolean, note: flag -f}
+  flag_e: {type: boolean, note: flag -e}
+  flag_n: {type: boolean, note: flag -n}
+  flag_a: {type: boolean, note: flag -a}
+  flag_c: {type: boolean, note: flag -c}
+  flag_i: {type: boolean, note: flag -i}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

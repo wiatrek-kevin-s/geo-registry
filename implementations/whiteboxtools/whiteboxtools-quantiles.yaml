@@ -1,0 +1,12 @@
+id: whiteboxtools-quantiles
+kind: implementation
+name: Quantiles
+software: whiteboxtools
+call: {interface: cli, name: Quantiles}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  num_quantiles: {type: Integer, required: true, default: '5'}
+status: active
+review: {state: harvested, source: whitebox}

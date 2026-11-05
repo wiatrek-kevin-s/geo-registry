@@ -1,0 +1,17 @@
+id: grass-i-evapo-time
+kind: implementation
+name: i.evapo.time
+software: grass
+call: {interface: cli, name: i.evapo.time}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  eta: {type: string, required: true, note: cell name; multiple values}
+  eta_doy: {type: string, required: true, note: cell name; multiple values}
+  eto: {type: string, required: true, note: cell name; multiple values}
+  eto_doy_min: {type: float, required: true}
+  start_period: {type: float, required: true}
+  end_period: {type: float, required: true}
+  output: {type: string, required: true, note: output cell}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

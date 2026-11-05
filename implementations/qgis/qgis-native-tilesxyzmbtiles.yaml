@@ -1,0 +1,19 @@
+id: qgis-native-tilesxyzmbtiles
+kind: implementation
+name: native:tilesxyzmbtiles
+software: qgis
+call: {interface: qgis-process, name: 'native:tilesxyzmbtiles'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ANTIALIAS: {type: boolean, required: true, default: true}
+  BACKGROUND_COLOR: {type: color, default: '#00000000'}
+  DPI: {type: number, required: true, default: 96}
+  EXTENT: {type: extent, required: true}
+  METATILESIZE: {type: number, required: true, default: 4}
+  OUTPUT_FILE: {type: fileDestination, required: true, note: output}
+  QUALITY: {type: number, required: true, default: 75}
+  TILE_FORMAT: {type: enum, required: true, default: 0, values: [0, 1], note: '0 PNG, 1 JPG'}
+  ZOOM_MAX: {type: number, required: true, default: 12}
+  ZOOM_MIN: {type: number, required: true, default: 12}
+status: active
+review: {state: harvested, source: qgis}

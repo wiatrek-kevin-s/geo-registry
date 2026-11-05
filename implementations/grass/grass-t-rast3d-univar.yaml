@@ -1,0 +1,18 @@
+id: grass-t-rast3d-univar
+kind: implementation
+name: t.rast3d.univar
+software: grass
+call: {interface: cli, name: t.rast3d.univar}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: str3ds name}
+  zones: {type: string, note: cell name}
+  nprocs: {type: integer, default: 0}
+  output: {type: string, note: output file}
+  where: {type: string}
+  separator: {type: string, default: pipe, note: separator name}
+  flag_e: {type: boolean, note: flag -e}
+  flag_s: {type: boolean, note: flag -s}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

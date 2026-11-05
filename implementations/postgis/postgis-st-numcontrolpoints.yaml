@@ -1,0 +1,14 @@
+id: postgis-st-numcontrolpoints
+kind: implementation
+name: st_numcontrolpoints
+software: postgis
+call: {interface: sql, name: st_numcontrolpoints}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  nurbscurve: {type: geometry}
+signatures:
+- arguments:
+  - {name: nurbscurve, type: geometry}
+  returns: integer
+status: active
+review: {state: harvested, source: postgis}

@@ -1,0 +1,16 @@
+id: qgis-native-hillshade
+kind: implementation
+name: native:hillshade
+software: qgis
+call: {interface: qgis-process, name: 'native:hillshade'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  AZIMUTH: {type: number, required: true, default: 300}
+  CREATION_OPTIONS: {type: string}
+  INPUT: {type: raster, required: true}
+  NODATA: {type: number, required: true, default: -9999.0}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  V_ANGLE: {type: number, required: true, default: 40}
+  Z_FACTOR: {type: number, required: true, default: 1.0}
+status: active
+review: {state: harvested, source: qgis}

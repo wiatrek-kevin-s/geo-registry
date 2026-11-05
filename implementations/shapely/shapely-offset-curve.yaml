@@ -1,0 +1,14 @@
+id: shapely-offset-curve
+kind: implementation
+name: shapely.offset_curve
+software: shapely
+call: {interface: python, name: shapely.offset_curve}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geometry: {type: any, required: true}
+  distance: {type: any, required: true}
+  quad_segs: {type: integer, default: 8}
+  join_style: {type: string, default: round}
+  mitre_limit: {type: number, default: 5.0}
+status: active
+review: {state: harvested, source: python-libs}

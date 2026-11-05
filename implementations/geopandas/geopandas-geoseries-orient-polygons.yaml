@@ -1,0 +1,10 @@
+id: geopandas-geoseries-orient-polygons
+kind: implementation
+name: GeoSeries.orient_polygons
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.orient_polygons}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  exterior_cw: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-libs}

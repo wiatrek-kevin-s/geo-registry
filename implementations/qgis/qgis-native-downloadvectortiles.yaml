@@ -1,0 +1,14 @@
+id: qgis-native-downloadvectortiles
+kind: implementation
+name: native:downloadvectortiles
+software: qgis
+call: {interface: qgis-process, name: 'native:downloadvectortiles'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  EXTENT: {type: extent, required: true}
+  INPUT: {type: layer, required: true}
+  MAX_ZOOM: {type: number, required: true, default: 10}
+  OUTPUT: {type: vectorTileDestination, required: true, note: output}
+  TILE_LIMIT: {type: number, required: true, default: 100}
+status: active
+review: {state: harvested, source: qgis}

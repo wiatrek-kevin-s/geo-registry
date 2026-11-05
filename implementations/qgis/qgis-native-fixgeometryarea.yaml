@@ -1,0 +1,22 @@
+id: qgis-native-fixgeometryarea
+kind: implementation
+name: native:fixgeometryarea
+software: qgis
+call: {interface: qgis-process, name: 'native:fixgeometryarea'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ERRORS: {type: source, required: true}
+  INPUT: {type: source, required: true}
+  MERGE_ATTRIBUTE: {type: field}
+  METHOD: {type: enum, required: true, values: [0, 1, 2], note: '0 Merge with neighboring polygon with longest shared edge,
+      1 Merge with neighboring polygon with largest area, 2 Merge with neighboring polygon with identical attribute value,
+      if any, or leave as is'}
+  OUTPUT: {type: sink, required: true, note: output}
+  PART_IDX: {type: field, required: true, default: gc_partidx}
+  REPORT: {type: sink, required: true, note: output}
+  RING_IDX: {type: field, required: true, default: gc_ringidx}
+  TOLERANCE: {type: number, required: true, default: 8}
+  UNIQUE_ID: {type: field, required: true, default: id}
+  VERTEX_IDX: {type: field, required: true, default: gc_vertidx}
+status: active
+review: {state: harvested, source: qgis}

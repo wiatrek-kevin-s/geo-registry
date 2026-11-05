@@ -1,0 +1,15 @@
+id: pdal-filters-litree
+kind: implementation
+name: filters.litree
+software: pdal
+call: {interface: pdal-pipeline, name: filters.litree}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  min_points: {type: option, default: '10'}
+  min_height: {type: option, default: '3'}
+  radius: {type: option, default: '100'}
+docs: https://pdal.org/en/master/stages/filters.litree.html
+status: active
+review: {state: harvested, source: pdal}

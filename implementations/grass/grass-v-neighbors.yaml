@@ -1,0 +1,19 @@
+id: grass-v-neighbors
+kind: implementation
+name: v.neighbors
+software: grass
+call: {interface: cli, name: v.neighbors}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '1', note: layer name}
+  output: {type: string, required: true, note: output cell}
+  method: {type: string, required: true, default: count, values: [count, sum, average, median, mode, minimum, maximum, range,
+      stddev, variance, diversity]}
+  size: {type: float, required: true}
+  points_column: {type: string, note: dbcolumn name}
+  cats: {type: string, note: cats name}
+  where: {type: string, note: sql_query name}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,10 @@
+id: grass-db-test
+kind: implementation
+name: db.test
+software: grass
+call: {interface: cli, name: db.test}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  test: {type: string, required: true, values: [test1]}
+status: active
+review: {state: harvested, source: grass}

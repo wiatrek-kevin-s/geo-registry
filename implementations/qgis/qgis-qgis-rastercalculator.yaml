@@ -1,0 +1,16 @@
+id: qgis-qgis-rastercalculator
+kind: implementation
+name: qgis:rastercalculator
+software: qgis
+call: {interface: qgis-process, name: 'qgis:rastercalculator'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CELLSIZE: {type: number, default: 0.0}
+  CRS: {type: crs}
+  EXPRESSION: {type: raster_calc_expression, required: true}
+  EXTENT: {type: extent}
+  LAYERS: {type: multilayer}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+notes: Deprecated in QGIS.
+status: active
+review: {state: harvested, source: qgis}

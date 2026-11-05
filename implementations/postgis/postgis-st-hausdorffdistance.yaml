@@ -1,0 +1,21 @@
+id: postgis-st-hausdorffdistance
+kind: implementation
+name: st_hausdorffdistance
+software: postgis
+call: {interface: sql, name: st_hausdorffdistance}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geom1: {type: geometry}
+  geom2: {type: geometry}
+signatures:
+- arguments:
+  - {name: geom1, type: geometry}
+  - {name: geom2, type: geometry}
+  returns: double precision
+- arguments:
+  - {name: geom1, type: geometry}
+  - {name: geom2, type: geometry}
+  - {type: double precision}
+  returns: double precision
+status: active
+review: {state: harvested, source: postgis}

@@ -1,0 +1,21 @@
+id: grass-r-terraflow
+kind: implementation
+name: r.terraflow
+software: grass
+call: {interface: cli, name: r.terraflow}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  elevation: {type: string, required: true, note: cell name}
+  filled: {type: string, note: output cell}
+  direction: {type: string, note: output cell}
+  swatershed: {type: string, note: output cell}
+  accumulation: {type: string, note: output cell}
+  tci: {type: string, note: output cell}
+  d8cut: {type: float}
+  memory: {type: integer, default: 300}
+  directory: {type: string}
+  stats: {type: string}
+  flag_s: {type: boolean, note: flag -s}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

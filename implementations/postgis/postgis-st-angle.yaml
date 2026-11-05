@@ -1,0 +1,26 @@
+id: postgis-st-angle
+kind: implementation
+name: st_angle
+software: postgis
+call: {interface: sql, name: st_angle}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  line1: {type: geometry}
+  line2: {type: geometry}
+  pt1: {type: geometry}
+  pt2: {type: geometry}
+  pt3: {type: geometry}
+  pt4: {type: geometry, default: '''0101000000000000000000F87F000000000000F87F''::geometry'}
+signatures:
+- arguments:
+  - {name: line1, type: geometry}
+  - {name: line2, type: geometry}
+  returns: double precision
+- arguments:
+  - {name: pt1, type: geometry}
+  - {name: pt2, type: geometry}
+  - {name: pt3, type: geometry}
+  - {name: pt4, type: geometry, default: '''0101000000000000000000F87F000000000000F87F''::geometry'}
+  returns: double precision
+status: active
+review: {state: harvested, source: postgis}

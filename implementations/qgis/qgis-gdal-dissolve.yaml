@@ -1,0 +1,20 @@
+id: qgis-gdal-dissolve
+kind: implementation
+name: gdal:dissolve
+software: qgis
+call: {interface: qgis-process, name: 'gdal:dissolve'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  COMPUTE_AREA: {type: boolean, required: true, default: false}
+  COMPUTE_STATISTICS: {type: boolean, required: true, default: false}
+  COUNT_FEATURES: {type: boolean, required: true, default: false}
+  EXPLODE_COLLECTIONS: {type: boolean, required: true, default: false}
+  FIELD: {type: field}
+  GEOMETRY: {type: string, required: true, default: geometry}
+  INPUT: {type: source, required: true}
+  KEEP_ATTRIBUTES: {type: boolean, required: true, default: false}
+  OPTIONS: {type: string, default: ''}
+  OUTPUT: {type: vectorDestination, required: true, note: output}
+  STATISTICS_ATTRIBUTE: {type: field}
+status: active
+review: {state: harvested, source: qgis}

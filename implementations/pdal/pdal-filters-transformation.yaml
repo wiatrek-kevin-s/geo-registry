@@ -1,0 +1,16 @@
+id: pdal-filters-transformation
+kind: implementation
+name: filters.transformation
+software: pdal
+call: {interface: pdal-pipeline, name: filters.transformation}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  invert: {type: option, default: 'false'}
+  matrix: {type: option}
+  override_srs: {type: option}
+docs: https://pdal.org/en/master/stages/filters.transformation.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

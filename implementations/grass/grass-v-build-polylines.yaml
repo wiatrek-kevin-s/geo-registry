@@ -1,0 +1,14 @@
+id: grass-v-build-polylines
+kind: implementation
+name: v.build.polylines
+software: grass
+call: {interface: cli, name: v.build.polylines}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  output: {type: string, required: true, note: output vector}
+  cats: {type: string, default: 'no', values: ['no', first, multi, same]}
+  type: {type: string, default: 'line,boundary', values: [line, boundary], note: multiple values}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

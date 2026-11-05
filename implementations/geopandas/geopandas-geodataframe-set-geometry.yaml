@@ -1,0 +1,13 @@
+id: geopandas-geodataframe-set-geometry
+kind: implementation
+name: GeoDataFrame.set_geometry
+software: geopandas
+call: {interface: python, name: geopandas.GeoDataFrame.set_geometry}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  col: {type: any, required: true}
+  drop: {type: bool | None}
+  inplace: {type: bool, default: false}
+  crs: {type: Any | None}
+status: active
+review: {state: harvested, source: python-libs}

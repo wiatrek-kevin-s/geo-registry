@@ -1,0 +1,17 @@
+id: grass-r-resamp-stats
+kind: implementation
+name: r.resamp.stats
+software: grass
+call: {interface: cli, name: r.resamp.stats}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  method: {type: string, default: average, values: [average, median, mode, minimum, maximum, range, quart1, quart3, perc90,
+      sum, variance, stddev, quantile, count, diversity]}
+  quantile: {type: float, default: 0.5, values: [0.0-1.0]}
+  flag_n: {type: boolean, note: flag -n}
+  flag_w: {type: boolean, note: flag -w}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

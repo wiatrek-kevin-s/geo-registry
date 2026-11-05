@@ -1,0 +1,19 @@
+id: grass-v-cluster
+kind: implementation
+name: v.cluster
+software: grass
+call: {interface: cli, name: v.cluster}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  output: {type: string, required: true, note: output vector}
+  layer: {type: string, default: '2', note: layer name}
+  distance: {type: float}
+  min: {type: integer}
+  method: {type: string, default: dbscan, values: [dbscan, dbscan2, density, optics, optics2]}
+  flag_2: {type: boolean, note: flag -2}
+  flag_b: {type: boolean, note: flag -b}
+  flag_t: {type: boolean, note: flag -t}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

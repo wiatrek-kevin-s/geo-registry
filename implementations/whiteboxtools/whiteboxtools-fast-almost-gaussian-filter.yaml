@@ -1,0 +1,12 @@
+id: whiteboxtools-fast-almost-gaussian-filter
+kind: implementation
+name: FastAlmostGaussianFilter
+software: whiteboxtools
+call: {interface: cli, name: FastAlmostGaussianFilter}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  sigma: {type: Float, required: true, default: '1.8'}
+status: active
+review: {state: harvested, source: whitebox}

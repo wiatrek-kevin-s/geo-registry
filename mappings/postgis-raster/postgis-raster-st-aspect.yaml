@@ -1,0 +1,7 @@
+id: postgis-raster-st-aspect
+implements: aspect
+crosswalk:
+  raster: rast
+  band: nband
+effects: { modifies_input: false, network: false }
+review: { state: draft }

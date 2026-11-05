@@ -1,0 +1,18 @@
+id: qgis-native-alignrasters
+kind: implementation
+name: native:alignrasters
+software: qgis
+call: {interface: qgis-process, name: 'native:alignrasters'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CELL_SIZE_X: {type: number}
+  CELL_SIZE_Y: {type: number}
+  CRS: {type: crs}
+  EXTENT: {type: extent}
+  GRID_OFFSET_X: {type: number}
+  GRID_OFFSET_Y: {type: number}
+  LAYERS: {type: alignrasterlayers, required: true}
+  REFERENCE_LAYER: {type: raster, required: true}
+notes: Deprecated in QGIS.
+status: active
+review: {state: harvested, source: qgis}

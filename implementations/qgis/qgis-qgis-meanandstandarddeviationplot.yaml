@@ -1,0 +1,13 @@
+id: qgis-qgis-meanandstandarddeviationplot
+kind: implementation
+name: qgis:meanandstandarddeviationplot
+software: qgis
+call: {interface: qgis-process, name: 'qgis:meanandstandarddeviationplot'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  NAME_FIELD: {type: field, required: true}
+  OUTPUT: {type: fileDestination, required: true, note: output}
+  VALUE_FIELD: {type: field, required: true}
+status: active
+review: {state: harvested, source: qgis}

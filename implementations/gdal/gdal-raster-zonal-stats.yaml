@@ -1,0 +1,39 @@
+id: gdal-raster-zonal-stats
+kind: implementation
+name: gdal raster zonal-stats
+software: gdal
+call: {interface: cli, name: gdal raster zonal-stats}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  input-format: {type: string_list}
+  open-option: {type: string_list}
+  input: {type: dataset_list, required: true, note: raster dataset}
+  output-format: {type: string}
+  output-open-option: {type: string_list}
+  creation-option: {type: string_list}
+  layer-creation-option: {type: string_list}
+  overwrite: {type: boolean, default: false}
+  update: {type: boolean, default: false}
+  overwrite-layer: {type: boolean, default: false}
+  append: {type: boolean, default: false, note: exclusive group append-upsert}
+  upsert: {type: boolean, note: exclusive group append-upsert}
+  output-layer: {type: string}
+  skip-errors: {type: boolean}
+  band: {type: integer_list}
+  zones: {type: dataset, required: true, note: raster or vector or multidim_raster dataset}
+  zones-band: {type: integer, note: exclusive group BAND_OR_LAYER}
+  zones-layer: {type: string, note: exclusive group BAND_OR_LAYER}
+  weights: {type: dataset, note: raster or vector or multidim_raster dataset}
+  weights-band: {type: integer, default: 1}
+  pixels: {type: string, values: [default, fractional, all-touched]}
+  stat: {type: string_list, required: true, values: [center_x, center_y, count, coverage, frac, max, max_center_x, max_center_y,
+      mean, median, min, minority, min_center_x, min_center_y, mode, stdev, sum, unique, values, variance, variety, weighted_mean,
+      weighted_stdev, weighted_sum, weighted_variance, weights], note: at least 1.0}
+  include-field: {type: string_list}
+  include-geom: {type: boolean}
+  strategy: {type: string, default: feature, values: [feature, raster]}
+  chunk-size: {type: string, default: 5%}
+  output: {type: dataset, required: true, note: input and output; vector dataset}
+docs: https://gdal.org/programs/gdal_raster_zonal_stats.html
+status: active
+review: {state: harvested, source: gdal}

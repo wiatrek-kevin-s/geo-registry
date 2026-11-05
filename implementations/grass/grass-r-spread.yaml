@@ -1,0 +1,27 @@
+id: grass-r-spread
+kind: implementation
+name: r.spread
+software: grass
+call: {interface: cli, name: r.spread}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  base_ros: {type: string, required: true, note: cell name}
+  max_ros: {type: string, required: true, note: cell name}
+  direction_ros: {type: string, required: true, note: cell name}
+  start: {type: string, required: true, note: cell name}
+  spotting_distance: {type: string, note: cell name}
+  wind_speed: {type: string, note: cell name}
+  fuel_moisture: {type: string, note: cell name}
+  least_size: {type: string, values: ['3', '5', '7', '9', '11', '13', '15']}
+  comp_dens: {type: string}
+  init_time: {type: string, default: '0'}
+  lag: {type: string}
+  backdrop: {type: string, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  x_output: {type: string, note: output cell}
+  y_output: {type: string, note: output cell}
+  flag_s: {type: boolean, note: flag -s}
+  flag_i: {type: boolean, note: flag -i}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

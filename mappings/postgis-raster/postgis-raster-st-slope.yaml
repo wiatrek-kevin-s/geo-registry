@@ -1,0 +1,11 @@
+id: postgis-raster-st-slope
+implements: slope
+crosswalk:
+  raster: rast
+  band: nband
+  units: { param: units, values: { degrees: DEGREES, percent: PERCENT } }
+  z_unit: { fixed: crs-units, note: "Elevation is taken in the CRS's horizontal units; otherwise set scale (see the PostGIS page)." }
+differences:
+  - Cells on the raster's edge are computed from incomplete neighbourhoods; on a uniform slope they come out lower, and differently from GDAL's.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

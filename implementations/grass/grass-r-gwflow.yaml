@@ -1,0 +1,34 @@
+id: grass-r-gwflow
+kind: implementation
+name: r.gwflow
+software: grass
+call: {interface: cli, name: r.gwflow}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  phead: {type: string, required: true, note: cell name}
+  status: {type: string, required: true, note: cell name}
+  hc_x: {type: string, required: true, note: cell name}
+  hc_y: {type: string, required: true, note: cell name}
+  q: {type: string, note: cell name}
+  s: {type: string, required: true, note: cell name}
+  recharge: {type: string, note: cell name}
+  top: {type: string, required: true, note: cell name}
+  bottom: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  vx: {type: string, note: output cell}
+  vy: {type: string, note: output cell}
+  budget: {type: string, note: output cell}
+  type: {type: string, required: true, default: confined, values: [confined, unconfined]}
+  river_bed: {type: string, note: cell name}
+  river_head: {type: string, note: cell name}
+  river_leak: {type: string, note: cell name}
+  drain_bed: {type: string, note: raster name}
+  drain_leak: {type: string, note: cell name}
+  dtime: {type: float, required: true, default: 86400.0}
+  maxit: {type: integer, default: 25}
+  error: {type: float, default: 1.0e-06}
+  solver: {type: string, default: cg, values: [cg, pcg, cholesky]}
+  flag_f: {type: boolean, note: flag -f}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

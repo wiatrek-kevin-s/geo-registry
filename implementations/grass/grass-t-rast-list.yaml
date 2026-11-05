@@ -1,0 +1,23 @@
+id: grass-t-rast-list
+kind: implementation
+name: t.rast.list
+software: grass
+call: {interface: cli, name: t.rast.list}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: strds name}
+  order: {type: string, values: [id, name, semantic_label, creator, mapset, temporal_type, creation_time, start_time, end_time,
+      north, south, west, east, nsres, ewres, cols, rows, number_of_cells, min, max], note: multiple values}
+  columns: {type: string, values: [id, name, semantic_label, creator, mapset, temporal_type, creation_time, start_time, end_time,
+      north, south, west, east, nsres, ewres, cols, rows, number_of_cells, min, max, interval_length, distance_from_begin],
+    note: multiple values}
+  where: {type: string}
+  method: {type: string, default: list, values: [list, cols, comma, delta, deltagaps, gran]}
+  granule: {type: string}
+  format: {type: string, required: true, default: plain, values: [plain, line, json, yaml, csv]}
+  separator: {type: string, default: pipe, note: separator name}
+  output: {type: string, note: output file}
+  flag_u: {type: boolean, note: flag -u}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

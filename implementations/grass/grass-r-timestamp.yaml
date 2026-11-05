@@ -1,0 +1,11 @@
+id: grass-r-timestamp
+kind: implementation
+name: r.timestamp
+software: grass
+call: {interface: cli, name: r.timestamp}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: cell name}
+  date: {type: string}
+status: active
+review: {state: harvested, source: grass}

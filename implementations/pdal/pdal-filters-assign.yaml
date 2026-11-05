@@ -1,0 +1,16 @@
+id: pdal-filters-assign
+kind: implementation
+name: filters.assign
+software: pdal
+call: {interface: pdal-pipeline, name: filters.assign}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  assignment: {type: option}
+  condition: {type: option}
+  value: {type: option}
+docs: https://pdal.org/en/master/stages/filters.assign.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

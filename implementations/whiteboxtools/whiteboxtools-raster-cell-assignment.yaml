@@ -1,0 +1,12 @@
+id: whiteboxtools-raster-cell-assignment
+kind: implementation
+name: RasterCellAssignment
+software: whiteboxtools
+call: {interface: cli, name: RasterCellAssignment}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  assign: {type: OptionList, required: true, default: column, values: [column, row, x, y]}
+status: active
+review: {state: harvested, source: whitebox}

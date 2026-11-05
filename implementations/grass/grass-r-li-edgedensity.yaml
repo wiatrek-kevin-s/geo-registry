@@ -1,0 +1,15 @@
+id: grass-r-li-edgedensity
+kind: implementation
+name: r.li.edgedensity
+software: grass
+call: {interface: cli, name: r.li.edgedensity}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  config: {type: string, required: true, note: file name}
+  output: {type: string, required: true, note: output cell}
+  patch_type: {type: string}
+  flag_b: {type: boolean, note: flag -b}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

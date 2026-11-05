@@ -1,0 +1,9 @@
+id: postgis-st-intersection
+implements: intersect
+crosswalk:
+  a: geom1
+  b: geom2
+differences:
+  - Intersects two geometries; for two layers, join them on ST_Intersects and intersect each matching pair.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

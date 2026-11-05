@@ -1,0 +1,28 @@
+id: grass-v-in-ascii
+kind: implementation
+name: v.in.ascii
+software: grass
+call: {interface: cli, name: v.in.ascii}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: file name}
+  output: {type: string, required: true, note: output vector}
+  format: {type: string, default: point, values: [point, standard]}
+  separator: {type: string, default: pipe, note: separator name}
+  text: {type: string, note: separator name}
+  skip: {type: integer, default: 0}
+  columns: {type: string}
+  x: {type: integer, default: 1}
+  y: {type: integer, default: 2}
+  z: {type: integer, default: 0}
+  cat: {type: integer, default: 0}
+  flag_z: {type: boolean, note: flag -z}
+  flag_e: {type: boolean, note: flag -e}
+  flag_n: {type: boolean, note: flag -n}
+  flag_t: {type: boolean, note: flag -t}
+  flag_b: {type: boolean, note: flag -b}
+  flag_r: {type: boolean, note: flag -r}
+  flag_i: {type: boolean, note: flag -i}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

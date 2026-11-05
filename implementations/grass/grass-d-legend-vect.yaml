@@ -1,0 +1,28 @@
+id: grass-d-legend-vect
+kind: implementation
+name: d.legend.vect
+software: grass
+call: {interface: cli, name: d.legend.vect}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  at: {type: float, default: '10,40', values: [0-100]}
+  columns: {type: integer, default: 1}
+  title: {type: string}
+  symbol_size: {type: integer, default: 20}
+  border_color: {type: string, default: black, note: color_none name}
+  bgcolor: {type: string, default: white, note: color_none name}
+  border_width: {type: integer, default: 2}
+  font: {type: string}
+  fontsize: {type: float, values: [1-360]}
+  title_font: {type: string}
+  title_fontsize: {type: float, values: [1-360]}
+  sub_font: {type: string}
+  sub_fontsize: {type: float, values: [1-360]}
+  fontcolor: {type: string, default: black, note: color name}
+  separator: {type: string, default: pipe, note: separator name}
+  input: {type: string, note: file name}
+  output: {type: string, note: output file}
+  flag_b: {type: boolean, note: flag -b}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,13 @@
+id: qgis-qgis-rasterlayerhistogram
+kind: implementation
+name: qgis:rasterlayerhistogram
+software: qgis
+call: {interface: qgis-process, name: 'qgis:rasterlayerhistogram'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BAND: {type: band, required: true, default: 1}
+  BINS: {type: number, required: true, default: 10}
+  INPUT: {type: raster, required: true}
+  OUTPUT: {type: fileDestination, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

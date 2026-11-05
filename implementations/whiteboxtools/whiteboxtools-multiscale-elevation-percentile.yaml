@@ -1,0 +1,17 @@
+id: whiteboxtools-multiscale-elevation-percentile
+kind: implementation
+name: MultiscaleElevationPercentile
+software: whiteboxtools
+call: {interface: cli, name: MultiscaleElevationPercentile}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  out_mag: {type: 'NewFile:Raster', required: true, note: output}
+  out_scale: {type: 'NewFile:Raster', required: true, note: output}
+  sig_digits: {type: Integer, default: '3'}
+  min_scale: {type: Integer, default: '4'}
+  step: {type: Integer, default: '1'}
+  num_steps: {type: Integer, default: '10'}
+  step_nonlinearity: {type: Float, default: '1.0'}
+status: active
+review: {state: harvested, source: whitebox}

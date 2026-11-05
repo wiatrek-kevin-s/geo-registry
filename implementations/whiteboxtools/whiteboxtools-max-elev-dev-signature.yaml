@@ -1,0 +1,15 @@
+id: whiteboxtools-max-elev-dev-signature
+kind: implementation
+name: MaxElevDevSignature
+software: whiteboxtools
+call: {interface: cli, name: MaxElevDevSignature}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  points: {type: 'ExistingFile:Vector:Point', required: true}
+  output: {type: 'NewFile:Html', required: true, note: output}
+  min_scale: {type: Integer, required: true}
+  max_scale: {type: Integer, required: true}
+  step: {type: Integer, required: true, default: '10'}
+status: active
+review: {state: harvested, source: whitebox}

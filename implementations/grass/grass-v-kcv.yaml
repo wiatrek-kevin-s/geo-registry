@@ -1,0 +1,13 @@
+id: grass-v-kcv
+kind: implementation
+name: v.kcv
+software: grass
+call: {interface: cli, name: v.kcv}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '1', note: layer name}
+  npartitions: {type: integer, required: true}
+  column: {type: string, default: part, note: dbcolumn name}
+status: active
+review: {state: harvested, source: grass}

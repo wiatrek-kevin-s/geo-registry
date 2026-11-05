@@ -1,0 +1,19 @@
+id: qgis-native-fixgeometrygap
+kind: implementation
+name: native:fixgeometrygap
+software: qgis
+call: {interface: qgis-process, name: 'native:fixgeometrygap'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ERROR_ID_IDX: {type: field, required: true, default: gc_errorid}
+  GAPS: {type: source, required: true}
+  INPUT: {type: source, required: true}
+  METHOD: {type: enum, required: true, values: [0, 1, 2], note: '0 Add to longest shared edge, 1 Create new feature, 2 Add
+      to largest neighbouring area'}
+  NEIGHBORS: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  REPORT: {type: sink, required: true, note: output}
+  TOLERANCE: {type: number, required: true, default: 8}
+  UNIQUE_ID: {type: field, required: true}
+status: active
+review: {state: harvested, source: qgis}

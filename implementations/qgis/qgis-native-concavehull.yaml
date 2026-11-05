@@ -1,0 +1,14 @@
+id: qgis-native-concavehull
+kind: implementation
+name: native:concavehull
+software: qgis
+call: {interface: qgis-process, name: 'native:concavehull'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ALPHA: {type: number, required: true, default: 0.3}
+  HOLES: {type: boolean, required: true, default: true}
+  INPUT: {type: source, required: true}
+  NO_MULTIGEOMETRY: {type: boolean, required: true, default: false}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

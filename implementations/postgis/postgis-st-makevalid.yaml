@@ -1,0 +1,19 @@
+id: postgis-st-makevalid
+kind: implementation
+name: st_makevalid
+software: postgis
+call: {interface: sql, name: st_makevalid}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geom: {type: geometry}
+  params: {type: text}
+signatures:
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: params, type: text}
+  returns: geometry
+- arguments:
+  - {type: geometry}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

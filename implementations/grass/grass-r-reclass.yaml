@@ -1,0 +1,14 @@
+id: grass-r-reclass
+kind: implementation
+name: r.reclass
+software: grass
+call: {interface: cli, name: r.reclass}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  rules: {type: string, required: true, note: file name}
+  title: {type: string}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

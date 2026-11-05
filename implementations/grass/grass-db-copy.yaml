@@ -1,0 +1,18 @@
+id: grass-db-copy
+kind: implementation
+name: db.copy
+software: grass
+call: {interface: cli, name: db.copy}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  from_driver: {type: string, default: sqlite, values: [dbf, ogr, pg, sqlite], note: dbdriver name}
+  from_database: {type: string, default: $GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db, note: dbname name}
+  from_table: {type: string, note: dbtable name}
+  to_driver: {type: string, default: sqlite, values: [dbf, ogr, pg, sqlite], note: dbdriver name}
+  to_database: {type: string, default: $GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db, note: dbname name}
+  to_table: {type: string, required: true, note: output dbtable}
+  where: {type: string, note: sql_query name}
+  select: {type: string}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

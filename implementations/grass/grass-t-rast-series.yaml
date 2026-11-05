@@ -1,0 +1,24 @@
+id: grass-t-rast-series
+kind: implementation
+name: t.rast.series
+software: grass
+call: {interface: cli, name: t.rast.series}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: strds name}
+  method: {type: string, required: true, default: average, values: [average, count, median, mode, minimum, min_raster, maximum,
+      max_raster, stddev, range, sum, variance, diversity, slope, offset, detcoeff, quart1, quart3, perc90, quantile, skewness,
+      kurtosis], note: multiple values}
+  quantile: {type: float, values: [0.0-1.0], note: multiple values}
+  order: {type: string, default: start_time, values: [id, name, creator, mapset, creation_time, modification_time, start_time,
+      end_time, north, south, west, east, min, max], note: multiple values}
+  nprocs: {type: integer, default: 0}
+  memory: {type: integer, default: 300}
+  where: {type: string}
+  output: {type: string, required: true, note: output cell; multiple values}
+  file_limit: {type: integer, default: 1000}
+  flag_t: {type: boolean, note: flag -t}
+  flag_n: {type: boolean, note: flag -n}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

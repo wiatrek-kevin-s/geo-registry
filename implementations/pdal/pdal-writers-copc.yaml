@@ -1,0 +1,35 @@
+id: pdal-writers-copc
+kind: implementation
+name: writers.copc
+software: pdal
+call: {interface: pdal-pipeline, name: writers.copc}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  filename: {type: option}
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  forward: {type: option}
+  filesource_id: {type: option, default: '0'}
+  global_encoding: {type: option, default: '0'}
+  project_id: {type: option}
+  system_id: {type: option, default: "PDAL\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}
+  software_id: {type: option, default: "PDAL 2.10.2 (21d285)\0\0\0\0\0\0\0\0\0\0\0\0"}
+  creation_doy: {type: option, default: '309'}
+  creation_year: {type: option, default: '2026'}
+  scale_x: {type: option, default: '.01'}
+  scale_y: {type: option, default: '.01'}
+  scale_z: {type: option, default: '.01'}
+  offset_x: {type: option}
+  offset_y: {type: option}
+  offset_z: {type: option}
+  vlrs: {type: option}
+  pipeline: {type: option}
+  pdal_metadata: {type: option}
+  fixed_seed: {type: option}
+  a_srs: {type: option}
+  threads: {type: option}
+  enhanced_srs_vlrs: {type: option, default: 'false'}
+  extra_dims: {type: option}
+docs: https://pdal.org/en/master/stages/writers.copc.html
+status: active
+review: {state: harvested, source: pdal}
