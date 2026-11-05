@@ -1,0 +1,18 @@
+id: euclidean-distance
+kind: operation
+name: Euclidean Distance
+aka: [proximity, distance raster, Euclidean Distance (Spatial Analyst), proximity raster, distance accumulation]
+summary: A raster giving, for every cell, the straight-line distance to the nearest target cell.
+group: raster/distance
+inputs:
+  - { name: raster, type: raster, note: Target cells hold a value; every other cell is nodata. }
+outputs:
+  - { name: output, type: raster }
+checks: [crs.measure, raster.nodata]
+pitfalls:
+  - Engines disagree on what a target is (any cell with a value, any non-zero cell, or listed values), so a background of zeros instead of nodata can make every cell a target.
+  - Some engines give distances in cells unless told to use the CRS's units.
+  - In a geographic CRS the distance is in degrees unless the engine measures on the ellipsoid.
+related: [buffer, nearest-join]
+status: active
+review: { state: draft }

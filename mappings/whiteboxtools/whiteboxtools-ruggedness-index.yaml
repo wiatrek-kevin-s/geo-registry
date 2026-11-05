@@ -1,0 +1,10 @@
+id: whiteboxtools-ruggedness-index
+implements: terrain-ruggedness-index
+crosswalk:
+  raster: dem
+  output: output
+  algorithm: { fixed: rmsd }
+differences:
+  - Described as Riley's index, but computes the root mean square of the differences from the eight neighbours (Riley's value divided by the square root of 8).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

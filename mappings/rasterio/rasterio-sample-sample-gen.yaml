@@ -1,0 +1,10 @@
+id: rasterio-sample-sample-gen
+implements: extract-values-to-points
+crosswalk:
+  raster: dataset
+  points: { param: xy, note: "An iterable of (x, y) coordinate pairs in the raster's CRS." }
+  resampling: { fixed: nearest }
+differences:
+  - Yields an array of band values per point; DatasetReader.sample is the same as a method of an open raster.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

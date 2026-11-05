@@ -1,0 +1,16 @@
+id: roughness
+kind: operation
+name: Roughness
+aka: [surface roughness, local relief, gdaldem roughness]
+summary: The difference between the highest and lowest elevation in each cell's 3 by 3 neighbourhood.
+group: raster/terrain
+inputs:
+  - { name: raster, type: raster, note: An elevation model. }
+outputs:
+  - { name: output, type: raster }
+checks: [raster.nodata]
+pitfalls:
+  - Several unrelated measures are called roughness (a range, a standard deviation, a multiscale signature); this one is the range of a 3 by 3 window.
+related: [terrain-ruggedness-index, topographic-position-index, focal-statistics]
+status: active
+review: { state: draft }

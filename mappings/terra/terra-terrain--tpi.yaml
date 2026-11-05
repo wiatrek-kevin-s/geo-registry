@@ -1,0 +1,9 @@
+id: terra-terrain--tpi
+variant_of: terra-terrain
+implements: topographic-position-index
+crosswalk:
+  raster: x
+presets:
+  v: TPI
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,10 @@
+id: terra-terrain--tri
+variant_of: terra-terrain
+implements: terrain-ruggedness-index
+crosswalk:
+  raster: x
+  algorithm: { param: v, values: { riley: TRIriley, wilson: TRI, rmsd: TRIrmsd } }
+differences:
+  - v = 'TRI' is the mean absolute difference; 'TRIriley' Riley's index; 'TRIrmsd' the root mean square difference.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

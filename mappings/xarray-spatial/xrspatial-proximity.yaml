@@ -1,0 +1,9 @@
+id: xrspatial-proximity
+implements: euclidean-distance
+crosswalk:
+  raster: raster
+differences:
+  - Takes an xarray DataArray; targets are non-zero cells unless target_values lists them.
+  - distance_metric also offers Great Circle and Manhattan.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,10 @@
+id: terra-extract
+implements: extract-values-to-points
+crosswalk:
+  points: y
+  raster: x
+  resampling: { param: method, values: { nearest: simple, bilinear: bilinear } }
+differences:
+  - Returns a data frame of ID and one column per layer, not the points; bind = TRUE returns the points with the values.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -188,7 +188,17 @@ def dem_box(col0, col1, row0=0, row1=DEM_SIZE):
 
 
 RASTER = "raster"  # marker: this input is the DEM
+SAMPLE_POINTS = [shapely.Point(DEM_ORIGIN[0] + dx, DEM_ORIGIN[1] - dy) for dx, dy in ((52, 55), (127, 103), (168, 141))]
 RASTER_WEST, RASTER_EAST = "raster:west", "raster:east"  # its western and eastern 10 columns
+RASTER_TARGET = "raster:target"  # same grid, nodata except one cell (TARGET_CELL) of value 1
+RASTER_TARGET_ZERO = "raster:target0"  # the same with a background of 0 instead of nodata
+TARGET_CELL = (5, 5)  # row, column
+
+
+def target_mean_distance() -> float:
+    """Mean distance from every cell's centre to the target cell's centre."""
+    r0, c0 = TARGET_CELL
+    return statistics.fmean(DEM_CELL * math.hypot(r - r0, c - c0) for r in range(DEM_SIZE) for c in range(DEM_SIZE))
 
 RASTER_CASES = [
     Case("slope", "plane rising 1 m in 10 m", {"raster": RASTER}, {"units": "degrees", "z_unit": "m"},
@@ -225,6 +235,28 @@ RASTER_CASES = [
     # Every row drains west: from the east edge, 1, 2, ... 20 cells pass through each cell.
     Case("flow-accumulation", "plane draining west", {"raster": RASTER}, {}, "raster_median", expected=10.5,
          tolerance=1e-6),
+    # On the plane (one value per column, rising 1 per column), every interior cell has
+    # three neighbours 1 lower, three 1 higher and two level.
+    Case("terrain-ruggedness-index", "plane, Riley: square root of 6", {"raster": RASTER}, {"algorithm": "riley"},
+         "raster_median", expected=math.sqrt(6), tolerance=1e-5),
+    Case("terrain-ruggedness-index", "plane, Wilson: mean difference 0.75", {"raster": RASTER}, {"algorithm": "wilson"},
+         "raster_median", expected=0.75, tolerance=1e-5),
+    Case("topographic-position-index", "a plane is level with its neighbours' mean", {"raster": RASTER}, {},
+         "raster_median", expected=0.0),
+    Case("roughness", "plane: range of 2 in every 3 by 3 window", {"raster": RASTER}, {}, "raster_median", expected=2.0,
+         tolerance=1e-6),
+    Case("euclidean-distance", "mean distance to one target cell", {"raster": RASTER_TARGET}, {}, "raster_mean",
+         expected=target_mean_distance(), tolerance=1e-4),
+    Case("euclidean-distance", "the same on a background of 0", {"raster": RASTER_TARGET_ZERO}, {}, "raster_mean",
+         expected=target_mean_distance(), tolerance=1e-4),
+    Case("terrain-ruggedness-index", "plane, root mean square: 0.866", {"raster": RASTER}, {"algorithm": "rmsd"},
+         "raster_median", expected=math.sqrt(0.75), tolerance=1e-5),
+    # Points off the cell centres, away from the edges: the nearest cell's values are 5.5, 12.5
+    # and 16.5; interpolated along the plane they are 0.1 times the distance from the west edge.
+    Case("extract-values-to-points", "three points, the cells they fall in", {"points": SAMPLE_POINTS, "raster": RASTER},
+         {"resampling": "nearest"}, "value:value", expected=5.5 + 12.5 + 16.5, tolerance=1e-6),
+    Case("extract-values-to-points", "the same points, interpolated", {"points": SAMPLE_POINTS, "raster": RASTER},
+         {"resampling": "bilinear"}, "value:value", expected=5.2 + 12.7 + 16.8, tolerance=1e-5),
     Case("rasterize", "50 m by 30 m rectangle at 10 m cells", {"layer": [dem_box(0, 5, 0, 3)]},
          {"resolution": 10}, "raster_count", expected=15.0),
     # The DEM's 20 columns each hold one value (0.5, 1.5, ... 19.5), so 20 strips.
@@ -405,6 +437,16 @@ KNOWN_DIFFERENCES = {
         "triangulates the vertices of each point on its own, so separate points give no triangles (collect them first)",
     ("shapely-delaunay-triangles", "triangles cover the square"):
         "triangulates the vertices of each point on its own, so separate points give no triangles (collect them first)",
+    ("gdal-raster-proximity", "mean distance to one target cell"):
+        "on a background of nodata, nodata cells are not zero and count as targets; the background must be 0",
+    ("qgis-gdal-proximity", "mean distance to one target cell"):
+        "on a background of nodata, nodata cells are not zero and count as targets; the background must be 0",
+    ("whiteboxtools-euclidean-distance", "mean distance to one target cell"):
+        "cells that are nodata in the input stay nodata; the background must be 0",
+    ("grass-r-grow-distance", "the same on a background of 0"):
+        "cells of value 0 are targets too, so every distance is 0",
+    ("terra-distance", "the same on a background of 0"):
+        "cells of value 0 are targets too, so every distance is 0",
     ("turf-envelope", "a tilted rectangle's bounding box"):
         "the box follows longitude and latitude, not the projected CRS's axes",
     ("qgis-native-densifygeometriesgivenaninterval", "100 m line, segments of at most 10 m"):
@@ -530,7 +572,7 @@ def run_pylib(impl: dict, op: dict, case: Case):
         return [shapely.geometry.shape(g) for g in out]
     with tempfile.TemporaryDirectory() as tmp:
         dem = Path(tmp) / "dem.tif"
-        write_dem(dem)
+        write_dem(dem, next((d for d in case.inputs.values() if is_raster(d)), RASTER))
         many = {port: [write_input(Path(tmp) / f"{port}{i}", d, case, port, ".gpkg") for i, d in enumerate(data)]
                 for port, data in case.inputs.items() if is_many(data)}
         if software == "rasterio" and name == "rasterio.merge.merge":
@@ -542,6 +584,10 @@ def run_pylib(impl: dict, op: dict, case: Case):
             import rasterio.mask
             import rasterio.warp
             with rasterio.open(dem) as ds:
+                if name == "rasterio.sample.sample_gen":
+                    import rasterio.sample
+                    xy = [(g.x, g.y) for g in case.inputs["points"]]
+                    return [float(v[0]) for v in rasterio.sample.sample_gen(**{ports["raster"]: ds, "xy": xy}, **args)]
                 if name == "rasterio.mask.mask":
                     arr, _ = rasterio.mask.mask(**{ports["raster"]: ds, ports["mask"]: shapes("mask")}, **args)
                     return valid_cells(arr[0], ds.nodata)
@@ -557,8 +603,9 @@ def run_pylib(impl: dict, op: dict, case: Case):
                     return valid_cells(arr, ds.nodata)
         if software == "rasterstats":
             import rasterstats
-            rows = list(getattr(rasterstats, fn)(**{ports["zones"]: shapes("zones"), ports["raster"]: str(dem)}, **args))
-            return pd.DataFrame(rows)
+            vport = next(p for p in ports if p != "raster" and p in case.inputs)
+            rows = list(getattr(rasterstats, fn)(**{ports[vport]: shapes(vport), ports["raster"]: str(dem)}, **args))
+            return [float(v) for v in rows] if "point_query" in fn else pd.DataFrame(rows)
         import rioxarray
         da = rioxarray.open_rasterio(dem, masked=True).squeeze("band", drop=True)
         arrays = {ports[p]: [rioxarray.open_rasterio(x, masked=True).squeeze("band", drop=True) for x in paths]
@@ -697,7 +744,8 @@ def write_input(path_stem: Path, data, case: Case, port: str, vector_ext: str) -
 # GRASS modules that update an input map's attribute table instead of making a layer,
 # which the runner does not reproduce.
 GRASS_TABLE_MODULES = {"v.db.join": "joins a database table into the map's own attribute table",
-                       "v.distance": "uploads into the from map's attribute table (upload, column)"}
+                       "v.distance": "uploads into the from map's attribute table (upload, column)",
+                       "v.what.rast": "updates a column of the point map's attribute table, which must exist first"}
 
 
 def run_grass(grass: str, impl: dict, op: dict, case: Case):
@@ -833,7 +881,8 @@ def write_dem(path: Path, part: str = RASTER) -> None:
     from osgeo import gdal, osr
     import numpy as np
     gdal.UseExceptions()
-    c0, c1 = {RASTER: (0, DEM_SIZE), RASTER_WEST: (0, DEM_SIZE // 2), RASTER_EAST: (DEM_SIZE // 2, DEM_SIZE)}[part]
+    c0, c1 = {RASTER: (0, DEM_SIZE), RASTER_TARGET: (0, DEM_SIZE), RASTER_TARGET_ZERO: (0, DEM_SIZE), RASTER_WEST: (0, DEM_SIZE // 2),
+              RASTER_EAST: (DEM_SIZE // 2, DEM_SIZE)}[part]
     ds = gdal.GetDriverByName("GTiff").Create(str(path), c1 - c0, DEM_SIZE, 1, gdal.GDT_Float32)
     ds.SetGeoTransform((DEM_ORIGIN[0] + c0 * DEM_CELL, DEM_CELL, 0, DEM_ORIGIN[1], 0, -DEM_CELL))
     srs = osr.SpatialReference()
@@ -841,7 +890,11 @@ def write_dem(path: Path, part: str = RASTER) -> None:
     ds.SetProjection(srs.ExportToWkt())
     band = ds.GetRasterBand(1)
     band.SetNoDataValue(DEM_NODATA)
-    band.WriteArray(np.array([row[c0:c1] for row in dem_values()], dtype="float32"))
+    values = np.array([row[c0:c1] for row in dem_values()], dtype="float32")
+    if part in (RASTER_TARGET, RASTER_TARGET_ZERO):
+        values[:] = DEM_NODATA if part == RASTER_TARGET else 0
+        values[TARGET_CELL] = 1
+    band.WriteArray(values)
     ds = None
 
 
@@ -982,6 +1035,8 @@ def run_postgis_raster(psql: str, dsn: str, impl: dict, op: dict, case: Case):
             raise Unsupported("this runner passes one raster; an aggregate over rows is not run here")
         if isinstance(data, str) and data == RASTER:
             call.append(f"{engine} => {dem_sql()}")
+        elif is_raster(data):
+            raise Unsupported(f"this runner builds only the plain DEM, not {data!r}")
         else:
             union = " , ".join(f"ST_GeomFromText('{g.wkt}', {SRID})" for g in data)
             call.append(f"{engine} => ST_Union(ARRAY[{union}])")
@@ -996,7 +1051,12 @@ def run_postgis_raster(psql: str, dsn: str, impl: dict, op: dict, case: Case):
             val = "'" + str(v).replace("'", "''") + "'"
         call.append(f"{k} => {val}")
     vector_out = op["outputs"][0]["type"] == "vector"
-    if vector_out:  # ST_DumpAsPolygons and the like: one (geom, val) row per polygon
+    points = next((p for p, d in case.inputs.items() if isinstance(d, list) and not is_many(d)), None)
+    if case.measure.startswith("value:") and points:  # ST_Value: one number per point row
+        rows = ", ".join(f"(ST_GeomFromText('{g.wkt}', {SRID}))" for g in case.inputs[points])
+        call = [c if not c.startswith(f"{ports[points]} =>") else f"{ports[points]} => p.g" for c in call]
+        sql = f"SELECT {fn}({', '.join(call)})::float8 FROM (VALUES {rows}) AS p(g)"
+    elif vector_out:  # ST_DumpAsPolygons and the like: one (geom, val) row per polygon
         sql = f"SELECT ST_AsText(({fn}({', '.join(call)})).geom)"
     else:
         sql = (f"SELECT v FROM (SELECT unnest((ST_DumpValues({fn}({', '.join(call)}), 1, true))) AS v) t "
@@ -1005,7 +1065,7 @@ def run_postgis_raster(psql: str, dsn: str, impl: dict, op: dict, case: Case):
                        capture_output=True, text=True)
     if r.returncode != 0:
         raise RuntimeError(f"{fn} failed: {r.stderr.strip()[:300]}")
-    if vector_out:
+    if vector_out and not case.measure.startswith("value:"):
         return [wkt.loads(line) for line in r.stdout.splitlines() if line.strip()]
     return [float(x) for x in r.stdout.split()]
 

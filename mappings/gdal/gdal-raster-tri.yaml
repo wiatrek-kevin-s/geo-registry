@@ -1,0 +1,10 @@
+id: gdal-raster-tri
+implements: terrain-ruggedness-index
+crosswalk:
+  raster: input
+  output: output
+  algorithm: { param: algorithm, values: { riley: Riley, wilson: Wilson }, unsupported: [rmsd] }
+differences:
+  - Edge cells are computed from incomplete neighbourhoods unless --no-edges leaves them as nodata.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

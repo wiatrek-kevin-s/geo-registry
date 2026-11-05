@@ -1,0 +1,10 @@
+id: whiteboxtools-extract-raster-values-at-points
+implements: extract-values-to-points
+crosswalk:
+  points: points
+  raster: inputs
+  resampling: { fixed: nearest }
+differences:
+  - Writes VALUE1, VALUE2, ... (one per raster) into the points file itself; out_text also prints them.
+effects: { modifies_input: true, network: false }
+review: { state: draft }

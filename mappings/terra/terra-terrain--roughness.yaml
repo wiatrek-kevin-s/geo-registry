@@ -1,0 +1,9 @@
+id: terra-terrain--roughness
+variant_of: terra-terrain
+implements: roughness
+crosswalk:
+  raster: x
+presets:
+  v: roughness
+effects: { modifies_input: false, network: false }
+review: { state: draft }

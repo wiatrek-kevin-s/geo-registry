@@ -1,0 +1,11 @@
+id: gdal-raster-pixel-info
+implements: extract-values-to-points
+crosswalk:
+  raster: input
+  points: position-dataset
+  output: output
+  resampling: resampling
+differences:
+  - Takes positions as coordinates (position) or from a vector dataset (position-dataset); writes the points with the values as fields.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

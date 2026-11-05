@@ -1,0 +1,10 @@
+id: grass-v-what-rast
+implements: extract-values-to-points
+crosswalk:
+  points: map
+  raster: raster
+  resampling: { param: flag_i, values: { nearest: false, bilinear: true } }
+differences:
+  - Updates a column of the point map's attribute table, which must exist first (v.db.addcolumn); flag p prints the values instead.
+effects: { modifies_input: true, network: false }
+review: { state: draft }
