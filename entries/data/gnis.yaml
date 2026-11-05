@@ -2,7 +2,7 @@ id: gnis
 kind: data
 name: GNIS
 summary: Official US geographic place-name database.
-publisher: Unknown
+publisher: U.S. Geological Survey (U.S. Board on Geographic Names)
 themes:
 - us-federal-names
 - open-data-sources
@@ -10,10 +10,16 @@ coverage:
   region: United States
 license: LicenseRef-Public-Domain
 license_original: Public domain
+update: every other month
 access:
 - type: http
-  url: https://www.usgs.gov/tools/geographic-names-information-system-gnis
+  url: https://www.usgs.gov/us-board-on-geographic-names/download-gnis-data
   auth: none
+- type: download
+  url: https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Topical/PopulatedPlaces_National_Text.zip
+  auth: none
+  notes: One of the national extracts (pipe-delimited text); DomesticNames and FullModel (GDB, GPKG) by
+    state are in the same staged products folder.
 status: active
 review:
   state: seeded

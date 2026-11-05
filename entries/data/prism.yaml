@@ -2,7 +2,7 @@ id: prism
 kind: data
 name: PRISM
 summary: Gridded US climate data from Oregon State; recent and normals free.
-publisher: Unknown
+publisher: PRISM Group, Oregon State University
 themes:
 - global-climate
 - open-data-sources
@@ -14,6 +14,12 @@ access:
 - type: http
   url: https://prism.oregonstate.edu/
   auth: none
+- type: http
+  url: https://www.prism.oregonstate.edu/documents/PRISM_downloads_web_service.pdf
+  auth: none
+  notes: Downloads through a web service (document not yet read).
+notes: Free to reproduce and distribute with attribution (PRISM Group, URL, access date); the PRISM Group
+  keeps the copyright; terms at https://prism.oregonstate.edu/terms/.
 status: active
 review:
   state: seeded

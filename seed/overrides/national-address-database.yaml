@@ -1,0 +1,12 @@
+# PROPOSED by agent research on 2026-11-05 for the US federal review batch. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/us-federal-2026-11.md
+id: national-address-database
+publisher: U.S. Department of Transportation
+access:
+  - type: http
+    url: https://www.transportation.gov/nad
+    auth: none
+  - type: download
+    url: https://data.transportation.gov/download/yw36-suxr/application/x-zip-compressed
+    auth: none
+    notes: File geodatabase (zip), updated 2026-09-30 per data.gov; a text-file version is also published.

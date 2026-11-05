@@ -1,0 +1,13 @@
+# PROPOSED by agent research on 2026-11-05 for the US federal review batch. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/us-federal-2026-11.md
+id: prism
+publisher: PRISM Group, Oregon State University
+access:
+  - type: http
+    url: https://prism.oregonstate.edu/
+    auth: none
+  - type: http
+    url: https://www.prism.oregonstate.edu/documents/PRISM_downloads_web_service.pdf
+    auth: none
+    notes: Downloads through a web service (document not yet read).
+notes: "Free to reproduce and distribute with attribution (PRISM Group, URL, access date); the PRISM Group keeps the copyright; terms at https://prism.oregonstate.edu/terms/."

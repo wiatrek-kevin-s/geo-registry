@@ -2,7 +2,7 @@ id: nlcd-annual-nlcd
 kind: data
 name: NLCD / Annual NLCD
 summary: 30 m US land cover, impervious surface and change products, now annual from 1985.
-publisher: Unknown
+publisher: U.S. Geological Survey (MRLC Consortium)
 themes:
 - us-federal-land-cover
 - open-data-sources
@@ -12,8 +12,14 @@ license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
 - type: http
-  url: https://www.usgs.gov/centers/eros/science/annual-national-land-cover-database
+  url: https://www.mrlc.gov/data
   auth: none
+  notes: Annual NLCD Collection 1 (CONUS from 1985; version 1.2, June 2026), mosaics and direct downloads.
+- type: s3
+  url: s3://usgs-landcover/annual-nlcd/c1/v0/
+  auth: none
+  notes: AWS us-west-2, requester pays (the requester pays the transfer); regions cu, ak, hi; tile and
+    mosaic folders.
 status: active
 review:
   state: seeded

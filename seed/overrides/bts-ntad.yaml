@@ -1,0 +1,13 @@
+# PROPOSED by agent research on 2026-11-05 for the US federal review batch. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/us-federal-2026-11.md
+id: bts-ntad
+access:
+  - type: http
+    url: https://geodata.bts.gov/
+    auth: none
+    notes: BTS Geospatial Data Catalog (ArcGIS Hub); downloads in file geodatabase, shapefile, GeoJSON, CSV and KML, and a web feature service per dataset.
+  - type: api
+    url: https://hub.arcgis.com/api/feed/all/csv?target=geodata.bts.gov
+    auth: none
+    notes: Catalog of NTAD datasets with each one's service URL (named by BTS's Fall 2026 release note). Not yet fetched.
+update: rolling, as source agencies publish (Fall 2026 release, 2026-10-23)

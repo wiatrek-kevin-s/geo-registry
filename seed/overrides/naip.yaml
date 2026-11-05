@@ -1,0 +1,12 @@
+# PROPOSED by agent research on 2026-11-05 for the US federal review batch. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/us-federal-2026-11.md
+id: naip
+publisher: U.S. Department of Agriculture (Farm Service Agency)
+access:
+  - type: http
+    url: https://naip-usdaonline.hub.arcgis.com/
+    auth: none
+  - type: arcgis-rest
+    url: https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer
+    auth: none
+    notes: The National Map's NAIP mosaic, mostly 0.6 m four-band; natural colour, CIR and NDVI functions. Tested 2026-11-05.

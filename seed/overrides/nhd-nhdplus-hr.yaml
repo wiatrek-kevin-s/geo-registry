@@ -1,0 +1,13 @@
+# PROPOSED by agent research on 2026-11-05 for the US federal review batch. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/us-federal-2026-11.md
+id: nhd-nhdplus-hr
+publisher: U.S. Geological Survey
+access:
+  - type: arcgis-rest
+    url: https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer
+    auth: none
+  - type: arcgis-rest
+    url: https://hydro.nationalmap.gov/arcgis/rest/services/3DHP_all/MapServer
+    auth: none
+    notes: "3D Hydrography Program (successor): flowlines, hydrolocations, waterbodies, catchments; elevation-derived hydrography replaces NHD where collected. Data refreshed 2026-09-04."
+notes: USGS is replacing NHD with 3DHP as elevation-derived hydrography is collected; prefer 3DHP where it exists.
