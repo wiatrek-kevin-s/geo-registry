@@ -1,0 +1,13 @@
+id: grass-v-to-db--length
+variant_of: grass-v-to-db
+implements: measure-length
+crosswalk:
+  layer: map
+  unit: { param: units, values: { m: meters, ft: feet, km: kilometers, mi: miles }, unsupported: [us-ft] }
+presets:
+  option: length
+  columns: length
+differences:
+  - Writes into the map's own attribute table (this mapping names the column length).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

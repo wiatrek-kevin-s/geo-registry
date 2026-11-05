@@ -1,0 +1,10 @@
+id: postgis-st-intersection--clip
+variant_of: postgis-st-intersection
+implements: clip
+crosswalk:
+  layer: geom1
+  mask: geom2
+differences:
+  - "Per pair of geometries: union the mask first, or join on ST_Intersects and intersect each pair."
+effects: { modifies_input: false, network: false }
+review: { state: draft }

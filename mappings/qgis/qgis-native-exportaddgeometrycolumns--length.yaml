@@ -1,0 +1,11 @@
+id: qgis-native-exportaddgeometrycolumns--length
+variant_of: qgis-native-exportaddgeometrycolumns
+implements: measure-length
+crosswalk:
+  layer: INPUT
+  output: OUTPUT
+  unit: { fixed: crs-units, note: "CRS units (metres in a metric CRS); METHOD 2 measures on the ellipsoid." }
+differences:
+  - Adds a length field to lines (area and perimeter to polygons).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

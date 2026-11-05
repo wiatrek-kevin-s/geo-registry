@@ -1,0 +1,10 @@
+id: shapely-intersection--clip
+variant_of: shapely-intersection
+implements: clip
+crosswalk:
+  layer: a
+  mask: b
+differences:
+  - "Per pair of geometries (or element by element in arrays): union the mask first to cut by all of it."
+effects: { modifies_input: false, network: false }
+review: { state: draft }

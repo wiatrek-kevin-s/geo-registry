@@ -1,0 +1,10 @@
+id: sf-st-intersection--clip
+variant_of: sf-st-intersection
+implements: clip
+crosswalk:
+  layer: x
+  mask: y
+differences:
+  - Adds y's attributes to the result (a clip keeps only x's); drop them afterwards. st_crop cuts to a bounding box instead.
+effects: { modifies_input: false, network: false }
+review: { state: draft }
