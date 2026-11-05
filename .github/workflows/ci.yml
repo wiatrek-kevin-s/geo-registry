@@ -52,6 +52,18 @@ jobs:
         run: cargo run --locked --release -- build --entries ../entries --schema ../schema/entry.schema.json --out ../dist
       - name: Smoke search
         run: cargo run --locked --release -- search lidar --kind data --db ../dist/registry.sqlite --limit 3
+      - name: Index compatibility with main
+        # Installed Columbus servers read the published index; a change may add
+        # to it but not alter what they read (README, "Index compatibility").
+        if: matrix.os == 'ubuntu-latest'
+        shell: bash
+        run: |
+          git fetch --depth=1 origin main
+          git worktree add --detach "$RUNNER_TEMP/base" FETCH_HEAD
+          export CARGO_TARGET_DIR="$PWD/target"
+          (cd "$RUNNER_TEMP/base/build" && cargo run --locked --release -q -- build \
+            --entries ../entries --schema ../schema/entry.schema.json --out "$RUNNER_TEMP/dist-base")
+          python3 -I ../checks/index_compat.py "$RUNNER_TEMP/dist-base" ../dist
       - name: Upload dist
         if: matrix.os == 'ubuntu-latest'
         uses: actions/upload-artifact@v4

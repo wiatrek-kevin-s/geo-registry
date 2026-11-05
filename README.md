@@ -188,7 +188,9 @@ Columbus servers download the index from the rolling `index` release and read th
 `index.json`'s `entries` and `count` keep their meaning, and hold data and tool entries
 only. New kinds go in new tables and new keys. A change that existing readers would
 misread (renaming `kind: tool`, for example) needs a `format_version` bump, released only
-after Columbus accepts both versions.
+after Columbus accepts both versions. CI builds `main` and the change and runs
+`checks/index_compat.py` on the two: existing tables, indexes, meta keys, `index.json` keys
+and card fields must be unchanged, unless `format_version` was raised.
 
 ## Recipes are declarative
 
