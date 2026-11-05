@@ -4,16 +4,22 @@
 the one built from the change and fails if anything installed Columbus servers read was
 altered or removed (see the README, "Index compatibility").
 
-## Health checks (planned)
+## Health checks
 
-This directory will also hold scheduled checks that keep data entries honest. They do not
-run yet; this section records the plan so the schema and entries are shaped for it.
+`health.py` probes every data entry's endpoints; the **Health** workflow runs it every
+Tuesday and opens a pull request with the changes (`python checks/health.py --apply` does
+the same locally). `test_health.py` tests every probe against a local server, in CI.
+
+A failing entry goes from `active` to `degraded`; a degraded entry that answers again goes
+back to `active`; `last_verified` is refreshed on success when it is missing or more than
+30 days old. Seeded entries change through `seed/overrides/<id>.yaml`, so regenerating the
+seed keeps the change.
 
 Each check reads `access[]` from data entries, probes one item, and records the outcome.
 A failing entry moves `status` from `active` to `degraded` (never straight to `retired`;
 that needs a human PR). `last_verified` is updated only on success.
 
-| access type | planned check | pass when |
+| access type | check | pass when |
 |---|---|---|
 | `http`, `api`, `other` | `HEAD`, falling back to ranged `GET`, redirects followed (max 5) | 2xx/3xx final status within 15 s |
 | `download` | `HEAD` on the URL; optional ranged `GET` of the first 1 KiB | 2xx and a plausible `Content-Type` / `Content-Length` |
@@ -35,6 +41,6 @@ Rules for the checker:
   in batches so every change is reviewable.
 - Checks never execute anything taken from an entry. Recipes are not run by the checker.
 
-Planned layout: `checks/<type>.rs` modules in the `build/` crate behind a
-`geo-registry check [--type TYPE] [--id ID]` subcommand, run nightly by a separate
-workflow.
+Run part of it with `--id ID` (repeatable) or `--type TYPE`; `--report` writes every
+result as JSON. It is Python with the standard library and PyYAML, like the converter,
+rather than a Rust subcommand as first planned: it needs no build and runs anywhere.
