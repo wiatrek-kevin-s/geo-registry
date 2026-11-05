@@ -10,8 +10,8 @@ parameters:
   filename: {type: any, default: '""'}
   options: {type: any, default: 'NULL'}
   overwrite: {type: any, default: 'FALSE'}
-  return_filename: {type: any, default: 'FALSE'}
   set_names: {type: any, default: 'FALSE'}
+  return_filename: {type: any, default: 'FALSE'}
 notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
 status: active
 review: {state: harvested, source: r-packages}

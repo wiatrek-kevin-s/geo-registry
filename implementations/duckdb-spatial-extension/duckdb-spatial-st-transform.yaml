@@ -1,0 +1,58 @@
+id: duckdb-spatial-st-transform
+kind: implementation
+name: ST_Transform
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_Transform}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  box: {type: BOX_2D}
+  source_crs: {type: VARCHAR}
+  target_crs: {type: VARCHAR}
+  always_xy: {type: BOOLEAN}
+  point: {type: POINT_2D}
+  geom: {type: GEOMETRY}
+signatures:
+- arguments:
+  - {name: box, type: BOX_2D}
+  - {name: source_crs, type: VARCHAR}
+  - {name: target_crs, type: VARCHAR}
+  returns: BOX_2D
+- arguments:
+  - {name: box, type: BOX_2D}
+  - {name: source_crs, type: VARCHAR}
+  - {name: target_crs, type: VARCHAR}
+  - {name: always_xy, type: BOOLEAN}
+  returns: BOX_2D
+- arguments:
+  - {name: point, type: POINT_2D}
+  - {name: source_crs, type: VARCHAR}
+  - {name: target_crs, type: VARCHAR}
+  returns: POINT_2D
+- arguments:
+  - {name: point, type: POINT_2D}
+  - {name: source_crs, type: VARCHAR}
+  - {name: target_crs, type: VARCHAR}
+  - {name: always_xy, type: BOOLEAN}
+  returns: POINT_2D
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  - {name: source_crs, type: VARCHAR}
+  - {name: target_crs, type: VARCHAR}
+  returns: GEOMETRY
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  - {name: source_crs, type: VARCHAR}
+  - {name: target_crs, type: VARCHAR}
+  - {name: always_xy, type: BOOLEAN}
+  returns: GEOMETRY
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  - {name: target_crs, type: VARCHAR}
+  returns: GEOMETRY
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  - {name: target_crs, type: VARCHAR}
+  - {name: always_xy, type: BOOLEAN}
+  returns: GEOMETRY
+status: active
+review: {state: harvested, source: duckdb-spatial}

@@ -8,21 +8,21 @@ parameters:
   x: {type: any, required: true}
   y: {type: any, required: true}
   '...': {type: dots, note: further arguments passed on}
+  lonlat: {type: any, required: true}
+  pairwise: {type: any, default: 'FALSE'}
   unit: {type: any, default: '"m"'}
-  rasterize: {type: any, default: 'FALSE'}
-  method: {type: any, default: '"haversine"'}
-  filename: {type: any, default: '""'}
+  method: {type: any, default: '"geo"'}
+  sequential: {type: any, default: 'FALSE'}
+  pairs: {type: any, default: 'FALSE'}
+  symmetrical: {type: any, default: 'TRUE'}
   target: {type: any, default: NA}
   exclude: {type: any, default: 'NULL'}
   maxdist: {type: any, default: NA}
   values: {type: any, default: 'FALSE'}
-  sequential: {type: any, default: 'FALSE'}
-  pairs: {type: any, default: 'FALSE'}
-  symmetrical: {type: any, default: 'TRUE'}
+  filename: {type: any, default: '""'}
+  rasterize: {type: any, default: 'FALSE'}
   use_nodes: {type: any, default: 'FALSE'}
   names: {type: any, default: 'NULL'}
-  pairwise: {type: any, default: 'FALSE'}
-  lonlat: {type: any, required: true}
 notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
 status: active
 review: {state: harvested, source: r-packages}

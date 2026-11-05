@@ -1,0 +1,13 @@
+id: rustgis-intersect
+kind: implementation
+name: Intersect
+software: rustgis
+call: {interface: python, name: intersect}
+harvest: {harvester: rustgis, engine_version: 0.5.0}
+parameters:
+  input: {type: Layer, required: true}
+  overlay: {type: PolygonLayer, required: true}
+  output: {type: Text}
+notes: 'Toolbox: Analysis › Overlay.'
+status: active
+review: {state: harvested, source: rustgis}

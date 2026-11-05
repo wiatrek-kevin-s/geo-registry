@@ -1,0 +1,13 @@
+id: rustgis-dissolve
+kind: implementation
+name: Dissolve
+software: rustgis
+call: {interface: python, name: dissolve}
+harvest: {harvester: rustgis, engine_version: 0.5.0}
+parameters:
+  input: {type: PolygonLayer, required: true}
+  field: {type: Field}
+  output: {type: Text}
+notes: 'Toolbox: Data Management › Generalization.'
+status: active
+review: {state: harvested, source: rustgis}

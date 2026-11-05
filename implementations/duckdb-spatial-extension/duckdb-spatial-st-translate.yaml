@@ -1,0 +1,26 @@
+id: duckdb-spatial-st-translate
+kind: implementation
+name: ST_Translate
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_Translate}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  geom: {type: any}
+  dx: {type: any}
+  dy: {type: any}
+  dz: {type: any}
+signatures:
+- arguments:
+  - {name: geom, type: any}
+  - {name: dx, type: any}
+  - {name: dy, type: any}
+  - {name: dz, type: any}
+  returns: any (macro)
+- arguments:
+  - {name: geom, type: any}
+  - {name: dx, type: any}
+  - {name: dy, type: any}
+  returns: any (macro)
+notes: 'Kind: macro.'
+status: active
+review: {state: harvested, source: duckdb-spatial}

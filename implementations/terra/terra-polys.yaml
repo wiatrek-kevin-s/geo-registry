@@ -7,19 +7,19 @@ harvest: {harvester: r-packages, engine_version: 1.9.50}
 parameters:
   x: {type: any, required: true}
   '...': {type: dots, note: further arguments passed on}
-  col: {type: any, default: '"black"'}
-  alpha: {type: any, default: '1'}
-  mx: {type: any, default: '10000'}
-  dissolve: {type: any, default: 'TRUE'}
-  y: {type: any, default: 'NULL'}
-  border: {type: any, default: '"black"'}
-  lwd: {type: any, default: '1'}
-  lty: {type: any, default: '1'}
-  legend: {type: any, default: 'FALSE'}
+  y: {type: any, required: true}
   field: {type: any, default: '""'}
+  col: {type: any, required: true}
+  lwd: {type: any, default: '2'}
+  lty: {type: any, default: 'NULL'}
+  border: {type: any, default: '"black"'}
+  alpha: {type: any, default: 'c(0.3, 1)'}
   popup: {type: any, default: 'TRUE'}
   label: {type: any, default: 'NULL'}
+  legend: {type: any, default: '"bottomright"'}
   fill: {type: any, default: 'NULL'}
+  mx: {type: any, default: '10000'}
+  dissolve: {type: any, default: 'TRUE'}
 notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
 status: active
 review: {state: harvested, source: r-packages}

@@ -1,0 +1,18 @@
+id: duckdb-spatial-st-tileenvelope
+kind: implementation
+name: ST_TileEnvelope
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_TileEnvelope}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  tile_zoom: {type: INTEGER}
+  tile_x: {type: INTEGER}
+  tile_y: {type: INTEGER}
+signatures:
+- arguments:
+  - {name: tile_zoom, type: INTEGER}
+  - {name: tile_x, type: INTEGER}
+  - {name: tile_y, type: INTEGER}
+  returns: GEOMETRY
+status: active
+review: {state: harvested, source: duckdb-spatial}

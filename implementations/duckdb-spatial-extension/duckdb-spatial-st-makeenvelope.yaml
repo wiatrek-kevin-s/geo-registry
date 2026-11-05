@@ -1,0 +1,20 @@
+id: duckdb-spatial-st-makeenvelope
+kind: implementation
+name: ST_MakeEnvelope
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_MakeEnvelope}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  min_x: {type: DOUBLE}
+  min_y: {type: DOUBLE}
+  max_x: {type: DOUBLE}
+  max_y: {type: DOUBLE}
+signatures:
+- arguments:
+  - {name: min_x, type: DOUBLE}
+  - {name: min_y, type: DOUBLE}
+  - {name: max_x, type: DOUBLE}
+  - {name: max_y, type: DOUBLE}
+  returns: GEOMETRY
+status: active
+review: {state: harvested, source: duckdb-spatial}

@@ -7,12 +7,12 @@ harvest: {harvester: r-packages, engine_version: 1.9.50}
 parameters:
   x: {type: any, required: true}
   '...': {type: dots, note: further arguments passed on}
-  crs: {type: any, default: '""'}
   layer: {type: any, default: '""'}
   query: {type: any, default: '""'}
   dialect: {type: any, default: '""'}
   extent: {type: any, default: 'NULL'}
   filter: {type: any, default: 'NULL'}
+  crs: {type: any, default: '""'}
   proxy: {type: any, default: 'FALSE'}
   what: {type: any, default: '""'}
   opts: {type: any, default: 'NULL'}

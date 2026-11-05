@@ -1,0 +1,23 @@
+id: pdal-readers-tiledb
+kind: implementation
+name: readers.tiledb
+software: pdal
+call: {interface: pdal-pipeline, name: readers.tiledb}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  filename: {type: option}
+  count: {type: option, default: '18446744073709551615'}
+  override_srs: {type: option}
+  default_srs: {type: option}
+  config_file: {type: option}
+  chunk_size: {type: option, default: '1000000'}
+  stats: {type: option, default: 'false'}
+  bbox3d: {type: option}
+  bbox4d: {type: option}
+  end_timestamp: {type: option, default: '18446744073709551615'}
+  start_timestamp: {type: option, default: '0'}
+  strict: {type: option, default: 'true'}
+docs: https://pdal.org/en/master/stages/readers.tiledb.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

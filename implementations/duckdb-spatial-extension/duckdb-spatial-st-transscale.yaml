@@ -1,0 +1,23 @@
+id: duckdb-spatial-st-transscale
+kind: implementation
+name: ST_TransScale
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_TransScale}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  geom: {type: any}
+  dx: {type: any}
+  dy: {type: any}
+  xs: {type: any}
+  ys: {type: any}
+signatures:
+- arguments:
+  - {name: geom, type: any}
+  - {name: dx, type: any}
+  - {name: dy, type: any}
+  - {name: xs, type: any}
+  - {name: ys, type: any}
+  returns: any (macro)
+notes: 'Kind: macro.'
+status: active
+review: {state: harvested, source: duckdb-spatial}

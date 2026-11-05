@@ -8,7 +8,7 @@ parameters:
   y: {type: any, required: true}
   x: {type: any, required: true}
   '...': {type: dots, note: further arguments passed on}
-  formula: {type: any, default: y ~ x}
+  formula: {type: any, default: 'NULL'}
   na.rm: {type: any, default: 'FALSE'}
   cores: {type: any, default: '1'}
   filename: {type: any, default: '""'}

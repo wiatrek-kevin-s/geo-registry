@@ -28,21 +28,17 @@ parameters:
   node.col: {type: any, default: '"red"'}
   node.pch: {type: any, default: '20'}
   cex: {type: any, default: '1'}
-  maxcell: {type: any, default: 1e+05}
-  warn: {type: any, default: 'TRUE'}
+  main: {type: any, required: true}
   nc: {type: any, required: true}
   nr: {type: any, required: true}
   maxnl: {type: any, default: '16'}
-  smooth: {type: any, default: 'FALSE'}
-  gridded: {type: any, default: 'FALSE'}
-  ncol: {type: any, default: '25'}
-  nrow: {type: any, default: '25'}
-  main: {type: any, required: true}
+  maxcell: {type: any, default: 5e+05}
   plg: {type: any, default: list()}
   pax: {type: any, default: list()}
   type: {type: any, default: 'NULL'}
   legend: {type: any, default: 'TRUE'}
   axes: {type: any, default: '!add'}
+  smooth: {type: any, default: 'FALSE'}
   range: {type: any, default: 'NULL'}
   fill_range: {type: any, default: 'FALSE'}
   levels: {type: any, default: 'NULL'}
@@ -61,6 +57,10 @@ parameters:
   buffer: {type: any, default: 'FALSE'}
   clip: {type: any, default: 'TRUE'}
   overview: {type: any, default: 'NULL'}
+  warn: {type: any, default: 'TRUE'}
+  gridded: {type: any, default: 'FALSE'}
+  ncol: {type: any, default: '25'}
+  nrow: {type: any, default: '25'}
   values: {type: any, default: 'NULL'}
 notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
 status: active

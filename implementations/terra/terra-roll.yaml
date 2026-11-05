@@ -8,7 +8,7 @@ parameters:
   x: {type: any, required: true}
   '...': {type: dots, note: further arguments passed on}
   n: {type: any, required: true}
-  fun: {type: any, default: '"mean"'}
+  fun: {type: any, default: mean}
   type: {type: any, default: '"around"'}
   circular: {type: any, default: 'FALSE'}
   na.rm: {type: any, default: 'FALSE'}

@@ -1,0 +1,14 @@
+id: duckdb-spatial-st-minimumrotatedrectangle
+kind: implementation
+name: ST_MinimumRotatedRectangle
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_MinimumRotatedRectangle}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  geom: {type: GEOMETRY}
+signatures:
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  returns: GEOMETRY
+status: active
+review: {state: harvested, source: duckdb-spatial}

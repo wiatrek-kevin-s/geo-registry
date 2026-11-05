@@ -1,0 +1,16 @@
+id: duckdb-spatial-st-reduceprecision
+kind: implementation
+name: ST_ReducePrecision
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_ReducePrecision}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  geom: {type: GEOMETRY}
+  precision: {type: DOUBLE}
+signatures:
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  - {name: precision, type: DOUBLE}
+  returns: GEOMETRY
+status: active
+review: {state: harvested, source: duckdb-spatial}

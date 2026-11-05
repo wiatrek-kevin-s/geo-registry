@@ -1,0 +1,27 @@
+id: duckdb-spatial-st-read
+kind: implementation
+name: ST_Read
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_Read}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  file_name: {type: VARCHAR}
+  open_options: {type: 'VARCHAR[]'}
+  allowed_drivers: {type: 'VARCHAR[]'}
+  sibling_files: {type: 'VARCHAR[]'}
+  layer: {type: VARCHAR}
+  max_batch_size: {type: INTEGER}
+  keep_wkb: {type: BOOLEAN}
+signatures:
+- arguments:
+  - {name: file_name, type: VARCHAR}
+  - {name: open_options, type: 'VARCHAR[]'}
+  - {name: allowed_drivers, type: 'VARCHAR[]'}
+  - {name: sibling_files, type: 'VARCHAR[]'}
+  - {name: layer, type: VARCHAR}
+  - {name: max_batch_size, type: INTEGER}
+  - {name: keep_wkb, type: BOOLEAN}
+  returns: any (table)
+notes: 'Kind: table.'
+status: active
+review: {state: harvested, source: duckdb-spatial}

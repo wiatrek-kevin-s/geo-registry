@@ -1,0 +1,17 @@
+id: rustgis-pivottable
+kind: implementation
+name: Pivot Table
+software: rustgis
+call: {interface: python, name: pivotTable}
+harvest: {harvester: rustgis, engine_version: 0.5.0}
+parameters:
+  input: {type: Layer, required: true}
+  fields: {type: 'Fields { input: "input" }'}
+  pivot: {type: Field, required: true}
+  value: {type: Field, required: true}
+  statistic: {type: Text}
+  separator: {type: Text}
+  output: {type: Text}
+notes: 'Toolbox: Analysis › Statistics.'
+status: active
+review: {state: harvested, source: rustgis}

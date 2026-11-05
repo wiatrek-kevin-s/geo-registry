@@ -1,0 +1,25 @@
+id: duckdb-spatial-st-makevalid
+kind: implementation
+name: ST_MakeValid
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_MakeValid}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  geom: {type: GEOMETRY}
+  method: {type: VARCHAR}
+  keepCollapsed: {type: BOOLEAN}
+signatures:
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  returns: GEOMETRY
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  - {name: method, type: VARCHAR}
+  returns: GEOMETRY
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  - {name: method, type: VARCHAR}
+  - {name: keepCollapsed, type: BOOLEAN}
+  returns: GEOMETRY
+status: active
+review: {state: harvested, source: duckdb-spatial}

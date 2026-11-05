@@ -1,0 +1,17 @@
+id: duckdb-spatial-st-readshp
+kind: implementation
+name: ST_ReadSHP
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_ReadSHP}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  file_name: {type: VARCHAR}
+  encoding: {type: VARCHAR}
+signatures:
+- arguments:
+  - {name: file_name, type: VARCHAR}
+  - {name: encoding, type: VARCHAR}
+  returns: any (table)
+notes: 'Kind: table.'
+status: active
+review: {state: harvested, source: duckdb-spatial}

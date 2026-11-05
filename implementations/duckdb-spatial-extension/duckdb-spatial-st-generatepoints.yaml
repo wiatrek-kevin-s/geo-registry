@@ -1,0 +1,23 @@
+id: duckdb-spatial-st-generatepoints
+kind: implementation
+name: ST_GeneratePoints
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_GeneratePoints}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  box: {type: BOX_2D}
+  count: {type: BIGINT}
+  seed: {type: BIGINT}
+signatures:
+- arguments:
+  - {name: box, type: BOX_2D}
+  - {name: count, type: BIGINT}
+  returns: any (table)
+- arguments:
+  - {name: box, type: BOX_2D}
+  - {name: count, type: BIGINT}
+  - {name: seed, type: BIGINT}
+  returns: any (table)
+notes: 'Kind: table.'
+status: active
+review: {state: harvested, source: duckdb-spatial}

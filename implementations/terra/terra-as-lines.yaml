@@ -8,8 +8,8 @@ parameters:
   x: {type: any, required: true}
   '...': {type: dots, note: further arguments passed on}
   crs: {type: any, default: '""'}
-  na.rm: {type: any, default: 'FALSE'}
   segments: {type: any, default: 'FALSE'}
+  na.rm: {type: any, default: 'FALSE'}
 notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
 status: active
 review: {state: harvested, source: r-packages}

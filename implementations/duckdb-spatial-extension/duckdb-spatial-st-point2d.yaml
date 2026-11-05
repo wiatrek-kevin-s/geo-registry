@@ -1,0 +1,16 @@
+id: duckdb-spatial-st-point2d
+kind: implementation
+name: ST_Point2D
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_Point2D}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  x: {type: DOUBLE}
+  y: {type: DOUBLE}
+signatures:
+- arguments:
+  - {name: x, type: DOUBLE}
+  - {name: y, type: DOUBLE}
+  returns: POINT_2D
+status: active
+review: {state: harvested, source: duckdb-spatial}

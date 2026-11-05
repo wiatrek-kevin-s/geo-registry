@@ -8,12 +8,12 @@ parameters:
   x: {type: any, required: true}
   y: {type: any, required: true}
   '...': {type: dots, note: further arguments passed on}
+  pairs: {type: any, default: 'FALSE'}
   method: {type: any, default: '"simple"'}
   weights: {type: any, default: 'FALSE'}
   exact: {type: any, default: 'FALSE'}
   touches: {type: any, default: is.lines(y)}
   small: {type: any, default: 'TRUE'}
-  pairs: {type: any, default: 'FALSE'}
 notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
 status: active
 review: {state: harvested, source: r-packages}

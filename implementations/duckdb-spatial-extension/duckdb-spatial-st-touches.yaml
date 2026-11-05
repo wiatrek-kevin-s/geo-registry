@@ -1,0 +1,16 @@
+id: duckdb-spatial-st-touches
+kind: implementation
+name: ST_Touches
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_Touches}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  geom1: {type: GEOMETRY}
+  geom2: {type: GEOMETRY}
+signatures:
+- arguments:
+  - {name: geom1, type: GEOMETRY}
+  - {name: geom2, type: GEOMETRY}
+  returns: BOOLEAN
+status: active
+review: {state: harvested, source: duckdb-spatial}

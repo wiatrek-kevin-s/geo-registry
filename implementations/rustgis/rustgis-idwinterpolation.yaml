@@ -1,0 +1,16 @@
+id: rustgis-idwinterpolation
+kind: implementation
+name: IDW Interpolation
+software: rustgis
+call: {interface: python, name: idwInterpolation}
+harvest: {harvester: rustgis, engine_version: 0.5.0}
+parameters:
+  input: {type: VectorLayer, required: true}
+  field: {type: NumericField, required: true}
+  power: {type: Number}
+  extent: {type: Text}
+  pixelSize: {type: Number}
+  output: {type: Text}
+notes: 'Toolbox: Analysis › Interpolation.'
+status: active
+review: {state: harvested, source: rustgis}

@@ -1,0 +1,23 @@
+id: duckdb-spatial-st-quadkey
+kind: implementation
+name: ST_QuadKey
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_QuadKey}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  longitude: {type: DOUBLE}
+  latitude: {type: DOUBLE}
+  level: {type: INTEGER}
+  point: {type: GEOMETRY}
+signatures:
+- arguments:
+  - {name: longitude, type: DOUBLE}
+  - {name: latitude, type: DOUBLE}
+  - {name: level, type: INTEGER}
+  returns: VARCHAR
+- arguments:
+  - {name: point, type: GEOMETRY}
+  - {name: level, type: INTEGER}
+  returns: VARCHAR
+status: active
+review: {state: harvested, source: duckdb-spatial}

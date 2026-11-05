@@ -1,0 +1,21 @@
+id: duckdb-spatial-st-interiorringn
+kind: implementation
+name: ST_InteriorRingN
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_InteriorRingN}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  geom: {type: GEOMETRY}
+  n: {type: BIGINT}
+  polygon: {type: POLYGON_2D}
+signatures:
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  - {name: n, type: BIGINT}
+  returns: GEOMETRY
+- arguments:
+  - {name: polygon, type: POLYGON_2D}
+  - {name: n, type: BIGINT}
+  returns: LINESTRING_2D
+status: active
+review: {state: harvested, source: duckdb-spatial}

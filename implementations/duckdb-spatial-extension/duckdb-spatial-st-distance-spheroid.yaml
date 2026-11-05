@@ -1,0 +1,16 @@
+id: duckdb-spatial-st-distance-spheroid
+kind: implementation
+name: ST_Distance_Spheroid
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_Distance_Spheroid}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  p1: {type: POINT_2D}
+  p2: {type: POINT_2D}
+signatures:
+- arguments:
+  - {name: p1, type: POINT_2D}
+  - {name: p2, type: POINT_2D}
+  returns: DOUBLE
+status: active
+review: {state: harvested, source: duckdb-spatial}

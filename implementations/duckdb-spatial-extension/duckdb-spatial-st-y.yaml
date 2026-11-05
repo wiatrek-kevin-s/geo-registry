@@ -1,0 +1,18 @@
+id: duckdb-spatial-st-y
+kind: implementation
+name: ST_Y
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_Y}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  geom: {type: GEOMETRY}
+  point: {type: POINT_2D}
+signatures:
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  returns: DOUBLE
+- arguments:
+  - {name: point, type: POINT_2D}
+  returns: DOUBLE
+status: active
+review: {state: harvested, source: duckdb-spatial}

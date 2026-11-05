@@ -1,0 +1,16 @@
+id: duckdb-spatial-st-lineinterpolatepoint
+kind: implementation
+name: ST_LineInterpolatePoint
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_LineInterpolatePoint}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  line: {type: GEOMETRY}
+  fraction: {type: DOUBLE}
+signatures:
+- arguments:
+  - {name: line, type: GEOMETRY}
+  - {name: fraction, type: DOUBLE}
+  returns: GEOMETRY
+status: active
+review: {state: harvested, source: duckdb-spatial}

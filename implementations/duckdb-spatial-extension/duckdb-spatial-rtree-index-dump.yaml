@@ -1,0 +1,15 @@
+id: duckdb-spatial-rtree-index-dump
+kind: implementation
+name: rtree_index_dump
+software: duckdb-spatial-extension
+call: {interface: sql, name: rtree_index_dump}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  index_name: {type: VARCHAR}
+signatures:
+- arguments:
+  - {name: index_name, type: VARCHAR}
+  returns: any (table)
+notes: 'Kind: table.'
+status: active
+review: {state: harvested, source: duckdb-spatial}

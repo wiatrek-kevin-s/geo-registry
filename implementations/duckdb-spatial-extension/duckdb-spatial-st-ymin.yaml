@@ -1,0 +1,33 @@
+id: duckdb-spatial-st-ymin
+kind: implementation
+name: ST_YMin
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_YMin}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  geom: {type: GEOMETRY}
+  point: {type: POINT_2D}
+  line: {type: LINESTRING_2D}
+  polygon: {type: POLYGON_2D}
+  box: {type: BOX_2D | BOX_2DF}
+signatures:
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  returns: DOUBLE
+- arguments:
+  - {name: point, type: POINT_2D}
+  returns: DOUBLE
+- arguments:
+  - {name: line, type: LINESTRING_2D}
+  returns: DOUBLE
+- arguments:
+  - {name: polygon, type: POLYGON_2D}
+  returns: DOUBLE
+- arguments:
+  - {name: box, type: BOX_2D}
+  returns: DOUBLE
+- arguments:
+  - {name: box, type: BOX_2DF}
+  returns: FLOAT
+status: active
+review: {state: harvested, source: duckdb-spatial}

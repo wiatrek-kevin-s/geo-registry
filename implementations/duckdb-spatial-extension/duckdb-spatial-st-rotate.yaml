@@ -1,0 +1,17 @@
+id: duckdb-spatial-st-rotate
+kind: implementation
+name: ST_Rotate
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_Rotate}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  geom: {type: any}
+  radians: {type: any}
+signatures:
+- arguments:
+  - {name: geom, type: any}
+  - {name: radians, type: any}
+  returns: any (macro)
+notes: 'Kind: macro.'
+status: active
+review: {state: harvested, source: duckdb-spatial}

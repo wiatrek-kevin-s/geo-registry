@@ -1,0 +1,14 @@
+id: duckdb-spatial-st-collect
+kind: implementation
+name: ST_Collect
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_Collect}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  geoms: {type: 'GEOMETRY[]'}
+signatures:
+- arguments:
+  - {name: geoms, type: 'GEOMETRY[]'}
+  returns: GEOMETRY
+status: active
+review: {state: harvested, source: duckdb-spatial}

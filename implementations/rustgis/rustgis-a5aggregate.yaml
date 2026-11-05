@@ -1,0 +1,14 @@
+id: rustgis-a5aggregate
+kind: implementation
+name: Aggregate Points to A5
+software: rustgis
+call: {interface: python, name: a5Aggregate}
+harvest: {harvester: rustgis, engine_version: 0.5.0}
+parameters:
+  input: {type: PointLayer, required: true}
+  resolution: {type: Number}
+  field: {type: NumericField}
+  output: {type: Text}
+notes: 'Toolbox: Analysis › DGGS.'
+status: active
+review: {state: harvested, source: rustgis}

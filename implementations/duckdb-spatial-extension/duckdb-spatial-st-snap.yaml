@@ -1,0 +1,18 @@
+id: duckdb-spatial-st-snap
+kind: implementation
+name: ST_Snap
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_Snap}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  geom: {type: GEOMETRY}
+  snap_to: {type: GEOMETRY}
+  tolerance: {type: DOUBLE}
+signatures:
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  - {name: snap_to, type: GEOMETRY}
+  - {name: tolerance, type: DOUBLE}
+  returns: GEOMETRY
+status: active
+review: {state: harvested, source: duckdb-spatial}

@@ -1,0 +1,15 @@
+id: rustgis-xytabletopoint
+kind: implementation
+name: XY Table To Point
+software: rustgis
+call: {interface: python, name: xyTableToPoint}
+harvest: {harvester: rustgis, engine_version: 0.5.0}
+parameters:
+  input: {type: Layer, required: true}
+  x: {type: CoordinateField, required: true}
+  y: {type: CoordinateField, required: true}
+  crs: {type: Text}
+  output: {type: Text}
+notes: 'Toolbox: Data Management › Features.'
+status: active
+review: {state: harvested, source: rustgis}

@@ -1,0 +1,20 @@
+id: rustgis-kriging
+kind: implementation
+name: Ordinary Kriging
+software: rustgis
+call: {interface: python, name: kriging}
+harvest: {harvester: rustgis, engine_version: 0.5.0}
+parameters:
+  input: {type: VectorLayer, required: true}
+  field: {type: NumericField, required: true}
+  model: {type: 'Choice(["Spherical", "Exponential", "Gaussian"])'}
+  neighbours: {type: Number}
+  nugget: {type: Number}
+  sill: {type: Number}
+  range: {type: Number}
+  extent: {type: Text}
+  pixelSize: {type: Number}
+  output: {type: Text}
+notes: 'Toolbox: Analysis › Interpolation.'
+status: active
+review: {state: harvested, source: rustgis}
