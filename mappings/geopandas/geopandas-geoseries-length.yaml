@@ -1,0 +1,8 @@
+id: geopandas-geoseries-length
+implements: measure-length
+crosswalk:
+  unit: { fixed: crs-units, note: "CRS units (metres in a metric CRS); convert afterwards for other units." }
+differences:
+  - A property of the GeoSeries; for polygons, the perimeter.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,10 @@
+id: postgis-st-hexagongrid
+implements: create-grid
+crosswalk:
+  layer: bounds
+  cell_size: size
+  shape: { fixed: hexagon, note: ST_SquareGrid for squares. }
+differences:
+  - size is the hexagon's edge length; the grid is aligned to the origin.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

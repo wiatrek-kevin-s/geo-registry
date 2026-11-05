@@ -1,0 +1,9 @@
+id: grass-v-mkgrid
+implements: create-grid
+crosswalk:
+  output: map
+  layer: { note: "The grid covers the computational region (position = region)." }
+  cell_size: { param: box, repeat: 2, note: "width and height: box=10,10." }
+  shape: { param: flag_h, values: { square: false, hexagon: true } }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

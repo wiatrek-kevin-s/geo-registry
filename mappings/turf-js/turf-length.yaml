@@ -1,0 +1,10 @@
+id: turf-length
+implements: measure-length
+crosswalk:
+  layer: geojson
+  unit: { param: options.units, values: { m: meters, ft: feet, km: kilometers, mi: miles }, unsupported: [us-ft] }
+differences:
+  - units defaults to kilometers; one total for all features.
+  - Turf works on GeoJSON in longitude/latitude (WGS 84); data in another CRS must be reprojected first.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

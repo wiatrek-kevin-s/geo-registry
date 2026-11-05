@@ -1,0 +1,10 @@
+id: sf-st-make-grid
+implements: create-grid
+crosswalk:
+  layer: x
+  cell_size: cellsize
+  shape: { param: square, values: { square: true, hexagon: false } }
+differences:
+  - The grid starts at the layer's bounding box corner (offset); n gives the number of cells instead of their size.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,12 @@
+id: grass-v-to-db
+implements: measure-area
+crosswalk:
+  layer: map
+  unit: { param: units, values: { m2: meters, km2: kilometers, ha: hectares, acre: acres, ft2: feet } }
+presets:
+  option: area
+  columns: area
+differences:
+  - Writes into the map's own attribute table (the column must exist; this mapping names it area); option also gives length, perimeter, coordinates and more.
+effects: { modifies_input: true, network: false }
+review: { state: draft }

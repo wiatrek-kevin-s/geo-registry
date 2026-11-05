@@ -1,0 +1,9 @@
+id: qgis-native-creategrid
+implements: create-grid
+crosswalk:
+  layer: EXTENT
+  output: OUTPUT
+  cell_size: { note: "HSPACING and VSPACING: the cell width and height." }
+  shape: { param: TYPE, values: { square: 2, hexagon: 4 } }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

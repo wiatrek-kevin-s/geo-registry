@@ -1,0 +1,9 @@
+id: whiteboxtools-polygon-area
+implements: measure-area
+crosswalk:
+  layer: input
+  unit: { fixed: crs-units, note: "Square CRS units (square metres in a metric CRS); convert afterwards for other units." }
+differences:
+  - Adds an AREA field to the input file itself; there is no separate output.
+effects: { modifies_input: true, network: false }
+review: { state: draft }

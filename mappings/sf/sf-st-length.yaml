@@ -1,0 +1,9 @@
+id: sf-st-length
+implements: measure-length
+crosswalk:
+  layer: x
+  unit: { fixed: crs-units, note: "CRS units (metres in a metric CRS); convert afterwards for other units." }
+differences:
+  - Returns a units object; 0 for polygons (st_perimeter measures outlines).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

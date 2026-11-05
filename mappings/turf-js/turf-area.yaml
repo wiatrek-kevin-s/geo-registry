@@ -1,0 +1,10 @@
+id: turf-area
+implements: measure-area
+crosswalk:
+  layer: geojson
+  unit: { fixed: m2, note: Always square metres (geodesic). }
+differences:
+  - One total for all features of a FeatureCollection.
+  - Turf works on GeoJSON in longitude/latitude (WGS 84); data in another CRS must be reprojected first.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

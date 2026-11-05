@@ -1,0 +1,9 @@
+id: sedona-sql-st-area
+implements: measure-area
+crosswalk:
+  layer: geometry
+  unit: { fixed: crs-units, note: "Square CRS units (square metres in a metric CRS); convert afterwards for other units." }
+differences:
+  - "A Spark SQL function: arguments are columns or column names, run over a Spark DataFrame."
+effects: { modifies_input: false, network: false }
+review: { state: draft }

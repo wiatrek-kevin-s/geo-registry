@@ -1,0 +1,10 @@
+id: postgis-st-squaregrid
+implements: create-grid
+crosswalk:
+  layer: bounds
+  cell_size: size
+  shape: { fixed: square, note: ST_HexagonGrid for hexagons. }
+differences:
+  - The grid is aligned to multiples of the cell size from the origin, not to the bounds' corner; returns (geom, i, j) rows for cells that intersect the bounds.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

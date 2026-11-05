@@ -1,0 +1,19 @@
+id: measure-length
+kind: operation
+name: Measure Length
+aka: [Calculate Geometry (length), line length, shape length, perimeter]
+summary: The length of each line, as a number or a new attribute.
+group: vector/measure
+inputs:
+  - { name: layer, type: vector, geometry: line }
+outputs:
+  - { name: output, type: any, note: "The lengths, or the layer with a length attribute." }
+parameters:
+  unit: { type: enum, values: [m, ft, us-ft, km, mi], default: m }
+checks: [crs.measure]
+pitfalls:
+  - In a geographic CRS, planar engines return degrees.
+  - For polygons, some functions return the perimeter and others 0 (PostGIS ST_Length); use a perimeter function for outlines.
+related: [measure-area]
+status: active
+review: { state: draft }

@@ -1,0 +1,9 @@
+id: shapely-length
+implements: measure-length
+crosswalk:
+  layer: geometry
+  unit: { fixed: crs-units, note: "CRS units (metres in a metric CRS); convert afterwards for other units." }
+differences:
+  - For polygons, returns the perimeter.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

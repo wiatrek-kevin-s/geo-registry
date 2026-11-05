@@ -1,0 +1,9 @@
+id: postgis-st-length
+implements: measure-length
+crosswalk:
+  layer: "#1"
+  unit: { fixed: crs-units, note: "CRS units (metres in a metric CRS); convert afterwards for other units." }
+differences:
+  - Returns 0 for polygons (ST_Perimeter measures outlines); on geography, metres on the spheroid.
+effects: { modifies_input: false, network: false }
+review: { state: draft }
