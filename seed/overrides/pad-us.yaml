@@ -1,0 +1,13 @@
+# PROPOSED by agent research on 2026-11-05 for the US federal review batch. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/us-federal-2026-11.md
+id: pad-us
+publisher: U.S. Geological Survey (Gap Analysis Project)
+access:
+  - type: http
+    url: https://www.usgs.gov/programs/gap-analysis-project/science/pad-us-data-download
+    auth: none
+    notes: PAD-US 4 (DOI 10.5066/P96WBCHS) downloads.
+  - type: http
+    url: https://www.usgs.gov/programs/gap-analysis-project/science/pad-us-web-services
+    auth: none
+    notes: Feature layer views on ArcGIS Online (GAP status, public access, managers, designations).

@@ -1,0 +1,13 @@
+# PROPOSED by agent research on 2026-11-05 for the US federal review batch. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/us-federal-2026-11.md
+id: nlcd-annual-nlcd
+publisher: U.S. Geological Survey (MRLC Consortium)
+access:
+  - type: http
+    url: https://www.mrlc.gov/data
+    auth: none
+    notes: Annual NLCD Collection 1 (CONUS from 1985; version 1.2, June 2026), mosaics and direct downloads.
+  - type: s3
+    url: s3://usgs-landcover/annual-nlcd/c1/v0/
+    auth: none
+    notes: AWS us-west-2, requester pays (the requester pays the transfer); regions cu, ak, hi; tile and mosaic folders.

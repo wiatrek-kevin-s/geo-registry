@@ -1,3 +1,4 @@
+# Additions PROPOSED on 2026-11-05 (US federal review batch): WMS, WFS and notes.
 # The NFHL map service publishes flood hazard zones (S_FLD_HAZ_AR) as
 # layer 28. Its REST endpoint disallows automated fetching of its own
 # description, so the layer number is from FEMA's published service
@@ -15,6 +16,15 @@ access:
     index: "28"
     auth: none
     notes: Flood Hazard Zones (S_FLD_HAZ_AR). Always pass a bbox; the national layer is very large.
+  - type: ogc-wms
+    url: https://hazards.fema.gov/arcgis/rest/services/public/NFHLWMS/MapServer/WMSServer
+    auth: none
+    notes: WMS of the effective NFHL (FEMA's service page, read 2026-11-05).
+  - type: ogc-wfs
+    url: https://hazards.fema.gov/arcgis/services/public/NFHL/MapServer/WFSServer
+    auth: none
+    notes: At most 1,000 features per request; use the Map Service Center's state and county downloads for bulk.
+notes: The public NFHL service holds effective data only; preliminary and pending services exist separately and are not for rating flood insurance. TLS 1.2 only.
 recipe:
   tool: registry_fetch
   steps:

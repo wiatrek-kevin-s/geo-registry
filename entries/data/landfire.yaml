@@ -14,6 +14,11 @@ access:
 - type: http
   url: https://landfire.gov/
   auth: none
+- type: arcgis-rest
+  url: https://lfps.usgs.gov/arcgis/rest/services/LandfireProductService/GPServer
+  auth: none
+  notes: LANDFIRE Product Service - layers and an area of interest in, a multi-band GeoTIFF out (asynchronous).
+    Whether anonymous use is allowed is not yet tested.
 status: active
 review:
   state: seeded

@@ -1,0 +1,14 @@
+# PROPOSED by agent research on 2026-11-05 for the US federal review batch. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/us-federal-2026-11.md
+id: gssurgo-gnatsgo
+publisher: USDA Natural Resources Conservation Service
+access:
+  - type: api
+    url: https://SDMDataAccess.sc.egov.usda.gov/Tabular/post.rest
+    auth: none
+    notes: Soil Data Access (SSURGO) query service, POST only, up to 100,000 rows; documented at https://sdmdataaccess.sc.egov.usda.gov/webservicehelp.aspx
+  - type: ogc-wfs
+    url: https://SDMDataAccess.sc.egov.usda.gov/Spatial/SDMWGS84Geographic.wfs
+    auth: none
+    notes: SSURGO map units (also NAD83 and Web Mercator versions); up to 250,000 features per request.
+notes: Soil Data Access serves SSURGO; gSSURGO and gNATSGO are the gridded file geodatabase downloads of the same survey (download page still to add).

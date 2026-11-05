@@ -2,7 +2,7 @@ id: the-national-map-tnm
 kind: data
 name: The National Map (TNM)
 summary: USGS portal and Access API for elevation, hydrography, boundaries, transport, names and imagery.
-publisher: Unknown
+publisher: U.S. Geological Survey
 themes:
 - us-federal-general
 - open-data-sources
@@ -12,8 +12,13 @@ license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
 - type: http
-  url: https://www.usgs.gov/programs/national-geospatial-program/national-map
+  url: https://apps.nationalmap.gov/downloader/
   auth: none
+- type: api
+  url: https://tnmaccess.nationalmap.gov/api/v1/products
+  auth: none
+  notes: TNM Access API - products by bbox, datasets (for example "Digital Elevation Model (DEM) 1 meter")
+    and format; documented examples need no key.
 notes: TNM Access API scriptable
 status: active
 review:
