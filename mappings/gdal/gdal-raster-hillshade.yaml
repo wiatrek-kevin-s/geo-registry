@@ -6,6 +6,6 @@ crosswalk:
   azimuth: azimuth
   altitude: altitude
   band: band
-  z_unit: { note: No unit argument; use zfactor or xscale and yscale when elevation and horizontal units differ. }
+  z_unit: { fixed: crs-units, note: "Elevation is taken in the CRS's horizontal units; otherwise use zfactor, or xscale and yscale." }
 effects: { modifies_input: false, network: false }
 review: { state: draft }

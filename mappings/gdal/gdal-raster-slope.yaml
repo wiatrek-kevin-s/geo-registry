@@ -5,6 +5,8 @@ crosswalk:
   output: output
   units: { param: unit, values: { degrees: degree, percent: percent } }
   band: band
-  z_unit: { note: "No unit argument; when elevation and horizontal units differ, set xscale and yscale (see GDAL's page)." }
+  z_unit: { fixed: crs-units, note: "Elevation is taken in the CRS's horizontal units; otherwise set xscale and yscale (see GDAL's page)." }
+differences:
+  - Cells on the raster's edge are computed from incomplete neighbourhoods; on a uniform slope they come out lower, and differently from PostGIS's. --no-edges leaves them as nodata.
 effects: { modifies_input: false, network: false }
 review: { state: draft }

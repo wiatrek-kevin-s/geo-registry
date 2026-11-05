@@ -24,6 +24,7 @@ import argparse
 import importlib
 import json
 import math
+import statistics
 import shutil
 import sqlite3
 import subprocess
@@ -88,6 +89,44 @@ CASES = [
 ]
 
 
+# A 20 x 20 elevation raster of 10 m cells: a plane rising 1 m per 10 m to the east,
+# so slope is atan(0.1) everywhere, aspect is 270 (facing west), and the mean
+# elevation of any column band is known.
+DEM_ORIGIN = (621000.0, 3349200.0)
+DEM_CELL = 10.0
+DEM_SIZE = 20
+DEM_NODATA = -9999.0
+
+
+def dem_values():
+    return [[0.1 * (DEM_CELL * c + DEM_CELL / 2) for c in range(DEM_SIZE)] for _ in range(DEM_SIZE)]
+
+
+def dem_box(col0, col1):
+    """A polygon over whole columns col0..col1-1, the full height of the DEM."""
+    x0, y1 = DEM_ORIGIN
+    return poly(x0 + col0 * DEM_CELL, y1 - DEM_SIZE * DEM_CELL, x0 + col1 * DEM_CELL, y1)
+
+
+RASTER = "raster"  # marker: this input is the DEM
+
+RASTER_CASES = [
+    Case("slope", "plane rising 1 m in 10 m", {"raster": RASTER}, {"units": "degrees", "z_unit": "m"},
+         "raster_median", expected=math.degrees(math.atan(0.1)), tolerance=1e-4),
+    Case("slope", "same plane, in percent", {"raster": RASTER}, {"units": "percent", "z_unit": "m"},
+         "raster_median", expected=10.0, tolerance=1e-4),
+    Case("aspect", "plane facing west", {"raster": RASTER}, {}, "raster_median", expected=270.0, tolerance=1e-4),
+    Case("hillshade", "plane lit from the north-west", {"raster": RASTER},
+         {"z_unit": "m", "azimuth": 315, "altitude": 45}, "raster_median", tolerance=0.01),
+    Case("clip-raster", "mask over the first 10 columns", {"raster": RASTER, "mask": [dem_box(0, 10)]},
+         {}, "raster_count", expected=200.0),
+    Case("reproject-raster", "to EPSG:3081, nearest", {"raster": RASTER},
+         {"crs": "EPSG:3081", "resampling": "nearest"}, "raster_mean", tolerance=0.02),
+    Case("zonal-statistics", "mean over the first 5 columns", {"raster": RASTER, "zones": [dem_box(0, 5)]},
+         {"stats": "mean"}, "field_mean", expected=2.5, tolerance=1e-6),
+]
+
+
 class Unsupported(Exception):
     """The implementation cannot honour this case's canonical values (a documented difference)."""
 
@@ -124,7 +163,7 @@ def translate(impl: dict, op: dict, case: Case) -> tuple[dict, dict]:
             continue
         if "fixed" in item:
             fixed = item["fixed"]
-            if fixed == value or (fixed == "crs-units" and name == "unit" and value == "m"):
+            if fixed == value or (fixed == "crs-units" and value == "m"):
                 continue
             raise Unsupported(f"{name}={value!r}: the engine always uses {fixed!r}")
         if "param" not in item:
@@ -190,15 +229,45 @@ def geometries(result) -> list:
     return [g for g in list(result) if g is not None]
 
 
-def run_gdal(gdal: str, impl: dict, op: dict, case: Case) -> list:
+def write_dem(path: Path) -> None:
+    from osgeo import gdal, osr
+    import numpy as np
+    gdal.UseExceptions()
+    ds = gdal.GetDriverByName("GTiff").Create(str(path), DEM_SIZE, DEM_SIZE, 1, gdal.GDT_Float32)
+    ds.SetGeoTransform((DEM_ORIGIN[0], DEM_CELL, 0, DEM_ORIGIN[1], 0, -DEM_CELL))
+    srs = osr.SpatialReference()
+    srs.ImportFromEPSG(SRID)
+    ds.SetProjection(srs.ExportToWkt())
+    band = ds.GetRasterBand(1)
+    band.SetNoDataValue(DEM_NODATA)
+    band.WriteArray(np.array(dem_values(), dtype="float32"))
+    ds = None
+
+
+def read_raster(path: Path) -> list[float]:
+    """Valid cell values of band 1."""
+    from osgeo import gdal
+    gdal.UseExceptions()
+    ds = gdal.Open(str(path))
+    band = ds.GetRasterBand(1)
+    arr = band.ReadAsArray().astype(float).ravel()
+    nodata = band.GetNoDataValue()
+    return [float(v) for v in arr if not math.isnan(v) and (nodata is None or v != nodata)]
+
+
+def run_gdal(gdal: str, impl: dict, op: dict, case: Case):
     ports, args = translate(impl, op, case)
+    raster_out = op["outputs"][0]["type"] == "raster"
     with tempfile.TemporaryDirectory() as tmp:
         argv = [gdal, *impl["call"]["name"].split()[1:]]
-        out = Path(tmp) / "out.gpkg"
+        out = Path(tmp) / ("out.tif" if raster_out else "out.gpkg")
         for port, engine in ports.items():
             if port in case.inputs:
                 data = case.inputs[port]
-                if isinstance(data, pd.DataFrame):
+                if isinstance(data, str) and data == RASTER:
+                    path = Path(tmp) / f"{port}.tif"
+                    write_dem(path)
+                elif isinstance(data, pd.DataFrame):
                     path = Path(tmp) / f"{port}.csv"
                     data.to_csv(path, index=False)
                 else:
@@ -218,6 +287,10 @@ def run_gdal(gdal: str, impl: dict, op: dict, case: Case) -> list:
         r = subprocess.run(argv, capture_output=True, text=True)
         if r.returncode != 0:
             raise RuntimeError(f"{' '.join(argv[:3])} failed: {(r.stderr or r.stdout).strip()[:300]}")
+        if raster_out:
+            return read_raster(out)
+        if case.measure.startswith("field_"):
+            return gpd.read_file(out)
         return [g for g in gpd.read_file(out).geometry if g is not None]
 
 
@@ -289,9 +362,57 @@ def run_postgis(psql: str, dsn: str, impl: dict, op: dict, case: Case) -> list:
     return [wkt.loads(line) for line in r.stdout.splitlines() if line.strip() and "EMPTY" not in line]
 
 
+def dem_sql() -> str:
+    rows = ",".join("[" + ",".join(repr(v) for v in row) + "]" for row in dem_values())
+    return (f"ST_SetValues(ST_AddBand(ST_MakeEmptyRaster({DEM_SIZE}, {DEM_SIZE}, {DEM_ORIGIN[0]}, {DEM_ORIGIN[1]}, "
+            f"{DEM_CELL}, {-DEM_CELL}, 0, 0, {SRID}), '32BF'::text, 0, {DEM_NODATA}), 1, 1, 1, ARRAY[{rows}]::double precision[][])")
+
+
+def run_postgis_raster(psql: str, dsn: str, impl: dict, op: dict, case: Case):
+    ports, args = translate(impl, op, case)
+    fn = impl["call"]["name"]
+    call = []
+    for port, engine in ports.items():
+        data = case.inputs.get(port)
+        if data is None or engine is None:
+            continue
+        if isinstance(data, str) and data == RASTER:
+            call.append(f"{engine} => {dem_sql()}")
+        else:
+            union = " , ".join(f"ST_GeomFromText('{g.wkt}', {SRID})" for g in data)
+            call.append(f"{engine} => ST_Union(ARRAY[{union}])")
+    for k, v in args.items():
+        if isinstance(v, bool):
+            val = "true" if v else "false"
+        elif isinstance(v, (int, float)):
+            val = repr(v)
+        elif isinstance(v, str) and v.upper().startswith("EPSG:"):
+            val = v.split(":")[1]
+        else:
+            val = "'" + str(v).replace("'", "''") + "'"
+        call.append(f"{k} => {val}")
+    sql = (f"SELECT v FROM (SELECT unnest((ST_DumpValues({fn}({', '.join(call)}), 1, true))) AS v) t "
+           f"WHERE v IS NOT NULL")
+    r = subprocess.run([psql, "-X", "-qAt", "-v", "ON_ERROR_STOP=1", "-d", dsn, "-c", sql],
+                       capture_output=True, text=True)
+    if r.returncode != 0:
+        raise RuntimeError(f"{fn} failed: {r.stderr.strip()[:300]}")
+    return [float(x) for x in r.stdout.split()]
+
+
 # ------------------------------------------------------------------ measures
 
-def measure(kind: str, geoms: list) -> float:
+def measure(kind: str, geoms) -> float:
+    if kind == "raster_median":
+        # Edge cells have incomplete neighbourhoods and engines treat them
+        # differently (a documented difference); the median is the interior.
+        return statistics.median(geoms) if geoms else float("nan")
+    if kind == "raster_mean":
+        return sum(geoms) / len(geoms) if geoms else float("nan")
+    if kind == "raster_count":
+        return float(len(geoms))
+    if kind.startswith("field_"):
+        return float(geoms[kind[len("field_"):]].iloc[0])
     if kind == "area":
         return sum(g.area for g in geoms)
     if kind == "length":
@@ -329,11 +450,13 @@ def main() -> int:
             return lambda op, case: run_gdal(args.gdal, impl, op, case)
         if iface == "sql" and software == "postgis" and args.psql and args.dsn:
             return lambda op, case: run_postgis(args.psql, args.dsn, impl, op, case)
+        if iface == "sql" and software == "postgis-raster" and args.psql and args.dsn:
+            return lambda op, case: run_postgis_raster(args.psql, args.dsn, impl, op, case)
         return None
 
     failed = 0
     rows = []
-    for case in CASES:
+    for case in CASES + RASTER_CASES:
         op = ops[case.operation]
         results = []
         for impl in impls:
@@ -351,6 +474,11 @@ def main() -> int:
             except Exception as e:  # noqa: BLE001 - any engine error is a failure to report
                 rows.append((case, impl["id"], "FAIL", f"{type(e).__name__}: {e}"[:300]))
                 failed += 1
+        if any(math.isnan(v) for _, v in results):
+            for impl_id, v in [r for r in results if math.isnan(r[1])]:
+                rows.append((case, impl_id, "FAIL", "no valid values in the output"))
+                failed += 1
+            results = [r for r in results if not math.isnan(r[1])]
         reference = case.expected if case.expected is not None else (results[0][1] if results else None)
         for impl_id, value in results:
             ok = close(value, reference, case.tolerance)
