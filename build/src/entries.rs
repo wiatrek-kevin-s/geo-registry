@@ -142,6 +142,7 @@ pub struct LoadProblem {
 /// harvester and is replaced on every re-harvest.
 pub const MAPPING_FIELDS: &[&str] = &[
     "id",
+    "variant_of",
     "implements",
     "crosswalk",
     "presets",
@@ -191,6 +192,15 @@ pub fn load_implementations(
             }
         }
     }
+    // Variants (`variant_of`) copy the harvested description, never a mapped one.
+    let harvested: Vec<(String, String, Value)> = files
+        .iter()
+        .filter_map(|f| {
+            let software = f.path.parent().map(stem_of)?;
+            Some((software, f.stem.clone(), f.value.as_ref().ok()?.clone()))
+        })
+        .collect();
+    let mut variants: Vec<EntryFile> = Vec::new();
     if mappings.is_dir() {
         for folder in sub_dirs(mappings)? {
             let software = stem_of(&folder);
@@ -215,6 +225,41 @@ pub fn load_implementations(
                 let stem = stem_of(&path);
                 if mapping.get("id").and_then(Value::as_str) != Some(stem.as_str()) {
                     problem(format!("id must be '{stem}', the file name"));
+                    continue;
+                }
+                if let Some(base) = mapping.get("variant_of").and_then(Value::as_str) {
+                    // A second operation done by the same harvested tool, with its own
+                    // presets: a new implementation entry `<base>--<suffix>`.
+                    if !stem.starts_with(&format!("{base}--")) {
+                        problem(format!("a variant's id must start with '{base}--'"));
+                        continue;
+                    }
+                    let Some((_, _, original)) = harvested
+                        .iter()
+                        .find(|(sw, st, _)| sw == &software && st == base)
+                    else {
+                        problem(format!(
+                            "variant_of '{base}': no harvested implementation in implementations/{software}/"
+                        ));
+                        continue;
+                    };
+                    let mut entry = original.clone();
+                    if let Value::Object(obj) = &mut entry {
+                        obj.insert("id".into(), Value::String(stem.clone()));
+                        for (k, v) in mapping.as_object().into_iter().flatten() {
+                            if !MAPPING_FIELDS.contains(&k.as_str()) {
+                                problem(format!("a mapping may not set '{k}'"));
+                            } else if k != "id" {
+                                obj.insert(k.clone(), v.clone());
+                            }
+                        }
+                    }
+                    variants.push(EntryFile {
+                        stem: stem.clone(),
+                        path: path.clone(),
+                        dir_kind: "implementation",
+                        value: Ok(entry),
+                    });
                     continue;
                 }
                 let target = files.iter_mut().find(|f| {
@@ -244,6 +289,7 @@ pub fn load_implementations(
             }
         }
     }
+    files.extend(variants);
     Ok((files, problems))
 }
 

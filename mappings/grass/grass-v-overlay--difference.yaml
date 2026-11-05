@@ -1,0 +1,13 @@
+id: grass-v-overlay--difference
+variant_of: grass-v-overlay
+implements: difference
+crosswalk:
+  layer: ainput
+  mask: binput
+  output: output
+presets:
+  operator: not
+differences:
+  - The b input must be areas.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

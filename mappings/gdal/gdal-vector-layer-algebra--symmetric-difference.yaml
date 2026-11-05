@@ -1,0 +1,11 @@
+id: gdal-vector-layer-algebra--symmetric-difference
+variant_of: gdal-vector-layer-algebra
+implements: symmetric-difference
+crosswalk:
+  a: input
+  b: method
+  output: output
+presets:
+  operation: sym-difference
+effects: { modifies_input: false, network: false }
+review: { state: draft }

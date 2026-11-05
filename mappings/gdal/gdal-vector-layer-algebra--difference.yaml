@@ -1,0 +1,11 @@
+id: gdal-vector-layer-algebra--difference
+variant_of: gdal-vector-layer-algebra
+implements: difference
+crosswalk:
+  layer: input
+  mask: method
+  output: output
+presets:
+  operation: erase
+effects: { modifies_input: false, network: false }
+review: { state: draft }

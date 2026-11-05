@@ -402,6 +402,10 @@
         "kind": { "const": "implementation" },
         "name": { "$ref": "#/$defs/nonEmptyString" },
         "software": { "$ref": "#/$defs/id" },
+        "variant_of": {
+          "description": "Set by a mapping for a second operation the same harvested tool performs with other presets (GDAL layer-algebra as union, GRASS r.slope.aspect as aspect): this entry is a copy of that implementation under its own id, <variant_of>--<suffix>.",
+          "$ref": "#/$defs/id"
+        },
         "implements": { "$ref": "#/$defs/id" },
         "call": {
           "type": "object",
