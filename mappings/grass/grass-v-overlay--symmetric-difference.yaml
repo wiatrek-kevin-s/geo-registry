@@ -1,0 +1,13 @@
+id: grass-v-overlay--symmetric-difference
+variant_of: grass-v-overlay
+implements: symmetric-difference
+crosswalk:
+  a: ainput
+  b: binput
+  output: output
+presets:
+  operator: xor
+differences:
+  - The b input must be areas.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

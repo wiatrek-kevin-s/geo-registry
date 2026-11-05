@@ -1,0 +1,13 @@
+id: grass-r-slope-aspect--aspect
+variant_of: grass-r-slope-aspect
+implements: aspect
+crosswalk:
+  raster: elevation
+  output: aspect
+  z_unit: { fixed: crs-units, note: "Elevation is taken in the project's horizontal units; otherwise set zscale." }
+presets:
+  flag_n: true
+differences:
+  - Without the n flag, aspect is counterclockwise from east (east 0, north 90); this mapping sets it, for compass bearings (north 0, clockwise).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -306,3 +306,74 @@ fn bad_mappings_and_folders_are_reported() {
         "{err}"
     );
 }
+
+#[test]
+fn variants_copy_the_harvested_entry_under_their_own_id() {
+    let dir = tempfile::tempdir().unwrap();
+    copy_entries(dir.path());
+    let root = dir.path();
+    write(
+        root.join("implementations/vector-fixture-tool/vft-buffer.yaml"),
+        HARVESTED,
+    );
+    // The base mapping's presets must not leak into the variant.
+    write(
+        root.join("mappings/vector-fixture-tool/vft-buffer.yaml"),
+        "id: vft-buffer\nimplements: buffer-fixture\n\
+         crosswalk: {layer: in, distance: dist}\npresets: {dist: 1}\n",
+    );
+    write(
+        root.join("mappings/vector-fixture-tool/vft-buffer--wide.yaml"),
+        "id: vft-buffer--wide\nvariant_of: vft-buffer\nimplements: buffer-fixture\n\
+         crosswalk: {layer: in}\n",
+    );
+    let entries = root.join("entries");
+    let dist = root.join("dist");
+    let out = run(&[
+        "build",
+        "--entries",
+        s(&entries),
+        "--schema",
+        s(&schema()),
+        "--out",
+        s(&dist),
+    ]);
+    assert!(
+        out.status.success(),
+        "{}",
+        String::from_utf8_lossy(&out.stderr)
+    );
+    let conn = rusqlite::Connection::open(dist.join("registry.sqlite")).unwrap();
+    let entry: String = conn
+        .query_row(
+            "SELECT entry FROM implementations WHERE id = 'vft-buffer--wide'",
+            [],
+            |r| r.get(0),
+        )
+        .unwrap();
+    let entry: serde_json::Value = serde_json::from_str(&entry).unwrap();
+    assert_eq!(entry["variant_of"], "vft-buffer");
+    assert_eq!(entry["parameters"]["dist"]["type"], "real"); // copied from the harvest
+    assert!(entry.get("presets").is_none(), "{entry}");
+
+    // A variant must be named after its base, and the base must exist.
+    write(
+        root.join("mappings/vector-fixture-tool/vft-other.yaml"),
+        "id: vft-other\nvariant_of: vft-buffer\nimplements: buffer-fixture\n",
+    );
+    write(
+        root.join("mappings/vector-fixture-tool/vft-gone--x.yaml"),
+        "id: vft-gone--x\nvariant_of: vft-gone\nimplements: buffer-fixture\n",
+    );
+    let out = run(&[
+        "validate",
+        "--entries",
+        s(&entries),
+        "--schema",
+        s(&schema()),
+    ]);
+    assert_eq!(out.status.code(), Some(1));
+    let err = String::from_utf8_lossy(&out.stderr);
+    assert!(err.contains("must start with 'vft-buffer--'"), "{err}");
+    assert!(err.contains("variant_of 'vft-gone'"), "{err}");
+}

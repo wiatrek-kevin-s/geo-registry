@@ -1,0 +1,10 @@
+id: terra-project--vector
+variant_of: terra-project
+implements: reproject
+crosswalk:
+  layer: x
+  crs: y
+differences:
+  - The same function reprojects SpatRasters (raster reproject).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

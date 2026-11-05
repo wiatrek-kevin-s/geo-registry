@@ -228,6 +228,12 @@ review: { state: draft }
   one list: a cell size given as x and y resolution).
 - **presets** fixes engine arguments for this operation (`operation: intersection` for
   `gdal vector layer-algebra`).
+- **variant_of**: when one tool does several operations by its arguments (`gdal vector
+  layer-algebra` as intersect, union, difference; `r.slope.aspect` as slope and aspect),
+  each further operation gets a mapping named `<tool id>--<suffix>` with `variant_of:
+  <tool id>`. The build copies the harvested entry under that id and applies the
+  variant's operation, crosswalk and presets; nothing from the tool's own mapping carries
+  over.
 - A mapping without `implements` can still carry a warning in `notes` (`gdal vector
   dissolve` is not the Dissolve operation).
 - Validation checks every crosswalk against both sides: the operation's parameters and
