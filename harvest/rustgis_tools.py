@@ -66,7 +66,21 @@ def parameters(tool: dict) -> dict:
 def harvest() -> tuple[str, list[dict]]:
     import rustgis  # the PyPI package; this file is named rustgis_tools.py so it does not shadow it
     version = getattr(rustgis, "__version__", None) or "unknown"
-    tools = rustgis.Session().tools()
+    session = rustgis.Session()
+    tools = session.tools()
+    # RustGIS says it has over 1,000 tools, but gp.tools lists only its own toolbox. Report what
+    # its command list holds (on stderr, for the workflow log) so the rest can be harvested next.
+    try:
+        from collections import Counter
+        commands = session.commands()
+        prefixes = Counter(str(c.get("id", "")).split(".")[0] for c in commands if isinstance(c, dict))
+        print(f"rustgis: {len(tools)} gp tools; {len(commands)} commands by prefix: "
+              f"{dict(prefixes.most_common(25))}", file=sys.stderr)
+        sample = [c for c in commands if isinstance(c, dict)][:3]
+        print(f"rustgis: sample commands: {sample}"[:3000], file=sys.stderr)
+        print(f"rustgis: plugin problems: {rustgis.load_plugins()}"[:1000], file=sys.stderr)
+    except Exception as e:  # noqa: BLE001 - a diagnostic must not stop the harvest
+        print(f"rustgis: could not list commands: {e}", file=sys.stderr)
     entries = []
     for t in tools:
         tid = str(first(t, "id", "name"))
