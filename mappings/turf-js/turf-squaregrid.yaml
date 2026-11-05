@@ -1,0 +1,10 @@
+id: turf-squaregrid
+implements: create-grid
+crosswalk:
+  layer: { note: "bbox: [west, south, east, north] in longitude/latitude." }
+  cell_size: { param: cellSide, note: "In options.units (default kilometers)." }
+  shape: { fixed: square, note: turf.hexGrid for hexagons. }
+differences:
+  - Turf works on GeoJSON in longitude/latitude (WGS 84); data in another CRS must be reprojected first.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,11 @@
+id: whiteboxtools-create-rectangular-vector-grid
+implements: create-grid
+crosswalk:
+  layer: input
+  output: output
+  cell_size: { note: "width and height: the cell's width and height." }
+  shape: { fixed: square, note: CreateHexagonalVectorGrid for hexagons. }
+differences:
+  - xorig and yorig set where the grid starts (default 0, 0).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,19 @@
+id: measure-area
+kind: operation
+name: Measure Area
+aka: [Calculate Geometry (area), Add Geometry Attributes, polygon area, shape area]
+summary: The area of each polygon, as a number or a new attribute.
+group: vector/measure
+inputs:
+  - { name: layer, type: vector, geometry: polygon }
+outputs:
+  - { name: output, type: any, note: "The areas, or the layer with an area attribute." }
+parameters:
+  unit: { type: enum, values: [m2, ha, km2, ft2, acre], default: m2 }
+checks: [crs.measure]
+pitfalls:
+  - In a geographic CRS, planar engines return square degrees; geodesic ones (Turf, terra, PostGIS geography) return square metres.
+  - Projected areas carry the projection's scale error; use an equal-area projection for large areas.
+related: [measure-length]
+status: active
+review: { state: draft }

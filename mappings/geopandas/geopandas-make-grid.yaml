@@ -1,0 +1,10 @@
+id: geopandas-make-grid
+implements: create-grid
+crosswalk:
+  layer: input_geometry
+  cell_size: cell_size
+  shape: grid_type
+differences:
+  - Keeps only cells that intersect the geometry (intersect = True).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

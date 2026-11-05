@@ -67,7 +67,7 @@ class Case:
     title: str
     inputs: dict[str, Any]          # port -> list of geometries, or a DataFrame for tables
     params: dict[str, Any]          # canonical parameters
-    measure: str                    # area | length | count | coords | raster_* | field_*
+    measure: str                    # area | length | count | coords | raster_* | field_* | value:<name>
     expected: float | None = None   # None: compare engines with each other
     tolerance: float = 1e-6         # relative
     attrs: dict[str, list] = field(default_factory=dict)  # extra columns per port
@@ -130,6 +130,12 @@ CASES = [
     Case("polygons-to-lines", "outline of a 100 m square", {"layer": [poly(0, 0, 100, 100)]}, {}, "length", expected=400.0),
     Case("lines-to-polygons", "closed square line", {"layer": [shapely.LineString([(0, 0), (100, 0), (100, 100), (0, 100), (0, 0)])]},
          {}, "area", expected=10000.0),
+    Case("measure-area", "a 100 m square", {"layer": [poly(621000, 3349000, 621100, 3349100)]}, {}, "value:area",
+         expected=10000.0, tolerance=0.002),
+    Case("measure-length", "a 500 m line", {"layer": [shapely.LineString([(621000, 3349000), (621300, 3349400)])]},
+         {"unit": "m"}, "value:length", expected=500.0, tolerance=0.002),
+    Case("create-grid", "10 m cells over a 100 m square", {"layer": [poly(0, 0, 100, 100)]}, {"cell_size": 10}, "count",
+         expected=100),
     Case("table-to-points", "two rows of coordinates",
          {"table": pd.DataFrame({"x": [621000.0, 621010.0], "y": [3349000.0, 3349020.0]})},
          {"x_field": "x", "y_field": "y", "crs": CRS}, "coords",
@@ -211,6 +217,11 @@ OUTPUT_SCALE = {
 }
 
 
+def tabular(case: "Case") -> bool:
+    """Cases measured from attributes or returned numbers rather than from geometries."""
+    return case.measure.startswith(("field_", "value:"))
+
+
 class Unsupported(Exception):
     """The implementation cannot honour this case's canonical values (a documented difference)."""
 
@@ -244,6 +255,12 @@ def translate(impl: dict, op: dict, case: Case) -> tuple[dict, dict]:
         elif port in case.inputs:
             raise Unsupported(f"no mapping for input '{port}'")
     args: dict[str, Any] = {}
+    # An engine that always behaves one way cannot honour a different canonical default either.
+    for name, item in cw.items():
+        if isinstance(item, dict) and "fixed" in item and name not in case.params and item["fixed"] != "crs-units":
+            default = defaults.get(name)
+            if default is not None and default != item["fixed"]:
+                raise Unsupported(f"{name} defaults to {default!r}; the engine always uses {item['fixed']!r}")
     for name, value in case.params.items():
         item = cw.get(name)
         if item is None:
@@ -255,7 +272,7 @@ def translate(impl: dict, op: dict, case: Case) -> tuple[dict, dict]:
             continue
         if "fixed" in item:
             fixed = item["fixed"]
-            if fixed == value or (fixed == "crs-units" and value == "m"):
+            if fixed == value or (fixed == "crs-units" and value in ("m", "m2")):
                 continue
             raise Unsupported(f"{name}={value!r}: the engine always uses {fixed!r}")
         if "param" not in item:
@@ -310,9 +327,17 @@ def run_python(impl: dict, op: dict, case: Case) -> list:
         result = attr(**kwargs) if callable(attr) else attr  # .centroid, .convex_hull are properties
     else:
         mod = importlib.import_module(parts[0])
-        result = getattr(mod, parts[-1])(**kwargs)
-    if case.measure.startswith("field_") and isinstance(result, pd.DataFrame):
+        func = getattr(mod, parts[-1])
+        import inspect
+        sig = inspect.signature(func)
+        positional = [kwargs.pop(n) for n, p in sig.parameters.items()
+                      if p.kind is p.POSITIONAL_ONLY and n in kwargs]  # geopandas.make_grid(geom, /, ...)
+        result = func(*positional, **kwargs)
+    if tabular(case) and isinstance(result, pd.DataFrame):
         return result
+    if case.measure.startswith("value:"):  # .area, shapely.length: numbers, one per feature
+        import numpy as np
+        return [float(x) for x in np.ravel(np.asarray(result, dtype=float))]
     return geometries(result)
 
 
@@ -335,6 +360,8 @@ KNOWN_DIFFERENCES = {
         "the output grid is one row and one column short of the inputs' combined extent",
     ("whiteboxtools-mosaic", "values unchanged"):
         "the output grid is one row and one column short of the inputs' combined extent",
+    ("postgis-st-squaregrid", "10 m cells over a 100 m square"):
+        "cells that only touch the bounds' edge are included (121 for a 100 m square)",
     ("gdal-vector-rasterize", "50 m by 30 m rectangle at 10 m cells"):
         "with a resolution and no extent, the grid starts half a cell outside the features",
     ("whiteboxtools-idw-interpolation", "three points of value 5"):
@@ -374,7 +401,7 @@ def stage_inputs(tmp: str, ports: dict, op: dict, case: Case, vector_ext: str) -
 def read_output(path: str, op: dict, case: Case):
     if op["outputs"][0]["type"] == "raster":
         return read_raster(Path(path))
-    if case.measure.startswith("field_"):
+    if tabular(case):
         return gpd.read_file(path)
     return [g for g in gpd.read_file(path).geometry if g is not None]
 
@@ -416,6 +443,8 @@ def run_whitebox(wbt: str, impl: dict, op: dict, case: Case):
                 argv.append(f"--{k}={v}")
         r = subprocess.run(argv, capture_output=True, text=True)
         out = next((paths[p["name"]] for p in op["outputs"] if p["name"] in paths), None)
+        if out is None and r.returncode == 0:  # tools that add fields to their input (PolygonArea)
+            out = next(v for p, v in paths.items() if isinstance(v, str) and p in case.inputs)
         if r.returncode != 0 or not out or not Path(out).exists():
             raise RuntimeError(f"whitebox {impl['call']['name']} failed: {(r.stderr or r.stdout).strip()[-300:]}")
         return read_output(out, op, case)
@@ -588,7 +617,7 @@ def run_r(rscript: str, impl: dict, op: dict, case: Case):
             return read_raster(Path(tmp) / "out.tif")
         if (Path(tmp) / "out.gpkg").exists():
             out = gpd.read_file(Path(tmp) / "out.gpkg")
-            return out if case.measure.startswith("field_") else [g for g in out.geometry if g is not None]
+            return out if tabular(case) else [g for g in out.geometry if g is not None]
         table = pd.read_csv(Path(tmp) / "out.csv")
         stat = case.measure[len("field_"):]
         if case.measure.startswith("field_") and not any(c.lower().endswith(stat) for c in table.columns):
@@ -694,7 +723,7 @@ def run_grass(grass: str, impl: dict, op: dict, case: Case):
         if raster_out:
             return read_raster(out)
         frame = gpd.read_file(out)
-        return frame if case.measure.startswith("field_") else [g for g in frame.geometry if g is not None]
+        return frame if tabular(case) else [g for g in frame.geometry if g is not None]
 
 
 TURF_SCRIPT = r"""
@@ -746,8 +775,11 @@ def run_turf(node: str, modules: str, impl: dict, op: dict, case: Case):
                            capture_output=True, text=True)
         if r.returncode != 0:
             raise RuntimeError(f"{request['fn']} failed: {r.stderr.strip()[-300:]}")
-        out = gpd.GeoDataFrame.from_features(json.loads(r.stdout)["features"], crs=4326).to_crs(CRS)
-        return out if case.measure.startswith("field_") else [g for g in out.geometry if g is not None]
+        data = json.loads(r.stdout)
+        if isinstance(data, (int, float)):  # turf.area, turf.length
+            return [float(data)]
+        out = gpd.GeoDataFrame.from_features(data["features"], crs=4326).to_crs(CRS)
+        return out if tabular(case) else [g for g in out.geometry if g is not None]
 
 
 def write_dem(path: Path, part: str = RASTER) -> None:
@@ -807,7 +839,7 @@ def run_gdal(gdal: str, impl: dict, op: dict, case: Case):
             raise RuntimeError(f"{' '.join(argv[:3])} failed: {(r.stderr or r.stdout).strip()[:300]}")
         if raster_out:
             return read_raster(out)
-        if case.measure.startswith("field_"):
+        if tabular(case):
             return gpd.read_file(out)
         return [g for g in gpd.read_file(out).geometry if g is not None]
 
@@ -858,8 +890,10 @@ def run_postgis(psql: str, dsn: str, impl: dict, op: dict, case: Case) -> list:
             put(k, lit(v))
     call_args = [positional[i] for i in sorted(positional)] + named
     expr = f"{fn}({', '.join(call_args)})"
-    if any(s.get("returns", "").startswith("SETOF geometry_dump") for s in impl.get("signatures") or []):
-        expr = f"({expr}).geom"  # ST_Dump: one (path, geom) row per part
+    if any(s.get("returns", "").startswith("SETOF") and s.get("returns") != "SETOF geometry"
+           for s in impl.get("signatures") or []):
+        expr = f"({expr}).geom"  # ST_Dump, ST_SquareGrid: rows of (..., geom, ...)
+    value = case.measure.startswith("value:")
     group = ""
     if aggregate and "by" in case.params:
         port = next(iter(case.inputs))
@@ -871,7 +905,7 @@ def run_postgis(psql: str, dsn: str, impl: dict, op: dict, case: Case) -> list:
         names = [p for p in ports if p in case.inputs]
         if len(names) == 2:
             where.append(f"ST_Intersects({names[0]}.g, {names[1]}.g)")
-    sql = f"SELECT ST_AsText({expr}) FROM {', '.join(from_parts)}"
+    sql = f"SELECT {expr + '::float8' if value else f'ST_AsText({expr})'} FROM {', '.join(from_parts)}"
     if where:
         sql += " WHERE " + " AND ".join(where)
     sql += group
@@ -879,6 +913,8 @@ def run_postgis(psql: str, dsn: str, impl: dict, op: dict, case: Case) -> list:
                        capture_output=True, text=True)
     if r.returncode != 0:
         raise RuntimeError(f"{fn} failed: {r.stderr.strip()[:300]}")
+    if value:
+        return [float(line) for line in r.stdout.splitlines() if line.strip()]
     return [wkt.loads(line) for line in r.stdout.splitlines() if line.strip() and "EMPTY" not in line]
 
 
@@ -939,6 +975,14 @@ def measure(kind: str, geoms) -> float:
         return sum(geoms) / len(geoms) if geoms else float("nan")
     if kind == "raster_count":
         return float(len(geoms))
+    if kind.startswith("value:"):
+        name = kind.split(":", 1)[1]
+        if isinstance(geoms, pd.DataFrame):
+            cols = [c for c in geoms.columns if c.lower() == name or c.lower().endswith(name)]
+            if not cols:
+                cols = [c for c in geoms.columns if c != "geometry" and pd.api.types.is_numeric_dtype(geoms[c])][-1:]
+            return float(pd.to_numeric(geoms[cols[0]]).sum())
+        return float(sum(geoms))
     if kind.startswith("field_"):
         name = kind[len("field_"):]
         cols = [c for c in geoms.columns if c == name or c.lower().endswith(name)]

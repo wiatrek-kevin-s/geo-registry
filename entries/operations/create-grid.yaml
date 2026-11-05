@@ -1,0 +1,19 @@
+id: create-grid
+kind: operation
+name: Create Grid
+aka: [Create Fishnet, Generate Tessellation, vector grid, hexagon grid, square grid]
+summary: A layer of square or hexagonal cells of a given size covering another layer's extent.
+group: vector/geometry
+inputs:
+  - { name: layer, type: vector, note: The grid covers this layer's extent. }
+outputs:
+  - { name: output, type: vector, geometry: polygon }
+parameters:
+  cell_size: { type: length, required: true, note: "Cell width, in the CRS's units (for hexagons, engines differ on which dimension)." }
+  shape: { type: enum, values: [square, hexagon], default: square }
+checks: [crs.measure]
+pitfalls:
+  - Engines align the grid differently (to the extent's corner, or to multiples of the cell size), so cells and counts can differ.
+related: [voronoi]
+status: active
+review: { state: draft }

@@ -1,0 +1,10 @@
+id: qgis-native-exportaddgeometrycolumns
+implements: measure-area
+crosswalk:
+  layer: INPUT
+  output: OUTPUT
+  unit: { fixed: crs-units, note: "Square CRS units (square metres in a metric CRS); convert afterwards for other units." }
+differences:
+  - Adds area and perimeter fields to polygons (length to lines, coordinates to points); METHOD 2 measures on the ellipsoid.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

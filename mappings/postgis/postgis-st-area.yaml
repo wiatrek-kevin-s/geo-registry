@@ -1,0 +1,9 @@
+id: postgis-st-area
+implements: measure-area
+crosswalk:
+  layer: "#1"
+  unit: { fixed: crs-units, note: "Square CRS units (square metres in a metric CRS); convert afterwards for other units." }
+differences:
+  - On geography, square metres on the spheroid (use_spheroid).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

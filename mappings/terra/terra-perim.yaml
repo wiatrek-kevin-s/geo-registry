@@ -1,0 +1,9 @@
+id: terra-perim
+implements: measure-length
+crosswalk:
+  layer: x
+  unit: { fixed: crs-units, note: "CRS units (metres in a metric CRS); convert afterwards for other units." }
+differences:
+  - For polygons, the perimeter.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

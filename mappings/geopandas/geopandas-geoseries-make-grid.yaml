@@ -1,0 +1,9 @@
+id: geopandas-geoseries-make-grid
+implements: create-grid
+crosswalk:
+  cell_size: cell_size
+  shape: grid_type
+differences:
+  - Called on a GeoSeries; keeps only cells that intersect it.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

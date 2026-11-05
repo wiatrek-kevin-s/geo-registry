@@ -1,0 +1,9 @@
+id: terra-expanse
+implements: measure-area
+crosswalk:
+  layer: x
+  unit: { param: unit, values: { m2: m, km2: km, ha: ha }, unsupported: [ft2, acre] }
+differences:
+  - Square metres even for longitude/latitude data (geodesic); also measures raster cell areas.
+effects: { modifies_input: false, network: false }
+review: { state: draft }
