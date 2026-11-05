@@ -28,7 +28,7 @@ schema/entry.schema.json    JSON Schema (2020-12) for both kinds
 seed/geospatial-tool-atlas.csv   the seed spreadsheet, kept verbatim
 seed/convert.py             reproducible CSV -> entries converter (Python 3.12+, PyYAML)
 build/                      Rust crate "geo-registry": validate, build, search
-checks/                     planned per-access-type health checks (not running yet)
+checks/                     index compatibility, endpoint health checks, equivalence tests
 .github/                    CI and the pull request template
 ```
 

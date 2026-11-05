@@ -1,0 +1,44 @@
+name: Health
+
+# Probes every data entry's endpoints (checks/health.py) and opens a pull request
+# with the status changes: failing entries become degraded, recovered ones active,
+# and last_verified is refreshed on entries that answered. Retiring stays a
+# person's decision.
+
+on:
+  schedule:
+    - cron: "41 7 * * 2"   # Tuesdays 07:41 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --upgrade pip pyyaml
+      - name: Probe every endpoint
+        run: python checks/health.py --apply --report "$RUNNER_TEMP/health.json" --summary "$RUNNER_TEMP/summary.md"
+      - name: Keep the full report
+        uses: actions/upload-artifact@v4
+        with:
+          name: health-report
+          path: ${{ runner.temp }}/health.json
+      - name: Open a pull request if anything changed
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: health/status
+          commit-message: "Health check: status and last_verified"
+          title: "Health check: endpoint status changes"
+          body-path: ${{ runner.temp }}/summary.md
+          add-paths: |
+            entries/data/**
+            seed/overrides/**
