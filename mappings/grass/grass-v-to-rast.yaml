@@ -4,8 +4,10 @@ crosswalk:
   layer: input
   output: output
   resolution: { note: "Set by the computational region (g.region res=...)." }
-  value: { param: value, note: "With use = val." }
-  field: { param: attribute_column, note: "With use = attr." }
+  value: value
+  field: { note: "Set use = attr and attribute_column; this mapping burns a fixed value (use = val)." }
   all_touched: { note: "Use the d flag for dense lines; areas burn cell centres." }
+presets:
+  use: val
 effects: { modifies_input: false, network: false }
 review: { state: draft }

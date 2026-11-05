@@ -2,7 +2,7 @@
 """Run each mapped implementation on the same small input and check the results agree.
 
     python checks/equivalence.py DIST [--gdal PATH] [--psql PATH --dsn CONNINFO]
-        [--qgis-process PATH] [--wbt PATH] [--rscript PATH]
+        [--qgis-process PATH] [--wbt PATH] [--rscript PATH] [--grass PATH]
 
 DIST is a built registry (registry.sqlite). For every case below, each
 implementation mapped to the case's operation is called through its
@@ -20,7 +20,7 @@ contour, a grid one cell short) is listed in KNOWN_DIFFERENCES and reported as
 Engines not available on this machine are skipped. Needs geopandas and
 shapely in the running Python (rasterio, rioxarray, xarray-spatial, rasterstats
 and dask-geopandas there too, when installed); GDAL through --gdal; PostGIS
-through --psql; R's sf and terra through --rscript.
+through --psql; R's sf and terra through --rscript; GRASS through --grass.
 Exit status: 0 when nothing failed, 1 otherwise.
 """
 
@@ -566,6 +566,83 @@ def write_input(path_stem: Path, data, case: Case, port: str, vector_ext: str) -
     return str(path)
 
 
+# GRASS modules that update an input map's attribute table instead of making a layer,
+# which the runner does not reproduce.
+GRASS_TABLE_MODULES = {"v.db.join": "joins a database table into the map's own attribute table",
+                       "v.distance": "uploads into the from map's attribute table (upload, column)"}
+
+
+def run_grass(grass: str, impl: dict, op: dict, case: Case):
+    """GRASS: a throwaway project in the fixtures' CRS; inputs imported, the computational
+    region set from them (and from `resolution`, which GRASS takes from the region), the
+    module run through its crosswalk, the result exported."""
+    module = impl["call"]["name"]
+    if module in GRASS_TABLE_MODULES:
+        raise Unsupported(GRASS_TABLE_MODULES[module])
+    params = dict(case.params)
+    region_res = None
+    cw = impl.get("crosswalk") or {}
+    if "resolution" in params and isinstance(cw.get("resolution"), dict) and "param" not in cw["resolution"]:
+        region_res = params.pop("resolution")  # g.region res=...
+    ports, args = translate(impl, op, Case(case.operation, case.title, case.inputs, params, case.measure,
+                                           case.expected, case.tolerance, case.attrs))
+    out_port = next((p["name"] for p in op["outputs"] if ports.get(p["name"])), None)
+    raster_out = op["outputs"][0]["type"] == "raster"
+    with tempfile.TemporaryDirectory() as tmp:
+        lines = ["set -e"]
+        rasters, vectors, call = [], [], []
+        for port, engine in ports.items():
+            data = case.inputs.get(port)
+            if data is None or engine is None:
+                continue
+            names = []
+            for i, d in enumerate(data if is_many(data) else [data]):
+                name = f"{port}{i}"
+                path = write_input(Path(tmp) / name, d, case, port, ".gpkg")
+                if is_raster(d):
+                    lines.append(f"r.in.gdal --quiet input={path} output={name}")
+                    rasters.append(name)
+                else:
+                    lines.append(f"v.in.ogr --quiet input={path} output={name}")
+                    vectors.append(name)
+                names.append(name)
+            call.append(f"{engine}={','.join(names)}")
+        region = f"raster={','.join(rasters)}" if rasters else f"vector={','.join(vectors)}"
+        lines.append(f"g.region {region}" + (f" res={region_res} -a" if region_res else ""))
+        if out_port:
+            call.append(f"{ports[out_port]}=result")
+        flags = ""
+        for k, v in args.items():
+            if k.startswith("flag_"):
+                flags += k[len("flag_"):] if v else ""
+            elif isinstance(v, list):
+                call.append(f"{k}={','.join(str(x) for x in v)}")
+            else:
+                call.append(f"{k}={str(v).lower() if isinstance(v, bool) else v}")
+        lines.append(f"{module} --quiet {'-' + flags + ' ' if flags else ''}" + " ".join(call))
+        result = "result" if out_port else (vectors or rasters)[0]  # in-place modules: the updated map
+        out = Path(tmp) / ("out.tif" if raster_out else "out.gpkg")
+        if raster_out:
+            lines.append(f"r.out.gdal --quiet input={result} output={out} format=GTiff")
+        else:
+            lines.append(f"v.out.ogr --quiet input={result} output={out} format=GPKG")
+        script = Path(tmp) / "run.sh"
+        script.write_text("\n".join(lines) + "\n")
+        import os
+        env = {**os.environ}
+        proj = Path(grass).resolve().parent.parent / "share" / "proj"
+        if proj.exists():
+            env["PROJ_DATA"] = str(proj)
+        r = subprocess.run([grass, "--tmp-project", f"EPSG:{SRID}", "--exec", "bash", str(script)],
+                           capture_output=True, text=True, env=env, cwd=tmp)
+        if r.returncode != 0 or not out.exists():
+            raise RuntimeError(f"{module} failed: {(r.stderr or r.stdout).strip()[-300:]}")
+        if raster_out:
+            return read_raster(out)
+        frame = gpd.read_file(out)
+        return frame if case.measure.startswith("field_") else [g for g in frame.geometry if g is not None]
+
+
 def write_dem(path: Path, part: str = RASTER) -> None:
     """The DEM, or its western or eastern half (for mosaics)."""
     from osgeo import gdal, osr
@@ -757,8 +834,10 @@ def measure(kind: str, geoms) -> float:
         return float(len(geoms))
     if kind.startswith("field_"):
         name = kind[len("field_"):]
-        col = name if name in geoms.columns else next(c for c in geoms.columns if c.lower().endswith(name))
-        return float(geoms[col].iloc[0])
+        cols = [c for c in geoms.columns if c == name or c.lower().endswith(name)]
+        if not cols:  # engines that name the column themselves (zonal_average, a layer's name)
+            cols = [c for c in geoms.columns if c != "geometry" and pd.api.types.is_numeric_dtype(geoms[c])][-1:]
+        return float(geoms[cols[0]].iloc[0])
     if kind == "area":
         return sum(g.area for g in geoms)
     if kind == "length":
@@ -785,6 +864,7 @@ def main() -> int:
     ap.add_argument("--qgis-process", default=shutil.which("qgis_process"))
     ap.add_argument("--wbt", default=shutil.which("whitebox_tools"))
     ap.add_argument("--rscript", default=shutil.which("Rscript"), help="Rscript with the sf and terra packages")
+    ap.add_argument("--grass", default=shutil.which("grass"), help="the grass launcher")
     args = ap.parse_args()
 
     db = sqlite3.connect(f"file:{args.dist / 'registry.sqlite'}?mode=ro", uri=True)
@@ -798,6 +878,8 @@ def main() -> int:
         if iface == "python" and software in PYLIB_SOFTWARE and importlib.util.find_spec(
                 {"xarray-spatial": "xrspatial", "dask-geopandas": "dask_geopandas"}.get(software, software)):
             return lambda op, case: run_pylib(impl, op, case)
+        if iface == "cli" and software == "grass" and args.grass:
+            return lambda op, case: run_grass(args.grass, impl, op, case)
         if iface == "r" and software in ("sf", "terra") and args.rscript:
             return lambda op, case: run_r(args.rscript, impl, op, case)
         if iface == "cli" and software == "gdal" and args.gdal:
