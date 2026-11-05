@@ -1,0 +1,10 @@
+id: dask-geopandas-clip
+implements: clip
+crosswalk:
+  layer: gdf
+  mask: mask
+differences:
+  - "Lazy: works on a dask GeoDataFrame and returns one; call compute() for the result."
+  - The mask must be an ordinary GeoDataFrame, GeoSeries or geometry, not a dask one.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

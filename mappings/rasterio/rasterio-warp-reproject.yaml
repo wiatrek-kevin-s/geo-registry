@@ -1,0 +1,12 @@
+id: rasterio-warp-reproject
+implements: reproject-raster
+crosswalk:
+  raster: source
+  output: destination
+  crs: dst_crs
+  resampling: { param: resampling, values: { nearest: 0, bilinear: 1, cubic: 2, average: 5, mode: 6 }, note: "A rasterio.enums.Resampling member; the numbers are its values." }
+  resolution: dst_resolution
+differences:
+  - Works on arrays; the caller passes the source transform and CRS (src_transform, src_crs) and writes the result.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

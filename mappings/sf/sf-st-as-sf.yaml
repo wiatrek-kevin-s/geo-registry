@@ -1,0 +1,9 @@
+id: sf-st-as-sf
+implements: table-to-points
+crosswalk:
+  table: x
+  x_field: { note: "coords = c(x_field, y_field), passed through ..." }
+  y_field: { note: "coords = c(x_field, y_field), passed through ..." }
+  crs: { note: "crs = ..., passed through ...; without it the points have no CRS." }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

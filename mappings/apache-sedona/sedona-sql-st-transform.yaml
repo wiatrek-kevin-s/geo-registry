@@ -1,0 +1,10 @@
+id: sedona-sql-st-transform
+implements: reproject
+crosswalk:
+  layer: geometry
+  crs: target_crs
+differences:
+  - source_crs can be given explicitly; otherwise the geometry's SRID is used.
+  - "A Spark SQL function: arguments are columns or column names, run over a Spark DataFrame."
+effects: { modifies_input: false, network: false }
+review: { state: draft }

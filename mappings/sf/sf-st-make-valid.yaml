@@ -1,0 +1,6 @@
+id: sf-st-make-valid
+implements: make-valid
+crosswalk:
+  layer: x
+effects: { modifies_input: false, network: false }
+review: { state: draft }

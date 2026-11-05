@@ -1,0 +1,10 @@
+id: rioxarray-raster-array-rasterarray-clip
+implements: clip-raster
+crosswalk:
+  mask: geometries
+  all_touched: all_touched
+  bbox: { note: "Use clip_box(minx, miny, maxx, maxy, crs=...) for a box." }
+differences:
+  - Called through the .rio accessor of a DataArray (da.rio.clip); crs gives the geometries' CRS when it differs from the raster's.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

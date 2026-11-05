@@ -1,0 +1,11 @@
+id: terra-simplifygeom
+implements: simplify
+crosswalk:
+  layer: x
+  tolerance: tolerance
+  unit: { fixed: crs-units }
+  preserve_topology: preserveTopology
+differences:
+  - Repairs invalid results by default (makeValid = TRUE).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

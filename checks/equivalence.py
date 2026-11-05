@@ -2,6 +2,7 @@
 """Run each mapped implementation on the same small input and check the results agree.
 
     python checks/equivalence.py DIST [--gdal PATH] [--psql PATH --dsn CONNINFO]
+        [--qgis-process PATH] [--wbt PATH] [--rscript PATH]
 
 DIST is a built registry (registry.sqlite). For every case below, each
 implementation mapped to the case's operation is called through its
@@ -14,7 +15,9 @@ engine that cannot honour a canonical value (`unsupported`, `fixed`) is
 reported as skipped with the reason, which is the documented difference.
 
 Engines not available on this machine are skipped. Needs geopandas and
-shapely in the running Python; GDAL through --gdal; PostGIS through --psql.
+shapely in the running Python (rasterio, rioxarray, xarray-spatial, rasterstats
+and dask-geopandas there too, when installed); GDAL through --gdal; PostGIS
+through --psql; R's sf and terra through --rscript.
 Exit status: 0 when nothing failed, 1 otherwise.
 """
 
@@ -22,6 +25,7 @@ from __future__ import annotations
 
 import argparse
 import importlib
+import importlib.util
 import json
 import math
 import statistics
@@ -133,6 +137,7 @@ RASTER_CASES = [
 # check the substance: implementation id -> (factor, what it means).
 OUTPUT_SCALE = {
     "whiteboxtools-hillshade": (255 / 32767, "output is 0 to 32767, compared as 0 to 255"),
+    "xrspatial-hillshade": (255, "output is illumination from 0 to 1, compared as 0 to 255"),
 }
 
 
@@ -148,7 +153,8 @@ def translate(impl: dict, op: dict, case: Case) -> tuple[dict, dict]:
     cw = impl.get("crosswalk") or {}
     defaults = {k: v.get("default") for k, v in (op.get("parameters") or {}).items()}
     ports: dict[str, str | None] = {}
-    method = impl["call"]["interface"] == "python" and any(c in impl["call"]["name"] for c in (".GeoSeries.", ".GeoDataFrame."))
+    method = impl["call"]["interface"] == "python" and any(
+        c in impl["call"]["name"] for c in (".GeoSeries.", ".GeoDataFrame.", ".RasterArray."))
     first_input = op["inputs"][0]["name"]
     eparams = impl.get("parameters") or {}
     for port in [p["name"] for p in op["inputs"] + op["outputs"]]:
@@ -317,6 +323,145 @@ def run_whitebox(wbt: str, impl: dict, op: dict, case: Case):
         if r.returncode != 0 or not out or not Path(out).exists():
             raise RuntimeError(f"whitebox {impl['call']['name']} failed: {(r.stderr or r.stdout).strip()[-300:]}")
         return read_output(out, op, case)
+
+
+PYLIB_SOFTWARE = {"rasterio", "rioxarray", "xarray-spatial", "rasterstats", "dask-geopandas"}
+
+
+def valid_cells(arr, nodata=None) -> list[float]:
+    return [float(v) for v in arr.ravel() if math.isfinite(v) and (nodata is None or v != nodata)]
+
+
+def run_pylib(impl: dict, op: dict, case: Case):
+    """Python libraries called on arrays or rasters rather than GeoDataFrames."""
+    ports, args = translate(impl, op, case)
+    name, software = impl["call"]["name"], impl["software"]
+    fn = name.split(".")[-1]
+
+    def frame(port):
+        return gpd.GeoDataFrame(case.attrs.get(port, {}), geometry=list(case.inputs[port]), crs=CRS)
+
+    def shapes(port):
+        return [shapely.geometry.mapping(g) for g in case.inputs[port]]
+
+    if "resampling" in args:
+        from rasterio.enums import Resampling
+        args["resampling"] = Resampling(args["resampling"])
+    if software == "dask-geopandas":
+        import dask_geopandas
+        kwargs = dict(args)
+        for port, engine in ports.items():
+            if port in case.inputs:  # clip's mask must stay an ordinary GeoDataFrame
+                kwargs[engine] = frame(port) if port == "mask" else dask_geopandas.from_geopandas(frame(port), npartitions=1)
+        return geometries(getattr(dask_geopandas, fn)(**kwargs).compute())
+    if name == "rasterio.warp.transform_geom":
+        import rasterio.warp
+        out = rasterio.warp.transform_geom(src_crs=CRS, **{ports["layer"]: shapes("layer")}, **args)
+        return [shapely.geometry.shape(g) for g in out]
+    with tempfile.TemporaryDirectory() as tmp:
+        dem = Path(tmp) / "dem.tif"
+        write_dem(dem)
+        if software == "rasterio":
+            import rasterio
+            import rasterio.mask
+            import rasterio.warp
+            with rasterio.open(dem) as ds:
+                if name == "rasterio.mask.mask":
+                    arr, _ = rasterio.mask.mask(**{ports["raster"]: ds, ports["mask"]: shapes("mask")}, **args)
+                    return valid_cells(arr[0], ds.nodata)
+                if name == "rasterio.warp.reproject":
+                    arr, _ = rasterio.warp.reproject(**{ports["raster"]: ds.read(1)}, src_transform=ds.transform,
+                                                     src_crs=ds.crs, src_nodata=ds.nodata, dst_nodata=ds.nodata, **args)
+                    return valid_cells(arr, ds.nodata)
+        if software == "rasterstats":
+            import rasterstats
+            rows = list(getattr(rasterstats, fn)(**{ports["zones"]: shapes("zones"), ports["raster"]: str(dem)}, **args))
+            return pd.DataFrame(rows)
+        import rioxarray
+        da = rioxarray.open_rasterio(dem, masked=True).squeeze("band", drop=True)
+        if software == "rioxarray":
+            kwargs = dict(args)
+            if "mask" in ports:
+                kwargs[ports["mask"]] = shapes("mask")
+            return valid_cells(getattr(da.rio, fn)(**kwargs).values)
+        if software == "xarray-spatial":
+            import xrspatial
+            if fn == "zonal_stats":
+                from rasterio.features import rasterize
+                zones = da.copy(data=rasterize([(g, 1) for g in case.inputs["zones"]], out_shape=da.shape,
+                                               transform=da.rio.transform(), fill=0).astype("float64"))
+                stats = args.pop("stats_funcs", None)
+                kwargs = {ports["zones"]: zones, ports["raster"]: da, **args}
+                if stats is not None:
+                    kwargs["stats_funcs"] = [stats] if isinstance(stats, str) else stats
+                table = xrspatial.zonal_stats(**kwargs)
+                return table[table["zone"] == 1].reset_index(drop=True)
+            return valid_cells(getattr(xrspatial, fn)(**{ports["raster"]: da}, **args).values)
+    raise Unsupported(f"no runner for {name}")
+
+
+def r_value(v) -> str:
+    if isinstance(v, bool):
+        return "TRUE" if v else "FALSE"
+    if isinstance(v, (int, float)):
+        return repr(v)
+    if isinstance(v, (list, tuple)):
+        return "c(" + ", ".join(r_value(x) for x in v) + ")"
+    return json.dumps(str(v))
+
+
+R_FUNCTION_ARGS = {"join"}  # arguments that take a function (sf::st_join's predicate), not text
+
+R_WRITE = """
+if (inherits(res, "SpatRaster")) terra::writeRaster(res, "out.tif", overwrite = TRUE) else
+if (inherits(res, "SpatVector")) terra::writeVector(res, "out.gpkg", overwrite = TRUE) else
+if (inherits(res, c("sf", "sfc"))) sf::st_write(res, "out.gpkg", quiet = TRUE) else
+write.csv(as.data.frame(res), "out.csv", row.names = FALSE)
+"""
+
+
+def run_r(rscript: str, impl: dict, op: dict, case: Case):
+    """R packages (sf, terra): inputs written to files, the function called through Rscript."""
+    ports, args = translate(impl, op, case)
+    read_vector = "sf::st_read({}, quiet = TRUE)" if impl["software"] == "sf" else "terra::vect({})"
+    with tempfile.TemporaryDirectory() as tmp:
+        call = []
+        for port, engine in ports.items():
+            if engine is None or port not in case.inputs:
+                continue
+            data = case.inputs[port]
+            if isinstance(data, str) and data == RASTER:
+                path = Path(tmp) / f"{port}.tif"
+                write_dem(path)
+                expr = f"terra::rast({json.dumps(str(path))})"
+            elif isinstance(data, pd.DataFrame):
+                path = Path(tmp) / f"{port}.csv"
+                data.to_csv(path, index=False)
+                expr = f"read.csv({json.dumps(str(path))})"
+            else:
+                path = Path(tmp) / f"{port}.gpkg"
+                frame = gpd.GeoDataFrame(case.attrs.get(port, {}), geometry=list(data), crs=CRS)
+                frame.to_file(path)
+                expr = read_vector.format(json.dumps(str(path)))
+            call.append(f"`{engine}` = {expr}")
+        for k, v in args.items():
+            call.append(f"`{k}` = " + (f"sf::{v}" if k in R_FUNCTION_ARGS else r_value(v)))
+        script = Path(tmp) / "run.R"
+        script.write_text("suppressPackageStartupMessages({library(sf); library(terra)})\n"
+                          f"res <- {impl['call']['name']}({', '.join(call)})\n" + R_WRITE)
+        r = subprocess.run([rscript, "--vanilla", str(script)], capture_output=True, text=True, cwd=tmp)
+        if r.returncode != 0:
+            raise RuntimeError(f"{impl['call']['name']} failed: {(r.stderr or r.stdout).strip()[-300:]}")
+        if (Path(tmp) / "out.tif").exists():
+            return read_raster(Path(tmp) / "out.tif")
+        if (Path(tmp) / "out.gpkg").exists():
+            out = gpd.read_file(Path(tmp) / "out.gpkg")
+            return out if case.measure.startswith("field_") else [g for g in out.geometry if g is not None]
+        table = pd.read_csv(Path(tmp) / "out.csv")
+        stat = case.measure[len("field_"):]
+        if case.measure.startswith("field_") and not any(c.lower().endswith(stat) for c in table.columns):
+            table = table.rename(columns={table.columns[-1]: stat})  # terra::zonal names the column after the layer
+        return table
 
 
 def write_dem(path: Path) -> None:
@@ -530,6 +675,7 @@ def main() -> int:
     ap.add_argument("--dsn", default=None, help="PostGIS connection string (needs the postgis extension)")
     ap.add_argument("--qgis-process", default=shutil.which("qgis_process"))
     ap.add_argument("--wbt", default=shutil.which("whitebox_tools"))
+    ap.add_argument("--rscript", default=shutil.which("Rscript"), help="Rscript with the sf and terra packages")
     args = ap.parse_args()
 
     db = sqlite3.connect(f"file:{args.dist / 'registry.sqlite'}?mode=ro", uri=True)
@@ -540,6 +686,11 @@ def main() -> int:
         iface, software = impl["call"]["interface"], impl["software"]
         if iface == "python" and software in ("shapely", "geopandas"):
             return lambda op, case: run_python(impl, op, case)
+        if iface == "python" and software in PYLIB_SOFTWARE and importlib.util.find_spec(
+                {"xarray-spatial": "xrspatial", "dask-geopandas": "dask_geopandas"}.get(software, software)):
+            return lambda op, case: run_pylib(impl, op, case)
+        if iface == "r" and software in ("sf", "terra") and args.rscript:
+            return lambda op, case: run_r(args.rscript, impl, op, case)
         if iface == "cli" and software == "gdal" and args.gdal:
             return lambda op, case: run_gdal(args.gdal, impl, op, case)
         if iface == "sql" and software == "postgis" and args.psql and args.dsn:

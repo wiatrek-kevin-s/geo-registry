@@ -1,0 +1,14 @@
+id: terra-crop
+implements: clip-raster
+crosswalk:
+  raster: x
+  mask: y
+  bbox: { note: "Pass the box as a SpatExtent (ext(xmin, xmax, ymin, ymax)) in y." }
+  all_touched: touches
+presets:
+  mask: true
+differences:
+  - touches defaults to TRUE (cells touched by the mask are kept); Columbus and GDAL default to cell centres.
+  - Without mask = TRUE, crop only cuts to the mask's extent.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

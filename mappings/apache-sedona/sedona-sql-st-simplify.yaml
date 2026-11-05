@@ -1,0 +1,11 @@
+id: sedona-sql-st-simplify
+implements: simplify
+crosswalk:
+  layer: geometry
+  tolerance: distance_tolerance
+  unit: { fixed: crs-units }
+  preserve_topology: { fixed: false, note: Use ST_SimplifyPreserveTopology. }
+differences:
+  - "A Spark SQL function: arguments are columns or column names, run over a Spark DataFrame."
+effects: { modifies_input: false, network: false }
+review: { state: draft }

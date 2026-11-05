@@ -1,0 +1,13 @@
+id: sf-st-buffer
+implements: buffer
+crosswalk:
+  layer: x
+  distance: dist
+  unit: { fixed: crs-units, note: "Projected data: CRS units. Longitude/latitude data with sf_use_s2() on (the default): metres, through S2." }
+  dissolve: { fixed: false, note: Call st_union on the result. }
+  segments: nQuadSegs
+differences:
+  - Default nQuadSegs is 30 segments per quarter circle (Columbus 8).
+  - On longitude/latitude data with S2 the buffer is built from S2 cells, so its outline differs from a GEOS buffer; nQuadSegs, end caps and joins only apply with GEOS.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,10 @@
+id: terra-shade
+implements: hillshade
+crosswalk:
+  raster: { note: "Takes slope and aspect rasters in radians, from terrain(x, c('slope', 'aspect'), unit = 'radians'), not the elevation raster." }
+  azimuth: direction
+  altitude: angle
+differences:
+  - direction defaults to 0 (light from the north); Columbus and GDAL default to 315.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

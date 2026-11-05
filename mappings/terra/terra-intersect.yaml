@@ -1,0 +1,7 @@
+id: terra-intersect
+implements: intersect
+crosswalk:
+  a: x
+  b: y
+effects: { modifies_input: false, network: false }
+review: { state: draft }

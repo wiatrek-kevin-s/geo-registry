@@ -1,0 +1,13 @@
+id: terra-buffer
+implements: buffer
+crosswalk:
+  layer: x
+  distance: width
+  unit: { fixed: crs-units, note: "Projected data: CRS units. Longitude/latitude data: metres." }
+  dissolve: { fixed: false, note: Call aggregate on the result. }
+  segments: quadsegs
+differences:
+  - Default quadsegs is 10 (Columbus 8); quadsegs, cap and join styles are ignored for longitude/latitude data.
+  - On a SpatRaster, buffer marks the cells within the distance of non-NA cells instead.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

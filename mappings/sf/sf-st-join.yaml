@@ -1,0 +1,9 @@
+id: sf-st-join
+implements: spatial-join
+crosswalk:
+  left: x
+  right: y
+  predicate: { param: join, values: { intersects: st_intersects, within: st_within, contains: st_contains, touches: st_touches, crosses: st_crosses, overlaps: st_overlaps }, note: "join takes the predicate function itself (st_intersects), not its name as text." }
+  how: { note: "left = TRUE (the default) keeps unmatched rows; left = FALSE is an inner join. Passed through ..." }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,9 @@
+id: rasterio-warp-transform-geom
+implements: reproject
+crosswalk:
+  layer: geom
+  crs: dst_crs
+differences:
+  - Takes GeoJSON-like geometries and needs the source CRS (src_crs); attributes are not carried.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,12 @@
+id: terra-terrain
+implements: slope
+crosswalk:
+  raster: x
+  units: { param: unit, values: { degrees: degrees }, unsupported: [percent], note: "unit is degrees or radians." }
+  z_unit: { fixed: crs-units, note: "Elevation must be in the map units, or metres when the CRS is longitude/latitude." }
+presets:
+  v: slope
+differences:
+  - The same function gives aspect, TPI, TRI, roughness and flow direction (v = "aspect", ...).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

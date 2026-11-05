@@ -1,0 +1,12 @@
+id: dask-geopandas-sjoin
+implements: spatial-join
+crosswalk:
+  left: left
+  right: right
+  predicate: predicate
+  how: how
+differences:
+  - Defaults to an inner join (unmatched left features dropped); Columbus defaults to left.
+  - "Lazy: returns a dask GeoDataFrame; call compute() for the result."
+effects: { modifies_input: false, network: false }
+review: { state: draft }

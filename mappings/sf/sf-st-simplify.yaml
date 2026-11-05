@@ -1,0 +1,11 @@
+id: sf-st-simplify
+implements: simplify
+crosswalk:
+  layer: x
+  tolerance: dTolerance
+  unit: { fixed: crs-units, note: "Projected data: CRS units. Longitude/latitude data with sf_use_s2() on: metres (S2's simplify)." }
+  preserve_topology: preserveTopology
+differences:
+  - preserveTopology has no default; it is ignored for longitude/latitude data simplified through S2.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

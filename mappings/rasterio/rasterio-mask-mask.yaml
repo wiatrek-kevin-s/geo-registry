@@ -1,0 +1,14 @@
+id: rasterio-mask-mask
+implements: clip-raster
+crosswalk:
+  raster: dataset
+  mask: shapes
+  all_touched: all_touched
+  bbox: { note: Pass the box as a polygon in shapes. }
+presets:
+  crop: true
+differences:
+  - Takes an open dataset and GeoJSON-like shapes in the raster's CRS; returns an array and its transform rather than writing a file.
+  - Without crop = True the result keeps the full extent, with cells outside the shapes set to nodata.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

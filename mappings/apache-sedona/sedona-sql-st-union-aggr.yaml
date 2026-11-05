@@ -1,0 +1,9 @@
+id: sedona-sql-st-union-aggr
+implements: dissolve
+crosswalk:
+  layer: geometry
+  by: { note: "An aggregate: dissolve by fields with GROUP BY." }
+differences:
+  - "A Spark SQL function: arguments are columns or column names, run over a Spark DataFrame."
+effects: { modifies_input: false, network: false }
+review: { state: draft }

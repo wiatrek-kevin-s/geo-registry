@@ -222,10 +222,12 @@ review: { state: draft }
 - Validation checks every crosswalk against both sides: the operation's parameters and
   the engine's harvested ones. After a re-harvest, a stale mapping fails with the file
   and the parameter.
-- `checks/equivalence.py` runs every mapped GDAL, Shapely, GeoPandas, PostGIS, QGIS and
-  WhiteboxTools implementation on the same small inputs (vector shapes, a tilted elevation
-  raster) and compares the results; an engine that cannot honour a value is reported as
-  skipped with the reason.
+- `checks/equivalence.py` runs every mapped GDAL, Shapely, GeoPandas, PostGIS, QGIS,
+  WhiteboxTools, rasterio, rioxarray, xarray-spatial, rasterstats, dask-geopandas, sf and
+  terra implementation on the same small inputs (vector shapes, a tilted elevation raster)
+  and compares the results; an engine that cannot honour a value is reported as skipped
+  with the reason. Mapped engines with no runner yet (GRASS, Turf.js, Apache Sedona) are
+  checked against their harvested parameters only.
 
 Search them with `geo-registry search "buffer" --kind implementation`.
 
