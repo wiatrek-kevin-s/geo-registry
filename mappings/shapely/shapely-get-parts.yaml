@@ -1,0 +1,8 @@
+id: shapely-get-parts
+implements: multipart-to-singlepart
+crosswalk:
+  layer: geometry
+differences:
+  - Returns an array of parts; return_index = True also gives which input each part came from.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

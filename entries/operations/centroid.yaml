@@ -1,0 +1,19 @@
+id: centroid
+kind: operation
+name: Centroid
+aka: [Feature To Point, centroids, point on surface, representative point, label point]
+summary: One point per feature, at its geometric centre or, if asked, at a point guaranteed to lie inside it.
+group: vector/geometry
+inputs:
+  - { name: layer, type: vector }
+outputs:
+  - { name: output, type: vector, geometry: point }
+parameters:
+  inside: { type: boolean, default: false, note: "Use a point guaranteed to lie inside each polygon (point on surface) instead of the centroid." }
+checks: [geometry.valid]
+pitfalls:
+  - The centroid of a concave or multipart polygon can fall outside it; use inside for labels and joins back to the polygon.
+  - Centroids of data in a geographic CRS are computed on degrees and are slightly off the true centre on the ground.
+related: [convex-hull]
+status: active
+review: { state: draft }

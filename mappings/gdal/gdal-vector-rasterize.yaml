@@ -1,0 +1,13 @@
+id: gdal-vector-rasterize
+implements: rasterize
+crosswalk:
+  layer: input
+  output: output
+  resolution: { note: "Give the cell size twice, x then y: --resolution 10,10." }
+  value: burn
+  field: attribute-name
+  all_touched: all-touched
+differences:
+  - "Cells outside every feature get init (default 0), not nodata, unless nodata is set."
+effects: { modifies_input: false, network: false }
+review: { state: draft }

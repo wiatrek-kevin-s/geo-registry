@@ -1,0 +1,9 @@
+id: turf-pointonfeature
+implements: centroid
+crosswalk:
+  layer: geojson
+  inside: { fixed: true, note: "Use turf.centroid for the geometric centroid." }
+differences:
+  - Turf works on GeoJSON in longitude/latitude (WGS 84); data in another CRS must be reprojected first.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

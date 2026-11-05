@@ -1,0 +1,8 @@
+id: terra-disagg
+implements: multipart-to-singlepart
+crosswalk:
+  layer: x
+differences:
+  - On a SpatRaster, disagg splits cells into smaller ones instead (fact).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

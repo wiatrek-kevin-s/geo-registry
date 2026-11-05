@@ -1,0 +1,10 @@
+id: grass-r-to-vect
+implements: raster-to-polygons
+crosswalk:
+  raster: input
+  output: output
+  field: column
+presets:
+  type: area
+effects: { modifies_input: false, network: false }
+review: { state: draft }

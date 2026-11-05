@@ -1,0 +1,10 @@
+id: qgis-gdal-polygonize
+implements: raster-to-polygons
+crosswalk:
+  raster: INPUT
+  output: OUTPUT
+  band: BAND
+  field: FIELD
+  eight_connected: EIGHT_CONNECTEDNESS
+effects: { modifies_input: false, network: false }
+review: { state: draft }

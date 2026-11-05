@@ -1,0 +1,7 @@
+id: terra-erase
+implements: difference
+crosswalk:
+  layer: x
+  mask: y
+effects: { modifies_input: false, network: false }
+review: { state: draft }

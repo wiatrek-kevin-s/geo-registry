@@ -1,0 +1,8 @@
+id: whiteboxtools-centroid-vector
+implements: centroid
+crosswalk:
+  layer: input
+  output: output
+  inside: { fixed: false }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

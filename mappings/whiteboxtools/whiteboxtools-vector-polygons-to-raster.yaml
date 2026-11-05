@@ -1,0 +1,13 @@
+id: whiteboxtools-vector-polygons-to-raster
+implements: rasterize
+crosswalk:
+  layer: input
+  output: output
+  resolution: cell_size
+  value: { note: "Burns a field's values; field defaults to FID." }
+  field: field
+  all_touched: { fixed: false }
+differences:
+  - Polygons only (VectorLinesToRaster and VectorPointsToRaster are separate tools); base can give a raster whose grid to match.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

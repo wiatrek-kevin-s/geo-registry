@@ -1,0 +1,9 @@
+id: sf-st-centroid
+implements: centroid
+crosswalk:
+  layer: x
+  inside: { fixed: false, note: "Use st_point_on_surface for a point inside the polygon." }
+differences:
+  - of_largest_polygon = TRUE gives the centroid of each feature's largest part.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

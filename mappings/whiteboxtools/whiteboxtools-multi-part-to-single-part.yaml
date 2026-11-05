@@ -1,0 +1,9 @@
+id: whiteboxtools-multi-part-to-single-part
+implements: multipart-to-singlepart
+crosswalk:
+  layer: input
+  output: output
+differences:
+  - exclude_holes (default true) keeps polygon holes with their polygon rather than splitting them out.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

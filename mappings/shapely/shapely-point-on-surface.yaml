@@ -1,0 +1,7 @@
+id: shapely-point-on-surface
+implements: centroid
+crosswalk:
+  layer: geometry
+  inside: { fixed: true, note: "Use shapely.centroid for the geometric centroid." }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

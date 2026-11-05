@@ -1,0 +1,12 @@
+id: terra-rasterize
+implements: rasterize
+crosswalk:
+  layer: x
+  resolution: { note: "y is a template raster; make one with rast(x, resolution = res)." }
+  value: values
+  field: field
+  all_touched: touches
+differences:
+  - Cells outside every feature get background (default NA).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

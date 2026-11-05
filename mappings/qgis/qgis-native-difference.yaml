@@ -1,0 +1,8 @@
+id: qgis-native-difference
+implements: difference
+crosswalk:
+  layer: INPUT
+  mask: OVERLAY
+  output: OUTPUT
+effects: { modifies_input: false, network: false }
+review: { state: draft }

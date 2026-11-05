@@ -1,0 +1,7 @@
+id: geopandas-geoseries-explode
+implements: multipart-to-singlepart
+crosswalk: {}
+differences:
+  - Keeps the original index, repeated for each part, unless ignore_index is set; GeoDataFrame.explode keeps the other columns.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

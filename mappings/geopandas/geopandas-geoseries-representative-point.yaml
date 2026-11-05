@@ -1,0 +1,8 @@
+id: geopandas-geoseries-representative-point
+implements: centroid
+crosswalk:
+  inside: { fixed: true, note: "Use GeoSeries.centroid for the geometric centroid." }
+differences:
+  - Returns a GeoSeries without the other columns.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,9 @@
+id: postgis-raster-st-dumpaspolygons
+implements: raster-to-polygons
+crosswalk:
+  raster: rast
+  band: band
+differences:
+  - Returns a set of (geom, val) rows.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

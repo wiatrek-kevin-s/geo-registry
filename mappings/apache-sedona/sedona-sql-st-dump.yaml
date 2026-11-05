@@ -1,0 +1,9 @@
+id: sedona-sql-st-dump
+implements: multipart-to-singlepart
+crosswalk:
+  layer: geometry
+differences:
+  - Returns an array of the parts; explode it into rows.
+  - "A Spark SQL function: arguments are columns or column names, run over a Spark DataFrame."
+effects: { modifies_input: false, network: false }
+review: { state: draft }

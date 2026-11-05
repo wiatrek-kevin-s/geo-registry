@@ -1,0 +1,9 @@
+id: postgis-st-difference
+implements: difference
+crosswalk:
+  layer: geom1
+  mask: geom2
+differences:
+  - "Per pair of geometries: union the mask first to subtract all of it."
+effects: { modifies_input: false, network: false }
+review: { state: draft }

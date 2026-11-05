@@ -1,0 +1,11 @@
+id: qgis-gdal-rasterize
+implements: rasterize
+crosswalk:
+  layer: INPUT
+  output: OUTPUT
+  resolution: { note: "Set UNITS = 1 (georeferenced units) and give the cell size as both WIDTH and HEIGHT." }
+  value: BURN
+  field: FIELD
+  all_touched: { note: "Pass -at in EXTRA." }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

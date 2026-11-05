@@ -1,0 +1,9 @@
+id: rasterio-features-shapes
+implements: raster-to-polygons
+crosswalk:
+  raster: source
+  eight_connected: { param: connectivity, values: { "false": 4, "true": 8 } }
+differences:
+  - A generator of (GeoJSON geometry, value) pairs from an array; pass the raster's transform to get map coordinates.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,8 @@
+id: terra-hull
+implements: convex-hull
+crosswalk:
+  layer: x
+differences:
+  - One hull around all geometries unless by names a field to group on; type also gives rectangles, circles and concave hulls.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

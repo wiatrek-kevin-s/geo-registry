@@ -1,0 +1,21 @@
+id: raster-to-polygons
+kind: operation
+name: Raster To Polygons
+aka: [Polygonize, Raster To Polygon, raster to vector, vectorize]
+summary: Turns areas of connected cells with the same value into polygons, each carrying that value.
+group: conversion/raster-to-vector
+inputs:
+  - { name: raster, type: raster }
+outputs:
+  - { name: output, type: vector, geometry: polygon }
+parameters:
+  band: { type: integer, default: 1 }
+  field: { type: string, note: Name of the attribute that holds each polygon's cell value. }
+  eight_connected: { type: boolean, default: false, note: "Join cells that touch only at a corner (8-connectedness) instead of only along edges." }
+checks: [raster.nodata, geometry.valid]
+pitfalls:
+  - Continuous rasters (elevation, imagery) give one polygon per cell or tiny group of cells; classify or round values first.
+  - Engines differ on floating-point values; some truncate them to integers first.
+related: [rasterize]
+status: active
+review: { state: draft }

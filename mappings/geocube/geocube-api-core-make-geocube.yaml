@@ -1,0 +1,11 @@
+id: geocube-api-core-make-geocube
+implements: rasterize
+crosswalk:
+  layer: vector_data
+  resolution: { note: "A pair, (-res, res)." }
+  field: { param: measurements, note: A list of columns to rasterize. }
+  value: { note: Rasterizes columns; add a constant column for a fixed value. }
+differences:
+  - Returns an xarray Dataset with one variable per column.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

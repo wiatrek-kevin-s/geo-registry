@@ -1,0 +1,11 @@
+id: whiteboxtools-minimum-convex-hull
+implements: convex-hull
+crosswalk:
+  layer: input
+  output: output
+presets:
+  features: true
+differences:
+  - features = false gives one hull around the whole layer.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

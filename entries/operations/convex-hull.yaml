@@ -1,0 +1,17 @@
+id: convex-hull
+kind: operation
+name: Convex Hull
+aka: [Minimum Bounding Geometry (convex hull), convex polygon, hull]
+summary: The smallest convex polygon that contains each feature.
+group: vector/geometry
+inputs:
+  - { name: layer, type: vector }
+outputs:
+  - { name: output, type: vector, geometry: polygon }
+checks: [geometry.valid]
+pitfalls:
+  - Engines differ on whether they hull each feature or the whole layer; for one hull around everything, dissolve first.
+  - The hull of a single point or of collinear points is a point or a line, not a polygon.
+related: [centroid, dissolve]
+status: active
+review: { state: draft }

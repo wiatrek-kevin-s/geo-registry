@@ -1,0 +1,18 @@
+id: difference
+kind: operation
+name: Difference
+aka: [Erase, Pairwise Erase, overlay difference, cut out]
+summary: Removes from each feature of a layer the parts covered by a mask layer, keeping what lies outside it.
+group: vector/overlay
+inputs:
+  - { name: layer, type: vector }
+  - { name: mask, type: vector, geometry: polygon }
+outputs:
+  - { name: output, type: vector }
+checks: [crs.agreement, geometry.valid, extent.plausible]
+pitfalls:
+  - Functions that work per pair of geometries (SQL, Shapely) subtract one mask feature at a time; union the mask first, or a feature is returned once per mask feature.
+  - Attributes such as lengths and areas are copied, not recalculated, for the remaining parts.
+related: [clip, intersect]
+status: active
+review: { state: draft }

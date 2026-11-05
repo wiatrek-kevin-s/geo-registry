@@ -1,0 +1,9 @@
+id: geopandas-geoseries-centroid
+implements: centroid
+crosswalk:
+  inside: { fixed: false, note: "Use GeoSeries.representative_point() for a point inside the polygon." }
+differences:
+  - A property of the GeoSeries, not a method; returns a GeoSeries without the other columns.
+  - Warns when the CRS is geographic.
+effects: { modifies_input: false, network: false }
+review: { state: draft }
