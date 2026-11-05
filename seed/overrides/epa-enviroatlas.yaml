@@ -1,0 +1,14 @@
+# PROPOSED by agent research on 2026-11-05 for US federal review batch 3. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/us-federal-batch-3-2026-11.md
+id: epa-enviroatlas
+coverage:
+  region: United States
+access:
+- type: http
+  url: https://www.epa.gov/enviroatlas
+  auth: none
+- type: arcgis-rest
+  url: https://enviroatlas.epa.gov/arcgis/rest/services
+  auth: none
+  notes: National (sub-watershed) and community layers; WMS and WFS links are on each service's page. EPA's web
+    services page was updated 2026-09-30.

@@ -1,0 +1,14 @@
+# PROPOSED by agent research on 2026-11-05 for US federal review batch 3. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/us-federal-batch-3-2026-11.md
+id: blm-navigator-plss-cadnsdi
+coverage:
+  region: United States (PLSS states)
+access:
+- type: http
+  url: https://gbp-blm-egis.hub.arcgis.com/
+  auth: none
+- type: arcgis-rest
+  url: https://gis.blm.gov/natlplss/rest/services/Cadastral/BLM_Natl_PLSS_CadNSDI/MapServer
+  auth: none
+  notes: National PLSS (townships, sections, intersected lands), NAD 83. New path from 2026-10-14; the old /arcgis/
+    path works until 2027-02-01 (BLM announcement).

@@ -7,13 +7,22 @@ themes:
 - us-federal-transportation
 - open-data-sources
 coverage:
-  region: Unspecified
+  region: United States
 license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
 - type: http
   url: https://www.fhwa.dot.gov/policyinformation/hpms.cfm
   auth: none
+- type: api
+  url: https://data.transportation.gov/d/42um-tgh5
+  auth: none
+  notes: 'HPMS Spatial All Sections 2024 on the ARNOLD network: GeoJSON, CSV, KML exports (data.gov record,
+    modified 2026-09-21).'
+- type: arcgis-rest
+  url: https://geo.dot.gov/server/rest/services/Hosted
+  auth: none
+  notes: 2018 public release, one FeatureServer per state (Texas_2018_PR, ...).
 status: active
 review:
   state: seeded

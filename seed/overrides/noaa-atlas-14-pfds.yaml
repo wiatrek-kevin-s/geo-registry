@@ -1,0 +1,13 @@
+# PROPOSED by agent research on 2026-11-05 for US federal review batch 3. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/us-federal-batch-3-2026-11.md
+id: noaa-atlas-14-pfds
+coverage:
+  region: United States
+access:
+- type: http
+  url: https://hdsc.nws.noaa.gov/pfds/
+  auth: none
+- type: download
+  url: https://hdsc.nws.noaa.gov/pub/hdsc/data/
+  auth: none
+  notes: Zipped ASCII grids by volume (Texas is volume 11, code tx), with XML grid metadata at /pfds/meta/na14_vol{N}_{code}_grid_metadata.xml.

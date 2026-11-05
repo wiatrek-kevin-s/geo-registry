@@ -1,0 +1,18 @@
+# PROPOSED by agent research on 2026-11-05 for US federal review batch 3. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/us-federal-batch-3-2026-11.md
+id: fhwa-hpms
+coverage:
+  region: United States
+access:
+- type: http
+  url: https://www.fhwa.dot.gov/policyinformation/hpms.cfm
+  auth: none
+- type: api
+  url: https://data.transportation.gov/d/42um-tgh5
+  auth: none
+  notes: 'HPMS Spatial All Sections 2024 on the ARNOLD network: GeoJSON, CSV, KML exports (data.gov record, modified
+    2026-09-21).'
+- type: arcgis-rest
+  url: https://geo.dot.gov/server/rest/services/Hosted
+  auth: none
+  notes: 2018 public release, one FeatureServer per state (Texas_2018_PR, ...).

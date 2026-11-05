@@ -1,0 +1,21 @@
+# PROPOSED by agent research on 2026-11-05 for US federal review batch 3. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/us-federal-batch-3-2026-11.md
+id: epa-echo-frs
+coverage:
+  region: United States
+access:
+- type: http
+  url: https://echo.epa.gov/
+  auth: none
+- type: arcgis-rest
+  url: https://geodata.epa.gov/arcgis/rest/services/OEI/FRS_INTERESTS/MapServer
+  auth: none
+  notes: FRS facilities map service (listed as public on EPA's FRS data resources page).
+- type: download
+  url: https://www.epa.gov/frs/geospatial-data-download-service
+  auth: none
+  notes: FRS geospatial download (KMZ, CSV), updated monthly.
+- type: api
+  url: https://www.epa.gov/frs/frs-api
+  auth: none
+  notes: FRS API (REST; JSON, XML).

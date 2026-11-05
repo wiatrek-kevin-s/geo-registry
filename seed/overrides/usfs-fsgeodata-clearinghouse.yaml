@@ -1,0 +1,16 @@
+# PROPOSED by agent research on 2026-11-05 for US federal review batch 3. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/us-federal-batch-3-2026-11.md
+id: usfs-fsgeodata-clearinghouse
+coverage:
+  region: United States
+access:
+- type: http
+  url: https://data.fs.usda.gov/geodata/
+  auth: none
+- type: arcgis-rest
+  url: https://apps.fs.usda.gov/arcx/rest/services/EDW
+  auth: none
+  notes: Nationwide Enterprise Data Warehouse map services; some data is published forest by forest.
+- type: download
+  url: https://data.fs.usda.gov/geodata/edw/datasets.php
+  auth: none

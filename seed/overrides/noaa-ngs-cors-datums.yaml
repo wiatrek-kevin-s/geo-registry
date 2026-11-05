@@ -1,0 +1,14 @@
+# PROPOSED by agent research on 2026-11-05 for US federal review batch 3. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/us-federal-batch-3-2026-11.md
+id: noaa-ngs-cors-datums
+coverage:
+  region: United States
+access:
+- type: http
+  url: https://geodesy.noaa.gov/
+  auth: none
+- type: s3
+  url: https://noaa-cors-pds.s3.amazonaws.com/
+  auth: none
+  notes: CORS RINEX, station logs, coordinates (ITRF2020 and NAD 83 realizations) and orbits. From 2026-11-01 public
+    CORS data moved to NODD and the legacy geodesy.noaa.gov/corsdata/ paths stop working.

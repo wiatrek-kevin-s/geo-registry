@@ -7,13 +7,21 @@ themes:
 - us-federal-hydrography
 - open-data-sources
 coverage:
-  region: Unspecified
+  region: United States
 license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
 - type: http
   url: https://www.usgs.gov/3d-hydrography-program
   auth: none
+- type: arcgis-rest
+  url: https://hydro.nationalmap.gov/arcgis/rest/services/3DHP_all/MapServer
+  auth: none
+  notes: 3DHP web services, updated quarterly (last July 2026).
+- type: download
+  url: https://www.sciencebase.gov/catalog/item/6930876ed4be027594fed169
+  auth: none
+  notes: 3DHP downloadable data, 2025 annual product.
 notes: Successor to NHD
 status: active
 review:
