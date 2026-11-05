@@ -131,8 +131,8 @@ CASES = [
          {}, "area", expected=10000.0),
     Case("measure-area", "a 100 m square", {"layer": [poly(621000, 3349000, 621100, 3349100)]}, {}, "value:area",
          expected=10000.0, tolerance=0.002),
-    Case("measure-length", "a 500 m line", {"layer": [shapely.LineString([(621000, 3349000), (621300, 3349400)])]}, {},
-         "value:length", expected=500.0, tolerance=0.002),
+    Case("measure-length", "a 500 m line", {"layer": [shapely.LineString([(621000, 3349000), (621300, 3349400)])]},
+         {"unit": "m"}, "value:length", expected=500.0, tolerance=0.002),
     Case("create-grid", "10 m cells over a 100 m square", {"layer": [poly(0, 0, 100, 100)]}, {"cell_size": 10}, "count",
          expected=100),
     Case("table-to-points", "two rows of coordinates",
@@ -243,6 +243,12 @@ def translate(impl: dict, op: dict, case: Case) -> tuple[dict, dict]:
         elif port in case.inputs:
             raise Unsupported(f"no mapping for input '{port}'")
     args: dict[str, Any] = {}
+    # An engine that always behaves one way cannot honour a different canonical default either.
+    for name, item in cw.items():
+        if isinstance(item, dict) and "fixed" in item and name not in case.params and item["fixed"] != "crs-units":
+            default = defaults.get(name)
+            if default is not None and default != item["fixed"]:
+                raise Unsupported(f"{name} defaults to {default!r}; the engine always uses {item['fixed']!r}")
     for name, value in case.params.items():
         item = cw.get(name)
         if item is None:
@@ -309,7 +315,12 @@ def run_python(impl: dict, op: dict, case: Case) -> list:
         result = attr(**kwargs) if callable(attr) else attr  # .centroid, .convex_hull are properties
     else:
         mod = importlib.import_module(parts[0])
-        result = getattr(mod, parts[-1])(**kwargs)
+        func = getattr(mod, parts[-1])
+        import inspect
+        sig = inspect.signature(func)
+        positional = [kwargs.pop(n) for n, p in sig.parameters.items()
+                      if p.kind is p.POSITIONAL_ONLY and n in kwargs]  # geopandas.make_grid(geom, /, ...)
+        result = func(*positional, **kwargs)
     if tabular(case) and isinstance(result, pd.DataFrame):
         return result
     if case.measure.startswith("value:"):  # .area, shapely.length: numbers, one per feature
@@ -337,6 +348,8 @@ KNOWN_DIFFERENCES = {
         "the output grid is one row and one column short of the inputs' combined extent",
     ("whiteboxtools-mosaic", "values unchanged"):
         "the output grid is one row and one column short of the inputs' combined extent",
+    ("postgis-st-squaregrid", "10 m cells over a 100 m square"):
+        "cells that only touch the bounds' edge are included (121 for a 100 m square)",
     ("gdal-vector-rasterize", "50 m by 30 m rectangle at 10 m cells"):
         "with a resolution and no extent, the grid starts half a cell outside the features",
 }

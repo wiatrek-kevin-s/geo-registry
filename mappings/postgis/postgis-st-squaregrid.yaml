@@ -5,6 +5,6 @@ crosswalk:
   cell_size: size
   shape: { fixed: square, note: ST_HexagonGrid for hexagons. }
 differences:
-  - The grid is aligned to multiples of the cell size from the origin, not to the bounds' corner; returns (geom, i, j) rows for cells that intersect the bounds.
+  - "The grid is aligned to multiples of the cell size from the origin, not to the bounds' corner; returns (geom, i, j) rows for every cell that intersects the bounds, including cells that only touch their edge (121 cells of 10 m for a 100 m square at the origin, in the equivalence tests)."
 effects: { modifies_input: false, network: false }
 review: { state: draft }
