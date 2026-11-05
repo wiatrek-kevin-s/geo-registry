@@ -1,0 +1,10 @@
+id: shapely-segmentize
+implements: densify
+crosswalk:
+  layer: geometry
+  distance: max_segment_length
+  unit: { fixed: crs-units }
+differences:
+  - Splits each segment into equal parts no longer than the distance.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

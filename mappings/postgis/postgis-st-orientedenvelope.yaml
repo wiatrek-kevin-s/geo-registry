@@ -1,0 +1,8 @@
+id: postgis-st-orientedenvelope
+implements: minimum-bounding-rectangle
+crosswalk:
+  layer: "#1"
+differences:
+  - Returns a point or a line for degenerate input.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

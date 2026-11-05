@@ -1,0 +1,9 @@
+id: whiteboxtools-minimum-bounding-envelope
+implements: envelope
+crosswalk:
+  layer: input
+  output: output
+differences:
+  - features (true by default) gives one box per feature; false gives one box for the whole layer.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

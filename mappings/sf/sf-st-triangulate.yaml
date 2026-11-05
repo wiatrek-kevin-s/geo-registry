@@ -1,0 +1,10 @@
+id: sf-st-triangulate
+implements: delaunay-triangulation
+crosswalk:
+  layer: x
+  tolerance: dTolerance
+differences:
+  - 'Triangulates the vertices of each geometry on its own: combine the points first (st_union or st_combine) for one triangulation.'
+  - Returns a GEOMETRYCOLLECTION of triangles per geometry; bOnlyEdges returns the edges.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

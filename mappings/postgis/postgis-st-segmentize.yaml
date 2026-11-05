@@ -1,0 +1,10 @@
+id: postgis-st-segmentize
+implements: densify
+crosswalk:
+  layer: "#1"
+  distance: "#2"
+  unit: { fixed: crs-units, note: "CRS units on geometry; metres on geography, along the geodesic." }
+differences:
+  - Splits each segment into equal parts no longer than the distance.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,7 @@
+id: geopandas-geoseries-minimum-bounding-circle
+implements: minimum-bounding-circle
+crosswalk: {}
+differences:
+  - 'A method of the GeoSeries: one circle per row.'
+effects: { modifies_input: false, network: false }
+review: { state: draft }

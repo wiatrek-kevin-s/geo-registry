@@ -1,0 +1,9 @@
+id: terra-delaunay
+implements: delaunay-triangulation
+crosswalk:
+  layer: x
+  tolerance: tolerance
+differences:
+  - as.lines returns the edges; constrained keeps polygon edges as triangle edges.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,9 @@
+id: qgis-native-orientedminimumboundingbox
+implements: minimum-bounding-rectangle
+crosswalk:
+  layer: INPUT
+  output: OUTPUT
+differences:
+  - Adds the rectangle's width, height, angle, area and perimeter as fields.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

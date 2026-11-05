@@ -1,0 +1,17 @@
+id: minimum-bounding-circle
+kind: operation
+name: Minimum Bounding Circle
+aka: [minimum enclosing circle, smallest enclosing circle, Minimum Bounding Geometry (circle)]
+summary: The smallest circle that contains each feature, as a polygon.
+group: vector/geometry
+inputs:
+  - { name: layer, type: vector }
+outputs:
+  - { name: output, type: vector, geometry: polygon }
+checks: [crs.measure, geometry.valid]
+pitfalls:
+  - The circle is returned as a polygon with a number of segments each engine chooses, so its area is a little less than the true circle's.
+  - In a geographic CRS the circle is drawn in degrees, which is an ellipse on the ground.
+related: [envelope, minimum-bounding-rectangle, convex-hull]
+status: active
+review: { state: draft }

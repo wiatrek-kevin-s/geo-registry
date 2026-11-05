@@ -1,0 +1,20 @@
+id: delaunay-triangulation
+kind: operation
+name: Delaunay Triangulation
+aka: [Delaunay triangles, TIN, Create TIN, triangulated irregular network, triangulation]
+summary: Triangles joining a set of points so that no point falls inside any triangle's circumcircle.
+group: vector/geometry
+inputs:
+  - { name: layer, type: vector, geometry: point }
+outputs:
+  - { name: output, type: vector, geometry: polygon }
+parameters:
+  tolerance: { type: length, default: 0, note: Points closer together than this (in the CRS's units) are snapped together first. }
+checks: [geometry.valid]
+pitfalls:
+  - Some functions triangulate the vertices of each geometry on its own; collect the points into one geometry first for one triangulation of the whole layer.
+  - Four or more points on one circle have more than one valid triangulation, so engines can return different triangles covering the same area.
+  - Triangles in a geographic CRS are built in degrees.
+related: [voronoi, convex-hull]
+status: active
+review: { state: draft }

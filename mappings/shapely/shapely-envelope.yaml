@@ -1,0 +1,8 @@
+id: shapely-envelope
+implements: envelope
+crosswalk:
+  layer: geometry
+differences:
+  - One box per geometry.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,10 @@
+id: whiteboxtools-minimum-bounding-box
+implements: minimum-bounding-rectangle
+crosswalk:
+  layer: input
+  output: output
+differences:
+  - 'criterion chooses what to minimise: area (the default), length, width or perimeter.'
+  - features (true by default) gives one rectangle per feature; false gives one for the whole layer.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

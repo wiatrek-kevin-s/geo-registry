@@ -1,0 +1,17 @@
+id: minimum-bounding-rectangle
+kind: operation
+name: Minimum Bounding Rectangle
+aka: [oriented envelope, minimum rotated rectangle, oriented minimum bounding box, Minimum Bounding Geometry (rectangle by area)]
+summary: The smallest-area rectangle, at any angle, that contains each feature.
+group: vector/geometry
+inputs:
+  - { name: layer, type: vector }
+outputs:
+  - { name: output, type: vector, geometry: polygon }
+checks: [crs.measure, geometry.valid]
+pitfalls:
+  - Some engines can minimise width, length or perimeter instead of area, which gives a different rectangle.
+  - Angles and areas in a geographic CRS are measured in degrees.
+related: [envelope, convex-hull, minimum-bounding-circle]
+status: active
+review: { state: draft }

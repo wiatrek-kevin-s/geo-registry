@@ -1,0 +1,7 @@
+id: geopandas-geoseries-envelope
+implements: envelope
+crosswalk: {}
+differences:
+  - 'A property of the GeoSeries: one box per row; total_bounds gives the layer''s extent as numbers.'
+effects: { modifies_input: false, network: false }
+review: { state: draft }

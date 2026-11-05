@@ -1,0 +1,20 @@
+id: densify
+kind: operation
+name: Densify
+aka: [segmentize, add vertices, Densify by interval, Densify (Editing)]
+summary: Adds vertices along lines and polygon outlines so that no segment is longer than a given distance.
+group: vector/geometry
+inputs:
+  - { name: layer, type: vector }
+outputs:
+  - { name: output, type: vector }
+parameters:
+  distance: { type: length, required: true, note: Longest segment allowed. }
+  unit: { type: enum, required: true, values: [m, ft, us-ft, km, mi] }
+checks: [crs.measure]
+pitfalls:
+  - In a geographic CRS the distance is in degrees unless the engine densifies along the geodesic.
+  - Engines differ on whether new vertices split each segment into equal parts or sit at the exact distance from its start, leaving a shorter last piece.
+related: [simplify]
+status: active
+review: { state: draft }

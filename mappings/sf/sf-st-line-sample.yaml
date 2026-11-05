@@ -1,0 +1,11 @@
+id: sf-st-line-sample
+implements: points-along-lines
+crosswalk:
+  layer: x
+  distance: { note: "density is points per unit of length, the inverse of the distance; n gives a number of points instead." }
+  unit: { fixed: crs-units }
+differences:
+  - With type regular the points sit half a step in from each end, not at the start.
+  - Returns one MULTIPOINT per line.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

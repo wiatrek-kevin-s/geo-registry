@@ -1,0 +1,9 @@
+id: gdal-vector-segmentize
+implements: densify
+crosswalk:
+  layer: input
+  output: output
+  distance: max-length
+  unit: { fixed: crs-units }
+effects: { modifies_input: false, network: false }
+review: { state: draft }
