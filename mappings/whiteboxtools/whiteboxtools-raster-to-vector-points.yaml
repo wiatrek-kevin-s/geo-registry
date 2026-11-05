@@ -1,0 +1,7 @@
+id: whiteboxtools-raster-to-vector-points
+implements: raster-to-points
+crosswalk:
+  raster: input
+  output: output
+effects: { modifies_input: false, network: false }
+review: { state: draft }

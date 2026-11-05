@@ -1,0 +1,14 @@
+id: grass-r-watershed--drainage
+variant_of: grass-r-watershed
+implements: flow-direction
+crosswalk:
+  raster: elevation
+  output: drainage
+  encoding: { fixed: grass }
+presets:
+  flag_s: true
+  flag_a: true
+differences:
+  - This mapping sets flags s (single flow direction) and a; negative codes mark cells that drain out of the region.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

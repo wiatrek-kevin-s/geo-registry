@@ -1,0 +1,14 @@
+id: grass-r-fill-dir--direction
+variant_of: grass-r-fill-dir
+implements: flow-direction
+crosswalk:
+  raster: input
+  output: direction
+  encoding: { fixed: degrees }
+presets:
+  output: filled
+differences:
+  - Also writes the filled elevation (output, required; set by this mapping) and problem areas (areas).
+  - With format = grass (the default) directions are in degrees counter-clockwise from east (west is 180), not r.watershed's 1 to 8; format also offers the AGNPS and ANSWERS codings.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

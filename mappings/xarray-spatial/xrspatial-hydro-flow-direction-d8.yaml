@@ -1,0 +1,9 @@
+id: xrspatial-hydro-flow-direction-d8
+implements: flow-direction
+crosswalk:
+  raster: agg
+  encoding: { fixed: esri }
+differences:
+  - Takes an xarray DataArray; edge cells are NaN by default (boundary = 'nan').
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,9 @@
+id: qgis-native-pixelstopoints
+implements: raster-to-points
+crosswalk:
+  raster: INPUT_RASTER
+  output: OUTPUT
+differences:
+  - Nodata cells are skipped; FIELD_NAME names the value field (VALUE).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

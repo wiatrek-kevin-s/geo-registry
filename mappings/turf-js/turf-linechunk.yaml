@@ -1,0 +1,11 @@
+id: turf-linechunk
+implements: split-lines-by-length
+crosswalk:
+  layer: geojson
+  length: segmentLength
+  unit: { param: options.units, values: { m: meters, ft: feet, km: kilometers, mi: miles }, unsupported: [us-ft] }
+differences:
+  - units defaults to kilometers.
+  - Turf works on GeoJSON in longitude/latitude (WGS 84); data in another CRS must be reprojected first.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

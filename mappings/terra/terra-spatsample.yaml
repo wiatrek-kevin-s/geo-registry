@@ -1,0 +1,10 @@
+id: terra-spatsample
+implements: random-points-in-polygons
+crosswalk:
+  layer: x
+  count: size
+  seed: { note: Call set.seed() first; there is no seed argument. }
+differences:
+  - For polygons, size is the total over the layer; strata can spread it by polygon.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

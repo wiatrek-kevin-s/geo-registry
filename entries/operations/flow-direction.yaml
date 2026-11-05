@@ -1,0 +1,19 @@
+id: flow-direction
+kind: operation
+name: Flow Direction
+aka: [D8 flow direction, D8 pointer, flow pointer, drainage direction]
+summary: For each cell of an elevation raster, the neighbour that water flows to, following the steepest descent (D8).
+group: raster/hydrology
+inputs:
+  - { name: raster, type: raster, note: "An elevation model, usually with sinks filled." }
+outputs:
+  - { name: output, type: raster }
+parameters:
+  encoding: { type: enum, values: [esri, whitebox, grass, degrees], default: esri, note: "esri: 1 E, 2 SE, 4 S, 8 SW, 16 W, 32 NW, 64 N, 128 NE. whitebox: 1 NE, 2 E, 4 SE, 8 S, 16 SW, 32 W, 64 NW, 128 N. grass (r.watershed): 1 to 8 counter-clockwise from NE, west 4. degrees (r.fill.dir): counter-clockwise from east, west 180." }
+checks: [raster.nodata]
+pitfalls:
+  - The same direction has a different code in each engine's encoding; reading one engine's output with another's codes sends water the wrong way.
+  - Flat areas and sinks have no downhill neighbour; engines leave them nodata, 0, or resolve them in their own way.
+related: [flow-accumulation, fill-sinks, aspect]
+status: active
+review: { state: draft }

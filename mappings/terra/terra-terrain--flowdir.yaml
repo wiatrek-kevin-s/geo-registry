@@ -1,0 +1,10 @@
+id: terra-terrain--flowdir
+variant_of: terra-terrain
+implements: flow-direction
+crosswalk:
+  raster: x
+  encoding: { fixed: esri }
+presets:
+  v: flowdir
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,8 @@
+id: postgis-raster-st-pixelascentroids
+implements: raster-to-points
+crosswalk:
+  raster: rast
+differences:
+  - Returns rows of (geom, val, x, y); exclude_nodata_value (true) skips nodata cells.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

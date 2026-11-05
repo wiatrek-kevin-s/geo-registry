@@ -1,0 +1,10 @@
+id: grass-r-to-vect--points
+variant_of: grass-r-to-vect
+implements: raster-to-points
+crosswalk:
+  raster: input
+  output: output
+presets:
+  type: point
+effects: { modifies_input: false, network: false }
+review: { state: draft }

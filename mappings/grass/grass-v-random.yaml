@@ -1,0 +1,13 @@
+id: grass-v-random
+implements: random-points-in-polygons
+crosswalk:
+  layer: restrict
+  output: output
+  count: npoints
+  seed: seed
+presets:
+  flag_a: true
+differences:
+  - npoints is the total for the region or the restricting areas unless flag a puts that many in each area; this mapping sets a.
+effects: { modifies_input: false, network: false }
+review: { state: draft }
