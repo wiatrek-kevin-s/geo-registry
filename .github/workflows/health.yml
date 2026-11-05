@@ -19,6 +19,7 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
+      actions: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -33,6 +34,7 @@ jobs:
           name: health-report
           path: ${{ runner.temp }}/health.json
       - name: Open a pull request if anything changed
+        id: pr
         uses: peter-evans/create-pull-request@v7
         with:
           branch: health/status
@@ -42,3 +44,10 @@ jobs:
           add-paths: |
             entries/data/**
             seed/overrides/**
+      - name: Run the required checks on the pull request
+        if: steps.pr.outputs.pull-request-operation == 'created' || steps.pr.outputs.pull-request-operation == 'updated'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run ci.yml --ref health/status
+          gh workflow run engines.yml --ref health/status -f checks_only=true

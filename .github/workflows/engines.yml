@@ -8,20 +8,18 @@ name: Engines
 # - harvest: the harvesters are re-run against the newest engine releases and,
 #   if any tool or parameter changed, a pull request with the changes is opened.
 
+# The equivalence tests run on every pull request, because main requires them to
+# pass before anything merges.
 on:
   pull_request:
-    paths:
-      - "mappings/**"
-      - "implementations/**"
-      - "entries/operations/**"
-      - "harvest/**"
-      - "checks/equivalence.py"
-      - "schema/**"
-      - "build/**"
-      - ".github/workflows/engines.yml"
   schedule:
     - cron: "17 6 * * 1"   # Mondays 06:17 UTC
   workflow_dispatch:
+    inputs:
+      checks_only:
+        description: "Only run the equivalence tests (no re-harvest)"
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -60,11 +58,12 @@ jobs:
 
   harvest:
     name: Re-harvest engines
-    if: github.event_name != 'pull_request'
+    if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && !inputs.checks_only)
     runs-on: ubuntu-latest
     permissions:
       contents: write
       pull-requests: write
+      actions: write
     steps:
       - uses: actions/checkout@v4
       - uses: mamba-org/setup-micromamba@v2
@@ -111,6 +110,7 @@ jobs:
             echo "Check that mappings still validate (CI) and the equivalence tests pass before merging."
           } > "$RUNNER_TEMP/body.md"
       - name: Open a pull request if anything changed
+        id: pr
         uses: peter-evans/create-pull-request@v7
         with:
           branch: harvest/engines
@@ -118,3 +118,10 @@ jobs:
           title: "Re-harvest engines: new tool descriptions"
           body-path: ${{ runner.temp }}/body.md
           add-paths: implementations/**
+      - name: Run the required checks on the pull request
+        if: steps.pr.outputs.pull-request-operation == 'created' || steps.pr.outputs.pull-request-operation == 'updated'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run ci.yml --ref harvest/engines
+          gh workflow run engines.yml --ref harvest/engines -f checks_only=true

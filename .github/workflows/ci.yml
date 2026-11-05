@@ -3,6 +3,9 @@ name: CI
 on:
   push:
   pull_request:
+  # Pull requests opened by the Health and Engines workflows do not trigger CI on
+  # their own (GitHub's rule for its own token), so those workflows start it here.
+  workflow_dispatch:
 
 permissions:
   contents: read
