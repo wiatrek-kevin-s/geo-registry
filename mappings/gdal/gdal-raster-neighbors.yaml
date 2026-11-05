@@ -1,0 +1,14 @@
+id: gdal-raster-neighbors
+implements: focal-statistics
+crosswalk:
+  raster: input
+  output: output
+  statistic: { param: method, values: { mean: mean, sum: sum, min: min, max: max, median: median, std: stddev } }
+  size: size
+presets:
+  kernel: equal
+differences:
+  - kernel is required; equal (all weights 1) gives the plain window statistic.
+  - kernel gives other weights (a Gaussian, edge detection) or a custom matrix.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,19 @@
+id: focal-statistics
+kind: operation
+name: Focal Statistics
+aka: [neighborhood statistics, moving window, mean filter, focal mean, r.neighbors]
+summary: Each cell gets a statistic (mean, sum, minimum, ...) of the cells in a window around it.
+group: raster/neighborhood
+inputs:
+  - { name: raster, type: raster }
+outputs:
+  - { name: output, type: raster }
+parameters:
+  statistic: { type: enum, values: [mean, sum, min, max, median, std], default: mean }
+  size: { type: integer, default: 3, note: Window width in cells (an odd number). }
+checks: [raster.nodata]
+pitfalls:
+  - Cells near the edge have incomplete windows; engines use the partial window, return nodata, or pad.
+related: [zonal-statistics]
+status: active
+review: { state: draft }

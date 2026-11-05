@@ -1,0 +1,9 @@
+id: whiteboxtools-fill-depressions
+implements: fill-sinks
+crosswalk:
+  raster: dem
+  output: output
+differences:
+  - fix_flats (default true) adds a small gradient across flats; max_depth limits how deep a depression is filled.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

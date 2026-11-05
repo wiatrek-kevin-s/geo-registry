@@ -1,0 +1,11 @@
+id: grass-r-fill-dir
+implements: fill-sinks
+crosswalk:
+  raster: input
+  output: output
+presets:
+  direction: fill_direction
+differences:
+  - Also writes a flow direction map (direction is required); one pass may leave some depressions, so it is often run more than once.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

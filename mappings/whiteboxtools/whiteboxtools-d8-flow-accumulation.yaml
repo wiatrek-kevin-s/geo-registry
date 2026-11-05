@@ -1,0 +1,12 @@
+id: whiteboxtools-d8-flow-accumulation
+implements: flow-accumulation
+crosswalk:
+  raster: input
+  output: output
+presets:
+  out_type: cells
+differences:
+  - "Left out, out_type gave specific contributing area (cell count times cell size) in the equivalence tests, although the tool declares cells as its default; this mapping sets cells. Counts include the cell itself."
+  - Takes a DEM by default, or a D8 pointer raster with pntr; out_type gives cells, catchment area or specific contributing area.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

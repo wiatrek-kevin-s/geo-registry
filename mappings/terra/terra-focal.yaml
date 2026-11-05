@@ -1,0 +1,10 @@
+id: terra-focal
+implements: focal-statistics
+crosswalk:
+  raster: x
+  statistic: { param: fun, values: { mean: mean, sum: sum, min: min, max: max, median: median, std: sd } }
+  size: w
+differences:
+  - fun defaults to sum; w can also be a weights matrix.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

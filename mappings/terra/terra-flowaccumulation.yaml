@@ -1,0 +1,6 @@
+id: terra-flowaccumulation
+implements: flow-accumulation
+crosswalk:
+  raster: { note: "Takes a flow direction raster from terrain(x, 'flowdir'), not the DEM." }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

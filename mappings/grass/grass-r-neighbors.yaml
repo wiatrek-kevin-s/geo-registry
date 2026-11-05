@@ -1,0 +1,11 @@
+id: grass-r-neighbors
+implements: focal-statistics
+crosswalk:
+  raster: input
+  output: output
+  statistic: { param: method, values: { mean: average, sum: sum, min: minimum, max: maximum, median: median, std: stddev } }
+  size: size
+differences:
+  - The c flag uses a circular window.
+effects: { modifies_input: false, network: false }
+review: { state: draft }
