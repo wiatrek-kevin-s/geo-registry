@@ -1,0 +1,22 @@
+id: nearest-join
+kind: operation
+name: Nearest Join
+aka: [Join By Nearest, Near, closest feature join, sjoin_nearest, Spatial Join (closest)]
+summary: Joins to each feature the attributes of the nearest feature in another layer, optionally with the distance.
+group: vector/joins
+inputs:
+  - { name: left, type: vector }
+  - { name: right, type: vector }
+outputs:
+  - { name: output, type: vector }
+parameters:
+  max_distance: { type: length, note: "Only join features within this distance, in the CRS's units." }
+  distance_field: { type: string, note: Name of a new attribute holding the distance. }
+  how: { type: enum, values: [left, inner], default: left, note: "left keeps features with no match within max_distance." }
+checks: [crs.agreement, crs.measure, join.unmatched]
+pitfalls:
+  - Distances in a geographic CRS are in degrees.
+  - Ties (two features at the same distance) give two rows in some engines and one in others.
+related: [spatial-join]
+status: active
+review: { state: draft }

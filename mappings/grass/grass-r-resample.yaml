@@ -1,0 +1,9 @@
+id: grass-r-resample
+implements: resample-raster
+crosswalk:
+  raster: input
+  output: output
+  resolution: { note: "Set by the computational region (g.region res=...)." }
+  resampling: { fixed: nearest }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

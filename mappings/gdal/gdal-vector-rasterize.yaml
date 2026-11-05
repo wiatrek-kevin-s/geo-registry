@@ -3,11 +3,12 @@ implements: rasterize
 crosswalk:
   layer: input
   output: output
-  resolution: { note: "Give the cell size twice, x then y: --resolution 10,10." }
+  resolution: { param: resolution, repeat: 2, note: "x and y: --resolution 10,10." }
   value: burn
   field: attribute-name
   all_touched: all-touched
 differences:
+  - "With a resolution and no extent, the grid starts half a cell outside the features: a 50 m by 30 m rectangle at 10 m cells gives a 6 by 4 grid. Give extent, or target-aligned-pixels, to control it."
   - "Cells outside every feature get init (default 0), not nodata, unless nodata is set."
 effects: { modifies_input: false, network: false }
 review: { state: draft }

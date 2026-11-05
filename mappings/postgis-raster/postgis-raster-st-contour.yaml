@@ -1,0 +1,10 @@
+id: postgis-raster-st-contour
+implements: contour
+crosswalk:
+  raster: rast
+  interval: level_interval
+  base: level_base
+  band: bandnumber
+  field: { note: "Returns rows of (geom, id, value); value is the level." }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

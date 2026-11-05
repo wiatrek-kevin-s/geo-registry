@@ -1,0 +1,9 @@
+id: qgis-native-mergevectorlayers
+implements: merge-layers
+crosswalk:
+  layers: LAYERS
+  output: OUTPUT
+differences:
+  - Adds layer and path fields saying where each feature came from (ADD_SOURCE_FIELDS).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

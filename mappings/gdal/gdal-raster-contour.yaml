@@ -1,0 +1,11 @@
+id: gdal-raster-contour
+implements: contour
+crosswalk:
+  raster: input
+  output: output
+  interval: interval
+  base: offset
+  field: elevation-name
+  band: band
+effects: { modifies_input: false, network: false }
+review: { state: draft }

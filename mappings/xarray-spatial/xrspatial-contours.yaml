@@ -1,0 +1,9 @@
+id: xrspatial-contours
+implements: contour
+crosswalk:
+  raster: agg
+  interval: { note: "Give levels: a list of values (default n_levels evenly spaced levels)." }
+differences:
+  - Returns (level, coordinates) pairs, or a GeoDataFrame with return_type = 'geopandas'.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

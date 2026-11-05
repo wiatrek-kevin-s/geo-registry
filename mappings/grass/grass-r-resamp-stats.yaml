@@ -1,0 +1,11 @@
+id: grass-r-resamp-stats
+implements: resample-raster
+crosswalk:
+  raster: input
+  output: output
+  resolution: { note: "Set by the computational region (g.region res=...)." }
+  resampling: { param: method, values: { average: average, mode: mode }, unsupported: [nearest, bilinear, cubic] }
+differences:
+  - For coarsening; r.resamp.interp interpolates and r.resample takes nearest neighbour.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

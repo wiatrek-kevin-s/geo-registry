@@ -1,0 +1,10 @@
+id: xrspatial-resample
+implements: resample-raster
+crosswalk:
+  raster: agg
+  resolution: target_resolution
+  resampling: method
+differences:
+  - scale_factor resizes by a factor instead of to a cell size.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

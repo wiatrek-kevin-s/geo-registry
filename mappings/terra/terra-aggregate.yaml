@@ -1,0 +1,10 @@
+id: terra-aggregate
+implements: resample-raster
+crosswalk:
+  raster: x
+  resolution: { note: "fact: how many cells to combine in each direction (2 doubles the cell size)." }
+  resampling: { param: fun, values: { average: mean, mode: modal }, unsupported: [nearest, bilinear, cubic] }
+differences:
+  - Only coarsens, by whole factors; disagg makes cells smaller. On a SpatVector, aggregate dissolves instead.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

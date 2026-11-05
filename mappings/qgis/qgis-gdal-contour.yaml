@@ -1,0 +1,11 @@
+id: qgis-gdal-contour
+implements: contour
+crosswalk:
+  raster: INPUT
+  output: OUTPUT
+  interval: INTERVAL
+  base: OFFSET
+  field: FIELD_NAME
+  band: BAND
+effects: { modifies_input: false, network: false }
+review: { state: draft }

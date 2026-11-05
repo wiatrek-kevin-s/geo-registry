@@ -1,0 +1,9 @@
+id: gdal-raster-resize
+implements: resample-raster
+crosswalk:
+  raster: input
+  output: output
+  resolution: { param: resolution, repeat: 2, note: "x and y: --resolution 20,20." }
+  resampling: resampling
+effects: { modifies_input: false, network: false }
+review: { state: draft }

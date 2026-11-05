@@ -1,0 +1,6 @@
+id: rioxarray-merge-merge-arrays
+implements: mosaic
+crosswalk:
+  rasters: dataarrays
+effects: { modifies_input: false, network: false }
+review: { state: draft }

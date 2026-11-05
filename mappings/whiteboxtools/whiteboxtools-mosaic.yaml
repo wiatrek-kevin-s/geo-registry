@@ -1,0 +1,9 @@
+id: whiteboxtools-mosaic
+implements: mosaic
+crosswalk:
+  rasters: inputs
+  output: output
+differences:
+  - In the equivalence tests the output grid was one row and one column short of the inputs' combined extent (two 10 by 20 halves gave 19 by 19).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -13,6 +13,9 @@ engines' results. A wrong crosswalk (a parameter mapped to the wrong
 argument, a unit or value translated wrongly) shows up as a failure; an
 engine that cannot honour a canonical value (`unsupported`, `fixed`) is
 reported as skipped with the reason, which is the documented difference.
+A behaviour difference these tests found and the mapping records (a smoothed
+contour, a grid one cell short) is listed in KNOWN_DIFFERENCES and reported as
+"differs" with the reason, not as a failure.
 
 Engines not available on this machine are skipped. Needs geopandas and
 shapely in the running Python (rasterio, rioxarray, xarray-spatial, rasterstats
@@ -99,6 +102,11 @@ CASES = [
          {}, "area", expected=7500.0),
     Case("multipart-to-singlepart", "one feature of two squares", {"layer": [shapely.MultiPolygon([poly(0, 0, 10, 10), poly(20, 0, 30, 10)])]},
          {}, "count", expected=2),
+    Case("nearest-join", "point joined to the nearer of two points", {"left": [shapely.Point(0, 0)],
+         "right": [shapely.Point(3, 4), shapely.Point(10, 10)]}, {}, "field_v", expected=1.0,
+         attrs={"right": {"v": [1.0, 2.0]}}),
+    Case("merge-layers", "one layer of one square and one of two", {"layers": [[poly(0, 0, 10, 10)],
+         [poly(20, 0, 30, 10), poly(40, 0, 50, 10)]]}, {}, "count", expected=3),
     Case("table-to-points", "two rows of coordinates",
          {"table": pd.DataFrame({"x": [621000.0, 621010.0], "y": [3349000.0, 3349020.0]})},
          {"x_field": "x", "y_field": "y", "crs": CRS}, "coords",
@@ -126,6 +134,7 @@ def dem_box(col0, col1, row0=0, row1=DEM_SIZE):
 
 
 RASTER = "raster"  # marker: this input is the DEM
+RASTER_WEST, RASTER_EAST = "raster:west", "raster:east"  # its western and eastern 10 columns
 
 RASTER_CASES = [
     Case("slope", "plane rising 1 m in 10 m", {"raster": RASTER}, {"units": "degrees", "z_unit": "m"},
@@ -141,6 +150,16 @@ RASTER_CASES = [
          {"crs": "EPSG:3081", "resampling": "nearest"}, "raster_mean", tolerance=0.02),
     Case("zonal-statistics", "mean over the first 5 columns", {"raster": RASTER, "zones": [dem_box(0, 5)]},
          {"stats": "mean"}, "field_mean", expected=2.5, tolerance=1e-6),
+    Case("contour", "plane, every 5 m: three straight lines", {"raster": RASTER}, {"interval": 5}, "count", expected=3),
+    Case("contour", "their total length", {"raster": RASTER}, {"interval": 5}, "length", tolerance=0.05),
+    Case("resample-raster", "10 m cells to 20 m, average", {"raster": RASTER}, {"resolution": 20, "resampling": "average"},
+         "raster_count", expected=100.0),
+    Case("resample-raster", "average keeps the mean", {"raster": RASTER}, {"resolution": 20, "resampling": "average"},
+         "raster_mean", expected=10.0, tolerance=1e-6),
+    Case("mosaic", "west and east halves back together", {"rasters": [RASTER_WEST, RASTER_EAST]}, {},
+         "raster_count", expected=400.0),
+    Case("mosaic", "values unchanged", {"rasters": [RASTER_WEST, RASTER_EAST]}, {}, "raster_mean", expected=10.0,
+         tolerance=1e-6),
     Case("rasterize", "50 m by 30 m rectangle at 10 m cells", {"layer": [dem_box(0, 5, 0, 3)]},
          {"resolution": 10}, "raster_count", expected=15.0),
     # The DEM's 20 columns each hold one value (0.5, 1.5, ... 19.5), so 20 strips.
@@ -181,7 +200,7 @@ def translate(impl: dict, op: dict, case: Case) -> tuple[dict, dict]:
         if isinstance(item, str):
             etype = str((eparams.get(item) or {}).get("type", "")).lower()
             data = case.inputs.get(port)
-            if isinstance(data, list) and "raster" in etype and "vector" not in etype:
+            if isinstance(data, list) and not is_many(data) and "raster" in etype and "vector" not in etype:
                 raise Unsupported(f"'{port}' must be a raster for this engine, not polygons")
             ports[port] = item
         elif port == first_input and method:
@@ -215,6 +234,8 @@ def translate(impl: dict, op: dict, case: Case) -> tuple[dict, dict]:
         mapped = (item.get("values") or {}).get(key, value) if isinstance(key, (str, int, float)) else value
         if item.get("pass") == "values":
             mapped = ("values", mapped)
+        if item.get("repeat"):
+            mapped = [mapped] * item["repeat"]
         args[item["param"]] = mapped
     args.update(impl.get("presets") or {})
     return ports, args
@@ -256,6 +277,8 @@ def run_python(impl: dict, op: dict, case: Case) -> list:
     else:
         mod = importlib.import_module(parts[0])
         result = getattr(mod, parts[-1])(**kwargs)
+    if case.measure.startswith("field_") and isinstance(result, pd.DataFrame):
+        return result
     return geometries(result)
 
 
@@ -269,7 +292,21 @@ def geometries(result) -> list:
     return [g for g in list(result) if g is not None]
 
 
-def stage_inputs(tmp: str, ports: dict, op: dict, case: Case, vector_ext: str) -> dict[str, str]:
+# Real behaviour differences found by these tests and recorded on the mappings: the run is
+# reported as "differs" with the reason instead of failing. (implementation id, case title)
+KNOWN_DIFFERENCES = {
+    ("whiteboxtools-contours-from-raster", "their total length"):
+        "smooths and simplifies contours by default, which shortens them",
+    ("whiteboxtools-mosaic", "west and east halves back together"):
+        "the output grid is one row and one column short of the inputs' combined extent",
+    ("whiteboxtools-mosaic", "values unchanged"):
+        "the output grid is one row and one column short of the inputs' combined extent",
+    ("gdal-vector-rasterize", "50 m by 30 m rectangle at 10 m cells"):
+        "with a resolution and no extent, the grid starts half a cell outside the features",
+}
+
+
+def stage_inputs(tmp: str, ports: dict, op: dict, case: Case, vector_ext: str) -> dict[str, Any]:
     """Write each input to a file; returns canonical port -> path (outputs get fresh paths)."""
     paths = {}
     for port, engine in ports.items():
@@ -281,16 +318,10 @@ def stage_inputs(tmp: str, ports: dict, op: dict, case: Case, vector_ext: str) -
                 raster_out = op["outputs"][0]["type"] == "raster"
                 paths[port] = str(Path(tmp) / ("out.tif" if raster_out else f"out{vector_ext}"))
             continue
-        if isinstance(data, str) and data == RASTER:
-            path = Path(tmp) / f"{port}.tif"
-            write_dem(path)
-        elif isinstance(data, pd.DataFrame):
-            path = Path(tmp) / f"{port}.csv"
-            data.to_csv(path, index=False)
+        if is_many(data):
+            paths[port] = [write_input(Path(tmp) / f"{port}{i}", d, case, port, vector_ext) for i, d in enumerate(data)]
         else:
-            path = Path(tmp) / f"{port}{vector_ext}"
-            gpd.GeoDataFrame(case.attrs.get(port, {}), geometry=list(data), crs=CRS).to_file(path)
-        paths[port] = str(path)
+            paths[port] = write_input(Path(tmp) / port, data, case, port, vector_ext)
     return paths
 
 
@@ -308,7 +339,8 @@ def run_qgis(qp: str, impl: dict, op: dict, case: Case):
         paths = stage_inputs(tmp, ports, op, case, ".gpkg")
         argv = [qp, "run", impl["call"]["name"], "--"]
         for port, path in paths.items():
-            argv.append(f"{ports[port]}={path}")
+            for one in (path if isinstance(path, list) else [path]):  # a multilayer parameter repeats
+                argv.append(f"{ports[port]}={one}")
         for k, v in args.items():
             if isinstance(v, bool):
                 v = "true" if v else "false"
@@ -329,7 +361,7 @@ def run_whitebox(wbt: str, impl: dict, op: dict, case: Case):
         paths = stage_inputs(tmp, ports, op, case, ".shp")
         argv = [wbt, f"--run={impl['call']['name']}"]
         for port, path in paths.items():
-            argv.append(f"--{ports[port]}={path}")
+            argv.append(f"--{ports[port]}=" + (";".join(path) if isinstance(path, list) else path))
         for k, v in args.items():
             if isinstance(v, bool):
                 if v:
@@ -379,6 +411,12 @@ def run_pylib(impl: dict, op: dict, case: Case):
     with tempfile.TemporaryDirectory() as tmp:
         dem = Path(tmp) / "dem.tif"
         write_dem(dem)
+        many = {port: [write_input(Path(tmp) / f"{port}{i}", d, case, port, ".gpkg") for i, d in enumerate(data)]
+                for port, data in case.inputs.items() if is_many(data)}
+        if software == "rasterio" and name == "rasterio.merge.merge":
+            import rasterio.merge
+            arr, _ = rasterio.merge.merge(**{ports[p]: paths for p, paths in many.items()}, **args)
+            return valid_cells(arr[0], DEM_NODATA)
         if software == "rasterio":
             import rasterio
             import rasterio.mask
@@ -403,6 +441,11 @@ def run_pylib(impl: dict, op: dict, case: Case):
             return pd.DataFrame(rows)
         import rioxarray
         da = rioxarray.open_rasterio(dem, masked=True).squeeze("band", drop=True)
+        arrays = {ports[p]: [rioxarray.open_rasterio(x, masked=True).squeeze("band", drop=True) for x in paths]
+                  for p, paths in many.items()}
+        if arrays:
+            mod = importlib.import_module(name.rsplit(".", 1)[0])
+            return valid_cells(getattr(mod, fn)(**arrays, **args).values)
         if software == "rioxarray":
             kwargs = dict(args)
             if "mask" in ports:
@@ -420,6 +463,8 @@ def run_pylib(impl: dict, op: dict, case: Case):
                     kwargs["stats_funcs"] = [stats] if isinstance(stats, str) else stats
                 table = xrspatial.zonal_stats(**kwargs)
                 return table[table["zone"] == 1].reset_index(drop=True)
+            if fn == "contours":
+                raise Unsupported("levels must be listed; no interval argument")
             return valid_cells(getattr(xrspatial, fn)(**{ports["raster"]: da}, **args).values)
     raise Unsupported(f"no runner for {name}")
 
@@ -454,9 +499,18 @@ def run_r(rscript: str, impl: dict, op: dict, case: Case):
             if engine is None or port not in case.inputs:
                 continue
             data = case.inputs[port]
-            if isinstance(data, str) and data == RASTER:
+            if is_many(data):
+                # terra::mosaic(x, y, ...): the first in x, the second in y, the rest unnamed
+                exprs = [f"terra::rast({json.dumps(write_input(Path(tmp) / f'{port}{i}', d, case, port, '.gpkg'))})"
+                         if is_raster(d) else read_vector.format(json.dumps(write_input(
+                             Path(tmp) / f"{port}{i}", d, case, port, ".gpkg"))) for i, d in enumerate(data)]
+                if engine != "x":
+                    raise Unsupported(f"no R calling convention for a list in '{engine}'")
+                call += [f"x = {exprs[0]}", f"y = {exprs[1]}", *exprs[2:]]
+                continue
+            if is_raster(data):
                 path = Path(tmp) / f"{port}.tif"
-                write_dem(path)
+                write_dem(path, data)
                 expr = f"terra::rast({json.dumps(str(path))})"
             elif isinstance(data, pd.DataFrame):
                 path = Path(tmp) / f"{port}.csv"
@@ -488,18 +542,44 @@ def run_r(rscript: str, impl: dict, op: dict, case: Case):
         return table
 
 
-def write_dem(path: Path) -> None:
+def is_raster(data) -> bool:
+    return isinstance(data, str) and data.startswith(RASTER)
+
+
+def is_many(data) -> bool:
+    """A list of inputs for a `many` port: raster markers, or lists of geometries."""
+    return isinstance(data, list) and bool(data) and (is_raster(data[0]) or isinstance(data[0], list))
+
+
+def write_input(path_stem: Path, data, case: Case, port: str, vector_ext: str) -> str:
+    """Write one input (the DEM or part of it, a table, or geometries); returns its path."""
+    if is_raster(data):
+        path = path_stem.with_suffix(".tif")
+        write_dem(path, data)
+    elif isinstance(data, pd.DataFrame):
+        path = path_stem.with_suffix(".csv")
+        data.to_csv(path, index=False)
+    else:
+        path = path_stem.with_suffix(vector_ext)
+        attrs = case.attrs.get(port, {}) if not is_many(case.inputs.get(port)) else {}
+        gpd.GeoDataFrame(attrs, geometry=list(data), crs=CRS).to_file(path)
+    return str(path)
+
+
+def write_dem(path: Path, part: str = RASTER) -> None:
+    """The DEM, or its western or eastern half (for mosaics)."""
     from osgeo import gdal, osr
     import numpy as np
     gdal.UseExceptions()
-    ds = gdal.GetDriverByName("GTiff").Create(str(path), DEM_SIZE, DEM_SIZE, 1, gdal.GDT_Float32)
-    ds.SetGeoTransform((DEM_ORIGIN[0], DEM_CELL, 0, DEM_ORIGIN[1], 0, -DEM_CELL))
+    c0, c1 = {RASTER: (0, DEM_SIZE), RASTER_WEST: (0, DEM_SIZE // 2), RASTER_EAST: (DEM_SIZE // 2, DEM_SIZE)}[part]
+    ds = gdal.GetDriverByName("GTiff").Create(str(path), c1 - c0, DEM_SIZE, 1, gdal.GDT_Float32)
+    ds.SetGeoTransform((DEM_ORIGIN[0] + c0 * DEM_CELL, DEM_CELL, 0, DEM_ORIGIN[1], 0, -DEM_CELL))
     srs = osr.SpatialReference()
     srs.ImportFromEPSG(SRID)
     ds.SetProjection(srs.ExportToWkt())
     band = ds.GetRasterBand(1)
     band.SetNoDataValue(DEM_NODATA)
-    band.WriteArray(np.array(dem_values(), dtype="float32"))
+    band.WriteArray(np.array([row[c0:c1] for row in dem_values()], dtype="float32"))
     ds = None
 
 
@@ -523,22 +603,17 @@ def run_gdal(gdal: str, impl: dict, op: dict, case: Case):
         for port, engine in ports.items():
             if port in case.inputs:
                 data = case.inputs[port]
-                if isinstance(data, str) and data == RASTER:
-                    path = Path(tmp) / f"{port}.tif"
-                    write_dem(path)
-                elif isinstance(data, pd.DataFrame):
-                    path = Path(tmp) / f"{port}.csv"
-                    data.to_csv(path, index=False)
-                else:
-                    path = Path(tmp) / f"{port}.gpkg"
-                    gpd.GeoDataFrame(case.attrs.get(port, {}), geometry=list(data), crs=CRS).to_file(path)
-                argv += [f"--{engine}", str(path)]
+                parts = data if is_many(data) else [data]
+                for i, d in enumerate(parts):
+                    argv += [f"--{engine}", write_input(Path(tmp) / f"{port}{i}", d, case, port, ".gpkg")]
             elif engine and port in [p["name"] for p in op["outputs"]]:
                 argv += [f"--{engine}", str(out)]
         for k, v in args.items():
             if isinstance(v, bool):
                 if v:
                     argv.append(f"--{k}")
+            elif isinstance(v, list):
+                argv += [f"--{k}", ",".join(str(x) for x in v)]
             else:
                 argv += [f"--{k}", str(v)]
         if not any(a == "--output" for a in argv):
@@ -637,6 +712,8 @@ def run_postgis_raster(psql: str, dsn: str, impl: dict, op: dict, case: Case):
         data = case.inputs.get(port)
         if data is None or engine is None:
             continue
+        if is_many(data):
+            raise Unsupported("this runner passes one raster; an aggregate over rows is not run here")
         if isinstance(data, str) and data == RASTER:
             call.append(f"{engine} => {dem_sql()}")
         else:
@@ -765,14 +842,18 @@ def main() -> int:
         reference = case.expected if case.expected is not None else (results[0][1] if results else None)
         for impl_id, value in results:
             ok = close(value, reference, case.tolerance)
-            if not ok:
+            known = KNOWN_DIFFERENCES.get((impl_id, case.title))
+            if not ok and not known:
                 failed += 1
-            rows.append((case, impl_id, "ok" if ok else "FAIL",
-                         f"{case.measure} {value:.6g}" + ("" if ok else f" ({value:.12g}), expected {reference:.12g}")))
+            status = "ok" if ok else ("differs" if known else "FAIL")
+            rows.append((case, impl_id, status, f"{case.measure} {value:.6g}" + (
+                "" if ok else f" ({value:.12g}), expected {reference:.12g}" + (f": {known}" if known else ""))))
     for case, impl_id, status, detail in rows:
         print(f"{status:8} {case.operation:16} {impl_id:40} {case.title}: {detail}")
-    ran = sum(1 for r in rows if r[2] in ("ok", "FAIL"))
-    print(f"\n{ran} runs, {failed} failed, {sum(1 for r in rows if r[2] == 'skipped')} skipped")
+    ran = sum(1 for r in rows if r[2] in ("ok", "FAIL", "differs"))
+    differs = sum(1 for r in rows if r[2] == "differs")
+    print(f"\n{ran} runs, {failed} failed, {differs} known differences, "
+          f"{sum(1 for r in rows if r[2] == 'skipped')} skipped")
     return 1 if failed else 0
 
 

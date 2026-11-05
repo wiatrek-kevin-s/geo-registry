@@ -1,0 +1,10 @@
+id: sf-st-nearest-feature
+implements: nearest-join
+crosswalk:
+  left: x
+  right: y
+  max_distance: { note: "No limit; filter with st_distance afterwards." }
+differences:
+  - Returns the index of the nearest feature in y for each feature of x; join with cbind(x, st_drop_geometry(y)[idx, ]).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

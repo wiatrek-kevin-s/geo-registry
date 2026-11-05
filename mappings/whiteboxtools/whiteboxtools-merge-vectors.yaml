@@ -1,0 +1,9 @@
+id: whiteboxtools-merge-vectors
+implements: merge-layers
+crosswalk:
+  layers: inputs
+  output: output
+differences:
+  - Inputs must share one geometry type.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

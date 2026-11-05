@@ -1,0 +1,8 @@
+id: terra-mosaic
+implements: mosaic
+crosswalk:
+  rasters: { param: x, note: "The rasters go in x, y and further arguments, or a SpatRasterCollection in x." }
+differences:
+  - Where inputs overlap, fun combines the values (default mean).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,8 @@
+id: postgis-raster-st-resample
+implements: resample-raster
+crosswalk:
+  raster: rast
+  resolution: { note: "scalex and scaley (scaley negative for a north-up raster)." }
+  resampling: { param: algorithm, values: { nearest: NearestNeighbor, bilinear: Bilinear, cubic: Cubic }, unsupported: [average, mode] }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

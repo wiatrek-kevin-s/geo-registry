@@ -1,0 +1,8 @@
+id: terra-resample
+implements: resample-raster
+crosswalk:
+  raster: x
+  resolution: { note: "y is a raster on the target grid; make one with rast(x) and res(r) <- value." }
+  resampling: { param: method, values: { nearest: near, bilinear: bilinear, cubic: cubic, average: average, mode: mode } }
+effects: { modifies_input: false, network: false }
+review: { state: draft }
