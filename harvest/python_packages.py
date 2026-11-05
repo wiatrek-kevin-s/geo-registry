@@ -34,6 +34,9 @@ from python_libs import own_members, parameters  # noqa: E402
 
 CONFIG = Path(__file__).resolve().parent / "python-packages.yml"
 SKIP_PART = re.compile(r"^(_.*|tests?|testing|conftest|compat|externals|vendor(ed)?|examples?|benchmarks?|docs?)$")
+# Back-end plumbing, not tools: GPU fallbacks (a stand-in `cupy` class when CuPy is
+# missing), CUDA launch helpers, and checks for which array library is in use.
+PLUMBING = re.compile(r"(^|_)(cupy|cuda|numba)(_|$)|^(is|has)_.*(dask|cupy|cuda)", re.IGNORECASE)
 
 
 def version_of(mod, dist: str | None = None) -> str:
@@ -48,14 +51,16 @@ def version_of(mod, dist: str | None = None) -> str:
     return "unknown"
 
 
-def modules(root, include: list[str] | None):
-    """The root module and every public submodule that imports."""
+def modules(root, include: list[str] | None, skip: list[str] | None = None):
+    """The root module and every public submodule that imports (minus `skip` and below)."""
     found, skipped = [root], []
     if hasattr(root, "__path__"):
         for info in pkgutil.walk_packages(root.__path__, root.__name__ + ".", onerror=lambda n: skipped.append(n)):
             if any(SKIP_PART.match(p) for p in info.name.split(".")[1:]):
                 continue
             if include and not any(info.name == i or info.name.startswith(i + ".") for i in include):
+                continue
+            if skip and any(info.name == s or info.name.startswith(s + ".") for s in skip):
                 continue
             try:
                 with warnings.catch_warnings():
@@ -73,7 +78,7 @@ def public_callables(mod, package: str, exclude: list[re.Pattern] = ()):
     if not isinstance(names, (list, tuple)):
         names = [n for n in vars(mod) if not n.startswith("_")]
     for name in names:
-        if not isinstance(name, str) or name.startswith("_") or any(x.search(name) for x in exclude):
+        if not isinstance(name, str) or name.startswith("_") or PLUMBING.search(name) or any(x.search(name) for x in exclude):
             continue
         with warnings.catch_warnings():
             warnings.simplefilter("ignore")  # deprecated aliases warn when touched
@@ -94,7 +99,7 @@ def harvest_package(cfg: dict) -> tuple[str, list[dict], list[str]]:
         root = importlib.import_module(modname)
     package = modname.split(".")[0]
     ver = version_of(root, cfg.get("dist"))
-    mods, skipped = modules(root, cfg.get("include"))
+    mods, skipped = modules(root, cfg.get("include"), cfg.get("skip_modules"))
     best: dict[int, tuple[str, object]] = {}
     exclude = [re.compile(x) for x in cfg.get("exclude") or []]
     for mod in mods:
