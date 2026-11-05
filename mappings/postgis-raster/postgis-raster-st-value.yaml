@@ -1,0 +1,12 @@
+id: postgis-raster-st-value
+implements: extract-values-to-points
+crosswalk:
+  raster: rast
+  points: pt
+  resampling: { param: resample }
+presets:
+  band: 1
+differences:
+  - Returns the value at one point; run it once per point row. resample also offers cubic and cubic spline interpolation.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

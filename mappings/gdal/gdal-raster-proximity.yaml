@@ -1,0 +1,12 @@
+id: gdal-raster-proximity
+implements: euclidean-distance
+crosswalk:
+  raster: input
+  output: output
+presets:
+  distance-units: geo
+differences:
+  - "Targets are non-zero cells unless target-values lists them; nodata cells are not zero, so on a background of nodata every cell is a target (all distances 0), and with target values listed the background cells get 65535 instead of a distance: give the background as 0."
+  - Distances are in cells unless distance-units is geo (set by this mapping).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

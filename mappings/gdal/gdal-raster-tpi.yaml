@@ -1,0 +1,7 @@
+id: gdal-raster-tpi
+implements: topographic-position-index
+crosswalk:
+  raster: input
+  output: output
+effects: { modifies_input: false, network: false }
+review: { state: draft }

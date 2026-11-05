@@ -1,0 +1,9 @@
+id: whiteboxtools-euclidean-distance
+implements: euclidean-distance
+crosswalk:
+  raster: input
+  output: output
+differences:
+  - Targets are cells with a value greater than zero; cells that are nodata in the input stay nodata in the output, so give the background as 0.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

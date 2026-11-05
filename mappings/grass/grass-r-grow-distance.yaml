@@ -1,0 +1,10 @@
+id: grass-r-grow-distance
+implements: euclidean-distance
+crosswalk:
+  raster: input
+  output: distance
+differences:
+  - "Targets are all cells that are not NULL, zeros included: on a background of 0 every cell is a target."
+  - metric also offers squared, maximum, Manhattan and geodesic distances.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,9 @@
+id: terra-distance
+implements: euclidean-distance
+crosswalk:
+  raster: x
+differences:
+  - Targets are cells that are not NA, so on a background of 0 every cell is a target unless target = 0 names the background; distances are in metres, unit can change that.
+  - Longitude/latitude rasters are measured on the ellipsoid.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

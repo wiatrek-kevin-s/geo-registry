@@ -1,0 +1,9 @@
+id: postgis-raster-st-tri
+implements: terrain-ruggedness-index
+crosswalk:
+  raster: rast
+  algorithm: { fixed: wilson }
+differences:
+  - The mean of the absolute differences from the eight neighbours.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

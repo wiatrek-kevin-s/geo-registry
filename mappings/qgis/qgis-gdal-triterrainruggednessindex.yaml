@@ -1,0 +1,10 @@
+id: qgis-gdal-triterrainruggednessindex
+implements: terrain-ruggedness-index
+crosswalk:
+  raster: INPUT
+  output: OUTPUT
+  algorithm: { fixed: riley }
+differences:
+  - Cells on the raster's edge are left as nodata unless edges are computed (COMPUTE_EDGES).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

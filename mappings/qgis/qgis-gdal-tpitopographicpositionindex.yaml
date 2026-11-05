@@ -1,0 +1,9 @@
+id: qgis-gdal-tpitopographicpositionindex
+implements: topographic-position-index
+crosswalk:
+  raster: INPUT
+  output: OUTPUT
+differences:
+  - Cells on the raster's edge are left as nodata unless edges are computed (COMPUTE_EDGES).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

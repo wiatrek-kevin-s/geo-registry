@@ -1,0 +1,6 @@
+id: postgis-raster-st-tpi
+implements: topographic-position-index
+crosswalk:
+  raster: rast
+effects: { modifies_input: false, network: false }
+review: { state: draft }

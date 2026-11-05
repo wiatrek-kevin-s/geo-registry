@@ -1,0 +1,19 @@
+id: terrain-ruggedness-index
+kind: operation
+name: Terrain Ruggedness Index
+aka: [TRI, ruggedness index, Riley TRI, gdaldem TRI]
+summary: How much each cell of an elevation raster differs in height from its eight neighbours.
+group: raster/terrain
+inputs:
+  - { name: raster, type: raster, note: An elevation model. }
+outputs:
+  - { name: output, type: raster }
+parameters:
+  algorithm: { type: enum, values: [riley, wilson, rmsd], default: riley, note: "riley: square root of the sum of squared differences (Riley and others, 1999); wilson: mean absolute difference (Wilson and others, 2007); rmsd: root mean square difference." }
+checks: [raster.nodata]
+pitfalls:
+  - Engines use different formulas under the same name (a square root of summed squares, a mean of absolute differences, a root mean square), which differ by a factor of 2 or more.
+  - Cells on the raster's edge have incomplete neighbourhoods; engines leave them nodata or compute them differently.
+related: [topographic-position-index, roughness, slope]
+status: active
+review: { state: draft }

@@ -1,0 +1,8 @@
+id: xrspatial-roughness
+implements: roughness
+crosswalk:
+  raster: agg
+differences:
+  - Takes an xarray DataArray; edge cells are NaN by default (boundary = 'nan').
+effects: { modifies_input: false, network: false }
+review: { state: draft }

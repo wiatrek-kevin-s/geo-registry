@@ -1,0 +1,21 @@
+id: extract-values-to-points
+kind: operation
+name: Extract Values to Points
+aka: [sample raster values, raster sampling, point query, Extract Multi Values to Points, drill a raster]
+summary: Adds to each point the value of the raster at its location.
+group: raster/extraction
+inputs:
+  - { name: points, type: vector, geometry: point }
+  - { name: raster, type: raster }
+outputs:
+  - { name: output, type: vector, geometry: point }
+parameters:
+  resampling: { type: enum, values: [nearest, bilinear], default: nearest, note: "nearest: the value of the cell the point falls in; bilinear: interpolated from the four nearest cell centres." }
+checks: [crs.agreement, raster.nodata]
+pitfalls:
+  - Points and raster in different CRSs give wrong or empty values unless the engine reprojects the points first.
+  - Some engines interpolate by default, so values differ from the cell's value except at cell centres.
+  - Points outside the raster or on nodata cells get nodata, null or an error depending on the engine.
+related: [zonal-statistics]
+status: active
+review: { state: draft }

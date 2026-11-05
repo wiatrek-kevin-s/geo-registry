@@ -1,0 +1,11 @@
+id: qgis-native-rastersampling
+implements: extract-values-to-points
+crosswalk:
+  points: INPUT
+  raster: RASTERCOPY
+  output: OUTPUT
+  resampling: { fixed: nearest }
+differences:
+  - Adds one field per band, named COLUMN_PREFIX plus the band number (SAMPLE_1).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

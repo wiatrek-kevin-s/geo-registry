@@ -1,0 +1,12 @@
+id: qgis-gdal-proximity
+implements: euclidean-distance
+crosswalk:
+  raster: INPUT
+  output: OUTPUT
+presets:
+  UNITS: 0
+differences:
+  - "Runs GDAL's proximity. Targets are non-zero cells unless VALUES lists them; nodata cells are not zero, so on a background of nodata every cell is a target (all distances 0), and with target values listed the background cells get 65535 instead of a distance: give the background as 0."
+  - UNITS 1 (the default) gives distances in cells, 0 in the CRS's units (set by this mapping).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

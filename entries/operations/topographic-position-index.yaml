@@ -1,0 +1,17 @@
+id: topographic-position-index
+kind: operation
+name: Topographic Position Index
+aka: [TPI, difference from mean elevation, gdaldem TPI]
+summary: Each cell's elevation minus the mean of its eight neighbours; positive on ridges, negative in valleys.
+group: raster/terrain
+inputs:
+  - { name: raster, type: raster, note: An elevation model. }
+outputs:
+  - { name: output, type: raster }
+checks: [raster.nodata]
+pitfalls:
+  - Some tools compute it over a larger window or standardise it by the window's standard deviation, which is a different number.
+  - Cells on the raster's edge have incomplete neighbourhoods; engines leave them nodata or compute them differently.
+related: [terrain-ruggedness-index, roughness, focal-statistics]
+status: active
+review: { state: draft }

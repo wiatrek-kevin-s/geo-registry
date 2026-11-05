@@ -1,0 +1,10 @@
+id: rasterstats-gen-point-query
+implements: extract-values-to-points
+crosswalk:
+  points: vectors
+  raster: raster
+  resampling: { param: interpolate }
+differences:
+  - Interpolates (bilinear) by default; returns one value per point (a generator; point_query returns a list).
+effects: { modifies_input: false, network: false }
+review: { state: draft }
