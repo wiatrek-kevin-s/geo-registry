@@ -1,0 +1,12 @@
+id: gdal-raster-reproject--resample
+variant_of: gdal-raster-reproject
+implements: resample-raster
+crosswalk:
+  raster: input
+  output: output
+  resolution: { param: resolution, repeat: 2, note: "x and y: --resolution 20,20." }
+  resampling: resampling
+differences:
+  - gdal raster resize does the same without reprojection support; without output-crs this keeps the raster's CRS.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,10 @@
+id: terra-crop--vector
+variant_of: terra-crop
+implements: clip
+crosswalk:
+  layer: x
+  mask: y
+differences:
+  - Keeps only x's attributes; y can also be an extent.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

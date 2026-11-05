@@ -1,0 +1,12 @@
+id: qgis-gdal-warpreproject--resample
+variant_of: qgis-gdal-warpreproject
+implements: resample-raster
+crosswalk:
+  raster: INPUT
+  output: OUTPUT
+  resolution: TARGET_RESOLUTION
+  resampling: { param: RESAMPLING, values: { nearest: 0, bilinear: 1, cubic: 2, average: 5, mode: 6 } }
+differences:
+  - The same tool reprojects; leaving TARGET_CRS empty keeps the raster's CRS.
+effects: { modifies_input: false, network: false }
+review: { state: draft }
