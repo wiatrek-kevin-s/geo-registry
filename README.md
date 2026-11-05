@@ -185,7 +185,7 @@ An implementation is one engine's tool: `gdal vector buffer`, `shapely.buffer`,
 engine to describe its own tools (GDAL's `--json-usage`, PostGIS's catalogue, Python
 introspection) and writes `implementations/<software>/<id>.yaml` with the parameters,
 types, defaults, choices and, for SQL, every overload. Today: about 6,600 tools from
-50 packages: GDAL, PDAL, PostGIS (geometry and raster), QGIS Processing, GRASS,
+more than 50 packages: GDAL, PDAL, PostGIS (geometry and raster), QGIS Processing, GRASS,
 WhiteboxTools, Shapely, GeoPandas and about 40 more Python packages (rasterio, pyproj,
 the PySAL family, osmnx, momepy, Apache Sedona, ...), R's sf and terra, Turf.js,
 TauDEM and LAStools. DuckDB spatial and RustGIS are harvested by the weekly Engines
