@@ -169,8 +169,13 @@ status: active
 review: { state: draft }
 ```
 
+- Today: 23 operations: the 16 ops Columbus's `vector_op` and `raster_op` run, plus
+  `table-to-points`; then `centroid`, `convex-hull`, `difference`,
+  `multipart-to-singlepart`, `rasterize` and `raster-to-polygons`, which Columbus can run
+  through engine plugins and `run_tool`.
 - Ids are hyphenated slugs. `columbus` records the Columbus tool and op in Columbus's own
-  names (`vector_op` / `spatial_join`), so neither project has to rename anything.
+  names (`vector_op` / `spatial_join`), so neither project has to rename anything; an
+  operation Columbus has no op for leaves it out.
 - Input, output and parameter names follow Columbus's where Columbus has the operation.
 - `checks` are Columbus verification check ids (`crs.measure`, `join.unmatched`, ...).
 - `broader` / `narrower` must name operations; `related` may name any entry.

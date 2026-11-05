@@ -1,0 +1,9 @@
+id: postgis-st-centroid
+implements: centroid
+crosswalk:
+  layer: "#1"
+  inside: { fixed: false, note: "Use ST_PointOnSurface for a point inside the polygon." }
+differences:
+  - On geography it computes a spheroidal centroid (use_spheroid).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

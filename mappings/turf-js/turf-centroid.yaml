@@ -1,0 +1,10 @@
+id: turf-centroid
+implements: centroid
+crosswalk:
+  layer: geojson
+  inside: { fixed: false, note: "Use turf.pointOnFeature for a point inside the polygon." }
+differences:
+  - The mean of all vertices, not the area-weighted centroid (turf.centerOfMass gives that).
+  - Turf works on GeoJSON in longitude/latitude (WGS 84); data in another CRS must be reprojected first.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

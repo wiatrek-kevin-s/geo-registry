@@ -1,0 +1,7 @@
+id: postgis-st-pointonsurface
+implements: centroid
+crosswalk:
+  layer: "#1"
+  inside: { fixed: true, note: "Use ST_Centroid for the geometric centroid." }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

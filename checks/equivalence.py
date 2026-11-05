@@ -51,13 +51,16 @@ def poly(x0, y0, x1, y1):
     return shapely.box(x0, y0, x1, y1)
 
 
+L_SHAPE = shapely.Polygon([(0, 0), (20, 0), (20, 10), (10, 10), (10, 20), (0, 20)])  # area 300; hull 350
+
+
 @dataclass
 class Case:
     operation: str
     title: str
     inputs: dict[str, Any]          # port -> list of geometries, or a DataFrame for tables
     params: dict[str, Any]          # canonical parameters
-    measure: str                    # area | length | count | coords
+    measure: str                    # area | length | count | coords | raster_* | field_*
     expected: float | None = None   # None: compare engines with each other
     tolerance: float = 1e-6         # relative
     attrs: dict[str, list] = field(default_factory=dict)  # extra columns per port
@@ -88,6 +91,14 @@ CASES = [
          {}, "area", expected=200.0),
     Case("intersect", "overlap of two squares", {"a": [poly(0, 0, 10, 10)], "b": [poly(5, 5, 15, 15)]},
          {}, "area", expected=25.0),
+    Case("centroid", "centroid of a 100 m square", {"layer": [poly(0, 0, 100, 100)]}, {}, "coords",
+         expected=100.0, tolerance=1e-9),
+    Case("centroid", "L-shaped polygon, point inside", {"layer": [L_SHAPE]}, {"inside": True}, "count", expected=1),
+    Case("convex-hull", "L-shaped polygon", {"layer": [L_SHAPE]}, {}, "area", expected=350.0),
+    Case("difference", "square minus an overlapping square", {"layer": [poly(0, 0, 100, 100)], "mask": [poly(50, 50, 150, 150)]},
+         {}, "area", expected=7500.0),
+    Case("multipart-to-singlepart", "one feature of two squares", {"layer": [shapely.MultiPolygon([poly(0, 0, 10, 10), poly(20, 0, 30, 10)])]},
+         {}, "count", expected=2),
     Case("table-to-points", "two rows of coordinates",
          {"table": pd.DataFrame({"x": [621000.0, 621010.0], "y": [3349000.0, 3349020.0]})},
          {"x_field": "x", "y_field": "y", "crs": CRS}, "coords",
@@ -130,6 +141,12 @@ RASTER_CASES = [
          {"crs": "EPSG:3081", "resampling": "nearest"}, "raster_mean", tolerance=0.02),
     Case("zonal-statistics", "mean over the first 5 columns", {"raster": RASTER, "zones": [dem_box(0, 5)]},
          {"stats": "mean"}, "field_mean", expected=2.5, tolerance=1e-6),
+    Case("rasterize", "50 m by 30 m rectangle at 10 m cells", {"layer": [dem_box(0, 5, 0, 3)]},
+         {"resolution": 10}, "raster_count", expected=15.0),
+    # The DEM's 20 columns each hold one value (0.5, 1.5, ... 19.5), so 20 strips.
+    Case("raster-to-polygons", "one polygon per column of equal values", {"raster": RASTER}, {}, "count", expected=20),
+    Case("raster-to-polygons", "polygons cover the raster", {"raster": RASTER}, {}, "area",
+         expected=(DEM_CELL * DEM_SIZE) ** 2, tolerance=1e-9),
 ]
 
 
@@ -234,7 +251,8 @@ def run_python(impl: dict, op: dict, case: Case) -> list:
         else:
             kwargs[engine] = frame
     if self_obj is not None:
-        result = getattr(self_obj, parts[-1])(**kwargs)
+        attr = getattr(self_obj, parts[-1])
+        result = attr(**kwargs) if callable(attr) else attr  # .centroid, .convex_hull are properties
     else:
         mod = importlib.import_module(parts[0])
         result = getattr(mod, parts[-1])(**kwargs)
@@ -369,6 +387,12 @@ def run_pylib(impl: dict, op: dict, case: Case):
                 if name == "rasterio.mask.mask":
                     arr, _ = rasterio.mask.mask(**{ports["raster"]: ds, ports["mask"]: shapes("mask")}, **args)
                     return valid_cells(arr[0], ds.nodata)
+                if name == "rasterio.features.shapes":
+                    import rasterio.features
+                    band = ds.read(1)
+                    pairs = rasterio.features.shapes(**{ports["raster"]: band}, mask=band != ds.nodata,
+                                                     transform=ds.transform, **args)
+                    return [shapely.geometry.shape(g) for g, _ in pairs]
                 if name == "rasterio.warp.reproject":
                     arr, _ = rasterio.warp.reproject(**{ports["raster"]: ds.read(1)}, src_transform=ds.transform,
                                                      src_crs=ds.crs, src_nodata=ds.nodata, dst_nodata=ds.nodata, **args)
@@ -575,6 +599,8 @@ def run_postgis(psql: str, dsn: str, impl: dict, op: dict, case: Case) -> list:
             put(k, lit(v))
     call_args = [positional[i] for i in sorted(positional)] + named
     expr = f"{fn}({', '.join(call_args)})"
+    if any(s.get("returns", "").startswith("SETOF geometry_dump") for s in impl.get("signatures") or []):
+        expr = f"({expr}).geom"  # ST_Dump: one (path, geom) row per part
     group = ""
     if aggregate and "by" in case.params:
         port = next(iter(case.inputs))
@@ -626,12 +652,18 @@ def run_postgis_raster(psql: str, dsn: str, impl: dict, op: dict, case: Case):
         else:
             val = "'" + str(v).replace("'", "''") + "'"
         call.append(f"{k} => {val}")
-    sql = (f"SELECT v FROM (SELECT unnest((ST_DumpValues({fn}({', '.join(call)}), 1, true))) AS v) t "
-           f"WHERE v IS NOT NULL")
+    vector_out = op["outputs"][0]["type"] == "vector"
+    if vector_out:  # ST_DumpAsPolygons and the like: one (geom, val) row per polygon
+        sql = f"SELECT ST_AsText(({fn}({', '.join(call)})).geom)"
+    else:
+        sql = (f"SELECT v FROM (SELECT unnest((ST_DumpValues({fn}({', '.join(call)}), 1, true))) AS v) t "
+               f"WHERE v IS NOT NULL")
     r = subprocess.run([psql, "-X", "-qAt", "-v", "ON_ERROR_STOP=1", "-d", dsn, "-c", sql],
                        capture_output=True, text=True)
     if r.returncode != 0:
         raise RuntimeError(f"{fn} failed: {r.stderr.strip()[:300]}")
+    if vector_out:
+        return [wkt.loads(line) for line in r.stdout.splitlines() if line.strip()]
     return [float(x) for x in r.stdout.split()]
 
 

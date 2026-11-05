@@ -1,0 +1,6 @@
+id: shapely-convex-hull
+implements: convex-hull
+crosswalk:
+  layer: geometry
+effects: { modifies_input: false, network: false }
+review: { state: draft }

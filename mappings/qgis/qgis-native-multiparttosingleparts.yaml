@@ -1,0 +1,7 @@
+id: qgis-native-multiparttosingleparts
+implements: multipart-to-singlepart
+crosswalk:
+  layer: INPUT
+  output: OUTPUT
+effects: { modifies_input: false, network: false }
+review: { state: draft }

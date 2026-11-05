@@ -1,0 +1,8 @@
+id: postgis-st-dump
+implements: multipart-to-singlepart
+crosswalk:
+  layer: "#1"
+differences:
+  - Returns a set of geometry_dump rows (path, geom); select (ST_Dump(geom)).geom.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

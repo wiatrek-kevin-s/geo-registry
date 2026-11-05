@@ -1,0 +1,7 @@
+id: qgis-native-convexhull
+implements: convex-hull
+crosswalk:
+  layer: INPUT
+  output: OUTPUT
+effects: { modifies_input: false, network: false }
+review: { state: draft }

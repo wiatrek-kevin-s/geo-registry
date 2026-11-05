@@ -1,0 +1,7 @@
+id: gdal-vector-convex-hull
+implements: convex-hull
+crosswalk:
+  layer: input
+  output: output
+effects: { modifies_input: false, network: false }
+review: { state: draft }

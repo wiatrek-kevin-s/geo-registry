@@ -1,0 +1,7 @@
+id: sf-st-point-on-surface
+implements: centroid
+crosswalk:
+  layer: x
+  inside: { fixed: true, note: "Use st_centroid for the geometric centroid." }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

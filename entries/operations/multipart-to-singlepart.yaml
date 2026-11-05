@@ -1,0 +1,16 @@
+id: multipart-to-singlepart
+kind: operation
+name: Multipart To Singlepart
+aka: [Explode, explode multipart features, disaggregate, split multipart]
+summary: Splits each multipart feature into one feature per part, each with the original attributes.
+group: vector/geometry
+inputs:
+  - { name: layer, type: vector }
+outputs:
+  - { name: output, type: vector }
+checks: [geometry.valid]
+pitfalls:
+  - Feature counts grow, so keys that were unique per feature are repeated on every part.
+related: [dissolve]
+status: active
+review: { state: draft }

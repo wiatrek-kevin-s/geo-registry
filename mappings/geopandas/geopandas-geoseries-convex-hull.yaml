@@ -1,0 +1,7 @@
+id: geopandas-geoseries-convex-hull
+implements: convex-hull
+crosswalk: {}
+differences:
+  - A property of the GeoSeries, not a method; returns a GeoSeries without the other columns.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

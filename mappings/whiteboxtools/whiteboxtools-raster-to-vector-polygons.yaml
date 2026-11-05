@@ -1,0 +1,7 @@
+id: whiteboxtools-raster-to-vector-polygons
+implements: raster-to-polygons
+crosswalk:
+  raster: input
+  output: output
+effects: { modifies_input: false, network: false }
+review: { state: draft }

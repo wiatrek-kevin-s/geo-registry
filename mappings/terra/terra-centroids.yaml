@@ -1,0 +1,7 @@
+id: terra-centroids
+implements: centroid
+crosswalk:
+  layer: x
+  inside: inside
+effects: { modifies_input: false, network: false }
+review: { state: draft }

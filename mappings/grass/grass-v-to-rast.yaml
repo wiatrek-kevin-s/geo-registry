@@ -1,0 +1,11 @@
+id: grass-v-to-rast
+implements: rasterize
+crosswalk:
+  layer: input
+  output: output
+  resolution: { note: "Set by the computational region (g.region res=...)." }
+  value: { param: value, note: "With use = val." }
+  field: { param: attribute_column, note: "With use = attr." }
+  all_touched: { note: "Use the d flag for dense lines; areas burn cell centres." }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

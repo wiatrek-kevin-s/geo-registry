@@ -1,0 +1,10 @@
+id: qgis-native-pointonsurface
+implements: centroid
+crosswalk:
+  layer: INPUT
+  output: OUTPUT
+  inside: { fixed: true, note: "Use native:centroids for the geometric centroid." }
+differences:
+  - ALL_PARTS gives one point per part of multipart features.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

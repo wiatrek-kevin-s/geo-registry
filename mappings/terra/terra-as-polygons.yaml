@@ -1,0 +1,9 @@
+id: terra-as-polygons
+implements: raster-to-polygons
+crosswalk:
+  raster: x
+  eight_connected: { fixed: false }
+differences:
+  - With aggregate = TRUE (the default) all cells with the same value become one polygon, connected or not.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,10 @@
+id: sedona-sql-st-difference
+implements: difference
+crosswalk:
+  layer: a
+  mask: b
+differences:
+  - "Per pair of geometries: union the mask first to subtract all of it."
+  - "A Spark SQL function: arguments are columns or column names, run over a Spark DataFrame."
+effects: { modifies_input: false, network: false }
+review: { state: draft }

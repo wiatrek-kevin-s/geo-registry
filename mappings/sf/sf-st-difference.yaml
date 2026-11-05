@@ -1,0 +1,9 @@
+id: sf-st-difference
+implements: difference
+crosswalk:
+  layer: x
+  mask: y
+differences:
+  - With several features in y, returns one result per pair; union y first (st_union) to subtract all of it.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,22 @@
+id: rasterize
+kind: operation
+name: Rasterize
+aka: [Feature To Raster, Polygon To Raster, Vector To Raster, burn]
+summary: Burns vector features into a raster grid, with a fixed value or a value from an attribute.
+group: conversion/vector-to-raster
+inputs:
+  - { name: layer, type: vector }
+outputs:
+  - { name: output, type: raster }
+parameters:
+  resolution: { type: number, required: true, note: "Cell size, in the layer's CRS units." }
+  value: { type: number, default: 1, note: Value burned into cells covered by a feature. }
+  field: { type: field, note: Burn this attribute's value instead of a fixed value. }
+  all_touched: { type: boolean, default: false, note: "Burn every cell a feature touches, not only cells whose centre it covers." }
+checks: [crs.present, raster.nodata]
+pitfalls:
+  - By default only cells whose centre falls inside a polygon are burned, so thin or small features can disappear.
+  - Cells outside every feature are nodata in some engines and 0 in others.
+related: [raster-to-polygons]
+status: active
+review: { state: draft }

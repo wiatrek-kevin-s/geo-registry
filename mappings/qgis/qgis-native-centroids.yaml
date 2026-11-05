@@ -1,0 +1,10 @@
+id: qgis-native-centroids
+implements: centroid
+crosswalk:
+  layer: INPUT
+  output: OUTPUT
+  inside: { fixed: false, note: "Use native:pointonsurface for a point inside the polygon." }
+differences:
+  - ALL_PARTS gives one point per part of multipart features.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,12 @@
+id: rasterio-features-rasterize
+implements: rasterize
+crosswalk:
+  layer: shapes
+  resolution: { note: "Give out_shape and transform instead (rasterio.transform.from_origin(west, north, res, res))." }
+  value: default_value
+  field: { note: "Pass (geometry, value) pairs as shapes." }
+  all_touched: all_touched
+differences:
+  - Returns an array; cells outside every shape get fill (default 0).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,7 @@
+id: gdal-vector-explode-collections
+implements: multipart-to-singlepart
+crosswalk:
+  layer: input
+  output: output
+effects: { modifies_input: false, network: false }
+review: { state: draft }

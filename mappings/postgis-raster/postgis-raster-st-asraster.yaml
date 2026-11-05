@@ -1,0 +1,12 @@
+id: postgis-raster-st-asraster
+implements: rasterize
+crosswalk:
+  layer: geom
+  resolution: { note: "scalex and scaley: the cell size, with scaley negative." }
+  value: value
+  field: { note: "Pass the column as value." }
+  all_touched: touched
+differences:
+  - Per geometry; union the features first (ST_Union) or use ST_AsRaster with a reference raster for a common grid.
+effects: { modifies_input: false, network: false }
+review: { state: draft }
