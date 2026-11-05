@@ -1,0 +1,10 @@
+id: shapely-points
+implements: table-to-points
+crosswalk:
+  x_field: { param: coords, pass: values }
+  y_field: { param: y, pass: values }
+  crs: { note: Shapely geometries carry no CRS; keep it alongside (a GeoSeries or GeoDataFrame). }
+differences:
+  - Takes the coordinate values themselves (arrays), not column names; geopandas.points_from_xy does the same with a CRS.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,12 @@
+id: grass-v-type
+implements: polygons-to-lines
+crosswalk:
+  layer: input
+  output: output
+presets:
+  from_type: boundary
+  to_type: line
+differences:
+  - Converts area boundaries to lines; a boundary shared by two areas becomes one line, not one per polygon.
+effects: { modifies_input: false, network: false }
+review: { state: draft }
