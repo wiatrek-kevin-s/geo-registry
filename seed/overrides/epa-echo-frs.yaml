@@ -11,7 +11,7 @@ access:
   url: https://geodata.epa.gov/arcgis/rest/services/OEI/FRS_INTERESTS/MapServer
   auth: none
   notes: FRS facilities map service (listed as public on EPA's FRS data resources page).
-- type: download
+- type: http
   url: https://www.epa.gov/frs/geospatial-data-download-service
   auth: none
   notes: FRS geospatial download (KMZ, CSV), updated monthly.

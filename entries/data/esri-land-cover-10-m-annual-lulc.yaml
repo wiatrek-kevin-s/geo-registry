@@ -14,7 +14,7 @@ access:
   url: https://livingatlas.arcgis.com/landcover/
   auth: none
 - type: s3
-  url: https://io-10m-annual-lulc.s3.us-west-2.amazonaws.com/
+  url: s3://io-10m-annual-lulc/
   auth: none
   notes: Annual 9-class maps 2017-2024, COGs, public; managed by Impact Observatory.
 notes: Also on Planetary Computer and AWS

@@ -7,8 +7,8 @@ access:
 - type: http
   url: https://registry.opendata.aws/usgs-lidar/
   auth: none
-- type: ept
-  url: https://s3-us-west-2.amazonaws.com/usgs-lidar-public/
+- type: s3
+  url: s3://usgs-lidar-public/
   index: https://usgs.entwine.io/boundaries/resources.geojson
   auth: none
   notes: Public EPT bucket (no AWS account needed), one resource per project.

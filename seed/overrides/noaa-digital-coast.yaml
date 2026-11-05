@@ -11,7 +11,7 @@ access:
   url: https://coast.noaa.gov/dataviewer/
   auth: none
 - type: s3
-  url: https://noaa-nos-coastal-lidar-pds.s3.amazonaws.com/
+  url: s3://noaa-nos-coastal-lidar-pds/
   auth: none
   notes: 'Coastal lidar by project id (laz/geoid18/<id>/): LAZ tiles, tile index (shapefile, GeoPackage), STAC collection
     and COPC item collection.'

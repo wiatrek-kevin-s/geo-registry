@@ -6,7 +6,7 @@ access:
   url: https://esa-worldcover.org/
   auth: none
 - type: s3
-  url: https://esa-worldcover.s3.eu-central-1.amazonaws.com/
+  url: s3://esa-worldcover/
   auth: none
   notes: 2020 (v100) and 2021 (v200); public, no AWS account; managed by VITO. Changes between the two years mix
     real change with algorithm changes.

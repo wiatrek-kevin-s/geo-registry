@@ -15,7 +15,7 @@ access:
   url: https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM
   auth: none
 - type: s3
-  url: https://copernicus-dem-30m.s3.amazonaws.com/
+  url: s3://copernicus-dem-30m/
   auth: none
   notes: GLO-30 Cloud Optimized GeoTIFFs, eu-central-1, managed by Sinergise; GLO-90 in copernicus-dem-90m.
 - type: stac

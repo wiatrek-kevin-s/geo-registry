@@ -14,7 +14,7 @@ access:
 - type: http
   url: https://hdsc.nws.noaa.gov/pfds/
   auth: none
-- type: download
+- type: http
   url: https://hdsc.nws.noaa.gov/pub/hdsc/data/
   auth: none
   notes: Zipped ASCII grids by volume (Texas is volume 11, code tx), with XML grid metadata at /pfds/meta/na14_vol{N}_{code}_grid_metadata.xml.

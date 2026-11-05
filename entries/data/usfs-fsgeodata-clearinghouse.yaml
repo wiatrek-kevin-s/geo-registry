@@ -18,7 +18,7 @@ access:
   url: https://apps.fs.usda.gov/arcx/rest/services/EDW
   auth: none
   notes: Nationwide Enterprise Data Warehouse map services; some data is published forest by forest.
-- type: download
+- type: http
   url: https://data.fs.usda.gov/geodata/edw/datasets.php
   auth: none
 status: active

@@ -18,7 +18,7 @@ access:
   url: https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer
   auth: none
   notes: Hydrologic units to 12 digits. No longer updated since USGS moved to 3DHP in 2024; kept for reference.
-- type: download
+- type: http
   url: https://prd-tnm.s3.amazonaws.com/index.html?prefix=StagedProducts%2FHydrography%2FWBD%2F
   auth: none
   notes: Staged WBD downloads by HU2 and national.
