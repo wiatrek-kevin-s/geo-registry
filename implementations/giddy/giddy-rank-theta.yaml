@@ -1,0 +1,13 @@
+id: giddy-rank-theta
+kind: implementation
+name: giddy.rank.Theta
+software: giddy
+call: {interface: python, name: giddy.rank.Theta}
+harvest: {harvester: python-packages, engine_version: 2.3.9}
+parameters:
+  y: {type: any, required: true}
+  regime: {type: any, required: true}
+  permutations: {type: integer, default: 999}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: pykrige-kriging-tools-read-asc-grid
+kind: implementation
+name: pykrige.kriging_tools.read_asc_grid
+software: pykrige
+call: {interface: python, name: pykrige.kriging_tools.read_asc_grid}
+harvest: {harvester: python-packages, engine_version: 1.7.3}
+parameters:
+  filename: {type: any, required: true}
+  footer: {type: integer, default: 0}
+status: active
+review: {state: harvested, source: python-packages}

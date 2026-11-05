@@ -1,0 +1,11 @@
+id: spopt-region-azp-array-from-graph-or-dict
+kind: implementation
+name: spopt.region.azp.array_from_graph_or_dict
+software: spopt
+call: {interface: python, name: spopt.region.azp.array_from_graph_or_dict}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  graph: {type: any, required: true}
+  attr: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

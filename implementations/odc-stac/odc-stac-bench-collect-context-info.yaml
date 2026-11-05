@@ -1,0 +1,11 @@
+id: odc-stac-bench-collect-context-info
+kind: implementation
+name: odc.stac.bench.collect_context_info
+software: odc-stac
+call: {interface: python, name: odc.stac.bench.collect_context_info}
+harvest: {harvester: python-packages, engine_version: 0.5.3}
+parameters:
+  client: {type: Client, required: true}
+  xx: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

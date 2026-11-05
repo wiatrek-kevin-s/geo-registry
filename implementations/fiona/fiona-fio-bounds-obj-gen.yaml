@@ -1,0 +1,11 @@
+id: fiona-fio-bounds-obj-gen
+kind: implementation
+name: fiona.fio.bounds.obj_gen
+software: fiona
+call: {interface: python, name: fiona.fio.bounds.obj_gen}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  lines: {type: any, required: true}
+  object_hook: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

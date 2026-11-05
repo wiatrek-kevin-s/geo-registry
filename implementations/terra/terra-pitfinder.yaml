@@ -1,0 +1,14 @@
+id: terra-pitfinder
+kind: implementation
+name: terra::pitfinder
+software: terra
+call: {interface: r, name: 'terra::pitfinder'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  pits_on_boundary: {type: any, default: 'TRUE'}
+  filename: {type: any, default: '""'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

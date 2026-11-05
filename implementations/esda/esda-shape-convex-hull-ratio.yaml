@@ -1,0 +1,10 @@
+id: esda-shape-convex-hull-ratio
+kind: implementation
+name: esda.shape.convex_hull_ratio
+software: esda
+call: {interface: python, name: esda.shape.convex_hull_ratio}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  collection: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

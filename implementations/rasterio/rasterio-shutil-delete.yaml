@@ -1,0 +1,11 @@
+id: rasterio-shutil-delete
+kind: implementation
+name: rasterio.shutil.delete
+software: rasterio
+call: {interface: python, name: rasterio.shutil.delete}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  path: {type: any, required: true}
+  driver: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

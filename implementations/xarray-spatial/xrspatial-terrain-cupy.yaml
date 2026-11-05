@@ -1,0 +1,10 @@
+id: xrspatial-terrain-cupy
+kind: implementation
+name: xrspatial.terrain.cupy
+software: xarray-spatial
+call: {interface: python, name: xrspatial.terrain.cupy}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,15 @@
+id: momepy-closeness-centrality
+kind: implementation
+name: momepy.closeness_centrality
+software: momepy
+call: {interface: python, name: momepy.closeness_centrality}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  graph: {type: Graph, required: true}
+  name: {type: str, default: closeness}
+  weight: {type: str, default: mm_len}
+  radius: {type: any}
+  distance: {type: any}
+  verbose: {type: bool, default: true}
+status: active
+review: {state: harvested, source: python-packages}

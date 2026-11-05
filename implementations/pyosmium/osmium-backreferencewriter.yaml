@@ -1,0 +1,16 @@
+id: osmium-backreferencewriter
+kind: implementation
+name: osmium.BackReferenceWriter
+software: pyosmium
+call: {interface: python, name: osmium.BackReferenceWriter}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters:
+  outfile: {type: Union, required: true}
+  ref_src: {type: Union, required: true}
+  overwrite: {type: bool, default: false}
+  remove_tags: {type: bool, default: true}
+  relation_depth: {type: int, default: 0}
+  thread_pool: {type: Optional}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

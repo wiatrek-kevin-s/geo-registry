@@ -1,0 +1,12 @@
+id: skgstat-binning-uniform-count-lags
+kind: implementation
+name: skgstat.binning.uniform_count_lags
+software: scikit-gstat
+call: {interface: python, name: skgstat.binning.uniform_count_lags}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  distances: {type: any, required: true}
+  n: {type: any, required: true}
+  maxlag: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

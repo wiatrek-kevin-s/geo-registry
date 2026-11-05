@@ -1,0 +1,10 @@
+id: skgstat-variogram-skgstat-to-gstools
+kind: implementation
+name: skgstat.Variogram.skgstat_to_gstools
+software: scikit-gstat
+call: {interface: python, name: skgstat.Variogram.skgstat_to_gstools}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  variogram: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

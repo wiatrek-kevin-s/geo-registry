@@ -1,0 +1,12 @@
+id: laspy-lib-write-then-read-again
+kind: implementation
+name: laspy.lib.write_then_read_again
+software: laspy
+call: {interface: python, name: laspy.lib.write_then_read_again}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  las: {type: any, required: true}
+  do_compress: {type: boolean, default: false}
+  laz_backend: {type: any, note: 'default (<LazBackend.LazrsParallel: 0>, <LazBackend.Lazrs: 1>)'}
+status: active
+review: {state: harvested, source: python-packages}

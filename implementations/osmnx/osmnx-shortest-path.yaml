@@ -1,0 +1,14 @@
+id: osmnx-shortest-path
+kind: implementation
+name: osmnx.shortest_path
+software: osmnx
+call: {interface: python, name: osmnx.shortest_path}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  G: {type: nx.MultiDiGraph, required: true}
+  orig: {type: 'int | Iterable[int]', required: true}
+  dest: {type: 'int | Iterable[int]', required: true}
+  weight: {type: str, default: length}
+  cpus: {type: int | None, default: 1}
+status: active
+review: {state: harvested, source: python-packages}

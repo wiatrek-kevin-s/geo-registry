@@ -1,0 +1,17 @@
+id: momepy-proportion
+kind: implementation
+name: momepy.proportion
+software: momepy
+call: {interface: python, name: momepy.proportion}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  graph: {type: Graph, required: true}
+  radius: {type: integer, default: 5}
+  three: {type: any}
+  four: {type: any}
+  dead: {type: any}
+  degree: {type: str, default: degree}
+  distance: {type: any}
+  verbose: {type: bool, default: true}
+status: active
+review: {state: harvested, source: python-packages}

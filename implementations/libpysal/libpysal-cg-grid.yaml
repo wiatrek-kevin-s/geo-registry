@@ -1,0 +1,12 @@
+id: libpysal-cg-grid
+kind: implementation
+name: libpysal.cg.Grid
+software: libpysal
+call: {interface: python, name: libpysal.cg.Grid}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  bounds: {type: any, required: true}
+  resolution: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

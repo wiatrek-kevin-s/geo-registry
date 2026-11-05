@@ -1,0 +1,10 @@
+id: libpysal-io-geotable-read-files
+kind: implementation
+name: libpysal.io.geotable.read_files
+software: libpysal
+call: {interface: python, name: libpysal.io.geotable.read_files}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  filepath: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

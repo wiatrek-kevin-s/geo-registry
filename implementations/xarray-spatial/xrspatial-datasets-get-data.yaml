@@ -1,0 +1,10 @@
+id: xrspatial-datasets-get-data
+kind: implementation
+name: xrspatial.datasets.get_data
+software: xarray-spatial
+call: {interface: python, name: xrspatial.datasets.get_data}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  dataset: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

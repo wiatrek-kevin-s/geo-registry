@@ -1,0 +1,10 @@
+id: fiona-schema-fionatimetype
+kind: implementation
+name: fiona.schema.FionaTimeType
+software: fiona
+call: {interface: python, name: fiona.schema.FionaTimeType}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

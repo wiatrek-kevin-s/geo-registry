@@ -1,0 +1,12 @@
+id: gstools-tools-ang2dir
+kind: implementation
+name: gstools.tools.ang2dir
+software: gstools
+call: {interface: python, name: gstools.tools.ang2dir}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  angles: {type: any, required: true}
+  dtype: {type: any, note: default numpy.float64}
+  dim: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

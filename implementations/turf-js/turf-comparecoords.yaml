@@ -1,0 +1,12 @@
+id: turf-comparecoords
+kind: implementation
+name: turf.compareCoords
+software: turf-js
+call: {interface: js, name: turf.compareCoords}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  pair1: {type: 'number[]', required: true}
+  pair2: {type: 'number[]', required: true}
+notes: From @turf/boolean-contains.
+status: active
+review: {state: harvested, source: turf}

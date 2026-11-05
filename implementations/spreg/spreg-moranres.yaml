@@ -1,0 +1,13 @@
+id: spreg-moranres
+kind: implementation
+name: spreg.MoranRes
+software: spreg
+call: {interface: python, name: spreg.MoranRes}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  ols: {type: any, required: true}
+  w: {type: any, required: true}
+  z: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

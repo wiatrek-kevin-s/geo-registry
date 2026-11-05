@@ -1,0 +1,37 @@
+id: spreg-tsls-regimes
+kind: implementation
+name: spreg.TSLS_Regimes
+software: spreg
+call: {interface: python, name: spreg.TSLS_Regimes}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  y: {type: any, required: true}
+  x: {type: any, required: true}
+  yend: {type: any, required: true}
+  q: {type: any, required: true}
+  regimes: {type: any, required: true}
+  w: {type: any}
+  robust: {type: any}
+  gwk: {type: any}
+  slx_lags: {type: integer, default: 0}
+  slx_vars: {type: string, default: all}
+  sig2n_k: {type: boolean, default: true}
+  spat_diag: {type: boolean, default: false}
+  vm: {type: boolean, default: false}
+  constant_regi: {type: string, default: many}
+  cols2regi: {type: string, default: all}
+  regime_err_sep: {type: boolean, default: false}
+  name_y: {type: any}
+  name_x: {type: any}
+  cores: {type: boolean, default: false}
+  name_yend: {type: any}
+  name_q: {type: any}
+  name_regimes: {type: any}
+  name_w: {type: any}
+  name_gwk: {type: any}
+  name_ds: {type: any}
+  summ: {type: boolean, default: true}
+  latex: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

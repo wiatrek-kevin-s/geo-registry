@@ -1,0 +1,14 @@
+id: terra-not-na
+kind: implementation
+name: terra::not.na
+software: terra
+call: {interface: r, name: 'terra::not.na'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  falseNA: {type: any, default: 'FALSE'}
+  filename: {type: any, default: '""'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

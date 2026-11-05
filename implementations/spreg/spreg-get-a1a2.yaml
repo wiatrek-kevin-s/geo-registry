@@ -1,0 +1,17 @@
+id: spreg-get-a1a2
+kind: implementation
+name: spreg.get_a1a2
+software: spreg
+call: {interface: python, name: spreg.get_a1a2}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  w: {type: any, required: true}
+  wA1: {type: any, required: true}
+  reg: {type: any, required: true}
+  lambdapar: {type: any, required: true}
+  P: {type: any, required: true}
+  zs: {type: any, required: true}
+  inv_method: {type: any, required: true}
+  filt: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

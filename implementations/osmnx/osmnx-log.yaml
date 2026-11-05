@@ -1,0 +1,13 @@
+id: osmnx-log
+kind: implementation
+name: osmnx.log
+software: osmnx
+call: {interface: python, name: osmnx.log}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  message: {type: str, required: true}
+  level: {type: int | None}
+  name: {type: str | None}
+  filename: {type: str | None}
+status: active
+review: {state: harvested, source: python-packages}

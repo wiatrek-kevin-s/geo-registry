@@ -1,0 +1,16 @@
+id: xrspatial-crop
+kind: implementation
+name: xrspatial.crop
+software: xarray-spatial
+call: {interface: python, name: xrspatial.crop}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  zones: {type: any, required: true}
+  values: {type: xr.DataArray, required: true}
+  zone_ids: {type: 'Optional[Union[list, tuple]]'}
+  name: {type: str, default: crop}
+  column: {type: 'Optional[str]'}
+  rasterize_kw: {type: 'Optional[dict]'}
+  zones_ids: {type: 'Optional[Union[list, tuple]]'}
+status: active
+review: {state: harvested, source: python-packages}

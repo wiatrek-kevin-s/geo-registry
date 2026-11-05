@@ -1,0 +1,16 @@
+id: odc-stac-model-auxbandmetadata
+kind: implementation
+name: odc.stac.model.AuxBandMetadata
+software: odc-stac
+call: {interface: python, name: odc.stac.model.AuxBandMetadata}
+harvest: {harvester: python-packages, engine_version: 0.5.3}
+parameters:
+  data_type: {type: str | None}
+  nodata: {type: float | None}
+  units: {type: str, default: '1'}
+  dims: {type: 'tuple[str, ...]', note: default ()}
+  driver_data: {type: Any}
+  attrs: {type: 'dict[str, Any]', note: default <factory>}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

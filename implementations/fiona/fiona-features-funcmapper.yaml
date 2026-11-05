@@ -1,0 +1,11 @@
+id: fiona-features-funcmapper
+kind: implementation
+name: fiona.features.FuncMapper
+software: fiona
+call: {interface: python, name: fiona.features.FuncMapper}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  dict: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

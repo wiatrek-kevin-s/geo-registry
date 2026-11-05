@@ -1,0 +1,10 @@
+id: rioxarray-raster-dataset-rasterdataset-interpolate-na
+kind: implementation
+name: RasterDataset.interpolate_na
+software: rioxarray
+call: {interface: python, name: rioxarray.raster_dataset.RasterDataset.interpolate_na}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  method: {type: Literal, default: nearest}
+status: active
+review: {state: harvested, source: python-packages}

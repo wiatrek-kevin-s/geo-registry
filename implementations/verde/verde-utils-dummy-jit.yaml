@@ -1,0 +1,9 @@
+id: verde-utils-dummy-jit
+kind: implementation
+name: verde.utils.dummy_jit
+software: verde
+call: {interface: python, name: verde.utils.dummy_jit}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

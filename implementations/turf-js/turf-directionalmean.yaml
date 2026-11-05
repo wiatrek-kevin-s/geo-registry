@@ -1,0 +1,14 @@
+id: turf-directionalmean
+kind: implementation
+name: turf.directionalMean
+software: turf-js
+call: {interface: js, name: turf.directionalMean}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  lines: {type: FeatureCollection<LineString>, required: true}
+  options: {type: '{ planar?: boolean; segment?: boolean; }'}
+  options.planar: {type: boolean, note: field of options}
+  options.segment: {type: boolean, note: field of options}
+notes: From @turf/directional-mean.
+status: active
+review: {state: harvested, source: turf}

@@ -1,0 +1,14 @@
+id: gstools-field-generator-fourier
+kind: implementation
+name: gstools.field.generator.Fourier
+software: gstools
+call: {interface: python, name: gstools.field.generator.Fourier}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  model: {type: any, required: true}
+  period: {type: any, required: true}
+  mode_no: {type: integer, default: 32}
+  seed: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

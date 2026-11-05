@@ -1,0 +1,17 @@
+id: rasterio-features-geometry-window
+kind: implementation
+name: rasterio.features.geometry_window
+software: rasterio
+call: {interface: python, name: rasterio.features.geometry_window}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  dataset: {type: any, required: true}
+  shapes: {type: any, required: true}
+  pad_x: {type: integer, default: 0}
+  pad_y: {type: integer, default: 0}
+  north_up: {type: any}
+  rotated: {type: any}
+  pixel_precision: {type: any}
+  boundless: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,15 @@
+id: momepy-mean-node-degree
+kind: implementation
+name: momepy.mean_node_degree
+software: momepy
+call: {interface: python, name: momepy.mean_node_degree}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  graph: {type: Graph, required: true}
+  radius: {type: integer, default: 5}
+  name: {type: str, default: mean_nd}
+  degree: {type: str, default: degree}
+  distance: {type: any}
+  verbose: {type: bool, default: true}
+status: active
+review: {state: harvested, source: python-packages}

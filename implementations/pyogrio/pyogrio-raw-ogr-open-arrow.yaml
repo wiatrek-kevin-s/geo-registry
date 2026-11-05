@@ -1,0 +1,28 @@
+id: pyogrio-raw-ogr-open-arrow
+kind: implementation
+name: pyogrio.raw.ogr_open_arrow
+software: pyogrio
+call: {interface: python, name: pyogrio.raw.ogr_open_arrow}
+harvest: {harvester: python-packages, engine_version: 0.13.0}
+parameters:
+  path_or_buffer: {type: any, required: true}
+  dataset_kwargs: {type: any, required: true}
+  layer: {type: any}
+  encoding: {type: any}
+  read_geometry: {type: boolean, default: true}
+  force_2d: {type: boolean, default: false}
+  columns: {type: any}
+  skip_features: {type: integer, default: 0}
+  max_features: {type: integer, default: 0}
+  where: {type: any}
+  bbox: {type: any}
+  mask: {type: any}
+  fids: {type: any}
+  sql: {type: any}
+  sql_dialect: {type: any}
+  return_fids: {type: boolean, default: false}
+  batch_size: {type: integer, default: 0}
+  use_pyarrow: {type: boolean, default: false}
+  datetime_as_string: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

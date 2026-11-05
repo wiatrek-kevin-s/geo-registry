@@ -1,0 +1,17 @@
+id: xrspatial-disaggregate
+kind: implementation
+name: xrspatial.disaggregate
+software: xarray-spatial
+call: {interface: python, name: xrspatial.disaggregate}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  zones: {type: xr.DataArray, required: true}
+  values: {type: 'Union[dict, pd.Series]', required: true}
+  weight: {type: xr.DataArray, required: true}
+  method: {type: str, default: weighted}
+  nodata_zone: {type: 'Union[int, None]'}
+  class_breaks: {type: 'Union[tuple, None]'}
+  density_caps: {type: 'Union[list, None]'}
+  name: {type: str, default: disaggregate}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,13 @@
+id: libpysal-cg-ops-tabular-spatial-join
+kind: implementation
+name: libpysal.cg.ops.tabular.spatial_join
+software: libpysal
+call: {interface: python, name: libpysal.cg.ops.tabular.spatial_join}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  df1: {type: any, required: true}
+  df2: {type: any, required: true}
+  left_geom_col: {type: string, default: geometry}
+  right_geom_col: {type: string, default: geometry}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,14 @@
+id: osmnx-distance-great-circle
+kind: implementation
+name: osmnx.distance.great_circle
+software: osmnx
+call: {interface: python, name: osmnx.distance.great_circle}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  lat1: {type: 'float | npt.NDArray[np.float64]', required: true}
+  lon1: {type: 'float | npt.NDArray[np.float64]', required: true}
+  lat2: {type: 'float | npt.NDArray[np.float64]', required: true}
+  lon2: {type: 'float | npt.NDArray[np.float64]', required: true}
+  earth_radius: {type: float, default: 6371009}
+status: active
+review: {state: harvested, source: python-packages}

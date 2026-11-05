@@ -1,0 +1,14 @@
+id: turf-polygonsmooth
+kind: implementation
+name: turf.polygonSmooth
+software: turf-js
+call: {interface: js, name: turf.polygonSmooth}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  inputPolys: {type: FeatureCollection<Polygon | MultiPolygon> | Feature<Polygon | MultiPolygon> | Polygon | MultiPolygon,
+    required: true}
+  options: {type: '{ iterations?: number; }'}
+  options.iterations: {type: number, note: field of options}
+notes: From @turf/polygon-smooth.
+status: active
+review: {state: harvested, source: turf}

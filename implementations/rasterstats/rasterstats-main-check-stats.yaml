@@ -1,0 +1,11 @@
+id: rasterstats-main-check-stats
+kind: implementation
+name: rasterstats.main.check_stats
+software: rasterstats
+call: {interface: python, name: rasterstats.main.check_stats}
+harvest: {harvester: python-packages, engine_version: 0.21.0}
+parameters:
+  stats: {type: any, required: true}
+  categorical: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

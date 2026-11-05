@@ -1,0 +1,10 @@
+id: geopy-adapters-get-retry-after
+kind: implementation
+name: geopy.adapters.get_retry_after
+software: geopy
+call: {interface: python, name: geopy.adapters.get_retry_after}
+harvest: {harvester: python-packages, engine_version: 2.5.0}
+parameters:
+  headers: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

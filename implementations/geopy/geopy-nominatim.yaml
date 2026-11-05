@@ -1,0 +1,17 @@
+id: geopy-nominatim
+kind: implementation
+name: geopy.Nominatim
+software: geopy
+call: {interface: python, name: geopy.Nominatim}
+harvest: {harvester: python-packages, engine_version: 2.5.0}
+parameters:
+  timeout: {type: any, note: default DEFAULT_SENTINEL}
+  proxies: {type: any, note: default DEFAULT_SENTINEL}
+  domain: {type: string, default: nominatim.openstreetmap.org}
+  scheme: {type: any}
+  user_agent: {type: any}
+  ssl_context: {type: any, note: default DEFAULT_SENTINEL}
+  adapter_factory: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

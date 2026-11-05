@@ -1,0 +1,14 @@
+id: xrspatial-northness
+kind: implementation
+name: xrspatial.northness
+software: xarray-spatial
+call: {interface: python, name: xrspatial.northness}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: xr.DataArray, required: true}
+  name: {type: 'Optional[str]', default: northness}
+  method: {type: str, default: planar}
+  z_unit: {type: str, default: meter}
+  boundary: {type: str, default: nan}
+status: active
+review: {state: harvested, source: python-packages}

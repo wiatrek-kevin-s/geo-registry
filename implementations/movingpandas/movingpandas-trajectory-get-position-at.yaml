@@ -1,0 +1,11 @@
+id: movingpandas-trajectory-get-position-at
+kind: implementation
+name: Trajectory.get_position_at
+software: movingpandas
+call: {interface: python, name: movingpandas.Trajectory.get_position_at}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  t: {type: any, required: true}
+  method: {type: string, default: interpolated}
+status: active
+review: {state: harvested, source: python-packages}

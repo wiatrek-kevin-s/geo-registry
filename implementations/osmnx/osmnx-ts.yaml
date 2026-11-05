@@ -1,0 +1,11 @@
+id: osmnx-ts
+kind: implementation
+name: osmnx.ts
+software: osmnx
+call: {interface: python, name: osmnx.ts}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  style: {type: str, default: datetime}
+  template: {type: str | None}
+status: active
+review: {state: harvested, source: python-packages}

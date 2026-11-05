@@ -1,0 +1,15 @@
+id: gstools-tools-misc-eval-func
+kind: implementation
+name: gstools.tools.misc.eval_func
+software: gstools
+call: {interface: python, name: gstools.tools.misc.eval_func}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  func_val: {type: any, required: true}
+  pos: {type: any, required: true}
+  dim: {type: any, required: true}
+  mesh_type: {type: string, default: unstructured}
+  value_type: {type: string, default: scalar}
+  broadcast: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

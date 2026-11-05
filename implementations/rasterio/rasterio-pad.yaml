@@ -1,0 +1,13 @@
+id: rasterio-pad
+kind: implementation
+name: rasterio.pad
+software: rasterio
+call: {interface: python, name: rasterio.pad}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  array: {type: any, required: true}
+  transform: {type: any, required: true}
+  pad_width: {type: any, required: true}
+  mode: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

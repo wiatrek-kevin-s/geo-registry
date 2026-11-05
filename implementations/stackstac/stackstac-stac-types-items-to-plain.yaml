@@ -1,0 +1,10 @@
+id: stackstac-stac-types-items-to-plain
+kind: implementation
+name: stackstac.stac_types.items_to_plain
+software: stackstac
+call: {interface: python, name: stackstac.stac_types.items_to_plain}
+harvest: {harvester: python-packages, engine_version: 0.5.1}
+parameters:
+  items: {type: 'Union[ItemCollectionIsh, ItemIsh, Sequence[PystacItem], Sequence[SatstacItem]]', required: true}
+status: active
+review: {state: harvested, source: python-packages}

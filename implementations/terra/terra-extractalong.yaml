@@ -1,0 +1,16 @@
+id: terra-extractalong
+kind: implementation
+name: terra::extractAlong
+software: terra
+call: {interface: r, name: 'terra::extractAlong'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  ID: {type: any, default: 'TRUE'}
+  cells: {type: any, default: 'FALSE'}
+  xy: {type: any, default: 'FALSE'}
+  online: {type: any, default: 'FALSE'}
+  bilinear: {type: any, default: 'TRUE'}
+status: active
+review: {state: harvested, source: r-packages}

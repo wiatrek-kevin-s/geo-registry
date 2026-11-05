@@ -1,0 +1,12 @@
+id: fiona-env-gdalversion
+kind: implementation
+name: fiona.env.GDALVersion
+software: fiona
+call: {interface: python, name: fiona.env.GDALVersion}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  major: {type: integer, default: 0}
+  minor: {type: integer, default: 0}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

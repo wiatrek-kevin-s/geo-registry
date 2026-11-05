@@ -1,0 +1,13 @@
+id: libpysal-cg-brute-knn
+kind: implementation
+name: libpysal.cg.brute_knn
+software: libpysal
+call: {interface: python, name: libpysal.cg.brute_knn}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  pts: {type: any, required: true}
+  k: {type: any, required: true}
+  mode: {type: string, default: arc}
+  radius: {type: number, default: 6371.0}
+status: active
+review: {state: harvested, source: python-packages}

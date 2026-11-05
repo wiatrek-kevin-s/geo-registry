@@ -1,0 +1,14 @@
+id: giddy-rank-tau-local-neighbor
+kind: implementation
+name: giddy.rank.Tau_Local_Neighbor
+software: giddy
+call: {interface: python, name: giddy.rank.Tau_Local_Neighbor}
+harvest: {harvester: python-packages, engine_version: 2.3.9}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  w: {type: any, required: true}
+  permutations: {type: integer, default: 0}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

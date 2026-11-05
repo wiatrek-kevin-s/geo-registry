@@ -1,0 +1,15 @@
+id: turf-centermedian
+kind: implementation
+name: turf.centerMedian
+software: turf-js
+call: {interface: js, name: turf.centerMedian}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  features: {type: FeatureCollection<any>, required: true}
+  options: {type: '{ weight?: string; tolerance?: number; counter?: number; }'}
+  options.weight: {type: string, note: field of options}
+  options.tolerance: {type: number, note: field of options}
+  options.counter: {type: number, note: field of options}
+notes: From @turf/center-median.
+status: active
+review: {state: harvested, source: turf}

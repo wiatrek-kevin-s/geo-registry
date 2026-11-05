@@ -1,0 +1,11 @@
+id: spreg-spfill-diagonal
+kind: implementation
+name: spreg.spfill_diagonal
+software: spreg
+call: {interface: python, name: spreg.spfill_diagonal}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  a: {type: any, required: true}
+  val: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: turf-getgeom
+kind: implementation
+name: turf.getGeom
+software: turf-js
+call: {interface: js, name: turf.getGeom}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  geojson: {type: Feature<G> | G, required: true}
+notes: From @turf/invariant.
+status: active
+review: {state: harvested, source: turf}

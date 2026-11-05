@@ -1,0 +1,15 @@
+id: momepy-faceartifacts
+kind: implementation
+name: momepy.FaceArtifacts
+software: momepy
+call: {interface: python, name: momepy.FaceArtifacts}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  gdf: {type: any, required: true}
+  index: {type: string, default: circular_compactness}
+  height_mins: {type: number, note: default -inf}
+  height_maxs: {type: number, default: 0.008}
+  prominence: {type: number, default: 0.00075}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

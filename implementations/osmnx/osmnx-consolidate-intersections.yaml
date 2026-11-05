@@ -1,0 +1,16 @@
+id: osmnx-consolidate-intersections
+kind: implementation
+name: osmnx.consolidate_intersections
+software: osmnx
+call: {interface: python, name: osmnx.consolidate_intersections}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  G: {type: nx.MultiDiGraph, required: true}
+  tolerance: {type: 'float | dict[int, float]', default: 10}
+  rebuild_graph: {type: bool, default: true}
+  max_length: {type: float | None}
+  dead_ends: {type: bool, default: false}
+  reconnect_edges: {type: bool, default: true}
+  node_attr_aggs: {type: 'dict[str, Any] | None'}
+status: active
+review: {state: harvested, source: python-packages}

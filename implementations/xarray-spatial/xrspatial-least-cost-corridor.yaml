@@ -1,0 +1,21 @@
+id: xrspatial-least-cost-corridor
+kind: implementation
+name: xrspatial.least_cost_corridor
+software: xarray-spatial
+call: {interface: python, name: xrspatial.least_cost_corridor}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  friction: {type: xr.DataArray, required: true}
+  source_a: {type: xr.DataArray | None}
+  source_b: {type: xr.DataArray | None}
+  sources: {type: 'list[xr.DataArray] | None'}
+  pairwise: {type: bool, default: false}
+  threshold: {type: float | None}
+  relative: {type: bool, default: false}
+  precomputed: {type: bool, default: false}
+  x: {type: str, default: x}
+  y: {type: str, default: y}
+  connectivity: {type: int, default: 8}
+  max_cost: {type: float, note: default inf}
+status: active
+review: {state: harvested, source: python-packages}

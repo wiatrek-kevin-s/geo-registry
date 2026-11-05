@@ -1,0 +1,11 @@
+id: osmium-osm-taglist
+kind: implementation
+name: osmium.osm.TagList
+software: pyosmium
+call: {interface: python, name: osmium.osm.TagList}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters:
+  parent: {type: cosm.TagContainerProtocol, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

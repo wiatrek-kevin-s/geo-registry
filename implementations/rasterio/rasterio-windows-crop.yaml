@@ -1,0 +1,12 @@
+id: rasterio-windows-crop
+kind: implementation
+name: rasterio.windows.crop
+software: rasterio
+call: {interface: python, name: rasterio.windows.crop}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  window: {type: any, required: true}
+  height: {type: any, required: true}
+  width: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

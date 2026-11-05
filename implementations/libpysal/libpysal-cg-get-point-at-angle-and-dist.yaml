@@ -1,0 +1,12 @@
+id: libpysal-cg-get-point-at-angle-and-dist
+kind: implementation
+name: libpysal.cg.get_point_at_angle_and_dist
+software: libpysal
+call: {interface: python, name: libpysal.cg.get_point_at_angle_and_dist}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  ray: {type: any, required: true}
+  angle: {type: any, required: true}
+  dist: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

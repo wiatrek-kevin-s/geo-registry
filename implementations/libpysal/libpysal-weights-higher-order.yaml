@@ -1,0 +1,11 @@
+id: libpysal-weights-higher-order
+kind: implementation
+name: libpysal.weights.higher_order
+software: libpysal
+call: {interface: python, name: libpysal.weights.higher_order}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  w: {type: any, required: true}
+  k: {type: integer, default: 2}
+status: active
+review: {state: harvested, source: python-packages}

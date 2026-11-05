@@ -1,0 +1,16 @@
+id: osmnx-plot-graph-route
+kind: implementation
+name: osmnx.plot_graph_route
+software: osmnx
+call: {interface: python, name: osmnx.plot_graph_route}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  G: {type: nx.MultiDiGraph, required: true}
+  route: {type: 'list[int]', required: true}
+  route_color: {type: str, default: r}
+  route_linewidth: {type: float, default: 4}
+  route_alpha: {type: float, default: 0.5}
+  orig_dest_size: {type: float, default: 100}
+  ax: {type: Axes | None}
+status: active
+review: {state: harvested, source: python-packages}

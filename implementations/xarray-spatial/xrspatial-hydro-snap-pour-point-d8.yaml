@@ -1,0 +1,13 @@
+id: xrspatial-hydro-snap-pour-point-d8
+kind: implementation
+name: xrspatial.hydro.snap_pour_point_d8
+software: xarray-spatial
+call: {interface: python, name: xrspatial.hydro.snap_pour_point_d8}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  flow_accum: {type: xr.DataArray, required: true}
+  pour_points: {type: xr.DataArray, required: true}
+  search_radius: {type: int, default: 5}
+  name: {type: str, default: snapped_pour_points}
+status: active
+review: {state: harvested, source: python-packages}

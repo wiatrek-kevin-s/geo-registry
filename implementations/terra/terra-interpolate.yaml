@@ -1,0 +1,24 @@
+id: terra-interpolate
+kind: implementation
+name: terra::interpolate
+software: terra
+call: {interface: r, name: 'terra::interpolate'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  object: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  model: {type: any, required: true}
+  fun: {type: any, default: predict}
+  xyNames: {type: any, default: 'c("x", "y")'}
+  factors: {type: any, default: 'NULL'}
+  const: {type: any, default: 'NULL'}
+  index: {type: any, default: 'NULL'}
+  cores: {type: any, default: '1'}
+  cpkgs: {type: any, default: 'NULL'}
+  na.rm: {type: any, default: 'FALSE'}
+  filename: {type: any, default: '""'}
+  overwrite: {type: any, default: 'FALSE'}
+  wopt: {type: any, default: list()}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

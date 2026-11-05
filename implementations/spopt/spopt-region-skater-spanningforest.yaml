@@ -1,0 +1,15 @@
+id: spopt-region-skater-spanningforest
+kind: implementation
+name: spopt.region.skater.SpanningForest
+software: spopt
+call: {interface: python, name: spopt.region.skater.SpanningForest}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  dissimilarity: {type: any, note: default sklearn.metrics.pairwise.manhattan_distances}
+  affinity: {type: any}
+  reduction: {type: any, note: default numpy.sum}
+  center: {type: any, note: default numpy.mean}
+  verbose: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: terra-gdal
+kind: implementation
+name: terra::gdal
+software: terra
+call: {interface: r, name: 'terra::gdal'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  warn: {type: any, default: NA}
+  drivers: {type: any, default: 'FALSE'}
+  '...': {type: dots, note: further arguments passed on}
+status: active
+review: {state: harvested, source: r-packages}

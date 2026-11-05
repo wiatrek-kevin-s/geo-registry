@@ -1,0 +1,27 @@
+id: xrspatial-generate-terrain
+kind: implementation
+name: xrspatial.generate_terrain
+software: xarray-spatial
+call: {interface: python, name: xrspatial.generate_terrain}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: xr.DataArray, required: true}
+  x_range: {type: tuple, note: 'default (0, 500)'}
+  y_range: {type: tuple, note: 'default (0, 500)'}
+  seed: {type: int, default: 10}
+  zfactor: {type: int, default: 4000}
+  full_extent: {type: 'Optional[Union[Tuple, List]]'}
+  name: {type: str, default: terrain}
+  octaves: {type: 'Optional[int]', default: 16}
+  lacunarity: {type: float, default: 2.0}
+  persistence: {type: float, default: 0.5}
+  noise_mode: {type: str, default: fbm}
+  warp_strength: {type: float, default: 0.0}
+  warp_octaves: {type: int, default: 4}
+  worley_blend: {type: float, default: 0.0}
+  worley_seed: {type: 'Optional[int]'}
+  erode: {type: bool, default: false}
+  erosion_iterations: {type: int, default: 50000}
+  erosion_params: {type: 'Optional[Dict]'}
+status: active
+review: {state: harvested, source: python-packages}

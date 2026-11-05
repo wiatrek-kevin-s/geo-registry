@@ -1,0 +1,11 @@
+id: movingpandas-trajectorycollection-get-segments-between
+kind: implementation
+name: TrajectoryCollection.get_segments_between
+software: movingpandas
+call: {interface: python, name: movingpandas.TrajectoryCollection.get_segments_between}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  t1: {type: any, required: true}
+  t2: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,17 @@
+id: xrspatial-evi
+kind: implementation
+name: xrspatial.evi
+software: xarray-spatial
+call: {interface: python, name: xrspatial.evi}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  nir_agg: {type: xr.DataArray, required: true}
+  red_agg: {type: xr.DataArray, required: true}
+  blue_agg: {type: xr.DataArray, required: true}
+  c1: {type: number, default: 6.0}
+  c2: {type: number, default: 7.5}
+  soil_factor: {type: number, default: 1.0}
+  gain: {type: number, default: 2.5}
+  name: {type: string, default: evi}
+status: active
+review: {state: harvested, source: python-packages}

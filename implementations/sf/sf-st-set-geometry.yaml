@@ -1,0 +1,11 @@
+id: sf-st-set-geometry
+kind: implementation
+name: sf::st_set_geometry
+software: sf
+call: {interface: r, name: 'sf::st_set_geometry'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  x: {type: any, required: true}
+  value: {type: any, required: true}
+status: active
+review: {state: harvested, source: r-packages}

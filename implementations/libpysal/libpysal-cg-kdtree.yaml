@@ -1,0 +1,13 @@
+id: libpysal-cg-kdtree
+kind: implementation
+name: libpysal.cg.KDTree
+software: libpysal
+call: {interface: python, name: libpysal.cg.KDTree}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  data: {type: any, required: true}
+  leafsize: {type: integer, default: 10}
+  distance_metric: {type: string, default: Euclidean}
+  radius: {type: number, default: 6371.0}
+status: active
+review: {state: harvested, source: python-packages}

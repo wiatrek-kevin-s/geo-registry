@@ -1,0 +1,10 @@
+id: laspy-point-dims-num-bit-set
+kind: implementation
+name: laspy.point.dims.num_bit_set
+software: laspy
+call: {interface: python, name: laspy.point.dims.num_bit_set}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  n: {type: int, required: true}
+status: active
+review: {state: harvested, source: python-packages}

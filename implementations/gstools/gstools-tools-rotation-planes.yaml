@@ -1,0 +1,10 @@
+id: gstools-tools-rotation-planes
+kind: implementation
+name: gstools.tools.rotation_planes
+software: gstools
+call: {interface: python, name: gstools.tools.rotation_planes}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  dim: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

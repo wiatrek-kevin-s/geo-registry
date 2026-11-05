@@ -1,0 +1,12 @@
+id: libpysal-cg-shapely-ext-equals-exact
+kind: implementation
+name: libpysal.cg.shapely_ext.equals_exact
+software: libpysal
+call: {interface: python, name: libpysal.cg.shapely_ext.equals_exact}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  shape: {type: any, required: true}
+  other: {type: any, required: true}
+  tolerance: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

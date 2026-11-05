@@ -1,0 +1,18 @@
+id: terra-classify
+kind: implementation
+name: terra::classify
+software: terra
+call: {interface: r, name: 'terra::classify'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  rcl: {type: any, required: true}
+  include.lowest: {type: any, default: 'FALSE'}
+  right: {type: any, default: 'TRUE'}
+  others: {type: any, default: 'NULL'}
+  brackets: {type: any, default: 'TRUE'}
+  filename: {type: any, default: '""'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

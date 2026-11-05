@@ -1,0 +1,12 @@
+id: topojson-utils-indentitems
+kind: implementation
+name: topojson.utils.indentitems
+software: topojson
+call: {interface: python, name: topojson.utils.indentitems}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  items: {type: any, required: true}
+  indent: {type: any, required: true}
+  level: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

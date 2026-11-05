@@ -1,0 +1,12 @@
+id: laspy-packedpointrecord
+kind: implementation
+name: laspy.PackedPointRecord
+software: laspy
+call: {interface: python, name: laspy.PackedPointRecord}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  data: {type: ndarray, required: true}
+  point_format: {type: PointFormat, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

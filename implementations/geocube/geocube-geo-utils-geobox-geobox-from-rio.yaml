@@ -1,0 +1,10 @@
+id: geocube-geo-utils-geobox-geobox-from-rio
+kind: implementation
+name: geocube.geo_utils.geobox.geobox_from_rio
+software: geocube
+call: {interface: python, name: geocube.geo_utils.geobox.geobox_from_rio}
+harvest: {harvester: python-packages, engine_version: 0.7.1}
+parameters:
+  xds: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

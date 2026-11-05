@@ -1,0 +1,12 @@
+id: libpysal-graph-graphsummary
+kind: implementation
+name: libpysal.graph.GraphSummary
+software: libpysal
+call: {interface: python, name: libpysal.graph.GraphSummary}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  graph: {type: any, required: true}
+  asymmetries: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,9 @@
+id: terra-map-extent
+kind: implementation
+name: terra::map_extent
+software: terra
+call: {interface: r, name: 'terra::map_extent'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters: {}
+status: active
+review: {state: harvested, source: r-packages}

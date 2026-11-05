@@ -1,0 +1,10 @@
+id: h3-api-numpy-int-is-valid-vertex
+kind: implementation
+name: h3.api.numpy_int.is_valid_vertex
+software: h3-py
+call: {interface: python, name: h3.api.numpy_int.is_valid_vertex}
+harvest: {harvester: python-packages, engine_version: 4.5.0}
+parameters:
+  v: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

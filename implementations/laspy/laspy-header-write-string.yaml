@@ -1,0 +1,14 @@
+id: laspy-header-write-string
+kind: implementation
+name: laspy.header.write_string
+software: laspy
+call: {interface: python, name: laspy.header.write_string}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  stream: {type: BinaryIO, required: true}
+  string: {type: Union, required: true}
+  max_length: {type: int, required: true}
+  encoding: {type: str, default: ascii}
+  encoding_errors: {type: str, default: strict}
+status: active
+review: {state: harvested, source: python-packages}

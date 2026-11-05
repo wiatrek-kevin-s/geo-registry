@@ -1,0 +1,14 @@
+id: turf-tag
+kind: implementation
+name: turf.tag
+software: turf-js
+call: {interface: js, name: turf.tag}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  points: {type: FeatureCollection<Point>, required: true}
+  polygons: {type: FeatureCollection<Polygon | MultiPolygon>, required: true}
+  field: {type: string, required: true}
+  outField: {type: string, required: true}
+notes: From @turf/tag.
+status: active
+review: {state: harvested, source: turf}

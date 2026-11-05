@@ -1,0 +1,12 @@
+id: laspy-vlrs-geotiff-parse-geo-tiff
+kind: implementation
+name: laspy.vlrs.geotiff.parse_geo_tiff
+software: laspy
+call: {interface: python, name: laspy.vlrs.geotiff.parse_geo_tiff}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  key_dir_vlr: {type: GeoKeyDirectoryVlr, required: true}
+  double_vlr: {type: Optional, required: true}
+  ascii_vlr: {type: Optional, required: true}
+status: active
+review: {state: harvested, source: python-packages}

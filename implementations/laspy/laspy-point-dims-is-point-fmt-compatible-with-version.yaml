@@ -1,0 +1,11 @@
+id: laspy-point-dims-is-point-fmt-compatible-with-version
+kind: implementation
+name: laspy.point.dims.is_point_fmt_compatible_with_version
+software: laspy
+call: {interface: python, name: laspy.point.dims.is_point_fmt_compatible_with_version}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  point_format_id: {type: int, required: true}
+  file_version: {type: str, required: true}
+status: active
+review: {state: harvested, source: python-packages}

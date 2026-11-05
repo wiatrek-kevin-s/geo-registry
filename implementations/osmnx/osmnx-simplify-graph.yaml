@@ -1,0 +1,15 @@
+id: osmnx-simplify-graph
+kind: implementation
+name: osmnx.simplify_graph
+software: osmnx
+call: {interface: python, name: osmnx.simplify_graph}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  G: {type: nx.MultiDiGraph, required: true}
+  node_attrs_include: {type: 'Iterable[str] | None'}
+  edge_attrs_differ: {type: 'Iterable[str] | None'}
+  remove_rings: {type: bool, default: true}
+  track_merged: {type: bool, default: false}
+  edge_attr_aggs: {type: 'dict[str, Any] | None'}
+status: active
+review: {state: harvested, source: python-packages}

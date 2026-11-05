@@ -1,0 +1,12 @@
+id: libpysal-cg-polygon
+kind: implementation
+name: libpysal.cg.Polygon
+software: libpysal
+call: {interface: python, name: libpysal.cg.Polygon}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  vertices: {type: any, required: true}
+  holes: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

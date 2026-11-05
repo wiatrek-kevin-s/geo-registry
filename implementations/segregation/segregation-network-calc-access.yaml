@@ -1,0 +1,16 @@
+id: segregation-network-calc-access
+kind: implementation
+name: segregation.network.calc_access
+software: segregation
+call: {interface: python, name: segregation.network.calc_access}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  geodataframe: {type: any, required: true}
+  network: {type: any, required: true}
+  distance: {type: integer, default: 2000}
+  decay: {type: string, default: linear}
+  variables: {type: any}
+  precompute: {type: boolean, default: true}
+  return_node_data: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: topojson-ops-strtree-query-index
+kind: implementation
+name: topojson.ops.strtree_query_index
+software: topojson
+call: {interface: python, name: topojson.ops.strtree_query_index}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  tree: {type: any, required: true}
+  arc: {type: any, required: true}
+  geoms: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

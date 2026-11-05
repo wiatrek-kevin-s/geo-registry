@@ -1,0 +1,17 @@
+id: turf-shortestpath
+kind: implementation
+name: turf.shortestPath
+software: turf-js
+call: {interface: js, name: turf.shortestPath}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  start: {type: Coord, required: true}
+  end: {type: Coord, required: true}
+  options: {type: '{ obstacles?: Polygon | Feature<Polygon> | FeatureCollection<Polygon>; units?: Units; resolution?: number;
+      }'}
+  options.obstacles: {type: Polygon | Feature<Polygon> | FeatureCollection<Polygon>, note: field of options}
+  options.units: {type: Units, note: field of options}
+  options.resolution: {type: number, note: field of options}
+notes: From @turf/shortest-path.
+status: active
+review: {state: harvested, source: turf}

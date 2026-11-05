@@ -1,0 +1,17 @@
+id: geocube-vector-to-cube-vectortocube
+kind: implementation
+name: geocube.vector_to_cube.VectorToCube
+software: geocube
+call: {interface: python, name: geocube.vector_to_cube.VectorToCube}
+harvest: {harvester: python-packages, engine_version: 0.7.1}
+parameters:
+  vector_data: {type: Union, required: true}
+  geobox_maker: {type: GeoBoxMaker, required: true}
+  fill: {type: float, required: true}
+  categorical_enums: {type: Optional, required: true}
+  measurements: {type: Optional}
+  datetime_measurements: {type: Optional}
+  group_by: {type: Optional}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

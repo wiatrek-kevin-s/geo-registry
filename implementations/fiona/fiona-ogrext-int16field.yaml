@@ -1,0 +1,10 @@
+id: fiona-ogrext-int16field
+kind: implementation
+name: fiona.ogrext.Int16Field
+software: fiona
+call: {interface: python, name: fiona.ogrext.Int16Field}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

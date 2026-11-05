@@ -1,0 +1,11 @@
+id: pykrige-variogram-models-spherical-variogram-model
+kind: implementation
+name: pykrige.variogram_models.spherical_variogram_model
+software: pykrige
+call: {interface: python, name: pykrige.variogram_models.spherical_variogram_model}
+harvest: {harvester: python-packages, engine_version: 1.7.3}
+parameters:
+  m: {type: any, required: true}
+  d: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

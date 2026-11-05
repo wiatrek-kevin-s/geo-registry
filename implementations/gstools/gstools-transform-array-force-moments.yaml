@@ -1,0 +1,12 @@
+id: gstools-transform-array-force-moments
+kind: implementation
+name: gstools.transform.array_force_moments
+software: gstools
+call: {interface: python, name: gstools.transform.array_force_moments}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  field: {type: any, required: true}
+  mean: {type: integer, default: 0}
+  var: {type: integer, default: 1}
+status: active
+review: {state: harvested, source: python-packages}

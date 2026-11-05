@@ -1,0 +1,10 @@
+id: xrspatial-validate
+kind: implementation
+name: xrspatial.validate
+software: xarray-spatial
+call: {interface: python, name: xrspatial.validate}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

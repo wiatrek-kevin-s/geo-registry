@@ -1,0 +1,11 @@
+id: momepy-form-factor
+kind: implementation
+name: momepy.form_factor
+software: momepy
+call: {interface: python, name: momepy.form_factor}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  geometry: {type: any, required: true}
+  height: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

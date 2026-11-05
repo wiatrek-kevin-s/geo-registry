@@ -1,0 +1,12 @@
+id: turf-lengthtoradians
+kind: implementation
+name: turf.lengthToRadians
+software: turf-js
+call: {interface: js, name: turf.lengthToRadians}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  distance: {type: number, required: true}
+  units: {type: Units}
+notes: From @turf/helpers.
+status: active
+review: {state: harvested, source: turf}

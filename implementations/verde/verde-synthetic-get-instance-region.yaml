@@ -1,0 +1,11 @@
+id: verde-synthetic-get-instance-region
+kind: implementation
+name: verde.synthetic.get_instance_region
+software: verde
+call: {interface: python, name: verde.synthetic.get_instance_region}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  instance: {type: any, required: true}
+  region: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

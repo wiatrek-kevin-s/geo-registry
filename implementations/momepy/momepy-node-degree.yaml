@@ -1,0 +1,11 @@
+id: momepy-node-degree
+kind: implementation
+name: momepy.node_degree
+software: momepy
+call: {interface: python, name: momepy.node_degree}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  graph: {type: Graph, required: true}
+  name: {type: str, default: degree}
+status: active
+review: {state: harvested, source: python-packages}

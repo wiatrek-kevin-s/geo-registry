@@ -1,0 +1,11 @@
+id: gstools-covmodel-tools-set-arg-bounds
+kind: implementation
+name: gstools.covmodel.tools.set_arg_bounds
+software: gstools
+call: {interface: python, name: gstools.covmodel.tools.set_arg_bounds}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  model: {type: any, required: true}
+  check_args: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

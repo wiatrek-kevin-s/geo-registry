@@ -1,0 +1,13 @@
+id: xrspatial-hydro-fill-d8-boundarystore
+kind: implementation
+name: xrspatial.hydro.fill_d8.BoundaryStore
+software: xarray-spatial
+call: {interface: python, name: xrspatial.hydro.fill_d8.BoundaryStore}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  chunks_y: {type: any, required: true}
+  chunks_x: {type: any, required: true}
+  fill_value: {type: number, default: 0.0}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

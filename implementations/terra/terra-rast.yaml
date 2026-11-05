@@ -1,0 +1,46 @@
+id: terra-rast
+kind: implementation
+name: terra::rast
+software: terra
+call: {interface: r, name: 'terra::rast'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  nlyrs: {type: any, default: nlyr(x)}
+  names: {type: any, required: true}
+  vals: {type: any, required: true}
+  keeptime: {type: any, default: 'TRUE'}
+  keepunits: {type: any, default: 'FALSE'}
+  props: {type: any, default: 'FALSE'}
+  tags: {type: any, default: 'FALSE'}
+  type: {type: any, default: '""'}
+  crs: {type: any, default: '""'}
+  extent: {type: any, default: 'NULL'}
+  subds: {type: any, default: '0'}
+  lyrs: {type: any, default: 'NULL'}
+  drivers: {type: any, default: 'NULL'}
+  opts: {type: any, default: 'NULL'}
+  win: {type: any, default: 'NULL'}
+  snap: {type: any, default: '"near"'}
+  vsi: {type: any, default: 'FALSE'}
+  raw: {type: any, default: 'FALSE'}
+  noflip: {type: any, default: 'FALSE'}
+  guessCRS: {type: any, default: 'TRUE'}
+  domains: {type: any, default: '""'}
+  md: {type: any, default: 'NULL'}
+  dims: {type: any, default: 'NULL'}
+  digits: {type: any, default: '6'}
+  warn: {type: any, default: 'TRUE'}
+  nrows: {type: any, default: '180'}
+  ncols: {type: any, default: '360'}
+  xmin: {type: any, default: '-180'}
+  xmax: {type: any, default: '180'}
+  ymin: {type: any, default: '-90'}
+  ymax: {type: any, default: '90'}
+  resolution: {type: any, required: true}
+  time: {type: any, required: true}
+  units: {type: any, required: true}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

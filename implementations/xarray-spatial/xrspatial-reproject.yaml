@@ -1,0 +1,27 @@
+id: xrspatial-reproject
+kind: implementation
+name: xrspatial.reproject
+software: xarray-spatial
+call: {interface: python, name: xrspatial.reproject}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  raster: {type: any, required: true}
+  target_crs: {type: any, required: true}
+  source_crs: {type: any}
+  resolution: {type: any}
+  bounds: {type: any}
+  width: {type: any}
+  height: {type: any}
+  resampling: {type: string, default: bilinear}
+  nodata: {type: any}
+  transform_precision: {type: integer, default: 16}
+  chunk_size: {type: any}
+  name: {type: any}
+  max_memory: {type: any}
+  source_vertical_crs: {type: any}
+  target_vertical_crs: {type: any}
+  bounds_policy: {type: string, default: auto}
+  src_vertical_crs: {type: any, note: default <object object>}
+  tgt_vertical_crs: {type: any, note: default <object object>}
+status: active
+review: {state: harvested, source: python-packages}

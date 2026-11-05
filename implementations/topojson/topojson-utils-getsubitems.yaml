@@ -1,0 +1,14 @@
+id: topojson-utils-getsubitems
+kind: implementation
+name: topojson.utils.getsubitems
+software: topojson
+call: {interface: python, name: topojson.utils.getsubitems}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  obj: {type: any, required: true}
+  itemkey: {type: any, required: true}
+  islast: {type: any, required: true}
+  maxlinelength: {type: any, required: true}
+  level: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

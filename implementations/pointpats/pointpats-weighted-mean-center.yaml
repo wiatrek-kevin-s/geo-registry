@@ -1,0 +1,11 @@
+id: pointpats-weighted-mean-center
+kind: implementation
+name: pointpats.weighted_mean_center
+software: pointpats
+call: {interface: python, name: pointpats.weighted_mean_center}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  points: {type: any, required: true}
+  weights: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

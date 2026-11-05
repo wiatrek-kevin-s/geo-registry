@@ -1,0 +1,16 @@
+id: turf-randomlinestring
+kind: implementation
+name: turf.randomLineString
+software: turf-js
+call: {interface: js, name: turf.randomLineString}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  count: {type: number}
+  options: {type: '{ bbox?: BBox; num_vertices?: number; max_length?: number; max_rotation?: number; }'}
+  options.bbox: {type: BBox, note: field of options}
+  options.num_vertices: {type: number, note: field of options}
+  options.max_length: {type: number, note: field of options}
+  options.max_rotation: {type: number, note: field of options}
+notes: From @turf/random.
+status: active
+review: {state: harvested, source: turf}

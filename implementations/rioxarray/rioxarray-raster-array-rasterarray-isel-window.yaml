@@ -1,0 +1,11 @@
+id: rioxarray-raster-array-rasterarray-isel-window
+kind: implementation
+name: RasterArray.isel_window
+software: rioxarray
+call: {interface: python, name: rioxarray.raster_array.RasterArray.isel_window}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  window: {type: Window, required: true}
+  pad: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

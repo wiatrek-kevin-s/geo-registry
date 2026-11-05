@@ -1,0 +1,16 @@
+id: terra-autocor
+kind: implementation
+name: terra::autocor
+software: terra
+call: {interface: r, name: 'terra::autocor'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  w: {type: any, default: 'matrix(c(1, 1, 1, 1, 0, 1, 1, 1, 1), 3)'}
+  method: {type: any, default: '"moran"'}
+  global: {type: any, default: 'TRUE'}
+  standardize: {type: any, default: 'FALSE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

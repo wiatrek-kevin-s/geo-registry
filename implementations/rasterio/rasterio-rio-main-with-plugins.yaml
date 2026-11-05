@@ -1,0 +1,10 @@
+id: rasterio-rio-main-with-plugins
+kind: implementation
+name: rasterio.rio.main.with_plugins
+software: rasterio
+call: {interface: python, name: rasterio.rio.main.with_plugins}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  entry_points: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: spreg-dgp-probit
+kind: implementation
+name: spreg.dgp_probit
+software: spreg
+call: {interface: python, name: spreg.dgp_probit}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  u: {type: any, required: true}
+  xb: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

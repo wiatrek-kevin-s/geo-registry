@@ -1,0 +1,12 @@
+id: topojson-ops-fast-split
+kind: implementation
+name: topojson.ops.fast_split
+software: topojson
+call: {interface: python, name: topojson.ops.fast_split}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  line: {type: any, required: true}
+  splitter: {type: any, required: true}
+  is_ring: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

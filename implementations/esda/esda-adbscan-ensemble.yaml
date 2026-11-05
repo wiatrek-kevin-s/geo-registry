@@ -1,0 +1,10 @@
+id: esda-adbscan-ensemble
+kind: implementation
+name: esda.adbscan.ensemble
+software: esda
+call: {interface: python, name: esda.adbscan.ensemble}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  solus_relabelled: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

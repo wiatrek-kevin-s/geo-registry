@@ -1,0 +1,12 @@
+id: xrspatial-msavi2
+kind: implementation
+name: xrspatial.msavi2
+software: xarray-spatial
+call: {interface: python, name: xrspatial.msavi2}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  nir_agg: {type: xr.DataArray, required: true}
+  red_agg: {type: xr.DataArray, required: true}
+  name: {type: string, default: msavi2}
+status: active
+review: {state: harvested, source: python-packages}

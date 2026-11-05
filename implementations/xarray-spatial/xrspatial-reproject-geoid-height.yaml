@@ -1,0 +1,12 @@
+id: xrspatial-reproject-geoid-height
+kind: implementation
+name: xrspatial.reproject.geoid_height
+software: xarray-spatial
+call: {interface: python, name: xrspatial.reproject.geoid_height}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  lon: {type: any, required: true}
+  lat: {type: any, required: true}
+  model: {type: string, default: EGM96}
+status: active
+review: {state: harvested, source: python-packages}

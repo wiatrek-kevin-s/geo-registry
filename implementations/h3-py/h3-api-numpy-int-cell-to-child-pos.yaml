@@ -1,0 +1,11 @@
+id: h3-api-numpy-int-cell-to-child-pos
+kind: implementation
+name: h3.api.numpy_int.cell_to_child_pos
+software: h3-py
+call: {interface: python, name: h3.api.numpy_int.cell_to_child_pos}
+harvest: {harvester: python-packages, engine_version: 4.5.0}
+parameters:
+  child: {type: any, required: true}
+  res_parent: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

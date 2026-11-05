@@ -1,0 +1,11 @@
+id: esda-shape-get-angles
+kind: implementation
+name: esda.shape.get_angles
+software: esda
+call: {interface: python, name: esda.shape.get_angles}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  collection: {type: any, required: true}
+  return_indices: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

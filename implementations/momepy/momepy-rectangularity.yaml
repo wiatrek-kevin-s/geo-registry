@@ -1,0 +1,10 @@
+id: momepy-rectangularity
+kind: implementation
+name: momepy.rectangularity
+software: momepy
+call: {interface: python, name: momepy.rectangularity}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  geometry: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,10 @@
+id: skgstat-plotting-backend
+kind: implementation
+name: skgstat.plotting.backend
+software: scikit-gstat
+call: {interface: python, name: skgstat.plotting.backend}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  name: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

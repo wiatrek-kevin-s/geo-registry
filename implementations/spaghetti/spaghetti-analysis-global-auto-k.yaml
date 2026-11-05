@@ -1,0 +1,14 @@
+id: spaghetti-analysis-global-auto-k
+kind: implementation
+name: spaghetti.analysis.global_auto_k
+software: spaghetti
+call: {interface: python, name: spaghetti.analysis.global_auto_k}
+harvest: {harvester: python-packages, engine_version: 1.7.6}
+parameters:
+  n_obs: {type: any, required: true}
+  dists: {type: any, required: true}
+  upperbound: {type: any, required: true}
+  intensity: {type: any, required: true}
+  nsteps: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: libpysal-cg-fast-threshold
+kind: implementation
+name: libpysal.cg.fast_threshold
+software: libpysal
+call: {interface: python, name: libpysal.cg.fast_threshold}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  pts: {type: any, required: true}
+  dist: {type: any, required: true}
+  radius: {type: number, default: 6371.0}
+status: active
+review: {state: harvested, source: python-packages}

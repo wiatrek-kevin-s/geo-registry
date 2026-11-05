@@ -1,0 +1,11 @@
+id: spopt-region-azp-count
+kind: implementation
+name: spopt.region.azp.count
+software: spopt
+call: {interface: python, name: spopt.region.azp.count}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  arr: {type: any, required: true}
+  el: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

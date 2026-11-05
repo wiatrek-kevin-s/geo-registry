@@ -1,0 +1,14 @@
+id: libpysal-cg-rectangle
+kind: implementation
+name: libpysal.cg.Rectangle
+software: libpysal
+call: {interface: python, name: libpysal.cg.Rectangle}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  left: {type: any, required: true}
+  lower: {type: any, required: true}
+  right: {type: any, required: true}
+  upper: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

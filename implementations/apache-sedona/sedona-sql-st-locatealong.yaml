@@ -1,0 +1,12 @@
+id: sedona-sql-st-locatealong
+kind: implementation
+name: sedona.sql.ST_LocateAlong
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_LocateAlong}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geom: {type: Union, required: true}
+  measure: {type: Union, required: true}
+  offset: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

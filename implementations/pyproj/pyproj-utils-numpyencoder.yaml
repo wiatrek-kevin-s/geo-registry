@@ -1,0 +1,18 @@
+id: pyproj-utils-numpyencoder
+kind: implementation
+name: pyproj.utils.NumpyEncoder
+software: pyproj
+call: {interface: python, name: pyproj.utils.NumpyEncoder}
+harvest: {harvester: python-packages, engine_version: 3.8.0}
+parameters:
+  skipkeys: {type: boolean, default: false}
+  ensure_ascii: {type: boolean, default: true}
+  check_circular: {type: boolean, default: true}
+  allow_nan: {type: boolean, default: true}
+  sort_keys: {type: boolean, default: false}
+  indent: {type: any}
+  separators: {type: any}
+  default: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

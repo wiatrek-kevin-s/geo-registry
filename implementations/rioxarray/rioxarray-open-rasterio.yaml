@@ -1,0 +1,22 @@
+id: rioxarray-open-rasterio
+kind: implementation
+name: rioxarray.open_rasterio
+software: rioxarray
+call: {interface: python, name: rioxarray.open_rasterio}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  filename: {type: Union, required: true}
+  parse_coordinates: {type: Optional}
+  chunks: {type: Union}
+  cache: {type: Optional}
+  lock: {type: Optional}
+  masked: {type: bool, default: false}
+  mask_and_scale: {type: bool, default: false}
+  variable: {type: Union}
+  group: {type: Union}
+  default_name: {type: Optional}
+  decode_times: {type: bool, default: true}
+  decode_timedelta: {type: Optional}
+  band_as_variable: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

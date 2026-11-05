@@ -1,0 +1,11 @@
+id: geocube-logger-log-to-console
+kind: implementation
+name: geocube.logger.log_to_console
+software: geocube
+call: {interface: python, name: geocube.logger.log_to_console}
+harvest: {harvester: python-packages, engine_version: 0.7.1}
+parameters:
+  status: {type: boolean, default: true}
+  level: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

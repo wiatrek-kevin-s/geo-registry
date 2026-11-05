@@ -1,0 +1,9 @@
+id: rioxarray-raster-dataset-rasterdataset-get-rpcs
+kind: implementation
+name: RasterDataset.get_rpcs
+software: rioxarray
+call: {interface: python, name: rioxarray.raster_dataset.RasterDataset.get_rpcs}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

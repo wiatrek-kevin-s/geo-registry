@@ -1,0 +1,17 @@
+id: verde-blockreduce
+kind: implementation
+name: verde.BlockReduce
+software: verde
+call: {interface: python, name: verde.BlockReduce}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  reduction: {type: any, required: true}
+  spacing: {type: any}
+  region: {type: any}
+  adjust: {type: string, default: spacing}
+  center_coordinates: {type: boolean, default: false}
+  shape: {type: any}
+  drop_coords: {type: boolean, default: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

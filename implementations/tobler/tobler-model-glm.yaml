@@ -1,0 +1,18 @@
+id: tobler-model-glm
+kind: implementation
+name: tobler.model.glm
+software: tobler
+call: {interface: python, name: tobler.model.glm}
+harvest: {harvester: python-packages, engine_version: 0.14.0}
+parameters:
+  source_df: {type: any}
+  target_df: {type: any}
+  raster: {type: string, default: nlcd_2011}
+  raster_codes: {type: any}
+  variable: {type: any}
+  formula: {type: any}
+  likelihood: {type: string, default: poisson}
+  force_crs_match: {type: boolean, default: true}
+  return_model: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

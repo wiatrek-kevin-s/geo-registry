@@ -1,0 +1,14 @@
+id: momepy-nx-to-gdf
+kind: implementation
+name: momepy.nx_to_gdf
+software: momepy
+call: {interface: python, name: momepy.nx_to_gdf}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  net: {type: any, required: true}
+  points: {type: boolean, default: true}
+  lines: {type: boolean, default: true}
+  spatial_weights: {type: boolean, default: false}
+  nodeID: {type: string, default: nodeID}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,19 @@
+id: pandana-loaders-osm-pdna-network-from-bbox
+kind: implementation
+name: pandana.loaders.osm.pdna_network_from_bbox
+software: pandana
+call: {interface: python, name: pandana.loaders.osm.pdna_network_from_bbox}
+harvest: {harvester: python-packages, engine_version: '0.8'}
+parameters:
+  lat_min: {type: any}
+  lng_min: {type: any}
+  lat_max: {type: any}
+  lng_max: {type: any}
+  bbox: {type: any}
+  network_type: {type: string, default: walk}
+  two_way: {type: boolean, default: true}
+  timeout: {type: integer, default: 180}
+  memory: {type: any}
+  max_query_area_size: {type: integer, default: 2500000000}
+status: active
+review: {state: harvested, source: python-packages}

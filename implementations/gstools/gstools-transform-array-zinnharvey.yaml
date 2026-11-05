@@ -1,0 +1,13 @@
+id: gstools-transform-array-zinnharvey
+kind: implementation
+name: gstools.transform.array_zinnharvey
+software: gstools
+call: {interface: python, name: gstools.transform.array_zinnharvey}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  field: {type: any, required: true}
+  conn: {type: string, default: high}
+  mean: {type: any}
+  var: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

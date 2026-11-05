@@ -1,0 +1,20 @@
+id: rasterio-session-azuresession
+kind: implementation
+name: rasterio.session.AzureSession
+software: rasterio
+call: {interface: python, name: rasterio.session.AzureSession}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  azure_storage_connection_string: {type: any}
+  azure_storage_account: {type: any}
+  azure_storage_access_token: {type: any}
+  azure_storage_access_key: {type: any}
+  azure_storage_sas_token: {type: any}
+  azure_unsigned: {type: boolean, default: false}
+  azure_tenant_id: {type: any}
+  azure_client_id: {type: any}
+  azure_federated_token_file: {type: any}
+  azure_authority_host: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

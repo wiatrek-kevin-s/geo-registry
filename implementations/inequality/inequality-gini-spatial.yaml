@@ -1,0 +1,14 @@
+id: inequality-gini-spatial
+kind: implementation
+name: inequality.Gini_Spatial
+software: inequality
+call: {interface: python, name: inequality.Gini_Spatial}
+harvest: {harvester: python-packages, engine_version: 1.2.0}
+parameters:
+  x: {type: any, required: true}
+  w: {type: any, required: true}
+  permutations: {type: integer, default: 99}
+  column: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

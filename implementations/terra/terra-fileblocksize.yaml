@@ -1,0 +1,10 @@
+id: terra-fileblocksize
+kind: implementation
+name: terra::fileBlocksize
+software: terra
+call: {interface: r, name: 'terra::fileBlocksize'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+status: active
+review: {state: harvested, source: r-packages}

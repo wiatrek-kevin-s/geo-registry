@@ -1,0 +1,14 @@
+id: pandana-loaders-osm-node-query
+kind: implementation
+name: pandana.loaders.osm.node_query
+software: pandana
+call: {interface: python, name: pandana.loaders.osm.node_query}
+harvest: {harvester: python-packages, engine_version: '0.8'}
+parameters:
+  lat_min: {type: any, required: true}
+  lng_min: {type: any, required: true}
+  lat_max: {type: any, required: true}
+  lng_max: {type: any, required: true}
+  tags: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

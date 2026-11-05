@@ -1,0 +1,32 @@
+id: pykrige-universalkriging3d
+kind: implementation
+name: pykrige.UniversalKriging3D
+software: pykrige
+call: {interface: python, name: pykrige.UniversalKriging3D}
+harvest: {harvester: python-packages, engine_version: 1.7.3}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  z: {type: any, required: true}
+  val: {type: any, required: true}
+  variogram_model: {type: string, default: linear}
+  variogram_parameters: {type: any}
+  variogram_function: {type: any}
+  nlags: {type: integer, default: 6}
+  weight: {type: boolean, default: false}
+  anisotropy_scaling_y: {type: number, default: 1.0}
+  anisotropy_scaling_z: {type: number, default: 1.0}
+  anisotropy_angle_x: {type: number, default: 0.0}
+  anisotropy_angle_y: {type: number, default: 0.0}
+  anisotropy_angle_z: {type: number, default: 0.0}
+  drift_terms: {type: any}
+  specified_drift: {type: any}
+  functional_drift: {type: any}
+  verbose: {type: boolean, default: false}
+  enable_plotting: {type: boolean, default: false}
+  exact_values: {type: boolean, default: true}
+  pseudo_inv: {type: boolean, default: false}
+  pseudo_inv_type: {type: string, default: pinv}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

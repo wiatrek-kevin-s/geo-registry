@@ -1,0 +1,12 @@
+id: momepy-mean-interbuilding-distance
+kind: implementation
+name: momepy.mean_interbuilding_distance
+software: momepy
+call: {interface: python, name: momepy.mean_interbuilding_distance}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  geometry: {type: any, required: true}
+  adjacency_graph: {type: Graph, required: true}
+  neighborhood_graph: {type: Graph, required: true}
+status: active
+review: {state: harvested, source: python-packages}

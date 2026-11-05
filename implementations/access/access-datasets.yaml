@@ -1,0 +1,10 @@
+id: access-datasets
+kind: implementation
+name: access.Datasets
+software: access
+call: {interface: python, name: access.Datasets}
+harvest: {harvester: python-packages, engine_version: 1.1.10.post3}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

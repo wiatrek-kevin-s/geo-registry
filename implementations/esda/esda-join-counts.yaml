@@ -1,0 +1,14 @@
+id: esda-join-counts
+kind: implementation
+name: esda.Join_Counts
+software: esda
+call: {interface: python, name: esda.Join_Counts}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  y: {type: any, required: true}
+  w: {type: any, required: true}
+  permutations: {type: integer, default: 999}
+  drop_islands: {type: boolean, default: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: segregation-network-project-network
+kind: implementation
+name: segregation.network.project_network
+software: segregation
+call: {interface: python, name: segregation.network.project_network}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  network: {type: any, required: true}
+  output_crs: {type: any}
+  input_crs: {type: integer, default: 4326}
+status: active
+review: {state: harvested, source: python-packages}

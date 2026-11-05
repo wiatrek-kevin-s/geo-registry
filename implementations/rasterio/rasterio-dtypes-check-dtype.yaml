@@ -1,0 +1,10 @@
+id: rasterio-dtypes-check-dtype
+kind: implementation
+name: rasterio.dtypes.check_dtype
+software: rasterio
+call: {interface: python, name: rasterio.dtypes.check_dtype}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  dt: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

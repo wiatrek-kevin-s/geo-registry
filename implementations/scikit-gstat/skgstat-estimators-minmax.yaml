@@ -1,0 +1,10 @@
+id: skgstat-estimators-minmax
+kind: implementation
+name: skgstat.estimators.minmax
+software: scikit-gstat
+call: {interface: python, name: skgstat.estimators.minmax}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  x: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

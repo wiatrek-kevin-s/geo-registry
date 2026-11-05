@@ -1,0 +1,14 @@
+id: spreg-output
+kind: implementation
+name: spreg.output
+software: spreg
+call: {interface: python, name: spreg.output}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  reg: {type: any, required: true}
+  vm: {type: any, required: true}
+  other_end: {type: boolean, default: false}
+  robust: {type: boolean, default: false}
+  latex: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

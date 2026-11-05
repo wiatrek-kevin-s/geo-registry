@@ -1,0 +1,10 @@
+id: movingpandas-trajectorycollection-get-max
+kind: implementation
+name: TrajectoryCollection.get_max
+software: movingpandas
+call: {interface: python, name: movingpandas.TrajectoryCollection.get_max}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  column: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

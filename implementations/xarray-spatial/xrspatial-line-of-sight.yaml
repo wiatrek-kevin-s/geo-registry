@@ -1,0 +1,17 @@
+id: xrspatial-line-of-sight
+kind: implementation
+name: xrspatial.line_of_sight
+software: xarray-spatial
+call: {interface: python, name: xrspatial.line_of_sight}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  raster: {type: DataArray, required: true}
+  x0: {type: float, required: true}
+  y0: {type: float, required: true}
+  x1: {type: float, required: true}
+  y1: {type: float, required: true}
+  observer_elev: {type: float, default: 0}
+  target_elev: {type: float, default: 0}
+  frequency_mhz: {type: Optional}
+status: active
+review: {state: harvested, source: python-packages}

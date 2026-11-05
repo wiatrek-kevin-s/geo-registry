@@ -1,0 +1,10 @@
+id: xrspatial-kde-is-geodataframe
+kind: implementation
+name: xrspatial.kde.is_geodataframe
+software: xarray-spatial
+call: {interface: python, name: xrspatial.kde.is_geodataframe}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  obj: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

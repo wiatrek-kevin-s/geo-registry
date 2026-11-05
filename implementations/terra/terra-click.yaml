@@ -1,0 +1,18 @@
+id: terra-click
+kind: implementation
+name: terra::click
+software: terra
+call: {interface: r, name: 'terra::click'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  n: {type: any, default: '10'}
+  id: {type: any, default: 'FALSE'}
+  xy: {type: any, default: 'FALSE'}
+  cell: {type: any, default: 'FALSE'}
+  type: {type: any, default: '"p"'}
+  show: {type: any, default: 'TRUE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

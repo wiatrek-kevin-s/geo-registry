@@ -1,0 +1,12 @@
+id: pystac-client-item-search-dict-merge
+kind: implementation
+name: pystac_client.item_search.dict_merge
+software: pystac-client
+call: {interface: python, name: pystac_client.item_search.dict_merge}
+harvest: {harvester: python-packages, engine_version: 0.9.1}
+parameters:
+  dct: {type: dict, required: true}
+  merge_dct: {type: dict, required: true}
+  add_keys: {type: bool, default: true}
+status: active
+review: {state: harvested, source: python-packages}

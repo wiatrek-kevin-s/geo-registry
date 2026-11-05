@@ -1,0 +1,11 @@
+id: spreg-check-coords
+kind: implementation
+name: spreg.check_coords
+software: spreg
+call: {interface: python, name: spreg.check_coords}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  data: {type: any, required: true}
+  name_coords: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

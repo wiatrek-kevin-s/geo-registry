@@ -1,0 +1,10 @@
+id: topojson-ops-select-unique
+kind: implementation
+name: topojson.ops.select_unique
+software: topojson
+call: {interface: python, name: topojson.ops.select_unique}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  data: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

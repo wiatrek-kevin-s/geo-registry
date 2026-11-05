@@ -1,0 +1,9 @@
+id: rasterio-windows-intersection
+kind: implementation
+name: rasterio.windows.intersection
+software: rasterio
+call: {interface: python, name: rasterio.windows.intersection}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: odc-stac-model-crs
+kind: implementation
+name: odc.stac.model.CRS
+software: odc-stac
+call: {interface: python, name: odc.stac.model.CRS}
+harvest: {harvester: python-packages, engine_version: 0.5.3}
+parameters:
+  crs_spec: {type: Any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

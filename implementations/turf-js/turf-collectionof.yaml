@@ -1,0 +1,13 @@
+id: turf-collectionof
+kind: implementation
+name: turf.collectionOf
+software: turf-js
+call: {interface: js, name: turf.collectionOf}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  featureCollection: {type: FeatureCollection<any>, required: true}
+  type: {type: string, required: true}
+  name: {type: string, required: true}
+notes: From @turf/invariant.
+status: active
+review: {state: harvested, source: turf}

@@ -1,0 +1,11 @@
+id: libpysal-weights-min-threshold-distance
+kind: implementation
+name: libpysal.weights.min_threshold_distance
+software: libpysal
+call: {interface: python, name: libpysal.weights.min_threshold_distance}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  data: {type: any, required: true}
+  p: {type: integer, default: 2}
+status: active
+review: {state: harvested, source: python-packages}

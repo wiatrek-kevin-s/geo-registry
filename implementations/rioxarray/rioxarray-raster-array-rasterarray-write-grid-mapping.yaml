@@ -1,0 +1,11 @@
+id: rioxarray-raster-array-rasterarray-write-grid-mapping
+kind: implementation
+name: RasterArray.write_grid_mapping
+software: rioxarray
+call: {interface: python, name: rioxarray.raster_array.RasterArray.write_grid_mapping}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  grid_mapping_name: {type: str, default: spatial_ref}
+  inplace: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,16 @@
+id: turf-rhumbdestination
+kind: implementation
+name: turf.rhumbDestination
+software: turf-js
+call: {interface: js, name: turf.rhumbDestination}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  origin: {type: Coord, required: true}
+  distance: {type: number, required: true}
+  bearing: {type: number, required: true}
+  options: {type: '{ units?: Units; properties?: P; }'}
+  options.units: {type: Units, note: field of options}
+  options.properties: {type: P, note: field of options}
+notes: From @turf/rhumb-destination.
+status: active
+review: {state: harvested, source: turf}

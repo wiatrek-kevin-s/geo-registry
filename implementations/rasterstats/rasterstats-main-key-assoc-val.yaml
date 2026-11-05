@@ -1,0 +1,12 @@
+id: rasterstats-main-key-assoc-val
+kind: implementation
+name: rasterstats.main.key_assoc_val
+software: rasterstats
+call: {interface: python, name: rasterstats.main.key_assoc_val}
+harvest: {harvester: python-packages, engine_version: 0.21.0}
+parameters:
+  d: {type: any, required: true}
+  func: {type: any, required: true}
+  exclude: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

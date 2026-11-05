@@ -1,0 +1,10 @@
+id: spreg-spisfinite
+kind: implementation
+name: spreg.spisfinite
+software: spreg
+call: {interface: python, name: spreg.spisfinite}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  a: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

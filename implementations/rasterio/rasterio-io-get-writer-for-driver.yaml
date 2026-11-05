@@ -1,0 +1,10 @@
+id: rasterio-io-get-writer-for-driver
+kind: implementation
+name: rasterio.io.get_writer_for_driver
+software: rasterio
+call: {interface: python, name: rasterio.io.get_writer_for_driver}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  driver: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

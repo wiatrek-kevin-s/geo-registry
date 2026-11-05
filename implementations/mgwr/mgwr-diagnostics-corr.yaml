@@ -1,0 +1,10 @@
+id: mgwr-diagnostics-corr
+kind: implementation
+name: mgwr.diagnostics.corr
+software: mgwr
+call: {interface: python, name: mgwr.diagnostics.corr}
+harvest: {harvester: python-packages, engine_version: 2.2.1}
+parameters:
+  cov: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

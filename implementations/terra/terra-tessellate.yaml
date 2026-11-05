@@ -1,0 +1,18 @@
+id: terra-tessellate
+kind: implementation
+name: terra::tessellate
+software: terra
+call: {interface: r, name: 'terra::tessellate'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  size: {type: any, required: true}
+  n: {type: any, required: true}
+  type: {type: any, default: '"hexagon"'}
+  flat_top: {type: any, default: 'FALSE'}
+  align: {type: any, default: '"fit"'}
+  geo: {type: any, default: 'NULL'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

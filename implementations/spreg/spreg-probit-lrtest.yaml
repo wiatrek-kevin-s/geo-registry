@@ -1,0 +1,10 @@
+id: spreg-probit-lrtest
+kind: implementation
+name: spreg.probit_lrtest
+software: spreg
+call: {interface: python, name: spreg.probit_lrtest}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  regprob: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

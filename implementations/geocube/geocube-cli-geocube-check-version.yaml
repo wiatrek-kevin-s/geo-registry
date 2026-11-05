@@ -1,0 +1,12 @@
+id: geocube-cli-geocube-check-version
+kind: implementation
+name: geocube.cli.geocube.check_version
+software: geocube
+call: {interface: python, name: geocube.cli.geocube.check_version}
+harvest: {harvester: python-packages, engine_version: 0.7.1}
+parameters:
+  ctx: {type: any, required: true}
+  _: {type: any, required: true}
+  value: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,14 @@
+id: osmnx-plot-figure-ground
+kind: implementation
+name: osmnx.plot_figure_ground
+software: osmnx
+call: {interface: python, name: osmnx.plot_figure_ground}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  G: {type: nx.MultiDiGraph, required: true}
+  dist: {type: float, default: 805}
+  street_widths: {type: 'dict[str, float] | None'}
+  default_width: {type: float, default: 4}
+  color: {type: str, default: w}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,13 @@
+id: xrspatial-percentiles
+kind: implementation
+name: xrspatial.percentiles
+software: xarray-spatial
+call: {interface: python, name: xrspatial.percentiles}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: xr.DataArray, required: true}
+  pct: {type: 'Optional[List]'}
+  num_sample: {type: 'Optional[int]', default: 20000}
+  name: {type: 'Optional[str]', default: percentiles}
+status: active
+review: {state: harvested, source: python-packages}

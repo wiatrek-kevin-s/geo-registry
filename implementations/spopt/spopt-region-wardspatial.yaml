@@ -1,0 +1,15 @@
+id: spopt-region-wardspatial
+kind: implementation
+name: spopt.region.WardSpatial
+software: spopt
+call: {interface: python, name: spopt.region.WardSpatial}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  gdf: {type: any, required: true}
+  w: {type: any, required: true}
+  attrs_name: {type: any, required: true}
+  n_clusters: {type: integer, default: 5}
+  clustering_kwds: {type: any, note: 'default {}'}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

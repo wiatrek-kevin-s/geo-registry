@@ -1,0 +1,17 @@
+id: xrspatial-mcda-sensitivity
+kind: implementation
+name: xrspatial.mcda.sensitivity
+software: xarray-spatial
+call: {interface: python, name: xrspatial.mcda.sensitivity}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  criteria: {type: xr.Dataset, required: true}
+  weights: {type: 'dict[str, float]', required: true}
+  method: {type: str, default: one_at_a_time}
+  combine_method: {type: str, default: wlc}
+  delta: {type: float, default: 0.05}
+  n_samples: {type: int, default: 1000}
+  seed: {type: int, default: 42}
+  name: {type: str, default: sensitivity}
+status: active
+review: {state: harvested, source: python-packages}

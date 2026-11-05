@@ -1,0 +1,20 @@
+id: tobler-area-weighted-area-interpolate
+kind: implementation
+name: tobler.area_weighted.area_interpolate
+software: tobler
+call: {interface: python, name: tobler.area_weighted.area_interpolate}
+harvest: {harvester: python-packages, engine_version: 0.14.0}
+parameters:
+  source_df: {type: any, required: true}
+  target_df: {type: any, required: true}
+  extensive_variables: {type: any}
+  intensive_variables: {type: any}
+  table: {type: any}
+  allocate_total: {type: boolean, default: true}
+  spatial_index: {type: string, default: auto}
+  n_jobs: {type: integer, default: 1}
+  categorical_variables: {type: any}
+  categorical_frequency: {type: boolean, default: true}
+  fill_nan: {type: number, default: 0.0}
+status: active
+review: {state: harvested, source: python-packages}

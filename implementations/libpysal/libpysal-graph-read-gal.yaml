@@ -1,0 +1,10 @@
+id: libpysal-graph-read-gal
+kind: implementation
+name: libpysal.graph.read_gal
+software: libpysal
+call: {interface: python, name: libpysal.graph.read_gal}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  path: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

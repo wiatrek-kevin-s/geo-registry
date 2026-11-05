@@ -1,0 +1,10 @@
+id: pointpats-geometry-area
+kind: implementation
+name: pointpats.geometry.area
+software: pointpats
+call: {interface: python, name: pointpats.geometry.area}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  shape: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

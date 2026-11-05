@@ -1,0 +1,10 @@
+id: osmnx-stats-streets-per-node-counts
+kind: implementation
+name: osmnx.stats.streets_per_node_counts
+software: osmnx
+call: {interface: python, name: osmnx.stats.streets_per_node_counts}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  G: {type: nx.MultiDiGraph, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: gstools-covmodel-sum-tools-sum-compare
+kind: implementation
+name: gstools.covmodel.sum_tools.sum_compare
+software: gstools
+call: {interface: python, name: gstools.covmodel.sum_tools.sum_compare}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  this: {type: any, required: true}
+  that: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

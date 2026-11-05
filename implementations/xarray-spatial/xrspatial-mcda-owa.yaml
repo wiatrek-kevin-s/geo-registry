@@ -1,0 +1,14 @@
+id: xrspatial-mcda-owa
+kind: implementation
+name: xrspatial.mcda.owa
+software: xarray-spatial
+call: {interface: python, name: xrspatial.mcda.owa}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  criteria: {type: xr.Dataset, required: true}
+  weights: {type: 'dict[str, float] | None'}
+  order_weights: {type: 'list[float] | None'}
+  name: {type: str, default: owa}
+  criterion_weights: {type: 'dict[str, float] | None'}
+status: active
+review: {state: harvested, source: python-packages}

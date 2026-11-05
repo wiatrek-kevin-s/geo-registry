@@ -1,0 +1,14 @@
+id: stackstac-layeredenv
+kind: implementation
+name: stackstac.LayeredEnv
+software: stackstac
+call: {interface: python, name: stackstac.LayeredEnv}
+harvest: {harvester: python-packages, engine_version: 0.5.1}
+parameters:
+  always: {type: EnvDict, required: true}
+  open: {type: 'Optional[EnvDict]'}
+  open_vrt: {type: 'Optional[EnvDict]'}
+  read: {type: 'Optional[EnvDict]'}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

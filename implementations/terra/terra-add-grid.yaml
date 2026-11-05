@@ -1,0 +1,14 @@
+id: terra-add-grid
+kind: implementation
+name: terra::add_grid
+software: terra
+call: {interface: r, name: 'terra::add_grid'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  nx: {type: any, default: 'NULL'}
+  ny: {type: any, default: nx}
+  col: {type: any, default: '"lightgray"'}
+  lty: {type: any, default: '"dotted"'}
+  lwd: {type: any, default: '1'}
+status: active
+review: {state: harvested, source: r-packages}

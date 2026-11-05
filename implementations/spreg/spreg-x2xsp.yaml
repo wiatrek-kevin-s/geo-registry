@@ -1,0 +1,12 @@
+id: spreg-x2xsp
+kind: implementation
+name: spreg.x2xsp
+software: spreg
+call: {interface: python, name: spreg.x2xsp}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  x: {type: any, required: true}
+  regimes: {type: any, required: true}
+  regimes_set: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

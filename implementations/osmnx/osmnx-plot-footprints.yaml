@@ -1,0 +1,23 @@
+id: osmnx-plot-footprints
+kind: implementation
+name: osmnx.plot_footprints
+software: osmnx
+call: {interface: python, name: osmnx.plot_footprints}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  gdf: {type: gpd.GeoDataFrame, required: true}
+  ax: {type: Axes | None}
+  figsize: {type: 'tuple[float, float]', note: 'default (8, 8)'}
+  color: {type: str, default: orange}
+  edge_color: {type: str, default: none}
+  edge_linewidth: {type: float, default: 0}
+  alpha: {type: float | None}
+  bgcolor: {type: str, default: '#111111'}
+  bbox: {type: 'tuple[float, float, float, float] | None'}
+  show: {type: bool, default: true}
+  close: {type: bool, default: false}
+  save: {type: bool, default: false}
+  filepath: {type: str | Path | None}
+  dpi: {type: int, default: 600}
+status: active
+review: {state: harvested, source: python-packages}

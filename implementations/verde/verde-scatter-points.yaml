@@ -1,0 +1,13 @@
+id: verde-scatter-points
+kind: implementation
+name: verde.scatter_points
+software: verde
+call: {interface: python, name: verde.scatter_points}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  region: {type: any, required: true}
+  size: {type: any, required: true}
+  random_state: {type: any}
+  extra_coords: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

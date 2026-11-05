@@ -1,0 +1,18 @@
+id: pointpats-k-test
+kind: implementation
+name: pointpats.k_test
+software: pointpats
+call: {interface: python, name: pointpats.k_test}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  coordinates: {type: any, required: true}
+  support: {type: any}
+  distances: {type: any}
+  metric: {type: string, default: euclidean}
+  hull: {type: any}
+  edge_correction: {type: any}
+  keep_simulations: {type: boolean, default: false}
+  n_simulations: {type: integer, default: 9999}
+  n_jobs: {type: integer, default: -1}
+status: active
+review: {state: harvested, source: python-packages}

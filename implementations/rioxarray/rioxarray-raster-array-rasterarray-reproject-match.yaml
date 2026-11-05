@@ -1,0 +1,11 @@
+id: rioxarray-raster-array-rasterarray-reproject-match
+kind: implementation
+name: RasterArray.reproject_match
+software: rioxarray
+call: {interface: python, name: rioxarray.raster_array.RasterArray.reproject_match}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  match_data_array: {type: Union, required: true}
+  resampling: {type: Union, note: 'default <Resampling.nearest: 0>'}
+status: active
+review: {state: harvested, source: python-packages}

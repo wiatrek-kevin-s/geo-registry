@@ -1,0 +1,12 @@
+id: rasterio-transform-array-bounds
+kind: implementation
+name: rasterio.transform.array_bounds
+software: rasterio
+call: {interface: python, name: rasterio.transform.array_bounds}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  height: {type: any, required: true}
+  width: {type: any, required: true}
+  transform: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: sedona-sql-st-collectionextract
+kind: implementation
+name: sedona.sql.ST_CollectionExtract
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_CollectionExtract}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  collection: {type: Union, required: true}
+  geom_type: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

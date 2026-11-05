@@ -1,0 +1,11 @@
+id: spaghetti-util-snap-points-to-links
+kind: implementation
+name: spaghetti.util.snap_points_to_links
+software: spaghetti
+call: {interface: python, name: spaghetti.util.snap_points_to_links}
+harvest: {harvester: python-packages, engine_version: 1.7.6}
+parameters:
+  points: {type: any, required: true}
+  links: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

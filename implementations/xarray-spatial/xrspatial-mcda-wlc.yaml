@@ -1,0 +1,12 @@
+id: xrspatial-mcda-wlc
+kind: implementation
+name: xrspatial.mcda.wlc
+software: xarray-spatial
+call: {interface: python, name: xrspatial.mcda.wlc}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  criteria: {type: xr.Dataset, required: true}
+  weights: {type: 'dict[str, float]', required: true}
+  name: {type: str, default: wlc}
+status: active
+review: {state: harvested, source: python-packages}

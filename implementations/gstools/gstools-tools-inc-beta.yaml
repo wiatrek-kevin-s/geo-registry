@@ -1,0 +1,12 @@
+id: gstools-tools-inc-beta
+kind: implementation
+name: gstools.tools.inc_beta
+software: gstools
+call: {interface: python, name: gstools.tools.inc_beta}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  a: {type: any, required: true}
+  b: {type: any, required: true}
+  x: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

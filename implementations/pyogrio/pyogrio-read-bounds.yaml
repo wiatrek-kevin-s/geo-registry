@@ -1,0 +1,16 @@
+id: pyogrio-read-bounds
+kind: implementation
+name: pyogrio.read_bounds
+software: pyogrio
+call: {interface: python, name: pyogrio.read_bounds}
+harvest: {harvester: python-packages, engine_version: 0.13.0}
+parameters:
+  path_or_buffer: {type: any, required: true}
+  layer: {type: any}
+  skip_features: {type: integer, default: 0}
+  max_features: {type: any}
+  where: {type: any}
+  bbox: {type: any}
+  mask: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,20 @@
+id: esda-g-local
+kind: implementation
+name: esda.G_Local
+software: esda
+call: {interface: python, name: esda.G_Local}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  y: {type: any, required: true}
+  w: {type: any, required: true}
+  transform: {type: string, default: R}
+  permutations: {type: integer, default: 999}
+  star: {type: boolean, default: false}
+  keep_simulations: {type: boolean, default: true}
+  n_jobs: {type: integer, default: -1}
+  seed: {type: any}
+  island_weight: {type: integer, default: 0}
+  alternative: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

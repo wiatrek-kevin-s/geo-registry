@@ -1,0 +1,17 @@
+id: terra-griddist
+kind: implementation
+name: terra::gridDist
+software: terra
+call: {interface: r, name: 'terra::gridDist'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  target: {type: any, default: '0'}
+  scale: {type: any, default: '1'}
+  maxiter: {type: any, default: '50'}
+  nearest: {type: any, default: 'FALSE'}
+  filename: {type: any, default: '""'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

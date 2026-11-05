@@ -1,0 +1,19 @@
+id: pystac-client-client
+kind: implementation
+name: pystac_client.Client
+software: pystac-client
+call: {interface: python, name: pystac_client.Client}
+harvest: {harvester: python-packages, engine_version: 0.9.1}
+parameters:
+  id: {type: str, required: true}
+  description: {type: str, required: true}
+  title: {type: any}
+  stac_extensions: {type: any}
+  extra_fields: {type: any}
+  href: {type: any}
+  catalog_type: {type: CatalogType, note: default 'ABSOLUTE_PUBLISHED'}
+  strategy: {type: any}
+  modifier: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

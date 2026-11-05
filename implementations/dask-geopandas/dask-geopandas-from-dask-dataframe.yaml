@@ -1,0 +1,11 @@
+id: dask-geopandas-from-dask-dataframe
+kind: implementation
+name: dask_geopandas.from_dask_dataframe
+software: dask-geopandas
+call: {interface: python, name: dask_geopandas.from_dask_dataframe}
+harvest: {harvester: python-packages, engine_version: 0.5.0}
+parameters:
+  df: {type: any, required: true}
+  geometry: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

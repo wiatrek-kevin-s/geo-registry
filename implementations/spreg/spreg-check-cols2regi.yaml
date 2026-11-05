@@ -1,0 +1,14 @@
+id: spreg-check-cols2regi
+kind: implementation
+name: spreg.check_cols2regi
+software: spreg
+call: {interface: python, name: spreg.check_cols2regi}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  constant_regi: {type: any, required: true}
+  cols2regi: {type: any, required: true}
+  x: {type: any, required: true}
+  yend: {type: any}
+  add_cons: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

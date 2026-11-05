@@ -1,0 +1,15 @@
+id: tobler-util-dot-density
+kind: implementation
+name: tobler.util.dot_density
+software: tobler
+call: {interface: python, name: tobler.util.dot_density}
+harvest: {harvester: python-packages, engine_version: 0.14.0}
+parameters:
+  gdf: {type: any, required: true}
+  columns: {type: any, required: true}
+  scale: {type: number, default: 1.0}
+  method: {type: string, default: uniform}
+  rng: {type: any}
+  method_kwargs: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

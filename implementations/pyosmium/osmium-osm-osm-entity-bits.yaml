@@ -1,0 +1,10 @@
+id: osmium-osm-osm-entity-bits
+kind: implementation
+name: osmium.osm.osm_entity_bits
+software: pyosmium
+call: {interface: python, name: osmium.osm.osm_entity_bits}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

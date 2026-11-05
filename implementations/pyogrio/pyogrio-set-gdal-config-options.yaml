@@ -1,0 +1,10 @@
+id: pyogrio-set-gdal-config-options
+kind: implementation
+name: pyogrio.set_gdal_config_options
+software: pyogrio
+call: {interface: python, name: pyogrio.set_gdal_config_options}
+harvest: {harvester: python-packages, engine_version: 0.13.0}
+parameters:
+  options: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,10 @@
+id: spreg-opt-simport
+kind: implementation
+name: spreg.opt.simport
+software: spreg
+call: {interface: python, name: spreg.opt.simport}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  modname: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

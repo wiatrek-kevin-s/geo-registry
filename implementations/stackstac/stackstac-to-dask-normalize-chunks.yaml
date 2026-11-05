@@ -1,0 +1,12 @@
+id: stackstac-to-dask-normalize-chunks
+kind: implementation
+name: stackstac.to_dask.normalize_chunks
+software: stackstac
+call: {interface: python, name: stackstac.to_dask.normalize_chunks}
+harvest: {harvester: python-packages, engine_version: 0.5.1}
+parameters:
+  chunks: {type: ChunksParam, required: true}
+  shape: {type: 'Tuple[int, int, int, int]', required: true}
+  dtype: {type: np.dtype, required: true}
+status: active
+review: {state: harvested, source: python-packages}

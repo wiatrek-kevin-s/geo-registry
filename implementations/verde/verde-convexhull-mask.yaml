@@ -1,0 +1,13 @@
+id: verde-convexhull-mask
+kind: implementation
+name: verde.convexhull_mask
+software: verde
+call: {interface: python, name: verde.convexhull_mask}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  data_coordinates: {type: any, required: true}
+  coordinates: {type: any}
+  grid: {type: any}
+  projection: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,18 @@
+id: geopy-azuremaps
+kind: implementation
+name: geopy.AzureMaps
+software: geopy
+call: {interface: python, name: geopy.AzureMaps}
+harvest: {harvester: python-packages, engine_version: 2.5.0}
+parameters:
+  subscription_key: {type: any, required: true}
+  scheme: {type: any}
+  timeout: {type: any, note: default DEFAULT_SENTINEL}
+  proxies: {type: any, note: default DEFAULT_SENTINEL}
+  user_agent: {type: any}
+  ssl_context: {type: any, note: default DEFAULT_SENTINEL}
+  adapter_factory: {type: any}
+  domain: {type: string, default: atlas.microsoft.com}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

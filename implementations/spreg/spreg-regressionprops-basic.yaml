@@ -1,0 +1,16 @@
+id: spreg-regressionprops-basic
+kind: implementation
+name: spreg.RegressionProps_basic
+software: spreg
+call: {interface: python, name: spreg.RegressionProps_basic}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  reg: {type: any, required: true}
+  betas: {type: any}
+  predy: {type: any}
+  u: {type: any}
+  sig2: {type: any}
+  sig2n_k: {type: any}
+  vm: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

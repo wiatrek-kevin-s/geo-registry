@@ -1,0 +1,12 @@
+id: terra-xfromcell
+kind: implementation
+name: terra::xFromCell
+software: terra
+call: {interface: r, name: 'terra::xFromCell'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  object: {type: any, required: true}
+  cell: {type: any, required: true}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

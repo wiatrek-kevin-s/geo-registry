@@ -1,0 +1,21 @@
+id: sf-image-scale
+kind: implementation
+name: sf::.image_scale
+software: sf
+call: {interface: r, name: 'sf::.image_scale'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  z: {type: any, required: true}
+  col: {type: any, required: true}
+  breaks: {type: any, default: 'NULL'}
+  key.pos: {type: any, required: true}
+  add.axis: {type: any, default: 'TRUE'}
+  at: {type: any, default: 'NULL'}
+  '...': {type: dots, note: further arguments passed on}
+  axes: {type: any, default: 'FALSE'}
+  key.length: {type: any, required: true}
+  logz: {type: any, default: 'FALSE'}
+  lab: {type: any, default: '""'}
+  cex.axis: {type: any, default: par("cex.axis")}
+status: active
+review: {state: harvested, source: r-packages}

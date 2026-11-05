@@ -1,0 +1,12 @@
+id: movingpandas-trajectory-add-distance
+kind: implementation
+name: Trajectory.add_distance
+software: movingpandas
+call: {interface: python, name: movingpandas.Trajectory.add_distance}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  overwrite: {type: boolean, default: false}
+  name: {type: string, default: distance}
+  units: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

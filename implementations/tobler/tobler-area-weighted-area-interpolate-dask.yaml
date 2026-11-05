@@ -1,0 +1,16 @@
+id: tobler-area-weighted-area-interpolate-dask
+kind: implementation
+name: tobler.area_weighted.area_interpolate_dask
+software: tobler
+call: {interface: python, name: tobler.area_weighted.area_interpolate_dask}
+harvest: {harvester: python-packages, engine_version: 0.14.0}
+parameters:
+  source_dgdf: {type: any, required: true}
+  target_dgdf: {type: any, required: true}
+  id_col: {type: any, required: true}
+  extensive_variables: {type: any}
+  intensive_variables: {type: any}
+  categorical_variables: {type: any}
+  categorical_frequency: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

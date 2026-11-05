@@ -1,0 +1,11 @@
+id: spopt-region-azp-separate-components
+kind: implementation
+name: spopt.region.azp.separate_components
+software: spopt
+call: {interface: python, name: spopt.region.azp.separate_components}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  adj: {type: any, required: true}
+  labels: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

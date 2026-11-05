@@ -1,0 +1,13 @@
+id: topojson-utils-toposimpquant
+kind: implementation
+name: topojson.utils.toposimpquant
+software: topojson
+call: {interface: python, name: topojson.utils.toposimpquant}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  epsilon: {type: any, required: true}
+  quant: {type: any, required: true}
+  algo: {type: any, required: true}
+  topo: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

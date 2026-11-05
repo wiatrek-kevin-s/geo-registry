@@ -1,0 +1,10 @@
+id: movingpandas-trajectory-to-crs
+kind: implementation
+name: Trajectory.to_crs
+software: movingpandas
+call: {interface: python, name: movingpandas.Trajectory.to_crs}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  crs: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

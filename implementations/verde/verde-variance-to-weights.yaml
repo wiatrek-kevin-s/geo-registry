@@ -1,0 +1,12 @@
+id: verde-variance-to-weights
+kind: implementation
+name: verde.variance_to_weights
+software: verde
+call: {interface: python, name: verde.variance_to_weights}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  variance: {type: any, required: true}
+  tol: {type: number, default: 1.0e-15}
+  dtype: {type: string, default: float64}
+status: active
+review: {state: harvested, source: python-packages}

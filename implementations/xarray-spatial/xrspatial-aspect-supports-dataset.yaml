@@ -1,0 +1,10 @@
+id: xrspatial-aspect-supports-dataset
+kind: implementation
+name: xrspatial.aspect.supports_dataset
+software: xarray-spatial
+call: {interface: python, name: xrspatial.aspect.supports_dataset}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  func: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

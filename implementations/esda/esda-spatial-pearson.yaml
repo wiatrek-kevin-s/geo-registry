@@ -1,0 +1,12 @@
+id: esda-spatial-pearson
+kind: implementation
+name: esda.Spatial_Pearson
+software: esda
+call: {interface: python, name: esda.Spatial_Pearson}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  connectivity: {type: any}
+  permutations: {type: integer, default: 999}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

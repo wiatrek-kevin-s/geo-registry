@@ -1,0 +1,11 @@
+id: pdal-options
+kind: implementation
+name: pdal.options
+software: pdal-python-bindings
+call: {interface: python, name: pdal.options}
+harvest: {harvester: python-packages, engine_version: 3.5.5}
+parameters:
+  pdal: {type: str, required: true}
+  stage: {type: str, required: true}
+status: active
+review: {state: harvested, source: python-packages}

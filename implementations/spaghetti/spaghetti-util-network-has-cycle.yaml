@@ -1,0 +1,10 @@
+id: spaghetti-util-network-has-cycle
+kind: implementation
+name: spaghetti.util.network_has_cycle
+software: spaghetti
+call: {interface: python, name: spaghetti.util.network_has_cycle}
+harvest: {harvester: python-packages, engine_version: 1.7.6}
+parameters:
+  adjacency: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

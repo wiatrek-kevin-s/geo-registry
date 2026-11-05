@@ -1,0 +1,10 @@
+id: fiona-model-decode-object
+kind: implementation
+name: fiona.model.decode_object
+software: fiona
+call: {interface: python, name: fiona.model.decode_object}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  obj: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

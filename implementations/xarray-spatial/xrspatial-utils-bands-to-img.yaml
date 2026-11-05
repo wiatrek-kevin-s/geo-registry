@@ -1,0 +1,13 @@
+id: xrspatial-utils-bands-to-img
+kind: implementation
+name: xrspatial.utils.bands_to_img
+software: xarray-spatial
+call: {interface: python, name: xrspatial.utils.bands_to_img}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  r: {type: any, required: true}
+  g: {type: any, required: true}
+  b: {type: any, required: true}
+  nodata: {type: integer, default: 1}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,10 @@
+id: pointpats-hull
+kind: implementation
+name: pointpats.hull
+software: pointpats
+call: {interface: python, name: pointpats.hull}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  points: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

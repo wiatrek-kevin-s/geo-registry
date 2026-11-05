@@ -1,0 +1,11 @@
+id: pandana-utils-adjacency-matrix
+kind: implementation
+name: pandana.utils.adjacency_matrix
+software: pandana
+call: {interface: python, name: pandana.utils.adjacency_matrix}
+harvest: {harvester: python-packages, engine_version: '0.8'}
+parameters:
+  edges_df: {type: any, required: true}
+  plot_matrix: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

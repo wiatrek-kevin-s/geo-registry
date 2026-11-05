@@ -1,0 +1,10 @@
+id: pykrige-core-calcq1
+kind: implementation
+name: pykrige.core.calcQ1
+software: pykrige
+call: {interface: python, name: pykrige.core.calcQ1}
+harvest: {harvester: python-packages, engine_version: 1.7.3}
+parameters:
+  epsilon: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

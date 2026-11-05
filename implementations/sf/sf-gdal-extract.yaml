@@ -1,0 +1,12 @@
+id: sf-gdal-extract
+kind: implementation
+name: sf::gdal_extract
+software: sf
+call: {interface: r, name: 'sf::gdal_extract'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  f: {type: any, required: true}
+  pts: {type: any, required: true}
+  resampling: {type: any, default: 'c("nearest", "bilinear", "cubic", "cubicspline")'}
+status: active
+review: {state: harvested, source: r-packages}

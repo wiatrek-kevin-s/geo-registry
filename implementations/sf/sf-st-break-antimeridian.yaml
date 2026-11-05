@@ -1,0 +1,13 @@
+id: sf-st-break-antimeridian
+kind: implementation
+name: sf::st_break_antimeridian
+software: sf
+call: {interface: r, name: 'sf::st_break_antimeridian'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  x: {type: any, required: true}
+  lon_0: {type: any, default: '0'}
+  tol: {type: any, default: 1e-04}
+  '...': {type: dots, note: further arguments passed on}
+status: active
+review: {state: harvested, source: r-packages}

@@ -1,0 +1,14 @@
+id: turf-collect
+kind: implementation
+name: turf.collect
+software: turf-js
+call: {interface: js, name: turf.collect}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  polygons: {type: FeatureCollection<Polygon>, required: true}
+  points: {type: FeatureCollection<Point>, required: true}
+  inProperty: {type: string, required: true}
+  outProperty: {type: string, required: true}
+notes: From @turf/collect.
+status: active
+review: {state: harvested, source: turf}

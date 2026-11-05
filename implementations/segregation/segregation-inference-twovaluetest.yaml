@@ -1,0 +1,18 @@
+id: segregation-inference-twovaluetest
+kind: implementation
+name: segregation.inference.TwoValueTest
+software: segregation
+call: {interface: python, name: segregation.inference.TwoValueTest}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  seg_class_1: {type: any, required: true}
+  seg_class_2: {type: any, required: true}
+  iterations_under_null: {type: integer, default: 500}
+  null_approach: {type: string, default: random_label}
+  n_jobs: {type: integer, default: -1}
+  backend: {type: string, default: loky}
+  index_kwargs_1: {type: any}
+  index_kwargs_2: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

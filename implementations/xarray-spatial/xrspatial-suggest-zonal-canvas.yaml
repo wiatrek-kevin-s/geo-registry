@@ -1,0 +1,14 @@
+id: xrspatial-suggest-zonal-canvas
+kind: implementation
+name: xrspatial.suggest_zonal_canvas
+software: xarray-spatial
+call: {interface: python, name: xrspatial.suggest_zonal_canvas}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  smallest_area: {type: 'Union[int, float]', required: true}
+  x_range: {type: 'Union[tuple, list]', required: true}
+  y_range: {type: 'Union[tuple, list]', required: true}
+  crs: {type: str, default: Mercator}
+  min_pixels: {type: int, default: 25}
+status: active
+review: {state: harvested, source: python-packages}

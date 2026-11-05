@@ -1,0 +1,15 @@
+id: sf-st-covered-by
+kind: implementation
+name: sf::st_covered_by
+software: sf
+call: {interface: r, name: 'sf::st_covered_by'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, default: x}
+  sparse: {type: any, default: 'TRUE'}
+  prepared: {type: any, default: 'TRUE'}
+  '...': {type: dots, note: further arguments passed on}
+  model: {type: any, default: '"closed"'}
+status: active
+review: {state: harvested, source: r-packages}

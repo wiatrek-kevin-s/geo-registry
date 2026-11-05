@@ -1,0 +1,10 @@
+id: sf-gdal-inv-geotransform
+kind: implementation
+name: sf::gdal_inv_geotransform
+software: sf
+call: {interface: r, name: 'sf::gdal_inv_geotransform'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  gt: {type: any, required: true}
+status: active
+review: {state: harvested, source: r-packages}

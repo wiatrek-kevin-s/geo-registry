@@ -1,0 +1,11 @@
+id: spaghetti-util-compute-length
+kind: implementation
+name: spaghetti.util.compute_length
+software: spaghetti
+call: {interface: python, name: spaghetti.util.compute_length}
+harvest: {harvester: python-packages, engine_version: 1.7.6}
+parameters:
+  v0: {type: any, required: true}
+  v1: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

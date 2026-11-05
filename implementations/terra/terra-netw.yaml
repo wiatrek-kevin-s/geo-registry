@@ -1,0 +1,20 @@
+id: terra-netw
+kind: implementation
+name: terra::netw
+software: terra
+call: {interface: r, name: 'terra::netw'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  snap: {type: any, default: '0'}
+  merge: {type: any, default: 'TRUE'}
+  directed: {type: any, default: 'FALSE'}
+  weights: {type: any, default: 'TRUE'}
+  x_attr: {type: any, default: '"x"'}
+  y_attr: {type: any, default: '"y"'}
+  weight_attr: {type: any, default: '"weight"'}
+  crs: {type: any, default: 'NULL'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

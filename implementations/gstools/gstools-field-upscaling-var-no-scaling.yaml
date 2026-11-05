@@ -1,0 +1,10 @@
+id: gstools-field-upscaling-var-no-scaling
+kind: implementation
+name: gstools.field.upscaling.var_no_scaling
+software: gstools
+call: {interface: python, name: gstools.field.upscaling.var_no_scaling}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  model: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

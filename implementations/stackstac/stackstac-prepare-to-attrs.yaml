@@ -1,0 +1,10 @@
+id: stackstac-prepare-to-attrs
+kind: implementation
+name: stackstac.prepare.to_attrs
+software: stackstac
+call: {interface: python, name: stackstac.prepare.to_attrs}
+harvest: {harvester: python-packages, engine_version: 0.5.1}
+parameters:
+  spec: {type: RasterSpec, required: true}
+status: active
+review: {state: harvested, source: python-packages}

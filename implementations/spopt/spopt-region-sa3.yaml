@@ -1,0 +1,15 @@
+id: spopt-region-sa3
+kind: implementation
+name: spopt.region.SA3
+software: spopt
+call: {interface: python, name: spopt.region.SA3}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  gdf: {type: any, required: true}
+  w: {type: any, required: true}
+  attrs_name: {type: any, required: true}
+  min_cluster_size: {type: integer, default: 15}
+  extraction: {type: string, default: eom}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,14 @@
+id: momepy-morphological-tessellation
+kind: implementation
+name: momepy.morphological_tessellation
+software: momepy
+call: {interface: python, name: momepy.morphological_tessellation}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  geometry: {type: any, required: true}
+  clip: {type: string, default: bounding_box}
+  shrink: {type: float, default: 0.4}
+  segment: {type: float, default: 0.5}
+  simplify: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

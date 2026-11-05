@@ -1,0 +1,10 @@
+id: skgstat-util-cross-validation-aic
+kind: implementation
+name: skgstat.util.cross_validation.aic
+software: scikit-gstat
+call: {interface: python, name: skgstat.util.cross_validation.aic}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  variogram: {type: Variogram, required: true}
+status: active
+review: {state: harvested, source: python-packages}

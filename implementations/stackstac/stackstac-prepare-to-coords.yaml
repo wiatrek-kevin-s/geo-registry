@@ -1,0 +1,15 @@
+id: stackstac-prepare-to-coords
+kind: implementation
+name: stackstac.prepare.to_coords
+software: stackstac
+call: {interface: python, name: stackstac.prepare.to_coords}
+harvest: {harvester: python-packages, engine_version: 0.5.1}
+parameters:
+  items: {type: ItemSequence, required: true}
+  asset_ids: {type: 'List[str]', required: true}
+  spec: {type: RasterSpec, required: true}
+  xy_coords: {type: 'Literal[''center'', ''topleft'', False]', default: topleft}
+  properties: {type: 'Union[bool, str, Sequence[str]]', default: true}
+  band_coords: {type: bool, default: true}
+status: active
+review: {state: harvested, source: python-packages}

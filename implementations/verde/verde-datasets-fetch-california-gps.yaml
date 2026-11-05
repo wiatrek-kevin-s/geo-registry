@@ -1,0 +1,9 @@
+id: verde-datasets-fetch-california-gps
+kind: implementation
+name: verde.datasets.fetch_california_gps
+software: verde
+call: {interface: python, name: verde.datasets.fetch_california_gps}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

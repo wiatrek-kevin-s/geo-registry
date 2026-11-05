@@ -1,0 +1,16 @@
+id: gstools-field-field
+kind: implementation
+name: gstools.field.Field
+software: gstools
+call: {interface: python, name: gstools.field.Field}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  model: {type: any}
+  value_type: {type: string, default: scalar}
+  mean: {type: any}
+  normalizer: {type: any}
+  trend: {type: any}
+  dim: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

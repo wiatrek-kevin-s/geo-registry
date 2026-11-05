@@ -1,0 +1,20 @@
+id: sf-gdal-polygonize
+kind: implementation
+name: sf::gdal_polygonize
+software: sf
+call: {interface: r, name: 'sf::gdal_polygonize'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  x: {type: any, required: true}
+  mask: {type: any, default: 'NULL'}
+  file: {type: any, default: tempfile()}
+  driver: {type: any, default: '"GTiff"'}
+  use_integer: {type: any, default: 'TRUE'}
+  geotransform: {type: any, required: true}
+  breaks: {type: any, default: 'pretty(na.omit(as.vector(x[[1]])))'}
+  use_contours: {type: any, default: 'FALSE'}
+  contour_lines: {type: any, default: 'FALSE'}
+  connect8: {type: any, default: 'FALSE'}
+  '...': {type: dots, note: further arguments passed on}
+status: active
+review: {state: harvested, source: r-packages}

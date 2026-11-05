@@ -1,0 +1,10 @@
+id: momepy-equivalent-rectangular-index
+kind: implementation
+name: momepy.equivalent_rectangular_index
+software: momepy
+call: {interface: python, name: momepy.equivalent_rectangular_index}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  geometry: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

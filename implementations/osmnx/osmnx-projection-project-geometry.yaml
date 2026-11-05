@@ -1,0 +1,13 @@
+id: osmnx-projection-project-geometry
+kind: implementation
+name: osmnx.projection.project_geometry
+software: osmnx
+call: {interface: python, name: osmnx.projection.project_geometry}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  geom: {type: Geometry, required: true}
+  crs: {type: Any | None}
+  to_crs: {type: Any | None}
+  to_latlong: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

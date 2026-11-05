@@ -1,0 +1,9 @@
+id: pyproj-datadir-get-data-dir
+kind: implementation
+name: pyproj.datadir.get_data_dir
+software: pyproj
+call: {interface: python, name: pyproj.datadir.get_data_dir}
+harvest: {harvester: python-packages, engine_version: 3.8.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

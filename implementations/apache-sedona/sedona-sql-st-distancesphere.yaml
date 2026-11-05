@@ -1,0 +1,12 @@
+id: sedona-sql-st-distancesphere
+kind: implementation
+name: sedona.sql.ST_DistanceSphere
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_DistanceSphere}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  a: {type: Union, required: true}
+  b: {type: Union, required: true}
+  radius: {type: Union, default: 6371008.0}
+status: active
+review: {state: harvested, source: python-packages}

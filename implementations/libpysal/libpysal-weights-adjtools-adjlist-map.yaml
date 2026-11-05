@@ -1,0 +1,16 @@
+id: libpysal-weights-adjtools-adjlist-map
+kind: implementation
+name: libpysal.weights.adjtools.adjlist_map
+software: libpysal
+call: {interface: python, name: libpysal.weights.adjtools.adjlist_map}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  data: {type: any, required: true}
+  funcs: {type: any, note: 'default (<ufunc ''subtract''>,)'}
+  W: {type: any}
+  alist: {type: any}
+  focal_col: {type: string, default: focal}
+  neighbor_col: {type: string, default: neighbor}
+  to_adjlist_kws: {type: any, note: 'default {''drop_islands'': None}'}
+status: active
+review: {state: harvested, source: python-packages}

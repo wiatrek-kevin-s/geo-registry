@@ -1,0 +1,9 @@
+id: rasterio-env-env-ctx-if-needed
+kind: implementation
+name: rasterio.env.env_ctx_if_needed
+software: rasterio
+call: {interface: python, name: rasterio.env.env_ctx_if_needed}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

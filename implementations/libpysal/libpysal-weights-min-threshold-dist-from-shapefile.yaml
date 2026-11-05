@@ -1,0 +1,12 @@
+id: libpysal-weights-min-threshold-dist-from-shapefile
+kind: implementation
+name: libpysal.weights.min_threshold_dist_from_shapefile
+software: libpysal
+call: {interface: python, name: libpysal.weights.min_threshold_dist_from_shapefile}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  shapefile: {type: any, required: true}
+  radius: {type: any}
+  p: {type: integer, default: 2}
+status: active
+review: {state: harvested, source: python-packages}

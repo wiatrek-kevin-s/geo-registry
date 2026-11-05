@@ -1,0 +1,15 @@
+id: libpysal-weights-adjtools-adjlist-apply
+kind: implementation
+name: libpysal.weights.adjtools.adjlist_apply
+software: libpysal
+call: {interface: python, name: libpysal.weights.adjtools.adjlist_apply}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  X: {type: any, required: true}
+  W: {type: any}
+  alist: {type: any}
+  func: {type: any, note: default numpy.subtract}
+  skip_verify: {type: boolean, default: false}
+  to_adjlist_kws: {type: any, note: 'default {''drop_islands'': None}'}
+status: active
+review: {state: harvested, source: python-packages}

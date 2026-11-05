@@ -1,0 +1,12 @@
+id: xrspatial-osavi
+kind: implementation
+name: xrspatial.osavi
+software: xarray-spatial
+call: {interface: python, name: xrspatial.osavi}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  nir_agg: {type: xr.DataArray, required: true}
+  red_agg: {type: xr.DataArray, required: true}
+  name: {type: string, default: osavi}
+status: active
+review: {state: harvested, source: python-packages}

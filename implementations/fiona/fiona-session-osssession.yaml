@@ -1,0 +1,13 @@
+id: fiona-session-osssession
+kind: implementation
+name: fiona.session.OSSSession
+software: fiona
+call: {interface: python, name: fiona.session.OSSSession}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  oss_access_key_id: {type: any}
+  oss_secret_access_key: {type: any}
+  oss_endpoint: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

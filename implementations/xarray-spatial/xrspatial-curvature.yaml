@@ -1,0 +1,12 @@
+id: xrspatial-curvature
+kind: implementation
+name: xrspatial.curvature
+software: xarray-spatial
+call: {interface: python, name: xrspatial.curvature}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: xr.DataArray, required: true}
+  name: {type: 'Optional[str]', default: curvature}
+  boundary: {type: str, default: nan}
+status: active
+review: {state: harvested, source: python-packages}

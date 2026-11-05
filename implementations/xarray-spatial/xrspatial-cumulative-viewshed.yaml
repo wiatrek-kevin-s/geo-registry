@@ -1,0 +1,14 @@
+id: xrspatial-cumulative-viewshed
+kind: implementation
+name: xrspatial.cumulative_viewshed
+software: xarray-spatial
+call: {interface: python, name: xrspatial.cumulative_viewshed}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  raster: {type: DataArray, required: true}
+  observers: {type: list, required: true}
+  target_elev: {type: float, default: 0}
+  max_distance: {type: float}
+  name: {type: Optional, default: cumulative_viewshed}
+status: active
+review: {state: harvested, source: python-packages}

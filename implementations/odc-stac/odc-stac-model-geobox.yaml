@@ -1,0 +1,13 @@
+id: odc-stac-model-geobox
+kind: implementation
+name: odc.stac.model.GeoBox
+software: odc-stac
+call: {interface: python, name: odc.stac.model.GeoBox}
+harvest: {harvester: python-packages, engine_version: 0.5.3}
+parameters:
+  shape: {type: SomeShape, required: true}
+  affine: {type: Affine, required: true}
+  crs: {type: MaybeCRS, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

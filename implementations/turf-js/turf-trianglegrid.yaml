@@ -1,0 +1,16 @@
+id: turf-trianglegrid
+kind: implementation
+name: turf.triangleGrid
+software: turf-js
+call: {interface: js, name: turf.triangleGrid}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  bbox: {type: BBox, required: true}
+  cellSide: {type: number, required: true}
+  options: {type: '{ units?: Units; properties?: P; mask?: Feature<Polygon>; }'}
+  options.units: {type: Units, note: field of options}
+  options.properties: {type: P, note: field of options}
+  options.mask: {type: Feature<Polygon>, note: field of options}
+notes: From @turf/triangle-grid.
+status: active
+review: {state: harvested, source: turf}

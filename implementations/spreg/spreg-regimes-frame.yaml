@@ -1,0 +1,17 @@
+id: spreg-regimes-frame
+kind: implementation
+name: spreg.Regimes_Frame
+software: spreg
+call: {interface: python, name: spreg.Regimes_Frame}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  x: {type: any, required: true}
+  regimes: {type: any, required: true}
+  constant_regi: {type: any, required: true}
+  cols2regi: {type: any, required: true}
+  names: {type: any}
+  yend: {type: boolean, default: false}
+  rlist: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

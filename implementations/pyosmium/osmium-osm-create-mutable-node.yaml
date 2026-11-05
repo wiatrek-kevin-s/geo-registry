@@ -1,0 +1,10 @@
+id: osmium-osm-create-mutable-node
+kind: implementation
+name: osmium.osm.create_mutable_node
+software: pyosmium
+call: {interface: python, name: osmium.osm.create_mutable_node}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters:
+  node: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

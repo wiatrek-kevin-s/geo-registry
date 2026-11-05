@@ -1,0 +1,12 @@
+id: giddy-plotting-dynamic-lisa-rose
+kind: implementation
+name: giddy.plotting.dynamic_lisa_rose
+software: giddy
+call: {interface: python, name: giddy.plotting.dynamic_lisa_rose}
+harvest: {harvester: python-packages, engine_version: 2.3.9}
+parameters:
+  rose: {type: any, required: true}
+  attribute: {type: any}
+  ax: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

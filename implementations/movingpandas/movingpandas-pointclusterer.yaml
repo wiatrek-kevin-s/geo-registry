@@ -1,0 +1,13 @@
+id: movingpandas-pointclusterer
+kind: implementation
+name: movingpandas.PointClusterer
+software: movingpandas
+call: {interface: python, name: movingpandas.PointClusterer}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  points: {type: any, required: true}
+  max_distance: {type: any, required: true}
+  is_latlon: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

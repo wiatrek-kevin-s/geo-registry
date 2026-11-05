@@ -1,0 +1,11 @@
+id: osmnx-stats-intersection-count
+kind: implementation
+name: osmnx.stats.intersection_count
+software: osmnx
+call: {interface: python, name: osmnx.stats.intersection_count}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  G: {type: nx.MultiDiGraph, required: true}
+  min_streets: {type: int, default: 2}
+status: active
+review: {state: harvested, source: python-packages}

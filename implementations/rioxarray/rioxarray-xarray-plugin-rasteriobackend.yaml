@@ -1,0 +1,10 @@
+id: rioxarray-xarray-plugin-rasteriobackend
+kind: implementation
+name: rioxarray.xarray_plugin.RasterioBackend
+software: rioxarray
+call: {interface: python, name: rioxarray.xarray_plugin.RasterioBackend}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,13 @@
+id: momepy-mean-node-dist
+kind: implementation
+name: momepy.mean_node_dist
+software: momepy
+call: {interface: python, name: momepy.mean_node_dist}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  graph: {type: Graph, required: true}
+  name: {type: str, default: meanlen}
+  length: {type: str, default: mm_len}
+  verbose: {type: bool, default: true}
+status: active
+review: {state: harvested, source: python-packages}

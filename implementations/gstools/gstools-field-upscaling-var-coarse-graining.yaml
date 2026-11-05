@@ -1,0 +1,11 @@
+id: gstools-field-upscaling-var-coarse-graining
+kind: implementation
+name: gstools.field.upscaling.var_coarse_graining
+software: gstools
+call: {interface: python, name: gstools.field.upscaling.var_coarse_graining}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  model: {type: any, required: true}
+  point_volumes: {type: number, default: 0.0}
+status: active
+review: {state: harvested, source: python-packages}

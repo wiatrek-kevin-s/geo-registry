@@ -1,0 +1,11 @@
+id: osmium-helper-way
+kind: implementation
+name: osmium.helper.Way
+software: pyosmium
+call: {interface: python, name: osmium.helper.Way}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters:
+  cway: {type: cosm.COSMWay, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

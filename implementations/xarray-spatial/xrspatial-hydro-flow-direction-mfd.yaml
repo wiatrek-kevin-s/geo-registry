@@ -1,0 +1,13 @@
+id: xrspatial-hydro-flow-direction-mfd
+kind: implementation
+name: xrspatial.hydro.flow_direction_mfd
+software: xarray-spatial
+call: {interface: python, name: xrspatial.hydro.flow_direction_mfd}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: xr.DataArray, required: true}
+  p: {type: float}
+  name: {type: str, default: flow_direction_mfd}
+  boundary: {type: str, default: nan}
+status: active
+review: {state: harvested, source: python-packages}

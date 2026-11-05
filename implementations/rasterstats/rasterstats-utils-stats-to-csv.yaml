@@ -1,0 +1,10 @@
+id: rasterstats-utils-stats-to-csv
+kind: implementation
+name: rasterstats.utils.stats_to_csv
+software: rasterstats
+call: {interface: python, name: rasterstats.utils.stats_to_csv}
+harvest: {harvester: python-packages, engine_version: 0.21.0}
+parameters:
+  stats: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

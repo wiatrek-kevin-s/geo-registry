@@ -1,0 +1,11 @@
+id: momepy-clustering
+kind: implementation
+name: momepy.clustering
+software: momepy
+call: {interface: python, name: momepy.clustering}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  graph: {type: Graph, required: true}
+  name: {type: str, default: cluster}
+status: active
+review: {state: harvested, source: python-packages}

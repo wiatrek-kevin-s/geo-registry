@@ -1,0 +1,15 @@
+id: rasterio-warp-transform-geom
+kind: implementation
+name: rasterio.warp.transform_geom
+software: rasterio
+call: {interface: python, name: rasterio.warp.transform_geom}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  src_crs: {type: any, required: true}
+  dst_crs: {type: any, required: true}
+  geom: {type: any, required: true}
+  antimeridian_cutting: {type: any}
+  antimeridian_offset: {type: any}
+  precision: {type: integer, default: -1}
+status: active
+review: {state: harvested, source: python-packages}

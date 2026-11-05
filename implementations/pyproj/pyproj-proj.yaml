@@ -1,0 +1,12 @@
+id: pyproj-proj
+kind: implementation
+name: pyproj.Proj
+software: pyproj
+call: {interface: python, name: pyproj.Proj}
+harvest: {harvester: python-packages, engine_version: 3.8.0}
+parameters:
+  projparams: {type: any}
+  preserve_units: {type: bool, default: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

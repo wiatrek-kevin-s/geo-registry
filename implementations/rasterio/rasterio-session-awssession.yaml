@@ -1,0 +1,19 @@
+id: rasterio-session-awssession
+kind: implementation
+name: rasterio.session.AWSSession
+software: rasterio
+call: {interface: python, name: rasterio.session.AWSSession}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  session: {type: any}
+  aws_unsigned: {type: any}
+  aws_access_key_id: {type: any}
+  aws_secret_access_key: {type: any}
+  aws_session_token: {type: any}
+  region_name: {type: any}
+  profile_name: {type: any}
+  endpoint_url: {type: any}
+  requester_pays: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

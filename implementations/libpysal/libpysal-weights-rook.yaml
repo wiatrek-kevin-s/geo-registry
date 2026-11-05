@@ -1,0 +1,11 @@
+id: libpysal-weights-rook
+kind: implementation
+name: libpysal.weights.Rook
+software: libpysal
+call: {interface: python, name: libpysal.weights.Rook}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  polygons: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

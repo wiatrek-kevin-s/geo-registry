@@ -1,0 +1,11 @@
+id: turf-difference
+kind: implementation
+name: turf.difference
+software: turf-js
+call: {interface: js, name: turf.difference}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  features: {type: FeatureCollection<Polygon | MultiPolygon>, required: true}
+notes: From @turf/difference.
+status: active
+review: {state: harvested, source: turf}

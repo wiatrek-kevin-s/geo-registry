@@ -1,0 +1,12 @@
+id: spaghetti-util-dijkstra
+kind: implementation
+name: spaghetti.util.dijkstra
+software: spaghetti
+call: {interface: python, name: spaghetti.util.dijkstra}
+harvest: {harvester: python-packages, engine_version: 1.7.6}
+parameters:
+  ntw: {type: any, required: true}
+  v0: {type: any, required: true}
+  initial_dist: {type: number, note: default inf}
+status: active
+review: {state: harvested, source: python-packages}

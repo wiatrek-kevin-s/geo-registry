@@ -1,0 +1,15 @@
+id: xrspatial-sky-view-factor
+kind: implementation
+name: xrspatial.sky_view_factor
+software: xarray-spatial
+call: {interface: python, name: xrspatial.sky_view_factor}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: xr.DataArray, required: true}
+  max_radius: {type: int, default: 10}
+  n_directions: {type: int, default: 16}
+  cellsize_x: {type: 'Optional[float]'}
+  cellsize_y: {type: 'Optional[float]'}
+  name: {type: 'Optional[str]', default: sky_view_factor}
+status: active
+review: {state: harvested, source: python-packages}

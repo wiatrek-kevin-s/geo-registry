@@ -1,0 +1,14 @@
+id: xrspatial-landforms
+kind: implementation
+name: xrspatial.landforms
+software: xarray-spatial
+call: {interface: python, name: xrspatial.landforms}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: xr.DataArray, required: true}
+  inner_radius: {type: int, default: 3}
+  outer_radius: {type: int, default: 15}
+  slope_threshold: {type: float, default: 5.0}
+  name: {type: 'Optional[str]', default: landforms}
+status: active
+review: {state: harvested, source: python-packages}

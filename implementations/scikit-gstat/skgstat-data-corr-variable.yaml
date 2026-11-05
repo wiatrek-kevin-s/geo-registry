@@ -1,0 +1,15 @@
+id: skgstat-data-corr-variable
+kind: implementation
+name: skgstat.data.corr_variable
+software: scikit-gstat
+call: {interface: python, name: skgstat.data.corr_variable}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  size: {type: int, default: 150}
+  means: {type: List, note: 'default [1.0, 1.0]'}
+  vars: {type: List}
+  cov: {type: Union}
+  coordinates: {type: ndarray}
+  seed: {type: int}
+status: active
+review: {state: harvested, source: python-packages}

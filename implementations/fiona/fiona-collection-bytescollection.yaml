@@ -1,0 +1,11 @@
+id: fiona-collection-bytescollection
+kind: implementation
+name: fiona.collection.BytesCollection
+software: fiona
+call: {interface: python, name: fiona.collection.BytesCollection}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  bytesbuf: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

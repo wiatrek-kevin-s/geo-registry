@@ -1,0 +1,11 @@
+id: spopt-region-util-raise-distance-metric-not-set
+kind: implementation
+name: spopt.region.util.raise_distance_metric_not_set
+software: spopt
+call: {interface: python, name: spopt.region.util.raise_distance_metric_not_set}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

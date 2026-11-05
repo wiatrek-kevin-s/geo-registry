@@ -1,0 +1,11 @@
+id: topojson-ops-find-duplicates
+kind: implementation
+name: topojson.ops.find_duplicates
+software: topojson
+call: {interface: python, name: topojson.ops.find_duplicates}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  segments_list: {type: any, required: true}
+  type: {type: string, default: array}
+status: active
+review: {state: harvested, source: python-packages}

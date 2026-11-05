@@ -1,0 +1,13 @@
+id: xrspatial-reproject-ellipsoidal-to-orthometric
+kind: implementation
+name: xrspatial.reproject.ellipsoidal_to_orthometric
+software: xarray-spatial
+call: {interface: python, name: xrspatial.reproject.ellipsoidal_to_orthometric}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  height: {type: any, required: true}
+  lon: {type: any, required: true}
+  lat: {type: any, required: true}
+  model: {type: string, default: EGM96}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,13 @@
+id: osmnx-add-node-elevations-google
+kind: implementation
+name: osmnx.add_node_elevations_google
+software: osmnx
+call: {interface: python, name: osmnx.add_node_elevations_google}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  G: {type: nx.MultiDiGraph, required: true}
+  api_key: {type: str | None}
+  batch_size: {type: int, default: 512}
+  pause: {type: float, default: 0}
+status: active
+review: {state: harvested, source: python-packages}

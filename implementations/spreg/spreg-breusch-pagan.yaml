@@ -1,0 +1,11 @@
+id: spreg-breusch-pagan
+kind: implementation
+name: spreg.breusch_pagan
+software: spreg
+call: {interface: python, name: spreg.breusch_pagan}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  reg: {type: any, required: true}
+  z: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

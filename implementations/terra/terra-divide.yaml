@@ -1,0 +1,18 @@
+id: terra-divide
+kind: implementation
+name: terra::divide
+software: terra
+call: {interface: r, name: 'terra::divide'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  n: {type: any, default: '2'}
+  start: {type: any, default: '"ns"'}
+  as.raster: {type: any, default: 'FALSE'}
+  na.rm: {type: any, default: 'TRUE'}
+  w: {type: any, default: 'NULL'}
+  alpha: {type: any, default: '1'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

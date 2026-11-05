@@ -1,0 +1,20 @@
+id: odc-stac-rasterloadparams
+kind: implementation
+name: odc.stac.RasterLoadParams
+software: odc-stac
+call: {interface: python, name: odc.stac.RasterLoadParams}
+harvest: {harvester: python-packages, engine_version: 0.5.3}
+parameters:
+  dtype: {type: str | None}
+  fill_value: {type: float | None}
+  src_nodata_fallback: {type: float | None}
+  src_nodata_override: {type: float | None}
+  use_overviews: {type: bool, default: true}
+  resampling: {type: str, default: nearest}
+  fail_on_error: {type: bool, default: true}
+  dims: {type: 'tuple[str, ...]', note: default ()}
+  meta: {type: RasterBandMetadata | None}
+  fuser_fqn: {type: str | None}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

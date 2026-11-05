@@ -1,0 +1,17 @@
+id: rasterio-features-dataset-features
+kind: implementation
+name: rasterio.features.dataset_features
+software: rasterio
+call: {interface: python, name: rasterio.features.dataset_features}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  src: {type: any, required: true}
+  bidx: {type: any}
+  sampling: {type: integer, default: 1}
+  band: {type: boolean, default: true}
+  as_mask: {type: boolean, default: false}
+  with_nodata: {type: boolean, default: false}
+  geographic: {type: boolean, default: true}
+  precision: {type: integer, default: -1}
+status: active
+review: {state: harvested, source: python-packages}

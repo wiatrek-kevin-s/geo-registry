@@ -1,0 +1,10 @@
+id: rasterio-sample-sort-xy
+kind: implementation
+name: rasterio.sample.sort_xy
+software: rasterio
+call: {interface: python, name: rasterio.sample.sort_xy}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  xy: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

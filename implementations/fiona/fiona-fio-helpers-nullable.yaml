@@ -1,0 +1,11 @@
+id: fiona-fio-helpers-nullable
+kind: implementation
+name: fiona.fio.helpers.nullable
+software: fiona
+call: {interface: python, name: fiona.fio.helpers.nullable}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  val: {type: any, required: true}
+  cast: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

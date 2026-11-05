@@ -1,0 +1,12 @@
+id: turf-midpoint
+kind: implementation
+name: turf.midpoint
+software: turf-js
+call: {interface: js, name: turf.midpoint}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  point1: {type: Coord, required: true}
+  point2: {type: Coord, required: true}
+notes: From @turf/midpoint.
+status: active
+review: {state: harvested, source: turf}

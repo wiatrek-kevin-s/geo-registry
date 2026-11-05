@@ -1,0 +1,12 @@
+id: libpysal-cg-shapely-ext-almost-equals
+kind: implementation
+name: libpysal.cg.shapely_ext.almost_equals
+software: libpysal
+call: {interface: python, name: libpysal.cg.shapely_ext.almost_equals}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  shape: {type: any, required: true}
+  other: {type: any, required: true}
+  decimal: {type: integer, default: 6}
+status: active
+review: {state: harvested, source: python-packages}

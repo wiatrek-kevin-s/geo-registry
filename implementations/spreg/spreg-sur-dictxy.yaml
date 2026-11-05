@@ -1,0 +1,14 @@
+id: spreg-sur-dictxy
+kind: implementation
+name: spreg.sur_dictxy
+software: spreg
+call: {interface: python, name: spreg.sur_dictxy}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  db: {type: any, required: true}
+  y_vars: {type: any, required: true}
+  x_vars: {type: any, required: true}
+  space_id: {type: any}
+  time_id: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

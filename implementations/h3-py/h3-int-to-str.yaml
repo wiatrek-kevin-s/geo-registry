@@ -1,0 +1,10 @@
+id: h3-int-to-str
+kind: implementation
+name: h3.int_to_str
+software: h3-py
+call: {interface: python, name: h3.int_to_str}
+harvest: {harvester: python-packages, engine_version: 4.5.0}
+parameters:
+  x: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

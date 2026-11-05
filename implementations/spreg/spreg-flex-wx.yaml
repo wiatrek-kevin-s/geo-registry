@@ -1,0 +1,17 @@
+id: spreg-flex-wx
+kind: implementation
+name: spreg.flex_wx
+software: spreg
+call: {interface: python, name: spreg.flex_wx}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  w: {type: any, required: true}
+  x: {type: any, required: true}
+  name_x: {type: any, required: true}
+  constant: {type: boolean, default: true}
+  slx_lags: {type: integer, default: 1}
+  slx_vars: {type: string, default: All}
+  panel: {type: boolean, default: false}
+  q_lags: {type: integer, default: 0}
+status: active
+review: {state: harvested, source: python-packages}

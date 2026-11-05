@@ -1,0 +1,11 @@
+id: sedona-sql-st-geomcollfromtext
+kind: implementation
+name: sedona.sql.ST_GeomCollFromText
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_GeomCollFromText}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  wkt: {type: Union, required: true}
+  srid: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

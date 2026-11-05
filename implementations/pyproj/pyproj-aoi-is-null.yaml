@@ -1,0 +1,10 @@
+id: pyproj-aoi-is-null
+kind: implementation
+name: pyproj.aoi.is_null
+software: pyproj
+call: {interface: python, name: pyproj.aoi.is_null}
+harvest: {harvester: python-packages, engine_version: 3.8.0}
+parameters:
+  value: {type: Any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

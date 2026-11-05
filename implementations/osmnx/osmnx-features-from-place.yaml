@@ -1,0 +1,12 @@
+id: osmnx-features-from-place
+kind: implementation
+name: osmnx.features_from_place
+software: osmnx
+call: {interface: python, name: osmnx.features_from_place}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  query: {type: 'str | dict[str, str] | list[str | dict[str, str]]', required: true}
+  tags: {type: 'dict[str, bool | str | list[str]]', required: true}
+  which_result: {type: 'int | None | list[int | None]'}
+status: active
+review: {state: harvested, source: python-packages}

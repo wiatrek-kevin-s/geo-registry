@@ -1,0 +1,10 @@
+id: sedona-sql-st-s2togeom
+kind: implementation
+name: sedona.sql.ST_S2ToGeom
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_S2ToGeom}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  cells: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

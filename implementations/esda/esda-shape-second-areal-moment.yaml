@@ -1,0 +1,10 @@
+id: esda-shape-second-areal-moment
+kind: implementation
+name: esda.shape.second_areal_moment
+software: esda
+call: {interface: python, name: esda.shape.second_areal_moment}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  collection: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

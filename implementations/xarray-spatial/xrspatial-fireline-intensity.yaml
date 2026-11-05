@@ -1,0 +1,14 @@
+id: xrspatial-fireline-intensity
+kind: implementation
+name: xrspatial.fireline_intensity
+software: xarray-spatial
+call: {interface: python, name: xrspatial.fireline_intensity}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  fuel_consumed_agg: {type: xr.DataArray, required: true}
+  spread_rate_agg: {type: xr.DataArray, required: true}
+  heat_content: {type: float, default: 18000.0}
+  spread_rate_units: {type: str, default: m/min}
+  name: {type: str, default: fireline_intensity}
+status: active
+review: {state: harvested, source: python-packages}

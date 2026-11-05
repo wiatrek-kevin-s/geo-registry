@@ -1,0 +1,11 @@
+id: pykrige-core-calc-cr
+kind: implementation
+name: pykrige.core.calc_cR
+software: pykrige
+call: {interface: python, name: pykrige.core.calc_cR}
+harvest: {harvester: python-packages, engine_version: 1.7.3}
+parameters:
+  Q2: {type: any, required: true}
+  sigma: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

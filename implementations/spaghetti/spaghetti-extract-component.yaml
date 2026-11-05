@@ -1,0 +1,12 @@
+id: spaghetti-extract-component
+kind: implementation
+name: spaghetti.extract_component
+software: spaghetti
+call: {interface: python, name: spaghetti.extract_component}
+harvest: {harvester: python-packages, engine_version: 1.7.6}
+parameters:
+  net: {type: any, required: true}
+  component_id: {type: any, required: true}
+  weightings: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

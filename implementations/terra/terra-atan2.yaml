@@ -1,0 +1,12 @@
+id: terra-atan2
+kind: implementation
+name: terra::atan2
+software: terra
+call: {interface: r, name: 'terra::atan2'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  y: {type: any, required: true}
+  x: {type: any, required: true}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

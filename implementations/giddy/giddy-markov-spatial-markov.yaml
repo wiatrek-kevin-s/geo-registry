@@ -1,0 +1,21 @@
+id: giddy-markov-spatial-markov
+kind: implementation
+name: giddy.markov.Spatial_Markov
+software: giddy
+call: {interface: python, name: giddy.markov.Spatial_Markov}
+harvest: {harvester: python-packages, engine_version: 2.3.9}
+parameters:
+  y: {type: any, required: true}
+  w: {type: any, required: true}
+  k: {type: integer, default: 4}
+  m: {type: integer, default: 4}
+  permutations: {type: integer, default: 0}
+  fixed: {type: boolean, default: true}
+  discrete: {type: boolean, default: false}
+  cutoffs: {type: any}
+  lag_cutoffs: {type: any}
+  variable_name: {type: any}
+  fill_empty_classes: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

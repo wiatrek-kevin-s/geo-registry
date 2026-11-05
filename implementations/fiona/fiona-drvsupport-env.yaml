@@ -1,0 +1,14 @@
+id: fiona-drvsupport-env
+kind: implementation
+name: fiona.drvsupport.Env
+software: fiona
+call: {interface: python, name: fiona.drvsupport.Env}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  session: {type: any}
+  aws_unsigned: {type: boolean, default: false}
+  profile_name: {type: any}
+  session_class: {type: any, note: default fiona.session.Session.aws_or_dummy}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

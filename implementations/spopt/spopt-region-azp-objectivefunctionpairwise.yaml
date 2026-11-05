@@ -1,0 +1,11 @@
+id: spopt-region-azp-objectivefunctionpairwise
+kind: implementation
+name: spopt.region.azp.ObjectiveFunctionPairwise
+software: spopt
+call: {interface: python, name: spopt.region.azp.ObjectiveFunctionPairwise}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  metric: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

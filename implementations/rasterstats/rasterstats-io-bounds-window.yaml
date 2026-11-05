@@ -1,0 +1,11 @@
+id: rasterstats-io-bounds-window
+kind: implementation
+name: rasterstats.io.bounds_window
+software: rasterstats
+call: {interface: python, name: rasterstats.io.bounds_window}
+harvest: {harvester: python-packages, engine_version: 0.21.0}
+parameters:
+  bounds: {type: any, required: true}
+  affine: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

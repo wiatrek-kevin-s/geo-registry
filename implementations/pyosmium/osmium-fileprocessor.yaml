@@ -1,0 +1,13 @@
+id: osmium-fileprocessor
+kind: implementation
+name: osmium.FileProcessor
+software: pyosmium
+call: {interface: python, name: osmium.FileProcessor}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters:
+  indata: {type: Union, required: true}
+  entities: {type: osm_entity_bits, note: 'default <osm_entity_bits.ALL: 31>'}
+  thread_pool: {type: Optional}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

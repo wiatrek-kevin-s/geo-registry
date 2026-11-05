@@ -1,0 +1,11 @@
+id: sedona-sql-st-split
+kind: implementation
+name: sedona.sql.ST_Split
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_Split}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  input: {type: Union, required: true}
+  blade: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

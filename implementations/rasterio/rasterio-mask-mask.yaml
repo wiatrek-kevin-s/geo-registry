@@ -1,0 +1,19 @@
+id: rasterio-mask-mask
+kind: implementation
+name: rasterio.mask.mask
+software: rasterio
+call: {interface: python, name: rasterio.mask.mask}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  dataset: {type: any, required: true}
+  shapes: {type: any, required: true}
+  all_touched: {type: boolean, default: false}
+  invert: {type: boolean, default: false}
+  nodata: {type: any}
+  filled: {type: boolean, default: true}
+  crop: {type: boolean, default: false}
+  pad: {type: boolean, default: false}
+  pad_width: {type: number, default: 0.5}
+  indexes: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

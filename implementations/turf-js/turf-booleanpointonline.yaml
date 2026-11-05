@@ -1,0 +1,15 @@
+id: turf-booleanpointonline
+kind: implementation
+name: turf.booleanPointOnLine
+software: turf-js
+call: {interface: js, name: turf.booleanPointOnLine}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  pt: {type: Coord, required: true}
+  line: {type: Feature<LineString> | LineString, required: true}
+  options: {type: '{ ignoreEndVertices?: boolean; epsilon?: number; }'}
+  options.ignoreEndVertices: {type: boolean, note: field of options}
+  options.epsilon: {type: number, note: field of options}
+notes: From @turf/boolean-point-on-line.
+status: active
+review: {state: harvested, source: turf}

@@ -1,0 +1,11 @@
+id: momepy-mean-deviation
+kind: implementation
+name: momepy.mean_deviation
+software: momepy
+call: {interface: python, name: momepy.mean_deviation}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  y: {type: Series, required: true}
+  graph: {type: Graph, required: true}
+status: active
+review: {state: harvested, source: python-packages}

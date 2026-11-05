@@ -1,0 +1,14 @@
+id: libpysal-weights-higher-order-sp
+kind: implementation
+name: libpysal.weights.higher_order_sp
+software: libpysal
+call: {interface: python, name: libpysal.weights.higher_order_sp}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  w: {type: any, required: true}
+  k: {type: integer, default: 2}
+  shortest_path: {type: boolean, default: true}
+  diagonal: {type: boolean, default: false}
+  lower_order: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

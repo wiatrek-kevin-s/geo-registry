@@ -1,0 +1,15 @@
+id: giddy-sequence-sequence
+kind: implementation
+name: giddy.sequence.Sequence
+software: giddy
+call: {interface: python, name: giddy.sequence.Sequence}
+harvest: {harvester: python-packages, engine_version: 2.3.9}
+parameters:
+  y: {type: any, required: true}
+  subs_mat: {type: any}
+  dist_type: {type: any}
+  indel: {type: any}
+  cluster_type: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

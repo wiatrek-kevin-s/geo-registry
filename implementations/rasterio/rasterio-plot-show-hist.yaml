@@ -1,0 +1,16 @@
+id: rasterio-plot-show-hist
+kind: implementation
+name: rasterio.plot.show_hist
+software: rasterio
+call: {interface: python, name: rasterio.plot.show_hist}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  source: {type: any, required: true}
+  bins: {type: integer, default: 10}
+  masked: {type: boolean, default: true}
+  title: {type: string, default: Histogram}
+  ax: {type: any}
+  label: {type: any}
+  range: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

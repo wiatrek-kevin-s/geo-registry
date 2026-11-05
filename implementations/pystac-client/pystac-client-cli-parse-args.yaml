@@ -1,0 +1,10 @@
+id: pystac-client-cli-parse-args
+kind: implementation
+name: pystac_client.cli.parse_args
+software: pystac-client
+call: {interface: python, name: pystac_client.cli.parse_args}
+harvest: {harvester: python-packages, engine_version: 0.9.1}
+parameters:
+  args: {type: list, required: true}
+status: active
+review: {state: harvested, source: python-packages}

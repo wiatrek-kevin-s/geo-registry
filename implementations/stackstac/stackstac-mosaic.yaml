@@ -1,0 +1,15 @@
+id: stackstac-mosaic
+kind: implementation
+name: stackstac.mosaic
+software: stackstac
+call: {interface: python, name: stackstac.mosaic}
+harvest: {harvester: python-packages, engine_version: 0.5.1}
+parameters:
+  arr: {type: xr.DataArray, required: true}
+  dim: {type: 'Union[None, Hashable]'}
+  axis: {type: 'Union[None, int]', default: 0}
+  reverse: {type: bool, default: false}
+  nodata: {type: 'Union[int, float]', note: default nan}
+  split_every: {type: 'Union[None, int]'}
+status: active
+review: {state: harvested, source: python-packages}

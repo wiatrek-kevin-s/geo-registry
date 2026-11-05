@@ -1,0 +1,10 @@
+id: libpysal-weights-shimbel
+kind: implementation
+name: libpysal.weights.shimbel
+software: libpysal
+call: {interface: python, name: libpysal.weights.shimbel}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  w: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

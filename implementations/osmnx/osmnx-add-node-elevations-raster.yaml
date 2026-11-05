@@ -1,0 +1,13 @@
+id: osmnx-add-node-elevations-raster
+kind: implementation
+name: osmnx.add_node_elevations_raster
+software: osmnx
+call: {interface: python, name: osmnx.add_node_elevations_raster}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  G: {type: nx.MultiDiGraph, required: true}
+  filepath: {type: 'str | Path | Iterable[str | Path]', required: true}
+  band: {type: int, default: 1}
+  cpus: {type: int | None}
+status: active
+review: {state: harvested, source: python-packages}

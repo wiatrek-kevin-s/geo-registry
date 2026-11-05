@@ -1,0 +1,12 @@
+id: giddy-components-check-contiguity
+kind: implementation
+name: giddy.components.check_contiguity
+software: giddy
+call: {interface: python, name: giddy.components.check_contiguity}
+harvest: {harvester: python-packages, engine_version: 2.3.9}
+parameters:
+  w: {type: any, required: true}
+  neighbors: {type: any, required: true}
+  leaver: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: xrspatial-standardize
+kind: implementation
+name: xrspatial.standardize
+software: xarray-spatial
+call: {interface: python, name: xrspatial.standardize}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: any, required: true}
+  ddof: {type: integer, default: 0}
+  name: {type: string, default: standardize}
+status: active
+review: {state: harvested, source: python-packages}

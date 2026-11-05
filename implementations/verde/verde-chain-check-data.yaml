@@ -1,0 +1,10 @@
+id: verde-chain-check-data
+kind: implementation
+name: verde.chain.check_data
+software: verde
+call: {interface: python, name: verde.chain.check_data}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  data: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

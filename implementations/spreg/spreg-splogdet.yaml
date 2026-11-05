@@ -1,0 +1,10 @@
+id: spreg-splogdet
+kind: implementation
+name: spreg.splogdet
+software: spreg
+call: {interface: python, name: spreg.splogdet}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  a: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

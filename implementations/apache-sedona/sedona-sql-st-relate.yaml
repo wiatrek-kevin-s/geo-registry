@@ -1,0 +1,12 @@
+id: sedona-sql-st-relate
+kind: implementation
+name: sedona.sql.ST_Relate
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_Relate}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  a: {type: Union, required: true}
+  b: {type: Union, required: true}
+  intersectionMatrix: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

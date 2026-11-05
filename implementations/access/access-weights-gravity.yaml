@@ -1,0 +1,12 @@
+id: access-weights-gravity
+kind: implementation
+name: access.weights.gravity
+software: access
+call: {interface: python, name: access.weights.gravity}
+harvest: {harvester: python-packages, engine_version: 1.1.10.post3}
+parameters:
+  scale: {type: any, required: true}
+  alpha: {type: any, required: true}
+  min_dist: {type: integer, default: 0}
+status: active
+review: {state: harvested, source: python-packages}

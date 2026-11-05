@@ -1,0 +1,14 @@
+id: sf-st-relate
+kind: implementation
+name: sf::st_relate
+software: sf
+call: {interface: r, name: 'sf::st_relate'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  pattern: {type: any, default: NA_character_}
+  sparse: {type: any, default: '!is.na(pattern)'}
+  '...': {type: dots, note: further arguments passed on}
+status: active
+review: {state: harvested, source: r-packages}

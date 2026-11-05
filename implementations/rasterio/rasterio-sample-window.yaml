@@ -1,0 +1,14 @@
+id: rasterio-sample-window
+kind: implementation
+name: rasterio.sample.Window
+software: rasterio
+call: {interface: python, name: rasterio.sample.Window}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  col_off: {type: any, required: true}
+  row_off: {type: any, required: true}
+  width: {type: any, required: true}
+  height: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

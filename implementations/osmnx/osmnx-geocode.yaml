@@ -1,0 +1,10 @@
+id: osmnx-geocode
+kind: implementation
+name: osmnx.geocode
+software: osmnx
+call: {interface: python, name: osmnx.geocode}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  query: {type: str, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,14 @@
+id: xrspatial-preview
+kind: implementation
+name: xrspatial.preview
+software: xarray-spatial
+call: {interface: python, name: xrspatial.preview}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: any, required: true}
+  width: {type: integer, default: 1000}
+  height: {type: any}
+  method: {type: string, default: mean}
+  name: {type: string, default: preview}
+status: active
+review: {state: harvested, source: python-packages}

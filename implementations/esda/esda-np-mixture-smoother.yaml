@@ -1,0 +1,16 @@
+id: esda-np-mixture-smoother
+kind: implementation
+name: esda.NP_Mixture_Smoother
+software: esda
+call: {interface: python, name: esda.NP_Mixture_Smoother}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  e: {type: any, required: true}
+  b: {type: any, required: true}
+  k: {type: integer, default: 50}
+  acc: {type: number, default: 1.0e-07}
+  numiter: {type: integer, default: 5000}
+  limit: {type: number, default: 0.01}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

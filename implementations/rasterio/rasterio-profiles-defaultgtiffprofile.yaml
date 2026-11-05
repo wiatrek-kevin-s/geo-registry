@@ -1,0 +1,11 @@
+id: rasterio-profiles-defaultgtiffprofile
+kind: implementation
+name: rasterio.profiles.DefaultGTiffProfile
+software: rasterio
+call: {interface: python, name: rasterio.profiles.DefaultGTiffProfile}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  data: {type: any, note: 'default {}'}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

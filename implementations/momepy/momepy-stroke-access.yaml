@@ -1,0 +1,10 @@
+id: momepy-stroke-access
+kind: implementation
+name: momepy.stroke_access
+software: momepy
+call: {interface: python, name: momepy.stroke_access}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  stroke_graph: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

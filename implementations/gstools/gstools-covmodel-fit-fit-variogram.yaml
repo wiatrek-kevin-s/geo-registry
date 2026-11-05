@@ -1,0 +1,21 @@
+id: gstools-covmodel-fit-fit-variogram
+kind: implementation
+name: gstools.covmodel.fit.fit_variogram
+software: gstools
+call: {interface: python, name: gstools.covmodel.fit.fit_variogram}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  model: {type: any, required: true}
+  x_data: {type: any, required: true}
+  y_data: {type: any, required: true}
+  anis: {type: boolean, default: true}
+  sill: {type: any}
+  init_guess: {type: string, default: default}
+  weights: {type: any}
+  method: {type: string, default: trf}
+  loss: {type: string, default: soft_l1}
+  max_eval: {type: any}
+  return_r2: {type: boolean, default: false}
+  curve_fit_kwargs: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

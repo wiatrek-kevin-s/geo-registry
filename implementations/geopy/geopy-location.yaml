@@ -1,0 +1,13 @@
+id: geopy-location
+kind: implementation
+name: geopy.Location
+software: geopy
+call: {interface: python, name: geopy.Location}
+harvest: {harvester: python-packages, engine_version: 2.5.0}
+parameters:
+  address: {type: any, required: true}
+  point: {type: any, required: true}
+  raw: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

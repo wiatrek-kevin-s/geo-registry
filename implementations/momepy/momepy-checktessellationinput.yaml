@@ -1,0 +1,15 @@
+id: momepy-checktessellationinput
+kind: implementation
+name: momepy.CheckTessellationInput
+software: momepy
+call: {interface: python, name: momepy.CheckTessellationInput}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  gdf: {type: any, required: true}
+  shrink: {type: number, default: 0.4}
+  collapse: {type: boolean, default: true}
+  split: {type: boolean, default: true}
+  overlap: {type: boolean, default: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

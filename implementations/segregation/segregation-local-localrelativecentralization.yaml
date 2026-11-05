@@ -1,0 +1,19 @@
+id: segregation-local-localrelativecentralization
+kind: implementation
+name: segregation.local.LocalRelativeCentralization
+software: segregation
+call: {interface: python, name: segregation.local.LocalRelativeCentralization}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  data: {type: any, required: true}
+  group_pop_var: {type: any}
+  total_pop_var: {type: any}
+  w: {type: any}
+  network: {type: any}
+  distance: {type: any}
+  decay: {type: any}
+  precompute: {type: any}
+  groups: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: laspy-lasreader-uncompressedpointreader
+kind: implementation
+name: laspy.lasreader.UncompressedPointReader
+software: laspy
+call: {interface: python, name: laspy.lasreader.UncompressedPointReader}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  source: {type: any, required: true}
+  header: {type: LasHeader, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

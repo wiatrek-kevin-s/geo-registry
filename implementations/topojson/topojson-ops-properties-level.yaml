@@ -1,0 +1,11 @@
+id: topojson-ops-properties-level
+kind: implementation
+name: topojson.ops.properties_level
+software: topojson
+call: {interface: python, name: topojson.ops.properties_level}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  topojson_object: {type: any, required: true}
+  position: {type: string, default: nested}
+status: active
+review: {state: harvested, source: python-packages}

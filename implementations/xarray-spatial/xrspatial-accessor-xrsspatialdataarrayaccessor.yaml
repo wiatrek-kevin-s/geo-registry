@@ -1,0 +1,11 @@
+id: xrspatial-accessor-xrsspatialdataarrayaccessor
+kind: implementation
+name: xrspatial.accessor.XrsSpatialDataArrayAccessor
+software: xarray-spatial
+call: {interface: python, name: xrspatial.accessor.XrsSpatialDataArrayAccessor}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  obj: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

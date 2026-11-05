@@ -1,0 +1,11 @@
+id: libpysal-cg-get-angle-between
+kind: implementation
+name: libpysal.cg.get_angle_between
+software: libpysal
+call: {interface: python, name: libpysal.cg.get_angle_between}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  ray1: {type: any, required: true}
+  ray2: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

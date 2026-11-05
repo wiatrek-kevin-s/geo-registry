@@ -1,0 +1,12 @@
+id: movingpandas-trajectorycollection-add-direction
+kind: implementation
+name: TrajectoryCollection.add_direction
+software: movingpandas
+call: {interface: python, name: movingpandas.TrajectoryCollection.add_direction}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  overwrite: {type: boolean, default: false}
+  name: {type: string, default: direction}
+  n_processes: {type: integer, default: 1}
+status: active
+review: {state: harvested, source: python-packages}

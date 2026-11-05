@@ -1,0 +1,23 @@
+id: spreg-stge-classic
+kind: implementation
+name: spreg.stge_classic
+software: spreg
+call: {interface: python, name: spreg.stge_classic}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  y: {type: any, required: true}
+  x: {type: any, required: true}
+  w: {type: any, required: true}
+  w_lags: {type: integer, default: 2}
+  robust: {type: any}
+  sig2n_k: {type: boolean, default: true}
+  name_y: {type: boolean, default: false}
+  name_x: {type: boolean, default: false}
+  name_w: {type: boolean, default: false}
+  name_ds: {type: boolean, default: false}
+  latex: {type: boolean, default: false}
+  p_value: {type: number, default: 0.01}
+  finmod: {type: boolean, default: true}
+  mprint: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,13 @@
+id: turf-lineslice
+kind: implementation
+name: turf.lineSlice
+software: turf-js
+call: {interface: js, name: turf.lineSlice}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  startPt: {type: Coord, required: true}
+  stopPt: {type: Coord, required: true}
+  line: {type: Feature<LineString> | LineString, required: true}
+notes: From @turf/line-slice.
+status: active
+review: {state: harvested, source: turf}

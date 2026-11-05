@@ -1,0 +1,11 @@
+id: verde-blockreduce-attach-weights
+kind: implementation
+name: verde.blockreduce.attach_weights
+software: verde
+call: {interface: python, name: verde.blockreduce.attach_weights}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  reduction: {type: any, required: true}
+  weights: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

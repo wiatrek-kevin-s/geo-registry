@@ -1,0 +1,12 @@
+id: spreg-robust-robust-vm
+kind: implementation
+name: spreg.robust.robust_vm
+software: spreg
+call: {interface: python, name: spreg.robust.robust_vm}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  reg: {type: any, required: true}
+  gwk: {type: any}
+  sig2n_k: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

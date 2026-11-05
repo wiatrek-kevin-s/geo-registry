@@ -1,0 +1,11 @@
+id: rasterio-io-get-writer-for-path
+kind: implementation
+name: rasterio.io.get_writer_for_path
+software: rasterio
+call: {interface: python, name: rasterio.io.get_writer_for_path}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  path: {type: any, required: true}
+  driver: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

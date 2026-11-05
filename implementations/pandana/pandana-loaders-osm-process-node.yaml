@@ -1,0 +1,10 @@
+id: pandana-loaders-osm-process-node
+kind: implementation
+name: pandana.loaders.osm.process_node
+software: pandana
+call: {interface: python, name: pandana.loaders.osm.process_node}
+harvest: {harvester: python-packages, engine_version: '0.8'}
+parameters:
+  e: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

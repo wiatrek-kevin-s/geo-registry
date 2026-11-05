@@ -1,0 +1,10 @@
+id: xrspatial-bump-is-cupy-array
+kind: implementation
+name: xrspatial.bump.is_cupy_array
+software: xarray-spatial
+call: {interface: python, name: xrspatial.bump.is_cupy_array}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  arr: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

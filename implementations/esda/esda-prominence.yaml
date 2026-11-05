@@ -1,0 +1,16 @@
+id: esda-prominence
+kind: implementation
+name: esda.prominence
+software: esda
+call: {interface: python, name: esda.prominence}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  X: {type: any, required: true}
+  connectivity: {type: any, required: true}
+  return_all: {type: boolean, default: false}
+  gdf: {type: any}
+  verbose: {type: boolean, default: false}
+  middle: {type: string, default: mean}
+  progressbar: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

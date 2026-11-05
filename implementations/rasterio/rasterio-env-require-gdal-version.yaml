@@ -1,0 +1,14 @@
+id: rasterio-env-require-gdal-version
+kind: implementation
+name: rasterio.env.require_gdal_version
+software: rasterio
+call: {interface: python, name: rasterio.env.require_gdal_version}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  version: {type: any, required: true}
+  param: {type: any}
+  values: {type: any}
+  is_max_version: {type: boolean, default: false}
+  reason: {type: string, default: ''}
+status: active
+review: {state: harvested, source: python-packages}

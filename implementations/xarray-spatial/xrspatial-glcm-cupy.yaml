@@ -1,0 +1,10 @@
+id: xrspatial-glcm-cupy
+kind: implementation
+name: xrspatial.glcm.cupy
+software: xarray-spatial
+call: {interface: python, name: xrspatial.glcm.cupy}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

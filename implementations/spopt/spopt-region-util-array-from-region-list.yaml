@@ -1,0 +1,10 @@
+id: spopt-region-util-array-from-region-list
+kind: implementation
+name: spopt.region.util.array_from_region_list
+software: spopt
+call: {interface: python, name: spopt.region.util.array_from_region_list}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  region_list: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

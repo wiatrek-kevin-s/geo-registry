@@ -1,0 +1,11 @@
+id: fiona-fio-cat-recursive-round
+kind: implementation
+name: fiona.fio.cat.recursive_round
+software: fiona
+call: {interface: python, name: fiona.fio.cat.recursive_round}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  obj: {type: any, required: true}
+  precision: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

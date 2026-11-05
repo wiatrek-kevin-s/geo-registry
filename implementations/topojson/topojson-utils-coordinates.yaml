@@ -1,0 +1,12 @@
+id: topojson-utils-coordinates
+kind: implementation
+name: topojson.utils.coordinates
+software: topojson
+call: {interface: python, name: topojson.utils.coordinates}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  arcs: {type: any, required: true}
+  tp_arcs: {type: any, required: true}
+  geom_type: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

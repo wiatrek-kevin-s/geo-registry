@@ -1,0 +1,14 @@
+id: xrspatial-mcda-consistencyresult
+kind: implementation
+name: xrspatial.mcda.ConsistencyResult
+software: xarray-spatial
+call: {interface: python, name: xrspatial.mcda.ConsistencyResult}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  ratio: {type: float, required: true}
+  index: {type: float, required: true}
+  is_consistent: {type: bool, required: true}
+  lambda_max: {type: float, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

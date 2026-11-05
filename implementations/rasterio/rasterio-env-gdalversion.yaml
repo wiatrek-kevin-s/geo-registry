@@ -1,0 +1,13 @@
+id: rasterio-env-gdalversion
+kind: implementation
+name: rasterio.env.GDALVersion
+software: rasterio
+call: {interface: python, name: rasterio.env.GDALVersion}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  major: {type: integer, default: 0}
+  minor: {type: integer, default: 0}
+  patch: {type: integer, default: 0}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

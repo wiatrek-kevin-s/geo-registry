@@ -1,0 +1,11 @@
+id: sedona-sql-st-longestline
+kind: implementation
+name: sedona.sql.ST_LongestLine
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_LongestLine}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geom1: {type: Union, required: true}
+  geom2: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

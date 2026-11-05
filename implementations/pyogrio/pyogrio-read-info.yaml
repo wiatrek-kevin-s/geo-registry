@@ -1,0 +1,14 @@
+id: pyogrio-read-info
+kind: implementation
+name: pyogrio.read_info
+software: pyogrio
+call: {interface: python, name: pyogrio.read_info}
+harvest: {harvester: python-packages, engine_version: 0.13.0}
+parameters:
+  path_or_buffer: {type: any, required: true}
+  layer: {type: any}
+  encoding: {type: any}
+  force_feature_count: {type: boolean, default: false}
+  force_total_bounds: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

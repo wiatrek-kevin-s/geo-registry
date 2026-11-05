@@ -1,0 +1,10 @@
+id: giddy-util-get-lower
+kind: implementation
+name: giddy.util.get_lower
+software: giddy
+call: {interface: python, name: giddy.util.get_lower}
+harvest: {harvester: python-packages, engine_version: 2.3.9}
+parameters:
+  matrix: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

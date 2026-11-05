@@ -1,0 +1,12 @@
+id: verde-datasets-setup-baja-bathymetry-map
+kind: implementation
+name: verde.datasets.setup_baja_bathymetry_map
+software: verde
+call: {interface: python, name: verde.datasets.setup_baja_bathymetry_map}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  ax: {type: any, required: true}
+  region: {type: any, note: 'default (245.0, 254.705, 20.0, 29.99)'}
+  coastlines: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

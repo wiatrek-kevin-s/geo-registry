@@ -1,0 +1,9 @@
+id: movingpandas-trajectorycollection-plot
+kind: implementation
+name: TrajectoryCollection.plot
+software: movingpandas
+call: {interface: python, name: movingpandas.TrajectoryCollection.plot}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

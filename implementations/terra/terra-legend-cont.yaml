@@ -1,0 +1,18 @@
+id: terra-legend-cont
+kind: implementation
+name: terra::legend_cont
+software: terra
+call: {interface: r, name: 'terra::legend_cont'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, default: '"right"'}
+  y: {type: any, default: 'NULL'}
+  legend: {type: any, required: true}
+  col: {type: any, required: true}
+  size: {type: any, default: 'NULL'}
+  title: {type: any, default: 'NULL'}
+  at: {type: any, default: 'NULL'}
+  digits: {type: any, default: 'NULL'}
+  '...': {type: dots, note: further arguments passed on}
+status: active
+review: {state: harvested, source: r-packages}

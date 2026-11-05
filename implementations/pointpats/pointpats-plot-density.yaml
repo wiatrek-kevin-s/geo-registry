@@ -1,0 +1,19 @@
+id: pointpats-plot-density
+kind: implementation
+name: pointpats.plot_density
+software: pointpats
+call: {interface: python, name: pointpats.plot_density}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  data: {type: any, required: true}
+  bandwidth: {type: any, required: true}
+  kernel: {type: any}
+  resolution: {type: integer, default: 100}
+  levels: {type: integer, default: 10}
+  fill: {type: boolean, default: false}
+  margin: {type: number, default: 0.1}
+  ax: {type: any}
+  figsize: {type: any}
+  return_contourset: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,13 @@
+id: xrspatial-multispectral-ebbi
+kind: implementation
+name: xrspatial.multispectral.ebbi
+software: xarray-spatial
+call: {interface: python, name: xrspatial.multispectral.ebbi}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  red_agg: {type: xr.DataArray, required: true}
+  swir_agg: {type: xr.DataArray, required: true}
+  tir_agg: {type: xr.DataArray, required: true}
+  name: {type: string, default: ebbi}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: gstools-normalizer-modulus
+kind: implementation
+name: gstools.normalizer.Modulus
+software: gstools
+call: {interface: python, name: gstools.normalizer.Modulus}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  data: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

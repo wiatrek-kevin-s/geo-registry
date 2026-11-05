@@ -1,0 +1,10 @@
+id: rasterio-features-coords
+kind: implementation
+name: rasterio.features.coords
+software: rasterio
+call: {interface: python, name: rasterio.features.coords}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  obj: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

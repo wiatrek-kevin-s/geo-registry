@@ -1,0 +1,11 @@
+id: xrspatial-mcda-ahp-weights
+kind: implementation
+name: xrspatial.mcda.ahp_weights
+software: xarray-spatial
+call: {interface: python, name: xrspatial.mcda.ahp_weights}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  criteria: {type: 'list[str]', required: true}
+  comparisons: {type: 'dict[tuple[str, str], float]', required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,9 @@
+id: pyogrio-core-gdalenv
+kind: implementation
+name: pyogrio.core.GDALEnv
+software: pyogrio
+call: {interface: python, name: pyogrio.core.GDALEnv}
+harvest: {harvester: python-packages, engine_version: 0.13.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

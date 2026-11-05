@@ -1,0 +1,19 @@
+id: spopt-locate-knearestpmedian
+kind: implementation
+name: spopt.locate.KNearestPMedian
+software: spopt
+call: {interface: python, name: spopt.locate.KNearestPMedian}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  name: {type: str, required: true}
+  ai_sum: {type: any, required: true}
+  clients: {type: array, required: true}
+  facilities: {type: array, required: true}
+  weights: {type: array, required: true}
+  k_array: {type: array, required: true}
+  p_facilities: {type: int, required: true}
+  capacities: {type: array}
+  distance_metric: {type: str, default: euclidean}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

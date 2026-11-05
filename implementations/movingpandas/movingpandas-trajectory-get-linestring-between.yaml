@@ -1,0 +1,12 @@
+id: movingpandas-trajectory-get-linestring-between
+kind: implementation
+name: Trajectory.get_linestring_between
+software: movingpandas
+call: {interface: python, name: movingpandas.Trajectory.get_linestring_between}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  t1: {type: any, required: true}
+  t2: {type: any, required: true}
+  method: {type: string, default: interpolated}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,10 @@
+id: pykrige-ck-ilr-transformation
+kind: implementation
+name: pykrige.ck.ilr_transformation
+software: pykrige
+call: {interface: python, name: pykrige.ck.ilr_transformation}
+harvest: {harvester: python-packages, engine_version: 1.7.3}
+parameters:
+  data: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

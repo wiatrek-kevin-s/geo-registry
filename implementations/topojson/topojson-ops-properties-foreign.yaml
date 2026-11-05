@@ -1,0 +1,10 @@
+id: topojson-ops-properties-foreign
+kind: implementation
+name: topojson.ops.properties_foreign
+software: topojson
+call: {interface: python, name: topojson.ops.properties_foreign}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  objects: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

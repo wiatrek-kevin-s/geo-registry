@@ -1,0 +1,18 @@
+id: spopt-region-skater
+kind: implementation
+name: spopt.region.Skater
+software: spopt
+call: {interface: python, name: spopt.region.Skater}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  gdf: {type: any, required: true}
+  w: {type: any, required: true}
+  attrs_name: {type: any, required: true}
+  n_clusters: {type: integer, default: 5}
+  floor: {type: number, note: default -inf}
+  trace: {type: boolean, default: false}
+  islands: {type: string, default: increase}
+  spanning_forest_kwds: {type: any, note: 'default {}'}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

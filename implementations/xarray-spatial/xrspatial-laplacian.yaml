@@ -1,0 +1,12 @@
+id: xrspatial-laplacian
+kind: implementation
+name: xrspatial.laplacian
+software: xarray-spatial
+call: {interface: python, name: xrspatial.laplacian}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: any, required: true}
+  name: {type: string, default: laplacian}
+  boundary: {type: string, default: nan}
+status: active
+review: {state: harvested, source: python-packages}

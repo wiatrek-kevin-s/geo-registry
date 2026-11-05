@@ -1,0 +1,10 @@
+id: libpysal-cg-shapely-ext-to-wkt
+kind: implementation
+name: libpysal.cg.shapely_ext.to_wkt
+software: libpysal
+call: {interface: python, name: libpysal.cg.shapely_ext.to_wkt}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  shape: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

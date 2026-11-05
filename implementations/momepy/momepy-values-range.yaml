@@ -1,0 +1,12 @@
+id: momepy-values-range
+kind: implementation
+name: momepy.values_range
+software: momepy
+call: {interface: python, name: momepy.values_range}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  y: {type: any, required: true}
+  graph: {type: Graph, required: true}
+  q: {type: any, note: 'default (0, 100)'}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: pointpats-geometry-build-best-tree
+kind: implementation
+name: pointpats.geometry.build_best_tree
+software: pointpats
+call: {interface: python, name: pointpats.geometry.build_best_tree}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  coordinates: {type: any, required: true}
+  metric: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

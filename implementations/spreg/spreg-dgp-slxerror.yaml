@@ -1,0 +1,17 @@
+id: spreg-dgp-slxerror
+kind: implementation
+name: spreg.dgp_slxerror
+software: spreg
+call: {interface: python, name: spreg.dgp_slxerror}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  u: {type: any, required: true}
+  xb: {type: any, required: true}
+  wxg: {type: any, required: true}
+  w: {type: any, required: true}
+  lam: {type: number, default: 0.5}
+  model: {type: string, default: sar}
+  imethod: {type: string, default: power_exp}
+  ybin: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,13 @@
+id: osmnx-nearest-edges
+kind: implementation
+name: osmnx.nearest_edges
+software: osmnx
+call: {interface: python, name: osmnx.nearest_edges}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  G: {type: nx.MultiDiGraph, required: true}
+  X: {type: 'float | Iterable[float]', required: true}
+  Y: {type: 'float | Iterable[float]', required: true}
+  return_dist: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

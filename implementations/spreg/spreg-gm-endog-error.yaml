@@ -1,0 +1,26 @@
+id: spreg-gm-endog-error
+kind: implementation
+name: spreg.GM_Endog_Error
+software: spreg
+call: {interface: python, name: spreg.GM_Endog_Error}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  y: {type: any, required: true}
+  x: {type: any, required: true}
+  yend: {type: any, required: true}
+  q: {type: any, required: true}
+  w: {type: any, required: true}
+  slx_lags: {type: integer, default: 0}
+  slx_vars: {type: string, default: All}
+  vm: {type: boolean, default: false}
+  name_y: {type: any}
+  name_x: {type: any}
+  name_yend: {type: any}
+  name_q: {type: any}
+  name_w: {type: any}
+  name_ds: {type: any}
+  latex: {type: boolean, default: false}
+  hard_bound: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

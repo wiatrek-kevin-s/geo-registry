@@ -1,0 +1,11 @@
+id: spreg-iter-msg
+kind: implementation
+name: spreg.iter_msg
+software: spreg
+call: {interface: python, name: spreg.iter_msg}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  iteration: {type: any, required: true}
+  max_iter: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

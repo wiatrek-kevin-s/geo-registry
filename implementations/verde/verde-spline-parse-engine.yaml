@@ -1,0 +1,10 @@
+id: verde-spline-parse-engine
+kind: implementation
+name: verde.spline.parse_engine
+software: verde
+call: {interface: python, name: verde.spline.parse_engine}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  engine: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

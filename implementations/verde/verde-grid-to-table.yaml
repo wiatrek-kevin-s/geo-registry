@@ -1,0 +1,10 @@
+id: verde-grid-to-table
+kind: implementation
+name: verde.grid_to_table
+software: verde
+call: {interface: python, name: verde.grid_to_table}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  grid: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

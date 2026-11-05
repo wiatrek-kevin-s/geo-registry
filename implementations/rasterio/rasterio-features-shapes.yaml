@@ -1,0 +1,13 @@
+id: rasterio-features-shapes
+kind: implementation
+name: rasterio.features.shapes
+software: rasterio
+call: {interface: python, name: rasterio.features.shapes}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  source: {type: any, required: true}
+  mask: {type: any}
+  connectivity: {type: integer, default: 4}
+  transform: {type: any, note: "default Affine(1.0, 0.0, 0.0,\n       0.0, 1.0, 0.0)"}
+status: active
+review: {state: harvested, source: python-packages}

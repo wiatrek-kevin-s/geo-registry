@@ -1,0 +1,11 @@
+id: terra-libversion
+kind: implementation
+name: terra::libVersion
+software: terra
+call: {interface: r, name: 'terra::libVersion'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  lib: {type: any, default: '"all"'}
+  parse: {type: any, default: 'FALSE'}
+status: active
+review: {state: harvested, source: r-packages}

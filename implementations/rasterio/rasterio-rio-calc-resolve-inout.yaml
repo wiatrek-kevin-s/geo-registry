@@ -1,0 +1,14 @@
+id: rasterio-rio-calc-resolve-inout
+kind: implementation
+name: rasterio.rio.calc.resolve_inout
+software: rasterio
+call: {interface: python, name: rasterio.rio.calc.resolve_inout}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  input: {type: any}
+  output: {type: any}
+  files: {type: any}
+  overwrite: {type: boolean, default: false}
+  num_inputs: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

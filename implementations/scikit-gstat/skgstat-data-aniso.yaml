@@ -1,0 +1,12 @@
+id: skgstat-data-aniso
+kind: implementation
+name: skgstat.data.aniso
+software: scikit-gstat
+call: {interface: python, name: skgstat.data.aniso}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  N: {type: integer, default: 500}
+  seed: {type: integer, default: 42}
+  as_dataframe: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,26 @@
+id: access-raam-raam
+kind: implementation
+name: access.raam.raam
+software: access
+call: {interface: python, name: access.raam.raam}
+harvest: {harvester: python-packages, engine_version: 1.1.10.post3}
+parameters:
+  demand_df: {type: any, required: true}
+  supply_df: {type: any, required: true}
+  cost_df: {type: any, required: true}
+  demand_index: {type: boolean, default: true}
+  demand_name: {type: string, default: demand}
+  supply_index: {type: boolean, default: true}
+  supply_name: {type: string, default: supply}
+  cost_origin: {type: string, default: origin}
+  cost_dest: {type: string, default: dest}
+  cost_name: {type: string, default: cost}
+  tau: {type: integer, default: 60}
+  rho: {type: any}
+  max_cycles: {type: integer, default: 150}
+  initial_step: {type: number, default: 0.2}
+  min_step: {type: number, default: 0.005}
+  half_life: {type: integer, default: 50}
+  verbose: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

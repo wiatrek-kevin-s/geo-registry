@@ -1,0 +1,11 @@
+id: topojson-utils-serialize-as-geodataframe
+kind: implementation
+name: topojson.utils.serialize_as_geodataframe
+software: topojson
+call: {interface: python, name: topojson.utils.serialize_as_geodataframe}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  fc: {type: any, required: true}
+  crs: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

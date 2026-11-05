@@ -1,0 +1,15 @@
+id: xrspatial-glcm-texture
+kind: implementation
+name: xrspatial.glcm_texture
+software: xarray-spatial
+call: {interface: python, name: xrspatial.glcm_texture}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: any, required: true}
+  metric: {type: string, default: contrast}
+  window_size: {type: integer, default: 7}
+  levels: {type: integer, default: 64}
+  distance: {type: integer, default: 1}
+  angle: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

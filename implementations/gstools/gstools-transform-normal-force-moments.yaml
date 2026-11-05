@@ -1,0 +1,14 @@
+id: gstools-transform-normal-force-moments
+kind: implementation
+name: gstools.transform.normal_force_moments
+software: gstools
+call: {interface: python, name: gstools.transform.normal_force_moments}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  fld: {type: any, required: true}
+  field: {type: string, default: field}
+  store: {type: boolean, default: true}
+  process: {type: boolean, default: false}
+  keep_mean: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

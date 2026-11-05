@@ -1,0 +1,9 @@
+id: fiona-drvsupport-vector-driver-extensions
+kind: implementation
+name: fiona.drvsupport.vector_driver_extensions
+software: fiona
+call: {interface: python, name: fiona.drvsupport.vector_driver_extensions}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

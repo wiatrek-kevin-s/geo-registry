@@ -1,0 +1,12 @@
+id: libpysal-cg-line
+kind: implementation
+name: libpysal.cg.Line
+software: libpysal
+call: {interface: python, name: libpysal.cg.Line}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  m: {type: any, required: true}
+  b: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

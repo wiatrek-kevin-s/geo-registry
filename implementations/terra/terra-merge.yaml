@@ -1,0 +1,21 @@
+id: terra-merge
+kind: implementation
+name: terra::merge
+software: terra
+call: {interface: r, name: 'terra::merge'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  first: {type: any, default: 'TRUE'}
+  na.rm: {type: any, default: 'TRUE'}
+  algo: {type: any, default: '1'}
+  resample: {type: any, default: 'FALSE'}
+  method: {type: any, default: '""'}
+  filename: {type: any, default: '""'}
+  overwrite: {type: any, default: 'FALSE'}
+  wopt: {type: any, default: list()}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

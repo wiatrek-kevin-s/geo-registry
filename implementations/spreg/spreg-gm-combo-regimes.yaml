@@ -1,0 +1,33 @@
+id: spreg-gm-combo-regimes
+kind: implementation
+name: spreg.GM_Combo_Regimes
+software: spreg
+call: {interface: python, name: spreg.GM_Combo_Regimes}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  y: {type: any, required: true}
+  x: {type: any, required: true}
+  regimes: {type: any, required: true}
+  yend: {type: any}
+  q: {type: any}
+  w: {type: any}
+  slx_lags: {type: integer, default: 0}
+  w_lags: {type: integer, default: 1}
+  lag_q: {type: boolean, default: true}
+  cores: {type: boolean, default: false}
+  constant_regi: {type: string, default: many}
+  cols2regi: {type: string, default: all}
+  regime_err_sep: {type: boolean, default: false}
+  regime_lag_sep: {type: boolean, default: false}
+  vm: {type: boolean, default: false}
+  name_y: {type: any}
+  name_x: {type: any}
+  name_yend: {type: any}
+  name_q: {type: any}
+  name_w: {type: any}
+  name_ds: {type: any}
+  name_regimes: {type: any}
+  latex: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

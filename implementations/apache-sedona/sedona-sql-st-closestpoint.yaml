@@ -1,0 +1,11 @@
+id: sedona-sql-st-closestpoint
+kind: implementation
+name: sedona.sql.ST_ClosestPoint
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_ClosestPoint}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  a: {type: Union, required: true}
+  b: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,15 @@
+id: gstools-transform-zinnharvey
+kind: implementation
+name: gstools.transform.zinnharvey
+software: gstools
+call: {interface: python, name: gstools.transform.zinnharvey}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  fld: {type: any, required: true}
+  conn: {type: string, default: high}
+  field: {type: string, default: field}
+  store: {type: boolean, default: true}
+  process: {type: boolean, default: false}
+  keep_mean: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

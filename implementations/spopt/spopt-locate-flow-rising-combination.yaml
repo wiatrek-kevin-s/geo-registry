@@ -1,0 +1,12 @@
+id: spopt-locate-flow-rising-combination
+kind: implementation
+name: spopt.locate.flow.rising_combination
+software: spopt
+call: {interface: python, name: spopt.locate.flow.rising_combination}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  values: {type: list, required: true}
+  start: {type: int, default: 1}
+  stop: {type: int}
+status: active
+review: {state: harvested, source: python-packages}

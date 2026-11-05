@@ -1,0 +1,16 @@
+id: spreg-get-vc-hom
+kind: implementation
+name: spreg.get_vc_hom
+software: spreg
+call: {interface: python, name: spreg.get_vc_hom}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  w: {type: any, required: true}
+  wA1: {type: any, required: true}
+  wA2: {type: any, required: true}
+  reg: {type: any, required: true}
+  lambdapar: {type: any, required: true}
+  z_s: {type: any}
+  for_omegaOLS: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

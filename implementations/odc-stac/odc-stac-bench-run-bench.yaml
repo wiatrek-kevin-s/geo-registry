@@ -1,0 +1,15 @@
+id: odc-stac-bench-run-bench
+kind: implementation
+name: odc.stac.bench.run_bench
+software: odc-stac
+call: {interface: python, name: odc.stac.bench.run_bench}
+harvest: {harvester: python-packages, engine_version: 0.5.3}
+parameters:
+  xx: {type: Union, required: true}
+  client: {type: Client, required: true}
+  ntimes: {type: int, default: 1}
+  col_width: {type: int, default: 12}
+  restart_sleep: {type: float, default: 0}
+  results_file: {type: Optional}
+status: active
+review: {state: harvested, source: python-packages}

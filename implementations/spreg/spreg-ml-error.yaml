@@ -1,0 +1,24 @@
+id: spreg-ml-error
+kind: implementation
+name: spreg.ML_Error
+software: spreg
+call: {interface: python, name: spreg.ML_Error}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  y: {type: any, required: true}
+  x: {type: any, required: true}
+  w: {type: any, required: true}
+  slx_lags: {type: integer, default: 0}
+  slx_vars: {type: string, default: All}
+  regimes: {type: any}
+  method: {type: string, default: full}
+  epsilon: {type: number, default: 1.0e-07}
+  vm: {type: boolean, default: false}
+  name_y: {type: any}
+  name_x: {type: any}
+  name_w: {type: any}
+  name_ds: {type: any}
+  latex: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

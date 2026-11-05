@@ -1,0 +1,11 @@
+id: momepy-cell-alignment
+kind: implementation
+name: momepy.cell_alignment
+software: momepy
+call: {interface: python, name: momepy.cell_alignment}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  left_orientation: {type: any, required: true}
+  right_orientation: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

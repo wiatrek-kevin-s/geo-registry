@@ -1,0 +1,10 @@
+id: pointpats-manhattan-median
+kind: implementation
+name: pointpats.manhattan_median
+software: pointpats
+call: {interface: python, name: pointpats.manhattan_median}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  points: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

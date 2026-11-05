@@ -1,0 +1,13 @@
+id: xrspatial-vegetation-roughness
+kind: implementation
+name: xrspatial.vegetation_roughness
+software: xarray-spatial
+call: {interface: python, name: xrspatial.vegetation_roughness}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  vegetation_agg: {type: xr.DataArray, required: true}
+  mode: {type: str, default: nlcd}
+  lookup: {type: dict | None}
+  name: {type: str, default: mannings_n}
+status: active
+review: {state: harvested, source: python-packages}

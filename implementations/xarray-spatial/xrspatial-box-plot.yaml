@@ -1,0 +1,12 @@
+id: xrspatial-box-plot
+kind: implementation
+name: xrspatial.box_plot
+software: xarray-spatial
+call: {interface: python, name: xrspatial.box_plot}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: xr.DataArray, required: true}
+  hinge: {type: float, default: 1.5}
+  name: {type: 'Optional[str]', default: box_plot}
+status: active
+review: {state: harvested, source: python-packages}

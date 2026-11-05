@@ -1,0 +1,11 @@
+id: odc-stac-bench-dump-site
+kind: implementation
+name: odc.stac.bench.dump_site
+software: odc-stac
+call: {interface: python, name: odc.stac.bench.dump_site}
+harvest: {harvester: python-packages, engine_version: 0.5.3}
+parameters:
+  site: {type: Dict, required: true}
+  overwrite: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,19 @@
+id: access-fca-weighted-catchment
+kind: implementation
+name: access.fca.weighted_catchment
+software: access
+call: {interface: python, name: access.fca.weighted_catchment}
+harvest: {harvester: python-packages, engine_version: 1.1.10.post3}
+parameters:
+  loc_df: {type: any, required: true}
+  cost_df: {type: any, required: true}
+  max_cost: {type: any}
+  cost_source: {type: string, default: origin}
+  cost_dest: {type: string, default: dest}
+  cost_cost: {type: string, default: cost}
+  loc_index: {type: string, default: geoid}
+  loc_value: {type: any}
+  weight_fn: {type: any}
+  three_stage_weight: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

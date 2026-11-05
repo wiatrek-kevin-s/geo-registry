@@ -1,0 +1,10 @@
+id: gstools-covmodel-sum-tools-default-mod-kwargs
+kind: implementation
+name: gstools.covmodel.sum_tools.default_mod_kwargs
+software: gstools
+call: {interface: python, name: gstools.covmodel.sum_tools.default_mod_kwargs}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  kwargs: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

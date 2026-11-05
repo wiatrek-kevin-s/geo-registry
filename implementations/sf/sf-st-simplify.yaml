@@ -1,0 +1,12 @@
+id: sf-st-simplify
+kind: implementation
+name: sf::st_simplify
+software: sf
+call: {interface: r, name: 'sf::st_simplify'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  x: {type: any, required: true}
+  preserveTopology: {type: any, required: true}
+  dTolerance: {type: any, default: '0'}
+status: active
+review: {state: harvested, source: r-packages}

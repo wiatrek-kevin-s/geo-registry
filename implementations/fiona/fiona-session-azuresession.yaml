@@ -1,0 +1,14 @@
+id: fiona-session-azuresession
+kind: implementation
+name: fiona.session.AzureSession
+software: fiona
+call: {interface: python, name: fiona.session.AzureSession}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  azure_storage_connection_string: {type: any}
+  azure_storage_account: {type: any}
+  azure_storage_access_key: {type: any}
+  azure_unsigned: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: stackstac-nodata-reader-nodatareader
+kind: implementation
+name: stackstac.nodata_reader.NodataReader
+software: stackstac
+call: {interface: python, name: stackstac.nodata_reader.NodataReader}
+harvest: {harvester: python-packages, engine_version: 0.5.1}
+parameters:
+  dtype: {type: dtype, required: true}
+  fill_value: {type: Union, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

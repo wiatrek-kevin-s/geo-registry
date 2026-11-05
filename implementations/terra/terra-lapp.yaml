@@ -1,0 +1,19 @@
+id: terra-lapp
+kind: implementation
+name: terra::lapp
+software: terra
+call: {interface: r, name: 'terra::lapp'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  fun: {type: any, required: true}
+  usenames: {type: any, default: 'FALSE'}
+  cores: {type: any, default: '1'}
+  filename: {type: any, default: '""'}
+  overwrite: {type: any, default: 'FALSE'}
+  wopt: {type: any, default: list()}
+  recycle: {type: any, default: 'FALSE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

@@ -1,0 +1,13 @@
+id: sedona-sql-st-pointz
+kind: implementation
+name: sedona.sql.ST_PointZ
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_PointZ}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  x: {type: Union, required: true}
+  y: {type: Union, required: true}
+  z: {type: Union, required: true}
+  srid: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

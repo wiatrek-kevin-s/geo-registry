@@ -1,0 +1,19 @@
+id: mgwr-gwr-gwrresults
+kind: implementation
+name: mgwr.gwr.GWRResults
+software: mgwr
+call: {interface: python, name: mgwr.gwr.GWRResults}
+harvest: {harvester: python-packages, engine_version: 2.2.1}
+parameters:
+  model: {type: any, required: true}
+  params: {type: any, required: true}
+  predy: {type: any, required: true}
+  S: {type: any, required: true}
+  CCT: {type: any, required: true}
+  influ: {type: any, required: true}
+  tr_STS: {type: any}
+  w: {type: any}
+  name_x: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

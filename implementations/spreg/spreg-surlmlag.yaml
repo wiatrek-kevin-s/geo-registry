@@ -1,0 +1,17 @@
+id: spreg-surlmlag
+kind: implementation
+name: spreg.surLMlag
+software: spreg
+call: {interface: python, name: spreg.surLMlag}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  n_eq: {type: any, required: true}
+  WS: {type: any, required: true}
+  bigy: {type: any, required: true}
+  bigX: {type: any, required: true}
+  bigE: {type: any, required: true}
+  bigYP: {type: any, required: true}
+  sig: {type: any, required: true}
+  varb: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

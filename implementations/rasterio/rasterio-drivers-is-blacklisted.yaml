@@ -1,0 +1,11 @@
+id: rasterio-drivers-is-blacklisted
+kind: implementation
+name: rasterio.drivers.is_blacklisted
+software: rasterio
+call: {interface: python, name: rasterio.drivers.is_blacklisted}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  name: {type: any, required: true}
+  mode: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

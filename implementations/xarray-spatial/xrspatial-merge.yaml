@@ -1,0 +1,20 @@
+id: xrspatial-merge
+kind: implementation
+name: xrspatial.merge
+software: xarray-spatial
+call: {interface: python, name: xrspatial.merge}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  rasters: {type: any, required: true}
+  target_crs: {type: any}
+  resolution: {type: any}
+  bounds: {type: any}
+  resampling: {type: string, default: bilinear}
+  nodata: {type: any}
+  strategy: {type: string, default: first}
+  chunk_size: {type: any}
+  transform_precision: {type: integer, default: 16}
+  name: {type: any}
+  bounds_policy: {type: string, default: auto}
+status: active
+review: {state: harvested, source: python-packages}

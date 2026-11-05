@@ -1,0 +1,11 @@
+id: h3-latlngpoly
+kind: implementation
+name: h3.LatLngPoly
+software: h3-py
+call: {interface: python, name: h3.LatLngPoly}
+harvest: {harvester: python-packages, engine_version: 4.5.0}
+parameters:
+  outer: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

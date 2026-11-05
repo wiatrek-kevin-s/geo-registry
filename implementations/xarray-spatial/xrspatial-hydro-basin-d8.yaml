@@ -1,0 +1,11 @@
+id: xrspatial-hydro-basin-d8
+kind: implementation
+name: xrspatial.hydro.basin_d8
+software: xarray-spatial
+call: {interface: python, name: xrspatial.hydro.basin_d8}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  flow_dir: {type: xr.DataArray, required: true}
+  name: {type: str, default: basin}
+status: active
+review: {state: harvested, source: python-packages}

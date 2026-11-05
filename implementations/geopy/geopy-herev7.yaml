@@ -1,0 +1,18 @@
+id: geopy-herev7
+kind: implementation
+name: geopy.HereV7
+software: geopy
+call: {interface: python, name: geopy.HereV7}
+harvest: {harvester: python-packages, engine_version: 2.5.0}
+parameters:
+  apikey: {type: any, required: true}
+  scheme: {type: any}
+  timeout: {type: any, note: default DEFAULT_SENTINEL}
+  proxies: {type: any, note: default DEFAULT_SENTINEL}
+  user_agent: {type: any}
+  ssl_context: {type: any, note: default DEFAULT_SENTINEL}
+  adapter_factory: {type: any}
+  domain: {type: string, default: search.hereapi.com}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

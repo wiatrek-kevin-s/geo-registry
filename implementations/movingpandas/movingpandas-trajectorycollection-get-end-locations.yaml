@@ -1,0 +1,10 @@
+id: movingpandas-trajectorycollection-get-end-locations
+kind: implementation
+name: TrajectoryCollection.get_end_locations
+software: movingpandas
+call: {interface: python, name: movingpandas.TrajectoryCollection.get_end_locations}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  with_direction: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

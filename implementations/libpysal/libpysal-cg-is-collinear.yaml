@@ -1,0 +1,12 @@
+id: libpysal-cg-is-collinear
+kind: implementation
+name: libpysal.cg.is_collinear
+software: libpysal
+call: {interface: python, name: libpysal.cg.is_collinear}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  p1: {type: any, required: true}
+  p2: {type: any, required: true}
+  p3: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

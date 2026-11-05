@@ -1,0 +1,14 @@
+id: libpysal-io-geotable-dbf-dbfjoin
+kind: implementation
+name: libpysal.io.geotable.dbf.dbfjoin
+software: libpysal
+call: {interface: python, name: libpysal.io.geotable.dbf.dbfjoin}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  dbf1_path: {type: any, required: true}
+  dbf2_path: {type: any, required: true}
+  out_path: {type: any, required: true}
+  joinkey1: {type: any, required: true}
+  joinkey2: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

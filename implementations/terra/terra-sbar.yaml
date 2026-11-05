@@ -1,0 +1,27 @@
+id: terra-sbar
+kind: implementation
+name: terra::sbar
+software: terra
+call: {interface: r, name: 'terra::sbar'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  d: {type: any, required: true}
+  xy: {type: any, default: 'NULL'}
+  type: {type: any, default: '"line"'}
+  divs: {type: any, default: '2'}
+  below: {type: any, default: '""'}
+  lonlat: {type: any, default: 'NULL'}
+  labels: {type: any, required: true}
+  adj: {type: any, default: 'c(0.5, -1)'}
+  lwd: {type: any, default: '2'}
+  xpd: {type: any, default: 'TRUE'}
+  ticks: {type: any, default: 'FALSE'}
+  scaleby: {type: any, default: '1'}
+  halo: {type: any, default: 'TRUE'}
+  col: {type: any, default: '"black"'}
+  fill: {type: any, default: 'c("black", "white")'}
+  border: {type: any, default: '"black"'}
+  bg: {type: any, default: 'NULL'}
+  '...': {type: dots, note: further arguments passed on}
+status: active
+review: {state: harvested, source: r-packages}

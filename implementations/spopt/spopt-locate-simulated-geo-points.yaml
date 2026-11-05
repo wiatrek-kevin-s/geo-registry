@@ -1,0 +1,12 @@
+id: spopt-locate-simulated-geo-points
+kind: implementation
+name: spopt.locate.simulated_geo_points
+software: spopt
+call: {interface: python, name: spopt.locate.simulated_geo_points}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  in_data: {type: any, required: true}
+  needed: {type: int, default: 1}
+  seed: {type: int, default: 0}
+status: active
+review: {state: harvested, source: python-packages}

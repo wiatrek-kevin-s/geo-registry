@@ -1,0 +1,10 @@
+id: fiona-features-dump
+kind: implementation
+name: fiona.features.dump
+software: fiona
+call: {interface: python, name: fiona.features.dump}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  geom: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

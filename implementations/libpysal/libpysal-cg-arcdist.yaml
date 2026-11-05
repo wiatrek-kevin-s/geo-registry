@@ -1,0 +1,12 @@
+id: libpysal-cg-arcdist
+kind: implementation
+name: libpysal.cg.arcdist
+software: libpysal
+call: {interface: python, name: libpysal.cg.arcdist}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  pt0: {type: any, required: true}
+  pt1: {type: any, required: true}
+  radius: {type: number, default: 6371.0}
+status: active
+review: {state: harvested, source: python-packages}

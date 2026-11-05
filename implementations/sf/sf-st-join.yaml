@@ -1,0 +1,13 @@
+id: sf-st-join
+kind: implementation
+name: sf::st_join
+software: sf
+call: {interface: r, name: 'sf::st_join'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  join: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+status: active
+review: {state: harvested, source: r-packages}

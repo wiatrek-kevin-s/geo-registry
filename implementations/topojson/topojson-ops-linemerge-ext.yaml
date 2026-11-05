@@ -1,0 +1,10 @@
+id: topojson-ops-linemerge-ext
+kind: implementation
+name: topojson.ops.linemerge_ext
+software: topojson
+call: {interface: python, name: topojson.ops.linemerge_ext}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  geom: {type: BaseGeometry, required: true}
+status: active
+review: {state: harvested, source: python-packages}

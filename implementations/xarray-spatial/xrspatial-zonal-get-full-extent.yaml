@@ -1,0 +1,10 @@
+id: xrspatial-zonal-get-full-extent
+kind: implementation
+name: xrspatial.zonal.get_full_extent
+software: xarray-spatial
+call: {interface: python, name: xrspatial.zonal.get_full_extent}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  crs: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

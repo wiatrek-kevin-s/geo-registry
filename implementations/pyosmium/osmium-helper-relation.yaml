@@ -1,0 +1,11 @@
+id: osmium-helper-relation
+kind: implementation
+name: osmium.helper.Relation
+software: pyosmium
+call: {interface: python, name: osmium.helper.Relation}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters:
+  crelation: {type: cosm.COSMRelation, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: movingpandas-spatiotemporal-utils-tpoint
+kind: implementation
+name: movingpandas.spatiotemporal_utils.TPoint
+software: movingpandas
+call: {interface: python, name: movingpandas.spatiotemporal_utils.TPoint}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  t: {type: any, required: true}
+  pt: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

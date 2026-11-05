@@ -1,0 +1,11 @@
+id: spopt-region-spenclib-abstracts-check-weights
+kind: implementation
+name: spopt.region.spenclib.abstracts.check_weights
+software: spopt
+call: {interface: python, name: spopt.region.spenclib.abstracts.check_weights}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  W: {type: any, required: true}
+  X: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: verde-utils-check-extra-coords-names
+kind: implementation
+name: verde.utils.check_extra_coords_names
+software: verde
+call: {interface: python, name: verde.utils.check_extra_coords_names}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  coordinates: {type: any, required: true}
+  extra_coords_names: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,10 @@
+id: skgstat-metricspace-distancemethods
+kind: implementation
+name: skgstat.MetricSpace.DistanceMethods
+software: scikit-gstat
+call: {interface: python, name: skgstat.MetricSpace.DistanceMethods}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,10 @@
+id: laspy-header-create-geotiff-projection-vlrs
+kind: implementation
+name: laspy.header.create_geotiff_projection_vlrs
+software: laspy
+call: {interface: python, name: laspy.header.create_geotiff_projection_vlrs}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  crs: {type: pyproj.CRS, required: true}
+status: active
+review: {state: harvested, source: python-packages}

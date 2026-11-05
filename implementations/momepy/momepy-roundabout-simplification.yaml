@@ -1,0 +1,18 @@
+id: momepy-roundabout-simplification
+kind: implementation
+name: momepy.roundabout_simplification
+software: momepy
+call: {interface: python, name: momepy.roundabout_simplification}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  edges: {type: any, required: true}
+  polys: {type: any}
+  area_col: {type: string, default: area}
+  circom_threshold: {type: number, default: 0.7}
+  area_threshold: {type: number, default: 0.85}
+  include_adjacent: {type: boolean, default: true}
+  diameter_factor: {type: number, default: 1.5}
+  center_type: {type: string, default: centroid}
+  angle_threshold: {type: integer, default: 0}
+status: active
+review: {state: harvested, source: python-packages}

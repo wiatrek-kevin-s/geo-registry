@@ -1,0 +1,10 @@
+id: rasterio-features-is-valid-geom
+kind: implementation
+name: rasterio.features.is_valid_geom
+software: rasterio
+call: {interface: python, name: rasterio.features.is_valid_geom}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  geom: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: osmnx-truncate-truncate-graph-bbox
+kind: implementation
+name: osmnx.truncate.truncate_graph_bbox
+software: osmnx
+call: {interface: python, name: osmnx.truncate.truncate_graph_bbox}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  G: {type: nx.MultiDiGraph, required: true}
+  bbox: {type: 'tuple[float, float, float, float]', required: true}
+  truncate_by_edge: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

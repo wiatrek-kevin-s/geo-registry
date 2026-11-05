@@ -1,0 +1,9 @@
+id: rasterio-env-defenv
+kind: implementation
+name: rasterio.env.defenv
+software: rasterio
+call: {interface: python, name: rasterio.env.defenv}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

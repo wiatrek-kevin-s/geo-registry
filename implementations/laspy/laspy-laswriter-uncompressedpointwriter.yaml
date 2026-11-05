@@ -1,0 +1,11 @@
+id: laspy-laswriter-uncompressedpointwriter
+kind: implementation
+name: laspy.laswriter.UncompressedPointWriter
+software: laspy
+call: {interface: python, name: laspy.laswriter.UncompressedPointWriter}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  dest: {type: BinaryIO, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

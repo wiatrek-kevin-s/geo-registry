@@ -1,0 +1,18 @@
+id: terra-mask
+kind: implementation
+name: terra::mask
+software: terra
+call: {interface: r, name: 'terra::mask'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  mask: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  inverse: {type: any, default: 'FALSE'}
+  updatevalue: {type: any, default: NA}
+  touches: {type: any, default: 'TRUE'}
+  filename: {type: any, default: '""'}
+  maskvalues: {type: any, default: NA}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

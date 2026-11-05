@@ -1,0 +1,13 @@
+id: sedona-sql-st-dwithin
+kind: implementation
+name: sedona.sql.ST_DWithin
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_DWithin}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  a: {type: Union, required: true}
+  b: {type: Union, required: true}
+  distance: {type: Union, required: true}
+  use_sphere: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

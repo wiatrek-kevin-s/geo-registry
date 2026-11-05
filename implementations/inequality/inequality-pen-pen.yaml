@@ -1,0 +1,18 @@
+id: inequality-pen-pen
+kind: implementation
+name: inequality.pen.pen
+software: inequality
+call: {interface: python, name: inequality.pen.pen}
+harvest: {harvester: python-packages, engine_version: 1.2.0}
+parameters:
+  df: {type: any, required: true}
+  col: {type: any, required: true}
+  x: {type: any, required: true}
+  weight: {type: any}
+  ascending: {type: boolean, default: true}
+  xticks: {type: boolean, default: true}
+  total_bars: {type: integer, default: 100}
+  figsize: {type: any, note: 'default (8, 6)'}
+  ax: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

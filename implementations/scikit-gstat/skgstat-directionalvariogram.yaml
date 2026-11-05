@@ -1,0 +1,28 @@
+id: skgstat-directionalvariogram
+kind: implementation
+name: skgstat.DirectionalVariogram
+software: scikit-gstat
+call: {interface: python, name: skgstat.DirectionalVariogram}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  coordinates: {type: any}
+  values: {type: any}
+  estimator: {type: string, default: matheron}
+  model: {type: string, default: spherical}
+  dist_func: {type: string, default: euclidean}
+  bin_func: {type: string, default: even}
+  normalize: {type: boolean, default: false}
+  fit_method: {type: string, default: trf}
+  fit_sigma: {type: any}
+  directional_model: {type: string, default: triangle}
+  azimuth: {type: integer, default: 0}
+  tolerance: {type: number, default: 45.0}
+  bandwidth: {type: string, default: q33}
+  use_nugget: {type: boolean, default: false}
+  maxlag: {type: any}
+  n_lags: {type: integer, default: 10}
+  multivariate: {type: string, default: cross}
+  verbose: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

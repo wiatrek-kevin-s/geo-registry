@@ -1,0 +1,12 @@
+id: libpysal-io-shx-file
+kind: implementation
+name: libpysal.io.shx_file
+software: libpysal
+call: {interface: python, name: libpysal.io.shx_file}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  fileName: {type: any}
+  mode: {type: string, default: r}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

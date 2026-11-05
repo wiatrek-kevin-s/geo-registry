@@ -1,0 +1,12 @@
+id: verde-datasets-setup-california-gps-map
+kind: implementation
+name: verde.datasets.setup_california_gps_map
+software: verde
+call: {interface: python, name: verde.datasets.setup_california_gps_map}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  ax: {type: any, required: true}
+  region: {type: any, note: 'default (235.2, 245.3, 31.9, 42.3)'}
+  coastlines: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

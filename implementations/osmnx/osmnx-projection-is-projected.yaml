@@ -1,0 +1,10 @@
+id: osmnx-projection-is-projected
+kind: implementation
+name: osmnx.projection.is_projected
+software: osmnx
+call: {interface: python, name: osmnx.projection.is_projected}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  crs: {type: Any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,10 @@
+id: rasterstats-main-get-percentile
+kind: implementation
+name: rasterstats.main.get_percentile
+software: rasterstats
+call: {interface: python, name: rasterstats.main.get_percentile}
+harvest: {harvester: python-packages, engine_version: 0.21.0}
+parameters:
+  stat: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

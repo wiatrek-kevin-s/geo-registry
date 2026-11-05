@@ -1,0 +1,18 @@
+id: terra-unique
+kind: implementation
+name: terra::unique
+software: terra
+call: {interface: r, name: 'terra::unique'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  incomparables: {type: any, default: 'FALSE'}
+  '...': {type: dots, note: further arguments passed on}
+  digits: {type: any, default: NA}
+  na.rm: {type: any, default: 'TRUE'}
+  as.raster: {type: any, default: 'FALSE'}
+  geom: {type: any, default: 'TRUE'}
+  atts: {type: any, default: 'TRUE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

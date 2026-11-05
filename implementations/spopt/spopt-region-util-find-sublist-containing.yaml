@@ -1,0 +1,12 @@
+id: spopt-region-util-find-sublist-containing
+kind: implementation
+name: spopt.region.util.find_sublist_containing
+software: spopt
+call: {interface: python, name: spopt.region.util.find_sublist_containing}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  el: {type: any, required: true}
+  lst: {type: any, required: true}
+  index: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,15 @@
+id: terra-furdist
+kind: implementation
+name: terra::furdist
+software: terra
+call: {interface: r, name: 'terra::furdist'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  pairwise: {type: any, default: 'FALSE'}
+  unit: {type: any, default: '"m"'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

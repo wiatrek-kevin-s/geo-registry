@@ -1,0 +1,12 @@
+id: sedona-sql-st-glocal
+kind: implementation
+name: sedona.sql.ST_GLocal
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_GLocal}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  x: {type: Union, required: true}
+  weights: {type: Union, required: true}
+  star: {type: Union, default: false}
+status: active
+review: {state: harvested, source: python-packages}

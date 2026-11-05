@@ -1,0 +1,13 @@
+id: sedona-sql-st-geometricmedian
+kind: implementation
+name: sedona.sql.ST_GeometricMedian
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_GeometricMedian}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geometry: {type: Union, required: true}
+  tolerance: {type: Union, default: 1.0e-06}
+  max_iter: {type: Union, default: 1000}
+  fail_if_not_converged: {type: Union, default: false}
+status: active
+review: {state: harvested, source: python-packages}

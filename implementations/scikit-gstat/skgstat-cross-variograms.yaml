@@ -1,0 +1,11 @@
+id: skgstat-cross-variograms
+kind: implementation
+name: skgstat.cross_variograms
+software: scikit-gstat
+call: {interface: python, name: skgstat.cross_variograms}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  coordinates: {type: ndarray, required: true}
+  values: {type: ndarray, required: true}
+status: active
+review: {state: harvested, source: python-packages}

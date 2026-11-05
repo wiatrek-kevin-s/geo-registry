@@ -1,0 +1,17 @@
+id: xrspatial-surface-allocation
+kind: implementation
+name: xrspatial.surface_allocation
+software: xarray-spatial
+call: {interface: python, name: xrspatial.surface_allocation}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  raster: {type: xr.DataArray, required: true}
+  elevation: {type: xr.DataArray, required: true}
+  x: {type: str, default: x}
+  y: {type: str, default: y}
+  target_values: {type: list, note: 'default []'}
+  max_distance: {type: float, note: default inf}
+  connectivity: {type: int, default: 8}
+  method: {type: str, default: planar}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: fiona-ogrext-tz
+kind: implementation
+name: fiona.ogrext.TZ
+software: fiona
+call: {interface: python, name: fiona.ogrext.TZ}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  minutes: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

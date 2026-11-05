@@ -1,0 +1,10 @@
+id: pyproj-crs-crs-datum
+kind: implementation
+name: pyproj.crs.crs.Datum
+software: pyproj
+call: {interface: python, name: pyproj.crs.crs.Datum}
+harvest: {harvester: python-packages, engine_version: 3.8.0}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

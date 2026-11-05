@@ -1,0 +1,12 @@
+id: pyproj-crs-compoundcrs
+kind: implementation
+name: pyproj.crs.CompoundCRS
+software: pyproj
+call: {interface: python, name: pyproj.crs.CompoundCRS}
+harvest: {harvester: python-packages, engine_version: 3.8.0}
+parameters:
+  name: {type: str, required: true}
+  components: {type: list, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

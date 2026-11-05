@@ -1,0 +1,19 @@
+id: terra-identical
+kind: implementation
+name: terra::identical
+software: terra
+call: {interface: r, name: 'terra::identical'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  num.eq: {type: any, default: 'TRUE'}
+  single.NA: {type: any, default: 'TRUE'}
+  attrib.as.set: {type: any, default: 'TRUE'}
+  ignore.bytecode: {type: any, default: 'TRUE'}
+  ignore.environment: {type: any, default: 'FALSE'}
+  ignore.srcref: {type: any, default: 'TRUE'}
+  extptr.as.ref: {type: any, default: 'FALSE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

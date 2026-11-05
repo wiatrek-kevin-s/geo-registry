@@ -1,0 +1,10 @@
+id: mgwr-gwr-summarygwr
+kind: implementation
+name: mgwr.gwr.summaryGWR
+software: mgwr
+call: {interface: python, name: mgwr.gwr.summaryGWR}
+harvest: {harvester: python-packages, engine_version: 2.2.1}
+parameters:
+  self: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: xrspatial-hydro-flow-length-mfd
+kind: implementation
+name: xrspatial.hydro.flow_length_mfd
+software: xarray-spatial
+call: {interface: python, name: xrspatial.hydro.flow_length_mfd}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  flow_dir_mfd: {type: xr.DataArray, required: true}
+  direction: {type: str, default: downstream}
+  name: {type: str, default: flow_length_mfd}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: skgstat-plotting-plotly-location-trend
+kind: implementation
+name: skgstat.plotting.plotly_location_trend
+software: scikit-gstat
+call: {interface: python, name: skgstat.plotting.plotly_location_trend}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  variogram: {type: any, required: true}
+  fig: {type: any}
+  show: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

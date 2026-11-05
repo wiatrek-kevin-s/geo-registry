@@ -1,0 +1,15 @@
+id: sf-gdal-rasterize
+kind: implementation
+name: sf::gdal_rasterize
+software: sf
+call: {interface: r, name: 'sf::gdal_rasterize'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  sf: {type: any, required: true}
+  x: {type: any, required: true}
+  gt: {type: any, required: true}
+  file: {type: any, required: true}
+  driver: {type: any, default: '"GTiff"'}
+  options: {type: any, default: character()}
+status: active
+review: {state: harvested, source: r-packages}

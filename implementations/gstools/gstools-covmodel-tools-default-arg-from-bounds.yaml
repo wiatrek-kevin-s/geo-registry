@@ -1,0 +1,10 @@
+id: gstools-covmodel-tools-default-arg-from-bounds
+kind: implementation
+name: gstools.covmodel.tools.default_arg_from_bounds
+software: gstools
+call: {interface: python, name: gstools.covmodel.tools.default_arg_from_bounds}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  bounds: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

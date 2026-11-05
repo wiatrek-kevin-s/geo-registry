@@ -1,0 +1,12 @@
+id: odc-stac-model-norm-band-metadata
+kind: implementation
+name: odc.stac.model.norm_band_metadata
+software: odc-stac
+call: {interface: python, name: odc.stac.model.norm_band_metadata}
+harvest: {harvester: python-packages, engine_version: 0.5.3}
+parameters:
+  v: {type: 'RasterBandMetadata | Mapping[str, Any]', required: true}
+  fallback: {type: RasterBandMetadata, note: 'default RasterBandMetadata(data_type=''float32'', nodata=None, units=''1'',
+      dims=(), driver_data=None, attrs={})'}
+status: active
+review: {state: harvested, source: python-packages}

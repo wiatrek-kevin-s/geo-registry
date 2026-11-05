@@ -1,0 +1,12 @@
+id: momepy-floor-area
+kind: implementation
+name: momepy.floor_area
+software: momepy
+call: {interface: python, name: momepy.floor_area}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  area: {type: any, required: true}
+  height: {type: any, required: true}
+  floor_height: {type: integer, default: 3}
+status: active
+review: {state: harvested, source: python-packages}

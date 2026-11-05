@@ -1,0 +1,11 @@
+id: pystac-client-client-queryablesmixin
+kind: implementation
+name: pystac_client.client.QueryablesMixin
+software: pystac-client
+call: {interface: python, name: pystac_client.client.QueryablesMixin}
+harvest: {harvester: python-packages, engine_version: 0.9.1}
+parameters:
+  stac_extensions: {type: 'list[str]', required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

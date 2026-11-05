@@ -1,0 +1,11 @@
+id: verde-vector
+kind: implementation
+name: verde.Vector
+software: verde
+call: {interface: python, name: verde.Vector}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  components: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

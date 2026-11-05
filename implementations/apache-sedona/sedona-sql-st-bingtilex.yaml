@@ -1,0 +1,10 @@
+id: sedona-sql-st-bingtilex
+kind: implementation
+name: sedona.sql.ST_BingTileX
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_BingTileX}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  quad_key: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

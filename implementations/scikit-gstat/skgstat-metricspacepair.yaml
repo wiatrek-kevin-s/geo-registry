@@ -1,0 +1,12 @@
+id: skgstat-metricspacepair
+kind: implementation
+name: skgstat.MetricSpacePair
+software: scikit-gstat
+call: {interface: python, name: skgstat.MetricSpacePair}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  ms1: {type: any, required: true}
+  ms2: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

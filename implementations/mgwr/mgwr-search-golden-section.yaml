@@ -1,0 +1,18 @@
+id: mgwr-search-golden-section
+kind: implementation
+name: mgwr.search.golden_section
+software: mgwr
+call: {interface: python, name: mgwr.search.golden_section}
+harvest: {harvester: python-packages, engine_version: 2.2.1}
+parameters:
+  a: {type: any, required: true}
+  c: {type: any, required: true}
+  delta: {type: any, required: true}
+  function: {type: any, required: true}
+  tol: {type: any, required: true}
+  max_iter: {type: any, required: true}
+  bw_max: {type: any, required: true}
+  int_score: {type: boolean, default: false}
+  verbose: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

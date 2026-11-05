@@ -1,0 +1,14 @@
+id: momepy-enclosures
+kind: implementation
+name: momepy.enclosures
+software: momepy
+call: {interface: python, name: momepy.enclosures}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  primary_barriers: {type: any, required: true}
+  limit: {type: any}
+  additional_barriers: {type: any}
+  enclosure_id: {type: string, default: eID}
+  clip: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

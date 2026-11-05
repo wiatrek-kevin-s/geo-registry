@@ -1,0 +1,10 @@
+id: odc-stac-model-norm-key
+kind: implementation
+name: odc.stac.model.norm_key
+software: odc-stac
+call: {interface: python, name: odc.stac.model.norm_key}
+harvest: {harvester: python-packages, engine_version: 0.5.3}
+parameters:
+  k: {type: BandIdentifier, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: xrspatial-aspect-get-dataarray-resolution
+kind: implementation
+name: xrspatial.aspect.get_dataarray_resolution
+software: xarray-spatial
+call: {interface: python, name: xrspatial.aspect.get_dataarray_resolution}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: xr.DataArray, required: true}
+  xdim: {type: str}
+  ydim: {type: str}
+status: active
+review: {state: harvested, source: python-packages}

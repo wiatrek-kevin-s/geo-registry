@@ -1,0 +1,12 @@
+id: rasterio-windows-validate-length-value
+kind: implementation
+name: rasterio.windows.validate_length_value
+software: rasterio
+call: {interface: python, name: rasterio.windows.validate_length_value}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  instance: {type: any, required: true}
+  attribute: {type: any, required: true}
+  value: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

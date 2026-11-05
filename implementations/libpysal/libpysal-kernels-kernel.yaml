@@ -1,0 +1,14 @@
+id: libpysal-kernels-kernel
+kind: implementation
+name: libpysal.kernels.kernel
+software: libpysal
+call: {interface: python, name: libpysal.kernels.kernel}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  distances: {type: any, required: true}
+  bandwidth: {type: any, required: true}
+  kernel: {type: string, default: gaussian}
+  taper: {type: boolean, default: true}
+  decay: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

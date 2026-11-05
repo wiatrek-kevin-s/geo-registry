@@ -1,0 +1,11 @@
+id: libpysal-weights-order
+kind: implementation
+name: libpysal.weights.order
+software: libpysal
+call: {interface: python, name: libpysal.weights.order}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  w: {type: any, required: true}
+  kmax: {type: integer, default: 3}
+status: active
+review: {state: harvested, source: python-packages}

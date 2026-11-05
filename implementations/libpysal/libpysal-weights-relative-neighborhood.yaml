@@ -1,0 +1,12 @@
+id: libpysal-weights-relative-neighborhood
+kind: implementation
+name: libpysal.weights.Relative_Neighborhood
+software: libpysal
+call: {interface: python, name: libpysal.weights.Relative_Neighborhood}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  coordinates: {type: any, required: true}
+  binary: {type: boolean, default: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

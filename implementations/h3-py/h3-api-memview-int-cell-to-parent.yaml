@@ -1,0 +1,11 @@
+id: h3-api-memview-int-cell-to-parent
+kind: implementation
+name: h3.api.memview_int.cell_to_parent
+software: h3-py
+call: {interface: python, name: h3.api.memview_int.cell_to_parent}
+harvest: {harvester: python-packages, engine_version: 4.5.0}
+parameters:
+  h: {type: any, required: true}
+  res: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,13 @@
+id: skgstat-models-exponential
+kind: implementation
+name: skgstat.models.exponential
+software: scikit-gstat
+call: {interface: python, name: skgstat.models.exponential}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  h: {type: any, required: true}
+  r: {type: any, required: true}
+  c0: {type: any, required: true}
+  b: {type: number, default: 0.0}
+status: active
+review: {state: harvested, source: python-packages}

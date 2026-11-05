@@ -1,0 +1,15 @@
+id: libpysal-weights-w
+kind: implementation
+name: libpysal.weights.W
+software: libpysal
+call: {interface: python, name: libpysal.weights.W}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  neighbors: {type: any, required: true}
+  weights: {type: any}
+  id_order: {type: any}
+  silence_warnings: {type: boolean, default: false}
+  ids: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

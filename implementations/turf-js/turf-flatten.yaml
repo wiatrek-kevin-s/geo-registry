@@ -1,0 +1,24 @@
+id: turf-flatten
+kind: implementation
+name: turf.flatten
+software: turf-js
+call: {interface: js, name: turf.flatten}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  geojson: {type: Feature<T> | FeatureCollection<T> | T, required: true}
+signatures:
+- arguments:
+  - {name: geojson, type: Feature<T> | FeatureCollection<T> | T}
+  returns: FeatureCollection<Point>
+- arguments:
+  - {name: geojson, type: Feature<T> | FeatureCollection<T> | T}
+  returns: FeatureCollection<LineString>
+- arguments:
+  - {name: geojson, type: Feature<T> | FeatureCollection<T> | T}
+  returns: FeatureCollection<Polygon>
+- arguments:
+  - {name: geojson, type: AllGeoJSON}
+  returns: FeatureCollection<any>
+notes: From @turf/flatten.
+status: active
+review: {state: harvested, source: turf}

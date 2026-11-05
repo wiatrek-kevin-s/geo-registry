@@ -1,0 +1,11 @@
+id: turf-linesegment
+kind: implementation
+name: turf.lineSegment
+software: turf-js
+call: {interface: js, name: turf.lineSegment}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  geojson: {type: Feature<G> | FeatureCollection<G> | G, required: true}
+notes: From @turf/line-segment.
+status: active
+review: {state: harvested, source: turf}

@@ -1,0 +1,11 @@
+id: skgstat-estimators-entropy
+kind: implementation
+name: skgstat.estimators.entropy
+software: scikit-gstat
+call: {interface: python, name: skgstat.estimators.entropy}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  x: {type: any, required: true}
+  bins: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

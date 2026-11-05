@@ -1,0 +1,14 @@
+id: terra-add-mtext
+kind: implementation
+name: terra::add_mtext
+software: terra
+call: {interface: r, name: 'terra::add_mtext'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  text: {type: any, required: true}
+  side: {type: any, default: '3'}
+  line: {type: any, default: '0'}
+  adj: {type: any, default: '0.5'}
+  '...': {type: dots, note: further arguments passed on}
+status: active
+review: {state: harvested, source: r-packages}

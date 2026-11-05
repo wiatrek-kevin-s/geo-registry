@@ -1,0 +1,12 @@
+id: terra-add
+kind: implementation
+name: terra::add<-
+software: terra
+call: {interface: r, name: 'terra::add<-'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  value: {type: any, required: true}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

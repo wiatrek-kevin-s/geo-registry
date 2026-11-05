@@ -1,0 +1,11 @@
+id: fiona-vfs-parse-paths
+kind: implementation
+name: fiona.vfs.parse_paths
+software: fiona
+call: {interface: python, name: fiona.vfs.parse_paths}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  uri: {type: any, required: true}
+  vfs: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

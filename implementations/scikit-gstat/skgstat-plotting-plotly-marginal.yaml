@@ -1,0 +1,12 @@
+id: skgstat-plotting-plotly-marginal
+kind: implementation
+name: skgstat.plotting.plotly_marginal
+software: scikit-gstat
+call: {interface: python, name: skgstat.plotting.plotly_marginal}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  stvariogram: {type: any, required: true}
+  fig: {type: any}
+  include_model: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

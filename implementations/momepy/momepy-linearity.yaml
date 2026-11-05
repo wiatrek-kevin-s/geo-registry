@@ -1,0 +1,10 @@
+id: momepy-linearity
+kind: implementation
+name: momepy.linearity
+software: momepy
+call: {interface: python, name: momepy.linearity}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  geometry: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

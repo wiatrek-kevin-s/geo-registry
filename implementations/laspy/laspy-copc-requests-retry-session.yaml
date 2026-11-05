@@ -1,0 +1,13 @@
+id: laspy-copc-requests-retry-session
+kind: implementation
+name: laspy.copc.requests_retry_session
+software: laspy
+call: {interface: python, name: laspy.copc.requests_retry_session}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  retries: {type: integer, default: 3}
+  backoff_factor: {type: number, default: 0.3}
+  status_forcelist: {type: any, note: 'default (500, 502, 504)'}
+  session: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

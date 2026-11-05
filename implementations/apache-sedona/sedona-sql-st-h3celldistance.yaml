@@ -1,0 +1,11 @@
+id: sedona-sql-st-h3celldistance
+kind: implementation
+name: sedona.sql.ST_H3CellDistance
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_H3CellDistance}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  cell1: {type: Union, required: true}
+  cell2: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

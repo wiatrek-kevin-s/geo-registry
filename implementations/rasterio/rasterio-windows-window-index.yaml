@@ -1,0 +1,12 @@
+id: rasterio-windows-window-index
+kind: implementation
+name: rasterio.windows.window_index
+software: rasterio
+call: {interface: python, name: rasterio.windows.window_index}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  window: {type: any, required: true}
+  height: {type: integer, default: 0}
+  width: {type: integer, default: 0}
+status: active
+review: {state: harvested, source: python-packages}

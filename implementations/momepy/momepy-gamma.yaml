@@ -1,0 +1,14 @@
+id: momepy-gamma
+kind: implementation
+name: momepy.gamma
+software: momepy
+call: {interface: python, name: momepy.gamma}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  graph: {type: Graph, required: true}
+  radius: {type: integer, default: 5}
+  name: {type: str, default: gamma}
+  distance: {type: any}
+  verbose: {type: bool, default: true}
+status: active
+review: {state: harvested, source: python-packages}

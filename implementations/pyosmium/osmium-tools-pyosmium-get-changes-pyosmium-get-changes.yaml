@@ -1,0 +1,10 @@
+id: osmium-tools-pyosmium-get-changes-pyosmium-get-changes
+kind: implementation
+name: osmium.tools.pyosmium_get_changes.pyosmium_get_changes
+software: pyosmium
+call: {interface: python, name: osmium.tools.pyosmium_get_changes.pyosmium_get_changes}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters:
+  args: {type: List, required: true}
+status: active
+review: {state: harvested, source: python-packages}

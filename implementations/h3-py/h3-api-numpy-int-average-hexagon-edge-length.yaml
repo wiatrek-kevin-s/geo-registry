@@ -1,0 +1,11 @@
+id: h3-api-numpy-int-average-hexagon-edge-length
+kind: implementation
+name: h3.api.numpy_int.average_hexagon_edge_length
+software: h3-py
+call: {interface: python, name: h3.api.numpy_int.average_hexagon_edge_length}
+harvest: {harvester: python-packages, engine_version: 4.5.0}
+parameters:
+  res: {type: any, required: true}
+  unit: {type: string, default: km}
+status: active
+review: {state: harvested, source: python-packages}

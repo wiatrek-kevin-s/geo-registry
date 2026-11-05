@@ -1,0 +1,15 @@
+id: terra-delaunay
+kind: implementation
+name: terra::delaunay
+software: terra
+call: {interface: r, name: 'terra::delaunay'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  tolerance: {type: any, default: '0'}
+  as.lines: {type: any, default: 'FALSE'}
+  constrained: {type: any, default: 'FALSE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

@@ -1,0 +1,11 @@
+id: h3-api-memview-int-cells-to-h3shape
+kind: implementation
+name: h3.api.memview_int.cells_to_h3shape
+software: h3-py
+call: {interface: python, name: h3.api.memview_int.cells_to_h3shape}
+harvest: {harvester: python-packages, engine_version: 4.5.0}
+parameters:
+  cells: {type: any, required: true}
+  tight: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

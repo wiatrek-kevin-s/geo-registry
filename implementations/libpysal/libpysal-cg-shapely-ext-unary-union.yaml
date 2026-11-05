@@ -1,0 +1,10 @@
+id: libpysal-cg-shapely-ext-unary-union
+kind: implementation
+name: libpysal.cg.shapely_ext.unary_union
+software: libpysal
+call: {interface: python, name: libpysal.cg.shapely_ext.unary_union}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  shapes: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

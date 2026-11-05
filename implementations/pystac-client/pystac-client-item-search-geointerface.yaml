@@ -1,0 +1,10 @@
+id: pystac-client-item-search-geointerface
+kind: implementation
+name: pystac_client.item_search.GeoInterface
+software: pystac-client
+call: {interface: python, name: pystac_client.item_search.GeoInterface}
+harvest: {harvester: python-packages, engine_version: 0.9.1}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

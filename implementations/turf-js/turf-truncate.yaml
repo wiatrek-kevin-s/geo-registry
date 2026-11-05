@@ -1,0 +1,15 @@
+id: turf-truncate
+kind: implementation
+name: turf.truncate
+software: turf-js
+call: {interface: js, name: turf.truncate}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  geojson: {type: T, required: true}
+  options: {type: '{ precision?: number; coordinates?: number; mutate?: boolean; }'}
+  options.precision: {type: number, note: field of options}
+  options.coordinates: {type: number, note: field of options}
+  options.mutate: {type: boolean, note: field of options}
+notes: From @turf/truncate.
+status: active
+review: {state: harvested, source: turf}

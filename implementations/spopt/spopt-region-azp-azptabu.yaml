@@ -1,0 +1,18 @@
+id: spopt-region-azp-azptabu
+kind: implementation
+name: spopt.region.azp.AZPTabu
+software: spopt
+call: {interface: python, name: spopt.region.azp.AZPTabu}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  gdf: {type: any, required: true}
+  w: {type: any, required: true}
+  attrs_name: {type: any, required: true}
+  n_clusters: {type: integer, default: 5}
+  allow_move_strategy: {type: any}
+  random_state: {type: any}
+  initial_labels: {type: any}
+  objective_func: {type: any, note: default <spopt.region.objective_function.ObjectiveFunctionPairwise object>}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

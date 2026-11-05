@@ -1,0 +1,12 @@
+id: terra-map-pal
+kind: implementation
+name: terra::map.pal
+software: terra
+call: {interface: r, name: 'terra::map.pal'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  name: {type: any, required: true}
+  n: {type: any, default: '50'}
+  '...': {type: dots, note: further arguments passed on}
+status: active
+review: {state: harvested, source: r-packages}

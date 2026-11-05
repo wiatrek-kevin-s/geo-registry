@@ -1,0 +1,10 @@
+id: mgwr-gwr-summaryglm
+kind: implementation
+name: mgwr.gwr.summaryGLM
+software: mgwr
+call: {interface: python, name: mgwr.gwr.summaryGLM}
+harvest: {harvester: python-packages, engine_version: 2.2.1}
+parameters:
+  self: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

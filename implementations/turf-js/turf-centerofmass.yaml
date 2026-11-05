@@ -1,0 +1,13 @@
+id: turf-centerofmass
+kind: implementation
+name: turf.centerOfMass
+software: turf-js
+call: {interface: js, name: turf.centerOfMass}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  geojson: {type: any, required: true}
+  options: {type: '{ properties?: P; }'}
+  options.properties: {type: P, note: field of options}
+notes: From @turf/center-of-mass.
+status: active
+review: {state: harvested, source: turf}

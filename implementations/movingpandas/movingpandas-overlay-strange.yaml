@@ -1,0 +1,14 @@
+id: movingpandas-overlay-strange
+kind: implementation
+name: movingpandas.overlay.STRange
+software: movingpandas
+call: {interface: python, name: movingpandas.overlay.STRange}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  pt_0: {type: any, required: true}
+  pt_n: {type: any, required: true}
+  t_0: {type: any, required: true}
+  t_n: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

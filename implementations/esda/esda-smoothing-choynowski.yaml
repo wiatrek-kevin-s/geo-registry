@@ -1,0 +1,13 @@
+id: esda-smoothing-choynowski
+kind: implementation
+name: esda.smoothing.choynowski
+software: esda
+call: {interface: python, name: esda.smoothing.choynowski}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  e: {type: any, required: true}
+  b: {type: any, required: true}
+  n: {type: any, required: true}
+  threshold: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

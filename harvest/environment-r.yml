@@ -1,0 +1,9 @@
+# R with sf and terra, for harvest/r_packages.py.
+name: geo-registry-r
+channels:
+  - conda-forge
+dependencies:
+  - r-base
+  - r-sf
+  - r-terra
+  - r-jsonlite

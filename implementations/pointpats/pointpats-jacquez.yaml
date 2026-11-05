@@ -1,0 +1,13 @@
+id: pointpats-jacquez
+kind: implementation
+name: pointpats.jacquez
+software: pointpats
+call: {interface: python, name: pointpats.jacquez}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  s_coords: {type: any, required: true}
+  t_coords: {type: any, required: true}
+  k: {type: any, required: true}
+  permutations: {type: integer, default: 99}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,14 @@
+id: turf-booleandisjoint
+kind: implementation
+name: turf.booleanDisjoint
+software: turf-js
+call: {interface: js, name: turf.booleanDisjoint}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  feature1: {type: Feature<any> | Geometry, required: true}
+  feature2: {type: Feature<any> | Geometry, required: true}
+  options: {type: '{ ignoreSelfIntersections?: boolean; }'}
+  options.ignoreSelfIntersections: {type: boolean, note: field of options}
+notes: From @turf/boolean-disjoint.
+status: active
+review: {state: harvested, source: turf}

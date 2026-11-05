@@ -1,0 +1,10 @@
+id: momepy-facade-ratio
+kind: implementation
+name: momepy.facade_ratio
+software: momepy
+call: {interface: python, name: momepy.facade_ratio}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  geometry: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

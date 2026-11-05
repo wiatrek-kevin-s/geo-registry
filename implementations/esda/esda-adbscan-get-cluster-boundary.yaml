@@ -1,0 +1,15 @@
+id: esda-adbscan-get-cluster-boundary
+kind: implementation
+name: esda.adbscan.get_cluster_boundary
+software: esda
+call: {interface: python, name: esda.adbscan.get_cluster_boundary}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  labels: {type: any, required: true}
+  xys: {type: any, required: true}
+  xy: {type: any, note: 'default [''X'', ''Y'']'}
+  n_jobs: {type: integer, default: 1}
+  crs: {type: any}
+  step: {type: integer, default: 1}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,15 @@
+id: topojson-ops-simplify
+kind: implementation
+name: topojson.ops.simplify
+software: topojson
+call: {interface: python, name: topojson.ops.simplify}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  linestrings: {type: any, required: true}
+  epsilon: {type: any, required: true}
+  algorithm: {type: string, default: dp}
+  package: {type: string, default: simplification}
+  input_as: {type: string, default: linestring}
+  prevent_oversimplify: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

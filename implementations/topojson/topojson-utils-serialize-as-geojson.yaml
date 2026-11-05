@@ -1,0 +1,15 @@
+id: topojson-utils-serialize-as-geojson
+kind: implementation
+name: topojson.utils.serialize_as_geojson
+software: topojson
+call: {interface: python, name: topojson.utils.serialize_as_geojson}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  topo_object: {type: any, required: true}
+  fp: {type: any}
+  validate: {type: boolean, default: false}
+  objectname: {type: string, default: data}
+  order: {type: string, default: CCW_CW}
+  decimals: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

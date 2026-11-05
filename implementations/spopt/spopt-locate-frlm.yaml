@@ -1,0 +1,17 @@
+id: spopt-locate-frlm
+kind: implementation
+name: spopt.locate.FRLM
+software: spopt
+call: {interface: python, name: spopt.locate.FRLM}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  vehicle_range: {type: integer, default: 200000}
+  p_facilities: {type: int, default: 5}
+  capacity: {type: any}
+  threshold: {type: float, default: 0.0}
+  weight: {type: float, default: 0.99}
+  objective: {type: str, default: flow}
+  include_destination: {type: bool, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

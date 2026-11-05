@@ -1,0 +1,13 @@
+id: libpysal-io-open
+kind: implementation
+name: libpysal.io.open
+software: libpysal
+call: {interface: python, name: libpysal.io.open}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  dataPath: {type: string, default: ''}
+  mode: {type: string, default: r}
+  dataFormat: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,13 @@
+id: skgstat-util-cross-validation-jacknife
+kind: implementation
+name: skgstat.util.cross_validation.jacknife
+software: scikit-gstat
+call: {interface: python, name: skgstat.util.cross_validation.jacknife}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  variogram: {type: any, required: true}
+  n: {type: int}
+  metric: {type: str, default: rmse}
+  seed: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

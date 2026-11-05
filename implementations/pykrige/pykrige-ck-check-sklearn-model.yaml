@@ -1,0 +1,11 @@
+id: pykrige-ck-check-sklearn-model
+kind: implementation
+name: pykrige.ck.check_sklearn_model
+software: pykrige
+call: {interface: python, name: pykrige.ck.check_sklearn_model}
+harvest: {harvester: python-packages, engine_version: 1.7.3}
+parameters:
+  model: {type: any, required: true}
+  task: {type: string, default: regression}
+status: active
+review: {state: harvested, source: python-packages}

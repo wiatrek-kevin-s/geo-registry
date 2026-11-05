@@ -1,0 +1,11 @@
+id: esda-shape-form-factor
+kind: implementation
+name: esda.shape.form_factor
+software: esda
+call: {interface: python, name: esda.shape.form_factor}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  collection: {type: any, required: true}
+  height: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

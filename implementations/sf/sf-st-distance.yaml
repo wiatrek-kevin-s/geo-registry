@@ -1,0 +1,17 @@
+id: sf-st-distance
+kind: implementation
+name: sf::st_distance
+software: sf
+call: {interface: r, name: 'sf::st_distance'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  dist_fun: {type: any, required: true}
+  by_element: {type: any, default: 'FALSE'}
+  which: {type: any, default: 'ifelse(isTRUE(st_is_longlat(x)), "Great Circle", "Euclidean")'}
+  par: {type: any, default: '0'}
+  tolerance: {type: any, default: '0'}
+status: active
+review: {state: harvested, source: r-packages}

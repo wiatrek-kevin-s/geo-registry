@@ -1,0 +1,12 @@
+id: sedona-sql-st-hausdorffdistance
+kind: implementation
+name: sedona.sql.ST_HausdorffDistance
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_HausdorffDistance}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  g1: {type: Union, required: true}
+  g2: {type: Union, required: true}
+  densityFrac: {type: Union, default: -1}
+status: active
+review: {state: harvested, source: python-packages}

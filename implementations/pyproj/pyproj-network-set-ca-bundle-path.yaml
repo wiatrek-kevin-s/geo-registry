@@ -1,0 +1,10 @@
+id: pyproj-network-set-ca-bundle-path
+kind: implementation
+name: pyproj.network.set_ca_bundle_path
+software: pyproj
+call: {interface: python, name: pyproj.network.set_ca_bundle_path}
+harvest: {harvester: python-packages, engine_version: 3.8.0}
+parameters:
+  ca_bundle_path: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

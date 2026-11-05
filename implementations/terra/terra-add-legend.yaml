@@ -1,0 +1,13 @@
+id: terra-add-legend
+kind: implementation
+name: terra::add_legend
+software: terra
+call: {interface: r, name: 'terra::add_legend'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  xpd: {type: any, default: 'TRUE'}
+  '...': {type: dots, note: further arguments passed on}
+status: active
+review: {state: harvested, source: r-packages}

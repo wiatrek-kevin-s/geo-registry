@@ -1,0 +1,17 @@
+id: libpysal-cg-voronoi-frames
+kind: implementation
+name: libpysal.cg.voronoi_frames
+software: libpysal
+call: {interface: python, name: libpysal.cg.voronoi_frames}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  geometry: {type: any, required: true}
+  radius: {type: any}
+  clip: {type: string, default: bounding_box}
+  shrink: {type: float, default: 0}
+  segment: {type: float, default: 0}
+  grid_size: {type: float, default: 1.0e-05}
+  return_input: {type: any}
+  as_gdf: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

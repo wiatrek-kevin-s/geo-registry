@@ -1,0 +1,11 @@
+id: spreg-make-wxg
+kind: implementation
+name: spreg.make_wxg
+software: spreg
+call: {interface: python, name: spreg.make_wxg}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  wx: {type: any, required: true}
+  gamma: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

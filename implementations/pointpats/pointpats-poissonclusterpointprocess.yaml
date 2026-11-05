@@ -1,0 +1,18 @@
+id: pointpats-poissonclusterpointprocess
+kind: implementation
+name: pointpats.PoissonClusterPointProcess
+software: pointpats
+call: {interface: python, name: pointpats.PoissonClusterPointProcess}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  window: {type: any, required: true}
+  n: {type: any, required: true}
+  parents: {type: any, required: true}
+  radius: {type: any, required: true}
+  samples: {type: any, required: true}
+  keep: {type: boolean, default: false}
+  asPP: {type: boolean, default: false}
+  conditioning: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

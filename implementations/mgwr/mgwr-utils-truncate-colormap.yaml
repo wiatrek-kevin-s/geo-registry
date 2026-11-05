@@ -1,0 +1,13 @@
+id: mgwr-utils-truncate-colormap
+kind: implementation
+name: mgwr.utils.truncate_colormap
+software: mgwr
+call: {interface: python, name: mgwr.utils.truncate_colormap}
+harvest: {harvester: python-packages, engine_version: 2.2.1}
+parameters:
+  cmap: {type: any, required: true}
+  minval: {type: number, default: 0.0}
+  maxval: {type: number, default: 1.0}
+  n: {type: integer, default: 100}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,15 @@
+id: spreg-sur-dictz
+kind: implementation
+name: spreg.sur_dictZ
+software: spreg
+call: {interface: python, name: spreg.sur_dictZ}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  db: {type: any, required: true}
+  z_vars: {type: any, required: true}
+  form: {type: string, default: spreg}
+  const: {type: boolean, default: false}
+  space_id: {type: any}
+  time_id: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

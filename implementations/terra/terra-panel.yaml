@@ -1,0 +1,24 @@
+id: terra-panel
+kind: implementation
+name: terra::panel
+software: terra
+call: {interface: r, name: 'terra::panel'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  main: {type: any, required: true}
+  loc.main: {type: any, default: '"topleft"'}
+  nc: {type: any, required: true}
+  nr: {type: any, required: true}
+  maxnl: {type: any, default: '16'}
+  maxcell: {type: any, default: 5e+05}
+  box: {type: any, default: 'FALSE'}
+  pax: {type: any, default: list()}
+  plg: {type: any, default: list()}
+  range: {type: any, default: 'NULL'}
+  halo: {type: any, default: 'TRUE'}
+  type: {type: any, default: 'NULL'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

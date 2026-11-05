@@ -1,0 +1,13 @@
+id: spaghetti-spanning-tree
+kind: implementation
+name: spaghetti.spanning_tree
+software: spaghetti
+call: {interface: python, name: spaghetti.spanning_tree}
+harvest: {harvester: python-packages, engine_version: 1.7.6}
+parameters:
+  net: {type: any, required: true}
+  method: {type: string, default: sort}
+  maximum: {type: boolean, default: false}
+  silence_warnings: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

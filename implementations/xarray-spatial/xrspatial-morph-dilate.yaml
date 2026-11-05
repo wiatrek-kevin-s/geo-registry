@@ -1,0 +1,13 @@
+id: xrspatial-morph-dilate
+kind: implementation
+name: xrspatial.morph_dilate
+software: xarray-spatial
+call: {interface: python, name: xrspatial.morph_dilate}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: any, required: true}
+  kernel: {type: any}
+  boundary: {type: string, default: nan}
+  name: {type: string, default: dilate}
+status: active
+review: {state: harvested, source: python-packages}

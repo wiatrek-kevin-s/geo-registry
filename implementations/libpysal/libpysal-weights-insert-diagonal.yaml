@@ -1,0 +1,12 @@
+id: libpysal-weights-insert-diagonal
+kind: implementation
+name: libpysal.weights.insert_diagonal
+software: libpysal
+call: {interface: python, name: libpysal.weights.insert_diagonal}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  w: {type: any, required: true}
+  val: {type: number, default: 1.0}
+  wsp: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

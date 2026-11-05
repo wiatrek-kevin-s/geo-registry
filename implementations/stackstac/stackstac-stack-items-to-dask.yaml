@@ -1,0 +1,19 @@
+id: stackstac-stack-items-to-dask
+kind: implementation
+name: stackstac.stack.items_to_dask
+software: stackstac
+call: {interface: python, name: stackstac.stack.items_to_dask}
+harvest: {harvester: python-packages, engine_version: 0.5.1}
+parameters:
+  asset_table: {type: np.ndarray, required: true}
+  spec: {type: RasterSpec, required: true}
+  chunksize: {type: ChunksParam, required: true}
+  resampling: {type: Resampling, note: 'default <Resampling.nearest: 0>'}
+  dtype: {type: np.dtype, note: default dtype('float64')}
+  fill_value: {type: 'Union[int, float]', note: default nan}
+  rescale: {type: bool, default: true}
+  reader: {type: 'Type[Reader]', note: default stackstac.rio_reader.AutoParallelRioReader}
+  gdal_env: {type: 'Optional[LayeredEnv]'}
+  errors_as_nodata: {type: 'Tuple[Exception, ...]', note: default ()}
+status: active
+review: {state: harvested, source: python-packages}

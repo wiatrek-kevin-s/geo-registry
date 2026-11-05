@@ -1,0 +1,14 @@
+id: pyproj-aoi-areaofinterest
+kind: implementation
+name: pyproj.aoi.AreaOfInterest
+software: pyproj
+call: {interface: python, name: pyproj.aoi.AreaOfInterest}
+harvest: {harvester: python-packages, engine_version: 3.8.0}
+parameters:
+  west_lon_degree: {type: float, required: true}
+  south_lat_degree: {type: float, required: true}
+  east_lon_degree: {type: float, required: true}
+  north_lat_degree: {type: float, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

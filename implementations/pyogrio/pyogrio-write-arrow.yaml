@@ -1,0 +1,23 @@
+id: pyogrio-write-arrow
+kind: implementation
+name: pyogrio.write_arrow
+software: pyogrio
+call: {interface: python, name: pyogrio.write_arrow}
+harvest: {harvester: python-packages, engine_version: 0.13.0}
+parameters:
+  arrow_obj: {type: any, required: true}
+  path: {type: any, required: true}
+  layer: {type: any}
+  driver: {type: any}
+  geometry_name: {type: any}
+  geometry_type: {type: any}
+  crs: {type: any}
+  encoding: {type: any}
+  append: {type: boolean, default: false}
+  dataset_metadata: {type: any}
+  layer_metadata: {type: any}
+  metadata: {type: any}
+  dataset_options: {type: any}
+  layer_options: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

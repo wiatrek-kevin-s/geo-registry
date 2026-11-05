@@ -1,0 +1,16 @@
+id: turf-clustersdbscan
+kind: implementation
+name: turf.clustersDbscan
+software: turf-js
+call: {interface: js, name: turf.clustersDbscan}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  points: {type: FeatureCollection<Point>, required: true}
+  maxDistance: {type: number, required: true}
+  options: {type: '{ units?: Units; minPoints?: number; mutate?: boolean; }'}
+  options.units: {type: Units, note: field of options}
+  options.minPoints: {type: number, note: field of options}
+  options.mutate: {type: boolean, note: field of options}
+notes: From @turf/clusters-dbscan.
+status: active
+review: {state: harvested, source: turf}

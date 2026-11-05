@@ -1,0 +1,14 @@
+id: pointpats-ellipse
+kind: implementation
+name: pointpats.ellipse
+software: pointpats
+call: {interface: python, name: pointpats.ellipse}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  points: {type: any, required: true}
+  weights: {type: any}
+  method: {type: string, default: crimestat}
+  crimestatCorr: {type: boolean, default: true}
+  degfreedCorr: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

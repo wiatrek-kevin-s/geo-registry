@@ -1,0 +1,11 @@
+id: spreg-lam-setp
+kind: implementation
+name: spreg.lam_setp
+software: spreg
+call: {interface: python, name: spreg.lam_setp}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  lam: {type: any, required: true}
+  vm: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

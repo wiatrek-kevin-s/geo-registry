@@ -1,0 +1,17 @@
+id: sf-st-graticule
+kind: implementation
+name: sf::st_graticule
+software: sf
+call: {interface: r, name: 'sf::st_graticule'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  x: {type: any, default: 'c(-180, -90, 180, 90)'}
+  crs: {type: any, default: st_crs(x)}
+  datum: {type: any, default: 'st_crs("OGC:CRS84")'}
+  '...': {type: dots, note: further arguments passed on}
+  lon: {type: any, default: 'NULL'}
+  lat: {type: any, default: 'NULL'}
+  ndiscr: {type: any, default: '100'}
+  margin: {type: any, default: '0.001'}
+status: active
+review: {state: harvested, source: r-packages}

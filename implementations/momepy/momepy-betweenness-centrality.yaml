@@ -1,0 +1,18 @@
+id: momepy-betweenness-centrality
+kind: implementation
+name: momepy.betweenness_centrality
+software: momepy
+call: {interface: python, name: momepy.betweenness_centrality}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  graph: {type: Graph, required: true}
+  name: {type: str, default: betweenness}
+  mode: {type: str, default: nodes}
+  weight: {type: str, default: mm_len}
+  endpoints: {type: bool, default: true}
+  radius: {type: any}
+  distance: {type: any}
+  normalized: {type: bool, default: false}
+  verbose: {type: bool, default: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: libpysal-weights-gabriel
+kind: implementation
+name: libpysal.weights.Gabriel
+software: libpysal
+call: {interface: python, name: libpysal.weights.Gabriel}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  coordinates: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,10 @@
+id: gstools-tools-confidence-scaling
+kind: implementation
+name: gstools.tools.confidence_scaling
+software: gstools
+call: {interface: python, name: gstools.tools.confidence_scaling}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  per: {type: number, default: 0.95}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,9 @@
+id: skgstat-data-aniso-field
+kind: implementation
+name: skgstat.data.aniso_field
+software: scikit-gstat
+call: {interface: python, name: skgstat.data.aniso_field}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

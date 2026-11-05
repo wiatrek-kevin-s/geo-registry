@@ -1,0 +1,13 @@
+id: sf-st-viewport
+kind: implementation
+name: sf::st_viewport
+software: sf
+call: {interface: r, name: 'sf::st_viewport'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  bbox: {type: any, default: st_bbox(x)}
+  asp: {type: any, required: true}
+status: active
+review: {state: harvested, source: r-packages}

@@ -1,0 +1,11 @@
+id: verde-utils-get-ndim-horizontal-coords
+kind: implementation
+name: verde.utils.get_ndim_horizontal_coords
+software: verde
+call: {interface: python, name: verde.utils.get_ndim_horizontal_coords}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  easting: {type: any, required: true}
+  northing: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

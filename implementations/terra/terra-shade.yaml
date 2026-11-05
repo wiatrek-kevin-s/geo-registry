@@ -1,0 +1,17 @@
+id: terra-shade
+kind: implementation
+name: terra::shade
+software: terra
+call: {interface: r, name: 'terra::shade'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  slope: {type: any, required: true}
+  aspect: {type: any, required: true}
+  angle: {type: any, default: '45'}
+  direction: {type: any, default: '0'}
+  normalize: {type: any, default: 'FALSE'}
+  filename: {type: any, default: '""'}
+  overwrite: {type: any, default: 'FALSE'}
+  '...': {type: dots, note: further arguments passed on}
+status: active
+review: {state: harvested, source: r-packages}

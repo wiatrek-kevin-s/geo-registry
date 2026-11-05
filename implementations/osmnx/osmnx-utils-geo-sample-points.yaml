@@ -1,0 +1,11 @@
+id: osmnx-utils-geo-sample-points
+kind: implementation
+name: osmnx.utils_geo.sample_points
+software: osmnx
+call: {interface: python, name: osmnx.utils_geo.sample_points}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  G: {type: nx.MultiGraph, required: true}
+  n: {type: int, required: true}
+status: active
+review: {state: harvested, source: python-packages}

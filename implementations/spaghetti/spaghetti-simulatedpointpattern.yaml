@@ -1,0 +1,10 @@
+id: spaghetti-simulatedpointpattern
+kind: implementation
+name: spaghetti.SimulatedPointPattern
+software: spaghetti
+call: {interface: python, name: spaghetti.SimulatedPointPattern}
+harvest: {harvester: python-packages, engine_version: 1.7.6}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

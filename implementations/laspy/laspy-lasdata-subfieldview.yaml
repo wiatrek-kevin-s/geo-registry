@@ -1,0 +1,12 @@
+id: laspy-lasdata-subfieldview
+kind: implementation
+name: laspy.lasdata.SubFieldView
+software: laspy
+call: {interface: python, name: laspy.lasdata.SubFieldView}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  array: {type: ndarray, required: true}
+  bit_mask: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

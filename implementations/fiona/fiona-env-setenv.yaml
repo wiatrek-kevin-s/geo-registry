@@ -1,0 +1,9 @@
+id: fiona-env-setenv
+kind: implementation
+name: fiona.env.setenv
+software: fiona
+call: {interface: python, name: fiona.env.setenv}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

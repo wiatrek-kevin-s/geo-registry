@@ -1,0 +1,12 @@
+id: libpysal-weights-remap-ids
+kind: implementation
+name: libpysal.weights.remap_ids
+software: libpysal
+call: {interface: python, name: libpysal.weights.remap_ids}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  w: {type: any, required: true}
+  old2new: {type: any, required: true}
+  id_order: {type: any, note: 'default []'}
+status: active
+review: {state: harvested, source: python-packages}

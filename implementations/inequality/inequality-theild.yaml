@@ -1,0 +1,13 @@
+id: inequality-theild
+kind: implementation
+name: inequality.TheilD
+software: inequality
+call: {interface: python, name: inequality.TheilD}
+harvest: {harvester: python-packages, engine_version: 1.2.0}
+parameters:
+  y: {type: any, required: true}
+  partition: {type: any, required: true}
+  column: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

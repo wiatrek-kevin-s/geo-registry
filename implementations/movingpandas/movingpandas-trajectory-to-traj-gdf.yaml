@@ -1,0 +1,12 @@
+id: movingpandas-trajectory-to-traj-gdf
+kind: implementation
+name: Trajectory.to_traj_gdf
+software: movingpandas
+call: {interface: python, name: movingpandas.Trajectory.to_traj_gdf}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  wkt: {type: boolean, default: false}
+  agg: {type: boolean, default: false}
+  return_orig_tz: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

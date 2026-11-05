@@ -1,0 +1,12 @@
+id: esda-smoothing-sum-by-n
+kind: implementation
+name: esda.smoothing.sum_by_n
+software: esda
+call: {interface: python, name: esda.smoothing.sum_by_n}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  d: {type: any, required: true}
+  w: {type: any, required: true}
+  n: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

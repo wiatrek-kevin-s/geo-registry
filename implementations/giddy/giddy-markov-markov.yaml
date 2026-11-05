@@ -1,0 +1,14 @@
+id: giddy-markov-markov
+kind: implementation
+name: giddy.markov.Markov
+software: giddy
+call: {interface: python, name: giddy.markov.Markov}
+harvest: {harvester: python-packages, engine_version: 2.3.9}
+parameters:
+  class_ids: {type: any, required: true}
+  classes: {type: any}
+  fill_empty_classes: {type: boolean, default: false}
+  summary: {type: boolean, default: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

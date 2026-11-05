@@ -1,0 +1,11 @@
+id: rasterio-coords-disjoint-bounds
+kind: implementation
+name: rasterio.coords.disjoint_bounds
+software: rasterio
+call: {interface: python, name: rasterio.coords.disjoint_bounds}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  bounds1: {type: any, required: true}
+  bounds2: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

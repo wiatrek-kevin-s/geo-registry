@@ -1,0 +1,14 @@
+id: giddy-plotting-dynamic-lisa-composite-explore
+kind: implementation
+name: giddy.plotting.dynamic_lisa_composite_explore
+software: giddy
+call: {interface: python, name: giddy.plotting.dynamic_lisa_composite_explore}
+harvest: {harvester: python-packages, engine_version: 2.3.9}
+parameters:
+  rose: {type: any, required: true}
+  gdf: {type: any, required: true}
+  pattern: {type: string, default: ''}
+  p: {type: number, default: 0.05}
+  figsize: {type: any, note: 'default (13, 10)'}
+status: active
+review: {state: harvested, source: python-packages}

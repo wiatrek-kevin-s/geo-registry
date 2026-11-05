@@ -1,0 +1,11 @@
+id: skgstat-data-meuse
+kind: implementation
+name: skgstat.data.meuse
+software: scikit-gstat
+call: {interface: python, name: skgstat.data.meuse}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  variable: {type: string, default: lead}
+  as_dataframe: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

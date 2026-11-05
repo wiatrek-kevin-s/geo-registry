@@ -1,0 +1,10 @@
+id: topojson-ops-is-ccw
+kind: implementation
+name: topojson.ops.is_ccw
+software: topojson
+call: {interface: python, name: topojson.ops.is_ccw}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  ring: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

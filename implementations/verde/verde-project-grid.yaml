@@ -1,0 +1,13 @@
+id: verde-project-grid
+kind: implementation
+name: verde.project_grid
+software: verde
+call: {interface: python, name: verde.project_grid}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  grid: {type: any, required: true}
+  projection: {type: any, required: true}
+  method: {type: string, default: linear}
+  antialias: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

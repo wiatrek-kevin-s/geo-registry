@@ -1,0 +1,12 @@
+id: libpysal-weights-build-lattice-shapefile
+kind: implementation
+name: libpysal.weights.build_lattice_shapefile
+software: libpysal
+call: {interface: python, name: libpysal.weights.build_lattice_shapefile}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  nrows: {type: any, required: true}
+  ncols: {type: any, required: true}
+  outFileName: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

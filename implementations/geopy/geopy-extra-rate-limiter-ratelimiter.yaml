@@ -1,0 +1,16 @@
+id: geopy-extra-rate-limiter-ratelimiter
+kind: implementation
+name: geopy.extra.rate_limiter.RateLimiter
+software: geopy
+call: {interface: python, name: geopy.extra.rate_limiter.RateLimiter}
+harvest: {harvester: python-packages, engine_version: 2.5.0}
+parameters:
+  func: {type: any, required: true}
+  min_delay_seconds: {type: number, default: 0.0}
+  max_retries: {type: integer, default: 2}
+  error_wait_seconds: {type: number, default: 5.0}
+  swallow_exceptions: {type: boolean, default: true}
+  return_value_on_exception: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: gstools-tools-misc-get-fig-ax
+kind: implementation
+name: gstools.tools.misc.get_fig_ax
+software: gstools
+call: {interface: python, name: gstools.tools.misc.get_fig_ax}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  fig: {type: any}
+  ax: {type: any}
+  ax_name: {type: string, default: rectilinear}
+status: active
+review: {state: harvested, source: python-packages}

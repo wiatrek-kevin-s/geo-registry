@@ -1,0 +1,11 @@
+id: turf-kinks
+kind: implementation
+name: turf.kinks
+software: turf-js
+call: {interface: js, name: turf.kinks}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  featureIn: {type: Feature<T> | T, required: true}
+notes: From @turf/kinks.
+status: active
+review: {state: harvested, source: turf}

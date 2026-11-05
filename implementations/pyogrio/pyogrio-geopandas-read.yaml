@@ -1,0 +1,25 @@
+id: pyogrio-geopandas-read
+kind: implementation
+name: pyogrio.geopandas.read
+software: pyogrio
+call: {interface: python, name: pyogrio.geopandas.read}
+harvest: {harvester: python-packages, engine_version: 0.13.0}
+parameters:
+  path_or_buffer: {type: any, required: true}
+  layer: {type: any}
+  encoding: {type: any}
+  columns: {type: any}
+  read_geometry: {type: boolean, default: true}
+  force_2d: {type: boolean, default: false}
+  skip_features: {type: integer, default: 0}
+  max_features: {type: any}
+  where: {type: any}
+  bbox: {type: any}
+  mask: {type: any}
+  fids: {type: any}
+  sql: {type: any}
+  sql_dialect: {type: any}
+  return_fids: {type: boolean, default: false}
+  datetime_as_string: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

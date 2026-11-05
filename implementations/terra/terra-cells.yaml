@@ -1,0 +1,19 @@
+id: terra-cells
+kind: implementation
+name: terra::cells
+software: terra
+call: {interface: r, name: 'terra::cells'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  method: {type: any, default: '"simple"'}
+  weights: {type: any, default: 'FALSE'}
+  exact: {type: any, default: 'FALSE'}
+  touches: {type: any, default: is.lines(y)}
+  small: {type: any, default: 'TRUE'}
+  pairs: {type: any, default: 'FALSE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

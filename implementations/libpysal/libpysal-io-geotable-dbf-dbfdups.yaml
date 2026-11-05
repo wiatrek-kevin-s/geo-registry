@@ -1,0 +1,11 @@
+id: libpysal-io-geotable-dbf-dbfdups
+kind: implementation
+name: libpysal.io.geotable.dbf.dbfdups
+software: libpysal
+call: {interface: python, name: libpysal.io.geotable.dbf.dbfdups}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  dbfpath: {type: any, required: true}
+  idvar: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: rioxarray-raster-dataset-rasterdataset-set-attrs
+kind: implementation
+name: RasterDataset.set_attrs
+software: rioxarray
+call: {interface: python, name: rioxarray.raster_dataset.RasterDataset.set_attrs}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  new_attrs: {type: dict, required: true}
+  inplace: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

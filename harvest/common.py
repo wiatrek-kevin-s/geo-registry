@@ -43,6 +43,16 @@ def scalar(v: Any) -> bool:
     return type(v) in (str, bool, int, float) and not (isinstance(v, float) and not math.isfinite(v))
 
 
+def describe(v: Any) -> str:
+    """A stable description of a non-scalar default: no memory addresses, sets sorted,
+    so the same engine version always gives the same text."""
+    if callable(v) and hasattr(v, "__qualname__"):
+        return f"{getattr(v, '__module__', None) or ''}.{v.__qualname__}".lstrip(".")
+    if isinstance(v, (set, frozenset)):
+        return "{" + ", ".join(sorted(describe(x) for x in v)) + "}"
+    return re.sub(r" at 0x[0-9a-fA-F]+", "", repr(v))
+
+
 def param(type_: str, *, required: bool = False, default: Any = None,
           values: list | None = None, units: str | None = None, note: str | None = None) -> dict:
     """One engine parameter in the registry's shape. Non-scalar defaults go into the note."""
@@ -53,7 +63,7 @@ def param(type_: str, *, required: bool = False, default: Any = None,
         if scalar(default):
             p["default"] = default
         else:
-            note = ((note + "; ") if note else "") + f"default {default!r}"[:200]
+            note = ((note + "; ") if note else "") + f"default {describe(default)}"[:200]
     if values:
         vals = [v for v in dict.fromkeys(values) if scalar(v)]
         if vals:
@@ -118,10 +128,20 @@ def dump(e: dict) -> str:
     return yaml.dump(_shape(e), Dumper=_Dumper, sort_keys=False, allow_unicode=True, width=120)
 
 
+def reserved_ids() -> set[str]:
+    """Ids of the registry's other entries (data, tools, operations). An implementation
+    may not reuse one: ids are unique across the whole registry."""
+    return {p.stem for sub in ("data", "tools", "operations") for p in (REPO / "entries" / sub).glob("*.yaml")}
+
+
 def write(software: str, entries: list[dict], root: Path = IMPLEMENTATIONS) -> dict[str, int]:
     """Replace implementations/<software>/ with these entries. Returns counts of changes."""
     folder = root / software
     folder.mkdir(parents=True, exist_ok=True)
+    taken = reserved_ids()
+    for e in entries:
+        if e["id"] in taken:  # e.g. terra::draw vs the Terra Draw library's entry
+            e["id"] = e["id"] + "-impl"
     ids = [e["id"] for e in entries]
     dupes = {i for i in ids if ids.count(i) > 1}
     if dupes:

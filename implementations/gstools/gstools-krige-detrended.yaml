@@ -1,0 +1,19 @@
+id: gstools-krige-detrended
+kind: implementation
+name: gstools.krige.Detrended
+software: gstools
+call: {interface: python, name: gstools.krige.Detrended}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  model: {type: any, required: true}
+  cond_pos: {type: any, required: true}
+  cond_val: {type: any, required: true}
+  trend: {type: any, required: true}
+  exact: {type: boolean, default: false}
+  cond_err: {type: string, default: nugget}
+  pseudo_inv: {type: boolean, default: true}
+  pseudo_inv_type: {type: string, default: pinv}
+  fit_variogram: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

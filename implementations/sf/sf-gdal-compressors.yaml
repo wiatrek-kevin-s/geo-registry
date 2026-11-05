@@ -1,0 +1,9 @@
+id: sf-gdal-compressors
+kind: implementation
+name: sf::gdal_compressors
+software: sf
+call: {interface: r, name: 'sf::gdal_compressors'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters: {}
+status: active
+review: {state: harvested, source: r-packages}

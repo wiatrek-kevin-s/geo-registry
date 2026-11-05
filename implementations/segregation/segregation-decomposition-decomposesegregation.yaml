@@ -1,0 +1,13 @@
+id: segregation-decomposition-decomposesegregation
+kind: implementation
+name: segregation.decomposition.DecomposeSegregation
+software: segregation
+call: {interface: python, name: segregation.decomposition.DecomposeSegregation}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  index1: {type: any, required: true}
+  index2: {type: any, required: true}
+  counterfactual_approach: {type: string, default: composition}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

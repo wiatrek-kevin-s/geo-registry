@@ -1,0 +1,12 @@
+id: pointpats-window
+kind: implementation
+name: pointpats.Window
+software: pointpats
+call: {interface: python, name: pointpats.Window}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  parts: {type: any, required: true}
+  holes: {type: any, note: 'default []'}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

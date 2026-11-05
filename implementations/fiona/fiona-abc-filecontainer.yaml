@@ -1,0 +1,10 @@
+id: fiona-abc-filecontainer
+kind: implementation
+name: fiona.abc.FileContainer
+software: fiona
+call: {interface: python, name: fiona.abc.FileContainer}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

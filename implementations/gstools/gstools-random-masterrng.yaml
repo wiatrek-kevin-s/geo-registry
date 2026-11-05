@@ -1,0 +1,11 @@
+id: gstools-random-masterrng
+kind: implementation
+name: gstools.random.MasterRNG
+software: gstools
+call: {interface: python, name: gstools.random.MasterRNG}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  seed: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

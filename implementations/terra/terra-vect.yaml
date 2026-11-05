@@ -1,0 +1,27 @@
+id: terra-vect
+kind: implementation
+name: terra::vect
+software: terra
+call: {interface: r, name: 'terra::vect'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  crs: {type: any, default: '""'}
+  layer: {type: any, default: '""'}
+  query: {type: any, default: '""'}
+  dialect: {type: any, default: '""'}
+  extent: {type: any, default: 'NULL'}
+  filter: {type: any, default: 'NULL'}
+  proxy: {type: any, default: 'FALSE'}
+  what: {type: any, default: '""'}
+  opts: {type: any, default: 'NULL'}
+  kml.extended: {type: any, default: 'NULL'}
+  geom: {type: any, default: 'NULL'}
+  keepgeom: {type: any, default: 'FALSE'}
+  quiet: {type: any, default: 'FALSE'}
+  type: {type: any, default: '"points"'}
+  atts: {type: any, default: 'NULL'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

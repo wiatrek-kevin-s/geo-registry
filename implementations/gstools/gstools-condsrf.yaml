@@ -1,0 +1,12 @@
+id: gstools-condsrf
+kind: implementation
+name: gstools.CondSRF
+software: gstools
+call: {interface: python, name: gstools.CondSRF}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  krige: {type: any, required: true}
+  generator: {type: string, default: RandMeth}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

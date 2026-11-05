@@ -1,0 +1,12 @@
+id: laspy-utils-null-pad-bytes
+kind: implementation
+name: laspy.utils.null_pad_bytes
+software: laspy
+call: {interface: python, name: laspy.utils.null_pad_bytes}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  raw_bytes: {type: bytes, required: true}
+  max_length: {type: int, required: true}
+  null_terminate: {type: bool, default: true}
+status: active
+review: {state: harvested, source: python-packages}

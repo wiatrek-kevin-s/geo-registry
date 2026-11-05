@@ -1,0 +1,13 @@
+id: verde-model-selection-fit-score
+kind: implementation
+name: verde.model_selection.fit_score
+software: verde
+call: {interface: python, name: verde.model_selection.fit_score}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  estimator: {type: any, required: true}
+  train_data: {type: any, required: true}
+  test_data: {type: any, required: true}
+  scoring: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

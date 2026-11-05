@@ -1,0 +1,11 @@
+id: spreg-f-stat
+kind: implementation
+name: spreg.f_stat
+software: spreg
+call: {interface: python, name: spreg.f_stat}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  reg: {type: any, required: true}
+  df: {type: integer, default: 0}
+status: active
+review: {state: harvested, source: python-packages}

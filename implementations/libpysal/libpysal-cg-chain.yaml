@@ -1,0 +1,11 @@
+id: libpysal-cg-chain
+kind: implementation
+name: libpysal.cg.Chain
+software: libpysal
+call: {interface: python, name: libpysal.cg.Chain}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  vertices: {type: list, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

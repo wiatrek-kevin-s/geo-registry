@@ -1,0 +1,11 @@
+id: geocube-vector-to-cube-load-vector-data
+kind: implementation
+name: geocube.vector_to_cube.load_vector_data
+software: geocube
+call: {interface: python, name: geocube.vector_to_cube.load_vector_data}
+harvest: {harvester: python-packages, engine_version: 0.7.1}
+parameters:
+  vector_data: {type: Union, required: true}
+  measurements: {type: Optional}
+status: active
+review: {state: harvested, source: python-packages}

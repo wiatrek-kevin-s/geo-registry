@@ -1,0 +1,11 @@
+id: skgstat-kriging-inv-solve
+kind: implementation
+name: skgstat.Kriging.inv_solve
+software: scikit-gstat
+call: {interface: python, name: skgstat.Kriging.inv_solve}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  a: {type: any, required: true}
+  b: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

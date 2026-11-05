@@ -1,0 +1,14 @@
+id: verde-base-least-squares
+kind: implementation
+name: verde.base.least_squares
+software: verde
+call: {interface: python, name: verde.base.least_squares}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  jacobian: {type: any, required: true}
+  data: {type: any, required: true}
+  weights: {type: any, required: true}
+  damping: {type: any}
+  copy_jacobian: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

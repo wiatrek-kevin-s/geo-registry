@@ -1,0 +1,21 @@
+id: terra-combinegeoms
+kind: implementation
+name: terra::combineGeoms
+software: terra
+call: {interface: r, name: 'terra::combineGeoms'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  overlap: {type: any, default: 'TRUE'}
+  boundary: {type: any, default: 'TRUE'}
+  distance: {type: any, default: 'TRUE'}
+  append: {type: any, default: 'TRUE'}
+  minover: {type: any, default: '0.1'}
+  maxdist: {type: any, default: Inf}
+  dissolve: {type: any, default: 'TRUE'}
+  erase: {type: any, default: 'TRUE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

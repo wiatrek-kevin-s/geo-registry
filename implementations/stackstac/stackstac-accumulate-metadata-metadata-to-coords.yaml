@@ -1,0 +1,13 @@
+id: stackstac-accumulate-metadata-metadata-to-coords
+kind: implementation
+name: stackstac.accumulate_metadata.metadata_to_coords
+software: stackstac
+call: {interface: python, name: stackstac.accumulate_metadata.metadata_to_coords}
+harvest: {harvester: python-packages, engine_version: 0.5.1}
+parameters:
+  items: {type: Iterable, required: true}
+  dim_name: {type: str, required: true}
+  fields: {type: Union, default: true}
+  skip_fields: {type: Container, note: default ()}
+status: active
+review: {state: harvested, source: python-packages}

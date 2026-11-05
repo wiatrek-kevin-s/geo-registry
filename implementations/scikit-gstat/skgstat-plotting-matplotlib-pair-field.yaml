@@ -1,0 +1,15 @@
+id: skgstat-plotting-matplotlib-pair-field
+kind: implementation
+name: skgstat.plotting.matplotlib_pair_field
+software: scikit-gstat
+call: {interface: python, name: skgstat.plotting.matplotlib_pair_field}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  variogram: {type: any, required: true}
+  ax: {type: any}
+  cmap: {type: string, default: gist_rainbow}
+  points: {type: string, default: all}
+  add_points: {type: boolean, default: true}
+  alpha: {type: number, default: 0.3}
+status: active
+review: {state: harvested, source: python-packages}

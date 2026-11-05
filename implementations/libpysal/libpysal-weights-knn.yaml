@@ -1,0 +1,16 @@
+id: libpysal-weights-knn
+kind: implementation
+name: libpysal.weights.KNN
+software: libpysal
+call: {interface: python, name: libpysal.weights.KNN}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  data: {type: any, required: true}
+  k: {type: integer, default: 2}
+  p: {type: integer, default: 2}
+  ids: {type: any}
+  radius: {type: any}
+  distance_metric: {type: string, default: euclidean}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

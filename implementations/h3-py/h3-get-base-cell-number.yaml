@@ -1,0 +1,10 @@
+id: h3-get-base-cell-number
+kind: implementation
+name: h3.get_base_cell_number
+software: h3-py
+call: {interface: python, name: h3.get_base_cell_number}
+harvest: {harvester: python-packages, engine_version: 4.5.0}
+parameters:
+  h: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

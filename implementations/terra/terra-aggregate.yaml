@@ -1,0 +1,21 @@
+id: terra-aggregate
+kind: implementation
+name: terra::aggregate
+software: terra
+call: {interface: r, name: 'terra::aggregate'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  fact: {type: any, default: '2'}
+  fun: {type: any, default: '"mean"'}
+  cores: {type: any, default: '1'}
+  filename: {type: any, default: '""'}
+  overwrite: {type: any, default: 'FALSE'}
+  wopt: {type: any, default: list()}
+  by: {type: any, default: 'NULL'}
+  dissolve: {type: any, default: 'TRUE'}
+  count: {type: any, default: 'TRUE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

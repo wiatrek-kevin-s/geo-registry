@@ -1,0 +1,13 @@
+id: spaghetti-regular-lattice
+kind: implementation
+name: spaghetti.regular_lattice
+software: spaghetti
+call: {interface: python, name: spaghetti.regular_lattice}
+harvest: {harvester: python-packages, engine_version: 1.7.6}
+parameters:
+  bounds: {type: any, required: true}
+  nh: {type: any, required: true}
+  nv: {type: any}
+  exterior: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

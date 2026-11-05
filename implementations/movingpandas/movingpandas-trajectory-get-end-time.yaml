@@ -1,0 +1,9 @@
+id: movingpandas-trajectory-get-end-time
+kind: implementation
+name: Trajectory.get_end_time
+software: movingpandas
+call: {interface: python, name: movingpandas.Trajectory.get_end_time}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

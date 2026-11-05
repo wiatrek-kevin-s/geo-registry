@@ -1,0 +1,10 @@
+id: fiona-fio-helpers-make-ld-context
+kind: implementation
+name: fiona.fio.helpers.make_ld_context
+software: fiona
+call: {interface: python, name: fiona.fio.helpers.make_ld_context}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  context_items: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

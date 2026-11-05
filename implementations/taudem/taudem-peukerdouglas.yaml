@@ -1,0 +1,10 @@
+id: taudem-peukerdouglas
+kind: implementation
+name: peukerdouglas
+software: taudem
+call: {interface: cli, name: peukerdouglas}
+harvest: {harvester: cli-packages, engine_version: 5.3.8}
+parameters: {}
+notes: 'Listed by name: the program prints free-form usage (run it with -h), so its parameters are not harvested.'
+status: active
+review: {state: harvested, source: cli-packages}

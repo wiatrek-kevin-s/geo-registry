@@ -1,0 +1,16 @@
+id: terra-terrain
+kind: implementation
+name: terra::terrain
+software: terra
+call: {interface: r, name: 'terra::terrain'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  v: {type: any, default: '"slope"'}
+  neighbors: {type: any, default: '8'}
+  unit: {type: any, default: '"degrees"'}
+  filename: {type: any, default: '""'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

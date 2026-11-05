@@ -1,0 +1,11 @@
+id: sedona-sql-st-linefromwkb
+kind: implementation
+name: sedona.sql.ST_LineFromWKB
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_LineFromWKB}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  wkb: {type: Union, required: true}
+  srid: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

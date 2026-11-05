@@ -1,0 +1,11 @@
+id: h3-api-memview-int-grid-path-cells
+kind: implementation
+name: h3.api.memview_int.grid_path_cells
+software: h3-py
+call: {interface: python, name: h3.api.memview_int.grid_path_cells}
+harvest: {harvester: python-packages, engine_version: 4.5.0}
+parameters:
+  start: {type: any, required: true}
+  end: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

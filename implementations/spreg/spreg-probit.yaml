@@ -1,0 +1,27 @@
+id: spreg-probit
+kind: implementation
+name: spreg.Probit
+software: spreg
+call: {interface: python, name: spreg.Probit}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  y: {type: any, required: true}
+  x: {type: any, required: true}
+  w: {type: any}
+  slx_lags: {type: integer, default: 0}
+  slx_vars: {type: string, default: All}
+  optim: {type: string, default: newton}
+  bstart: {type: boolean, default: false}
+  scalem: {type: string, default: phimean}
+  predflag: {type: boolean, default: false}
+  maxiter: {type: integer, default: 100}
+  vm: {type: boolean, default: false}
+  name_y: {type: any}
+  name_x: {type: any}
+  name_w: {type: any}
+  name_ds: {type: any}
+  spat_diag: {type: boolean, default: false}
+  latex: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

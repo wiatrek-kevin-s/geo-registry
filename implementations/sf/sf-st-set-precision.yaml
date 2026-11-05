@@ -1,0 +1,11 @@
+id: sf-st-set-precision
+kind: implementation
+name: sf::st_set_precision
+software: sf
+call: {interface: r, name: 'sf::st_set_precision'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  x: {type: any, required: true}
+  precision: {type: any, required: true}
+status: active
+review: {state: harvested, source: r-packages}

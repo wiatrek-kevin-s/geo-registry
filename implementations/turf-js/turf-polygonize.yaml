@@ -1,0 +1,11 @@
+id: turf-polygonize
+kind: implementation
+name: turf.polygonize
+software: turf-js
+call: {interface: js, name: turf.polygonize}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  geoJson: {type: Feature<T> | FeatureCollection<T> | T, required: true}
+notes: From @turf/polygonize.
+status: active
+review: {state: harvested, source: turf}

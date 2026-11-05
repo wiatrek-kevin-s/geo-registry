@@ -1,0 +1,12 @@
+id: libpysal-cg-shapely-ext-interpolate
+kind: implementation
+name: libpysal.cg.shapely_ext.interpolate
+software: libpysal
+call: {interface: python, name: libpysal.cg.shapely_ext.interpolate}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  shape: {type: any, required: true}
+  distance: {type: any, required: true}
+  normalized: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

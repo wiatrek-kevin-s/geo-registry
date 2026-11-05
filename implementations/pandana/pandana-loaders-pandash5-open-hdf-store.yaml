@@ -1,0 +1,12 @@
+id: pandana-loaders-pandash5-open-hdf-store
+kind: implementation
+name: pandana.loaders.pandash5.open_hdf_store
+software: pandana
+call: {interface: python, name: pandana.loaders.pandash5.open_hdf_store}
+harvest: {harvester: python-packages, engine_version: '0.8'}
+parameters:
+  filename: {type: any, required: true}
+  mode: {type: string, default: r}
+  migrate_legacy: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

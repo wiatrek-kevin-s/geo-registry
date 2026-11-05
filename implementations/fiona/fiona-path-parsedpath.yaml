@@ -1,0 +1,13 @@
+id: fiona-path-parsedpath
+kind: implementation
+name: fiona.path.ParsedPath
+software: fiona
+call: {interface: python, name: fiona.path.ParsedPath}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  path: {type: any, required: true}
+  archive: {type: any, required: true}
+  scheme: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

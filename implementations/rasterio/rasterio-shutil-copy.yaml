@@ -1,0 +1,13 @@
+id: rasterio-shutil-copy
+kind: implementation
+name: rasterio.shutil.copy
+software: rasterio
+call: {interface: python, name: rasterio.shutil.copy}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  src: {type: any, required: true}
+  dst: {type: any, required: true}
+  driver: {type: any}
+  strict: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

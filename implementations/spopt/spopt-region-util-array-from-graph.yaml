@@ -1,0 +1,11 @@
+id: spopt-region-util-array-from-graph
+kind: implementation
+name: spopt.region.util.array_from_graph
+software: spopt
+call: {interface: python, name: spopt.region.util.array_from_graph}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  graph: {type: any, required: true}
+  attr: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

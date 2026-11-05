@@ -1,0 +1,12 @@
+id: pyproj-crs-geocentriccrs
+kind: implementation
+name: pyproj.crs.GeocentricCRS
+software: pyproj
+call: {interface: python, name: pyproj.crs.GeocentricCRS}
+harvest: {harvester: python-packages, engine_version: 3.8.0}
+parameters:
+  name: {type: str, default: undefined}
+  datum: {type: Any, default: 'urn:ogc:def:datum:EPSG::6326'}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

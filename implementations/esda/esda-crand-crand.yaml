@@ -1,0 +1,20 @@
+id: esda-crand-crand
+kind: implementation
+name: esda.crand.crand
+software: esda
+call: {interface: python, name: esda.crand.crand}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  z: {type: any, required: true}
+  w: {type: any, required: true}
+  observed: {type: any, required: true}
+  permutations: {type: any, required: true}
+  keep: {type: any, required: true}
+  n_jobs: {type: any, required: true}
+  stat_func: {type: any, required: true}
+  scaling: {type: any}
+  seed: {type: any}
+  island_weight: {type: integer, default: 0}
+  alternative: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

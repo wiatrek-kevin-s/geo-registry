@@ -1,0 +1,13 @@
+id: spopt-locate-lscpb
+kind: implementation
+name: spopt.locate.LSCPB
+software: spopt
+call: {interface: python, name: spopt.locate.LSCPB}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  name: {type: str, required: true}
+  problem: {type: LpProblem, required: true}
+  solver: {type: LpSolver, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

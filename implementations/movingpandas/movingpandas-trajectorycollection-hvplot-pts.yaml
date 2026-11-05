@@ -1,0 +1,9 @@
+id: movingpandas-trajectorycollection-hvplot-pts
+kind: implementation
+name: TrajectoryCollection.hvplot_pts
+software: movingpandas
+call: {interface: python, name: movingpandas.TrajectoryCollection.hvplot_pts}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

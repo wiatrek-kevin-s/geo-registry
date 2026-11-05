@@ -1,0 +1,10 @@
+id: h3-api-memview-int-get-directed-edge-destination
+kind: implementation
+name: h3.api.memview_int.get_directed_edge_destination
+software: h3-py
+call: {interface: python, name: h3.api.memview_int.get_directed_edge_destination}
+harvest: {harvester: python-packages, engine_version: 4.5.0}
+parameters:
+  e: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

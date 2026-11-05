@@ -1,0 +1,16 @@
+id: geopy-adapters-requestsadapter
+kind: implementation
+name: geopy.adapters.RequestsAdapter
+software: geopy
+call: {interface: python, name: geopy.adapters.RequestsAdapter}
+harvest: {harvester: python-packages, engine_version: 2.5.0}
+parameters:
+  proxies: {type: any, required: true}
+  ssl_context: {type: any, required: true}
+  pool_connections: {type: integer, default: 10}
+  pool_maxsize: {type: integer, default: 10}
+  max_retries: {type: integer, default: 2}
+  pool_block: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

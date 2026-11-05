@@ -1,0 +1,16 @@
+id: xrspatial-zonal-apply
+kind: implementation
+name: xrspatial.zonal_apply
+software: xarray-spatial
+call: {interface: python, name: xrspatial.zonal_apply}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  zones: {type: any, required: true}
+  values: {type: xr.DataArray, required: true}
+  func: {type: Callable, required: true}
+  nodata: {type: 'Optional[int]', default: 0}
+  column: {type: 'Optional[str]'}
+  rasterize_kw: {type: 'Optional[dict]'}
+  name: {type: 'Optional[str]'}
+status: active
+review: {state: harvested, source: python-packages}

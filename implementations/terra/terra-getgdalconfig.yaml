@@ -1,0 +1,10 @@
+id: terra-getgdalconfig
+kind: implementation
+name: terra::getGDALconfig
+software: terra
+call: {interface: r, name: 'terra::getGDALconfig'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  option: {type: any, required: true}
+status: active
+review: {state: harvested, source: r-packages}

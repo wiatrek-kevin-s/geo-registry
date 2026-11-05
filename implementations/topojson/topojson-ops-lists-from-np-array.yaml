@@ -1,0 +1,10 @@
+id: topojson-ops-lists-from-np-array
+kind: implementation
+name: topojson.ops.lists_from_np_array
+software: topojson
+call: {interface: python, name: topojson.ops.lists_from_np_array}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  np_array: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

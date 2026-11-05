@@ -1,0 +1,26 @@
+id: pystac-client-collectionsearch
+kind: implementation
+name: pystac_client.CollectionSearch
+software: pystac-client
+call: {interface: python, name: pystac_client.CollectionSearch}
+harvest: {harvester: python-packages, engine_version: 0.9.1}
+parameters:
+  url: {type: str, required: true}
+  max_collections: {type: any}
+  stac_io: {type: any}
+  client: {type: Optional}
+  limit: {type: any}
+  bbox: {type: Union}
+  datetime: {type: Union}
+  query: {type: Union}
+  filter: {type: Union}
+  filter_lang: {type: any}
+  sortby: {type: Union}
+  fields: {type: Union}
+  q: {type: any}
+  modifier: {type: any}
+  collection_search_extension_enabled: {type: bool, default: false}
+  collection_search_free_text_enabled: {type: bool, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,16 @@
+id: rasterio-mask-raster-geometry-mask
+kind: implementation
+name: rasterio.mask.raster_geometry_mask
+software: rasterio
+call: {interface: python, name: rasterio.mask.raster_geometry_mask}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  dataset: {type: any, required: true}
+  shapes: {type: any, required: true}
+  all_touched: {type: boolean, default: false}
+  invert: {type: boolean, default: false}
+  crop: {type: boolean, default: false}
+  pad: {type: boolean, default: false}
+  pad_width: {type: number, default: 0.5}
+status: active
+review: {state: harvested, source: python-packages}

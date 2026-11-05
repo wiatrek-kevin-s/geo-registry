@@ -1,0 +1,10 @@
+id: xrspatial-normalize-cupy
+kind: implementation
+name: xrspatial.normalize.cupy
+software: xarray-spatial
+call: {interface: python, name: xrspatial.normalize.cupy}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

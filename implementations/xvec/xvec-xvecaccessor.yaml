@@ -1,0 +1,11 @@
+id: xvec-xvecaccessor
+kind: implementation
+name: xvec.XvecAccessor
+software: xvec
+call: {interface: python, name: xvec.XvecAccessor}
+harvest: {harvester: python-packages, engine_version: 0.5.2}
+parameters:
+  xarray_obj: {type: xr.Dataset | xr.DataArray, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

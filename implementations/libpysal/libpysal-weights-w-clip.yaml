@@ -1,0 +1,12 @@
+id: libpysal-weights-w-clip
+kind: implementation
+name: libpysal.weights.w_clip
+software: libpysal
+call: {interface: python, name: libpysal.weights.w_clip}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  w1: {type: any, required: true}
+  w2: {type: any, required: true}
+  outSP: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

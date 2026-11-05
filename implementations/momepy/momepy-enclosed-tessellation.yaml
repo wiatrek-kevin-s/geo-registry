@@ -1,0 +1,19 @@
+id: momepy-enclosed-tessellation
+kind: implementation
+name: momepy.enclosed_tessellation
+software: momepy
+call: {interface: python, name: momepy.enclosed_tessellation}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  geometry: {type: any, required: true}
+  enclosures: {type: any, required: true}
+  shrink: {type: float, default: 0.4}
+  segment: {type: float, default: 0.5}
+  threshold: {type: number, default: 0.05}
+  simplify: {type: any}
+  n_jobs: {type: int, default: -1}
+  inner_barriers: {type: any}
+  cell_size: {type: float, default: 1}
+  neighbor_mode: {type: str, default: moore}
+status: active
+review: {state: harvested, source: python-packages}

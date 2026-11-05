@@ -1,0 +1,17 @@
+id: terra-patches
+kind: implementation
+name: terra::patches
+software: terra
+call: {interface: r, name: 'terra::patches'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  directions: {type: any, default: '4'}
+  values: {type: any, default: 'FALSE'}
+  zeroAsNA: {type: any, default: 'FALSE'}
+  allowGaps: {type: any, default: 'TRUE'}
+  filename: {type: any, default: '""'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

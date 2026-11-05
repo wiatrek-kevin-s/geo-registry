@@ -1,0 +1,13 @@
+id: rasterio-merge-copy-max
+kind: implementation
+name: rasterio.merge.copy_max
+software: rasterio
+call: {interface: python, name: rasterio.merge.copy_max}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  merged_data: {type: any, required: true}
+  new_data: {type: any, required: true}
+  merged_mask: {type: any, required: true}
+  new_mask: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

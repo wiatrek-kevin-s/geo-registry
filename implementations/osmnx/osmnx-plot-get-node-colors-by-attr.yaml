@@ -1,0 +1,17 @@
+id: osmnx-plot-get-node-colors-by-attr
+kind: implementation
+name: osmnx.plot.get_node_colors_by_attr
+software: osmnx
+call: {interface: python, name: osmnx.plot.get_node_colors_by_attr}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  G: {type: nx.MultiDiGraph, required: true}
+  attr: {type: str, required: true}
+  num_bins: {type: int | None}
+  cmap: {type: str, default: viridis}
+  start: {type: float, default: 0}
+  stop: {type: float, default: 1}
+  na_color: {type: str, default: none}
+  equal_size: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

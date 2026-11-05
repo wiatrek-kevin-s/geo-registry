@@ -1,0 +1,11 @@
+id: sedona-sql-st-makebox2d
+kind: implementation
+name: sedona.sql.ST_MakeBox2D
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_MakeBox2D}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  lower_left: {type: Union, required: true}
+  upper_right: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

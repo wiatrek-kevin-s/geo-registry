@@ -1,0 +1,11 @@
+id: giddy-util-shuffle-matrix
+kind: implementation
+name: giddy.util.shuffle_matrix
+software: giddy
+call: {interface: python, name: giddy.util.shuffle_matrix}
+harvest: {harvester: python-packages, engine_version: 2.3.9}
+parameters:
+  X: {type: any, required: true}
+  ids: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

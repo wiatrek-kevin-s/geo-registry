@@ -1,0 +1,14 @@
+id: spreg-optim-moments
+kind: implementation
+name: spreg.optim_moments
+software: spreg
+call: {interface: python, name: spreg.optim_moments}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  moments_in: {type: any, required: true}
+  vcX: {type: any, note: 'default array([0])'}
+  all_par: {type: boolean, default: false}
+  start: {type: any}
+  hard_bound: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

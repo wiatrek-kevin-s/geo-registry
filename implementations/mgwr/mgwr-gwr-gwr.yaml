@@ -1,0 +1,24 @@
+id: mgwr-gwr-gwr
+kind: implementation
+name: mgwr.gwr.GWR
+software: mgwr
+call: {interface: python, name: mgwr.gwr.GWR}
+harvest: {harvester: python-packages, engine_version: 2.2.1}
+parameters:
+  coords: {type: any, required: true}
+  y: {type: any, required: true}
+  X: {type: any, required: true}
+  bw: {type: any, required: true}
+  family: {type: any, note: default <spglm.family.Gaussian object>}
+  offset: {type: any}
+  sigma2_v1: {type: boolean, default: true}
+  kernel: {type: string, default: bisquare}
+  fixed: {type: boolean, default: false}
+  constant: {type: boolean, default: true}
+  spherical: {type: boolean, default: false}
+  hat_matrix: {type: boolean, default: false}
+  name_x: {type: any}
+  n_jobs: {type: integer, default: -1}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,38 @@
+id: spreg-gm-endog-error-het-regimes
+kind: implementation
+name: spreg.GM_Endog_Error_Het_Regimes
+software: spreg
+call: {interface: python, name: spreg.GM_Endog_Error_Het_Regimes}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  y: {type: any, required: true}
+  x: {type: any, required: true}
+  yend: {type: any, required: true}
+  q: {type: any, required: true}
+  regimes: {type: any, required: true}
+  w: {type: any, required: true}
+  max_iter: {type: integer, default: 1}
+  epsilon: {type: number, default: 1.0e-05}
+  step1c: {type: boolean, default: false}
+  constant_regi: {type: string, default: many}
+  cols2regi: {type: string, default: all}
+  regime_err_sep: {type: boolean, default: false}
+  regime_lag_sep: {type: boolean, default: false}
+  slx_lags: {type: integer, default: 0}
+  inv_method: {type: string, default: power_exp}
+  cores: {type: boolean, default: false}
+  vm: {type: boolean, default: false}
+  name_y: {type: any}
+  name_x: {type: any}
+  name_yend: {type: any}
+  name_q: {type: any}
+  name_w: {type: any}
+  name_ds: {type: any}
+  name_regimes: {type: any}
+  summ: {type: boolean, default: true}
+  add_lag: {type: boolean, default: false}
+  latex: {type: boolean, default: false}
+  hard_bound: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

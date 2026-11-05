@@ -1,0 +1,10 @@
+id: sedona-sql-st-geogtogeometry
+kind: implementation
+name: sedona.sql.ST_GeogToGeometry
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_GeogToGeometry}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geog: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,14 @@
+id: momepy-rotate
+kind: implementation
+name: momepy.rotate
+software: momepy
+call: {interface: python, name: momepy.rotate}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  xo: {type: any, required: true}
+  yo: {type: any, required: true}
+  theta: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

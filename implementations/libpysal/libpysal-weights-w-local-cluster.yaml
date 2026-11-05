@@ -1,0 +1,10 @@
+id: libpysal-weights-w-local-cluster
+kind: implementation
+name: libpysal.weights.w_local_cluster
+software: libpysal
+call: {interface: python, name: libpysal.weights.w_local_cluster}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  w: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

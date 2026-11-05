@@ -1,0 +1,18 @@
+id: geopy-yandex
+kind: implementation
+name: geopy.Yandex
+software: geopy
+call: {interface: python, name: geopy.Yandex}
+harvest: {harvester: python-packages, engine_version: 2.5.0}
+parameters:
+  api_key: {type: any, required: true}
+  timeout: {type: any, note: default DEFAULT_SENTINEL}
+  proxies: {type: any, note: default DEFAULT_SENTINEL}
+  user_agent: {type: any}
+  scheme: {type: any}
+  ssl_context: {type: any, note: default DEFAULT_SENTINEL}
+  adapter_factory: {type: any}
+  domain: {type: string, default: geocode-maps.yandex.ru}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

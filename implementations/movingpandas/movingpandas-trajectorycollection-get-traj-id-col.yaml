@@ -1,0 +1,9 @@
+id: movingpandas-trajectorycollection-get-traj-id-col
+kind: implementation
+name: TrajectoryCollection.get_traj_id_col
+software: movingpandas
+call: {interface: python, name: movingpandas.TrajectoryCollection.get_traj_id_col}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

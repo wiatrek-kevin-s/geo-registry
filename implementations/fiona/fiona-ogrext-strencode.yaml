@@ -1,0 +1,11 @@
+id: fiona-ogrext-strencode
+kind: implementation
+name: fiona.ogrext.strencode
+software: fiona
+call: {interface: python, name: fiona.ogrext.strencode}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  instr: {type: any, required: true}
+  encoding: {type: string, default: utf-8}
+status: active
+review: {state: harvested, source: python-packages}

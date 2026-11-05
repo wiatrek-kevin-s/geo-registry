@@ -1,0 +1,10 @@
+id: odc-stac-model-unset
+kind: implementation
+name: odc.stac.model.Unset
+software: odc-stac
+call: {interface: python, name: odc.stac.model.Unset}
+harvest: {harvester: python-packages, engine_version: 0.5.3}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

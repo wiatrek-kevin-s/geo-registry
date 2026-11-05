@@ -1,0 +1,12 @@
+id: osmium-osm-waynodelist
+kind: implementation
+name: osmium.osm.WayNodeList
+software: pyosmium
+call: {interface: python, name: osmium.osm.WayNodeList}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters:
+  parent: {type: cosm.BufferProxyProtocol, required: true}
+  ref_list: {type: cosm.NodeRefList, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,9 @@
+id: h3-api-basic-int-versions
+kind: implementation
+name: h3.api.basic_int.versions
+software: h3-py
+call: {interface: python, name: h3.api.basic_int.versions}
+harvest: {harvester: python-packages, engine_version: 4.5.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

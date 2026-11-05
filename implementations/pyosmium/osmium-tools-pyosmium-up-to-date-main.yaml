@@ -1,0 +1,9 @@
+id: osmium-tools-pyosmium-up-to-date-main
+kind: implementation
+name: osmium.tools.pyosmium_up_to_date.main
+software: pyosmium
+call: {interface: python, name: osmium.tools.pyosmium_up_to_date.main}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

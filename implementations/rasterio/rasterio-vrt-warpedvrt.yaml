@@ -1,0 +1,10 @@
+id: rasterio-vrt-warpedvrt
+kind: implementation
+name: rasterio.vrt.WarpedVRT
+software: rasterio
+call: {interface: python, name: rasterio.vrt.WarpedVRT}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

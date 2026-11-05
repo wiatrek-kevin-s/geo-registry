@@ -1,0 +1,22 @@
+id: pystac-client-cli-collections
+kind: implementation
+name: pystac_client.cli.collections
+software: pystac-client
+call: {interface: python, name: pystac_client.cli.collections}
+harvest: {harvester: python-packages, engine_version: 0.9.1}
+parameters:
+  client: {type: Client, required: true}
+  save: {type: any}
+  matched: {type: bool, default: false}
+  max_collections: {type: any}
+  limit: {type: any}
+  bbox: {type: Union}
+  datetime: {type: Union}
+  q: {type: any}
+  query: {type: Union}
+  filter: {type: Union}
+  filter_lang: {type: any}
+  sortby: {type: Union}
+  fields: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,16 @@
+id: xrspatial-clip-polygon
+kind: implementation
+name: xrspatial.clip_polygon
+software: xarray-spatial
+call: {interface: python, name: xrspatial.clip_polygon}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  raster: {type: xr.DataArray, required: true}
+  geometry: {type: any, required: true}
+  nodata: {type: float, note: default nan}
+  crop: {type: bool, default: true}
+  all_touched: {type: bool, default: false}
+  rasterize_kw: {type: 'Optional[dict]'}
+  name: {type: 'Optional[str]'}
+status: active
+review: {state: harvested, source: python-packages}

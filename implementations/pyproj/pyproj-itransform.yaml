@@ -1,0 +1,17 @@
+id: pyproj-itransform
+kind: implementation
+name: pyproj.itransform
+software: pyproj
+call: {interface: python, name: pyproj.itransform}
+harvest: {harvester: python-packages, engine_version: 3.8.0}
+parameters:
+  p1: {type: Any, required: true}
+  p2: {type: Any, required: true}
+  points: {type: Iterable, required: true}
+  switch: {type: bool, default: false}
+  time_3rd: {type: bool, default: false}
+  radians: {type: bool, default: false}
+  errcheck: {type: bool, default: false}
+  always_xy: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

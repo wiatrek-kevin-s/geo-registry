@@ -1,0 +1,17 @@
+id: verde-cross-val-score
+kind: implementation
+name: verde.cross_val_score
+software: verde
+call: {interface: python, name: verde.cross_val_score}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  estimator: {type: any, required: true}
+  coordinates: {type: any, required: true}
+  data: {type: any, required: true}
+  weights: {type: any}
+  cv: {type: any}
+  client: {type: any}
+  delayed: {type: boolean, default: false}
+  scoring: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

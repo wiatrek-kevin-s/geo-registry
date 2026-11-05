@@ -1,0 +1,12 @@
+id: xvec-accessor-transform-geom
+kind: implementation
+name: xvec.accessor.transform_geom
+software: xvec
+call: {interface: python, name: xvec.accessor.transform_geom}
+harvest: {harvester: python-packages, engine_version: 0.5.2}
+parameters:
+  array: {type: ndarray, required: true}
+  crs_from: {type: CRS, required: true}
+  crs_to: {type: CRS, required: true}
+status: active
+review: {state: harvested, source: python-packages}

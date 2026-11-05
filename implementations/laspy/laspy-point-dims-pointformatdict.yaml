@@ -1,0 +1,11 @@
+id: laspy-point-dims-pointformatdict
+kind: implementation
+name: laspy.point.dims.PointFormatDict
+software: laspy
+call: {interface: python, name: laspy.point.dims.PointFormatDict}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  wrapped_dict: {type: Dict, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

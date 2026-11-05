@@ -1,0 +1,13 @@
+id: laspy-lasdata-scaledarrayview
+kind: implementation
+name: laspy.lasdata.ScaledArrayView
+software: laspy
+call: {interface: python, name: laspy.lasdata.ScaledArrayView}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  array: {type: ndarray, required: true}
+  scale: {type: Union, required: true}
+  offset: {type: Union, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,10 @@
+id: pyogrio-util-vsimem-rmtree-toplevel
+kind: implementation
+name: pyogrio.util.vsimem_rmtree_toplevel
+software: pyogrio
+call: {interface: python, name: pyogrio.util.vsimem_rmtree_toplevel}
+harvest: {harvester: python-packages, engine_version: 0.13.0}
+parameters:
+  path: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

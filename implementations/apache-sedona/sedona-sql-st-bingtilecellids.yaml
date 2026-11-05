@@ -1,0 +1,11 @@
+id: sedona-sql-st-bingtilecellids
+kind: implementation
+name: sedona.sql.ST_BingTileCellIDs
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_BingTileCellIDs}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geometry: {type: Union, required: true}
+  zoom_level: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

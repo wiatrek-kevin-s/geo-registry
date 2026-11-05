@@ -1,0 +1,18 @@
+id: esda-smoothing-spatial-filtering
+kind: implementation
+name: esda.smoothing.Spatial_Filtering
+software: esda
+call: {interface: python, name: esda.smoothing.Spatial_Filtering}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  bbox: {type: any, required: true}
+  data: {type: any, required: true}
+  e: {type: any, required: true}
+  b: {type: any, required: true}
+  x_grid: {type: any, required: true}
+  y_grid: {type: any, required: true}
+  r: {type: any}
+  pop: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,13 @@
+id: segregation-util-plot-cdf
+kind: implementation
+name: segregation.util.plot_cdf
+software: segregation
+call: {interface: python, name: segregation.util.plot_cdf}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  group_share1: {type: any, required: true}
+  group_share2: {type: any, required: true}
+  label1: {type: string, default: ''}
+  label2: {type: string, default: ''}
+status: active
+review: {state: harvested, source: python-packages}

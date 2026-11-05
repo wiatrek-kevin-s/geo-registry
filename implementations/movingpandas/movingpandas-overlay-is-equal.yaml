@@ -1,0 +1,11 @@
+id: movingpandas-overlay-is-equal
+kind: implementation
+name: movingpandas.overlay.is_equal
+software: movingpandas
+call: {interface: python, name: movingpandas.overlay.is_equal}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  t1: {type: any, required: true}
+  t2: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,10 @@
+id: inequality-wolfson-lorenz-curve
+kind: implementation
+name: inequality.wolfson.lorenz_curve
+software: inequality
+call: {interface: python, name: inequality.wolfson.lorenz_curve}
+harvest: {harvester: python-packages, engine_version: 1.2.0}
+parameters:
+  data: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

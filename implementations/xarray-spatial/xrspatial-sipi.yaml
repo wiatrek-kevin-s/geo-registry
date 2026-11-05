@@ -1,0 +1,13 @@
+id: xrspatial-sipi
+kind: implementation
+name: xrspatial.sipi
+software: xarray-spatial
+call: {interface: python, name: xrspatial.sipi}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  nir_agg: {type: xr.DataArray, required: true}
+  red_agg: {type: xr.DataArray, required: true}
+  blue_agg: {type: xr.DataArray, required: true}
+  name: {type: string, default: sipi}
+status: active
+review: {state: harvested, source: python-packages}

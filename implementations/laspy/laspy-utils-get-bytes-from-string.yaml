@@ -1,0 +1,12 @@
+id: laspy-utils-get-bytes-from-string
+kind: implementation
+name: laspy.utils.get_bytes_from_string
+software: laspy
+call: {interface: python, name: laspy.utils.get_bytes_from_string}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  string: {type: Union, required: true}
+  encoding: {type: str, required: true}
+  encoding_errors: {type: str, required: true}
+status: active
+review: {state: harvested, source: python-packages}

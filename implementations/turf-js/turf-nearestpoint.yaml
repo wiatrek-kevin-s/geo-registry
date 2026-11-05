@@ -1,0 +1,14 @@
+id: turf-nearestpoint
+kind: implementation
+name: turf.nearestPoint
+software: turf-js
+call: {interface: js, name: turf.nearestPoint}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  targetPoint: {type: Coord, required: true}
+  points: {type: 'FeatureCollection<Point, P>', required: true}
+  options: {type: '{ units?: Units; }'}
+  options.units: {type: Units, note: field of options}
+notes: From @turf/nearest-point.
+status: active
+review: {state: harvested, source: turf}

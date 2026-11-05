@@ -1,0 +1,9 @@
+id: movingpandas-trajectorycollection-get-crs
+kind: implementation
+name: TrajectoryCollection.get_crs
+software: movingpandas
+call: {interface: python, name: movingpandas.TrajectoryCollection.get_crs}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,26 @@
+id: terra-plotrgb
+kind: implementation
+name: terra::plotRGB
+software: terra
+call: {interface: r, name: 'terra::plotRGB'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  r: {type: any, default: '1'}
+  g: {type: any, default: '2'}
+  b: {type: any, default: '3'}
+  a: {type: any, default: 'NULL'}
+  scale: {type: any, default: 'NULL'}
+  mar: {type: any, default: '0'}
+  stretch: {type: any, default: 'NULL'}
+  smooth: {type: any, default: 'TRUE'}
+  colNA: {type: any, default: '"white"'}
+  alpha: {type: any, default: 'NULL'}
+  bgalpha: {type: any, default: 'NULL'}
+  zlim: {type: any, default: 'NULL'}
+  zcol: {type: any, default: 'FALSE'}
+  axes: {type: any, default: 'FALSE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

@@ -1,0 +1,22 @@
+id: geocube-api-core-make-geocube
+kind: implementation
+name: geocube.api.core.make_geocube
+software: geocube
+call: {interface: python, name: geocube.api.core.make_geocube}
+harvest: {harvester: python-packages, engine_version: 0.7.1}
+parameters:
+  vector_data: {type: Union, required: true}
+  measurements: {type: Optional}
+  datetime_measurements: {type: Optional}
+  output_crs: {type: Any}
+  resolution: {type: Union}
+  align: {type: Optional}
+  geom: {type: Union}
+  like: {type: Union}
+  fill: {type: float, note: default nan}
+  group_by: {type: Optional}
+  interpolate_na_method: {type: Optional}
+  categorical_enums: {type: Optional}
+  rasterize_function: {type: Optional}
+status: active
+review: {state: harvested, source: python-packages}

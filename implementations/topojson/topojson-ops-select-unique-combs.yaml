@@ -1,0 +1,10 @@
+id: topojson-ops-select-unique-combs
+kind: implementation
+name: topojson.ops.select_unique_combs
+software: topojson
+call: {interface: python, name: topojson.ops.select_unique_combs}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  linestrings: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

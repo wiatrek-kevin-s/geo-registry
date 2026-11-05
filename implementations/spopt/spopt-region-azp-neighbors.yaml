@@ -1,0 +1,11 @@
+id: spopt-region-azp-neighbors
+kind: implementation
+name: spopt.region.azp.neighbors
+software: spopt
+call: {interface: python, name: spopt.region.azp.neighbors}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  adj: {type: any, required: true}
+  area: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

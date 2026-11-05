@@ -1,0 +1,13 @@
+id: osmium-tools-common-replicationstart
+kind: implementation
+name: osmium.tools.common.ReplicationStart
+software: pyosmium
+call: {interface: python, name: osmium.tools.common.ReplicationStart}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters:
+  date: {type: Optional}
+  seq_id: {type: Optional}
+  source: {type: Optional}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

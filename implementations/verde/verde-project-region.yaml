@@ -1,0 +1,11 @@
+id: verde-project-region
+kind: implementation
+name: verde.project_region
+software: verde
+call: {interface: python, name: verde.project_region}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  region: {type: any, required: true}
+  projection: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

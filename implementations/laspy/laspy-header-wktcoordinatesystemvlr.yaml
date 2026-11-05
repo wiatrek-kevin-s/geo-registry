@@ -1,0 +1,11 @@
+id: laspy-header-wktcoordinatesystemvlr
+kind: implementation
+name: laspy.header.WktCoordinateSystemVlr
+software: laspy
+call: {interface: python, name: laspy.header.WktCoordinateSystemVlr}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  wkt_string: {type: string, default: ''}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,14 @@
+id: gstools-transform-array-to-arcsin
+kind: implementation
+name: gstools.transform.array_to_arcsin
+software: gstools
+call: {interface: python, name: gstools.transform.array_to_arcsin}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  field: {type: any, required: true}
+  mean: {type: any}
+  var: {type: any}
+  a: {type: any}
+  b: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

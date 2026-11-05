@@ -1,0 +1,14 @@
+id: spopt-region-region-k-means-region-k-means
+kind: implementation
+name: spopt.region.region_k_means.region_k_means
+software: spopt
+call: {interface: python, name: spopt.region.region_k_means.region_k_means}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  X: {type: any, required: true}
+  n_clusters: {type: any, required: true}
+  w: {type: any, required: true}
+  drop_islands: {type: boolean, default: true}
+  seed: {type: integer, default: 0}
+status: active
+review: {state: harvested, source: python-packages}

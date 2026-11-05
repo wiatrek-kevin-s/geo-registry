@@ -1,0 +1,11 @@
+id: turf-radianstodegrees
+kind: implementation
+name: turf.radiansToDegrees
+software: turf-js
+call: {interface: js, name: turf.radiansToDegrees}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  radians: {type: number, required: true}
+notes: From @turf/helpers.
+status: active
+review: {state: harvested, source: turf}

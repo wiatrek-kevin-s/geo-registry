@@ -1,0 +1,22 @@
+id: esda-moran-local-rate
+kind: implementation
+name: esda.Moran_Local_Rate
+software: esda
+call: {interface: python, name: esda.Moran_Local_Rate}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  e: {type: any, required: true}
+  b: {type: any, required: true}
+  w: {type: any, required: true}
+  adjusted: {type: boolean, default: true}
+  transformation: {type: string, default: r}
+  permutations: {type: integer, default: 999}
+  geoda_quads: {type: boolean, default: false}
+  n_jobs: {type: integer, default: 1}
+  keep_simulations: {type: boolean, default: true}
+  seed: {type: any}
+  island_weight: {type: integer, default: 0}
+  alternative: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

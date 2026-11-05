@@ -1,0 +1,13 @@
+id: turf-length
+kind: implementation
+name: turf.length
+software: turf-js
+call: {interface: js, name: turf.length}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  geojson: {type: Feature<any> | FeatureCollection<any> | GeometryCollection, required: true}
+  options: {type: '{ units?: Units; }'}
+  options.units: {type: Units, note: field of options}
+notes: From @turf/length.
+status: active
+review: {state: harvested, source: turf}

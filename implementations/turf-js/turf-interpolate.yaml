@@ -1,0 +1,18 @@
+id: turf-interpolate
+kind: implementation
+name: turf.interpolate
+software: turf-js
+call: {interface: js, name: turf.interpolate}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  points: {type: FeatureCollection<Point>, required: true}
+  cellSize: {type: number, required: true}
+  options: {type: '{ gridType?: T; property?: string; units?: Units; weight?: number; bbox?: BBox; }'}
+  options.gridType: {type: T, note: field of options}
+  options.property: {type: string, note: field of options}
+  options.units: {type: Units, note: field of options}
+  options.weight: {type: number, note: field of options}
+  options.bbox: {type: BBox, note: field of options}
+notes: From @turf/interpolate.
+status: active
+review: {state: harvested, source: turf}

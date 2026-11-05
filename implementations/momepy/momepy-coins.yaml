@@ -1,0 +1,13 @@
+id: momepy-coins
+kind: implementation
+name: momepy.COINS
+software: momepy
+call: {interface: python, name: momepy.COINS}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  edge_gdf: {type: any, required: true}
+  angle_threshold: {type: integer, default: 0}
+  flow_mode: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

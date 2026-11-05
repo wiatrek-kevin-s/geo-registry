@@ -1,0 +1,12 @@
+id: skgstat-stmodels-sum
+kind: implementation
+name: skgstat.stmodels.sum
+software: scikit-gstat
+call: {interface: python, name: skgstat.stmodels.sum}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  lags: {type: any, required: true}
+  Vx: {type: any, required: true}
+  Vt: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

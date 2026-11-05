@@ -1,0 +1,13 @@
+id: gstools-covmodel-tools-check-arg-in-bounds
+kind: implementation
+name: gstools.covmodel.tools.check_arg_in_bounds
+software: gstools
+call: {interface: python, name: gstools.covmodel.tools.check_arg_in_bounds}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  model: {type: any, required: true}
+  arg: {type: any, required: true}
+  val: {type: any}
+  error: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

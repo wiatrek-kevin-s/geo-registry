@@ -1,0 +1,11 @@
+id: topojson-ops-strtree-query-geoms
+kind: implementation
+name: topojson.ops.strtree_query_geoms
+software: topojson
+call: {interface: python, name: topojson.ops.strtree_query_geoms}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  tree: {type: any, required: true}
+  arc: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

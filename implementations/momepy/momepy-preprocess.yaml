@@ -1,0 +1,15 @@
+id: momepy-preprocess
+kind: implementation
+name: momepy.preprocess
+software: momepy
+call: {interface: python, name: momepy.preprocess}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  buildings: {type: any, required: true}
+  size: {type: integer, default: 30}
+  compactness: {type: number, default: 0.2}
+  islands: {type: boolean, default: true}
+  loops: {type: integer, default: 2}
+  verbose: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

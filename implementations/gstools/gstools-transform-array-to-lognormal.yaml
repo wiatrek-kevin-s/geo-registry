@@ -1,0 +1,10 @@
+id: gstools-transform-array-to-lognormal
+kind: implementation
+name: gstools.transform.array_to_lognormal
+software: gstools
+call: {interface: python, name: gstools.transform.array_to_lognormal}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  field: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,18 @@
+id: terra-regress
+kind: implementation
+name: terra::regress
+software: terra
+call: {interface: r, name: 'terra::regress'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  y: {type: any, required: true}
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  formula: {type: any, default: y ~ x}
+  na.rm: {type: any, default: 'FALSE'}
+  cores: {type: any, default: '1'}
+  filename: {type: any, default: '""'}
+  overwrite: {type: any, default: 'FALSE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

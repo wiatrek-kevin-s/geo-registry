@@ -1,0 +1,31 @@
+id: spreg-ml-lag-regimes
+kind: implementation
+name: spreg.ML_Lag_Regimes
+software: spreg
+call: {interface: python, name: spreg.ML_Lag_Regimes}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  y: {type: any, required: true}
+  x: {type: any, required: true}
+  regimes: {type: any, required: true}
+  w: {type: any}
+  constant_regi: {type: string, default: many}
+  cols2regi: {type: string, default: all}
+  method: {type: string, default: full}
+  epsilon: {type: number, default: 1.0e-07}
+  slx_lags: {type: integer, default: 0}
+  slx_vars: {type: string, default: all}
+  regime_lag_sep: {type: boolean, default: false}
+  cores: {type: boolean, default: false}
+  spat_diag: {type: boolean, default: true}
+  spat_impacts: {type: string, default: simple}
+  vm: {type: boolean, default: false}
+  name_y: {type: any}
+  name_x: {type: any}
+  name_w: {type: any}
+  name_ds: {type: any}
+  name_regimes: {type: any}
+  latex: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

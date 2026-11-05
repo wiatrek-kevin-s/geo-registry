@@ -1,0 +1,9 @@
+id: pyproj-show-versions
+kind: implementation
+name: pyproj.show_versions
+software: pyproj
+call: {interface: python, name: pyproj.show_versions}
+harvest: {harvester: python-packages, engine_version: 3.8.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

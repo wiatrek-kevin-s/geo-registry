@@ -1,0 +1,12 @@
+id: momepy-weighted-character
+kind: implementation
+name: momepy.weighted_character
+software: momepy
+call: {interface: python, name: momepy.weighted_character}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  y: {type: any, required: true}
+  area: {type: any, required: true}
+  graph: {type: Graph, required: true}
+status: active
+review: {state: harvested, source: python-packages}

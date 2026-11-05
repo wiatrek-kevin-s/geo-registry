@@ -1,0 +1,11 @@
+id: rasterio-plot-adjust-band
+kind: implementation
+name: rasterio.plot.adjust_band
+software: rasterio
+call: {interface: python, name: rasterio.plot.adjust_band}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  band: {type: any, required: true}
+  kind: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

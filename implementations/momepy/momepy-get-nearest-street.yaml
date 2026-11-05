@@ -1,0 +1,12 @@
+id: momepy-get-nearest-street
+kind: implementation
+name: momepy.get_nearest_street
+software: momepy
+call: {interface: python, name: momepy.get_nearest_street}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  buildings: {type: any, required: true}
+  streets: {type: any, required: true}
+  max_distance: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

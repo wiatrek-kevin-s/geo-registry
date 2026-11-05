@@ -1,0 +1,12 @@
+id: sedona-sql-st-delaunaytriangles
+kind: implementation
+name: sedona.sql.ST_DelaunayTriangles
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_DelaunayTriangles}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geometry: {type: Union, required: true}
+  tolerance: {type: Union}
+  flag: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

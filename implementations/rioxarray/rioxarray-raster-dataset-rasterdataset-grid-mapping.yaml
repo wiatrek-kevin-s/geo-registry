@@ -1,0 +1,10 @@
+id: rioxarray-raster-dataset-rasterdataset-grid-mapping
+kind: implementation
+name: RasterDataset.grid_mapping
+software: rioxarray
+call: {interface: python, name: rioxarray.raster_dataset.RasterDataset.grid_mapping}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters: {}
+notes: Property.
+status: active
+review: {state: harvested, source: python-packages}

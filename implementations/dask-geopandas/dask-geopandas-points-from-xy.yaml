@@ -1,0 +1,14 @@
+id: dask-geopandas-points-from-xy
+kind: implementation
+name: dask_geopandas.points_from_xy
+software: dask-geopandas
+call: {interface: python, name: dask_geopandas.points_from_xy}
+harvest: {harvester: python-packages, engine_version: 0.5.0}
+parameters:
+  df: {type: any, required: true}
+  x: {type: string, default: x}
+  y: {type: string, default: y}
+  z: {type: string, default: z}
+  crs: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

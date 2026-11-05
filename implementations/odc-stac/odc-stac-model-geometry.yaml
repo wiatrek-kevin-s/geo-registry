@@ -1,0 +1,12 @@
+id: odc-stac-model-geometry
+kind: implementation
+name: odc.stac.model.Geometry
+software: odc-stac
+call: {interface: python, name: odc.stac.model.Geometry}
+harvest: {harvester: python-packages, engine_version: 0.5.3}
+parameters:
+  geom: {type: 'Union[base.BaseGeometry, Dict[str, Any], ''Geometry'']', required: true}
+  crs: {type: MaybeCRS}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

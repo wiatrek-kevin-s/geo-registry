@@ -1,0 +1,11 @@
+id: movingpandas-trajectory-splitter-convert-time-ranges-to-segments
+kind: implementation
+name: movingpandas.trajectory_splitter.convert_time_ranges_to_segments
+software: movingpandas
+call: {interface: python, name: movingpandas.trajectory_splitter.convert_time_ranges_to_segments}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  traj: {type: any, required: true}
+  time_ranges: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

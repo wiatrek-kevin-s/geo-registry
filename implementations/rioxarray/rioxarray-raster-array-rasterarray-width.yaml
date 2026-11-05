@@ -1,0 +1,10 @@
+id: rioxarray-raster-array-rasterarray-width
+kind: implementation
+name: RasterArray.width
+software: rioxarray
+call: {interface: python, name: rioxarray.raster_array.RasterArray.width}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters: {}
+notes: Property.
+status: active
+review: {state: harvested, source: python-packages}

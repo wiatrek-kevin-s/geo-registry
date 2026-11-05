@@ -1,0 +1,13 @@
+id: sedona-sql-st-dbscan
+kind: implementation
+name: sedona.sql.ST_DBSCAN
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_DBSCAN}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geometry: {type: Union, required: true}
+  epsilon: {type: Union, required: true}
+  min_pts: {type: Union, required: true}
+  use_spheroid: {type: Union, default: false}
+status: active
+review: {state: harvested, source: python-packages}

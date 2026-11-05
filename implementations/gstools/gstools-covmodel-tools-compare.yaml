@@ -1,0 +1,11 @@
+id: gstools-covmodel-tools-compare
+kind: implementation
+name: gstools.covmodel.tools.compare
+software: gstools
+call: {interface: python, name: gstools.covmodel.tools.compare}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  this: {type: any, required: true}
+  that: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

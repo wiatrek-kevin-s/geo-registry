@@ -1,0 +1,13 @@
+id: xrspatial-travel-time
+kind: implementation
+name: xrspatial.travel_time
+software: xarray-spatial
+call: {interface: python, name: xrspatial.travel_time}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  flow_length_agg: {type: xr.DataArray, required: true}
+  slope_agg: {type: xr.DataArray, required: true}
+  mannings_n: {type: 'Union[float, xr.DataArray]', required: true}
+  name: {type: str, default: travel_time}
+status: active
+review: {state: harvested, source: python-packages}

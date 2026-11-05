@@ -1,0 +1,15 @@
+id: segregation-inference-sim-composition
+kind: implementation
+name: segregation.inference.sim_composition
+software: segregation
+call: {interface: python, name: segregation.inference.sim_composition}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  df1: {type: any, required: true}
+  df2: {type: any, required: true}
+  group_pop_var1: {type: any, required: true}
+  total_pop_var1: {type: any, required: true}
+  group_pop_var2: {type: any, required: true}
+  total_pop_var2: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

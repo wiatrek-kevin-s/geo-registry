@@ -1,0 +1,12 @@
+id: esda-shape-moment-of-inertia
+kind: implementation
+name: esda.shape.moment_of_inertia
+software: esda
+call: {interface: python, name: esda.shape.moment_of_inertia}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  collection: {type: any, required: true}
+  normalize: {type: boolean, default: false}
+  ref_pt: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

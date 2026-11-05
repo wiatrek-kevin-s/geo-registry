@@ -1,0 +1,13 @@
+id: rasterstats-io-read-features
+kind: implementation
+name: rasterstats.io.read_features
+software: rasterstats
+call: {interface: python, name: rasterstats.io.read_features}
+harvest: {harvester: python-packages, engine_version: 0.21.0}
+parameters:
+  obj: {type: any, required: true}
+  layer: {type: integer, default: 0}
+  engine: {type: any}
+  chunk_size: {type: integer, default: 65536}
+status: active
+review: {state: harvested, source: python-packages}

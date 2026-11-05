@@ -1,0 +1,7 @@
+# Command-line suites listed by name (harvest/cli_packages.py).
+name: geo-registry-cli
+channels:
+  - conda-forge
+dependencies:
+  - taudem
+  - lastools

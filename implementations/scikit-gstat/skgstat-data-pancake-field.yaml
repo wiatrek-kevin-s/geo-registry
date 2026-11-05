@@ -1,0 +1,10 @@
+id: skgstat-data-pancake-field
+kind: implementation
+name: skgstat.data.pancake_field
+software: scikit-gstat
+call: {interface: python, name: skgstat.data.pancake_field}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  band: {type: integer, default: 0}
+status: active
+review: {state: harvested, source: python-packages}

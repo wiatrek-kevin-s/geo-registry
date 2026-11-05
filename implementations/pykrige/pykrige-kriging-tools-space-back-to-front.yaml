@@ -1,0 +1,10 @@
+id: pykrige-kriging-tools-space-back-to-front
+kind: implementation
+name: pykrige.kriging_tools.space_back_to_front
+software: pykrige
+call: {interface: python, name: pykrige.kriging_tools.space_back_to_front}
+harvest: {harvester: python-packages, engine_version: 1.7.3}
+parameters:
+  string: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

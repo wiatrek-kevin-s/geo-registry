@@ -1,0 +1,10 @@
+id: pyproj-crs-datum-customellipsoid
+kind: implementation
+name: pyproj.crs.datum.CustomEllipsoid
+software: pyproj
+call: {interface: python, name: pyproj.crs.datum.CustomEllipsoid}
+harvest: {harvester: python-packages, engine_version: 3.8.0}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

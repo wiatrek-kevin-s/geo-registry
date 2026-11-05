@@ -1,0 +1,11 @@
+id: terra-combinelevels
+kind: implementation
+name: terra::combineLevels
+software: terra
+call: {interface: r, name: 'terra::combineLevels'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  assign: {type: any, default: 'TRUE'}
+status: active
+review: {state: harvested, source: r-packages}

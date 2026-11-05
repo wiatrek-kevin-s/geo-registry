@@ -1,0 +1,12 @@
+id: terra-graticule
+kind: implementation
+name: terra::graticule
+software: terra
+call: {interface: r, name: 'terra::graticule'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  lon: {type: any, default: '30'}
+  lat: {type: any, default: '30'}
+  crs: {type: any, default: '""'}
+status: active
+review: {state: harvested, source: r-packages}

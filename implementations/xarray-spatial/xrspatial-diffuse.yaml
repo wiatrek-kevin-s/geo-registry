@@ -1,0 +1,15 @@
+id: xrspatial-diffuse
+kind: implementation
+name: xrspatial.diffuse
+software: xarray-spatial
+call: {interface: python, name: xrspatial.diffuse}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: any, required: true}
+  diffusivity: {type: number, default: 1.0}
+  steps: {type: integer, default: 1}
+  dt: {type: any}
+  boundary: {type: string, default: nan}
+  name: {type: string, default: diffuse}
+status: active
+review: {state: harvested, source: python-packages}

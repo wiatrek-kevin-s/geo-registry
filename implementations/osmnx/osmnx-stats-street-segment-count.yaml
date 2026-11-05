@@ -1,0 +1,10 @@
+id: osmnx-stats-street-segment-count
+kind: implementation
+name: osmnx.stats.street_segment_count
+software: osmnx
+call: {interface: python, name: osmnx.stats.street_segment_count}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  Gu: {type: nx.MultiGraph, required: true}
+status: active
+review: {state: harvested, source: python-packages}

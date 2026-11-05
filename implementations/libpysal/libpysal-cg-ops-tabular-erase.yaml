@@ -1,0 +1,10 @@
+id: libpysal-cg-ops-tabular-erase
+kind: implementation
+name: libpysal.cg.ops.tabular.erase
+software: libpysal
+call: {interface: python, name: libpysal.cg.ops.tabular.erase}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  return_interior: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: xrspatial-emerging-hotspots
+kind: implementation
+name: xrspatial.emerging_hotspots
+software: xarray-spatial
+call: {interface: python, name: xrspatial.emerging_hotspots}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  raster: {type: any, required: true}
+  kernel: {type: any, required: true}
+  boundary: {type: string, default: nan}
+status: active
+review: {state: harvested, source: python-packages}

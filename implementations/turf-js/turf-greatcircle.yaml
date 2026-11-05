@@ -1,0 +1,16 @@
+id: turf-greatcircle
+kind: implementation
+name: turf.greatCircle
+software: turf-js
+call: {interface: js, name: turf.greatCircle}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  start: {type: 'Feature<Point, GeoJsonProperties> | Point | Position', required: true}
+  end: {type: 'Feature<Point, GeoJsonProperties> | Point | Position', required: true}
+  options: {type: '{ properties?: GeoJsonProperties; npoints?: number; offset?: number; }'}
+  options.properties: {type: GeoJsonProperties, note: field of options}
+  options.npoints: {type: number, note: field of options}
+  options.offset: {type: number, note: field of options}
+notes: From @turf/great-circle.
+status: active
+review: {state: harvested, source: turf}

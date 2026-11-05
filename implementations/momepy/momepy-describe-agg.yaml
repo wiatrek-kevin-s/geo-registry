@@ -1,0 +1,13 @@
+id: momepy-describe-agg
+kind: implementation
+name: momepy.describe_agg
+software: momepy
+call: {interface: python, name: momepy.describe_agg}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  y: {type: any, required: true}
+  aggregation_key: {type: any, required: true}
+  q: {type: any}
+  statistics: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

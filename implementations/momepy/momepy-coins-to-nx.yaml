@@ -1,0 +1,10 @@
+id: momepy-coins-to-nx
+kind: implementation
+name: momepy.coins_to_nx
+software: momepy
+call: {interface: python, name: momepy.coins_to_nx}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  coins: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

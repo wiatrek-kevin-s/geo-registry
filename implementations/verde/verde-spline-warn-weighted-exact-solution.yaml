@@ -1,0 +1,11 @@
+id: verde-spline-warn-weighted-exact-solution
+kind: implementation
+name: verde.spline.warn_weighted_exact_solution
+software: verde
+call: {interface: python, name: verde.spline.warn_weighted_exact_solution}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  spline: {type: any, required: true}
+  weights: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

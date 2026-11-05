@@ -1,0 +1,14 @@
+id: esda-boundary-silhouette
+kind: implementation
+name: esda.boundary_silhouette
+software: esda
+call: {interface: python, name: esda.boundary_silhouette}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  data: {type: any, required: true}
+  labels: {type: any, required: true}
+  W: {type: any, required: true}
+  metric: {type: any, note: default sklearn.metrics.pairwise.euclidean_distances}
+  drop_islands: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

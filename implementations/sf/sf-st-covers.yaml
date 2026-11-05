@@ -1,0 +1,15 @@
+id: sf-st-covers
+kind: implementation
+name: sf::st_covers
+software: sf
+call: {interface: r, name: 'sf::st_covers'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  sparse: {type: any, default: 'TRUE'}
+  prepared: {type: any, default: 'TRUE'}
+  '...': {type: dots, note: further arguments passed on}
+  model: {type: any, default: '"closed"'}
+status: active
+review: {state: harvested, source: r-packages}

@@ -1,0 +1,11 @@
+id: verde-coordinates-kdtree
+kind: implementation
+name: verde.coordinates.kdtree
+software: verde
+call: {interface: python, name: verde.coordinates.kdtree}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  coordinates: {type: any, required: true}
+  use_pykdtree: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: fiona-vfs-vsi-path
+kind: implementation
+name: fiona.vfs.vsi_path
+software: fiona
+call: {interface: python, name: fiona.vfs.vsi_path}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  path: {type: any, required: true}
+  vsi: {type: any}
+  archive: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

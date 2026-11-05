@@ -1,0 +1,22 @@
+id: spreg-basegm-lag
+kind: implementation
+name: spreg.BaseGM_Lag
+software: spreg
+call: {interface: python, name: spreg.BaseGM_Lag}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  y: {type: any, required: true}
+  x: {type: any, required: true}
+  yend: {type: any}
+  q: {type: any}
+  w: {type: any}
+  w_lags: {type: integer, default: 1}
+  slx_lags: {type: integer, default: 0}
+  slx_vars: {type: string, default: All}
+  lag_q: {type: boolean, default: true}
+  robust: {type: any}
+  gwk: {type: any}
+  sig2n_k: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

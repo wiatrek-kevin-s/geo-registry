@@ -1,0 +1,13 @@
+id: osmnx-utils-geo-bbox-from-point
+kind: implementation
+name: osmnx.utils_geo.bbox_from_point
+software: osmnx
+call: {interface: python, name: osmnx.utils_geo.bbox_from_point}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  point: {type: 'tuple[float, float]', required: true}
+  dist: {type: float, required: true}
+  project_utm: {type: bool, default: false}
+  return_crs: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

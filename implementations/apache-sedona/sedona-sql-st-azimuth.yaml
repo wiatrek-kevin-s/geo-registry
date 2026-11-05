@@ -1,0 +1,11 @@
+id: sedona-sql-st-azimuth
+kind: implementation
+name: sedona.sql.ST_Azimuth
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_Azimuth}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  point_a: {type: Union, required: true}
+  point_b: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

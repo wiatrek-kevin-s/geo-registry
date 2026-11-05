@@ -1,0 +1,10 @@
+id: topojson-ops-np-array-from-arcs
+kind: implementation
+name: topojson.ops.np_array_from_arcs
+software: topojson
+call: {interface: python, name: topojson.ops.np_array_from_arcs}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  arcs: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

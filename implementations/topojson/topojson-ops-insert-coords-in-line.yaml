@@ -1,0 +1,11 @@
+id: topojson-ops-insert-coords-in-line
+kind: implementation
+name: topojson.ops.insert_coords_in_line
+software: topojson
+call: {interface: python, name: topojson.ops.insert_coords_in_line}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  line: {type: any, required: true}
+  tree_splitter: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

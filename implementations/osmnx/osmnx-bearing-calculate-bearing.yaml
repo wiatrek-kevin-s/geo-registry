@@ -1,0 +1,13 @@
+id: osmnx-bearing-calculate-bearing
+kind: implementation
+name: osmnx.bearing.calculate_bearing
+software: osmnx
+call: {interface: python, name: osmnx.bearing.calculate_bearing}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  lat1: {type: 'float | npt.NDArray[np.float64]', required: true}
+  lon1: {type: 'float | npt.NDArray[np.float64]', required: true}
+  lat2: {type: 'float | npt.NDArray[np.float64]', required: true}
+  lon2: {type: 'float | npt.NDArray[np.float64]', required: true}
+status: active
+review: {state: harvested, source: python-packages}

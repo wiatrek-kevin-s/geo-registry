@@ -1,0 +1,15 @@
+id: giddy-markov-lisa-markov
+kind: implementation
+name: giddy.markov.LISA_Markov
+software: giddy
+call: {interface: python, name: giddy.markov.LISA_Markov}
+harvest: {harvester: python-packages, engine_version: 2.3.9}
+parameters:
+  y: {type: any, required: true}
+  w: {type: any, required: true}
+  permutations: {type: integer, default: 0}
+  significance_level: {type: number, default: 0.05}
+  geoda_quads: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

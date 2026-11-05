@@ -1,0 +1,23 @@
+id: skgstat-spacetimevariogram
+kind: implementation
+name: skgstat.SpaceTimeVariogram
+software: scikit-gstat
+call: {interface: python, name: skgstat.SpaceTimeVariogram}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  coordinates: {type: any, required: true}
+  values: {type: any, required: true}
+  xdist_func: {type: string, default: euclidean}
+  tdist_func: {type: string, default: euclidean}
+  x_lags: {type: integer, default: 10}
+  t_lags: {type: string, default: max}
+  maxlag: {type: any}
+  xbins: {type: string, default: even}
+  tbins: {type: string, default: even}
+  estimator: {type: string, default: matheron}
+  use_nugget: {type: boolean, default: false}
+  model: {type: string, default: product-sum}
+  verbose: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

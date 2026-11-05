@@ -1,0 +1,13 @@
+id: spreg-check-regi-args
+kind: implementation
+name: spreg.check_regi_args
+software: spreg
+call: {interface: python, name: spreg.check_regi_args}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  constant_regi: {type: any, required: true}
+  cols2regi: {type: any, required: true}
+  regime_err_sep: {type: any, required: true}
+  err_flag: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

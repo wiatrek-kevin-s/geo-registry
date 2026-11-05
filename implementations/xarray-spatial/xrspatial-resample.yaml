@@ -1,0 +1,15 @@
+id: xrspatial-resample
+kind: implementation
+name: xrspatial.resample
+software: xarray-spatial
+call: {interface: python, name: xrspatial.resample}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: xr.DataArray, required: true}
+  scale_factor: {type: 'float | tuple[float, float] | None'}
+  target_resolution: {type: 'float | tuple[float, float] | None'}
+  method: {type: str, default: nearest}
+  nodata: {type: float | None}
+  name: {type: str, default: resample}
+status: active
+review: {state: harvested, source: python-packages}

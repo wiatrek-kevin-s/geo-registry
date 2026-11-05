@@ -1,0 +1,32 @@
+id: spreg-tsls
+kind: implementation
+name: spreg.TSLS
+software: spreg
+call: {interface: python, name: spreg.TSLS}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  y: {type: any, required: true}
+  x: {type: any, required: true}
+  yend: {type: any, required: true}
+  q: {type: any, required: true}
+  w: {type: any}
+  robust: {type: any}
+  gwk: {type: any}
+  slx_lags: {type: integer, default: 0}
+  slx_vars: {type: string, default: All}
+  sig2n_k: {type: boolean, default: false}
+  spat_diag: {type: boolean, default: false}
+  nonspat_diag: {type: boolean, default: true}
+  regimes: {type: any}
+  vm: {type: boolean, default: false}
+  name_y: {type: any}
+  name_x: {type: any}
+  name_yend: {type: any}
+  name_q: {type: any}
+  name_w: {type: any}
+  name_gwk: {type: any}
+  name_ds: {type: any}
+  latex: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

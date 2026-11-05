@@ -1,0 +1,9 @@
+id: movingpandas-trajectory-get-duration
+kind: implementation
+name: Trajectory.get_duration
+software: movingpandas
+call: {interface: python, name: movingpandas.Trajectory.get_duration}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

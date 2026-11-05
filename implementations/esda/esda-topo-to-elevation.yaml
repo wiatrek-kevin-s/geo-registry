@@ -1,0 +1,12 @@
+id: esda-topo-to-elevation
+kind: implementation
+name: esda.topo.to_elevation
+software: esda
+call: {interface: python, name: esda.topo.to_elevation}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  X: {type: any, required: true}
+  middle: {type: string, default: mean}
+  metric: {type: string, default: euclidean}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,13 @@
+id: rasterio-session-osssession
+kind: implementation
+name: rasterio.session.OSSSession
+software: rasterio
+call: {interface: python, name: rasterio.session.OSSSession}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  oss_access_key_id: {type: any}
+  oss_secret_access_key: {type: any}
+  oss_endpoint: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

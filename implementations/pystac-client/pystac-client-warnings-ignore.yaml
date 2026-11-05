@@ -1,0 +1,9 @@
+id: pystac-client-warnings-ignore
+kind: implementation
+name: pystac_client.warnings.ignore
+software: pystac-client
+call: {interface: python, name: pystac_client.warnings.ignore}
+harvest: {harvester: python-packages, engine_version: 0.9.1}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

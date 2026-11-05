@@ -1,0 +1,12 @@
+id: momepy-generate-blocks
+kind: implementation
+name: momepy.generate_blocks
+software: momepy
+call: {interface: python, name: momepy.generate_blocks}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  tessellation: {type: GeoDataFrame, required: true}
+  edges: {type: GeoDataFrame, required: true}
+  buildings: {type: GeoDataFrame, required: true}
+status: active
+review: {state: harvested, source: python-packages}

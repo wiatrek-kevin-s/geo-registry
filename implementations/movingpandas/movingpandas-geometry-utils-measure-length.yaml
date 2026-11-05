@@ -1,0 +1,12 @@
+id: movingpandas-geometry-utils-measure-length
+kind: implementation
+name: movingpandas.geometry_utils.measure_length
+software: movingpandas
+call: {interface: python, name: movingpandas.geometry_utils.measure_length}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  geoseries: {type: any, required: true}
+  spherical: {type: boolean, default: false}
+  conversion: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

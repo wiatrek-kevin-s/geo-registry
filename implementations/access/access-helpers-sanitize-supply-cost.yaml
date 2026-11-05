@@ -1,0 +1,12 @@
+id: access-helpers-sanitize-supply-cost
+kind: implementation
+name: access.helpers.sanitize_supply_cost
+software: access
+call: {interface: python, name: access.helpers.sanitize_supply_cost}
+harvest: {harvester: python-packages, engine_version: 1.1.10.post3}
+parameters:
+  a: {type: any, required: true}
+  cost: {type: any, required: true}
+  name: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,17 @@
+id: spaghetti-element-as-gdf
+kind: implementation
+name: spaghetti.element_as_gdf
+software: spaghetti
+call: {interface: python, name: spaghetti.element_as_gdf}
+harvest: {harvester: python-packages, engine_version: 1.7.6}
+parameters:
+  net: {type: any, required: true}
+  vertices: {type: boolean, default: false}
+  arcs: {type: boolean, default: false}
+  pp_name: {type: any}
+  snapped: {type: boolean, default: false}
+  routes: {type: any}
+  id_col: {type: string, default: id}
+  geom_col: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

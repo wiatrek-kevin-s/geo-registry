@@ -1,0 +1,10 @@
+id: rasterio-windows-iter-args
+kind: implementation
+name: rasterio.windows.iter_args
+software: rasterio
+call: {interface: python, name: rasterio.windows.iter_args}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  function: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

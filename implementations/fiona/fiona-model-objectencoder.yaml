@@ -1,0 +1,18 @@
+id: fiona-model-objectencoder
+kind: implementation
+name: fiona.model.ObjectEncoder
+software: fiona
+call: {interface: python, name: fiona.model.ObjectEncoder}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  skipkeys: {type: boolean, default: false}
+  ensure_ascii: {type: boolean, default: true}
+  check_circular: {type: boolean, default: true}
+  allow_nan: {type: boolean, default: true}
+  sort_keys: {type: boolean, default: false}
+  indent: {type: any}
+  separators: {type: any}
+  default: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

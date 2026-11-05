@@ -1,0 +1,11 @@
+id: rioxarray-raster-dataset-rasterdataset-set-crs
+kind: implementation
+name: RasterDataset.set_crs
+software: rioxarray
+call: {interface: python, name: rioxarray.raster_dataset.RasterDataset.set_crs}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  input_crs: {type: Any, required: true}
+  inplace: {type: bool, default: true}
+status: active
+review: {state: harvested, source: python-packages}

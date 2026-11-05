@@ -1,0 +1,13 @@
+id: esda-external-entropy
+kind: implementation
+name: esda.external_entropy
+software: esda
+call: {interface: python, name: esda.external_entropy}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  a: {type: any, required: true}
+  b: {type: any, required: true}
+  balance: {type: integer, default: 0}
+  base: {type: number, default: 2.718281828459045}
+status: active
+review: {state: harvested, source: python-packages}

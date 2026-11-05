@@ -1,0 +1,11 @@
+id: gstools-tools-matrix-anisotropify
+kind: implementation
+name: gstools.tools.matrix_anisotropify
+software: gstools
+call: {interface: python, name: gstools.tools.matrix_anisotropify}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  dim: {type: any, required: true}
+  anis: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

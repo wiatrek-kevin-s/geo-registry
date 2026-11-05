@@ -1,0 +1,13 @@
+id: libpysal-weights-odw
+kind: implementation
+name: libpysal.weights.ODW
+software: libpysal
+call: {interface: python, name: libpysal.weights.ODW}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  Wo: {type: any, required: true}
+  Wd: {type: any, required: true}
+  transform: {type: string, default: r}
+  silence_warnings: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

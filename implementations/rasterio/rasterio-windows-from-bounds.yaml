@@ -1,0 +1,17 @@
+id: rasterio-windows-from-bounds
+kind: implementation
+name: rasterio.windows.from_bounds
+software: rasterio
+call: {interface: python, name: rasterio.windows.from_bounds}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  left: {type: any, required: true}
+  bottom: {type: any, required: true}
+  right: {type: any, required: true}
+  top: {type: any, required: true}
+  transform: {type: any}
+  height: {type: any}
+  width: {type: any}
+  precision: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

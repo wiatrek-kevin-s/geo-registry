@@ -1,0 +1,15 @@
+id: turf-linereduce
+kind: implementation
+name: turf.lineReduce
+software: turf-js
+call: {interface: js, name: turf.lineReduce}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  geojson: {type: 'FeatureCollection<Lines, P> | Feature<Lines, P> | Lines | Feature<GeometryCollection, P> | GeometryCollection',
+    required: true}
+  callback: {type: '(previousValue?: Reducer, currentLine?: Feature<LineString, P>, featureIndex?: number, multiFeatureIndex?:
+      number, geometryIndex?: number) => Reducer', required: true}
+  initialValue: {type: Reducer}
+notes: From @turf/meta.
+status: active
+review: {state: harvested, source: turf}

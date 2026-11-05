@@ -1,0 +1,15 @@
+id: terra-rcl
+kind: implementation
+name: terra::rcl
+software: terra
+call: {interface: r, name: 'terra::rcl'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  row: {type: any, default: 'NULL'}
+  col: {type: any, default: 'NULL'}
+  lyr: {type: any, default: 'NULL'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

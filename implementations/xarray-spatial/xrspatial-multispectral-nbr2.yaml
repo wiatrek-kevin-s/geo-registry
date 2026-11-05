@@ -1,0 +1,12 @@
+id: xrspatial-multispectral-nbr2
+kind: implementation
+name: xrspatial.multispectral.nbr2
+software: xarray-spatial
+call: {interface: python, name: xrspatial.multispectral.nbr2}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  swir1_agg: {type: xr.DataArray, required: true}
+  swir2_agg: {type: xr.DataArray, required: true}
+  name: {type: string, default: nbr2}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,14 @@
+id: momepy-extend-lines
+kind: implementation
+name: momepy.extend_lines
+software: momepy
+call: {interface: python, name: momepy.extend_lines}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  gdf: {type: any, required: true}
+  tolerance: {type: any, required: true}
+  target: {type: any}
+  barrier: {type: any}
+  extension: {type: integer, default: 0}
+status: active
+review: {state: harvested, source: python-packages}

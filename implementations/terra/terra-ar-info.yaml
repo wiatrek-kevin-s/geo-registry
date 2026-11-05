@@ -1,0 +1,14 @@
+id: terra-ar-info
+kind: implementation
+name: terra::ar_info
+software: terra
+call: {interface: r, name: 'terra::ar_info'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  what: {type: any, default: '"describe"'}
+  simplify: {type: any, default: 'TRUE'}
+  filter: {type: any, default: 'TRUE'}
+  array: {type: any, default: '""'}
+status: active
+review: {state: harvested, source: r-packages}

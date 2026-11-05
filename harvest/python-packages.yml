@@ -1,0 +1,70 @@
+# Python packages harvested by harvest/python_packages.py.
+#
+#   software: the package's registry entry (entries/tools/<software>.yaml)
+#   module:   the import name
+#   include:  only modules starting with these (optional)
+#   methods:  classes whose public methods are tools too (accessors, trajectory classes);
+#             otherwise a class is one tool, called through its constructor
+#   exclude:  regular expressions for public names that are not tools (types, helpers)
+#   dist:     the distribution name, when it differs from the import name (for the version)
+#
+# Shapely and GeoPandas have their own harvester (python_libs.py).
+packages:
+  # Raster and coordinates
+  - { software: rasterio, module: rasterio }
+  - { software: pyproj, module: pyproj }
+  - { software: rasterstats, module: rasterstats }
+  - software: rioxarray
+    module: rioxarray
+    methods: [rioxarray.raster_array.RasterArray, rioxarray.raster_dataset.RasterDataset]
+  - { software: xarray-spatial, module: xrspatial }
+  - { software: geocube, module: geocube }
+  - { software: xvec, module: xvec }
+  # Vector data access
+  - { software: fiona, module: fiona }
+  - { software: pyogrio, module: pyogrio }
+  - { software: dask-geopandas, module: dask_geopandas }
+  - { software: topojson, module: topojson }
+  # Networks, OpenStreetMap, urban form
+  - { software: osmnx, module: osmnx }
+  - { software: momepy, module: momepy }
+  - { software: pandana, module: pandana }
+  - { software: pyosmium, module: osmium }
+  # Spatial statistics and analysis (PySAL family)
+  - { software: libpysal, module: libpysal }
+  - { software: esda, module: esda }
+  - { software: spaghetti, module: spaghetti }
+  - { software: mgwr, module: mgwr }
+  - { software: pointpats, module: pointpats }
+  - { software: tobler, module: tobler }
+  - { software: access, module: access }
+  - { software: segregation, module: segregation }
+  - { software: inequality, module: inequality }
+  - { software: giddy, module: giddy }
+  - { software: spopt, module: spopt }
+  - { software: spreg, module: spreg }
+  # Geostatistics and interpolation
+  - { software: verde, module: verde }
+  - { software: pykrige, module: pykrige }
+  - { software: gstools, module: gstools }
+  - { software: scikit-gstat, module: skgstat }
+  # Movement, indexes, point clouds
+  - software: movingpandas
+    module: movingpandas
+    methods: [movingpandas.Trajectory, movingpandas.TrajectoryCollection]
+  # scikit-mobility: not harvested; it imports shapely.ops.cascaded_union, which Shapely 2 removed.
+  - { software: h3-py, module: h3 }
+  - { software: laspy, module: laspy }
+  - { software: pdal-python-bindings, module: pdal }
+  # Imagery catalogues
+  - { software: pystac-client, module: pystac_client }
+  - { software: odc-stac, module: odc.stac }
+  - { software: stackstac, module: stackstac }
+  # Geocoding
+  - { software: geopy, module: geopy }
+  # Spark SQL spatial functions
+  - software: apache-sedona
+    module: sedona
+    dist: apache-sedona
+    include: [sedona.sql]
+    exclude: ["Type$", "^call_sedona_function$", "^validate_argument_types$"]

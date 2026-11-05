@@ -1,0 +1,27 @@
+id: terra-zonal
+kind: implementation
+name: terra::zonal
+software: terra
+call: {interface: r, name: 'terra::zonal'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  z: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  fun: {type: any, default: '"mean"'}
+  w: {type: any, default: 'NULL'}
+  wide: {type: any, default: 'TRUE'}
+  as.raster: {type: any, default: 'FALSE'}
+  filename: {type: any, default: '""'}
+  overwrite: {type: any, default: 'FALSE'}
+  wopt: {type: any, default: list()}
+  na.rm: {type: any, default: 'FALSE'}
+  weights: {type: any, default: 'FALSE'}
+  exact: {type: any, default: 'FALSE'}
+  touches: {type: any, default: 'FALSE'}
+  small: {type: any, default: 'TRUE'}
+  as.polygons: {type: any, default: 'FALSE'}
+  weighted: {type: any, default: 'FALSE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

@@ -1,0 +1,11 @@
+id: spopt-region-util-dataframe-to-dict
+kind: implementation
+name: spopt.region.util.dataframe_to_dict
+software: spopt
+call: {interface: python, name: spopt.region.util.dataframe_to_dict}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  df: {type: any, required: true}
+  cols: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

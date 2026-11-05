@@ -1,0 +1,13 @@
+id: gstools-covmodel-sum-tools-sum-set-var-weights
+kind: implementation
+name: gstools.covmodel.sum_tools.sum_set_var_weights
+software: gstools
+call: {interface: python, name: gstools.covmodel.sum_tools.sum_set_var_weights}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  summod: {type: any, required: true}
+  weights: {type: any, required: true}
+  skip: {type: any}
+  var: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

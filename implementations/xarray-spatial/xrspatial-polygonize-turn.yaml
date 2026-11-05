@@ -1,0 +1,10 @@
+id: xrspatial-polygonize-turn
+kind: implementation
+name: xrspatial.polygonize.Turn
+software: xarray-spatial
+call: {interface: python, name: xrspatial.polygonize.Turn}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

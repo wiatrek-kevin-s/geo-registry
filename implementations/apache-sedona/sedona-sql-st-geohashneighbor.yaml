@@ -1,0 +1,11 @@
+id: sedona-sql-st-geohashneighbor
+kind: implementation
+name: sedona.sql.ST_GeoHashNeighbor
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_GeoHashNeighbor}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geohash: {type: Union, required: true}
+  direction: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

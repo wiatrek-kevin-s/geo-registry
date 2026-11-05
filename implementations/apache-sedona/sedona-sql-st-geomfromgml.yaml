@@ -1,0 +1,10 @@
+id: sedona-sql-st-geomfromgml
+kind: implementation
+name: sedona.sql.ST_GeomFromGML
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_GeomFromGML}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  gml_string: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

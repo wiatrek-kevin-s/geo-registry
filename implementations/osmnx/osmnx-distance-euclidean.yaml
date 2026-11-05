@@ -1,0 +1,13 @@
+id: osmnx-distance-euclidean
+kind: implementation
+name: osmnx.distance.euclidean
+software: osmnx
+call: {interface: python, name: osmnx.distance.euclidean}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  y1: {type: 'float | npt.NDArray[np.float64]', required: true}
+  x1: {type: 'float | npt.NDArray[np.float64]', required: true}
+  y2: {type: 'float | npt.NDArray[np.float64]', required: true}
+  x2: {type: 'float | npt.NDArray[np.float64]', required: true}
+status: active
+review: {state: harvested, source: python-packages}

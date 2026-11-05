@@ -1,0 +1,16 @@
+id: spopt-region-azp-azpsimulatedannealing
+kind: implementation
+name: spopt.region.azp.AZPSimulatedAnnealing
+software: spopt
+call: {interface: python, name: spopt.region.azp.AZPSimulatedAnnealing}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  init_temperature: {type: any}
+  max_iterations: {type: number, note: default inf}
+  sa_moves_term: {type: integer, default: 10}
+  nonmoving_steps_before_stop: {type: integer, default: 3}
+  repetitions_before_termination: {type: integer, default: 5}
+  random_state: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

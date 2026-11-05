@@ -1,0 +1,17 @@
+id: rioxarray-merge-merge-arrays
+kind: implementation
+name: rioxarray.merge.merge_arrays
+software: rioxarray
+call: {interface: python, name: rioxarray.merge.merge_arrays}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  dataarrays: {type: Sequence, required: true}
+  bounds: {type: Optional}
+  res: {type: Optional}
+  nodata: {type: Optional}
+  precision: {type: Optional}
+  method: {type: Union}
+  crs: {type: Optional}
+  parse_coordinates: {type: bool, default: true}
+status: active
+review: {state: harvested, source: python-packages}

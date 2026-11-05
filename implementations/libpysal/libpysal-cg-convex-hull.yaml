@@ -1,0 +1,10 @@
+id: libpysal-cg-convex-hull
+kind: implementation
+name: libpysal.cg.convex_hull
+software: libpysal
+call: {interface: python, name: libpysal.cg.convex_hull}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  points: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,13 @@
+id: osmnx-features-from-xml
+kind: implementation
+name: osmnx.features_from_xml
+software: osmnx
+call: {interface: python, name: osmnx.features_from_xml}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  filepath: {type: str | Path, required: true}
+  polygon: {type: Polygon | MultiPolygon | None}
+  tags: {type: 'dict[str, bool | str | list[str]] | None'}
+  encoding: {type: str, default: utf-8}
+status: active
+review: {state: harvested, source: python-packages}

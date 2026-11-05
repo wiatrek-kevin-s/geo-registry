@@ -1,0 +1,9 @@
+id: verde-datasets-locate
+kind: implementation
+name: verde.datasets.locate
+software: verde
+call: {interface: python, name: verde.datasets.locate}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

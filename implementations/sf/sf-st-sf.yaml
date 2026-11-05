@@ -1,0 +1,18 @@
+id: sf-st-sf
+kind: implementation
+name: sf::st_sf
+software: sf
+call: {interface: r, name: 'sf::st_sf'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  '...': {type: dots, note: further arguments passed on}
+  agr: {type: any, default: NA_agr_}
+  row.names: {type: any, required: true}
+  stringsAsFactors: {type: any, default: sf_stringsAsFactors()}
+  crs: {type: any, required: true}
+  precision: {type: any, required: true}
+  sf_column_name: {type: any, default: 'NULL'}
+  check_ring_dir: {type: any, default: 'FALSE'}
+  sfc_last: {type: any, default: 'TRUE'}
+status: active
+review: {state: harvested, source: r-packages}

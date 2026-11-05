@@ -1,0 +1,16 @@
+id: verde-spline-predict-numpy
+kind: implementation
+name: verde.spline.predict_numpy
+software: verde
+call: {interface: python, name: verde.spline.predict_numpy}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  east: {type: any, required: true}
+  north: {type: any, required: true}
+  force_east: {type: any, required: true}
+  force_north: {type: any, required: true}
+  mindist: {type: any, required: true}
+  forces: {type: any, required: true}
+  result: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

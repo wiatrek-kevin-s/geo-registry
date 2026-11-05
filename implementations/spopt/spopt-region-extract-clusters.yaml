@@ -1,0 +1,12 @@
+id: spopt-region-extract-clusters
+kind: implementation
+name: spopt.region.extract_clusters
+software: spopt
+call: {interface: python, name: spopt.region.extract_clusters}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  linkage_matrix: {type: any, required: true}
+  min_cluster_size: {type: any, required: true}
+  extraction: {type: string, default: eom}
+status: active
+review: {state: harvested, source: python-packages}

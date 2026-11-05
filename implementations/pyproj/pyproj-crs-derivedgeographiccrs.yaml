@@ -1,0 +1,14 @@
+id: pyproj-crs-derivedgeographiccrs
+kind: implementation
+name: pyproj.crs.DerivedGeographicCRS
+software: pyproj
+call: {interface: python, name: pyproj.crs.DerivedGeographicCRS}
+harvest: {harvester: python-packages, engine_version: 3.8.0}
+parameters:
+  base_crs: {type: Any, required: true}
+  conversion: {type: Any, required: true}
+  ellipsoidal_cs: {type: any}
+  name: {type: str, default: undefined}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

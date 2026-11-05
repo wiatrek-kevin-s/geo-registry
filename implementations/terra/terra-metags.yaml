@@ -1,0 +1,15 @@
+id: terra-metags
+kind: implementation
+name: terra::metags
+software: terra
+call: {interface: r, name: 'terra::metags'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  layer: {type: any, default: 'NULL'}
+  name: {type: any, default: 'NULL'}
+  dataset: {type: any, default: 'NULL'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

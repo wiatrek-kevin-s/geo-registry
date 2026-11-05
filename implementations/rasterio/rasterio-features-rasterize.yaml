@@ -1,0 +1,23 @@
+id: rasterio-features-rasterize
+kind: implementation
+name: rasterio.features.rasterize
+software: rasterio
+call: {interface: python, name: rasterio.features.rasterize}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  shapes: {type: any, required: true}
+  out_shape: {type: any}
+  fill: {type: integer, default: 0}
+  nodata: {type: any}
+  masked: {type: boolean, default: false}
+  out: {type: any}
+  transform: {type: any, note: "default Affine(1.0, 0.0, 0.0,\n       0.0, 1.0, 0.0)"}
+  all_touched: {type: boolean, default: false}
+  merge_alg: {type: any, note: 'default <MergeAlg.replace: ''REPLACE''>'}
+  default_value: {type: integer, default: 1}
+  dtype: {type: any}
+  skip_invalid: {type: boolean, default: true}
+  dst_path: {type: any}
+  dst_kwds: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

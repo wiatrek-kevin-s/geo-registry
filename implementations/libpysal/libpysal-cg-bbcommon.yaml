@@ -1,0 +1,11 @@
+id: libpysal-cg-bbcommon
+kind: implementation
+name: libpysal.cg.bbcommon
+software: libpysal
+call: {interface: python, name: libpysal.cg.bbcommon}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  bb: {type: any, required: true}
+  bbother: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

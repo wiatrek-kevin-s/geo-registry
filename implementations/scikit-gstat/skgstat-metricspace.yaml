@@ -1,0 +1,14 @@
+id: skgstat-metricspace
+kind: implementation
+name: skgstat.MetricSpace
+software: scikit-gstat
+call: {interface: python, name: skgstat.MetricSpace}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  coords: {type: any, required: true}
+  dist_metric: {type: string, default: euclidean}
+  max_dist: {type: any}
+  dist_metric_kwargs: {type: any, note: 'default {}'}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

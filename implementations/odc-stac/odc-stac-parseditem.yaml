@@ -1,0 +1,18 @@
+id: odc-stac-parseditem
+kind: implementation
+name: odc.stac.ParsedItem
+software: odc-stac
+call: {interface: python, name: odc.stac.ParsedItem}
+harvest: {harvester: python-packages, engine_version: 0.5.3}
+parameters:
+  id: {type: str, required: true}
+  collection: {type: RasterCollectionMetadata, required: true}
+  bands: {type: 'Mapping[BandKey, RasterSource | AuxDataSource]', required: true}
+  geometry: {type: 'Optional[Geometry]'}
+  datetime: {type: 'Optional[dt.datetime]'}
+  datetime_range: {type: 'Tuple[Optional[dt.datetime], Optional[dt.datetime]]', note: 'default (None, None)'}
+  href: {type: 'Optional[str]'}
+  accessories: {type: 'dict[str, Any]', note: default <factory>}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

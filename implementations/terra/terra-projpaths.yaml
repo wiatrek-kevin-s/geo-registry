@@ -1,0 +1,11 @@
+id: terra-projpaths
+kind: implementation
+name: terra::projPaths
+software: terra
+call: {interface: r, name: 'terra::projPaths'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  paths: {type: any, required: true}
+  with_proj: {type: any, default: 'TRUE'}
+status: active
+review: {state: harvested, source: r-packages}

@@ -1,0 +1,10 @@
+id: gstools-field-tools-fmt-mean-norm-trend
+kind: implementation
+name: gstools.field.tools.fmt_mean_norm_trend
+software: gstools
+call: {interface: python, name: gstools.field.tools.fmt_mean_norm_trend}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  f_cls: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

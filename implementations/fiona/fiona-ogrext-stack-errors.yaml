@@ -1,0 +1,9 @@
+id: fiona-ogrext-stack-errors
+kind: implementation
+name: fiona.ogrext.stack_errors
+software: fiona
+call: {interface: python, name: fiona.ogrext.stack_errors}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: momepy-perimeter-wall
+kind: implementation
+name: momepy.perimeter_wall
+software: momepy
+call: {interface: python, name: momepy.perimeter_wall}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  geometry: {type: any, required: true}
+  graph: {type: any}
+  buffer: {type: float, default: 0.01}
+status: active
+review: {state: harvested, source: python-packages}

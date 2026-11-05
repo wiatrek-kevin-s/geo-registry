@@ -1,0 +1,12 @@
+id: sedona-sql-st-generatepoints
+kind: implementation
+name: sedona.sql.ST_GeneratePoints
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_GeneratePoints}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geometry: {type: Union, required: true}
+  numPoints: {type: Union, required: true}
+  seed: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

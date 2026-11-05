@@ -1,0 +1,15 @@
+id: laspy-read
+kind: implementation
+name: laspy.read
+software: laspy
+call: {interface: python, name: laspy.read}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  source: {type: any, required: true}
+  closefd: {type: boolean, default: true}
+  laz_backend: {type: any, note: 'default (<LazBackend.LazrsParallel: 0>, <LazBackend.Lazrs: 1>)'}
+  decompression_selection: {type: DecompressionSelection, note: 'default <DecompressionSelection.XY_RETURNS_CHANNEL|Z|CLASSIFICATION|FLAGS|INTENSITY|SCAN_ANGLE|USER_DATA|POINT_SOURCE_ID|GPS_TIME|RGB|NIR|WAVEPACKET|ALL_EXTRA_BYTES:
+      8191>'}
+  encoding_errors: {type: str, default: strict}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,19 @@
+id: xrspatial-multi-stop-search
+kind: implementation
+name: xrspatial.multi_stop_search
+software: xarray-spatial
+call: {interface: python, name: xrspatial.multi_stop_search}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  surface: {type: DataArray, required: true}
+  waypoints: {type: list, required: true}
+  barriers: {type: Optional}
+  x: {type: str, default: x}
+  y: {type: str, default: y}
+  connectivity: {type: int, default: 8}
+  snap: {type: bool, default: false}
+  friction: {type: Optional}
+  search_radius: {type: Optional}
+  optimize_order: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

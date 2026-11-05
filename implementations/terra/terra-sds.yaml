@@ -1,0 +1,21 @@
+id: terra-sds
+kind: implementation
+name: terra::sds
+software: terra
+call: {interface: r, name: 'terra::sds'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  crs: {type: any, default: '""'}
+  extent: {type: any, default: 'NULL'}
+  ids: {type: any, default: '0'}
+  opts: {type: any, default: 'NULL'}
+  raw: {type: any, default: 'FALSE'}
+  noflip: {type: any, default: 'FALSE'}
+  guessCRS: {type: any, default: 'TRUE'}
+  domains: {type: any, default: '""'}
+  md: {type: any, default: 'FALSE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

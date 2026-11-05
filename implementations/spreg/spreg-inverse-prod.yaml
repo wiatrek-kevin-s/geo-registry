@@ -1,0 +1,16 @@
+id: spreg-inverse-prod
+kind: implementation
+name: spreg.inverse_prod
+software: spreg
+call: {interface: python, name: spreg.inverse_prod}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  w: {type: any, required: true}
+  data: {type: any, required: true}
+  scalar: {type: any, required: true}
+  post_multiply: {type: boolean, default: false}
+  inv_method: {type: string, default: power_exp}
+  threshold: {type: number, default: 1.0e-10}
+  max_iterations: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

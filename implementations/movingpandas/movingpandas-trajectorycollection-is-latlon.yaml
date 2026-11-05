@@ -1,0 +1,9 @@
+id: movingpandas-trajectorycollection-is-latlon
+kind: implementation
+name: TrajectoryCollection.is_latlon
+software: movingpandas
+call: {interface: python, name: movingpandas.TrajectoryCollection.is_latlon}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

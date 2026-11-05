@@ -1,0 +1,13 @@
+id: spreg-get-lags
+kind: implementation
+name: spreg.get_lags
+software: spreg
+call: {interface: python, name: spreg.get_lags}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  w: {type: any, required: true}
+  x: {type: any, required: true}
+  w_lags: {type: any, required: true}
+  panel: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

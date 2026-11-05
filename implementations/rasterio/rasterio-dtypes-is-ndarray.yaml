@@ -1,0 +1,10 @@
+id: rasterio-dtypes-is-ndarray
+kind: implementation
+name: rasterio.dtypes.is_ndarray
+software: rasterio
+call: {interface: python, name: rasterio.dtypes.is_ndarray}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  array: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

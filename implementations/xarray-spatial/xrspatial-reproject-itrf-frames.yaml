@@ -1,0 +1,9 @@
+id: xrspatial-reproject-itrf-frames
+kind: implementation
+name: xrspatial.reproject.itrf_frames
+software: xarray-spatial
+call: {interface: python, name: xrspatial.reproject.itrf_frames}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: spreg-check-robust
+kind: implementation
+name: spreg.check_robust
+software: spreg
+call: {interface: python, name: spreg.check_robust}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  robust: {type: any, required: true}
+  wk: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

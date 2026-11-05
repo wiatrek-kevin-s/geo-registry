@@ -1,0 +1,13 @@
+id: segregation-batch-batch-multiscalar-multigroup
+kind: implementation
+name: segregation.batch.batch_multiscalar_multigroup
+software: segregation
+call: {interface: python, name: segregation.batch.batch_multiscalar_multigroup}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  gdf: {type: any, required: true}
+  distances: {type: any, required: true}
+  groups: {type: any, required: true}
+  progress_bar: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

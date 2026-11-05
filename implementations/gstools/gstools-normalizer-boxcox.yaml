@@ -1,0 +1,11 @@
+id: gstools-normalizer-boxcox
+kind: implementation
+name: gstools.normalizer.BoxCox
+software: gstools
+call: {interface: python, name: gstools.normalizer.BoxCox}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  data: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

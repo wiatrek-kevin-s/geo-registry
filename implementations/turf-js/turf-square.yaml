@@ -1,0 +1,11 @@
+id: turf-square
+kind: implementation
+name: turf.square
+software: turf-js
+call: {interface: js, name: turf.square}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  bbox: {type: BBox, required: true}
+notes: From @turf/square.
+status: active
+review: {state: harvested, source: turf}

@@ -1,0 +1,10 @@
+id: spreg-set-name-ds
+kind: implementation
+name: spreg.set_name_ds
+software: spreg
+call: {interface: python, name: spreg.set_name_ds}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  name_ds: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

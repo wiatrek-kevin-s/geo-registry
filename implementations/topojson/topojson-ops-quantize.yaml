@@ -1,0 +1,12 @@
+id: topojson-ops-quantize
+kind: implementation
+name: topojson.ops.quantize
+software: topojson
+call: {interface: python, name: topojson.ops.quantize}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  linestrings: {type: any, required: true}
+  bbox: {type: any, required: true}
+  quant_factor: {type: number, default: 100000.0}
+status: active
+review: {state: harvested, source: python-packages}

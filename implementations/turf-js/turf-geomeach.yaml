@@ -1,0 +1,13 @@
+id: turf-geomeach
+kind: implementation
+name: turf.geomEach
+software: turf-js
+call: {interface: js, name: turf.geomEach}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  geojson: {type: 'Feature<G, P> | FeatureCollection<G, P> | G | GeometryCollection | Feature<GeometryCollection, P>', required: true}
+  callback: {type: '(currentGeometry: G, featureIndex: number, featureProperties: P, featureBBox: BBox, featureId: Id) =>
+      void', required: true}
+notes: From @turf/meta.
+status: active
+review: {state: harvested, source: turf}

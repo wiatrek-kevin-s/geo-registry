@@ -1,0 +1,10 @@
+id: momepy-unique-id
+kind: implementation
+name: momepy.unique_id
+software: momepy
+call: {interface: python, name: momepy.unique_id}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  objects: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

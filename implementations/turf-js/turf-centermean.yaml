@@ -1,0 +1,16 @@
+id: turf-centermean
+kind: implementation
+name: turf.centerMean
+software: turf-js
+call: {interface: js, name: turf.centerMean}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  geojson: {type: any, required: true}
+  options: {type: '{ properties?: P; bbox?: BBox; id?: Id; weight?: string; }'}
+  options.properties: {type: P, note: field of options}
+  options.bbox: {type: BBox, note: field of options}
+  options.id: {type: Id, note: field of options}
+  options.weight: {type: string, note: field of options}
+notes: From @turf/center-mean.
+status: active
+review: {state: harvested, source: turf}

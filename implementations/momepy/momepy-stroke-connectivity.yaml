@@ -1,0 +1,10 @@
+id: momepy-stroke-connectivity
+kind: implementation
+name: momepy.stroke_connectivity
+software: momepy
+call: {interface: python, name: momepy.stroke_connectivity}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  stroke_graph: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

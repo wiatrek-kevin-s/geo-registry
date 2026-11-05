@@ -1,0 +1,12 @@
+id: xrspatial-utils-get-xy-range
+kind: implementation
+name: xrspatial.utils.get_xy_range
+software: xarray-spatial
+call: {interface: python, name: xrspatial.utils.get_xy_range}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  raster: {type: any, required: true}
+  xdim: {type: any}
+  ydim: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

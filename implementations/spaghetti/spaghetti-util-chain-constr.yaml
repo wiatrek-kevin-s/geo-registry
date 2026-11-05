@@ -1,0 +1,11 @@
+id: spaghetti-util-chain-constr
+kind: implementation
+name: spaghetti.util.chain_constr
+software: spaghetti
+call: {interface: python, name: spaghetti.util.chain_constr}
+harvest: {harvester: python-packages, engine_version: 1.7.6}
+parameters:
+  vcoords: {type: any, required: true}
+  arcs: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

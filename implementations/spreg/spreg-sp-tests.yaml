@@ -1,0 +1,11 @@
+id: spreg-sp-tests
+kind: implementation
+name: spreg.sp_tests
+software: spreg
+call: {interface: python, name: spreg.sp_tests}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  regprob: {type: any}
+  obj_list: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

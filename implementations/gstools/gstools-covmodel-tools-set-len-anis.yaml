@@ -1,0 +1,13 @@
+id: gstools-covmodel-tools-set-len-anis
+kind: implementation
+name: gstools.covmodel.tools.set_len_anis
+software: gstools
+call: {interface: python, name: gstools.covmodel.tools.set_len_anis}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  dim: {type: any, required: true}
+  len_scale: {type: any, required: true}
+  anis: {type: any, required: true}
+  latlon: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

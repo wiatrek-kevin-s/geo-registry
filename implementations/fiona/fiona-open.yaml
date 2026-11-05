@@ -1,0 +1,25 @@
+id: fiona-open
+kind: implementation
+name: fiona.open
+software: fiona
+call: {interface: python, name: fiona.open}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  fp: {type: any, required: true}
+  mode: {type: string, default: r}
+  driver: {type: any}
+  schema: {type: any}
+  crs: {type: any}
+  encoding: {type: any}
+  layer: {type: any}
+  vfs: {type: any}
+  enabled_drivers: {type: any}
+  crs_wkt: {type: any}
+  ignore_fields: {type: any}
+  ignore_geometry: {type: boolean, default: false}
+  include_fields: {type: any}
+  wkt_version: {type: any}
+  allow_unsupported_drivers: {type: boolean, default: false}
+  opener: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,21 @@
+id: skgstat-ordinarykriging
+kind: implementation
+name: skgstat.OrdinaryKriging
+software: scikit-gstat
+call: {interface: python, name: skgstat.OrdinaryKriging}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  variogram: {type: any, required: true}
+  min_points: {type: integer, default: 5}
+  max_points: {type: integer, default: 15}
+  mode: {type: string, default: exact}
+  precision: {type: integer, default: 100}
+  solver: {type: string, default: inv}
+  n_jobs: {type: integer, default: 1}
+  perf: {type: boolean, default: false}
+  sparse: {type: boolean, default: false}
+  coordinates: {type: any}
+  values: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,14 @@
+id: gstools-transform-apply
+kind: implementation
+name: gstools.transform.apply
+software: gstools
+call: {interface: python, name: gstools.transform.apply}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  fld: {type: any, required: true}
+  method: {type: any, required: true}
+  field: {type: string, default: field}
+  store: {type: boolean, default: true}
+  process: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,10 @@
+id: spreg-get-a1-het
+kind: implementation
+name: spreg.get_A1_het
+software: spreg
+call: {interface: python, name: spreg.get_A1_het}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  S: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

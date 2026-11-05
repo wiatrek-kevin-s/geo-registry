@@ -1,0 +1,12 @@
+id: h3-api-basic-int-child-pos-to-cell
+kind: implementation
+name: h3.api.basic_int.child_pos_to_cell
+software: h3-py
+call: {interface: python, name: h3.api.basic_int.child_pos_to_cell}
+harvest: {harvester: python-packages, engine_version: 4.5.0}
+parameters:
+  parent: {type: any, required: true}
+  res_child: {type: any, required: true}
+  child_pos: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

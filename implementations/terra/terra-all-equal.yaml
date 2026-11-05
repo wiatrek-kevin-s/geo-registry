@@ -1,0 +1,14 @@
+id: terra-all-equal
+kind: implementation
+name: terra::all.equal
+software: terra
+call: {interface: r, name: 'terra::all.equal'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  target: {type: any, required: true}
+  current: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  maxcell: {type: any, default: 1e+05}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

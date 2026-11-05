@@ -1,0 +1,11 @@
+id: h3-api-basic-int-cell-to-children-size
+kind: implementation
+name: h3.api.basic_int.cell_to_children_size
+software: h3-py
+call: {interface: python, name: h3.api.basic_int.cell_to_children_size}
+harvest: {harvester: python-packages, engine_version: 4.5.0}
+parameters:
+  h: {type: any, required: true}
+  res: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

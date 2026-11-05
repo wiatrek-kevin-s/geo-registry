@@ -1,0 +1,14 @@
+id: spaghetti-util-build-chains
+kind: implementation
+name: spaghetti.util.build_chains
+software: spaghetti
+call: {interface: python, name: spaghetti.util.build_chains}
+harvest: {harvester: python-packages, engine_version: 1.7.6}
+parameters:
+  space_h: {type: any, required: true}
+  space_v: {type: any, required: true}
+  exterior: {type: any, required: true}
+  bounds: {type: any, required: true}
+  h: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

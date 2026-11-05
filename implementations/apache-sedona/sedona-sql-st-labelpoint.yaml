@@ -1,0 +1,12 @@
+id: sedona-sql-st-labelpoint
+kind: implementation
+name: sedona.sql.ST_LabelPoint
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_LabelPoint}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geometry: {type: Union, required: true}
+  gridResolution: {type: Union}
+  goodnessThreshold: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

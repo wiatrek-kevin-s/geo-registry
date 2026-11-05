@@ -1,0 +1,15 @@
+id: rioxarray-raster-dataset-rasterdataset-reproject
+kind: implementation
+name: RasterDataset.reproject
+software: rioxarray
+call: {interface: python, name: rioxarray.raster_dataset.RasterDataset.reproject}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  dst_crs: {type: Any, required: true}
+  resolution: {type: Union}
+  shape: {type: Optional}
+  transform: {type: Optional}
+  resampling: {type: Union, note: 'default <Resampling.nearest: 0>'}
+  nodata: {type: Optional}
+status: active
+review: {state: harvested, source: python-packages}

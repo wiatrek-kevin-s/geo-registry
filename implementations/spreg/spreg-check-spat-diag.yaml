@@ -1,0 +1,13 @@
+id: spreg-check-spat-diag
+kind: implementation
+name: spreg.check_spat_diag
+software: spreg
+call: {interface: python, name: spreg.check_spat_diag}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  spat_diag: {type: any, required: true}
+  w: {type: any, required: true}
+  robust: {type: any}
+  slx_lags: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

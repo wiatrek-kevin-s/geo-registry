@@ -1,0 +1,10 @@
+id: xrspatial-convolution-cupy
+kind: implementation
+name: xrspatial.convolution.cupy
+software: xarray-spatial
+call: {interface: python, name: xrspatial.convolution.cupy}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

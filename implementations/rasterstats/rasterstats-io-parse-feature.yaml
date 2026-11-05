@@ -1,0 +1,10 @@
+id: rasterstats-io-parse-feature
+kind: implementation
+name: rasterstats.io.parse_feature
+software: rasterstats
+call: {interface: python, name: rasterstats.io.parse_feature}
+harvest: {harvester: python-packages, engine_version: 0.21.0}
+parameters:
+  obj: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

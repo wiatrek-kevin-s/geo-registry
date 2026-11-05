@@ -1,0 +1,12 @@
+id: spopt-region-azp-make-move
+kind: implementation
+name: spopt.region.azp.make_move
+software: spopt
+call: {interface: python, name: spopt.region.azp.make_move}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  moving_area: {type: any, required: true}
+  new_label: {type: any, required: true}
+  labels: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

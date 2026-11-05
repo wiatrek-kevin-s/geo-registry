@@ -1,0 +1,11 @@
+id: h3-api-memview-int-construct-cell
+kind: implementation
+name: h3.api.memview_int.construct_cell
+software: h3-py
+call: {interface: python, name: h3.api.memview_int.construct_cell}
+harvest: {harvester: python-packages, engine_version: 4.5.0}
+parameters:
+  base_cell_number: {type: any, required: true}
+  res: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

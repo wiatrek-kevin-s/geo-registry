@@ -1,0 +1,10 @@
+id: skgstat-models-variogram
+kind: implementation
+name: skgstat.models.variogram
+software: scikit-gstat
+call: {interface: python, name: skgstat.models.variogram}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  func: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

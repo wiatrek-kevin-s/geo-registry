@@ -1,0 +1,15 @@
+id: xrspatial-hypsometric-integral
+kind: implementation
+name: xrspatial.hypsometric_integral
+software: xarray-spatial
+call: {interface: python, name: xrspatial.hypsometric_integral}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  zones: {type: any, required: true}
+  values: {type: xr.DataArray, required: true}
+  nodata: {type: 'Optional[int]', default: 0}
+  column: {type: 'Optional[str]'}
+  rasterize_kw: {type: 'Optional[dict]'}
+  name: {type: str, default: hypsometric_integral}
+status: active
+review: {state: harvested, source: python-packages}

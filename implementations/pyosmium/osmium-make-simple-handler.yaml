@@ -1,0 +1,14 @@
+id: osmium-make-simple-handler
+kind: implementation
+name: osmium.make_simple_handler
+software: pyosmium
+call: {interface: python, name: osmium.make_simple_handler}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters:
+  node: {type: Optional}
+  way: {type: Optional}
+  relation: {type: Optional}
+  area: {type: Optional}
+  changeset: {type: Optional}
+status: active
+review: {state: harvested, source: python-packages}

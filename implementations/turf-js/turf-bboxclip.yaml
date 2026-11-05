@@ -1,0 +1,12 @@
+id: turf-bboxclip
+kind: implementation
+name: turf.bboxClip
+software: turf-js
+call: {interface: js, name: turf.bboxClip}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  feature: {type: 'Feature<G, P> | G', required: true}
+  bbox: {type: BBox, required: true}
+notes: From @turf/bbox-clip.
+status: active
+review: {state: harvested, source: turf}

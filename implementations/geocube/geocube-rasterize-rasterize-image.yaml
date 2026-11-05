@@ -1,0 +1,16 @@
+id: geocube-rasterize-rasterize-image
+kind: implementation
+name: geocube.rasterize.rasterize_image
+software: geocube
+call: {interface: python, name: geocube.rasterize.rasterize_image}
+harvest: {harvester: python-packages, engine_version: 0.7.1}
+parameters:
+  geometry_array: {type: GeoSeries, required: true}
+  data_values: {type: Union, required: true}
+  geobox: {type: GeoBox, required: true}
+  fill: {type: float, required: true}
+  merge_alg: {type: MergeAlg, note: 'default <MergeAlg.replace: ''REPLACE''>'}
+  filter_nan: {type: bool, default: false}
+  all_touched: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

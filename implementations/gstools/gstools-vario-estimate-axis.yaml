@@ -1,0 +1,13 @@
+id: gstools-vario-estimate-axis
+kind: implementation
+name: gstools.vario_estimate_axis
+software: gstools
+call: {interface: python, name: gstools.vario_estimate_axis}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  field: {type: any, required: true}
+  direction: {type: string, default: x}
+  estimator: {type: string, default: matheron}
+  no_data: {type: number, note: default nan}
+status: active
+review: {state: harvested, source: python-packages}

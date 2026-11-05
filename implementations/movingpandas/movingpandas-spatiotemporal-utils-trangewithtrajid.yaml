@@ -1,0 +1,13 @@
+id: movingpandas-spatiotemporal-utils-trangewithtrajid
+kind: implementation
+name: movingpandas.spatiotemporal_utils.TRangeWithTrajId
+software: movingpandas
+call: {interface: python, name: movingpandas.spatiotemporal_utils.TRangeWithTrajId}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  t_0: {type: any, required: true}
+  t_n: {type: any, required: true}
+  traj_id: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

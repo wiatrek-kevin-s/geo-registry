@@ -1,0 +1,12 @@
+id: sedona-sql-st-makepointm
+kind: implementation
+name: sedona.sql.ST_MakePointM
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_MakePointM}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  x: {type: Union, required: true}
+  y: {type: Union, required: true}
+  m: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

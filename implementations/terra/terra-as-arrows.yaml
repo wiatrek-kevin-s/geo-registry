@@ -1,0 +1,17 @@
+id: terra-as-arrows
+kind: implementation
+name: terra::as.arrows
+software: terra
+call: {interface: r, name: 'terra::as.arrows'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  unit: {type: any, default: 'c("degrees", "radians", "flowdir")'}
+  arrow_length: {type: any, default: NA}
+  clockwise: {type: any, default: 'FALSE'}
+  angle_from_h_axis: {type: any, default: '0'}
+  angle_from_x_axis: {type: any, default: angle_from_h_axis}
+  length: {type: any, default: '0'}
+  '...': {type: dots, note: further arguments passed on}
+status: active
+review: {state: harvested, source: r-packages}

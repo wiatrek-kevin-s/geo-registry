@@ -1,0 +1,10 @@
+id: libpysal-weights-spw-from-gal
+kind: implementation
+name: libpysal.weights.spw_from_gal
+software: libpysal
+call: {interface: python, name: libpysal.weights.spw_from_gal}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  galfile: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

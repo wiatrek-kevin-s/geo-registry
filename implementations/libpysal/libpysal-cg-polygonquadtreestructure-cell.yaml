@@ -1,0 +1,17 @@
+id: libpysal-cg-polygonquadtreestructure-cell
+kind: implementation
+name: libpysal.cg.polygonQuadTreeStructure.Cell
+software: libpysal
+call: {interface: python, name: libpysal.cg.polygonQuadTreeStructure.Cell}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  level: {type: any, required: true}
+  min_x: {type: any, required: true}
+  min_y: {type: any, required: true}
+  length_x: {type: any, required: true}
+  length_y: {type: any, required: true}
+  arcs: {type: any, required: true}
+  status: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

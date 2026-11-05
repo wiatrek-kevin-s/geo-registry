@@ -1,0 +1,11 @@
+id: gstools-to-vtk-unstructured
+kind: implementation
+name: gstools.to_vtk_unstructured
+software: gstools
+call: {interface: python, name: gstools.to_vtk_unstructured}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  pos: {type: any, required: true}
+  fields: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

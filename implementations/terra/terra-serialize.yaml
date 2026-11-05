@@ -1,0 +1,16 @@
+id: terra-serialize
+kind: implementation
+name: terra::serialize
+software: terra
+call: {interface: r, name: 'terra::serialize'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  object: {type: any, required: true}
+  connection: {type: any, required: true}
+  ascii: {type: any, default: 'FALSE'}
+  xdr: {type: any, default: 'TRUE'}
+  version: {type: any, default: 'NULL'}
+  refhook: {type: any, default: 'NULL'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

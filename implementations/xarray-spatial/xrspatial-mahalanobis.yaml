@@ -1,0 +1,13 @@
+id: xrspatial-mahalanobis
+kind: implementation
+name: xrspatial.mahalanobis
+software: xarray-spatial
+call: {interface: python, name: xrspatial.mahalanobis}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  bands: {type: List, required: true}
+  mean: {type: Optional}
+  inv_cov: {type: Optional}
+  name: {type: str, default: mahalanobis}
+status: active
+review: {state: harvested, source: python-packages}

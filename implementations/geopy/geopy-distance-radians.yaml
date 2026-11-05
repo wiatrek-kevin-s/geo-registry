@@ -1,0 +1,12 @@
+id: geopy-distance-radians
+kind: implementation
+name: geopy.distance.radians
+software: geopy
+call: {interface: python, name: geopy.distance.radians}
+harvest: {harvester: python-packages, engine_version: 2.5.0}
+parameters:
+  degrees: {type: integer, default: 0}
+  arcminutes: {type: integer, default: 0}
+  arcseconds: {type: integer, default: 0}
+status: active
+review: {state: harvested, source: python-packages}

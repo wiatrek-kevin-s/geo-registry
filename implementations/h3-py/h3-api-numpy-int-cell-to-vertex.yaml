@@ -1,0 +1,11 @@
+id: h3-api-numpy-int-cell-to-vertex
+kind: implementation
+name: h3.api.numpy_int.cell_to_vertex
+software: h3-py
+call: {interface: python, name: h3.api.numpy_int.cell_to_vertex}
+harvest: {harvester: python-packages, engine_version: 4.5.0}
+parameters:
+  h: {type: any, required: true}
+  vertex_num: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

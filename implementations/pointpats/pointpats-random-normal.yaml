@@ -1,0 +1,14 @@
+id: pointpats-random-normal
+kind: implementation
+name: pointpats.random.normal
+software: pointpats
+call: {interface: python, name: pointpats.random.normal}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  hull: {type: any, required: true}
+  center: {type: any}
+  cov: {type: any}
+  size: {type: any}
+  rng: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

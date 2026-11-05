@@ -1,0 +1,14 @@
+id: rasterio-features-sieve
+kind: implementation
+name: rasterio.features.sieve
+software: rasterio
+call: {interface: python, name: rasterio.features.sieve}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  source: {type: any, required: true}
+  size: {type: any, required: true}
+  out: {type: any}
+  mask: {type: any}
+  connectivity: {type: integer, default: 4}
+status: active
+review: {state: harvested, source: python-packages}

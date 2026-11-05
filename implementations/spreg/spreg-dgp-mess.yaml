@@ -1,0 +1,13 @@
+id: spreg-dgp-mess
+kind: implementation
+name: spreg.dgp_mess
+software: spreg
+call: {interface: python, name: spreg.dgp_mess}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  u: {type: any, required: true}
+  xb: {type: any, required: true}
+  w: {type: any, required: true}
+  rho: {type: number, default: 0.5}
+status: active
+review: {state: harvested, source: python-packages}

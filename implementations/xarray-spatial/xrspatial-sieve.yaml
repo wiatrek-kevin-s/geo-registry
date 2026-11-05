@@ -1,0 +1,14 @@
+id: xrspatial-sieve
+kind: implementation
+name: xrspatial.sieve
+software: xarray-spatial
+call: {interface: python, name: xrspatial.sieve}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  raster: {type: xr.DataArray, required: true}
+  threshold: {type: int, default: 10}
+  neighborhood: {type: int, default: 4}
+  skip_values: {type: 'Sequence[float] | None'}
+  name: {type: str, default: sieve}
+status: active
+review: {state: harvested, source: python-packages}

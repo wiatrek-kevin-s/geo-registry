@@ -1,0 +1,15 @@
+id: pointpats-poissonpointprocess
+kind: implementation
+name: pointpats.PoissonPointProcess
+software: pointpats
+call: {interface: python, name: pointpats.PoissonPointProcess}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  window: {type: any, required: true}
+  n: {type: any, required: true}
+  samples: {type: any, required: true}
+  conditioning: {type: boolean, default: false}
+  asPP: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

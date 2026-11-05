@@ -1,0 +1,23 @@
+id: skgstat-interfaces-variogramestimator
+kind: implementation
+name: skgstat.interfaces.VariogramEstimator
+software: scikit-gstat
+call: {interface: python, name: skgstat.interfaces.VariogramEstimator}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  estimator: {type: string, default: matheron}
+  model: {type: string, default: spherical}
+  dist_func: {type: string, default: euclidean}
+  bin_func: {type: string, default: even}
+  normalize: {type: boolean, default: true}
+  fit_method: {type: string, default: trf}
+  fit_sigma: {type: any}
+  use_nugget: {type: boolean, default: false}
+  maxlag: {type: any}
+  n_lags: {type: integer, default: 10}
+  verbose: {type: boolean, default: false}
+  use_score: {type: string, default: rmse}
+  cross_validate: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

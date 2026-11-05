@@ -1,0 +1,13 @@
+id: gstools-field-tools-to-vtk-helper
+kind: implementation
+name: gstools.field.tools.to_vtk_helper
+software: gstools
+call: {interface: python, name: gstools.field.tools.to_vtk_helper}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  f_cls: {type: any, required: true}
+  filename: {type: any}
+  field_select: {type: string, default: field}
+  fieldname: {type: string, default: field}
+status: active
+review: {state: harvested, source: python-packages}

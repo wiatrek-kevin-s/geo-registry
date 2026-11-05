@@ -1,0 +1,14 @@
+id: tobler-util-h3fy
+kind: implementation
+name: tobler.util.h3fy
+software: tobler
+call: {interface: python, name: tobler.util.h3fy}
+harvest: {harvester: python-packages, engine_version: 0.14.0}
+parameters:
+  source: {type: any, required: true}
+  resolution: {type: integer, default: 6}
+  clip: {type: boolean, default: false}
+  buffer: {type: boolean, default: false}
+  return_geoms: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

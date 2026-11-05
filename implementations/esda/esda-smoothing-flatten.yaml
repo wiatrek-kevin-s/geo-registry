@@ -1,0 +1,11 @@
+id: esda-smoothing-flatten
+kind: implementation
+name: esda.smoothing.flatten
+software: esda
+call: {interface: python, name: esda.smoothing.flatten}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  l: {type: any, required: true}
+  unique: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

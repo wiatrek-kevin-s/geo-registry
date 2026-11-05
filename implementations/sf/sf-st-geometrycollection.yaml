@@ -1,0 +1,11 @@
+id: sf-st-geometrycollection
+kind: implementation
+name: sf::st_geometrycollection
+software: sf
+call: {interface: r, name: 'sf::st_geometrycollection'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  x: {type: any, default: list()}
+  dims: {type: any, default: '"XY"'}
+status: active
+review: {state: harvested, source: r-packages}

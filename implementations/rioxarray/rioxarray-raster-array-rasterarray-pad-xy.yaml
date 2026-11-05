@@ -1,0 +1,14 @@
+id: rioxarray-raster-array-rasterarray-pad-xy
+kind: implementation
+name: RasterArray.pad_xy
+software: rioxarray
+call: {interface: python, name: rioxarray.raster_array.RasterArray.pad_xy}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  minx: {type: float, required: true}
+  miny: {type: float, required: true}
+  maxx: {type: float, required: true}
+  maxy: {type: float, required: true}
+  constant_values: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

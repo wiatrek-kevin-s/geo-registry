@@ -1,0 +1,13 @@
+id: movingpandas-trajectorycollection-add-speed
+kind: implementation
+name: TrajectoryCollection.add_speed
+software: movingpandas
+call: {interface: python, name: movingpandas.TrajectoryCollection.add_speed}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  overwrite: {type: boolean, default: false}
+  name: {type: string, default: speed}
+  units: {type: any, note: 'default UNITS(distance=None, time=None, time2=None, crs=None)'}
+  n_processes: {type: integer, default: 1}
+status: active
+review: {state: harvested, source: python-packages}

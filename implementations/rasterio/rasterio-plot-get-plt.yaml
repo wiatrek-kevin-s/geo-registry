@@ -1,0 +1,9 @@
+id: rasterio-plot-get-plt
+kind: implementation
+name: rasterio.plot.get_plt
+software: rasterio
+call: {interface: python, name: rasterio.plot.get_plt}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

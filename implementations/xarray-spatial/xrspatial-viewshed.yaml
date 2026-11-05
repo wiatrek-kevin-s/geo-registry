@@ -1,0 +1,16 @@
+id: xrspatial-viewshed
+kind: implementation
+name: xrspatial.viewshed
+software: xarray-spatial
+call: {interface: python, name: xrspatial.viewshed}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  raster: {type: DataArray, required: true}
+  x: {type: Union, required: true}
+  y: {type: Union, required: true}
+  observer_elev: {type: float, default: 0}
+  target_elev: {type: float, default: 0}
+  max_distance: {type: float}
+  name: {type: Optional, default: viewshed}
+status: active
+review: {state: harvested, source: python-packages}

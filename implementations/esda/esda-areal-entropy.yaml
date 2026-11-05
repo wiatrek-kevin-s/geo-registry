@@ -1,0 +1,13 @@
+id: esda-areal-entropy
+kind: implementation
+name: esda.areal_entropy
+software: esda
+call: {interface: python, name: esda.areal_entropy}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  polygons: {type: any}
+  areas: {type: any}
+  local: {type: boolean, default: false}
+  base: {type: number, default: 2.718281828459045}
+status: active
+review: {state: harvested, source: python-packages}

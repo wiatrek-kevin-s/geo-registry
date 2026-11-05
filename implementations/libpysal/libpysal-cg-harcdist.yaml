@@ -1,0 +1,13 @@
+id: libpysal-cg-harcdist
+kind: implementation
+name: libpysal.cg.harcdist
+software: libpysal
+call: {interface: python, name: libpysal.cg.harcdist}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  p0: {type: any, required: true}
+  p1: {type: any, required: true}
+  lonx: {type: boolean, default: true}
+  radius: {type: number, default: 6371.0}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,10 @@
+id: rioxarray-raster-array-rasterarray-encoded-nodata
+kind: implementation
+name: RasterArray.encoded_nodata
+software: rioxarray
+call: {interface: python, name: rioxarray.raster_array.RasterArray.encoded_nodata}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters: {}
+notes: Property.
+status: active
+review: {state: harvested, source: python-packages}

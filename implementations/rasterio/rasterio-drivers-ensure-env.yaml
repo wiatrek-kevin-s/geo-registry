@@ -1,0 +1,10 @@
+id: rasterio-drivers-ensure-env
+kind: implementation
+name: rasterio.drivers.ensure_env
+software: rasterio
+call: {interface: python, name: rasterio.drivers.ensure_env}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  f: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

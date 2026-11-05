@@ -1,0 +1,15 @@
+id: terra-ifel
+kind: implementation
+name: terra::ifel
+software: terra
+call: {interface: r, name: 'terra::ifel'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  test: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  'yes': {type: any, required: true}
+  'no': {type: any, required: true}
+  filename: {type: any, default: '""'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

@@ -1,0 +1,11 @@
+id: verde-load-surfer
+kind: implementation
+name: verde.load_surfer
+software: verde
+call: {interface: python, name: verde.load_surfer}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  fname: {type: any, required: true}
+  dtype: {type: string, default: float64}
+status: active
+review: {state: harvested, source: python-packages}

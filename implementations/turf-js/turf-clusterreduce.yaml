@@ -1,0 +1,15 @@
+id: turf-clusterreduce
+kind: implementation
+name: turf.clusterReduce
+software: turf-js
+call: {interface: js, name: turf.clusterReduce}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  geojson: {type: 'FeatureCollection<G, P>', required: true}
+  property: {type: number | string, required: true}
+  callback: {type: '(previousValue: any | undefined, cluster: FeatureCollection<G, P>, clusterValue?: any, currentIndex?:
+      number) => void', required: true}
+  initialValue: {type: any}
+notes: From @turf/clusters.
+status: active
+review: {state: harvested, source: turf}

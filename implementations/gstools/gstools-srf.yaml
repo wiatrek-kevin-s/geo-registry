@@ -1,0 +1,16 @@
+id: gstools-srf
+kind: implementation
+name: gstools.SRF
+software: gstools
+call: {interface: python, name: gstools.SRF}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  model: {type: any, required: true}
+  mean: {type: number, default: 0.0}
+  normalizer: {type: any}
+  trend: {type: any}
+  upscaling: {type: string, default: no_scaling}
+  generator: {type: string, default: RandMeth}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

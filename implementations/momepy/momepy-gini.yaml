@@ -1,0 +1,12 @@
+id: momepy-gini
+kind: implementation
+name: momepy.gini
+software: momepy
+call: {interface: python, name: momepy.gini}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  y: {type: Series, required: true}
+  graph: {type: Graph, required: true}
+  q: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

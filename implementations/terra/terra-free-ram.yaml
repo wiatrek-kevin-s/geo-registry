@@ -1,0 +1,9 @@
+id: terra-free-ram
+kind: implementation
+name: terra::free_RAM
+software: terra
+call: {interface: r, name: 'terra::free_RAM'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters: {}
+status: active
+review: {state: harvested, source: r-packages}

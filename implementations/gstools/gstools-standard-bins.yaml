@@ -1,0 +1,16 @@
+id: gstools-standard-bins
+kind: implementation
+name: gstools.standard_bins
+software: gstools
+call: {interface: python, name: gstools.standard_bins}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  pos: {type: any}
+  dim: {type: integer, default: 2}
+  latlon: {type: boolean, default: false}
+  mesh_type: {type: string, default: unstructured}
+  bin_no: {type: any}
+  max_dist: {type: any}
+  geo_scale: {type: number, default: 1.0}
+status: active
+review: {state: harvested, source: python-packages}

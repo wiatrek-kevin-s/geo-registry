@@ -1,0 +1,13 @@
+id: sedona-sql-st-angle
+kind: implementation
+name: sedona.sql.ST_Angle
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_Angle}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  g1: {type: Union, required: true}
+  g2: {type: Union, required: true}
+  g3: {type: Union}
+  g4: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

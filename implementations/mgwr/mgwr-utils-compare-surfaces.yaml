@@ -1,0 +1,20 @@
+id: mgwr-utils-compare-surfaces
+kind: implementation
+name: mgwr.utils.compare_surfaces
+software: mgwr
+call: {interface: python, name: mgwr.utils.compare_surfaces}
+harvest: {harvester: python-packages, engine_version: 2.2.1}
+parameters:
+  data: {type: any, required: true}
+  var1: {type: any, required: true}
+  var2: {type: any, required: true}
+  gwr_t: {type: any, required: true}
+  gwr_bw: {type: any, required: true}
+  mgwr_t: {type: any, required: true}
+  mgwr_bw: {type: any, required: true}
+  name: {type: any, required: true}
+  kwargs1: {type: any, required: true}
+  kwargs2: {type: any, required: true}
+  savefig: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

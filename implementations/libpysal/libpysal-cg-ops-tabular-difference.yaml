@@ -1,0 +1,9 @@
+id: libpysal-cg-ops-tabular-difference
+kind: implementation
+name: libpysal.cg.ops.tabular.difference
+software: libpysal
+call: {interface: python, name: libpysal.cg.ops.tabular.difference}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

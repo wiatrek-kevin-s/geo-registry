@@ -1,0 +1,13 @@
+id: verde-base-check-fit-input
+kind: implementation
+name: verde.base.check_fit_input
+software: verde
+call: {interface: python, name: verde.base.check_fit_input}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  coordinates: {type: any, required: true}
+  data: {type: any, required: true}
+  weights: {type: any, required: true}
+  unpack: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

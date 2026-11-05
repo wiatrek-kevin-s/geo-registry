@@ -1,0 +1,16 @@
+id: verde-grid-coordinates
+kind: implementation
+name: verde.grid_coordinates
+software: verde
+call: {interface: python, name: verde.grid_coordinates}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  region: {type: any, required: true}
+  shape: {type: any}
+  spacing: {type: any}
+  adjust: {type: string, default: spacing}
+  pixel_register: {type: boolean, default: false}
+  extra_coords: {type: any}
+  meshgrid: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

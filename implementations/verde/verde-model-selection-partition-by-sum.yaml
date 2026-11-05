@@ -1,0 +1,11 @@
+id: verde-model-selection-partition-by-sum
+kind: implementation
+name: verde.model_selection.partition_by_sum
+software: verde
+call: {interface: python, name: verde.model_selection.partition_by_sum}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  array: {type: any, required: true}
+  parts: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

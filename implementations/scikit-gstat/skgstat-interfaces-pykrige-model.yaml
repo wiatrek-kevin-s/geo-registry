@@ -1,0 +1,10 @@
+id: skgstat-interfaces-pykrige-model
+kind: implementation
+name: skgstat.interfaces.pykrige_model
+software: scikit-gstat
+call: {interface: python, name: skgstat.interfaces.pykrige_model}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  variogram: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,10 @@
+id: pyproj-crs-coordinate-operation-equidistantcylindricalconversion
+kind: implementation
+name: pyproj.crs.coordinate_operation.EquidistantCylindricalConversion
+software: pyproj
+call: {interface: python, name: pyproj.crs.coordinate_operation.EquidistantCylindricalConversion}
+harvest: {harvester: python-packages, engine_version: 3.8.0}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

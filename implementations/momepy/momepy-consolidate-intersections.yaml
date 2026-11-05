@@ -1,0 +1,17 @@
+id: momepy-consolidate-intersections
+kind: implementation
+name: momepy.consolidate_intersections
+software: momepy
+call: {interface: python, name: momepy.consolidate_intersections}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  graph: {type: any, required: true}
+  tolerance: {type: integer, default: 30}
+  rebuild_graph: {type: boolean, default: true}
+  rebuild_edges_method: {type: string, default: spider}
+  x_att: {type: string, default: x}
+  y_att: {type: string, default: y}
+  edge_from_att: {type: string, default: from}
+  edge_to_att: {type: string, default: to}
+status: active
+review: {state: harvested, source: python-packages}

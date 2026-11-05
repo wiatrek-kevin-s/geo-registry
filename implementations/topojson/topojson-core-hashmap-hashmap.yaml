@@ -1,0 +1,12 @@
+id: topojson-core-hashmap-hashmap
+kind: implementation
+name: topojson.core.hashmap.Hashmap
+software: topojson
+call: {interface: python, name: topojson.core.hashmap.Hashmap}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  data: {type: any, required: true}
+  options: {type: any, note: 'default {}'}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: fiona-listlayers
+kind: implementation
+name: fiona.listlayers
+software: fiona
+call: {interface: python, name: fiona.listlayers}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  fp: {type: any, required: true}
+  opener: {type: any}
+  vfs: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

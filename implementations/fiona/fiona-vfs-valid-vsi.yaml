@@ -1,0 +1,10 @@
+id: fiona-vfs-valid-vsi
+kind: implementation
+name: fiona.vfs.valid_vsi
+software: fiona
+call: {interface: python, name: fiona.vfs.valid_vsi}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  vsi: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

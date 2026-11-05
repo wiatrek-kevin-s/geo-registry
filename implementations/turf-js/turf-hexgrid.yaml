@@ -1,0 +1,17 @@
+id: turf-hexgrid
+kind: implementation
+name: turf.hexGrid
+software: turf-js
+call: {interface: js, name: turf.hexGrid}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  bbox: {type: BBox, required: true}
+  cellSide: {type: number, required: true}
+  options: {type: '{ units?: Units; triangles?: boolean; properties?: P; mask?: Feature<Polygon | MultiPolygon>; }'}
+  options.units: {type: Units, note: field of options}
+  options.triangles: {type: boolean, note: field of options}
+  options.properties: {type: P, note: field of options}
+  options.mask: {type: Feature<Polygon | MultiPolygon>, note: field of options}
+notes: From @turf/hex-grid.
+status: active
+review: {state: harvested, source: turf}

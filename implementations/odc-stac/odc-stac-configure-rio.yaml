@@ -1,0 +1,12 @@
+id: odc-stac-configure-rio
+kind: implementation
+name: odc.stac.configure_rio
+software: odc-stac
+call: {interface: python, name: odc.stac.configure_rio}
+harvest: {harvester: python-packages, engine_version: 0.5.3}
+parameters:
+  cloud_defaults: {type: bool, default: false}
+  verbose: {type: bool, default: false}
+  aws: {type: 'dict[str, Any] | None'}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,14 @@
+id: esda-smoothing-direct-age-standardization
+kind: implementation
+name: esda.smoothing.direct_age_standardization
+software: esda
+call: {interface: python, name: esda.smoothing.direct_age_standardization}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  e: {type: any, required: true}
+  b: {type: any, required: true}
+  s: {type: any, required: true}
+  n: {type: any, required: true}
+  alpha: {type: number, default: 0.05}
+status: active
+review: {state: harvested, source: python-packages}

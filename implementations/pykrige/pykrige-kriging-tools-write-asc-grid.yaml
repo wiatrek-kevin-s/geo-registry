@@ -1,0 +1,15 @@
+id: pykrige-kriging-tools-write-asc-grid
+kind: implementation
+name: pykrige.kriging_tools.write_asc_grid
+software: pykrige
+call: {interface: python, name: pykrige.kriging_tools.write_asc_grid}
+harvest: {harvester: python-packages, engine_version: 1.7.3}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  z: {type: any, required: true}
+  filename: {type: string, default: output.asc}
+  no_data: {type: number, default: -999.0}
+  style: {type: integer, default: 1}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: laspy-point-record-unscale-dimension
+kind: implementation
+name: laspy.point.record.unscale_dimension
+software: laspy
+call: {interface: python, name: laspy.point.record.unscale_dimension}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  array_dim: {type: any, required: true}
+  scale: {type: any, required: true}
+  offset: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

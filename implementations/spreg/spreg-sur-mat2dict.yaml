@@ -1,0 +1,11 @@
+id: spreg-sur-mat2dict
+kind: implementation
+name: spreg.sur_mat2dict
+software: spreg
+call: {interface: python, name: spreg.sur_mat2dict}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  mat: {type: any, required: true}
+  ndim: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

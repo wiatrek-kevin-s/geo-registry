@@ -1,0 +1,10 @@
+id: segregation-util-lorenz
+kind: implementation
+name: segregation.util.lorenz
+software: segregation
+call: {interface: python, name: segregation.util.lorenz}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  X: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

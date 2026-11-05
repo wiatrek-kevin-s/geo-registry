@@ -1,0 +1,12 @@
+id: xrspatial-validate-validationreport
+kind: implementation
+name: xrspatial.validate.ValidationReport
+software: xarray-spatial
+call: {interface: python, name: xrspatial.validate.ValidationReport}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  issues: {type: any, required: true}
+  name: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

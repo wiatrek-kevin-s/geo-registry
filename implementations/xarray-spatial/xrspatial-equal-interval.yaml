@@ -1,0 +1,12 @@
+id: xrspatial-equal-interval
+kind: implementation
+name: xrspatial.equal_interval
+software: xarray-spatial
+call: {interface: python, name: xrspatial.equal_interval}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: xr.DataArray, required: true}
+  k: {type: int, default: 5}
+  name: {type: 'Optional[str]', default: equal_interval}
+status: active
+review: {state: harvested, source: python-packages}

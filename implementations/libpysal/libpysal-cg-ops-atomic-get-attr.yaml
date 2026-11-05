@@ -1,0 +1,13 @@
+id: libpysal-cg-ops-atomic-get-attr
+kind: implementation
+name: libpysal.cg.ops.atomic.get_attr
+software: libpysal
+call: {interface: python, name: libpysal.cg.ops.atomic.get_attr}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  df: {type: any, required: true}
+  geom_col: {type: string, default: geometry}
+  inplace: {type: boolean, default: false}
+  attr: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

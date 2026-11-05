@@ -1,0 +1,10 @@
+id: libpysal-cg-ops-tabular-clip
+kind: implementation
+name: libpysal.cg.ops.tabular.clip
+software: libpysal
+call: {interface: python, name: libpysal.cg.ops.tabular.clip}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  return_exterior: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

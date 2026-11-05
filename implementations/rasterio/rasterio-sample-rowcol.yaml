@@ -1,0 +1,15 @@
+id: rasterio-sample-rowcol
+kind: implementation
+name: rasterio.sample.rowcol
+software: rasterio
+call: {interface: python, name: rasterio.sample.rowcol}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  transform: {type: any, required: true}
+  xs: {type: any, required: true}
+  ys: {type: any, required: true}
+  zs: {type: any}
+  op: {type: any}
+  precision: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,10 @@
+id: terra-gdalcache
+kind: implementation
+name: terra::gdalCache
+software: terra
+call: {interface: r, name: 'terra::gdalCache'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  size: {type: any, default: NA}
+status: active
+review: {state: harvested, source: r-packages}

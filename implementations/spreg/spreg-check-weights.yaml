@@ -1,0 +1,15 @@
+id: spreg-check-weights
+kind: implementation
+name: spreg.check_weights
+software: spreg
+call: {interface: python, name: spreg.check_weights}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  w: {type: any, required: true}
+  y: {type: any, required: true}
+  w_required: {type: boolean, default: false}
+  time: {type: boolean, default: false}
+  slx_lags: {type: integer, default: 0}
+  allow_wk: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

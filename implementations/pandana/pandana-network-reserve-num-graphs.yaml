@@ -1,0 +1,10 @@
+id: pandana-network-reserve-num-graphs
+kind: implementation
+name: pandana.network.reserve_num_graphs
+software: pandana
+call: {interface: python, name: pandana.network.reserve_num_graphs}
+harvest: {harvester: python-packages, engine_version: '0.8'}
+parameters:
+  num: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

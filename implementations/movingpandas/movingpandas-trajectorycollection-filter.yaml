@@ -1,0 +1,11 @@
+id: movingpandas-trajectorycollection-filter
+kind: implementation
+name: TrajectoryCollection.filter
+software: movingpandas
+call: {interface: python, name: movingpandas.TrajectoryCollection.filter}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  property_name: {type: any, required: true}
+  property_values: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: movingpandas-trajectory-to-line-gdf
+kind: implementation
+name: Trajectory.to_line_gdf
+software: movingpandas
+call: {interface: python, name: movingpandas.Trajectory.to_line_gdf}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  columns: {type: any}
+  return_orig_tz: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,19 @@
+id: xrspatial-polygonize
+kind: implementation
+name: xrspatial.polygonize
+software: xarray-spatial
+call: {interface: python, name: xrspatial.polygonize}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  raster: {type: DataArray, required: true}
+  mask: {type: Optional}
+  connectivity: {type: int, default: 4}
+  transform: {type: Optional}
+  column_name: {type: str, default: DN}
+  return_type: {type: str, default: numpy}
+  simplify_tolerance: {type: Optional}
+  simplify_method: {type: str, default: douglas-peucker}
+  atol: {type: float, default: 1.0e-08}
+  rtol: {type: float, default: 1.0e-05}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,22 @@
+id: terra-inset
+kind: implementation
+name: terra::inset
+software: terra
+call: {interface: r, name: 'terra::inset'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  e: {type: any, required: true}
+  loc: {type: any, default: '""'}
+  scale: {type: any, default: '0.2'}
+  background: {type: any, default: '"white"'}
+  perimeter: {type: any, default: 'TRUE'}
+  box: {type: any, default: 'NULL'}
+  pper: {type: any, required: true}
+  pbox: {type: any, required: true}
+  offset: {type: any, default: '0.1'}
+  add: {type: any, default: 'TRUE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

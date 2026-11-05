@@ -1,0 +1,14 @@
+id: rasterstats-io-raster
+kind: implementation
+name: rasterstats.io.Raster
+software: rasterstats
+call: {interface: python, name: rasterstats.io.Raster}
+harvest: {harvester: python-packages, engine_version: 0.21.0}
+parameters:
+  raster: {type: any, required: true}
+  affine: {type: any}
+  nodata: {type: any}
+  band: {type: integer, default: 1}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: momepy-get-network-ratio
+kind: implementation
+name: momepy.get_network_ratio
+software: momepy
+call: {interface: python, name: momepy.get_network_ratio}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  df: {type: any, required: true}
+  edges: {type: any, required: true}
+  initial_buffer: {type: integer, default: 500}
+status: active
+review: {state: harvested, source: python-packages}

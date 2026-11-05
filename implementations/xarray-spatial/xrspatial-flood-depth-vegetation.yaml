@@ -1,0 +1,14 @@
+id: xrspatial-flood-depth-vegetation
+kind: implementation
+name: xrspatial.flood_depth_vegetation
+software: xarray-spatial
+call: {interface: python, name: xrspatial.flood_depth_vegetation}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  hand_agg: {type: xr.DataArray, required: true}
+  slope_agg: {type: xr.DataArray, required: true}
+  mannings_n: {type: 'Union[float, xr.DataArray]', required: true}
+  unit_discharge: {type: float, required: true}
+  name: {type: str, default: flood_depth_vegetation}
+status: active
+review: {state: harvested, source: python-packages}

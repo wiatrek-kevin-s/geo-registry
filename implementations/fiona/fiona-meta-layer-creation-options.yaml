@@ -1,0 +1,10 @@
+id: fiona-meta-layer-creation-options
+kind: implementation
+name: fiona.meta.layer_creation_options
+software: fiona
+call: {interface: python, name: fiona.meta.layer_creation_options}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  driver: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: spreg-make-xb
+kind: implementation
+name: spreg.make_xb
+software: spreg
+call: {interface: python, name: spreg.make_xb}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  x: {type: any, required: true}
+  beta: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

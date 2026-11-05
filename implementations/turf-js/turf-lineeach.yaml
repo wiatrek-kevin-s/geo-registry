@@ -1,0 +1,14 @@
+id: turf-lineeach
+kind: implementation
+name: turf.lineEach
+software: turf-js
+call: {interface: js, name: turf.lineEach}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  geojson: {type: 'FeatureCollection<Lines, P> | Feature<Lines, P> | Lines | Feature<GeometryCollection, P> | GeometryCollection',
+    required: true}
+  callback: {type: '(currentLine: Feature<LineString, P>, featureIndex?: number, multiFeatureIndex?: number, geometryIndex?:
+      number) => void', required: true}
+notes: From @turf/meta.
+status: active
+review: {state: harvested, source: turf}

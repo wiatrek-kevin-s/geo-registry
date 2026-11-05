@@ -1,0 +1,10 @@
+id: rasterio-io-datasetreaderbase
+kind: implementation
+name: rasterio.io.DatasetReaderBase
+software: rasterio
+call: {interface: python, name: rasterio.io.DatasetReaderBase}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

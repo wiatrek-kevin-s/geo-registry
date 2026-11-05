@@ -1,0 +1,20 @@
+id: tobler-dasymetric-masked-area-interpolate
+kind: implementation
+name: tobler.dasymetric.masked_area_interpolate
+software: tobler
+call: {interface: python, name: tobler.dasymetric.masked_area_interpolate}
+harvest: {harvester: python-packages, engine_version: 0.14.0}
+parameters:
+  source_df: {type: any, required: true}
+  target_df: {type: any, required: true}
+  raster: {type: any, required: true}
+  pixel_values: {type: any, required: true}
+  extensive_variables: {type: any}
+  intensive_variables: {type: any}
+  categorical_variables: {type: any}
+  allocate_total: {type: boolean, default: true}
+  nodata: {type: integer, default: 255}
+  n_jobs: {type: integer, default: -1}
+  fill_nan: {type: number, default: 0.0}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,13 @@
+id: spopt-locate-pdispersion
+kind: implementation
+name: spopt.locate.PDispersion
+software: spopt
+call: {interface: python, name: spopt.locate.PDispersion}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  name: {type: str, required: true}
+  problem: {type: LpProblem, required: true}
+  p_facilities: {type: int, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

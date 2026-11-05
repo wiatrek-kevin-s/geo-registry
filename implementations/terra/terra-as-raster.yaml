@@ -1,0 +1,14 @@
+id: terra-as-raster
+kind: implementation
+name: terra::as.raster
+software: terra
+call: {interface: r, name: 'terra::as.raster'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  maxcell: {type: any, default: 5e+05}
+  col: {type: any, required: true}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

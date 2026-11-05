@@ -1,0 +1,10 @@
+id: osmium-file-processor-locationtable
+kind: implementation
+name: osmium.file_processor.LocationTable
+software: pyosmium
+call: {interface: python, name: osmium.file_processor.LocationTable}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

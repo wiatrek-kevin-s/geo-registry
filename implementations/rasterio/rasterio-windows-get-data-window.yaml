@@ -1,0 +1,11 @@
+id: rasterio-windows-get-data-window
+kind: implementation
+name: rasterio.windows.get_data_window
+software: rasterio
+call: {interface: python, name: rasterio.windows.get_data_window}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  arr: {type: any, required: true}
+  nodata: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

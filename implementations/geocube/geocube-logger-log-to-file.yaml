@@ -1,0 +1,12 @@
+id: geocube-logger-log-to-file
+kind: implementation
+name: geocube.logger.log_to_file
+software: geocube
+call: {interface: python, name: geocube.logger.log_to_file}
+harvest: {harvester: python-packages, engine_version: 0.7.1}
+parameters:
+  status: {type: boolean, default: true}
+  filename: {type: any}
+  level: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

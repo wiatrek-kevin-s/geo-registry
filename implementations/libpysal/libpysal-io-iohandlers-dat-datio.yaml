@@ -1,0 +1,10 @@
+id: libpysal-io-iohandlers-dat-datio
+kind: implementation
+name: libpysal.io.iohandlers.dat.DatIO
+software: libpysal
+call: {interface: python, name: libpysal.io.iohandlers.dat.DatIO}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

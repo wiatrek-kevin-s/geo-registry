@@ -1,0 +1,11 @@
+id: giddy-markov-sojourn-time
+kind: implementation
+name: giddy.markov.sojourn_time
+software: giddy
+call: {interface: python, name: giddy.markov.sojourn_time}
+harvest: {harvester: python-packages, engine_version: 2.3.9}
+parameters:
+  p: {type: any, required: true}
+  summary: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

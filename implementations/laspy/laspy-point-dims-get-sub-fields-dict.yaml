@@ -1,0 +1,10 @@
+id: laspy-point-dims-get-sub-fields-dict
+kind: implementation
+name: laspy.point.dims.get_sub_fields_dict
+software: laspy
+call: {interface: python, name: laspy.point.dims.get_sub_fields_dict}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  point_format_id: {type: int, required: true}
+status: active
+review: {state: harvested, source: python-packages}

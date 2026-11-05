@@ -1,0 +1,18 @@
+id: segregation-multigroup-simpsonsinteraction
+kind: implementation
+name: segregation.multigroup.SimpsonsInteraction
+software: segregation
+call: {interface: python, name: segregation.multigroup.SimpsonsInteraction}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  data: {type: any, required: true}
+  groups: {type: any, required: true}
+  w: {type: any}
+  network: {type: any}
+  distance: {type: any}
+  decay: {type: any}
+  precompute: {type: any}
+  function: {type: string, default: triangular}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

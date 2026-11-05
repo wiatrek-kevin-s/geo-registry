@@ -1,0 +1,12 @@
+id: laspy-header-read-string
+kind: implementation
+name: laspy.header.read_string
+software: laspy
+call: {interface: python, name: laspy.header.read_string}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  stream: {type: BinaryIO, required: true}
+  length: {type: int, required: true}
+  encoding: {type: str, default: 'ascii '}
+status: active
+review: {state: harvested, source: python-packages}

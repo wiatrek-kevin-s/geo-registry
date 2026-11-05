@@ -1,0 +1,11 @@
+id: libpysal-cg-ops-tabular-to-df
+kind: implementation
+name: libpysal.cg.ops.tabular.to_df
+software: libpysal
+call: {interface: python, name: libpysal.cg.ops.tabular.to_df}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  df: {type: any, required: true}
+  geom_col: {type: string, default: geometry}
+status: active
+review: {state: harvested, source: python-packages}

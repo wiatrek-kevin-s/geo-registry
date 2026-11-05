@@ -1,0 +1,9 @@
+id: rioxarray-raster-array-rasterarray-get-gcps
+kind: implementation
+name: RasterArray.get_gcps
+software: rioxarray
+call: {interface: python, name: rioxarray.raster_array.RasterArray.get_gcps}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

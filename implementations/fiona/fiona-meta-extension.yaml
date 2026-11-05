@@ -1,0 +1,10 @@
+id: fiona-meta-extension
+kind: implementation
+name: fiona.meta.extension
+software: fiona
+call: {interface: python, name: fiona.meta.extension}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  driver: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

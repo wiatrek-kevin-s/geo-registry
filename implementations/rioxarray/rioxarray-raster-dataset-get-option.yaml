@@ -1,0 +1,10 @@
+id: rioxarray-raster-dataset-get-option
+kind: implementation
+name: rioxarray.raster_dataset.get_option
+software: rioxarray
+call: {interface: python, name: rioxarray.raster_dataset.get_option}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  key: {type: str, required: true}
+status: active
+review: {state: harvested, source: python-packages}

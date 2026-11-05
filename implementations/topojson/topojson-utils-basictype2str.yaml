@@ -1,0 +1,10 @@
+id: topojson-utils-basictype2str
+kind: implementation
+name: topojson.utils.basictype2str
+software: topojson
+call: {interface: python, name: topojson.utils.basictype2str}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  obj: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

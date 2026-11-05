@@ -1,0 +1,13 @@
+id: pykrige-core-great-circle-distance
+kind: implementation
+name: pykrige.core.great_circle_distance
+software: pykrige
+call: {interface: python, name: pykrige.core.great_circle_distance}
+harvest: {harvester: python-packages, engine_version: 1.7.3}
+parameters:
+  lon1: {type: any, required: true}
+  lat1: {type: any, required: true}
+  lon2: {type: any, required: true}
+  lat2: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

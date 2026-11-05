@@ -1,0 +1,35 @@
+id: spreg-gm-lag
+kind: implementation
+name: spreg.GM_Lag
+software: spreg
+call: {interface: python, name: spreg.GM_Lag}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  y: {type: any, required: true}
+  x: {type: any, required: true}
+  yend: {type: any}
+  q: {type: any}
+  w: {type: any}
+  w_lags: {type: integer, default: 1}
+  lag_q: {type: boolean, default: true}
+  slx_lags: {type: integer, default: 0}
+  slx_vars: {type: string, default: All}
+  regimes: {type: any}
+  robust: {type: any}
+  gwk: {type: any}
+  sig2n_k: {type: boolean, default: false}
+  spat_diag: {type: boolean, default: true}
+  spat_impacts: {type: string, default: simple}
+  vm: {type: boolean, default: false}
+  name_y: {type: any}
+  name_x: {type: any}
+  name_yend: {type: any}
+  name_q: {type: any}
+  name_w: {type: any}
+  name_gwk: {type: any}
+  name_ds: {type: any}
+  latex: {type: boolean, default: false}
+  hard_bound: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

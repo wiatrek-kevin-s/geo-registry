@@ -1,0 +1,14 @@
+id: laspy-lasreader-lazrspointreader
+kind: implementation
+name: laspy.lasreader.LazrsPointReader
+software: laspy
+call: {interface: python, name: laspy.lasreader.LazrsPointReader}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  source: {type: any, required: true}
+  laszip_vlr: {type: LasZipVlr, required: true}
+  parallel: {type: bool, required: true}
+  decompression_selection: {type: DecompressionSelection, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: topojson-ops-compare-bounds
+kind: implementation
+name: topojson.ops.compare_bounds
+software: topojson
+call: {interface: python, name: topojson.ops.compare_bounds}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  b0: {type: any, required: true}
+  b1: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

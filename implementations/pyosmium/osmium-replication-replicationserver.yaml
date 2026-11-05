@@ -1,0 +1,12 @@
+id: osmium-replication-replicationserver
+kind: implementation
+name: osmium.replication.ReplicationServer
+software: pyosmium
+call: {interface: python, name: osmium.replication.ReplicationServer}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters:
+  url: {type: str, required: true}
+  diff_type: {type: str, default: osc.gz}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

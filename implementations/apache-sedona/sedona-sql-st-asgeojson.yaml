@@ -1,0 +1,11 @@
+id: sedona-sql-st-asgeojson
+kind: implementation
+name: sedona.sql.ST_AsGeoJSON
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_AsGeoJSON}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geometry: {type: Union, required: true}
+  type: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

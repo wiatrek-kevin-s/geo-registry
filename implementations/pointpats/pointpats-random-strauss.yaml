@@ -1,0 +1,17 @@
+id: pointpats-random-strauss
+kind: implementation
+name: pointpats.random.strauss
+software: pointpats
+call: {interface: python, name: pointpats.random.strauss}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  hull: {type: any, required: true}
+  intensity: {type: any}
+  size: {type: any}
+  gamma: {type: number, default: 0.1}
+  r: {type: number, default: 0.05}
+  n_iter: {type: integer, default: 5000}
+  rng: {type: any}
+  max_iter: {type: integer, default: 10}
+status: active
+review: {state: harvested, source: python-packages}

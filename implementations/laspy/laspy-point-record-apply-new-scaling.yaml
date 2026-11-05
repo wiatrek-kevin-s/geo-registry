@@ -1,0 +1,12 @@
+id: laspy-point-record-apply-new-scaling
+kind: implementation
+name: laspy.point.record.apply_new_scaling
+software: laspy
+call: {interface: python, name: laspy.point.record.apply_new_scaling}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  record: {type: any, required: true}
+  scales: {type: ndarray, required: true}
+  offsets: {type: ndarray, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: rasterio-rio-main-gdal-version-cb
+kind: implementation
+name: rasterio.rio.main.gdal_version_cb
+software: rasterio
+call: {interface: python, name: rasterio.rio.main.gdal_version_cb}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  ctx: {type: any, required: true}
+  param: {type: any, required: true}
+  value: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

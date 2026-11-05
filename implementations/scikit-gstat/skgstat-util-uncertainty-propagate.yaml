@@ -1,0 +1,15 @@
+id: skgstat-util-uncertainty-propagate
+kind: implementation
+name: skgstat.util.uncertainty.propagate
+software: scikit-gstat
+call: {interface: python, name: skgstat.util.uncertainty.propagate}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  variogram: {type: Variogram}
+  source: {type: Union, default: values}
+  sigma: {type: Union, default: 5}
+  evalf: {type: Union, default: experimental}
+  verbose: {type: bool, default: false}
+  use_bounds: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

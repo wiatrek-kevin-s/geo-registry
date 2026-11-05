@@ -1,0 +1,29 @@
+id: gstools-vario-estimate
+kind: implementation
+name: gstools.vario_estimate
+software: gstools
+call: {interface: python, name: gstools.vario_estimate}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  pos: {type: any, required: true}
+  field: {type: any, required: true}
+  bin_edges: {type: any}
+  sampling_size: {type: any}
+  sampling_seed: {type: any}
+  estimator: {type: string, default: matheron}
+  latlon: {type: boolean, default: false}
+  direction: {type: any}
+  angles: {type: any}
+  angles_tol: {type: number, default: 0.39269908169872414}
+  bandwidth: {type: any}
+  no_data: {type: number, note: default nan}
+  mask: {type: any, note: default np.False_}
+  mesh_type: {type: string, default: unstructured}
+  return_counts: {type: boolean, default: false}
+  mean: {type: any}
+  normalizer: {type: any}
+  trend: {type: any}
+  fit_normalizer: {type: boolean, default: false}
+  geo_scale: {type: number, default: 1.0}
+status: active
+review: {state: harvested, source: python-packages}

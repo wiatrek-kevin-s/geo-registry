@@ -1,0 +1,12 @@
+id: spopt-region-util-dict-from-graph-attr
+kind: implementation
+name: spopt.region.util.dict_from_graph_attr
+software: spopt
+call: {interface: python, name: spopt.region.util.dict_from_graph_attr}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  graph: {type: any, required: true}
+  attr: {type: any, required: true}
+  array_values: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

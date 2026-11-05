@@ -1,0 +1,13 @@
+id: esda-moran-bv-matrix
+kind: implementation
+name: esda.Moran_BV_matrix
+software: esda
+call: {interface: python, name: esda.Moran_BV_matrix}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  variables: {type: any, required: true}
+  w: {type: any, required: true}
+  permutations: {type: integer, default: 0}
+  varnames: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

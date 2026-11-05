@@ -1,0 +1,25 @@
+id: terra-points
+kind: implementation
+name: terra::points
+software: terra
+call: {interface: r, name: 'terra::points'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  col: {type: any, default: '"black"'}
+  alpha: {type: any, default: '1'}
+  y: {type: any, default: 'NULL'}
+  cex: {type: any, default: '0.7'}
+  pch: {type: any, default: '16'}
+  jitter: {type: any, default: '0'}
+  legend: {type: any, default: 'FALSE'}
+  field: {type: any, default: '""'}
+  border: {type: any, default: col}
+  lwd: {type: any, default: '2'}
+  lty: {type: any, default: 'NULL'}
+  label: {type: any, default: '1:nrow(y)'}
+  popup: {type: any, default: 'FALSE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

@@ -1,0 +1,14 @@
+id: pyproj-crs-projectedcrs
+kind: implementation
+name: pyproj.crs.ProjectedCRS
+software: pyproj
+call: {interface: python, name: pyproj.crs.ProjectedCRS}
+harvest: {harvester: python-packages, engine_version: 3.8.0}
+parameters:
+  conversion: {type: Any, required: true}
+  name: {type: str, default: undefined}
+  cartesian_cs: {type: any}
+  geodetic_crs: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

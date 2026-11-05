@@ -1,0 +1,11 @@
+id: movingpandas-geometry-utils-point-gdf-to-linestring
+kind: implementation
+name: movingpandas.geometry_utils.point_gdf_to_linestring
+software: movingpandas
+call: {interface: python, name: movingpandas.geometry_utils.point_gdf_to_linestring}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  df: {type: any, required: true}
+  geom_col_name: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

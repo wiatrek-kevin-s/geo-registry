@@ -1,0 +1,12 @@
+id: h3-api-basic-int-polygon-to-cells-experimental
+kind: implementation
+name: h3.api.basic_int.polygon_to_cells_experimental
+software: h3-py
+call: {interface: python, name: h3.api.basic_int.polygon_to_cells_experimental}
+harvest: {harvester: python-packages, engine_version: 4.5.0}
+parameters:
+  h3shape: {type: H3Shape, required: true}
+  res: {type: int, required: true}
+  contain: {type: Literal, default: center}
+status: active
+review: {state: harvested, source: python-packages}

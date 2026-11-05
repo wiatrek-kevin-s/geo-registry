@@ -1,0 +1,50 @@
+# Python GIS packages for harvest/python_packages.py (listed in python-packages.yml),
+# plus DuckDB for harvest/duckdb_spatial.py.
+name: geo-registry-python
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pyyaml
+  - rasterio
+  - pyproj
+  - fiona
+  - pyogrio
+  - rasterstats
+  - rioxarray
+  - xarray-spatial
+  - osmnx
+  - momepy
+  - libpysal
+  - esda
+  - spaghetti
+  - mgwr
+  - pointpats
+  - tobler
+  - access
+  - segregation
+  - inequality
+  - giddy
+  - spopt
+  - spreg
+  - movingpandas
+  - h3-py
+  - geocube
+  - pandana
+  - dask-geopandas
+  - xvec
+  - laspy
+  - verde
+  - pykrige
+  - gstools
+  - scikit-gstat
+  - topojson
+  - pystac-client
+  - odc-stac
+  - stackstac
+  - geopy
+  - pyosmium
+  - python-pdal
+  - apache-sedona
+  - python-duckdb
+  - pip

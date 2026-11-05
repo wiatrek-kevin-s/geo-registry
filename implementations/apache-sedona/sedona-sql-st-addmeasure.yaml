@@ -1,0 +1,12 @@
+id: sedona-sql-st-addmeasure
+kind: implementation
+name: sedona.sql.ST_AddMeasure
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_AddMeasure}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geom: {type: Union, required: true}
+  measureStart: {type: Union, required: true}
+  measureEnd: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

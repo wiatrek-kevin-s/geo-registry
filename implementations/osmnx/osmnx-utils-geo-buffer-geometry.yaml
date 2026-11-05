@@ -1,0 +1,11 @@
+id: osmnx-utils-geo-buffer-geometry
+kind: implementation
+name: osmnx.utils_geo.buffer_geometry
+software: osmnx
+call: {interface: python, name: osmnx.utils_geo.buffer_geometry}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  geom: {type: Geometry, required: true}
+  dist: {type: float, required: true}
+status: active
+review: {state: harvested, source: python-packages}
