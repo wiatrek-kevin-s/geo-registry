@@ -1,0 +1,13 @@
+id: rustgis-erase
+kind: implementation
+name: Erase
+software: rustgis
+call: {interface: python, name: erase}
+harvest: {harvester: rustgis, engine_version: 0.5.0}
+parameters:
+  input: {type: Layer, required: true}
+  erase: {type: PolygonLayer, required: true}
+  output: {type: Text}
+notes: 'Toolbox: Analysis › Overlay.'
+status: active
+review: {state: harvested, source: rustgis}

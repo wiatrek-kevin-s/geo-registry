@@ -8,9 +8,9 @@ parameters:
   x: {type: any, required: true}
   decreasing: {type: any, default: 'FALSE'}
   '...': {type: dots, note: further arguments passed on}
+  v: {type: any, required: true}
   order: {type: any, default: 'FALSE'}
   filename: {type: any, default: '""'}
-  v: {type: any, required: true}
 notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
 status: active
 review: {state: harvested, source: r-packages}

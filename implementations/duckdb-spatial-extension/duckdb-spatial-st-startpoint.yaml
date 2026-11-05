@@ -1,0 +1,18 @@
+id: duckdb-spatial-st-startpoint
+kind: implementation
+name: ST_StartPoint
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_StartPoint}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  geom: {type: GEOMETRY}
+  line: {type: LINESTRING_2D}
+signatures:
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  returns: GEOMETRY
+- arguments:
+  - {name: line, type: LINESTRING_2D}
+  returns: POINT_2D
+status: active
+review: {state: harvested, source: duckdb-spatial}

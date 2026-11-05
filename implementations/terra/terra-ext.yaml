@@ -7,8 +7,8 @@ harvest: {harvester: r-packages, engine_version: 1.9.50}
 parameters:
   x: {type: any, required: true}
   '...': {type: dots, note: further arguments passed on}
-  cells: {type: any, default: 'NULL'}
   xy: {type: any, default: 'FALSE'}
+  cells: {type: any, default: 'NULL'}
 notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
 status: active
 review: {state: harvested, source: r-packages}

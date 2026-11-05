@@ -1,0 +1,30 @@
+id: duckdb-spatial-st-flipcoordinates
+kind: implementation
+name: ST_FlipCoordinates
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_FlipCoordinates}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  geom: {type: GEOMETRY}
+  point: {type: POINT_2D}
+  linestring: {type: LINESTRING_2D}
+  polygon: {type: POLYGON_2D}
+  box: {type: BOX_2D}
+signatures:
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  returns: GEOMETRY
+- arguments:
+  - {name: point, type: POINT_2D}
+  returns: POINT_2D
+- arguments:
+  - {name: linestring, type: LINESTRING_2D}
+  returns: LINESTRING_2D
+- arguments:
+  - {name: polygon, type: POLYGON_2D}
+  returns: POLYGON_2D
+- arguments:
+  - {name: box, type: BOX_2D}
+  returns: BOX_2D
+status: active
+review: {state: harvested, source: duckdb-spatial}

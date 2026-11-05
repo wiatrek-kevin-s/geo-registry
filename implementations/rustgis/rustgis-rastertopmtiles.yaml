@@ -1,0 +1,14 @@
+id: rustgis-rastertopmtiles
+kind: implementation
+name: Raster to PMTiles
+software: rustgis
+call: {interface: python, name: rasterToPmtiles}
+harvest: {harvester: rustgis, engine_version: 0.5.0}
+parameters:
+  input: {type: RasterLayer, required: true}
+  minZoom: {type: Number, required: true}
+  maxZoom: {type: Number, required: true}
+  output: {type: 'SaveFile { ext: "pmtiles" }'}
+notes: 'Toolbox: Analyze › Tools.'
+status: active
+review: {state: harvested, source: rustgis}

@@ -1,0 +1,15 @@
+id: rustgis-summarystatistics
+kind: implementation
+name: Summary Statistics
+software: rustgis
+call: {interface: python, name: summaryStatistics}
+harvest: {harvester: rustgis, engine_version: 0.5.0}
+parameters:
+  input: {type: Layer, required: true}
+  statistics: {type: 'FieldStatistics { input: "input", statistics: Summary }'}
+  field: {type: NumericField}
+  case: {type: 'Fields { input: "input" }'}
+  separator: {type: Text}
+notes: 'Toolbox: Analysis › Statistics.'
+status: active
+review: {state: harvested, source: rustgis}

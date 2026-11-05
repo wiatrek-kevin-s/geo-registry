@@ -9,17 +9,17 @@ parameters:
   y: {type: any, required: true}
   '...': {type: dots, note: further arguments passed on}
   cells: {type: any, default: 'FALSE'}
-  xy: {type: any, default: 'FALSE'}
-  fun: {type: any, default: 'NULL'}
   method: {type: any, default: '"simple"'}
+  xy: {type: any, default: 'FALSE'}
+  raw: {type: any, default: 'FALSE'}
+  fun: {type: any, default: 'NULL'}
   ID: {type: any, default: 'TRUE'}
   weights: {type: any, default: 'FALSE'}
   exact: {type: any, default: 'FALSE'}
   touches: {type: any, default: is.lines(y)}
-  small: {type: any, default: 'TRUE'}
   layer: {type: any, default: 'NULL'}
   bind: {type: any, default: 'FALSE'}
-  raw: {type: any, default: 'FALSE'}
+  small: {type: any, default: 'TRUE'}
   search_radius: {type: any, default: '0'}
   wide: {type: any, default: 'FALSE'}
   count: {type: any, default: 'FALSE'}

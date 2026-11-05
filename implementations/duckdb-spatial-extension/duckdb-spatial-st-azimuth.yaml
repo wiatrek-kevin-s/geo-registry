@@ -1,0 +1,20 @@
+id: duckdb-spatial-st-azimuth
+kind: implementation
+name: ST_Azimuth
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_Azimuth}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  origin: {type: GEOMETRY | POINT_2D}
+  target: {type: GEOMETRY | POINT_2D}
+signatures:
+- arguments:
+  - {name: origin, type: GEOMETRY}
+  - {name: target, type: GEOMETRY}
+  returns: DOUBLE
+- arguments:
+  - {name: origin, type: POINT_2D}
+  - {name: target, type: POINT_2D}
+  returns: DOUBLE
+status: active
+review: {state: harvested, source: duckdb-spatial}

@@ -1,0 +1,19 @@
+id: duckdb-spatial-st-linemerge
+kind: implementation
+name: ST_LineMerge
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_LineMerge}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  geom: {type: GEOMETRY}
+  preserve_direction: {type: BOOLEAN}
+signatures:
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  returns: GEOMETRY
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  - {name: preserve_direction, type: BOOLEAN}
+  returns: GEOMETRY
+status: active
+review: {state: harvested, source: duckdb-spatial}

@@ -1,0 +1,36 @@
+id: duckdb-spatial-st-asmvt
+kind: implementation
+name: ST_AsMVT
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_AsMVT}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters: {}
+signatures:
+- arguments:
+  - {type: ANY}
+  returns: BLOB (aggregate)
+- arguments:
+  - {type: ANY}
+  - {type: VARCHAR}
+  returns: BLOB (aggregate)
+- arguments:
+  - {type: ANY}
+  - {type: VARCHAR}
+  - {type: INTEGER}
+  returns: BLOB (aggregate)
+- arguments:
+  - {type: ANY}
+  - {type: VARCHAR}
+  - {type: INTEGER}
+  - {type: VARCHAR}
+  returns: BLOB (aggregate)
+- arguments:
+  - {type: ANY}
+  - {type: VARCHAR}
+  - {type: INTEGER}
+  - {type: VARCHAR}
+  - {type: VARCHAR}
+  returns: BLOB (aggregate)
+notes: 'Kind: aggregate.'
+status: active
+review: {state: harvested, source: duckdb-spatial}

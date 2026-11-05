@@ -1,0 +1,14 @@
+id: duckdb-spatial-st-dump
+kind: implementation
+name: ST_Dump
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_Dump}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  geom: {type: GEOMETRY}
+signatures:
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  returns: STRUCT(geom GEOMETRY, path INTEGER[])[]
+status: active
+review: {state: harvested, source: duckdb-spatial}

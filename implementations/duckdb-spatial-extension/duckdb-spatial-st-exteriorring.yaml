@@ -1,0 +1,18 @@
+id: duckdb-spatial-st-exteriorring
+kind: implementation
+name: ST_ExteriorRing
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_ExteriorRing}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  geom: {type: GEOMETRY}
+  polygon: {type: POLYGON_2D}
+signatures:
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  returns: GEOMETRY
+- arguments:
+  - {name: polygon, type: POLYGON_2D}
+  returns: LINESTRING_2D
+status: active
+review: {state: harvested, source: duckdb-spatial}

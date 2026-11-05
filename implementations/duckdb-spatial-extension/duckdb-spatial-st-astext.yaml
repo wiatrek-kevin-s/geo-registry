@@ -1,0 +1,26 @@
+id: duckdb-spatial-st-astext
+kind: implementation
+name: st_astext
+software: duckdb-spatial-extension
+call: {interface: sql, name: st_astext}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  point: {type: POINT_2D}
+  linestring: {type: LINESTRING_2D}
+  polygon: {type: POLYGON_2D}
+  box: {type: BOX_2D}
+signatures:
+- arguments:
+  - {name: point, type: POINT_2D}
+  returns: VARCHAR
+- arguments:
+  - {name: linestring, type: LINESTRING_2D}
+  returns: VARCHAR
+- arguments:
+  - {name: polygon, type: POLYGON_2D}
+  returns: VARCHAR
+- arguments:
+  - {name: box, type: BOX_2D}
+  returns: VARCHAR
+status: active
+review: {state: harvested, source: duckdb-spatial}

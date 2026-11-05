@@ -1,0 +1,22 @@
+id: rustgis-spatialjoin
+kind: implementation
+name: Spatial Join
+software: rustgis
+call: {interface: python, name: spatialJoin}
+harvest: {harvester: rustgis, engine_version: 0.5.0}
+parameters:
+  target: {type: Layer, required: true}
+  join: {type: Layer, required: true}
+  match: {type: 'Choice(["Intersects", "Contains", "Within", "Have their center in", "Largest overlap", "Closest", "Within
+      a distance"])'}
+  distance: {type: Number}
+  units: {type: 'Choice(["Kilometers", "Meters", "Miles", "Feet"])'}
+  distanceField: {type: Text}
+  operation: {type: 'Choice(["Join one to one", "Join one to many"])'}
+  keepAll: {type: 'Choice(["Keep all", "Keep only matching"])'}
+  prefix: {type: Text}
+  merge: {type: 'FieldStatistics { input: "join", statistics: Merge }'}
+  output: {type: Text}
+notes: 'Toolbox: Analysis › Overlay.'
+status: active
+review: {state: harvested, source: rustgis}

@@ -1,0 +1,33 @@
+id: duckdb-spatial-st-buffer
+kind: implementation
+name: ST_Buffer
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_Buffer}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  geom: {type: GEOMETRY}
+  distance: {type: DOUBLE}
+  num_triangles: {type: INTEGER}
+  cap_style: {type: VARCHAR}
+  join_style: {type: VARCHAR}
+  mitre_limit: {type: DOUBLE}
+signatures:
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  - {name: distance, type: DOUBLE}
+  returns: GEOMETRY
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  - {name: distance, type: DOUBLE}
+  - {name: num_triangles, type: INTEGER}
+  returns: GEOMETRY
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  - {name: distance, type: DOUBLE}
+  - {name: num_triangles, type: INTEGER}
+  - {name: cap_style, type: VARCHAR}
+  - {name: join_style, type: VARCHAR}
+  - {name: mitre_limit, type: DOUBLE}
+  returns: GEOMETRY
+status: active
+review: {state: harvested, source: duckdb-spatial}

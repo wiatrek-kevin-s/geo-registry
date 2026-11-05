@@ -1,0 +1,25 @@
+id: duckdb-spatial-st-coverageclean
+kind: implementation
+name: ST_CoverageClean
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_CoverageClean}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  geoms: {type: 'GEOMETRY[]'}
+  snapping_distance: {type: DOUBLE}
+  gap_maximum_width: {type: DOUBLE}
+signatures:
+- arguments:
+  - {name: geoms, type: 'GEOMETRY[]'}
+  - {name: snapping_distance, type: DOUBLE}
+  - {name: gap_maximum_width, type: DOUBLE}
+  returns: GEOMETRY
+- arguments:
+  - {name: geoms, type: 'GEOMETRY[]'}
+  - {name: snapping_distance, type: DOUBLE}
+  returns: GEOMETRY
+- arguments:
+  - {name: geoms, type: 'GEOMETRY[]'}
+  returns: GEOMETRY
+status: active
+review: {state: harvested, source: duckdb-spatial}

@@ -8,7 +8,6 @@ parameters:
   x: {type: any, required: true}
   y: {type: any, required: true}
   '...': {type: dots, note: further arguments passed on}
-  field: {type: any, required: true}
   win: {type: any, default: '"circle"'}
   pars: {type: any, required: true}
   fun: {type: any, required: true}
@@ -17,6 +16,7 @@ parameters:
   fill: {type: any, default: NA}
   filename: {type: any, default: '""'}
   wopt: {type: any, default: list()}
+  field: {type: any, required: true}
 notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
 status: active
 review: {state: harvested, source: r-packages}

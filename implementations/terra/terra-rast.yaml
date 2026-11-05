@@ -7,14 +7,6 @@ harvest: {harvester: r-packages, engine_version: 1.9.50}
 parameters:
   x: {type: any, required: true}
   '...': {type: dots, note: further arguments passed on}
-  nlyrs: {type: any, default: nlyr(x)}
-  names: {type: any, required: true}
-  vals: {type: any, required: true}
-  keeptime: {type: any, default: 'TRUE'}
-  keepunits: {type: any, default: 'FALSE'}
-  props: {type: any, default: 'FALSE'}
-  tags: {type: any, default: 'FALSE'}
-  type: {type: any, default: '""'}
   crs: {type: any, default: '""'}
   extent: {type: any, default: 'NULL'}
   subds: {type: any, default: '0'}
@@ -30,17 +22,25 @@ parameters:
   domains: {type: any, default: '""'}
   md: {type: any, default: 'NULL'}
   dims: {type: any, default: 'NULL'}
+  type: {type: any, default: '"xyz"'}
   digits: {type: any, default: '6'}
   warn: {type: any, default: 'TRUE'}
   nrows: {type: any, default: '180'}
   ncols: {type: any, default: '360'}
+  nlyrs: {type: any, default: '1'}
   xmin: {type: any, default: '-180'}
   xmax: {type: any, default: '180'}
   ymin: {type: any, default: '-90'}
   ymax: {type: any, default: '90'}
   resolution: {type: any, required: true}
+  vals: {type: any, required: true}
+  names: {type: any, required: true}
   time: {type: any, required: true}
   units: {type: any, required: true}
+  keeptime: {type: any, default: 'TRUE'}
+  keepunits: {type: any, default: 'FALSE'}
+  props: {type: any, default: 'FALSE'}
+  tags: {type: any, default: 'FALSE'}
 notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
 status: active
 review: {state: harvested, source: r-packages}

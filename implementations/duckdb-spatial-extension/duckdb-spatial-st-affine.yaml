@@ -1,0 +1,47 @@
+id: duckdb-spatial-st-affine
+kind: implementation
+name: ST_Affine
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_Affine}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  geom: {type: GEOMETRY}
+  a: {type: DOUBLE}
+  b: {type: DOUBLE}
+  c: {type: DOUBLE}
+  d: {type: DOUBLE}
+  e: {type: DOUBLE}
+  f: {type: DOUBLE}
+  g: {type: DOUBLE}
+  h: {type: DOUBLE}
+  i: {type: DOUBLE}
+  xoff: {type: DOUBLE}
+  yoff: {type: DOUBLE}
+  zoff: {type: DOUBLE}
+signatures:
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  - {name: a, type: DOUBLE}
+  - {name: b, type: DOUBLE}
+  - {name: c, type: DOUBLE}
+  - {name: d, type: DOUBLE}
+  - {name: e, type: DOUBLE}
+  - {name: f, type: DOUBLE}
+  - {name: g, type: DOUBLE}
+  - {name: h, type: DOUBLE}
+  - {name: i, type: DOUBLE}
+  - {name: xoff, type: DOUBLE}
+  - {name: yoff, type: DOUBLE}
+  - {name: zoff, type: DOUBLE}
+  returns: GEOMETRY
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  - {name: a, type: DOUBLE}
+  - {name: b, type: DOUBLE}
+  - {name: d, type: DOUBLE}
+  - {name: e, type: DOUBLE}
+  - {name: xoff, type: DOUBLE}
+  - {name: yoff, type: DOUBLE}
+  returns: GEOMETRY
+status: active
+review: {state: harvested, source: duckdb-spatial}

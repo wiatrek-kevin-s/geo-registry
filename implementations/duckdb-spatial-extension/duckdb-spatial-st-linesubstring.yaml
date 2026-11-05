@@ -1,0 +1,18 @@
+id: duckdb-spatial-st-linesubstring
+kind: implementation
+name: ST_LineSubstring
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_LineSubstring}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  line: {type: GEOMETRY}
+  start_fraction: {type: DOUBLE}
+  end_fraction: {type: DOUBLE}
+signatures:
+- arguments:
+  - {name: line, type: GEOMETRY}
+  - {name: start_fraction, type: DOUBLE}
+  - {name: end_fraction, type: DOUBLE}
+  returns: GEOMETRY
+status: active
+review: {state: harvested, source: duckdb-spatial}

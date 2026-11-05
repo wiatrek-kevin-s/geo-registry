@@ -1,0 +1,22 @@
+id: duckdb-spatial-st-distance-sphere
+kind: implementation
+name: ST_Distance_Sphere
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_Distance_Sphere}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  geom1: {type: GEOMETRY}
+  geom2: {type: GEOMETRY}
+  point1: {type: POINT_2D}
+  point2: {type: POINT_2D}
+signatures:
+- arguments:
+  - {name: geom1, type: GEOMETRY}
+  - {name: geom2, type: GEOMETRY}
+  returns: DOUBLE
+- arguments:
+  - {name: point1, type: POINT_2D}
+  - {name: point2, type: POINT_2D}
+  returns: DOUBLE
+status: active
+review: {state: harvested, source: duckdb-spatial}

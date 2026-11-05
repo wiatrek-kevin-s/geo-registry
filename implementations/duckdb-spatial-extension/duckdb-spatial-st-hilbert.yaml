@@ -1,0 +1,35 @@
+id: duckdb-spatial-st-hilbert
+kind: implementation
+name: ST_Hilbert
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_Hilbert}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  x: {type: DOUBLE}
+  y: {type: DOUBLE}
+  bounds: {type: BOX_2D | BOX_2DF}
+  geom: {type: GEOMETRY}
+  box: {type: BOX_2D | BOX_2DF}
+signatures:
+- arguments:
+  - {name: x, type: DOUBLE}
+  - {name: y, type: DOUBLE}
+  - {name: bounds, type: BOX_2D}
+  returns: UINTEGER
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  - {name: bounds, type: BOX_2D}
+  returns: UINTEGER
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  returns: UINTEGER
+- arguments:
+  - {name: box, type: BOX_2D}
+  - {name: bounds, type: BOX_2D}
+  returns: UINTEGER
+- arguments:
+  - {name: box, type: BOX_2DF}
+  - {name: bounds, type: BOX_2DF}
+  returns: UINTEGER
+status: active
+review: {state: harvested, source: duckdb-spatial}

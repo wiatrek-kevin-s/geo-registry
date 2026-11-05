@@ -7,7 +7,7 @@ harvest: {harvester: python-packages, engine_version: 2.7.0}
 parameters:
   stream: {type: any, required: true}
   close_fd: {type: bool, default: true}
-  http_num_threads: {type: int, default: 10}
+  http_num_threads: {type: int, default: 20}
   _http_strategy: {type: str, default: queue}
   decompression_selection: {type: DecompressionSelection, note: 'default <DecompressionSelection.XY_RETURNS_CHANNEL|Z|CLASSIFICATION|FLAGS|INTENSITY|SCAN_ANGLE|USER_DATA|POINT_SOURCE_ID|GPS_TIME|RGB|NIR|WAVEPACKET|ALL_EXTRA_BYTES:
       8191>'}

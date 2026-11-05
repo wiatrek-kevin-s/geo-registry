@@ -1,0 +1,14 @@
+id: rustgis-split
+kind: implementation
+name: Split
+software: rustgis
+call: {interface: python, name: split}
+harvest: {harvester: rustgis, engine_version: 0.5.0}
+parameters:
+  input: {type: Layer, required: true}
+  split: {type: PolygonLayer, required: true}
+  field: {type: Text}
+  output: {type: Text}
+notes: 'Toolbox: Analysis › Extract.'
+status: active
+review: {state: harvested, source: rustgis}

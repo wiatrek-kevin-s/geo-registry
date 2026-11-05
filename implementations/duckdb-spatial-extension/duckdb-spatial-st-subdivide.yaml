@@ -1,0 +1,16 @@
+id: duckdb-spatial-st-subdivide
+kind: implementation
+name: ST_Subdivide
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_Subdivide}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  geom: {type: GEOMETRY}
+  max_vertices: {type: UINTEGER}
+signatures:
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  - {name: max_vertices, type: UINTEGER}
+  returns: GEOMETRY
+status: active
+review: {state: harvested, source: duckdb-spatial}

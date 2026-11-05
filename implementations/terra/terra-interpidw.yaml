@@ -8,7 +8,6 @@ parameters:
   x: {type: any, required: true}
   y: {type: any, required: true}
   '...': {type: dots, note: further arguments passed on}
-  field: {type: any, required: true}
   radius: {type: any, required: true}
   power: {type: any, default: '2'}
   smooth: {type: any, default: '0'}
@@ -17,6 +16,7 @@ parameters:
   near: {type: any, default: 'TRUE'}
   fill: {type: any, default: NA}
   filename: {type: any, default: '""'}
+  field: {type: any, required: true}
 notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
 status: active
 review: {state: harvested, source: r-packages}

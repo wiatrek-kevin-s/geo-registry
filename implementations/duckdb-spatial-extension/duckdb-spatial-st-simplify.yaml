@@ -1,0 +1,16 @@
+id: duckdb-spatial-st-simplify
+kind: implementation
+name: ST_Simplify
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_Simplify}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  geom: {type: GEOMETRY}
+  tolerance: {type: DOUBLE}
+signatures:
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  - {name: tolerance, type: DOUBLE}
+  returns: GEOMETRY
+status: active
+review: {state: harvested, source: duckdb-spatial}

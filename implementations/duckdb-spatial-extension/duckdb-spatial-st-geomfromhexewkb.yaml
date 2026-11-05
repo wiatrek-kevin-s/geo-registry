@@ -1,0 +1,14 @@
+id: duckdb-spatial-st-geomfromhexewkb
+kind: implementation
+name: ST_GeomFromHEXEWKB
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_GeomFromHEXEWKB}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  hexwkb: {type: VARCHAR}
+signatures:
+- arguments:
+  - {name: hexwkb, type: VARCHAR}
+  returns: GEOMETRY
+status: active
+review: {state: harvested, source: duckdb-spatial}

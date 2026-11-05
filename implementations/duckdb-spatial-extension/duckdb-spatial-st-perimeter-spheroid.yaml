@@ -1,0 +1,18 @@
+id: duckdb-spatial-st-perimeter-spheroid
+kind: implementation
+name: ST_Perimeter_Spheroid
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_Perimeter_Spheroid}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  geom: {type: GEOMETRY}
+  poly: {type: POLYGON_2D}
+signatures:
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  returns: DOUBLE
+- arguments:
+  - {name: poly, type: POLYGON_2D}
+  returns: DOUBLE
+status: active
+review: {state: harvested, source: duckdb-spatial}

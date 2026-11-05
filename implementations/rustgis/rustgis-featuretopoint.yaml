@@ -1,0 +1,12 @@
+id: rustgis-featuretopoint
+kind: implementation
+name: Feature To Point
+software: rustgis
+call: {interface: python, name: featureToPoint}
+harvest: {harvester: rustgis, engine_version: 0.5.0}
+parameters:
+  input: {type: Layer, required: true}
+  output: {type: Text}
+notes: 'Toolbox: Data Management › Features.'
+status: active
+review: {state: harvested, source: rustgis}

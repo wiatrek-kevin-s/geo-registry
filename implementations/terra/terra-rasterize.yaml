@@ -8,17 +8,17 @@ parameters:
   x: {type: any, required: true}
   y: {type: any, required: true}
   '...': {type: dots, note: further arguments passed on}
-  field: {type: any, default: '""'}
+  values: {type: any, default: '1'}
   fun: {type: any, required: true}
   background: {type: any, default: NA}
-  touches: {type: any, default: 'FALSE'}
   update: {type: any, default: 'FALSE'}
-  cover: {type: any, default: 'FALSE'}
   by: {type: any, default: 'NULL'}
   filename: {type: any, default: '""'}
   overwrite: {type: any, default: 'FALSE'}
   wopt: {type: any, default: list()}
-  values: {type: any, default: '1'}
+  field: {type: any, default: '""'}
+  touches: {type: any, default: 'FALSE'}
+  cover: {type: any, default: 'FALSE'}
 notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
 status: active
 review: {state: harvested, source: r-packages}

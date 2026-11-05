@@ -1,0 +1,19 @@
+id: duckdb-spatial-st-maximuminscribedcircle
+kind: implementation
+name: ST_MaximumInscribedCircle
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_MaximumInscribedCircle}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  geom: {type: GEOMETRY}
+  tolerance: {type: DOUBLE}
+signatures:
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  returns: STRUCT(center GEOMETRY, "nearest" GEOMETRY, radius DOUBLE)
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  - {name: tolerance, type: DOUBLE}
+  returns: STRUCT(center GEOMETRY, "nearest" GEOMETRY, radius DOUBLE)
+status: active
+review: {state: harvested, source: duckdb-spatial}

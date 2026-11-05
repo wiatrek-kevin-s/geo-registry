@@ -1,0 +1,29 @@
+id: duckdb-spatial-st-makepoint
+kind: implementation
+name: ST_MakePoint
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_MakePoint}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  x: {type: DOUBLE}
+  y: {type: DOUBLE}
+  z: {type: DOUBLE}
+  m: {type: DOUBLE}
+signatures:
+- arguments:
+  - {name: x, type: DOUBLE}
+  - {name: y, type: DOUBLE}
+  returns: POINT_2D
+- arguments:
+  - {name: x, type: DOUBLE}
+  - {name: y, type: DOUBLE}
+  - {name: z, type: DOUBLE}
+  returns: POINT_3D
+- arguments:
+  - {name: x, type: DOUBLE}
+  - {name: y, type: DOUBLE}
+  - {name: z, type: DOUBLE}
+  - {name: m, type: DOUBLE}
+  returns: POINT_4D
+status: active
+review: {state: harvested, source: duckdb-spatial}

@@ -1,0 +1,13 @@
+id: rustgis-convexhull
+kind: implementation
+name: Minimum Bounding Geometry
+software: rustgis
+call: {interface: python, name: convexHull}
+harvest: {harvester: rustgis, engine_version: 0.5.0}
+parameters:
+  input: {type: Layer, required: true}
+  group: {type: 'Choice(["All", "None"])'}
+  output: {type: Text}
+notes: 'Toolbox: Data Management › Features.'
+status: active
+review: {state: harvested, source: rustgis}

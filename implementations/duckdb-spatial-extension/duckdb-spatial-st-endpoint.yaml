@@ -1,0 +1,18 @@
+id: duckdb-spatial-st-endpoint
+kind: implementation
+name: ST_EndPoint
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_EndPoint}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  geom: {type: GEOMETRY}
+  line: {type: LINESTRING_2D}
+signatures:
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  returns: GEOMETRY
+- arguments:
+  - {name: line, type: LINESTRING_2D}
+  returns: POINT_2D
+status: active
+review: {state: harvested, source: duckdb-spatial}

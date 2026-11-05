@@ -1,0 +1,15 @@
+id: rustgis-selectbylocation
+kind: implementation
+name: Select Layer By Location
+software: rustgis
+call: {interface: python, name: selectByLocation}
+harvest: {harvester: rustgis, engine_version: 0.5.0}
+parameters:
+  input: {type: Layer, required: true}
+  select: {type: Layer, required: true}
+  distance: {type: Number}
+  units: {type: 'Choice(["Kilometers", "Meters", "Miles", "Feet"])'}
+  invert: {type: 'Choice(["No", "Yes"])'}
+notes: 'Toolbox: Data Management › Layers and Table Views.'
+status: active
+review: {state: harvested, source: rustgis}

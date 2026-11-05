@@ -1,0 +1,13 @@
+id: rustgis-simplify
+kind: implementation
+name: Simplify
+software: rustgis
+call: {interface: python, name: simplify}
+harvest: {harvester: rustgis, engine_version: 0.5.0}
+parameters:
+  input: {type: Layer, required: true}
+  tolerance: {type: Number, required: true}
+  output: {type: Text}
+notes: 'Toolbox: Cartography › Generalization.'
+status: active
+review: {state: harvested, source: rustgis}

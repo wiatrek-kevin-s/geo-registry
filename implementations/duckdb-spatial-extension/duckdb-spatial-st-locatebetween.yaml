@@ -1,0 +1,25 @@
+id: duckdb-spatial-st-locatebetween
+kind: implementation
+name: ST_LocateBetween
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_LocateBetween}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  line: {type: GEOMETRY}
+  start_measure: {type: DOUBLE}
+  end_measure: {type: DOUBLE}
+  offset: {type: DOUBLE}
+signatures:
+- arguments:
+  - {name: line, type: GEOMETRY}
+  - {name: start_measure, type: DOUBLE}
+  - {name: end_measure, type: DOUBLE}
+  - {name: offset, type: DOUBLE}
+  returns: GEOMETRY
+- arguments:
+  - {name: line, type: GEOMETRY}
+  - {name: start_measure, type: DOUBLE}
+  - {name: end_measure, type: DOUBLE}
+  returns: GEOMETRY
+status: active
+review: {state: harvested, source: duckdb-spatial}

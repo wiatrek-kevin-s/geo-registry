@@ -1,0 +1,18 @@
+id: duckdb-spatial-st-assvg
+kind: implementation
+name: ST_AsSVG
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_AsSVG}
+harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+parameters:
+  geom: {type: GEOMETRY}
+  relative: {type: BOOLEAN}
+  precision: {type: INTEGER}
+signatures:
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  - {name: relative, type: BOOLEAN}
+  - {name: precision, type: INTEGER}
+  returns: VARCHAR
+status: active
+review: {state: harvested, source: duckdb-spatial}
