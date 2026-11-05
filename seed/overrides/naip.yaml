@@ -10,3 +10,4 @@ access:
     url: https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer
     auth: none
     notes: The National Map's NAIP mosaic, mostly 0.6 m four-band; natural colour, CIR and NDVI functions. Tested 2026-11-05.
+last_verified: 2026-11-05

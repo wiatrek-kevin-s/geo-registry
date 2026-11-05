@@ -25,6 +25,7 @@ access:
   notes: Annual roadway inventory (GIS linework and all inventory attributes), 2025 edition; other years
     from https://www.txdot.gov/inside-txdot/division/transportation-planning/roadway-inventory.html
 notes: Texas DOT open data; URL is open data hub
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

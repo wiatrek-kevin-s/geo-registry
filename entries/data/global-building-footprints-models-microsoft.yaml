@@ -19,6 +19,7 @@ access:
   auth: none
   notes: 'Planetary Computer collection ms-buildings: GeoParquet on Azure (account bingmlbuildings, container
     footprints), partitioned by region and quadkey.'
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

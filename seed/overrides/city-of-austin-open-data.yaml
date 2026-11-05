@@ -9,3 +9,4 @@ access:
     url: https://data.austintexas.gov/api/views/g7cx-4kmk
     auth: none
     notes: "Socrata platform: dataset metadata at /api/views/<id>, rows at /resource/<id>.json (SODA). Identifier from the data.gov harvest record; not yet fetched."
+last_verified: 2026-11-05

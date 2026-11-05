@@ -12,3 +12,4 @@ access:
     auth: none
     notes: SSURGO map units (also NAD83 and Web Mercator versions); up to 250,000 features per request.
 notes: Soil Data Access serves SSURGO; gSSURGO and gNATSGO are the gridded file geodatabase downloads of the same survey (download page still to add).
+last_verified: 2026-11-05

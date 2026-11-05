@@ -9,3 +9,4 @@ access:
     url: https://feature.geographic.texas.gov/arcgis/rest/services/Status_Maps/Lidar_Index_Public/FeatureServer
     auth: none
     notes: Tile index of every lidar project TxGIO hosts. Item info read 2026-11-05 (no licence text in the item).
+last_verified: 2026-11-05

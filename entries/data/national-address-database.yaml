@@ -19,7 +19,7 @@ access:
   auth: none
   notes: File geodatabase (zip), updated 2026-09-30 per data.gov; a text-file version is also published.
 notes: Texas coverage partial
-status: active
+status: degraded
 review:
   state: seeded
   source: geospatial-tool-atlas

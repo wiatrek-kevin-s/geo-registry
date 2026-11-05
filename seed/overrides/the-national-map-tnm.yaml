@@ -10,3 +10,4 @@ access:
     url: https://tnmaccess.nationalmap.gov/api/v1/products
     auth: none
     notes: TNM Access API - products by bbox, datasets (for example "Digital Elevation Model (DEM) 1 meter") and format; documented examples need no key.
+last_verified: 2026-11-05

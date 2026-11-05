@@ -13,3 +13,4 @@ access:
     url: https://fwspublicservices.wim.usgs.gov/wetlandsmapservice/services/Wetlands/MapServer/WMSServer
     auth: none
 update: twice a year (with the Wetlands Mapper)
+last_verified: 2026-11-05

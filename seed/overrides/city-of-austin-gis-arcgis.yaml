@@ -10,3 +10,4 @@ access:
     url: https://www.austintexas.gov/department/gis-and-maps
     auth: none
 notes: "Derived products should credit 'City of Austin, Geospatial Services - Data Development' (service copyright text)."
+status: degraded

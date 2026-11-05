@@ -11,3 +11,4 @@ access:
     url: https://www.usgs.gov/programs/gap-analysis-project/science/pad-us-web-services
     auth: none
     notes: Feature layer views on ArcGIS Online (GAP status, public access, managers, designations).
+status: degraded

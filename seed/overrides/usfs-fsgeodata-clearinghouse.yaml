@@ -14,3 +14,4 @@ access:
 - type: http
   url: https://data.fs.usda.gov/geodata/edw/datasets.php
   auth: none
+last_verified: 2026-11-05

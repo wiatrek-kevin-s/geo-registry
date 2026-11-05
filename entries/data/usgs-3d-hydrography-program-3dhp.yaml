@@ -23,6 +23,7 @@ access:
   auth: none
   notes: 3DHP downloadable data, 2025 annual product.
 notes: Successor to NHD
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

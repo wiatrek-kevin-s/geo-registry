@@ -15,6 +15,7 @@ access:
   url: https://arxiv.org/abs/2503.18129
   auth: none
 notes: Useful to evaluate Columbus
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

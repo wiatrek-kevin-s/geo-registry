@@ -18,6 +18,7 @@ access:
   auth: none
   notes: Annual 9-class maps 2017-2024, COGs, public; managed by Impact Observatory.
 notes: Also on Planetary Computer and AWS
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

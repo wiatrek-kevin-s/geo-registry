@@ -15,6 +15,7 @@ access:
   url: https://umbra.space
   auth: none
 notes: Open SAR samples on AWS
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

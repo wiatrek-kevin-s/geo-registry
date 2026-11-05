@@ -14,6 +14,7 @@ access:
 - type: http
   url: https://www.esri.com/en-us/arcgis/products/arcgis-streetmap-premium/overview
   auth: none
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

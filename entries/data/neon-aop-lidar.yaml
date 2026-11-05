@@ -18,7 +18,7 @@ access:
   auth: none
   notes: NEON data API (products, sites, data); discrete return lidar point clouds are product DP1.30003.001.
 notes: Research-grade ecological lidar.
-status: active
+status: degraded
 review:
   state: seeded
   source: geospatial-tool-atlas

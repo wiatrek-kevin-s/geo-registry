@@ -24,6 +24,7 @@ access:
   auth: none
   notes: Earth Search collections cop-dem-glo-30 and cop-dem-glo-90.
 notes: GLO-30 free; COGs on AWS
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

@@ -27,6 +27,7 @@ access:
 notes: 'Themes (merged from their own entries): buildings ODbL-1.0, transportation ODbL-1.0, divisions
   ODbL-1.0, places CDLA-Permissive-2.0, addresses licence varies by source. Query with DuckDB on S3 or
   Azure.'
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

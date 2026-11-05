@@ -10,3 +10,4 @@ access:
   url: s3://naturalearth/
   auth: none
   notes: Zipped shapefiles, public, no AWS account.
+last_verified: 2026-11-05

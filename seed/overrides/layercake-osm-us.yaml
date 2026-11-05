@@ -15,3 +15,4 @@ access:
     notes: One GeoParquet file per layer for the whole planet; the others follow the same pattern.
 formats_out: [GeoParquet]
 notes: Data (c) OpenStreetMap contributors, under the Open Database License; credit OpenStreetMap contributors.
+last_verified: 2026-11-05

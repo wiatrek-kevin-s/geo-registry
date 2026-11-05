@@ -19,6 +19,7 @@ access:
   auth: none
   notes: Zipped shapefiles, public, no AWS account.
 notes: Good for overview maps
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

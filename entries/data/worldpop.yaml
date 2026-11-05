@@ -17,6 +17,7 @@ access:
   url: https://www.worldpop.org/rest/data
   auth: none
   notes: 'JSON catalogue: rest/data/pop/wpgp?iso3=XXX returns the GeoTIFF path for a country; no key mentioned.'
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

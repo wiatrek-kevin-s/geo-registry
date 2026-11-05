@@ -22,6 +22,7 @@ access:
   auth: none
   notes: Catalog of NTAD datasets with each one's service URL (named by BTS's Fall 2026 release note).
     Not yet fetched.
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

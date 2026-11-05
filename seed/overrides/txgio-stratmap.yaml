@@ -13,3 +13,4 @@ access:
     url: https://feature.geographic.texas.gov/arcgis/rest/services/Address_Points/stratmap_address_points_48_most_recent/MapServer
     auth: none
     notes: StratMap address points, most recent (from 9-1-1 districts). Tested 2026-11-05.
+last_verified: 2026-11-05

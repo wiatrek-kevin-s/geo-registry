@@ -13,3 +13,4 @@ access:
     url: https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer
     auth: none
     notes: Index of 3DEP projects and products.
+last_verified: 2026-11-05

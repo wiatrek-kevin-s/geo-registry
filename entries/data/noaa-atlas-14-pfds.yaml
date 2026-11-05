@@ -19,6 +19,7 @@ access:
   auth: none
   notes: Zipped ASCII grids by volume (Texas is volume 11, code tx), with XML grid metadata at /pfds/meta/na14_vol{N}_{code}_grid_metadata.xml.
 notes: Used in drainage design
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

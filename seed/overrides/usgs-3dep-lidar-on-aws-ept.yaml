@@ -16,3 +16,4 @@ access:
   url: https://usgs-lidar-stac.s3-us-west-2.amazonaws.com/ept/catalog.json
   auth: none
   notes: STAC catalog of the EPT resources (listed on the AWS registry page).
+last_verified: 2026-11-05

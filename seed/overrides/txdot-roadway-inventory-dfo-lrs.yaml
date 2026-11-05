@@ -12,3 +12,4 @@ access:
     auth: none
     notes: Annual roadway inventory (GIS linework and all inventory attributes), 2025 edition; other years from https://www.txdot.gov/inside-txdot/division/transportation-planning/roadway-inventory.html
 update: annual (roadway inventory); the service is updated by TxDOT TPP
+last_verified: 2026-11-05

@@ -21,6 +21,7 @@ access:
   url: https://regional-open-data-capcog.opendata.arcgis.com/api/feed/dcat-us/1.1.json
   auth: none
   notes: DCAT-US catalog feed (ArcGIS Hub convention). Not yet tested.
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

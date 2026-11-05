@@ -15,6 +15,7 @@ access:
   url: https://icesat-2.gsfc.nasa.gov
   auth: none
 notes: Global elevation profiles.
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

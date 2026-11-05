@@ -9,3 +9,4 @@ access:
     url: https://tpwd.texas.gov/server/rest/services
     auth: none
     notes: TPWD ArcGIS Server (Parks, Wildlife, Cultural folders). Wildlife/WildlifeManagementAssociations/MapServer tested 2026-11-05.
+status: degraded

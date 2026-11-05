@@ -12,3 +12,4 @@ access:
     notes: TCAD parcels republished monthly by Travis County TNR; query supported (1000 records per request). Tested 2026-11-05.
 update: monthly (Travis County's copy)
 notes: "Informational and reference use only; not a survey; boundaries approximate. Includes owner names (personal data)."
+status: degraded

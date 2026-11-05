@@ -15,6 +15,7 @@ access:
   url: https://github.com/sparkgeo/geo-mcp-servers
   auth: none
 notes: Good source for ongoing discovery
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

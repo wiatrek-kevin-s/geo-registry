@@ -14,7 +14,7 @@ access:
 - type: http
   url: https://www.sciencebase.gov/
   auth: none
-status: active
+status: degraded
 review:
   state: seeded
   source: geospatial-tool-atlas

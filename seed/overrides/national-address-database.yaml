@@ -10,3 +10,4 @@ access:
     url: https://data.transportation.gov/download/yw36-suxr/application/x-zip-compressed
     auth: none
     notes: File geodatabase (zip), updated 2026-09-30 per data.gov; a text-file version is also published.
+status: degraded

@@ -15,6 +15,7 @@ access:
   url: https://github.com/allenai/satlaspretrain_models
   auth: none
 notes: Weights ODC-BY
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

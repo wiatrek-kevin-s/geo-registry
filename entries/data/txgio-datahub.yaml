@@ -21,7 +21,7 @@ access:
   notes: TxGIO (formerly TNRIS) data API behind the DataHub; only /areas is documented publicly. Not yet
     tested.
 notes: Formerly TNRIS; REST API and bulk downloader
-status: active
+status: degraded
 review:
   state: seeded
   source: geospatial-tool-atlas

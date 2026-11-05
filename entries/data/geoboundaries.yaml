@@ -18,6 +18,7 @@ access:
   auth: none
   notes: Pattern api/current/gbOpen/{ISO3}/{ADM level}/ (ALL for every country or level); gbAuthoritative
     and gbHumanitarian are the other releases.
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

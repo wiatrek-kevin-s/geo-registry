@@ -15,3 +15,4 @@ access:
   auth: none
   notes: 'Coastal lidar by project id (laz/geoid18/<id>/): LAZ tiles, tile index (shapefile, GeoPackage), STAC collection
     and COPC item collection.'
+last_verified: 2026-11-05

@@ -22,6 +22,7 @@ access:
   url: https://storage.googleapis.com/water-world/downloads_ancillary/WMTS_Global_Surface_WaterV2024.xml
   auth: none
   notes: Display tiles (RGB, not for analysis).
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

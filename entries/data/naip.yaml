@@ -20,6 +20,7 @@ access:
   notes: The National Map's NAIP mosaic, mostly 0.6 m four-band; natural colour, CIR and NDVI functions.
     Tested 2026-11-05.
 notes: COGs on Planetary Computer/AWS
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

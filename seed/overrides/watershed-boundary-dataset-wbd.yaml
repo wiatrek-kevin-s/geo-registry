@@ -16,3 +16,4 @@ access:
   url: https://prd-tnm.s3.amazonaws.com/index.html?prefix=StagedProducts%2FHydrography%2FWBD%2F
   auth: none
   notes: Staged WBD downloads by HU2 and national.
+last_verified: 2026-11-05

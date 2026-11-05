@@ -23,6 +23,7 @@ access:
   url: https://geo.dot.gov/server/rest/services/Hosted
   auth: none
   notes: 2018 public release, one FeatureServer per state (Texas_2018_PR, ...).
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

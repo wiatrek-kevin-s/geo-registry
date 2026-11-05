@@ -19,6 +19,7 @@ access:
   auth: none
   notes: CORS RINEX, station logs, coordinates (ITRF2020 and NAD 83 realizations) and orbits. From 2026-11-01
     public CORS data moved to NODD and the legacy geodesy.noaa.gov/corsdata/ paths stop working.
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

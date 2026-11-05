@@ -18,6 +18,7 @@ access:
     Licence terms: https://www.capmetro.org/metrolabs/ (not yet read).'
 formats_out:
 - GTFS
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

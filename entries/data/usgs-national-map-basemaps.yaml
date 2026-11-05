@@ -20,6 +20,7 @@ access:
   notes: Cached topographic base map (Web Mercator, 24 levels); refreshed 2026-09-04. Other base maps
     (imagery, shaded relief) are on the same server.
 notes: Free, US coverage
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

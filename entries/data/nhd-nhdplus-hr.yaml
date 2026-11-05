@@ -21,6 +21,7 @@ access:
     hydrography replaces NHD where collected. Data refreshed 2026-09-04.'
 notes: USGS is replacing NHD with 3DHP as elevation-derived hydrography is collected; prefer 3DHP where
   it exists.
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

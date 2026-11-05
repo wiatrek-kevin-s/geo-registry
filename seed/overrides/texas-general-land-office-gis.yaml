@@ -11,3 +11,4 @@ access:
     url: https://www.glo.texas.gov/land/land-management/gis/index.html
     auth: none
 notes: "The Original Texas Land Survey grid is shown in GLO viewers but not distributed by the GLO. GLO data is not suitable for navigation and does not establish land boundaries."
+last_verified: 2026-11-05

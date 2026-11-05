@@ -11,3 +11,4 @@ access:
     auth: none
     notes: One of the national extracts (pipe-delimited text); DomesticNames and FullModel (GDB, GPKG) by state are in the same staged products folder.
 update: every other month
+last_verified: 2026-11-05

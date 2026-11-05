@@ -24,6 +24,7 @@ access:
   auth: none
   notes: STAC catalog of the EPT resources (listed on the AWS registry page).
 notes: PDAL can query by AOI with readers.ept.
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

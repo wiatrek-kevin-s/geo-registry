@@ -15,7 +15,7 @@ access:
   url: https://www.nhgis.org/
   auth: none
 notes: Requires account; citation terms
-status: active
+status: degraded
 review:
   state: seeded
   source: geospatial-tool-atlas

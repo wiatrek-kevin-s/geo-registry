@@ -9,3 +9,4 @@ access:
     url: https://api.tnris.org
     auth: none
     notes: TxGIO (formerly TNRIS) data API behind the DataHub; only /areas is documented publicly. Not yet tested.
+status: degraded

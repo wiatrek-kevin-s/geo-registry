@@ -11,3 +11,4 @@ access:
   index: sentinel-2-l2a
   auth: none
   notes: Earth Search collection sentinel-2-l2a (Level-2A COGs); free, no guaranteed service.
+last_verified: 2026-11-05

@@ -14,3 +14,4 @@ access:
     url: https://geographic.texas.gov/stratmap/orthoimagery
     auth: none
 notes: The current Texas Imagery Service needs an organization-specific link from TxGIO and is not open access.
+last_verified: 2026-11-05

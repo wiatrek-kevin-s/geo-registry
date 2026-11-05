@@ -16,6 +16,7 @@ access:
   url: https://stacindex.org
   auth: none
 notes: Discover STAC endpoints
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

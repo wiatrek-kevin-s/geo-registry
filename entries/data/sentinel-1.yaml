@@ -19,6 +19,7 @@ access:
   index: sentinel-1-grd
   auth: none
   notes: Earth Search collection sentinel-1-grd (amplitude GRD); some assets are in requester-pays buckets.
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

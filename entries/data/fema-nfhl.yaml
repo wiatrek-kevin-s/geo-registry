@@ -40,7 +40,7 @@ recipe:
   - Report the FLD_ZONE values found and the effective date fields with the result.
 notes: The public NFHL service holds effective data only; preliminary and pending services exist separately
   and are not for rating flood insurance. TLS 1.2 only.
-status: active
+status: degraded
 review:
   state: seeded
   source: geospatial-tool-atlas

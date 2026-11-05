@@ -8,3 +8,4 @@ access:
   url: https://earthquake.usgs.gov/fdsnws/event/1/
   auth: none
   notes: FDSN event web service (query, count); GeoJSON among the formats.
+last_verified: 2026-11-05

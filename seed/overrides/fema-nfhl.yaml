@@ -30,3 +30,4 @@ recipe:
   steps:
     - Fetch access 1 with a bbox no larger than a county.
     - Report the FLD_ZONE values found and the effective date fields with the result.
+status: degraded

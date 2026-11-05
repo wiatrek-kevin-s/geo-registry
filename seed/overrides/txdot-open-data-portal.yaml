@@ -9,3 +9,4 @@ access:
     url: https://services.arcgis.com/KTcxiTD9dsQw4r7Z/arcgis/rest/services
     auth: none
     notes: TxDOT's ArcGIS Online services (TxDOT_Roadways, Route_County, TxDOT_Proposed_Functional_Classification, ...).
+last_verified: 2026-11-05

@@ -19,3 +19,4 @@ access:
   url: https://www.epa.gov/frs/frs-api
   auth: none
   notes: FRS API (REST; JSON, XML).
+last_verified: 2026-11-05

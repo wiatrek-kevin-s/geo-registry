@@ -20,6 +20,7 @@ access:
   auth: none
   notes: Earth Search collection sentinel-2-l2a (Level-2A COGs); free, no guaranteed service.
 notes: COGs on AWS Earth Search and Planetary Computer
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

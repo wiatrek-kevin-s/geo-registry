@@ -19,7 +19,7 @@ access:
   auth: none
   notes: TPWD ArcGIS Server (Parks, Wildlife, Cultural folders). Wildlife/WildlifeManagementAssociations/MapServer
     tested 2026-11-05.
-status: active
+status: degraded
 review:
   state: seeded
   source: geospatial-tool-atlas

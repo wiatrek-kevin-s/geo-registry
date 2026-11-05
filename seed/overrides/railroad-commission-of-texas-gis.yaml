@@ -20,3 +20,4 @@ access:
     notes: Public GIS Viewer (interactive only).
 update: twice weekly
 notes: "Digital map data is in latitude/longitude on NAD 27 (a .prj is included), not NAD 83: transform before combining with other layers."
+status: degraded

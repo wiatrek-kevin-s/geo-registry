@@ -14,6 +14,7 @@ access:
   url: https://huggingface.co/ibm-nasa-geospatial
   auth: none
 notes: Weights on Hugging Face
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

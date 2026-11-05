@@ -16,6 +16,7 @@ access:
   url: https://gedi.umd.edu
   auth: none
 notes: Global canopy height.
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

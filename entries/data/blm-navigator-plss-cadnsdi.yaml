@@ -20,6 +20,7 @@ access:
   notes: National PLSS (townships, sections, intersected lands), NAD 83. New path from 2026-10-14; the
     old /arcgis/ path works until 2027-02-01 (BLM announcement).
 notes: PLSS not used in Texas
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

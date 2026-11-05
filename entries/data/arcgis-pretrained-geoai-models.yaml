@@ -16,6 +16,7 @@ access:
   url: https://livingatlas.arcgis.com/
   auth: none
 notes: Run in Pro or arcgis.learn; Image Analyst licence needed
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded

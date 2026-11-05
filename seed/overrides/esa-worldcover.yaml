@@ -14,3 +14,4 @@ access:
   url: https://services.terrascope.be/stac/
   auth: none
   notes: Terrascope STAC (listed on the AWS registry page).
+status: degraded

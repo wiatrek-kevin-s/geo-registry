@@ -15,6 +15,7 @@ access:
   url: https://registry.opendata.aws
   auth: none
 notes: Direct S3 reads via GDAL /vsis3/
+last_verified: 2026-11-05
 status: active
 review:
   state: seeded
