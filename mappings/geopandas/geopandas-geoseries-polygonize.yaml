@@ -1,0 +1,7 @@
+id: geopandas-geoseries-polygonize
+implements: lines-to-polygons
+crosswalk: {}
+differences:
+  - Builds polygons from the areas the lines enclose together (noded first by default).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,6 @@
+id: postgis-st-boundary
+implements: polygons-to-lines
+crosswalk:
+  layer: "#1"
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,10 @@
+id: grass-v-vect-stats
+implements: count-points-in-polygon
+crosswalk:
+  polygons: areas
+  points: points
+  field: count_column
+differences:
+  - Writes the count into the areas map's own attribute table; there is no separate output. method and stats_column add other statistics of a points column.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

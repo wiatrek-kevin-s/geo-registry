@@ -1,0 +1,9 @@
+id: postgis-st-symdifference
+implements: symmetric-difference
+crosswalk:
+  a: geom1
+  b: geom2
+differences:
+  - "Per pair of geometries: union each layer first to compare whole layers."
+effects: { modifies_input: false, network: false }
+review: { state: draft }

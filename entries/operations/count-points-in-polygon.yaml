@@ -1,0 +1,19 @@
+id: count-points-in-polygon
+kind: operation
+name: Count Points In Polygon
+aka: [point count, points in polygons, Summarize Within (count)]
+summary: Adds to each polygon the number of points that fall inside it.
+group: vector/joins
+inputs:
+  - { name: polygons, type: vector, geometry: polygon }
+  - { name: points, type: vector, geometry: point }
+outputs:
+  - { name: output, type: vector, geometry: polygon }
+parameters:
+  field: { type: string, note: Name of the new count attribute. }
+checks: [crs.agreement, join.unmatched]
+pitfalls:
+  - Points exactly on a shared boundary are counted in both polygons by some engines and in one by others.
+related: [spatial-join, zonal-statistics]
+status: active
+review: { state: draft }

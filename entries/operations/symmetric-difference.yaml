@@ -1,0 +1,17 @@
+id: symmetric-difference
+kind: operation
+name: Symmetric Difference
+aka: [Symmetrical Difference, XOR overlay, exclusive or]
+summary: The parts of two layers that are covered by one layer but not both.
+group: vector/overlay
+inputs:
+  - { name: a, type: vector, geometry: polygon }
+  - { name: b, type: vector, geometry: polygon }
+outputs:
+  - { name: output, type: vector, geometry: polygon }
+checks: [crs.agreement, geometry.valid, extent.plausible]
+pitfalls:
+  - Functions that work per pair of geometries need each layer unioned first to compare whole layers.
+related: [difference, union-overlay, intersect]
+status: active
+review: { state: draft }

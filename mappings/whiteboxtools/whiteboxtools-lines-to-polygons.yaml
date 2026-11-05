@@ -1,0 +1,7 @@
+id: whiteboxtools-lines-to-polygons
+implements: lines-to-polygons
+crosswalk:
+  layer: input
+  output: output
+effects: { modifies_input: false, network: false }
+review: { state: draft }

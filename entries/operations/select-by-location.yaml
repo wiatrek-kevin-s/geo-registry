@@ -1,0 +1,19 @@
+id: select-by-location
+kind: operation
+name: Select By Location
+aka: [Extract By Location, spatial filter, select features by location]
+summary: Keeps the features of a layer that meet a spatial relationship with another layer's features.
+group: vector/selection
+inputs:
+  - { name: layer, type: vector }
+  - { name: mask, type: vector }
+outputs:
+  - { name: output, type: vector }
+parameters:
+  predicate: { type: enum, values: [intersects, within, contains, touches, crosses, overlaps, disjoint], default: intersects }
+checks: [crs.agreement]
+pitfalls:
+  - Features are kept whole, not cut to the mask (that is clip).
+related: [spatial-join, clip]
+status: active
+review: { state: draft }

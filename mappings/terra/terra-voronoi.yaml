@@ -1,0 +1,8 @@
+id: terra-voronoi
+implements: voronoi
+crosswalk:
+  layer: x
+differences:
+  - bnd gives a boundary polygon to cut the result to.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

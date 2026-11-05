@@ -1,0 +1,9 @@
+id: qgis-native-voronoipolygons
+implements: voronoi
+crosswalk:
+  layer: INPUT
+  output: OUTPUT
+differences:
+  - BUFFER enlarges the points' extent by a percentage before cutting the outer polygons.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

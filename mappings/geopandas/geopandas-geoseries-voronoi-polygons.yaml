@@ -1,0 +1,7 @@
+id: geopandas-geoseries-voronoi-polygons
+implements: voronoi
+crosswalk: {}
+differences:
+  - Called on a GeoSeries of points; extend_to sets the extent to cut the outer polygons to.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

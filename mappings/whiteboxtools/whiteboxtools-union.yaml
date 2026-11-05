@@ -1,0 +1,8 @@
+id: whiteboxtools-union
+implements: union-overlay
+crosswalk:
+  a: input
+  b: overlay
+  output: output
+effects: { modifies_input: false, network: false }
+review: { state: draft }

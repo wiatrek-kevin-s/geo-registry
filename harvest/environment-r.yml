@@ -7,3 +7,4 @@ dependencies:
   - r-sf
   - r-terra
   - r-jsonlite
+  - r-dplyr      # sf::st_filter needs it (equivalence tests)

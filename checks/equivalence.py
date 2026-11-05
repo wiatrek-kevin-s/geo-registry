@@ -55,6 +55,8 @@ def poly(x0, y0, x1, y1):
     return shapely.box(x0, y0, x1, y1)
 
 
+# Inside, across the edge of, and outside a 100 m mask.
+SELECT_SQUARES = [poly(10, 10, 20, 20), poly(90, 90, 110, 110), poly(200, 200, 210, 210)]
 L_SHAPE = shapely.Polygon([(0, 0), (20, 0), (20, 10), (10, 10), (10, 20), (0, 20)])  # area 300; hull 350
 
 
@@ -109,6 +111,24 @@ CASES = [
          attrs={"right": {"v": [1.0, 2.0]}}),
     Case("merge-layers", "one layer of one square and one of two", {"layers": [[poly(0, 0, 10, 10)],
          [poly(20, 0, 30, 10), poly(40, 0, 50, 10)]]}, {}, "count", expected=3),
+    Case("union-overlay", "two overlapping squares: three pieces", {"a": [poly(0, 0, 100, 100)], "b": [poly(50, 50, 150, 150)]},
+         {}, "count", expected=3),
+    Case("union-overlay", "pieces cover both squares", {"a": [poly(0, 0, 100, 100)], "b": [poly(50, 50, 150, 150)]},
+         {}, "area", expected=17500.0),
+    Case("symmetric-difference", "two overlapping squares minus their overlap",
+         {"a": [poly(0, 0, 100, 100)], "b": [poly(50, 50, 150, 150)]}, {}, "area", expected=15000.0),
+    Case("count-points-in-polygon", "two of three points inside", {"polygons": [poly(0, 0, 100, 100)],
+         "points": [shapely.Point(10, 10), shapely.Point(50, 50), shapely.Point(200, 200)]}, {"field": "npts"},
+         "field_npts", expected=2.0),
+    Case("select-by-location", "squares that intersect the mask", {"layer": SELECT_SQUARES, "mask": [poly(0, 0, 100, 100)]},
+         {"predicate": "intersects"}, "count", expected=2),
+    Case("select-by-location", "squares within the mask", {"layer": SELECT_SQUARES, "mask": [poly(0, 0, 100, 100)]},
+         {"predicate": "within"}, "count", expected=1),
+    Case("voronoi", "three points, three polygons", {"layer": [shapely.Point(621000, 3349000), shapely.Point(621100, 3349000),
+         shapely.Point(621050, 3349080)]}, {}, "count", expected=3),
+    Case("polygons-to-lines", "outline of a 100 m square", {"layer": [poly(0, 0, 100, 100)]}, {}, "length", expected=400.0),
+    Case("lines-to-polygons", "closed square line", {"layer": [shapely.LineString([(0, 0), (100, 0), (100, 100), (0, 100), (0, 0)])]},
+         {}, "area", expected=10000.0),
     Case("table-to-points", "two rows of coordinates",
          {"table": pd.DataFrame({"x": [621000.0, 621010.0], "y": [3349000.0, 3349020.0]})},
          {"x_field": "x", "y_field": "y", "crs": CRS}, "coords",
@@ -657,6 +677,7 @@ for (const [name, value] of req.args) {
 if (Object.keys(options).length) args.push(options);
 let out = turf[req.fn](...args);
 if (out && out.type === "Feature") out = turf.featureCollection([out]);
+else if (out && out.type && out.type !== "FeatureCollection") out = turf.featureCollection([turf.feature(out)]);
 process.stdout.write(JSON.stringify(out));
 """
 
@@ -672,10 +693,17 @@ def run_turf(node: str, modules: str, impl: dict, op: dict, case: Case):
     ports, args = translate(impl, op, case)
     order = list((impl.get("parameters") or {}).keys())
     values = {}
+    declared = impl.get("parameters") or {}
     for port, engine in ports.items():
         if engine and port in case.inputs:
             frame = gpd.GeoDataFrame(case.attrs.get(port, {}), geometry=list(case.inputs[port]), crs=CRS)
-            values[engine] = json.loads(frame.to_crs(4326).to_json(drop_id=True))
+            fc = json.loads(frame.to_crs(4326).to_json(drop_id=True))
+            etype = str((declared.get(engine) or {}).get("type", ""))
+            if etype.startswith("Feature<") and "FeatureCollection" not in etype:  # one feature per call
+                if len(fc["features"]) != 1:
+                    raise Unsupported(f"'{engine}' takes one feature per call")
+                fc = fc["features"][0]
+            values[engine] = fc
     values.update(args)
     ordered = [[k, values[k]] for k in order if k in values and k != "options"]
     request = {"fn": impl["call"]["name"].split(".", 1)[1], "args": ordered}

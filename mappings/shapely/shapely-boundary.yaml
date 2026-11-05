@@ -1,0 +1,8 @@
+id: shapely-boundary
+implements: polygons-to-lines
+crosswalk:
+  layer: geometry
+differences:
+  - Also gives the end points of lines and nothing for points (the boundary in the OGC sense).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

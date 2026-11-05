@@ -1,0 +1,9 @@
+id: turf-voronoi
+implements: voronoi
+crosswalk:
+  layer: points
+differences:
+  - "options.bbox gives the extent (default the whole world: -180, -85, 180, 85)."
+  - Turf works on GeoJSON in longitude/latitude (WGS 84); data in another CRS must be reprojected first.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,17 @@
+id: voronoi
+kind: operation
+name: Voronoi Polygons
+aka: [Thiessen polygons, Create Thiessen Polygons, proximity polygons, Voronoi diagram]
+summary: One polygon per point, covering the area closer to that point than to any other.
+group: vector/proximity
+inputs:
+  - { name: layer, type: vector, geometry: point }
+outputs:
+  - { name: output, type: vector, geometry: polygon }
+checks: [crs.measure, geometry.valid]
+pitfalls:
+  - The outer polygons are cut to an extent that each engine chooses differently (the points' extent, a buffer around it, or a given box).
+  - Distances in a geographic CRS are measured in degrees, which distorts the polygons.
+related: [buffer]
+status: active
+review: { state: draft }

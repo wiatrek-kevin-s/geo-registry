@@ -1,0 +1,7 @@
+id: qgis-native-polygonstolines
+implements: polygons-to-lines
+crosswalk:
+  layer: INPUT
+  output: OUTPUT
+effects: { modifies_input: false, network: false }
+review: { state: draft }
