@@ -1,0 +1,10 @@
+id: postgis-st-offsetcurve
+implements: offset-curve
+crosswalk:
+  layer: "#1"
+  distance: "#2"
+  unit: { fixed: crs-units }
+differences:
+  - params takes 'quad_segs=N join=round|mitre|bevel mitre_limit=N' as text.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

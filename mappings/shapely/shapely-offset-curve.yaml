@@ -1,0 +1,10 @@
+id: shapely-offset-curve
+implements: offset-curve
+crosswalk:
+  layer: geometry
+  distance: distance
+  unit: { fixed: crs-units }
+differences:
+  - join_style (round, mitre, bevel) and quad_segs shape the bends.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

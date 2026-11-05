@@ -1,0 +1,7 @@
+id: qgis-native-explodelines
+implements: explode-lines
+crosswalk:
+  layer: INPUT
+  output: OUTPUT
+effects: { modifies_input: false, network: false }
+review: { state: draft }

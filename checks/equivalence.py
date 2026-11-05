@@ -152,6 +152,28 @@ CASES = [
          {"distance": 10, "unit": "m"}, "count", expected=11),
     Case("points-along-lines", "95 m line: start, then every 10 m", {"layer": [shapely.LineString([(0, 0), (95, 0)])]},
          {"distance": 10, "unit": "m"}, "count", expected=10),
+    Case("extract-vertices", "a line of three vertices", {"layer": [shapely.LineString([(0, 0), (50, 0), (50, 50)])]}, {},
+         "count", expected=3),
+    Case("extract-vertices", "a square: four corners and the closing vertex", {"layer": [poly(0, 0, 100, 100)]}, {},
+         "count", expected=5),
+    # Eastward line inside the UTM zone (for Turf): a positive offset goes north (left).
+    Case("offset-curve", "eastward line, 10 m to the left", {"layer": [shapely.LineString([(621000, 3349000), (621100, 3349000)])]},
+         {"distance": 10, "unit": "m"}, "coords", expected=621000 + 621100 + 2 * 3349010, tolerance=1e-9),
+    Case("offset-curve", "its length", {"layer": [shapely.LineString([(621000, 3349000), (621100, 3349000)])]},
+         {"distance": 10, "unit": "m"}, "length", expected=100.0, tolerance=1e-6),
+    # A left turn offset to the left: the inside of the bend, 40 m along each leg whatever the join.
+    Case("offset-curve", "a left turn, inside of the bend", {"layer": [shapely.LineString(
+         [(621000, 3349000), (621050, 3349000), (621050, 3349050)])]}, {"distance": 10, "unit": "m"}, "length",
+         expected=80.0, tolerance=1e-6),
+    Case("line-intersections", "a line crossing two others, one of them twice", {
+         "a": [shapely.LineString([(621000, 3349050), (621100, 3349050)])],
+         "b": [shapely.LineString([(621050, 3349000), (621050, 3349100)]),
+               shapely.LineString([(621020, 3349000), (621030, 3349100), (621040, 3349000)])]}, {}, "count", expected=3),
+    Case("explode-lines", "a line of four vertices: three segments", {"layer": [shapely.LineString(
+         [(621000, 3349000), (621050, 3349000), (621050, 3349050), (621100, 3349050)])]}, {}, "count", expected=3),
+    Case("explode-lines", "segments keep the length", {"layer": [shapely.LineString(
+         [(621000, 3349000), (621050, 3349000), (621050, 3349050), (621100, 3349050)])]}, {}, "length", expected=150.0,
+         tolerance=1e-6),
     Case("polygons-to-lines", "outline of a 100 m square", {"layer": [poly(0, 0, 100, 100)]}, {}, "length", expected=400.0),
     Case("lines-to-polygons", "closed square line", {"layer": [shapely.LineString([(0, 0), (100, 0), (100, 100), (0, 100), (0, 0)])]},
          {}, "area", expected=10000.0),
@@ -447,6 +469,12 @@ KNOWN_DIFFERENCES = {
         "cells of value 0 are targets too, so every distance is 0",
     ("terra-distance", "the same on a background of 0"):
         "cells of value 0 are targets too, so every distance is 0",
+    ("grass-v-to-points--vertices", "a square: four corners and the closing vertex"):
+        "polygon outlines are boundaries without a category, skipped unless layer = -1; only the centroid comes out",
+    ("turf-lineoffset", "eastward line, 10 m to the left"):
+        "a positive distance offsets to the right of the line's direction",
+    ("turf-lineoffset", "a left turn, inside of the bend"):
+        "a positive distance offsets to the right of the line's direction (the outside of the bend)",
     ("turf-envelope", "a tilted rectangle's bounding box"):
         "the box follows longitude and latitude, not the projected CRS's axes",
     ("qgis-native-densifygeometriesgivenaninterval", "100 m line, segments of at most 10 m"):
@@ -461,6 +489,10 @@ KNOWN_DIFFERENCES = {
 # Engine bugs the tests hit at random, recorded on the mapping: an error containing this
 # text is reported as "differs" with the reason instead of failing. (implementation id, case title)
 KNOWN_ERRORS = {
+    ("grass-v-parallel", "eastward line, 10 m to the left"): (
+        "point array must contain 0 or >1 elements", "GRASS 8.5's v.parallel returns a one-vertex line for a two-vertex line"),
+    ("grass-v-parallel", "its length"): (
+        "point array must contain 0 or >1 elements", "GRASS 8.5's v.parallel returns a one-vertex line for a two-vertex line"),
     ("whiteboxtools-fill-depressions", "a plane has no sinks"): (
         "Error unwrapping 'output'", "WhiteboxTools 2.4.0's FillDepressions panics at random on small rasters"),
 }

@@ -1,0 +1,21 @@
+id: offset-curve
+kind: operation
+name: Offset Curve
+aka: [Offset line, parallel line, Copy Parallel, offset curve, line offset]
+summary: A line running parallel to each input line at a given distance to one side.
+group: vector/geometry
+inputs:
+  - { name: layer, type: vector, geometry: line }
+outputs:
+  - { name: output, type: vector, geometry: line }
+parameters:
+  distance: { type: length, required: true, note: "Positive to the left of the line's direction, negative to the right." }
+  unit: { type: enum, required: true, values: [m, ft, us-ft, km, mi] }
+checks: [crs.measure, geometry.valid]
+pitfalls:
+  - Engines differ on which side a positive distance goes; check the direction of the line and the engine's convention.
+  - At bends, joins (round, mitre, bevel) change the line's length; tight curves can make the offset line loop or vanish.
+  - In a geographic CRS the distance is in degrees.
+related: [buffer]
+status: active
+review: { state: draft }

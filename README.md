@@ -169,7 +169,7 @@ status: active
 review: { state: draft }
 ```
 
-- Today: 53 operations: the 16 ops Columbus's `vector_op` and `raster_op` run, plus
+- Today: 57 operations: the 16 ops Columbus's `vector_op` and `raster_op` run, plus
   `table-to-points`; then `centroid`, `convex-hull`, `difference`, `union-overlay`,
   `symmetric-difference`, `multipart-to-singlepart`, `polygons-to-lines`,
   `lines-to-polygons`, `voronoi`, `nearest-join`, `count-points-in-polygon`,
@@ -179,7 +179,8 @@ review: { state: draft }
   `delaunay-triangulation`, `envelope`, `minimum-bounding-rectangle`,
   `minimum-bounding-circle`, `densify`, `points-along-lines`, `terrain-ruggedness-index`,
   `topographic-position-index`, `roughness`, `euclidean-distance` and
-  `extract-values-to-points`, which Columbus
+  `extract-values-to-points`, `extract-vertices`, `offset-curve`, `line-intersections`
+  and `explode-lines`, which Columbus
   can run through engine plugins and `run_tool`.
 - A port with `many: true` takes a list (the rasters of a mosaic, the layers of a merge).
 - Ids are hyphenated slugs. `columbus` records the Columbus tool and op in Columbus's own

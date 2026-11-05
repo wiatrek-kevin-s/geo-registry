@@ -1,0 +1,10 @@
+id: whiteboxtools-line-intersections
+implements: line-intersections
+crosswalk:
+  a: input1
+  b: input2
+  output: output
+differences:
+  - Also takes polygons, using their outlines.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,13 @@
+id: grass-v-to-points--vertices
+variant_of: grass-v-to-points
+implements: extract-vertices
+crosswalk:
+  layer: input
+  output: output
+presets:
+  use: vertex
+differences:
+  - Polygon outlines are boundaries without a category, which are skipped unless layer = -1, so a polygon gives only its centroid; with layer = -1 the vertices come out with categories in layer 2 only.
+  - use = node outputs only the ends of each line; start and end one of them.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,8 @@
+id: postgis-st-dumppoints
+implements: extract-vertices
+crosswalk:
+  layer: "#1"
+differences:
+  - Returns rows of (path, geom); the path gives the ring and vertex index.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

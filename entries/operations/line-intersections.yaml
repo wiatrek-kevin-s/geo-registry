@@ -1,0 +1,18 @@
+id: line-intersections
+kind: operation
+name: Line Intersections
+aka: [Intersect (point output), crossing points, Line intersections, line crossings]
+summary: A point wherever a line in one layer crosses a line in another.
+group: vector/overlay
+inputs:
+  - { name: a, type: vector, geometry: line }
+  - { name: b, type: vector, geometry: line }
+outputs:
+  - { name: output, type: vector, geometry: point }
+checks: [crs.agreement]
+pitfalls:
+  - Lines that overlap along a stretch, rather than crossing, give a line or nothing, depending on the engine.
+  - Engines differ on whether a point where two lines touch end to end counts as a crossing.
+related: [intersect]
+status: active
+review: { state: draft }

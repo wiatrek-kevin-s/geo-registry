@@ -1,0 +1,9 @@
+id: sedona-sql-st-dumppoints
+implements: extract-vertices
+crosswalk:
+  layer: geometry
+differences:
+  - Returns an array of points.
+  - 'A Spark SQL function: arguments are columns or column names, run over a Spark DataFrame.'
+effects: { modifies_input: false, network: false }
+review: { state: draft }
