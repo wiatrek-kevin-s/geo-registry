@@ -2,7 +2,7 @@ id: worldclim
 kind: data
 name: WorldClim
 summary: Global gridded climate normals and bioclimatic variables at up to 30 arc-seconds.
-publisher: Unknown
+publisher: WorldClim (Fick and Hijmans)
 themes:
 - global-climate
 - open-data-sources

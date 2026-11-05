@@ -1,0 +1,15 @@
+# PROPOSED by agent research on 2026-11-05 for global review batch 1. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/global-batch-1-2026-11.md
+id: overture-maps-data
+access:
+- type: http
+  url: https://overturemaps.org/
+  auth: none
+- type: s3
+  url: https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/
+  auth: none
+  notes: 'GeoParquet by release, theme and type: release/{release}/theme={theme}/type={type}/ (for example 2026-10-21.0).'
+- type: stac
+  url: https://stac.overturemaps.org/catalog.json
+  auth: none
+  notes: Points to the latest release.

@@ -2,7 +2,7 @@ id: worldpop
 kind: data
 name: WorldPop
 summary: Gridded population counts and demographics at 100 m and 1 km.
-publisher: Unknown
+publisher: WorldPop (University of Southampton)
 themes:
 - global-population
 - open-data-sources
@@ -13,6 +13,10 @@ access:
 - type: http
   url: https://www.worldpop.org/
   auth: none
+- type: api
+  url: https://www.worldpop.org/rest/data
+  auth: none
+  notes: 'JSON catalogue: rest/data/pop/wpgp?iso3=XXX returns the GeoTIFF path for a country; no key mentioned.'
 status: active
 review:
   state: seeded

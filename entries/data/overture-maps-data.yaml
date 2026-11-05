@@ -15,6 +15,15 @@ access:
 - type: http
   url: https://overturemaps.org/
   auth: none
+- type: s3
+  url: https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/
+  auth: none
+  notes: 'GeoParquet by release, theme and type: release/{release}/theme={theme}/type={type}/ (for example
+    2026-10-21.0).'
+- type: stac
+  url: https://stac.overturemaps.org/catalog.json
+  auth: none
+  notes: Points to the latest release.
 notes: Licence varies by theme (ODbL for OSM-derived); query with DuckDB on S3/Azure
 status: active
 review:

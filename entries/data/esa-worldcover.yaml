@@ -13,6 +13,15 @@ access:
 - type: http
   url: https://esa-worldcover.org/
   auth: none
+- type: s3
+  url: https://esa-worldcover.s3.eu-central-1.amazonaws.com/
+  auth: none
+  notes: 2020 (v100) and 2021 (v200); public, no AWS account; managed by VITO. Changes between the two
+    years mix real change with algorithm changes.
+- type: stac
+  url: https://services.terrascope.be/stac/
+  auth: none
+  notes: Terrascope STAC (listed on the AWS registry page).
 status: active
 review:
   state: seeded

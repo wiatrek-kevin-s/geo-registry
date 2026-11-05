@@ -1,0 +1,12 @@
+# PROPOSED by agent research on 2026-11-05 for global review batch 1. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/global-batch-1-2026-11.md
+id: natural-earth
+publisher: North American Cartographic Information Society (NACIS)
+access:
+- type: http
+  url: https://www.naturalearthdata.com/
+  auth: none
+- type: s3
+  url: https://naturalearth.s3.us-west-2.amazonaws.com/
+  auth: none
+  notes: Zipped shapefiles, public, no AWS account.

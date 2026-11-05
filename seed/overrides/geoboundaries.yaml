@@ -1,0 +1,13 @@
+# PROPOSED by agent research on 2026-11-05 for global review batch 1. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/global-batch-1-2026-11.md
+id: geoboundaries
+publisher: William & Mary geoLab
+access:
+- type: http
+  url: https://www.geoboundaries.org/
+  auth: none
+- type: api
+  url: https://www.geoboundaries.org/api/current/gbOpen/
+  auth: none
+  notes: Pattern api/current/gbOpen/{ISO3}/{ADM level}/ (ALL for every country or level); gbAuthoritative and gbHumanitarian
+    are the other releases.

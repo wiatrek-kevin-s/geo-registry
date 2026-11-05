@@ -1,0 +1,12 @@
+# PROPOSED by agent research on 2026-11-05 for global review batch 1. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/global-batch-1-2026-11.md
+id: esri-land-cover-10-m-annual-lulc
+publisher: Impact Observatory and Esri
+access:
+- type: http
+  url: https://livingatlas.arcgis.com/landcover/
+  auth: none
+- type: s3
+  url: https://io-10m-annual-lulc.s3.us-west-2.amazonaws.com/
+  auth: none
+  notes: Annual 9-class maps 2017-2024, COGs, public; managed by Impact Observatory.
