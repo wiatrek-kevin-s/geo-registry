@@ -1,0 +1,16 @@
+id: grass-i-ortho-transform
+kind: implementation
+name: i.ortho.transform
+software: grass
+call: {interface: cli, name: i.ortho.transform}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  group: {type: string, required: true, note: group name}
+  format: {type: string, default: 'fd,rd', values: [idx, src, dst, fwd, rev, fxy, rxy, fd, rd], note: multiple values}
+  coords: {type: string, note: file name}
+  flag_s: {type: boolean, note: flag -s}
+  flag_r: {type: boolean, note: flag -r}
+  flag_x: {type: boolean, note: flag -x}
+  flag_p: {type: boolean, note: flag -p}
+status: active
+review: {state: harvested, source: grass}

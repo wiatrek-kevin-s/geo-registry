@@ -1,0 +1,10 @@
+id: whiteboxtools-reinitialize-attribute-table
+kind: implementation
+name: ReinitializeAttributeTable
+software: whiteboxtools
+call: {interface: cli, name: ReinitializeAttributeTable}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Vector:Any', required: true}
+status: active
+review: {state: harvested, source: whitebox}

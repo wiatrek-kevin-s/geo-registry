@@ -1,0 +1,25 @@
+id: grass-r-external
+kind: implementation
+name: r.external
+software: grass
+call: {interface: cli, name: r.external}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, note: file name}
+  source: {type: string}
+  output: {type: string, required: true, note: output cell}
+  band: {type: integer}
+  title: {type: string}
+  flag_f: {type: boolean, note: flag -f}
+  flag_o: {type: boolean, note: flag -o}
+  flag_j: {type: boolean, note: flag -j}
+  flag_e: {type: boolean, note: flag -e}
+  flag_a: {type: boolean, note: flag -a}
+  flag_h: {type: boolean, note: flag -h}
+  flag_v: {type: boolean, note: flag -v}
+  flag_t: {type: boolean, note: flag -t}
+  flag_m: {type: boolean, note: flag -m}
+  flag_r: {type: boolean, note: flag -r}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

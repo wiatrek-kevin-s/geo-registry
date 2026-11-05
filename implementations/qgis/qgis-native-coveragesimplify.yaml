@@ -1,0 +1,13 @@
+id: qgis-native-coveragesimplify
+kind: implementation
+name: native:coveragesimplify
+software: qgis
+call: {interface: qgis-process, name: 'native:coveragesimplify'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  PRESERVE_BOUNDARY: {type: boolean, required: true, default: false}
+  TOLERANCE: {type: distance, required: true, default: 1.0}
+status: active
+review: {state: harvested, source: qgis}

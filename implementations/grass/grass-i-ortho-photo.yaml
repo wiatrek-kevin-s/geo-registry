@@ -1,0 +1,12 @@
+id: grass-i-ortho-photo
+kind: implementation
+name: i.ortho.photo
+software: grass
+call: {interface: cli, name: i.ortho.photo}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  group: {type: string, required: true, note: group name}
+  productname: {type: string, required: true, values: [i.group, i.ortho.target, i.ortho.elev, i.ortho.camera, g.gui.photo2image,
+      i.ortho.init, g.gui.image2target, i.ortho.rectify]}
+status: active
+review: {state: harvested, source: grass}

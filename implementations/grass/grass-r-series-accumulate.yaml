@@ -1,0 +1,24 @@
+id: grass-r-series-accumulate
+kind: implementation
+name: r.series.accumulate
+software: grass
+call: {interface: cli, name: r.series.accumulate}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  basemap: {type: string, note: cell name}
+  input: {type: string, note: cell name; multiple values}
+  file: {type: string, note: file name}
+  output: {type: string, required: true, note: output cell}
+  scale: {type: float, default: 1.0}
+  shift: {type: float, default: 0.0}
+  lower: {type: string, note: cell name}
+  upper: {type: string, note: cell name}
+  range: {type: float}
+  limits: {type: float, default: '10,30'}
+  method: {type: string, default: gdd, values: [gdd, bedd, huglin, mean]}
+  flag_n: {type: boolean, note: flag -n}
+  flag_z: {type: boolean, note: flag -z}
+  flag_f: {type: boolean, note: flag -f}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

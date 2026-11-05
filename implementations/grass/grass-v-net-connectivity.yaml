@@ -1,0 +1,21 @@
+id: grass-v-net-connectivity
+kind: implementation
+name: v.net.connectivity
+software: grass
+call: {interface: cli, name: v.net.connectivity}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  arc_layer: {type: string, default: '1', note: layer name}
+  node_layer: {type: string, default: '2', note: layer name}
+  arc_column: {type: string, note: dbcolumn name}
+  arc_backward_column: {type: string, note: dbcolumn name}
+  output: {type: string, required: true, note: output vector}
+  node_column: {type: string, note: dbcolumn name}
+  set1_cats: {type: string, note: cats name}
+  set1_where: {type: string, note: sql_query name}
+  set2_cats: {type: string, note: cats name}
+  set2_where: {type: string, note: sql_query name}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

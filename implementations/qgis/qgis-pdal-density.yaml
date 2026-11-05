@@ -1,0 +1,17 @@
+id: qgis-pdal-density
+kind: implementation
+name: pdal:density
+software: qgis
+call: {interface: qgis-process, name: 'pdal:density'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  FILTER_EXPRESSION: {type: expression}
+  FILTER_EXTENT: {type: extent}
+  INPUT: {type: pointcloud, required: true}
+  ORIGIN_X: {type: number}
+  ORIGIN_Y: {type: number}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  RESOLUTION: {type: number, required: true, default: 1}
+  TILE_SIZE: {type: number, required: true, default: 1000}
+status: active
+review: {state: harvested, source: qgis}

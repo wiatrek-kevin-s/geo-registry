@@ -1,0 +1,12 @@
+id: whiteboxtools-reclass-from-file
+kind: implementation
+name: ReclassFromFile
+software: whiteboxtools
+call: {interface: cli, name: ReclassFromFile}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  reclass_file: {type: 'ExistingFile:Text', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

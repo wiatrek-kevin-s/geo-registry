@@ -1,0 +1,19 @@
+id: grass-i-rectify
+kind: implementation
+name: i.rectify
+software: grass
+call: {interface: cli, name: i.rectify}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  group: {type: string, required: true, note: group name}
+  input: {type: string, note: cell name; multiple values}
+  extension: {type: string, required: true}
+  order: {type: integer, required: true, default: 1, values: [1-3]}
+  resolution: {type: float}
+  memory: {type: integer, default: 300}
+  method: {type: string, default: nearest, values: [nearest, linear, cubic, lanczos, linear_f, cubic_f, lanczos_f]}
+  flag_c: {type: boolean, note: flag -c}
+  flag_a: {type: boolean, note: flag -a}
+  flag_t: {type: boolean, note: flag -t}
+status: active
+review: {state: harvested, source: grass}

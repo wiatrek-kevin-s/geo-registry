@@ -1,0 +1,14 @@
+id: grass-r3-info
+kind: implementation
+name: r3.info
+software: grass
+call: {interface: cli, name: r3.info}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: grid3 name}
+  format: {type: string, values: [plain, shell, json]}
+  flag_g: {type: boolean, note: flag -g}
+  flag_r: {type: boolean, note: flag -r}
+  flag_h: {type: boolean, note: flag -h}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,35 @@
+id: grass-v-vol-rst
+kind: implementation
+name: v.vol.rst
+software: grass
+call: {interface: cli, name: v.vol.rst}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  cross_input: {type: string, note: cell name}
+  wcolumn: {type: string, note: dbcolumn name}
+  tension: {type: float, default: 40.0}
+  smooth: {type: float, default: 0.1}
+  smooth_column: {type: string, note: dbcolumn name}
+  where: {type: string, note: sql_query name}
+  deviations: {type: string, note: output vector}
+  cvdev: {type: string, note: output vector}
+  maskmap: {type: string, note: cell name}
+  segmax: {type: integer, default: 50}
+  npmin: {type: integer, default: 200}
+  npmax: {type: integer, default: 700}
+  dmin: {type: float}
+  wscale: {type: float, default: 1.0}
+  zscale: {type: float, default: 1.0}
+  cross_output: {type: string, note: output cell}
+  elevation: {type: string, note: output grid3}
+  gradient: {type: string, note: output grid3}
+  aspect_horizontal: {type: string, note: output grid3}
+  aspect_vertical: {type: string, note: output grid3}
+  ncurvature: {type: string, note: output grid3}
+  gcurvature: {type: string, note: output grid3}
+  mcurvature: {type: string, note: output grid3}
+  flag_c: {type: boolean, note: flag -c}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

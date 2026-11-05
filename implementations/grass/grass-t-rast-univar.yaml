@@ -1,0 +1,21 @@
+id: grass-t-rast-univar
+kind: implementation
+name: t.rast.univar
+software: grass
+call: {interface: cli, name: t.rast.univar}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: strds name}
+  zones: {type: string, note: cell name}
+  nprocs: {type: integer, default: 0}
+  output: {type: string, note: output file}
+  percentile: {type: float, values: [0-100], note: multiple values}
+  where: {type: string}
+  region_relation: {type: string, values: [overlaps, contains, is_contained]}
+  separator: {type: string, default: pipe, note: separator name}
+  flag_e: {type: boolean, note: flag -e}
+  flag_r: {type: boolean, note: flag -r}
+  flag_u: {type: boolean, note: flag -u}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

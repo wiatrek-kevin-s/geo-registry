@@ -1,0 +1,15 @@
+id: grass-i-gensigset
+kind: implementation
+name: i.gensigset
+software: grass
+call: {interface: cli, name: i.gensigset}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  trainingmap: {type: string, required: true, note: cell name}
+  group: {type: string, required: true, note: group name}
+  subgroup: {type: string, required: true, note: subgroup name}
+  signaturefile: {type: string, required: true, note: output signatures/sigset}
+  maxsig: {type: integer, default: 5}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

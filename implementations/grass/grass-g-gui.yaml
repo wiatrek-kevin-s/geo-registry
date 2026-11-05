@@ -1,0 +1,14 @@
+id: grass-g-gui
+kind: implementation
+name: g.gui
+software: grass
+call: {interface: cli, name: g.gui}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  ui: {type: string, default: wxpython, values: [wxpython, text, gtext]}
+  workspace: {type: string, note: file name}
+  flag_f: {type: boolean, note: flag -f}
+  flag_d: {type: boolean, note: flag -d}
+  flag_n: {type: boolean, note: flag -n}
+status: active
+review: {state: harvested, source: grass}

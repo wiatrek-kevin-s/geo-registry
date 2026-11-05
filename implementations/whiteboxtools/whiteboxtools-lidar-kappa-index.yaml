@@ -1,0 +1,14 @@
+id: whiteboxtools-lidar-kappa-index
+kind: implementation
+name: LidarKappaIndex
+software: whiteboxtools
+call: {interface: cli, name: LidarKappaIndex}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input1: {type: 'ExistingFile:Lidar', required: true}
+  input2: {type: 'ExistingFile:Lidar', required: true}
+  output: {type: 'NewFile:Html', required: true, note: output}
+  class_accuracy: {type: 'NewFile:Raster', required: true, note: output}
+  resolution: {type: Float, default: '1.0'}
+status: active
+review: {state: harvested, source: whitebox}

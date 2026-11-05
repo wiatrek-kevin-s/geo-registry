@@ -1,0 +1,34 @@
+id: grass-r-in-wms
+kind: implementation
+name: r.in.wms
+software: grass
+call: {interface: cli, name: r.in.wms}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  url: {type: string, required: true}
+  output: {type: string, required: true, note: output cell}
+  layers: {type: string, required: true, note: multiple values}
+  styles: {type: string, note: multiple values}
+  format: {type: string, default: png, values: [geotiff, tiff, jpeg, gif, png, png8]}
+  srs: {type: integer, default: 4326}
+  driver: {type: string, default: WMS_GRASS, values: [WMS_GDAL, WMS_GRASS, WMTS_GRASS, OnEarth_GRASS]}
+  wms_version: {type: string, default: 1.1.1, values: [1.1.0, 1.1.1, 1.3.0]}
+  maxcols: {type: integer, default: 512}
+  maxrows: {type: integer, default: 512}
+  urlparams: {type: string}
+  username: {type: string}
+  password: {type: string}
+  method: {type: string, default: nearest, values: [nearest, linear, cubic, cubicspline]}
+  gdal_createopt: {type: string, note: multiple values}
+  region: {type: string}
+  bgcolor: {type: string}
+  proxy: {type: string}
+  proxy_user_pw: {type: string}
+  capfile: {type: string, note: bin name}
+  capfile_output: {type: string, note: output file}
+  flag_c: {type: boolean, note: flag -c}
+  flag_o: {type: boolean, note: flag -o}
+  flag_b: {type: boolean, note: flag -b}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

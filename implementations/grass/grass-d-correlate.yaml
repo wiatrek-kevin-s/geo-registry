@@ -1,0 +1,10 @@
+id: grass-d-correlate
+kind: implementation
+name: d.correlate
+software: grass
+call: {interface: cli, name: d.correlate}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: cell name; multiple values}
+status: active
+review: {state: harvested, source: grass}

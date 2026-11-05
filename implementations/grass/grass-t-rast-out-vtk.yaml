@@ -1,0 +1,17 @@
+id: grass-t-rast-out-vtk
+kind: implementation
+name: t.rast.out.vtk
+software: grass
+call: {interface: cli, name: t.rast.out.vtk}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: strds name}
+  directory: {type: string, required: true}
+  elevation: {type: string, note: cell name}
+  where: {type: string}
+  'null': {type: float, default: -99999.99}
+  flag_p: {type: boolean, note: flag -p}
+  flag_c: {type: boolean, note: flag -c}
+  flag_g: {type: boolean, note: flag -g}
+status: active
+review: {state: harvested, source: grass}

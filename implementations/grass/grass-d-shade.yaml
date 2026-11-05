@@ -1,0 +1,13 @@
+id: grass-d-shade
+kind: implementation
+name: d.shade
+software: grass
+call: {interface: cli, name: d.shade}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  shade: {type: string, required: true, note: cell name}
+  color: {type: string, required: true, note: cell name}
+  brighten: {type: integer, default: 0, values: [-99-99]}
+  flag_n: {type: boolean, note: flag -n}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,12 @@
+id: qgis-native-extractspecificvertices
+kind: implementation
+name: native:extractspecificvertices
+software: qgis
+call: {interface: qgis-process, name: 'native:extractspecificvertices'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  VERTICES: {type: string, required: true, default: '0'}
+status: active
+review: {state: harvested, source: qgis}

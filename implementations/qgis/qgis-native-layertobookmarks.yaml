@@ -1,0 +1,13 @@
+id: qgis-native-layertobookmarks
+kind: implementation
+name: native:layertobookmarks
+software: qgis
+call: {interface: qgis-process, name: 'native:layertobookmarks'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  DESTINATION: {type: enum, required: true, default: 0, values: [0, 1], note: '0 Project bookmarks, 1 User bookmarks'}
+  GROUP_EXPRESSION: {type: expression}
+  INPUT: {type: source, required: true}
+  NAME_EXPRESSION: {type: expression, required: true}
+status: active
+review: {state: harvested, source: qgis}

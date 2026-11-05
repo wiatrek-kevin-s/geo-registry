@@ -1,0 +1,11 @@
+id: grass-r3-mask
+kind: implementation
+name: r3.mask
+software: grass
+call: {interface: cli, name: r3.mask}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: grid3 name}
+  maskvalues: {type: string, note: multiple values}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,8 @@
+id: whiteboxtools-dissolve
+implements: dissolve
+crosswalk:
+  layer: input
+  output: output
+  by: field
+effects: { modifies_input: false, network: false }
+review: { state: draft }

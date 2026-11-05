@@ -1,0 +1,15 @@
+id: grass-d-rast-leg
+kind: implementation
+name: d.rast.leg
+software: grass
+call: {interface: cli, name: d.rast.leg}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: cell name}
+  lines: {type: integer}
+  raster: {type: string, note: cell name}
+  flag_f: {type: boolean, note: flag -f}
+  flag_n: {type: boolean, note: flag -n}
+  flag_s: {type: boolean, note: flag -s}
+status: active
+review: {state: harvested, source: grass}

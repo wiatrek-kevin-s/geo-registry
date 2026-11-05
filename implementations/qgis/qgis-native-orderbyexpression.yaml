@@ -1,0 +1,14 @@
+id: qgis-native-orderbyexpression
+kind: implementation
+name: native:orderbyexpression
+software: qgis
+call: {interface: qgis-process, name: 'native:orderbyexpression'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ASCENDING: {type: boolean, required: true, default: true}
+  EXPRESSION: {type: expression, required: true}
+  INPUT: {type: source, required: true}
+  NULLS_FIRST: {type: boolean, required: true, default: false}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

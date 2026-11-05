@@ -1,0 +1,16 @@
+id: grass-v-out-svg
+kind: implementation
+name: v.out.svg
+software: grass
+call: {interface: cli, name: v.out.svg}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '-1', note: layer_all name}
+  output: {type: string, required: true, note: output file}
+  type: {type: string, required: true, default: poly, values: [poly, line, point]}
+  precision: {type: integer, default: 6}
+  attribute: {type: string, note: dbcolumn name; multiple values}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,11 @@
+id: grass-r-slope-aspect
+implements: slope
+crosswalk:
+  raster: elevation
+  output: slope
+  units: { param: format, values: { degrees: degrees, percent: percent } }
+  z_unit: { fixed: crs-units, note: "Elevation is taken in the project's horizontal units; otherwise set zscale." }
+differences:
+  - The same module writes aspect (and curvatures) when those outputs are named; its aspect convention differs from compass bearings unless -n is set.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

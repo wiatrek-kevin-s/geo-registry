@@ -1,0 +1,13 @@
+id: grass-t-rename
+kind: implementation
+name: t.rename
+software: grass
+call: {interface: cli, name: t.rename}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: stds name}
+  output: {type: string, required: true, note: output stds}
+  type: {type: string, default: strds, values: [strds, stvds, str3ds]}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,12 @@
+id: qgis-native-findprojection
+kind: implementation
+name: native:findprojection
+software: qgis
+call: {interface: qgis-process, name: 'native:findprojection'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  TARGET_AREA: {type: extent, required: true}
+status: active
+review: {state: harvested, source: qgis}

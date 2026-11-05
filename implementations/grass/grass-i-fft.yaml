@@ -1,0 +1,13 @@
+id: grass-i-fft
+kind: implementation
+name: i.fft
+software: grass
+call: {interface: cli, name: i.fft}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  real: {type: string, required: true, note: output cell}
+  imaginary: {type: string, required: true, note: output cell}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,19 @@
+id: grass-d-rast-arrow
+kind: implementation
+name: d.rast.arrow
+software: grass
+call: {interface: cli, name: d.rast.arrow}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: cell name}
+  type: {type: string, default: grass, values: [grass, compass, drainage, agnps, answers, terraflow]}
+  color: {type: string, default: green, note: color name}
+  grid_color: {type: string, default: gray, note: color_none name}
+  null_color: {type: string, default: black, note: color_none name}
+  unknown_color: {type: string, default: red, note: color_none name}
+  skip: {type: integer, default: 1}
+  magnitude_map: {type: string, note: cell name}
+  scale: {type: float, default: 1.0}
+  flag_a: {type: boolean, note: flag -a}
+status: active
+review: {state: harvested, source: grass}

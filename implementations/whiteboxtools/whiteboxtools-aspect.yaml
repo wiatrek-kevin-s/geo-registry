@@ -1,0 +1,12 @@
+id: whiteboxtools-aspect
+kind: implementation
+name: Aspect
+software: whiteboxtools
+call: {interface: cli, name: Aspect}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  zfactor: {type: Float}
+status: active
+review: {state: harvested, source: whitebox}

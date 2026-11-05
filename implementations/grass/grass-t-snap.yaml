@@ -1,0 +1,11 @@
+id: grass-t-snap
+kind: implementation
+name: t.snap
+software: grass
+call: {interface: cli, name: t.snap}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: stds name}
+  type: {type: string, default: strds, values: [strds, stvds, str3ds]}
+status: active
+review: {state: harvested, source: grass}

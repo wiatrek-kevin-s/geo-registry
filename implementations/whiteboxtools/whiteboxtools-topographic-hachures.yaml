@@ -1,0 +1,22 @@
+id: whiteboxtools-topographic-hachures
+kind: implementation
+name: TopographicHachures
+software: whiteboxtools
+call: {interface: cli, name: TopographicHachures}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Vector:Line', required: true, note: output}
+  interval: {type: Float, required: true, default: '10.0'}
+  base: {type: Float, default: '0.0'}
+  smooth: {type: Integer, default: '9'}
+  tolerance: {type: Float, default: '10.0'}
+  sep: {type: Float, required: true, default: '2'}
+  distmin: {type: Float, required: true, default: '0.5'}
+  distmax: {type: Float, required: true, default: '2'}
+  discr: {type: Float, required: true, default: '0.5'}
+  turnmax: {type: Float, required: true, default: '45.0'}
+  slopemin: {type: Float, required: true, default: '0.5'}
+  depthmax: {type: Float, required: true, default: '16'}
+status: active
+review: {state: harvested, source: whitebox}

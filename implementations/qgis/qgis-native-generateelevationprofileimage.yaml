@@ -1,0 +1,24 @@
+id: qgis-native-generateelevationprofileimage
+kind: implementation
+name: native:generateelevationprofileimage
+software: qgis
+call: {interface: qgis-process, name: 'native:generateelevationprofileimage'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BACKGROUND_COLOR: {type: color, default: '#ffffff'}
+  BORDER_COLOR: {type: color, default: '#636363'}
+  CURVE: {type: geometry, required: true}
+  DPI: {type: number, required: true, default: 96}
+  HEIGHT: {type: number, required: true, default: 300}
+  MAP_LAYERS: {type: multilayer, required: true}
+  MAXIMUM_DISTANCE: {type: number}
+  MAXIMUM_ELEVATION: {type: number}
+  MINIMUM_DISTANCE: {type: number}
+  MINIMUM_ELEVATION: {type: number}
+  OUTPUT: {type: fileDestination, required: true, note: output}
+  TERRAIN_LAYER: {type: layer}
+  TEXT_COLOR: {type: color, default: '#000000'}
+  TOLERANCE: {type: number, required: true, default: 5.0}
+  WIDTH: {type: number, required: true, default: 400}
+status: active
+review: {state: harvested, source: qgis}

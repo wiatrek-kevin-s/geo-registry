@@ -1,0 +1,13 @@
+id: qgis-native-randomextract
+kind: implementation
+name: native:randomextract
+software: qgis
+call: {interface: qgis-process, name: 'native:randomextract'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  METHOD: {type: enum, required: true, default: 0, values: [0, 1], note: '0 Number of features, 1 Percentage of features'}
+  NUMBER: {type: number, required: true, default: 10}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

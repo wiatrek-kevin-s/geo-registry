@@ -1,0 +1,22 @@
+id: grass-t-rast3d-list
+kind: implementation
+name: t.rast3d.list
+software: grass
+call: {interface: cli, name: t.rast3d.list}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: str3ds name}
+  order: {type: string, default: start_time, values: [id, name, creator, mapset, temporal_type, creation_time, start_time,
+      end_time, north, south, west, east, nsres, tbres, ewres, cols, rows, depths, number_of_cells, min, max], note: multiple
+      values}
+  columns: {type: string, default: 'name,mapset,start_time,end_time', values: [id, name, creator, mapset, temporal_type, creation_time,
+      start_time, end_time, north, south, west, east, nsres, tbres, ewres, cols, rows, depths, number_of_cells, min, max],
+    note: multiple values}
+  where: {type: string}
+  method: {type: string, default: cols, values: [cols, comma, delta, deltagaps, gran]}
+  separator: {type: string, default: pipe, note: separator name}
+  output: {type: string, note: output file}
+  flag_s: {type: boolean, note: flag -s}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

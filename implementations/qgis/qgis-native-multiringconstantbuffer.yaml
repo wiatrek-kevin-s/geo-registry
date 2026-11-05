@@ -1,0 +1,13 @@
+id: qgis-native-multiringconstantbuffer
+kind: implementation
+name: native:multiringconstantbuffer
+software: qgis
+call: {interface: qgis-process, name: 'native:multiringconstantbuffer'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  DISTANCE: {type: distance, required: true, default: 1}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  RINGS: {type: number, required: true, default: 1}
+status: active
+review: {state: harvested, source: qgis}

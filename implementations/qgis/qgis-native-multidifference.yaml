@@ -1,0 +1,12 @@
+id: qgis-native-multidifference
+kind: implementation
+name: native:multidifference
+software: qgis
+call: {interface: qgis-process, name: 'native:multidifference'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  OVERLAYS: {type: multilayer, required: true}
+status: active
+review: {state: harvested, source: qgis}

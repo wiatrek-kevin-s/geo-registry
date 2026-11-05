@@ -1,0 +1,21 @@
+id: grass-r-stream-extract
+kind: implementation
+name: r.stream.extract
+software: grass
+call: {interface: cli, name: r.stream.extract}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  elevation: {type: string, required: true, note: cell name}
+  accumulation: {type: string, note: cell name}
+  depression: {type: string, note: cell name}
+  threshold: {type: float, required: true}
+  d8cut: {type: float}
+  mexp: {type: float, default: 0.0}
+  stream_length: {type: integer, default: 0}
+  memory: {type: integer, default: 300}
+  stream_raster: {type: string, note: output cell}
+  stream_vector: {type: string, note: output vector}
+  direction: {type: string, note: output cell}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

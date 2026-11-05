@@ -1,0 +1,22 @@
+id: grass-v-support
+kind: implementation
+name: v.support
+software: grass
+call: {interface: cli, name: v.support}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: vector name}
+  organization: {type: string}
+  date: {type: string}
+  person: {type: string}
+  map_name: {type: string}
+  map_date: {type: string}
+  scale: {type: integer}
+  zone: {type: integer}
+  threshold: {type: float}
+  comment: {type: string}
+  cmdhist: {type: string}
+  flag_r: {type: boolean, note: flag -r}
+  flag_h: {type: boolean, note: flag -h}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,13 @@
+id: grass-i-ifft
+kind: implementation
+name: i.ifft
+software: grass
+call: {interface: cli, name: i.ifft}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  real: {type: string, required: true, note: cell name}
+  imaginary: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

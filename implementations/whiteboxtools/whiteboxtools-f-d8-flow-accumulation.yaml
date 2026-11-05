@@ -1,0 +1,17 @@
+id: whiteboxtools-f-d8-flow-accumulation
+kind: implementation
+name: FD8FlowAccumulation
+software: whiteboxtools
+call: {interface: cli, name: FD8FlowAccumulation}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  out_type: {type: OptionList, default: specific contributing area, values: [cells, specific contributing area, catchment
+        area]}
+  exponent: {type: Float, default: '1.1'}
+  threshold: {type: Float}
+  log: {type: Boolean}
+  clip: {type: Boolean}
+status: active
+review: {state: harvested, source: whitebox}

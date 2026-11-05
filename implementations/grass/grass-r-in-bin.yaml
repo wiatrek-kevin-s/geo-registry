@@ -1,0 +1,30 @@
+id: grass-r-in-bin
+kind: implementation
+name: r.in.bin
+software: grass
+call: {interface: cli, name: r.in.bin}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: bin name}
+  output: {type: string, required: true, note: output cell}
+  title: {type: string}
+  bytes: {type: integer, values: ['1', '2', '4', '8']}
+  header: {type: integer, default: 0}
+  bands: {type: integer, default: 1}
+  order: {type: string, default: native, values: [big, little, native, swap]}
+  north: {type: float}
+  south: {type: float}
+  east: {type: float}
+  west: {type: float}
+  rows: {type: integer}
+  cols: {type: integer}
+  anull: {type: float}
+  flip: {type: string, values: [h, v], note: multiple values}
+  flag_f: {type: boolean, note: flag -f}
+  flag_d: {type: boolean, note: flag -d}
+  flag_s: {type: boolean, note: flag -s}
+  flag_b: {type: boolean, note: flag -b}
+  flag_h: {type: boolean, note: flag -h}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

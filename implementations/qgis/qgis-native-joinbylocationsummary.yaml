@@ -1,0 +1,19 @@
+id: qgis-native-joinbylocationsummary
+kind: implementation
+name: native:joinbylocationsummary
+software: qgis
+call: {interface: qgis-process, name: 'native:joinbylocationsummary'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  DISCARD_NONMATCHING: {type: boolean, required: true, default: false}
+  INPUT: {type: source, required: true}
+  JOIN: {type: source, required: true}
+  JOIN_FIELDS: {type: field, note: multiple values}
+  OUTPUT: {type: sink, required: true, note: output}
+  PREDICATE: {type: enum, required: true, default: 0, values: [0, 1, 2, 3, 4, 5, 6], note: '0 intersect, 1 contain, 2 equal,
+      3 touch, 4 overlap, 5 are within, 6 cross; multiple values'}
+  SUMMARIES: {type: enum, values: [0, 1, 10, 11, 12, 13, 14, 15, 16, 17, 18, 2, 3, 4, 5, 6, 7, 8, 9], note: '0 count, 1 unique,
+      10 majority, 11 q1, 12 q3, 13 iqr, 14 empty, 15 filled, 16 min_length, 17 max_length, 18 mean_length, 2 min, 3 max,
+      4 range, 5 sum, 6 mean, 7 median, 8 stddev, 9 minority; multiple values'}
+status: active
+review: {state: harvested, source: qgis}

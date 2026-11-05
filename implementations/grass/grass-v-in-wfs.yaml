@@ -1,0 +1,22 @@
+id: grass-v-in-wfs
+kind: implementation
+name: v.in.wfs
+software: grass
+call: {interface: cli, name: v.in.wfs}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  url: {type: string, required: true}
+  output: {type: string, required: true, note: output vector}
+  name: {type: string, note: multiple values}
+  layer: {type: string, note: multiple values}
+  srs: {type: string}
+  maximum_features: {type: integer}
+  start_index: {type: integer}
+  version: {type: string, default: 1.0.0}
+  username: {type: string}
+  password: {type: string}
+  flag_l: {type: boolean, note: flag -l}
+  flag_r: {type: boolean, note: flag -r}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

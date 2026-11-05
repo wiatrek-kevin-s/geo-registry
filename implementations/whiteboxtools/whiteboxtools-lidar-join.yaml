@@ -1,0 +1,11 @@
+id: whiteboxtools-lidar-join
+kind: implementation
+name: LidarJoin
+software: whiteboxtools
+call: {interface: cli, name: LidarJoin}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  inputs: {type: 'FileList:Lidar', required: true}
+  output: {type: 'NewFile:Lidar', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

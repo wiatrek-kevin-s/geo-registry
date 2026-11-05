@@ -1,0 +1,18 @@
+id: grass-d-rast-num
+kind: implementation
+name: d.rast.num
+software: grass
+call: {interface: cli, name: d.rast.num}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: cell name}
+  text_color: {type: string, default: black, note: color name}
+  grid_color: {type: string, default: gray, note: color_none name}
+  precision: {type: integer, default: 1, values: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']}
+  font: {type: string}
+  path: {type: string, note: font name}
+  charset: {type: string}
+  flag_a: {type: boolean, note: flag -a}
+  flag_f: {type: boolean, note: flag -f}
+status: active
+review: {state: harvested, source: grass}

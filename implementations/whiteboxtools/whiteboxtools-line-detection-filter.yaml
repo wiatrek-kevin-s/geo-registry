@@ -1,0 +1,14 @@
+id: whiteboxtools-line-detection-filter
+kind: implementation
+name: LineDetectionFilter
+software: whiteboxtools
+call: {interface: cli, name: LineDetectionFilter}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  variant: {type: OptionList, default: vertical, values: [vertical, horizontal, '45', '135']}
+  absvals: {type: Boolean}
+  clip: {type: Float, default: '0.0'}
+status: active
+review: {state: harvested, source: whitebox}

@@ -1,0 +1,15 @@
+id: qgis-gdal-polygonize
+kind: implementation
+name: gdal:polygonize
+software: qgis
+call: {interface: qgis-process, name: 'gdal:polygonize'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BAND: {type: band, required: true, default: 1}
+  EIGHT_CONNECTEDNESS: {type: boolean, required: true, default: false}
+  EXTRA: {type: string}
+  FIELD: {type: string, required: true, default: DN}
+  INPUT: {type: raster, required: true}
+  OUTPUT: {type: vectorDestination, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

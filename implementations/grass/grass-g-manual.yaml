@@ -1,0 +1,14 @@
+id: grass-g-manual
+kind: implementation
+name: g.manual
+software: grass
+call: {interface: cli, name: g.manual}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  entry: {type: string, required: true}
+  flag_i: {type: boolean, note: flag -i}
+  flag_t: {type: boolean, note: flag -t}
+  flag_m: {type: boolean, note: flag -m}
+  flag_o: {type: boolean, note: flag -o}
+status: active
+review: {state: harvested, source: grass}

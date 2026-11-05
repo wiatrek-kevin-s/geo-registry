@@ -1,0 +1,14 @@
+id: grass-i-eb-eta
+kind: implementation
+name: i.eb.eta
+software: grass
+call: {interface: cli, name: i.eb.eta}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  netradiationdiurnal: {type: string, required: true, default: rnetday, note: cell name}
+  evaporativefraction: {type: string, required: true, default: evapfr, note: cell name}
+  temperature: {type: string, required: true, default: tempk, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

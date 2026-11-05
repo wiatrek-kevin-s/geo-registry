@@ -1,0 +1,13 @@
+id: grass-r3-stats
+kind: implementation
+name: r3.stats
+software: grass
+call: {interface: cli, name: r3.stats}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: grid3 name}
+  nsteps: {type: integer, default: 20}
+  flag_e: {type: boolean, note: flag -e}
+  flag_c: {type: boolean, note: flag -c}
+status: active
+review: {state: harvested, source: grass}

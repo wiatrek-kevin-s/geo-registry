@@ -1,0 +1,14 @@
+id: grass-d-font
+kind: implementation
+name: d.font
+software: grass
+call: {interface: cli, name: d.font}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  font: {type: string, default: romans}
+  path: {type: string, note: font name}
+  charset: {type: string, default: UTF-8}
+  flag_l: {type: boolean, note: flag -l}
+  flag_v: {type: boolean, note: flag -v}
+status: active
+review: {state: harvested, source: grass}

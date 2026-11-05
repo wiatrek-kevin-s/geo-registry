@@ -1,0 +1,16 @@
+id: qgis-native-extractbyattribute
+kind: implementation
+name: native:extractbyattribute
+software: qgis
+call: {interface: qgis-process, name: 'native:extractbyattribute'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  FAIL_OUTPUT: {type: sink, note: output}
+  FIELD: {type: field, required: true}
+  INPUT: {type: source, required: true}
+  OPERATOR: {type: enum, required: true, default: 0, values: [0, 1, 10, 2, 3, 4, 5, 6, 7, 8, 9], note: '0 =, 1 ≠, 10 does
+      not contain, 2 >, 3 ≥, 4 <, 5 ≤, 6 begins with, 7 contains, 8 is null, 9 is not null'}
+  OUTPUT: {type: sink, required: true, note: output}
+  VALUE: {type: string}
+status: active
+review: {state: harvested, source: qgis}

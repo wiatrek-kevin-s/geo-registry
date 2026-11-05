@@ -1,0 +1,12 @@
+id: whiteboxtools-power
+kind: implementation
+name: Power
+software: whiteboxtools
+call: {interface: cli, name: Power}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input1: {type: 'ExistingFileOrFloat:Raster', required: true}
+  input2: {type: 'ExistingFileOrFloat:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

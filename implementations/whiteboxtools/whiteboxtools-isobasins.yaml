@@ -1,0 +1,13 @@
+id: whiteboxtools-isobasins
+kind: implementation
+name: Isobasins
+software: whiteboxtools
+call: {interface: cli, name: Isobasins}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  size: {type: Integer, required: true}
+  connections: {type: Boolean, default: 'false'}
+status: active
+review: {state: harvested, source: whitebox}

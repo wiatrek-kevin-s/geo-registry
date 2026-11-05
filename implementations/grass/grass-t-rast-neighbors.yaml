@@ -1,0 +1,30 @@
+id: grass-t-rast-neighbors
+kind: implementation
+name: t.rast.neighbors
+software: grass
+call: {interface: cli, name: t.rast.neighbors}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: strds name}
+  output: {type: string, required: true, note: output strds}
+  where: {type: string}
+  region_relation: {type: string, values: [overlaps, contains, is_contained]}
+  selection: {type: string, note: cell name}
+  size: {type: integer, default: 3}
+  method: {type: string, required: true, default: average, values: [average, median, mode, minimum, maximum, range, stddev,
+      sum, count, variance, diversity, interspersion, quart1, quart3, perc90, quantile]}
+  weighting_function: {type: string, default: none, values: [none, gaussian, exponential, file]}
+  weighting_factor: {type: float}
+  weight: {type: string, note: file name}
+  quantile: {type: float, values: [0.0-1.0], note: multiple values}
+  basename: {type: string, required: true}
+  suffix: {type: string, default: gran}
+  semantic_labels: {type: string, default: input, values: [input, method]}
+  nprocs: {type: integer, default: 1}
+  flag_c: {type: boolean, note: flag -c}
+  flag_e: {type: boolean, note: flag -e}
+  flag_n: {type: boolean, note: flag -n}
+  flag_r: {type: boolean, note: flag -r}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

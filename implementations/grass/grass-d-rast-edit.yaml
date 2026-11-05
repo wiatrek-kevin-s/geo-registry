@@ -1,0 +1,18 @@
+id: grass-d-rast-edit
+kind: implementation
+name: d.rast.edit
+software: grass
+call: {interface: cli, name: d.rast.edit}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  aspect: {type: string, note: cell name}
+  width: {type: integer, default: 640}
+  height: {type: integer, default: 480}
+  size: {type: integer, default: 12}
+  rows: {type: integer, default: 100}
+  cols: {type: integer, default: 100}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

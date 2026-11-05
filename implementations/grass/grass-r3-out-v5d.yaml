@@ -1,0 +1,13 @@
+id: grass-r3-out-v5d
+kind: implementation
+name: r3.out.v5d
+software: grass
+call: {interface: cli, name: r3.out.v5d}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: grid3 name}
+  output: {type: string, required: true, note: output file}
+  flag_m: {type: boolean, note: flag -m}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

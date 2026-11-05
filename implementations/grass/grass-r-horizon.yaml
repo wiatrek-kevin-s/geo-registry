@@ -1,0 +1,30 @@
+id: grass-r-horizon
+kind: implementation
+name: r.horizon
+software: grass
+call: {interface: cli, name: r.horizon}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  elevation: {type: string, required: true, note: cell name}
+  direction: {type: float}
+  step: {type: float}
+  start: {type: float, default: 0.0}
+  end: {type: float, default: 360.0}
+  bufferzone: {type: float, values: [0-]}
+  e_buff: {type: float, values: [0-]}
+  w_buff: {type: float, values: [0-]}
+  n_buff: {type: float, values: [0-]}
+  s_buff: {type: float, values: [0-]}
+  maxdistance: {type: float}
+  output: {type: string, note: output cell}
+  coordinates: {type: float, note: coords name; multiple values}
+  distance: {type: float, default: 1.0}
+  format: {type: string, required: true, default: plain, values: [plain, json]}
+  file: {type: string, default: '-', note: output file}
+  nprocs: {type: integer, default: 0}
+  flag_l: {type: boolean, note: flag -l}
+  flag_d: {type: boolean, note: flag -d}
+  flag_c: {type: boolean, note: flag -c}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

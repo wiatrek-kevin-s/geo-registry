@@ -1,0 +1,12 @@
+id: whiteboxtools-find-lowest-or-highest-points
+kind: implementation
+name: FindLowestOrHighestPoints
+software: whiteboxtools
+call: {interface: cli, name: FindLowestOrHighestPoints}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Vector:Point', required: true, note: output}
+  out_type: {type: OptionList, default: lowest, values: [lowest, highest, both]}
+status: active
+review: {state: harvested, source: whitebox}

@@ -1,0 +1,21 @@
+id: grass-v-mkgrid
+kind: implementation
+name: v.mkgrid
+software: grass
+call: {interface: cli, name: v.mkgrid}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: output vector}
+  grid: {type: integer}
+  position: {type: string, default: region, values: [region, coor]}
+  coordinates: {type: float, note: coords name}
+  box: {type: float}
+  angle: {type: float, default: 0.0}
+  breaks: {type: integer, default: 0, values: [0-60]}
+  type: {type: string, default: area, values: [point, line, area]}
+  flag_h: {type: boolean, note: flag -h}
+  flag_a: {type: boolean, note: flag -a}
+  flag_d: {type: boolean, note: flag -d}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,39 @@
+id: grass-d-legend
+kind: implementation
+name: d.legend
+software: grass
+call: {interface: cli, name: d.legend}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  raster: {type: string, note: cell name}
+  raster_3d: {type: string, note: grid3 name}
+  title: {type: string}
+  title_fontsize: {type: float, values: [1-360]}
+  lines: {type: integer, default: 0, values: [0-1000]}
+  thin: {type: integer, default: 1, values: [1-1000]}
+  units: {type: string}
+  labelnum: {type: integer, default: 5, values: [2-100]}
+  label_values: {type: float, note: multiple values}
+  label_step: {type: float}
+  digits: {type: integer, values: [0-6]}
+  at: {type: float, values: [0-100]}
+  use: {type: float, note: multiple values}
+  range: {type: float}
+  color: {type: string, default: black, note: color name}
+  font: {type: string}
+  fontsize: {type: float, values: [1-360]}
+  path: {type: string, note: font name}
+  charset: {type: string}
+  border_color: {type: string, default: black, note: color_none name}
+  bgcolor: {type: string, default: white, note: color_none name}
+  flag_v: {type: boolean, note: flag -v}
+  flag_c: {type: boolean, note: flag -c}
+  flag_t: {type: boolean, note: flag -t}
+  flag_n: {type: boolean, note: flag -n}
+  flag_s: {type: boolean, note: flag -s}
+  flag_f: {type: boolean, note: flag -f}
+  flag_d: {type: boolean, note: flag -d}
+  flag_b: {type: boolean, note: flag -b}
+  flag_l: {type: boolean, note: flag -l}
+status: active
+review: {state: harvested, source: grass}

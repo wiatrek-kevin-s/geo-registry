@@ -1,0 +1,13 @@
+id: grass-r-cross
+kind: implementation
+name: r.cross
+software: grass
+call: {interface: cli, name: r.cross}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name; multiple values}
+  output: {type: string, required: true, note: output cell}
+  flag_z: {type: boolean, note: flag -z}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

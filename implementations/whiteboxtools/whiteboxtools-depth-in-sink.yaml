@@ -1,0 +1,12 @@
+id: whiteboxtools-depth-in-sink
+kind: implementation
+name: DepthInSink
+software: whiteboxtools
+call: {interface: cli, name: DepthInSink}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  zero_background: {type: Boolean}
+status: active
+review: {state: harvested, source: whitebox}

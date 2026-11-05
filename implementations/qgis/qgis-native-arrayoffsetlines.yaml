@@ -1,0 +1,16 @@
+id: qgis-native-arrayoffsetlines
+kind: implementation
+name: native:arrayoffsetlines
+software: qgis
+call: {interface: qgis-process, name: 'native:arrayoffsetlines'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  COUNT: {type: number, required: true, default: 10}
+  INPUT: {type: source, required: true}
+  JOIN_STYLE: {type: enum, required: true, default: 0, values: [0, 1, 2], note: '0 Round, 1 Miter, 2 Bevel'}
+  MITER_LIMIT: {type: number, required: true, default: 2}
+  OFFSET: {type: distance, required: true, default: 1.0}
+  OUTPUT: {type: sink, required: true, note: output}
+  SEGMENTS: {type: number, required: true, default: 8}
+status: active
+review: {state: harvested, source: qgis}

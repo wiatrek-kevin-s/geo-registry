@@ -1,0 +1,16 @@
+id: grass-r-distance
+kind: implementation
+name: r.distance
+software: grass
+call: {interface: cli, name: r.distance}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: cell name; multiple values}
+  separator: {type: string, note: separator name}
+  sort: {type: string, values: [asc, desc]}
+  format: {type: string, required: true, default: plain, values: [plain, csv, json]}
+  flag_l: {type: boolean, note: flag -l}
+  flag_o: {type: boolean, note: flag -o}
+  flag_n: {type: boolean, note: flag -n}
+status: active
+review: {state: harvested, source: grass}

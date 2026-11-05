@@ -1,0 +1,24 @@
+id: grass-r-proj
+kind: implementation
+name: r.proj
+software: grass
+call: {interface: cli, name: r.proj}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  project: {type: string, required: true, note: location name}
+  mapset: {type: string, note: mapset name}
+  input: {type: string, note: cell name}
+  dbase: {type: string, note: dbase name}
+  output: {type: string, note: output cell}
+  method: {type: string, default: nearest, values: [nearest, bilinear, bicubic, lanczos, bilinear_f, bicubic_f, lanczos_f]}
+  memory: {type: integer, default: 300}
+  resolution: {type: float}
+  format: {type: string, required: true, default: plain, values: [plain, shell, json]}
+  pipeline: {type: string}
+  flag_l: {type: boolean, note: flag -l}
+  flag_n: {type: boolean, note: flag -n}
+  flag_p: {type: boolean, note: flag -p}
+  flag_g: {type: boolean, note: flag -g}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

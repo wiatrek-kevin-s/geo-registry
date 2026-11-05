@@ -1,0 +1,26 @@
+id: grass-v-to-db
+kind: implementation
+name: v.to.db
+software: grass
+call: {interface: cli, name: v.to.db}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '1', note: layer name}
+  type: {type: string, default: 'point,line,boundary,centroid', values: [point, line, boundary, centroid], note: multiple
+      values}
+  option: {type: string, required: true, values: [cat, area, compact, fd, perimeter, length, count, coor, start, end, sides,
+      query, slope, sinuous, azimuth, bbox]}
+  columns: {type: string, required: true, note: dbcolumn name; multiple values}
+  units: {type: string, values: [miles, feet, meters, kilometers, acres, hectares, radians, degrees]}
+  query_layer: {type: string, default: '1', note: layer name}
+  query_column: {type: string, note: dbcolumn name}
+  separator: {type: string, default: pipe, note: separator name}
+  format: {type: string, required: true, default: plain, values: [plain, json]}
+  flag_p: {type: boolean, note: flag -p}
+  flag_h: {type: boolean, note: flag -h}
+  flag_s: {type: boolean, note: flag -s}
+  flag_c: {type: boolean, note: flag -c}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

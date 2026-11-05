@@ -1,0 +1,21 @@
+id: grass-r-region
+kind: implementation
+name: r.region
+software: grass
+call: {interface: cli, name: r.region}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: cell name}
+  region: {type: string, note: windows name}
+  raster: {type: string, note: cell name}
+  vector: {type: string, note: vector name}
+  n: {type: string}
+  s: {type: string}
+  e: {type: string}
+  w: {type: string}
+  align: {type: string, note: cell name}
+  flag_c: {type: boolean, note: flag -c}
+  flag_d: {type: boolean, note: flag -d}
+  flag_a: {type: boolean, note: flag -a}
+status: active
+review: {state: harvested, source: grass}

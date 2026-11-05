@@ -1,0 +1,27 @@
+id: grass-d-grid
+kind: implementation
+name: d.grid
+software: grass
+call: {interface: cli, name: d.grid}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  size: {type: string, required: true}
+  origin: {type: float, default: '0,0', note: coords name}
+  direction: {type: string, default: both, values: [both, east-west, north-south]}
+  width: {type: float}
+  color: {type: string, default: gray, note: color name}
+  border_color: {type: string, default: black, note: color name}
+  text_color: {type: string, default: gray, note: color name}
+  bgcolor: {type: string, default: none, note: color_none name}
+  fontsize: {type: integer, default: 9, values: [1-72]}
+  flag_a: {type: boolean, note: flag -a}
+  flag_g: {type: boolean, note: flag -g}
+  flag_w: {type: boolean, note: flag -w}
+  flag_c: {type: boolean, note: flag -c}
+  flag_d: {type: boolean, note: flag -d}
+  flag_f: {type: boolean, note: flag -f}
+  flag_n: {type: boolean, note: flag -n}
+  flag_b: {type: boolean, note: flag -b}
+  flag_t: {type: boolean, note: flag -t}
+status: active
+review: {state: harvested, source: grass}

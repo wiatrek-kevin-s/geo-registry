@@ -1,0 +1,10 @@
+id: whiteboxtools-las-to-multipoint-shapefile
+kind: implementation
+name: LasToMultipointShapefile
+software: whiteboxtools
+call: {interface: cli, name: LasToMultipointShapefile}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar'}
+status: active
+review: {state: harvested, source: whitebox}

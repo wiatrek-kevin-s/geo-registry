@@ -1,0 +1,15 @@
+id: grass-i-zc
+kind: implementation
+name: i.zc
+software: grass
+call: {interface: cli, name: i.zc}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  width: {type: integer, default: 9}
+  threshold: {type: float, default: 1.0}
+  orientations: {type: integer, default: 1}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

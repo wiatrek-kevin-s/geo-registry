@@ -1,0 +1,15 @@
+id: qgis-native-rasterlayerzonalstats
+kind: implementation
+name: native:rasterlayerzonalstats
+software: qgis
+call: {interface: qgis-process, name: 'native:rasterlayerzonalstats'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BAND: {type: band, required: true, default: 1}
+  INPUT: {type: raster, required: true}
+  OUTPUT_TABLE: {type: sink, required: true, note: output}
+  REF_LAYER: {type: enum, required: true, default: 0, values: [0, 1], note: '0 Input layer, 1 Zones layer'}
+  ZONES: {type: raster, required: true}
+  ZONES_BAND: {type: band, required: true, default: 1}
+status: active
+review: {state: harvested, source: qgis}

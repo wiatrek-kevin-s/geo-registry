@@ -1,0 +1,13 @@
+id: qgis-pdal-merge
+kind: implementation
+name: pdal:merge
+software: qgis
+call: {interface: qgis-process, name: 'pdal:merge'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  FILTER_EXPRESSION: {type: expression}
+  FILTER_EXTENT: {type: extent}
+  LAYERS: {type: multilayer, required: true}
+  OUTPUT: {type: pointCloudDestination, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

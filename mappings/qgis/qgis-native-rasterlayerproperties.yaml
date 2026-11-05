@@ -1,0 +1,6 @@
+id: qgis-native-rasterlayerproperties
+implements: describe-raster
+crosswalk:
+  raster: INPUT
+effects: { modifies_input: false, network: false }
+review: { state: draft }

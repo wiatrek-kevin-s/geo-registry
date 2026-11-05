@@ -1,0 +1,27 @@
+id: grass-v-transform
+kind: implementation
+name: v.transform
+software: grass
+call: {interface: cli, name: v.transform}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '-1', note: layer_all name}
+  output: {type: string, required: true, note: output vector}
+  xshift: {type: float, default: 0.0}
+  yshift: {type: float, default: 0.0}
+  zshift: {type: float, default: 0.0}
+  xscale: {type: float, default: 1.0}
+  yscale: {type: float, default: 1.0}
+  zscale: {type: float, default: 1.0}
+  zrotation: {type: float, default: 0.0}
+  columns: {type: string, note: dbcolumn name; multiple values}
+  flag_t: {type: boolean, note: flag -t}
+  flag_w: {type: boolean, note: flag -w}
+  flag_x: {type: boolean, note: flag -x}
+  flag_y: {type: boolean, note: flag -y}
+  flag_a: {type: boolean, note: flag -a}
+  flag_b: {type: boolean, note: flag -b}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

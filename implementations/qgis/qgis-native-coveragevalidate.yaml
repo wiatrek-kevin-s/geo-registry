@@ -1,0 +1,12 @@
+id: qgis-native-coveragevalidate
+kind: implementation
+name: native:coveragevalidate
+software: qgis
+call: {interface: qgis-process, name: 'native:coveragevalidate'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  GAP_WIDTH: {type: distance, required: true, default: 0.0}
+  INPUT: {type: source, required: true}
+  INVALID_EDGES: {type: sink, note: output}
+status: active
+review: {state: harvested, source: qgis}

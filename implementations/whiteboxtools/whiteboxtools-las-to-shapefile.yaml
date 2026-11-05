@@ -1,0 +1,10 @@
+id: whiteboxtools-las-to-shapefile
+kind: implementation
+name: LasToShapefile
+software: whiteboxtools
+call: {interface: cli, name: LasToShapefile}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar'}
+status: active
+review: {state: harvested, source: whitebox}

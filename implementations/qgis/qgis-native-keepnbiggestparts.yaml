@@ -1,0 +1,12 @@
+id: qgis-native-keepnbiggestparts
+kind: implementation
+name: native:keepnbiggestparts
+software: qgis
+call: {interface: qgis-process, name: 'native:keepnbiggestparts'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  OUTPUT: {type: sink, required: true, note: output}
+  PARTS: {type: number, required: true, default: 1.0}
+  POLYGONS: {type: source, required: true}
+status: active
+review: {state: harvested, source: qgis}

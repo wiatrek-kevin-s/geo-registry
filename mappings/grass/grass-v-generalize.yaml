@@ -1,0 +1,13 @@
+id: grass-v-generalize
+implements: simplify
+crosswalk:
+  layer: input
+  output: output
+  tolerance: threshold
+  unit: { fixed: crs-units, note: Threshold is in the map units of the GRASS project. }
+presets:
+  method: douglas
+differences:
+  - Offers many other methods (reduction, Lang, Reumann-Witkam, smoothing); this mapping uses Douglas-Peucker.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

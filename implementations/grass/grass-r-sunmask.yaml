@@ -1,0 +1,26 @@
+id: grass-r-sunmask
+kind: implementation
+name: r.sunmask
+software: grass
+call: {interface: cli, name: r.sunmask}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  elevation: {type: string, required: true, note: cell name}
+  output: {type: string, note: output cell}
+  altitude: {type: float, values: [0-89.999]}
+  azimuth: {type: float, values: [0-360]}
+  year: {type: integer, values: [1950-2050]}
+  month: {type: integer, values: [0-12]}
+  day: {type: integer, values: [0-31]}
+  hour: {type: integer, values: [0-24]}
+  minute: {type: integer, values: [0-60]}
+  second: {type: integer, default: 0, values: [0-60]}
+  timezone: {type: integer}
+  east: {type: string}
+  north: {type: string}
+  flag_z: {type: boolean, note: flag -z}
+  flag_s: {type: boolean, note: flag -s}
+  flag_g: {type: boolean, note: flag -g}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

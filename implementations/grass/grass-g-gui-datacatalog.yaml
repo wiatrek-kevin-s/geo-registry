@@ -1,0 +1,9 @@
+id: grass-g-gui-datacatalog
+kind: implementation
+name: g.gui.datacatalog
+software: grass
+call: {interface: cli, name: g.gui.datacatalog}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters: {}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,22 @@
+id: grass-v-rast-stats
+kind: implementation
+name: v.rast.stats
+software: grass
+call: {interface: cli, name: v.rast.stats}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '1', note: layer name}
+  type: {type: string, default: 'point,line,boundary,centroid,area', values: [point, line, boundary, centroid, area], note: multiple
+      values}
+  where: {type: string, note: sql_query name}
+  raster: {type: string, required: true, note: cell name; multiple values}
+  column_prefix: {type: string, required: true, note: multiple values}
+  method: {type: string, default: 'number,null_cells,minimum,maximum,range,average,stddev,variance,coeff_var,sum,first_quartile,median,third_quartile,percentile',
+    values: [number, null_cells, minimum, maximum, range, average, stddev, variance, coeff_var, sum, first_quartile, median,
+      third_quartile, percentile], note: multiple values}
+  percentile: {type: integer, default: 90, values: [0-100]}
+  flag_c: {type: boolean, note: flag -c}
+  flag_d: {type: boolean, note: flag -d}
+status: active
+review: {state: harvested, source: grass}

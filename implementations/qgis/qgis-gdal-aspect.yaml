@@ -1,0 +1,18 @@
+id: qgis-gdal-aspect
+kind: implementation
+name: gdal:aspect
+software: qgis
+call: {interface: qgis-process, name: 'gdal:aspect'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BAND: {type: band, required: true, default: 1}
+  COMPUTE_EDGES: {type: boolean, required: true, default: false}
+  CREATION_OPTIONS: {type: string, default: ''}
+  EXTRA: {type: string}
+  INPUT: {type: raster, required: true}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  TRIG_ANGLE: {type: boolean, required: true, default: false}
+  ZERO_FLAT: {type: boolean, required: true, default: false}
+  ZEVENBERGEN: {type: boolean, required: true, default: false}
+status: active
+review: {state: harvested, source: qgis}

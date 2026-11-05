@@ -1,0 +1,11 @@
+id: whiteboxtools-extract-nodes
+kind: implementation
+name: ExtractNodes
+software: whiteboxtools
+call: {interface: cli, name: ExtractNodes}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Vector:Any', required: true}
+  output: {type: 'NewFile:Vector:Point', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

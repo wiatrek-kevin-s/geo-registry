@@ -1,0 +1,24 @@
+id: grass-db-select
+kind: implementation
+name: db.select
+software: grass
+call: {interface: cli, name: db.select}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  sql: {type: string}
+  input: {type: string, note: file name}
+  table: {type: string, note: dbtable name}
+  driver: {type: string, default: sqlite, values: [dbf, ogr, pg, sqlite], note: dbdriver name}
+  database: {type: string, default: $GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db, note: dbname name}
+  separator: {type: string, note: separator name}
+  vertical_separator: {type: string, note: separator name}
+  null_value: {type: string}
+  format: {type: string, values: [plain, csv, json, vertical]}
+  output: {type: string, note: output file}
+  flag_c: {type: boolean, note: flag -c}
+  flag_d: {type: boolean, note: flag -d}
+  flag_v: {type: boolean, note: flag -v}
+  flag_t: {type: boolean, note: flag -t}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

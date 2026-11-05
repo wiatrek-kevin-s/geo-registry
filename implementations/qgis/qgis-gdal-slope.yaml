@@ -1,0 +1,18 @@
+id: qgis-gdal-slope
+kind: implementation
+name: gdal:slope
+software: qgis
+call: {interface: qgis-process, name: 'gdal:slope'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  AS_PERCENT: {type: boolean, required: true, default: false}
+  BAND: {type: band, required: true, default: 1}
+  COMPUTE_EDGES: {type: boolean, required: true, default: false}
+  CREATION_OPTIONS: {type: string, default: ''}
+  EXTRA: {type: string}
+  INPUT: {type: raster, required: true}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  SCALE: {type: number, required: true, default: 1.0}
+  ZEVENBERGEN: {type: boolean, required: true, default: false}
+status: active
+review: {state: harvested, source: qgis}

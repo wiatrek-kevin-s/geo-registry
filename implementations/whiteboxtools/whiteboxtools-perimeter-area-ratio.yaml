@@ -1,0 +1,10 @@
+id: whiteboxtools-perimeter-area-ratio
+kind: implementation
+name: PerimeterAreaRatio
+software: whiteboxtools
+call: {interface: cli, name: PerimeterAreaRatio}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Vector:Polygon', required: true}
+status: active
+review: {state: harvested, source: whitebox}

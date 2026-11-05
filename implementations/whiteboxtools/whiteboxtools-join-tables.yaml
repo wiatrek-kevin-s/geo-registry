@@ -1,0 +1,14 @@
+id: whiteboxtools-join-tables
+kind: implementation
+name: JoinTables
+software: whiteboxtools
+call: {interface: cli, name: JoinTables}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input1: {type: 'ExistingFile:Vector:Any', required: true}
+  pkey: {type: VectorAttributeField, required: true}
+  input2: {type: 'ExistingFile:Vector:Any', required: true}
+  fkey: {type: VectorAttributeField, required: true}
+  import_field: {type: VectorAttributeField}
+status: active
+review: {state: harvested, source: whitebox}

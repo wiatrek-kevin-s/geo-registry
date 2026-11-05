@@ -1,0 +1,13 @@
+id: qgis-native-filedownloader
+kind: implementation
+name: native:filedownloader
+software: qgis
+call: {interface: qgis-process, name: 'native:filedownloader'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  DATA: {type: string}
+  METHOD: {type: enum, required: true, default: 0, values: [0, 1], note: '0 GET, 1 POST'}
+  OUTPUT: {type: fileDestination, required: true, note: output}
+  URL: {type: string, required: true}
+status: active
+review: {state: harvested, source: qgis}

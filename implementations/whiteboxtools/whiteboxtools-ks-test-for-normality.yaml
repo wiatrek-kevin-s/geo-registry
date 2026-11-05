@@ -1,0 +1,12 @@
+id: whiteboxtools-ks-test-for-normality
+kind: implementation
+name: KsTestForNormality
+software: whiteboxtools
+call: {interface: cli, name: KsTestForNormality}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Html', required: true, note: output}
+  num_samples: {type: Integer}
+status: active
+review: {state: harvested, source: whitebox}

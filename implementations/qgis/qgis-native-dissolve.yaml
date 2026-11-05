@@ -1,0 +1,13 @@
+id: qgis-native-dissolve
+kind: implementation
+name: native:dissolve
+software: qgis
+call: {interface: qgis-process, name: 'native:dissolve'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  FIELD: {type: field, note: multiple values}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  SEPARATE_DISJOINT: {type: boolean, required: true, default: false}
+status: active
+review: {state: harvested, source: qgis}

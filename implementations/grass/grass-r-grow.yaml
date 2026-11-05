@@ -1,0 +1,18 @@
+id: grass-r-grow
+kind: implementation
+name: r.grow
+software: grass
+call: {interface: cli, name: r.grow}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  radius: {type: float, default: 1.01}
+  metric: {type: string, default: euclidean, values: [euclidean, maximum, manhattan]}
+  old: {type: integer}
+  new: {type: integer}
+  nprocs: {type: integer, default: 0}
+  flag_m: {type: boolean, note: flag -m}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

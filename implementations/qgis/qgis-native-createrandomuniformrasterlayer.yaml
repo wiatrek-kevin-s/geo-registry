@@ -1,0 +1,18 @@
+id: qgis-native-createrandomuniformrasterlayer
+kind: implementation
+name: native:createrandomuniformrasterlayer
+software: qgis
+call: {interface: qgis-process, name: 'native:createrandomuniformrasterlayer'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CREATION_OPTIONS: {type: string}
+  EXTENT: {type: extent, required: true}
+  LOWER_BOUND: {type: number, required: true}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  OUTPUT_TYPE: {type: enum, required: true, default: 5, values: [0, 1, 2, 3, 4, 5, 6], note: '0 Byte, 1 Integer16, 2 Unsigned
+      Integer16, 3 Integer32, 4 Unsigned Integer32, 5 Float32, 6 Float64'}
+  PIXEL_SIZE: {type: number, required: true, default: 1}
+  TARGET_CRS: {type: crs, required: true, default: ProjectCrs}
+  UPPER_BOUND: {type: number, required: true}
+status: active
+review: {state: harvested, source: qgis}

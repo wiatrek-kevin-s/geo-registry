@@ -1,0 +1,11 @@
+id: grass-r-mask-status
+kind: implementation
+name: r.mask.status
+software: grass
+call: {interface: cli, name: r.mask.status}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  format: {type: string, default: plain, values: [plain, json, shell, yaml]}
+  flag_t: {type: boolean, note: flag -t}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,12 @@
+id: whiteboxtools-filter-lidar-scan-angles
+kind: implementation
+name: FilterLidarScanAngles
+software: whiteboxtools
+call: {interface: cli, name: FilterLidarScanAngles}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar', required: true}
+  output: {type: 'NewFile:Lidar', required: true, note: output}
+  threshold: {type: Float, required: true}
+status: active
+review: {state: harvested, source: whitebox}

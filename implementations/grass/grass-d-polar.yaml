@@ -1,0 +1,14 @@
+id: grass-d-polar
+kind: implementation
+name: d.polar
+software: grass
+call: {interface: cli, name: d.polar}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: cell name}
+  undef: {type: float}
+  output: {type: string, note: output file}
+  flag_x: {type: boolean, note: flag -x}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

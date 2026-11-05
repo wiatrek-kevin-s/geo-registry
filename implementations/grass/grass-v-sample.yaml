@@ -1,0 +1,17 @@
+id: grass-v-sample
+kind: implementation
+name: v.sample
+software: grass
+call: {interface: cli, name: v.sample}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '1', note: layer name}
+  column: {type: string, required: true, note: dbcolumn name}
+  output: {type: string, required: true, note: output vector}
+  raster: {type: string, required: true, note: cell name}
+  method: {type: string, default: nearest, values: [nearest, bilinear, bicubic]}
+  zscale: {type: float, default: 1.0}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

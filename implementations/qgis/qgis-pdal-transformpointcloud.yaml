@@ -1,0 +1,21 @@
+id: qgis-pdal-transformpointcloud
+kind: implementation
+name: pdal:transformpointcloud
+software: qgis
+call: {interface: qgis-process, name: 'pdal:transformpointcloud'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: pointcloud, required: true}
+  OUTPUT: {type: pointCloudDestination, required: true, note: output}
+  ROTATE_X: {type: number, required: true, default: 0.0}
+  ROTATE_Y: {type: number, required: true, default: 0.0}
+  ROTATE_Z: {type: number, required: true, default: 0.0}
+  SCALE_X: {type: number, required: true, default: 1.0}
+  SCALE_Y: {type: number, required: true, default: 1.0}
+  SCALE_Z: {type: number, required: true, default: 1.0}
+  TRANSLATE_X: {type: number, required: true, default: 0.0}
+  TRANSLATE_Y: {type: number, required: true, default: 0.0}
+  TRANSLATE_Z: {type: number, required: true, default: 0.0}
+  VPC_OUTPUT_FORMAT: {type: enum, required: true, default: COPC, values: [0, 1, 2], note: '0 COPC, 1 LAZ, 2 LAS'}
+status: active
+review: {state: harvested, source: qgis}

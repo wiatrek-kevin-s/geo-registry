@@ -1,0 +1,13 @@
+id: whiteboxtools-strahler-order-basins
+kind: implementation
+name: StrahlerOrderBasins
+software: whiteboxtools
+call: {interface: cli, name: StrahlerOrderBasins}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  d8_pntr: {type: 'ExistingFile:Raster', required: true}
+  streams: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  esri_pntr: {type: Boolean, default: 'false'}
+status: active
+review: {state: harvested, source: whitebox}

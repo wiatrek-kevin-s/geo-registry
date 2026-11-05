@@ -1,0 +1,18 @@
+id: whiteboxtools-lidar-ground-point-filter
+kind: implementation
+name: LidarGroundPointFilter
+software: whiteboxtools
+call: {interface: cli, name: LidarGroundPointFilter}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar', required: true}
+  output: {type: 'NewFile:Lidar', required: true, note: output}
+  radius: {type: Float, required: true, default: '2.0'}
+  min_neighbours: {type: Integer, default: '0'}
+  slope_threshold: {type: Float, default: '45.0'}
+  height_threshold: {type: Float, default: '1.0'}
+  classify: {type: Boolean, default: 'true'}
+  slope_norm: {type: Boolean, default: 'true'}
+  height_above_ground: {type: Boolean, default: 'false'}
+status: active
+review: {state: harvested, source: whitebox}

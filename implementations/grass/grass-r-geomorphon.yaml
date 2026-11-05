@@ -1,0 +1,33 @@
+id: grass-r-geomorphon
+kind: implementation
+name: r.geomorphon
+software: grass
+call: {interface: cli, name: r.geomorphon}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  elevation: {type: string, required: true, note: cell name}
+  forms: {type: string, note: output cell}
+  ternary: {type: string, note: output cell}
+  positive: {type: string, note: output cell}
+  negative: {type: string, note: output cell}
+  intensity: {type: string, note: output cell}
+  exposition: {type: string, note: output cell}
+  range: {type: string, note: output cell}
+  variance: {type: string, note: output cell}
+  elongation: {type: string, note: output cell}
+  azimuth: {type: string, note: output cell}
+  extend: {type: string, note: output cell}
+  width: {type: string, note: output cell}
+  search: {type: integer, required: true, default: 3}
+  skip: {type: integer, required: true, default: 0}
+  flat: {type: float, required: true, default: 1.0}
+  dist: {type: float, required: true, default: 0.0}
+  comparison: {type: string, default: anglev1, values: [anglev1, anglev2, anglev2_distance]}
+  coordinates: {type: float, note: coords name}
+  profiledata: {type: string, note: output file}
+  profileformat: {type: string, values: [json, yaml, xml]}
+  flag_m: {type: boolean, note: flag -m}
+  flag_e: {type: boolean, note: flag -e}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

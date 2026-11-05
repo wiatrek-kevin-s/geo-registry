@@ -1,0 +1,15 @@
+id: qgis-pdal-filternoiseradius
+kind: implementation
+name: pdal:filternoiseradius
+software: qgis
+call: {interface: qgis-process, name: 'pdal:filternoiseradius'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: pointcloud, required: true}
+  MIN_K: {type: number, required: true, default: 2}
+  OUTPUT: {type: pointCloudDestination, required: true, note: output}
+  RADIUS: {type: number, required: true, default: 1.0}
+  REMOVE_NOISE_POINTS: {type: boolean, required: true, default: false}
+  VPC_OUTPUT_FORMAT: {type: enum, required: true, default: COPC, values: [0, 1, 2], note: '0 COPC, 1 LAZ, 2 LAS'}
+status: active
+review: {state: harvested, source: qgis}

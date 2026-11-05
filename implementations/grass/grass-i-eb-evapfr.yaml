@@ -1,0 +1,16 @@
+id: grass-i-eb-evapfr
+kind: implementation
+name: i.eb.evapfr
+software: grass
+call: {interface: cli, name: i.eb.evapfr}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  netradiation: {type: string, required: true, note: cell name}
+  soilheatflux: {type: string, required: true, note: cell name}
+  sensibleheatflux: {type: string, required: true, note: cell name}
+  evaporativefraction: {type: string, required: true, note: output cell}
+  soilmoisture: {type: string, note: output cell}
+  flag_m: {type: boolean, note: flag -m}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

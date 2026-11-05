@@ -1,0 +1,14 @@
+id: qgis-native-joinattributesbylocation
+implements: spatial-join
+crosswalk:
+  left: INPUT
+  right: JOIN
+  output: OUTPUT
+  predicate: { param: PREDICATE, values: { intersects: 0, contains: 1, touches: 3, overlaps: 4, within: 5, crosses: 6 } }
+  how: { param: DISCARD_NONMATCHING, values: { left: false, inner: true } }
+presets:
+  METHOD: 0
+differences:
+  - METHOD 0 (used here) gives one row per match, like Columbus; QGIS's default keeps only the first match.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

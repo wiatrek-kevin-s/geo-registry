@@ -1,0 +1,15 @@
+id: qgis-native-wedgebuffers
+kind: implementation
+name: native:wedgebuffers
+software: qgis
+call: {interface: qgis-process, name: 'native:wedgebuffers'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  AZIMUTH: {type: number, required: true, default: 0}
+  INNER_RADIUS: {type: number, default: 0}
+  INPUT: {type: source, required: true}
+  OUTER_RADIUS: {type: number, required: true, default: 1}
+  OUTPUT: {type: sink, required: true, note: output}
+  WIDTH: {type: number, required: true, default: 45}
+status: active
+review: {state: harvested, source: qgis}

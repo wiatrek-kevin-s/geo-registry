@@ -1,0 +1,10 @@
+id: grass-d-colorlist
+kind: implementation
+name: d.colorlist
+software: grass
+call: {interface: cli, name: d.colorlist}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  separator: {type: string, default: comma, note: separator name}
+status: active
+review: {state: harvested, source: grass}

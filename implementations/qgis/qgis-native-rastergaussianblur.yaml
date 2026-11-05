@@ -1,0 +1,14 @@
+id: qgis-native-rastergaussianblur
+kind: implementation
+name: native:rastergaussianblur
+software: qgis
+call: {interface: qgis-process, name: 'native:rastergaussianblur'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BAND: {type: band, required: true, default: 1}
+  CREATION_OPTIONS: {type: string}
+  INPUT: {type: raster, required: true}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  RADIUS: {type: number, required: true, default: 2.0}
+status: active
+review: {state: harvested, source: qgis}

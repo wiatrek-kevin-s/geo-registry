@@ -1,0 +1,20 @@
+id: qgis-native-extractnetworkendpoints
+kind: implementation
+name: native:extractnetworkendpoints
+software: qgis
+call: {interface: qgis-process, name: 'native:extractnetworkendpoints'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  DEFAULT_DIRECTION: {type: enum, required: true, default: 2, values: [0, 1, 2], note: '0 Forward direction, 1 Backward direction,
+      2 Both directions'}
+  DIRECTION_FIELD: {type: field}
+  ENDPOINT_DEFINITION: {type: enum, required: true, default: 1, values: [0, 1], note: '0 Extract Nodes with only All Incoming
+      or All Outgoing Edges, 1 Extract Nodes Connected to a Single Edge'}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  TOLERANCE: {type: distance, required: true, default: 0}
+  VALUE_BACKWARD: {type: string}
+  VALUE_BOTH: {type: string}
+  VALUE_FORWARD: {type: string}
+status: active
+review: {state: harvested, source: qgis}

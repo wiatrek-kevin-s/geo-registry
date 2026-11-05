@@ -1,0 +1,13 @@
+id: qgis-native-filterverticesbym
+kind: implementation
+name: native:filterverticesbym
+software: qgis
+call: {interface: qgis-process, name: 'native:filterverticesbym'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  MAX: {type: number}
+  MIN: {type: number}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

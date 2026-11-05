@@ -1,0 +1,18 @@
+id: qgis-gdal-viewshed
+kind: implementation
+name: gdal:viewshed
+software: qgis
+call: {interface: qgis-process, name: 'gdal:viewshed'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BAND: {type: band, required: true, default: 1}
+  CREATION_OPTIONS: {type: string, default: ''}
+  EXTRA: {type: string}
+  INPUT: {type: raster, required: true}
+  MAX_DISTANCE: {type: distance, required: true, default: 100.0}
+  OBSERVER: {type: point, required: true}
+  OBSERVER_HEIGHT: {type: number, required: true, default: 1.0}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  TARGET_HEIGHT: {type: number, required: true, default: 1.0}
+status: active
+review: {state: harvested, source: qgis}

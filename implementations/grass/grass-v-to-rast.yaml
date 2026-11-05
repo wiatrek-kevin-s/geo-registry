@@ -1,0 +1,23 @@
+id: grass-v-to-rast
+kind: implementation
+name: v.to.rast
+software: grass
+call: {interface: cli, name: v.to.rast}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '1', note: layer name}
+  type: {type: string, default: 'point,line,area', values: [point, line, boundary, centroid, area], note: multiple values}
+  cats: {type: string, note: cats name}
+  where: {type: string, note: sql_query name}
+  output: {type: string, required: true, note: output cell}
+  use: {type: string, required: true, values: [attr, cat, value, z, dir]}
+  attribute_column: {type: string, note: dbcolumn name}
+  rgb_column: {type: string, note: dbcolumn name}
+  label_column: {type: string, note: dbcolumn name}
+  value: {type: float, default: 1.0}
+  memory: {type: integer, default: 300}
+  flag_d: {type: boolean, note: flag -d}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

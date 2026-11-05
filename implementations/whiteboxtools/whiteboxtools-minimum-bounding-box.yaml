@@ -1,0 +1,13 @@
+id: whiteboxtools-minimum-bounding-box
+kind: implementation
+name: MinimumBoundingBox
+software: whiteboxtools
+call: {interface: cli, name: MinimumBoundingBox}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Vector:Any', required: true}
+  output: {type: 'NewFile:Vector:Polygon', required: true, note: output}
+  criterion: {type: OptionList, default: area, values: [area, length, width, perimeter]}
+  features: {type: Boolean, default: 'true'}
+status: active
+review: {state: harvested, source: whitebox}

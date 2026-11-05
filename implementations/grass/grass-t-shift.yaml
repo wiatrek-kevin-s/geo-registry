@@ -1,0 +1,12 @@
+id: grass-t-shift
+kind: implementation
+name: t.shift
+software: grass
+call: {interface: cli, name: t.shift}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: stds name}
+  type: {type: string, default: strds, values: [strds, stvds, str3ds]}
+  granularity: {type: string, required: true}
+status: active
+review: {state: harvested, source: grass}

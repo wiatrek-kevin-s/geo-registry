@@ -1,0 +1,17 @@
+id: grass-i-ortho-elev
+kind: implementation
+name: i.ortho.elev
+software: grass
+call: {interface: cli, name: i.ortho.elev}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  group: {type: string, required: true, note: group name}
+  project: {type: string, note: location name}
+  mapset: {type: string, note: mapset name}
+  elevation: {type: string, note: cell name}
+  math_expression: {type: string}
+  units: {type: string, values: [miles, feet, meters, kilometers, acres, hectares]}
+  null_value: {type: string}
+  flag_p: {type: boolean, note: flag -p}
+status: active
+review: {state: harvested, source: grass}

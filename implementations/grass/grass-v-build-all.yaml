@@ -1,0 +1,9 @@
+id: grass-v-build-all
+kind: implementation
+name: v.build.all
+software: grass
+call: {interface: cli, name: v.build.all}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters: {}
+status: active
+review: {state: harvested, source: grass}

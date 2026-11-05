@@ -1,0 +1,18 @@
+id: grass-v-dissolve
+kind: implementation
+name: v.dissolve
+software: grass
+call: {interface: cli, name: v.dissolve}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '1', note: layer name}
+  column: {type: string, note: dbcolumn name}
+  output: {type: string, required: true, note: output vector}
+  aggregate_columns: {type: string, note: dbcolumn name; multiple values}
+  aggregate_methods: {type: string, note: multiple values}
+  result_columns: {type: string, note: dbcolumn name; multiple values}
+  aggregate_backend: {type: string, values: [sql, univar]}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

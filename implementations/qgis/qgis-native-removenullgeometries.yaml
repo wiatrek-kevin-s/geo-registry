@@ -1,0 +1,13 @@
+id: qgis-native-removenullgeometries
+kind: implementation
+name: native:removenullgeometries
+software: qgis
+call: {interface: qgis-process, name: 'native:removenullgeometries'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  NULL_OUTPUT: {type: sink, note: output}
+  OUTPUT: {type: sink, note: output}
+  REMOVE_EMPTY: {type: boolean, required: true, default: false}
+status: active
+review: {state: harvested, source: qgis}

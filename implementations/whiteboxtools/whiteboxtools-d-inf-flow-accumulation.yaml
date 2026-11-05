@@ -1,0 +1,17 @@
+id: whiteboxtools-d-inf-flow-accumulation
+kind: implementation
+name: DInfFlowAccumulation
+software: whiteboxtools
+call: {interface: cli, name: DInfFlowAccumulation}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  out_type: {type: OptionList, default: Specific Contributing Area, values: [Cells, Specific Contributing Area, Catchment
+        Area]}
+  threshold: {type: Float}
+  log: {type: Boolean}
+  clip: {type: Boolean}
+  pntr: {type: Boolean}
+status: active
+review: {state: harvested, source: whitebox}

@@ -1,0 +1,20 @@
+id: grass-i-aster-toar
+kind: implementation
+name: i.aster.toar
+software: grass
+call: {interface: cli, name: i.aster.toar}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name; multiple values}
+  dayofyear: {type: float, required: true}
+  sun_elevation: {type: float, required: true}
+  output: {type: string, required: true, note: output cell}
+  flag_r: {type: boolean, note: flag -r}
+  flag_a: {type: boolean, note: flag -a}
+  flag_b: {type: boolean, note: flag -b}
+  flag_c: {type: boolean, note: flag -c}
+  flag_d: {type: boolean, note: flag -d}
+  flag_e: {type: boolean, note: flag -e}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

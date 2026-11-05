@@ -1,0 +1,27 @@
+id: qgis-native-atlaslayouttomultiplepdf
+kind: implementation
+name: native:atlaslayouttomultiplepdf
+software: qgis
+call: {interface: qgis-process, name: 'native:atlaslayouttomultiplepdf'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  COVERAGE_LAYER: {type: vector}
+  DISABLE_TILED: {type: boolean, required: true, default: false}
+  DPI: {type: number}
+  FILTER_EXPRESSION: {type: expression}
+  FORCE_RASTER: {type: boolean, required: true, default: false}
+  FORCE_VECTOR: {type: boolean, required: true, default: false}
+  GEOREFERENCE: {type: boolean, required: true, default: true}
+  IMAGE_COMPRESSION: {type: enum, required: true, default: 0, values: [0, 1], note: '0 Lossy (JPEG), 1 Lossless'}
+  INCLUDE_METADATA: {type: boolean, required: true, default: true}
+  LAYERS: {type: multilayer}
+  LAYOUT: {type: layout, required: true}
+  OUTPUT_FILENAME: {type: expression}
+  OUTPUT_FOLDER: {type: file, required: true}
+  SIMPLIFY: {type: boolean, required: true, default: true}
+  SORTBY_EXPRESSION: {type: expression}
+  SORTBY_REVERSE: {type: boolean, required: true, default: false}
+  TEXT_FORMAT: {type: enum, required: true, default: 0, values: [0, 1, 2], note: '0 Always Export Text as Paths (Recommended),
+      1 Always Export Text as Text Objects, 2 Prefer Exporting Text as Text Objects'}
+status: active
+review: {state: harvested, source: qgis}

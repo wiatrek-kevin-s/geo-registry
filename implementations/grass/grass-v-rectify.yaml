@@ -1,0 +1,21 @@
+id: grass-v-rectify
+kind: implementation
+name: v.rectify
+software: grass
+call: {interface: cli, name: v.rectify}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  output: {type: string, required: true, note: output vector}
+  group: {type: string, note: group name}
+  points: {type: string, note: file name}
+  rmsfile: {type: string, note: file name}
+  order: {type: integer, default: 1, values: [1-3]}
+  separator: {type: string, default: pipe, note: separator name}
+  flag_3: {type: boolean, note: flag -3}
+  flag_o: {type: boolean, note: flag -o}
+  flag_r: {type: boolean, note: flag -r}
+  flag_b: {type: boolean, note: flag -b}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

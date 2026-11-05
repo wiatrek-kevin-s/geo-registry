@@ -1,0 +1,21 @@
+id: qgis-native-joinattributesbylocation
+kind: implementation
+name: native:joinattributesbylocation
+software: qgis
+call: {interface: qgis-process, name: 'native:joinattributesbylocation'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  DISCARD_NONMATCHING: {type: boolean, required: true, default: false}
+  INPUT: {type: source, required: true}
+  JOIN: {type: source, required: true}
+  JOIN_FIELDS: {type: field, note: multiple values}
+  METHOD: {type: enum, required: true, default: 0, values: [0, 1, 2], note: '0 Create separate feature for each matching feature
+      (one-to-many), 1 Take attributes of the first matching feature only (one-to-one), 2 Take attributes of the feature with
+      largest overlap only (one-to-one)'}
+  NON_MATCHING: {type: sink, note: output}
+  OUTPUT: {type: sink, note: output}
+  PREDICATE: {type: enum, required: true, default: 0, values: [0, 1, 2, 3, 4, 5, 6], note: '0 intersect, 1 contain, 2 equal,
+      3 touch, 4 overlap, 5 are within, 6 cross; multiple values'}
+  PREFIX: {type: string}
+status: active
+review: {state: harvested, source: qgis}

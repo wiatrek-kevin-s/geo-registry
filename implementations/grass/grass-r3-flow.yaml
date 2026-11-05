@@ -1,0 +1,23 @@
+id: grass-r3-flow
+kind: implementation
+name: r3.flow
+software: grass
+call: {interface: cli, name: r3.flow}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, note: grid3 name}
+  vector_field: {type: string, note: grid3 name; multiple values}
+  seed_points: {type: string, note: vector name}
+  flowline: {type: string, note: output vector}
+  flowaccumulation: {type: string, note: output grid3}
+  sampled: {type: string, note: grid3 name}
+  unit: {type: string, default: cell, values: [time, length, cell]}
+  step: {type: float, default: 0.25}
+  limit: {type: integer, default: 2000}
+  max_error: {type: float, default: 1.0e-05}
+  skip: {type: integer, note: multiple values}
+  direction: {type: string, default: down, values: [up, down, both]}
+  flag_a: {type: boolean, note: flag -a}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

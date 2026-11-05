@@ -1,0 +1,18 @@
+id: qgis-native-rasterfeaturepreservingsmoothing
+kind: implementation
+name: native:rasterfeaturepreservingsmoothing
+software: qgis
+call: {interface: qgis-process, name: 'native:rasterfeaturepreservingsmoothing'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BAND: {type: band, required: true, default: 1}
+  CREATION_OPTIONS: {type: string}
+  INPUT: {type: raster, required: true}
+  ITERATIONS: {type: number, required: true, default: 3}
+  MAX_ELEVATION_CHANGE: {type: number}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  RADIUS: {type: number, required: true, default: 5}
+  THRESHOLD: {type: number, required: true, default: 15.0}
+  Z_FACTOR: {type: number, required: true, default: 1.0}
+status: active
+review: {state: harvested, source: qgis}

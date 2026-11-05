@@ -1,0 +1,12 @@
+id: qgis-native-setlayermetadata
+kind: implementation
+name: native:setlayermetadata
+software: qgis
+call: {interface: qgis-process, name: 'native:setlayermetadata'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  DEFAULT: {type: boolean, required: true, default: false}
+  INPUT: {type: layer, required: true}
+  METADATA: {type: file, required: true}
+status: active
+review: {state: harvested, source: qgis}

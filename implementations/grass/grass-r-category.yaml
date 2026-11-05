@@ -1,0 +1,19 @@
+id: grass-r-category
+kind: implementation
+name: r.category
+software: grass
+call: {interface: cli, name: r.category}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: cell name}
+  cats: {type: string, note: cats name; multiple values}
+  values: {type: float, note: multiple values}
+  separator: {type: string, default: tab, note: separator name}
+  raster: {type: string, note: cell name}
+  rules: {type: string, note: file name}
+  format: {type: string}
+  label_format: {type: string}
+  coefficients: {type: float}
+  color_format: {type: string, default: none, values: [none, rgb, hex, triplet, hsv]}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,7 @@
+id: qgis-native-aspect
+implements: aspect
+crosswalk:
+  raster: INPUT
+  output: OUTPUT
+effects: { modifies_input: false, network: false }
+review: { state: draft }

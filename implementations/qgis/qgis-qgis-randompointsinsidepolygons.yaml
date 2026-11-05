@@ -1,0 +1,14 @@
+id: qgis-qgis-randompointsinsidepolygons
+kind: implementation
+name: qgis:randompointsinsidepolygons
+software: qgis
+call: {interface: qgis-process, name: 'qgis:randompointsinsidepolygons'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  MIN_DISTANCE: {type: distance}
+  OUTPUT: {type: sink, required: true, note: output}
+  STRATEGY: {type: enum, required: true, default: 0, values: [0, 1], note: '0 Points count, 1 Points density'}
+  VALUE: {type: number, required: true, default: 1}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,21 @@
+id: qgis-native-importintopostgis
+kind: implementation
+name: native:importintopostgis
+software: qgis
+call: {interface: qgis-process, name: 'native:importintopostgis'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CREATEINDEX: {type: boolean, required: true, default: true}
+  DATABASE: {type: providerconnection, required: true}
+  DROP_STRING_LENGTH: {type: boolean, required: true, default: false}
+  ENCODING: {type: string, default: UTF-8}
+  FORCE_SINGLEPART: {type: boolean, required: true, default: false}
+  GEOMETRY_COLUMN: {type: string, required: true, default: geom}
+  INPUT: {type: source, required: true}
+  LOWERCASE_NAMES: {type: boolean, required: true, default: true}
+  OVERWRITE: {type: boolean, required: true, default: true}
+  PRIMARY_KEY: {type: field}
+  SCHEMA: {type: databaseschema, default: public}
+  TABLENAME: {type: databasetable}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,16 @@
+id: grass-d-frame
+kind: implementation
+name: d.frame
+software: grass
+call: {interface: cli, name: d.frame}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  frame: {type: string, required: true}
+  at: {type: float, values: [0-100]}
+  flag_c: {type: boolean, note: flag -c}
+  flag_e: {type: boolean, note: flag -e}
+  flag_p: {type: boolean, note: flag -p}
+  flag_a: {type: boolean, note: flag -a}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

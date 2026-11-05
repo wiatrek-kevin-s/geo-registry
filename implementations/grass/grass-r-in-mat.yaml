@@ -1,0 +1,12 @@
+id: grass-r-in-mat
+kind: implementation
+name: r.in.mat
+software: grass
+call: {interface: cli, name: r.in.mat}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: mat name}
+  output: {type: string, note: output cell}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

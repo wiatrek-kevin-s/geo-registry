@@ -1,0 +1,25 @@
+id: qgis-gdal-rasterize
+kind: implementation
+name: gdal:rasterize
+software: qgis
+call: {interface: qgis-process, name: 'gdal:rasterize'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BURN: {type: number, default: 0.0}
+  CREATION_OPTIONS: {type: string, default: ''}
+  DATA_TYPE: {type: enum, required: true, default: 5, values: [0, 1, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9], note: '0 Byte, 1 Int16,
+      10 CFloat64, 11 Int8, 2 UInt16, 3 UInt32, 4 Int32, 5 Float32, 6 Float64, 7 CInt16, 8 CInt32, 9 CFloat32'}
+  EXTENT: {type: extent}
+  EXTRA: {type: string}
+  FIELD: {type: field}
+  HEIGHT: {type: number, required: true, default: 0.0}
+  INIT: {type: number}
+  INPUT: {type: source, required: true}
+  INVERT: {type: boolean, required: true, default: false}
+  NODATA: {type: number}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  UNITS: {type: enum, required: true, values: [0, 1], note: '0 Pixels, 1 Georeferenced units'}
+  USE_Z: {type: boolean, required: true, default: false}
+  WIDTH: {type: number, required: true, default: 0.0}
+status: active
+review: {state: harvested, source: qgis}

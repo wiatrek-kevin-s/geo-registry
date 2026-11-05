@@ -1,0 +1,14 @@
+id: grass-t-topology
+kind: implementation
+name: t.topology
+software: grass
+call: {interface: cli, name: t.topology}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: stds name}
+  type: {type: string, default: strds, values: [strds, stvds, str3ds]}
+  where: {type: string}
+  flag_m: {type: boolean, note: flag -m}
+  flag_s: {type: boolean, note: flag -s}
+status: active
+review: {state: harvested, source: grass}

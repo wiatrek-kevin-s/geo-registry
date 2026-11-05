@@ -1,0 +1,12 @@
+id: qgis-native-createpointslayerfromtable
+implements: table-to-points
+crosswalk:
+  table: INPUT
+  output: OUTPUT
+  x_field: XFIELD
+  y_field: YFIELD
+  crs: TARGET_CRS
+differences:
+  - TARGET_CRS defaults to EPSG:4326 if not set, which is wrong for projected coordinates.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

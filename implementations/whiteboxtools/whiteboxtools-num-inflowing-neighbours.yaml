@@ -1,0 +1,11 @@
+id: whiteboxtools-num-inflowing-neighbours
+kind: implementation
+name: NumInflowingNeighbours
+software: whiteboxtools
+call: {interface: cli, name: NumInflowingNeighbours}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

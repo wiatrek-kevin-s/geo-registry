@@ -1,0 +1,14 @@
+id: whiteboxtools-hillshade
+kind: implementation
+name: Hillshade
+software: whiteboxtools
+call: {interface: cli, name: Hillshade}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  azimuth: {type: Float, default: '315.0'}
+  altitude: {type: Float, default: '30.0'}
+  zfactor: {type: Float}
+status: active
+review: {state: harvested, source: whitebox}

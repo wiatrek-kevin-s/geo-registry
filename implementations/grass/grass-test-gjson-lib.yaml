@@ -1,0 +1,10 @@
+id: grass-test-gjson-lib
+kind: implementation
+name: test.gjson.lib
+software: grass
+call: {interface: cli, name: test.gjson.lib}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  flag_u: {type: boolean, note: flag -u}
+status: active
+review: {state: harvested, source: grass}

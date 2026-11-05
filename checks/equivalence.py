@@ -65,8 +65,10 @@ CASES = [
          expected=100 * 100 + 4 * 100 * 10 + math.pi * 10 ** 2, tolerance=0.005),
     Case("buffer", "buffer dissolved into one shape", {"layer": [poly(0, 0, 10, 10), poly(15, 0, 25, 10)]},
          {"distance": 5, "unit": "m", "dissolve": True}, "count", expected=1),
-    Case("reproject", "a point to EPSG:3081", {"layer": [shapely.Point(621000, 3349000)]},
-         {"crs": "EPSG:3081"}, "coords", tolerance=1e-9),
+    # Same datum (WGS 84) on both sides: a datum change (to NAD 83, say) depends on
+    # which transformation each engine's PROJ setup picks, which is not what this checks.
+    Case("reproject", "a point to EPSG:3857 (same datum)", {"layer": [shapely.Point(621000, 3349000)]},
+         {"crs": "EPSG:3857"}, "coords", tolerance=1e-9),
     Case("simplify", "zigzag line, tolerance 1 m", {"layer": [shapely.LineString(
          [(0, 0), (10, 0.5), (20, 0), (30, 0.4), (40, 0), (50, 5), (60, 0)])]},
          {"tolerance": 1, "unit": "m"}, "length", tolerance=1e-9),
@@ -102,10 +104,10 @@ def dem_values():
     return [[0.1 * (DEM_CELL * c + DEM_CELL / 2) for c in range(DEM_SIZE)] for _ in range(DEM_SIZE)]
 
 
-def dem_box(col0, col1):
-    """A polygon over whole columns col0..col1-1, the full height of the DEM."""
+def dem_box(col0, col1, row0=0, row1=DEM_SIZE):
+    """A polygon over whole cells: columns col0..col1-1 and rows row0..row1-1 (row 0 at the top)."""
     x0, y1 = DEM_ORIGIN
-    return poly(x0 + col0 * DEM_CELL, y1 - DEM_SIZE * DEM_CELL, x0 + col1 * DEM_CELL, y1)
+    return poly(x0 + col0 * DEM_CELL, y1 - row1 * DEM_CELL, x0 + col1 * DEM_CELL, y1 - row0 * DEM_CELL)
 
 
 RASTER = "raster"  # marker: this input is the DEM
@@ -118,13 +120,20 @@ RASTER_CASES = [
     Case("aspect", "plane facing west", {"raster": RASTER}, {}, "raster_median", expected=270.0, tolerance=1e-4),
     Case("hillshade", "plane lit from the north-west", {"raster": RASTER},
          {"z_unit": "m", "azimuth": 315, "altitude": 45}, "raster_median", tolerance=0.01),
-    Case("clip-raster", "mask over the first 10 columns", {"raster": RASTER, "mask": [dem_box(0, 10)]},
-         {}, "raster_count", expected=200.0),
+    Case("clip-raster", "mask over 10 columns and 16 rows, inside the raster",
+         {"raster": RASTER, "mask": [dem_box(0, 10, 2, 18)]}, {}, "raster_count", expected=160.0),
     Case("reproject-raster", "to EPSG:3081, nearest", {"raster": RASTER},
          {"crs": "EPSG:3081", "resampling": "nearest"}, "raster_mean", tolerance=0.02),
     Case("zonal-statistics", "mean over the first 5 columns", {"raster": RASTER, "zones": [dem_box(0, 5)]},
          {"stats": "mean"}, "field_mean", expected=2.5, tolerance=1e-6),
 ]
+
+
+# Documented output differences the tests convert before comparing, so they still
+# check the substance: implementation id -> (factor, what it means).
+OUTPUT_SCALE = {
+    "whiteboxtools-hillshade": (255 / 32767, "output is 0 to 32767, compared as 0 to 255"),
+}
 
 
 class Unsupported(Exception):
@@ -141,9 +150,16 @@ def translate(impl: dict, op: dict, case: Case) -> tuple[dict, dict]:
     ports: dict[str, str | None] = {}
     method = impl["call"]["interface"] == "python" and any(c in impl["call"]["name"] for c in (".GeoSeries.", ".GeoDataFrame."))
     first_input = op["inputs"][0]["name"]
+    eparams = impl.get("parameters") or {}
     for port in [p["name"] for p in op["inputs"] + op["outputs"]]:
         item = cw.get(port)
+        if isinstance(item, dict) and "param" in item:
+            item = item["param"]
         if isinstance(item, str):
+            etype = str((eparams.get(item) or {}).get("type", "")).lower()
+            data = case.inputs.get(port)
+            if isinstance(data, list) and "raster" in etype and "vector" not in etype:
+                raise Unsupported(f"'{port}' must be a raster for this engine, not polygons")
             ports[port] = item
         elif port == first_input and method:
             ports[port] = None  # the object the method is called on
@@ -227,6 +243,80 @@ def geometries(result) -> list:
     if isinstance(result, shapely.Geometry):
         return [result]
     return [g for g in list(result) if g is not None]
+
+
+def stage_inputs(tmp: str, ports: dict, op: dict, case: Case, vector_ext: str) -> dict[str, str]:
+    """Write each input to a file; returns canonical port -> path (outputs get fresh paths)."""
+    paths = {}
+    for port, engine in ports.items():
+        if engine is None:
+            continue
+        data = case.inputs.get(port)
+        if data is None:
+            if port in [p["name"] for p in op["outputs"]]:
+                raster_out = op["outputs"][0]["type"] == "raster"
+                paths[port] = str(Path(tmp) / ("out.tif" if raster_out else f"out{vector_ext}"))
+            continue
+        if isinstance(data, str) and data == RASTER:
+            path = Path(tmp) / f"{port}.tif"
+            write_dem(path)
+        elif isinstance(data, pd.DataFrame):
+            path = Path(tmp) / f"{port}.csv"
+            data.to_csv(path, index=False)
+        else:
+            path = Path(tmp) / f"{port}{vector_ext}"
+            gpd.GeoDataFrame(case.attrs.get(port, {}), geometry=list(data), crs=CRS).to_file(path)
+        paths[port] = str(path)
+    return paths
+
+
+def read_output(path: str, op: dict, case: Case):
+    if op["outputs"][0]["type"] == "raster":
+        return read_raster(Path(path))
+    if case.measure.startswith("field_"):
+        return gpd.read_file(path)
+    return [g for g in gpd.read_file(path).geometry if g is not None]
+
+
+def run_qgis(qp: str, impl: dict, op: dict, case: Case):
+    ports, args = translate(impl, op, case)
+    with tempfile.TemporaryDirectory() as tmp:
+        paths = stage_inputs(tmp, ports, op, case, ".gpkg")
+        argv = [qp, "run", impl["call"]["name"], "--"]
+        for port, path in paths.items():
+            argv.append(f"{ports[port]}={path}")
+        for k, v in args.items():
+            if isinstance(v, bool):
+                v = "true" if v else "false"
+            argv.append(f"{k}={v}")
+        import os
+        env = {**os.environ, "QT_QPA_PLATFORM": "offscreen",
+               "PATH": str(Path(qp).resolve().parent) + os.pathsep + os.environ.get("PATH", "")}
+        r = subprocess.run(argv, capture_output=True, text=True, env=env)
+        out = next((paths[p["name"]] for p in op["outputs"] if p["name"] in paths), None)
+        if r.returncode != 0 or not out or not Path(out).exists():
+            raise RuntimeError(f"qgis_process {impl['call']['name']} failed: {(r.stderr or r.stdout).strip()[-300:]}")
+        return read_output(out, op, case)
+
+
+def run_whitebox(wbt: str, impl: dict, op: dict, case: Case):
+    ports, args = translate(impl, op, case)
+    with tempfile.TemporaryDirectory() as tmp:
+        paths = stage_inputs(tmp, ports, op, case, ".shp")
+        argv = [wbt, f"--run={impl['call']['name']}"]
+        for port, path in paths.items():
+            argv.append(f"--{ports[port]}={path}")
+        for k, v in args.items():
+            if isinstance(v, bool):
+                if v:
+                    argv.append(f"--{k}")
+            else:
+                argv.append(f"--{k}={v}")
+        r = subprocess.run(argv, capture_output=True, text=True)
+        out = next((paths[p["name"]] for p in op["outputs"] if p["name"] in paths), None)
+        if r.returncode != 0 or not out or not Path(out).exists():
+            raise RuntimeError(f"whitebox {impl['call']['name']} failed: {(r.stderr or r.stdout).strip()[-300:]}")
+        return read_output(out, op, case)
 
 
 def write_dem(path: Path) -> None:
@@ -412,7 +502,9 @@ def measure(kind: str, geoms) -> float:
     if kind == "raster_count":
         return float(len(geoms))
     if kind.startswith("field_"):
-        return float(geoms[kind[len("field_"):]].iloc[0])
+        name = kind[len("field_"):]
+        col = name if name in geoms.columns else next(c for c in geoms.columns if c.lower().endswith(name))
+        return float(geoms[col].iloc[0])
     if kind == "area":
         return sum(g.area for g in geoms)
     if kind == "length":
@@ -436,6 +528,8 @@ def main() -> int:
     ap.add_argument("--gdal", default=shutil.which("gdal"))
     ap.add_argument("--psql", default=shutil.which("psql"))
     ap.add_argument("--dsn", default=None, help="PostGIS connection string (needs the postgis extension)")
+    ap.add_argument("--qgis-process", default=shutil.which("qgis_process"))
+    ap.add_argument("--wbt", default=shutil.which("whitebox_tools"))
     args = ap.parse_args()
 
     db = sqlite3.connect(f"file:{args.dist / 'registry.sqlite'}?mode=ro", uri=True)
@@ -450,6 +544,10 @@ def main() -> int:
             return lambda op, case: run_gdal(args.gdal, impl, op, case)
         if iface == "sql" and software == "postgis" and args.psql and args.dsn:
             return lambda op, case: run_postgis(args.psql, args.dsn, impl, op, case)
+        if iface == "qgis-process" and args.qgis_process:
+            return lambda op, case: run_qgis(args.qgis_process, impl, op, case)
+        if iface == "cli" and software == "whiteboxtools" and args.wbt:
+            return lambda op, case: run_whitebox(args.wbt, impl, op, case)
         if iface == "sql" and software == "postgis-raster" and args.psql and args.dsn:
             return lambda op, case: run_postgis_raster(args.psql, args.dsn, impl, op, case)
         return None
@@ -468,6 +566,8 @@ def main() -> int:
                 continue
             try:
                 value = measure(case.measure, run(op, case))
+                if impl["id"] in OUTPUT_SCALE and case.measure.startswith("raster_"):
+                    value *= OUTPUT_SCALE[impl["id"]][0]
                 results.append((impl["id"], value))
             except Unsupported as e:
                 rows.append((case, impl["id"], "skipped", str(e)))
@@ -485,7 +585,7 @@ def main() -> int:
             if not ok:
                 failed += 1
             rows.append((case, impl_id, "ok" if ok else "FAIL",
-                         f"{case.measure} {value:.6g}" + ("" if ok else f", expected {reference:.6g}")))
+                         f"{case.measure} {value:.6g}" + ("" if ok else f" ({value:.12g}), expected {reference:.12g}")))
     for case, impl_id, status, detail in rows:
         print(f"{status:8} {case.operation:16} {impl_id:40} {case.title}: {detail}")
     ran = sum(1 for r in rows if r[2] in ("ok", "FAIL"))

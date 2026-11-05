@@ -1,0 +1,21 @@
+id: whiteboxtools-lidar-rooftop-analysis
+kind: implementation
+name: LidarRooftopAnalysis
+software: whiteboxtools
+call: {interface: cli, name: LidarRooftopAnalysis}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar'}
+  buildings: {type: 'ExistingFile:Vector:Polygon', required: true}
+  output: {type: 'NewFile:Vector:Polygon', required: true, note: output}
+  radius: {type: Float, default: '2.0'}
+  num_iter: {type: Integer, default: '50'}
+  num_samples: {type: Integer, default: '10'}
+  threshold: {type: Float, default: '0.15'}
+  model_size: {type: Integer, default: '15'}
+  max_slope: {type: Float, default: '65.0'}
+  norm_diff: {type: Float, default: '10.0'}
+  azimuth: {type: Float, default: '180.0'}
+  altitude: {type: Float, default: '30.0'}
+status: active
+review: {state: harvested, source: whitebox}

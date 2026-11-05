@@ -1,0 +1,93 @@
+id: grass-m-nviz-image
+kind: implementation
+name: m.nviz.image
+software: grass
+call: {interface: cli, name: m.nviz.image}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  elevation_map: {type: string, note: cell name; multiple values}
+  elevation_value: {type: integer, note: multiple values}
+  color_map: {type: string, note: cell name; multiple values}
+  color: {type: string, note: color name; multiple values}
+  mask_map: {type: string, note: cell name; multiple values}
+  transparency_map: {type: string, note: cell name; multiple values}
+  transparency_value: {type: integer, values: [0-255], note: multiple values}
+  shininess_map: {type: string, note: cell name; multiple values}
+  shininess_value: {type: integer, values: [0-255], note: multiple values}
+  emission_map: {type: string, note: cell name; multiple values}
+  emission_value: {type: integer, values: [0-255], note: multiple values}
+  mode: {type: string, default: fine, values: [coarse, fine, both], note: multiple values}
+  resolution_fine: {type: integer, default: '6', note: multiple values}
+  resolution_coarse: {type: integer, default: '9', note: multiple values}
+  style: {type: string, default: surface, values: [wire, surface], note: multiple values}
+  shading: {type: string, default: gouraud, values: [flat, gouraud], note: multiple values}
+  wire_color: {type: string, default: '136:136:136', note: color name; multiple values}
+  surface_position: {type: integer, default: '0,0,0', note: multiple values}
+  vline: {type: string, note: vector name; multiple values}
+  vline_layer: {type: string, default: '1', note: layer name; multiple values}
+  vline_width: {type: integer, default: '2', values: [1-100], note: multiple values}
+  vline_width_column: {type: string, note: dbcolumn name; multiple values}
+  vline_color: {type: string, default: blue, note: color name; multiple values}
+  vline_color_column: {type: string, note: dbcolumn name; multiple values}
+  vline_mode: {type: string, default: surface, values: [surface, flat], note: multiple values}
+  vline_height: {type: integer, default: '0', values: [0-1000], note: multiple values}
+  vline_position: {type: integer, default: '0,0,0', note: multiple values}
+  vpoint: {type: string, note: vector name; multiple values}
+  vpoint_layer: {type: string, default: '1', note: layer name; multiple values}
+  vpoint_size: {type: float, default: '100', values: [0-1000], note: multiple values}
+  vpoint_size_column: {type: string, note: dbcolumn name; multiple values}
+  vpoint_width: {type: integer, default: '2', values: [1-1000], note: multiple values}
+  vpoint_width_column: {type: string, note: dbcolumn name; multiple values}
+  vpoint_color: {type: string, default: blue, note: color name; multiple values}
+  vpoint_color_column: {type: string, note: dbcolumn name; multiple values}
+  vpoint_marker: {type: string, default: sphere, values: [x, box, sphere, cube, diamond, dec_tree, con_tree, aster, gyro,
+      histogram], note: multiple values}
+  vpoint_marker_column: {type: string, note: dbcolumn name; multiple values}
+  vpoint_mode: {type: string, default: 3D, values: [surface, 3D], note: multiple values}
+  vpoint_position: {type: float, default: '0,0,0', note: multiple values}
+  volume: {type: string, note: grid3 name; multiple values}
+  volume_mode: {type: string, default: isosurface, values: [isosurface, slice], note: multiple values}
+  volume_shading: {type: string, default: gouraud, values: [flat, gouraud], note: multiple values}
+  volume_position: {type: integer, default: '0,0,0', note: multiple values}
+  volume_resolution: {type: integer, default: '3', note: multiple values}
+  isosurf_level: {type: string, note: multiple values}
+  isosurf_color_map: {type: string, note: grid3 name; multiple values}
+  isosurf_color_value: {type: string, note: color name; multiple values}
+  isosurf_transparency_map: {type: string, note: grid3 name; multiple values}
+  isosurf_transparency_value: {type: integer, values: [0-255], note: multiple values}
+  isosurf_shininess_map: {type: string, note: grid3 name; multiple values}
+  isosurf_shininess_value: {type: integer, values: [0-255], note: multiple values}
+  slice: {type: string, note: multiple values}
+  slice_position: {type: float, default: '0,1,0,1,0,1', note: multiple values}
+  slice_transparency: {type: integer, default: '0', values: [0-255], note: multiple values}
+  bgcolor: {type: string, default: white, note: color name}
+  position: {type: float, default: '0.84,0.16', values: [0.0-1.0]}
+  height: {type: integer}
+  perspective: {type: integer, default: 40, values: [1-180]}
+  twist: {type: integer, default: 0, values: [-180-180]}
+  zexag: {type: float}
+  focus: {type: float}
+  light_position: {type: float, default: '0.68,-0.68,0.80'}
+  light_color: {type: string, default: white, note: color name}
+  light_brightness: {type: integer, default: 80, values: [0-100]}
+  light_ambient: {type: integer, default: 20, values: [0-100]}
+  fringe: {type: string, values: [nw, ne, sw, se], note: multiple values}
+  fringe_color: {type: string, default: grey, note: color name}
+  fringe_elevation: {type: integer, default: 55}
+  cplane: {type: integer, note: multiple values}
+  cplane_position: {type: float, default: '0,0,0', note: multiple values}
+  cplane_rotation: {type: float, default: '0', values: [0-360], note: multiple values}
+  cplane_tilt: {type: float, default: '0', values: [0-360], note: multiple values}
+  cplane_shading: {type: string, default: clear, values: [clear, top, bottom, blend, shaded]}
+  arrow_position: {type: integer}
+  arrow_size: {type: float}
+  arrow_color: {type: string, default: black, note: color name}
+  output: {type: string, required: true, note: output file}
+  format: {type: string, required: true, default: ppm, values: [ppm, tif]}
+  size: {type: integer, required: true, default: '640,480'}
+  flag_a: {type: boolean, note: flag -a}
+  flag_n: {type: boolean, note: flag -n}
+  flag_b: {type: boolean, note: flag -b}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

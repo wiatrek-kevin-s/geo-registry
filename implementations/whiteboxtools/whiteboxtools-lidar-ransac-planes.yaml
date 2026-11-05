@@ -1,0 +1,19 @@
+id: whiteboxtools-lidar-ransac-planes
+kind: implementation
+name: LidarRansacPlanes
+software: whiteboxtools
+call: {interface: cli, name: LidarRansacPlanes}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar', required: true}
+  output: {type: 'NewFile:Lidar', required: true, note: output}
+  radius: {type: Float, default: '2.0'}
+  num_iter: {type: Integer, default: '50'}
+  num_samples: {type: Integer, default: '5'}
+  threshold: {type: Float, default: '0.35'}
+  model_size: {type: Integer, default: '8'}
+  max_slope: {type: Float, default: '80.0'}
+  classify: {type: Boolean, default: 'false'}
+  last_returns: {type: Boolean, default: 'false'}
+status: active
+review: {state: harvested, source: whitebox}

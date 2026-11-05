@@ -11,10 +11,32 @@ files, so re-harvesting after a release shows exactly what the release changed.
 | `pdal.py` | PDAL | `pdal --drivers --showjson`, `pdal --options <stage> --showjson` | `implementations/pdal/` |
 | `postgis.py` | PostGIS | the database's own catalogue (`pg_proc`) | `implementations/postgis/`, `implementations/postgis-raster/` |
 | `python_libs.py` | Shapely, GeoPandas | the installed packages, by introspection | `implementations/shapely/`, `implementations/geopandas/` |
+| `qgis.py` | QGIS Processing (all providers) | `qgis_process --json list` and `--json help` | `implementations/qgis/` |
+| `grass.py` | GRASS | each module's `--interface-description`, in a throwaway session | `implementations/grass/` |
+| `whitebox.py` | WhiteboxTools | `--listtools` and `--toolparameters` | `implementations/whiteboxtools/` |
+| `arcgis_pro_export.py` + `arcgis_pro.py` | ArcGIS Pro | ArcPy (`ListTools`, `GetParameterInfo`), on a machine with Pro | `implementations/arcgis-pro/` |
 
 Not yet: DuckDB spatial (its extension downloads from extensions.duckdb.org at
-run time), ArcGIS Pro (needs a machine with Pro; see the design set),
-QGIS Processing, GRASS and WhiteboxTools.
+run time, so it will be harvested in CI).
+
+## ArcGIS Pro
+
+ArcGIS Pro cannot run in CI, so its harvest has two halves. On a Windows machine
+with Pro, run the export in Pro's own Python (it needs nothing installed, opens no
+data and changes nothing):
+
+```bat
+"%PROGRAMFILES%\ArcGIS\Pro\bin\Python\Scripts\propy.bat" harvest\arcgis_pro_export.py
+```
+
+That writes `arcgis-pro-tools.jsonl`. Then, anywhere with the engines environment:
+
+```sh
+python harvest/arcgis_pro.py arcgis-pro-tools.jsonl
+```
+
+Re-run both after each Pro release. Only tool and parameter names, types,
+defaults and choices are exported; no Esri help text.
 
 ## What goes in, what stays out
 
@@ -41,6 +63,10 @@ micromamba run -n geo-registry-engines python harvest/pdal.py --pdal "$(micromam
 dsn=$(harvest/start-postgis.sh "$(dirname "$(micromamba run -n geo-registry-postgis which psql)")" /tmp/georeg-pg)
 micromamba run -n geo-registry-engines python harvest/postgis.py --psql "$(micromamba run -n geo-registry-postgis which psql)" --dsn "$dsn"
 micromamba run -n geo-registry-engines python harvest/python_libs.py
+
+micromamba create -f harvest/environment-qgis.yml       # then: python harvest/qgis.py --qgis-process <path>
+micromamba create -f harvest/environment-grass.yml      # then: python harvest/grass.py --grass <path>
+micromamba create -f harvest/environment-whitebox.yml   # then: python harvest/whitebox.py --wbt <path>
 ```
 
 `start-postgis.sh` starts a throwaway database on a Unix socket only (no network

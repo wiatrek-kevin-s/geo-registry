@@ -1,0 +1,16 @@
+id: qgis-native-rescaleraster
+kind: implementation
+name: native:rescaleraster
+software: qgis
+call: {interface: qgis-process, name: 'native:rescaleraster'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BAND: {type: band, required: true, default: 1}
+  CREATION_OPTIONS: {type: string}
+  INPUT: {type: raster, required: true}
+  MAXIMUM: {type: number, required: true, default: 255}
+  MINIMUM: {type: number, required: true, default: 0}
+  NODATA: {type: number}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

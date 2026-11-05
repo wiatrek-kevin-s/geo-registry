@@ -1,0 +1,22 @@
+id: grass-r-profile
+kind: implementation
+name: r.profile
+software: grass
+call: {interface: cli, name: r.profile}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string, default: '-', note: output file}
+  coordinates: {type: float, note: coords name; multiple values}
+  file: {type: string, note: file name}
+  resolution: {type: float}
+  null_value: {type: string, default: '*'}
+  units: {type: string, values: [meters, kilometers, feet, miles]}
+  format: {type: string, required: true, default: plain, values: [plain, csv, json]}
+  color_format: {type: string, values: [rgb, hex, hsv, triplet]}
+  separator: {type: string, default: comma, note: separator name}
+  flag_g: {type: boolean, note: flag -g}
+  flag_c: {type: boolean, note: flag -c}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

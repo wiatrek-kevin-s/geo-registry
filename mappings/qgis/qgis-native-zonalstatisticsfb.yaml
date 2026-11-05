@@ -1,0 +1,12 @@
+id: qgis-native-zonalstatisticsfb
+implements: zonal-statistics
+crosswalk:
+  raster: INPUT_RASTER
+  zones: INPUT
+  output: OUTPUT
+  band: RASTER_BAND
+  stats: { param: STATISTICS, values: { count: 0, sum: 1, mean: 2, std: 4, min: 5, max: 6 } }
+differences:
+  - Output columns are named with COLUMN_PREFIX (default "_"), e.g. _mean.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

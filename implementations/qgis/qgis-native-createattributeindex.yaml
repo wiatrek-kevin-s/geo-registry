@@ -1,0 +1,11 @@
+id: qgis-native-createattributeindex
+kind: implementation
+name: native:createattributeindex
+software: qgis
+call: {interface: qgis-process, name: 'native:createattributeindex'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  FIELD: {type: field, required: true}
+  INPUT: {type: vector, required: true}
+status: active
+review: {state: harvested, source: qgis}

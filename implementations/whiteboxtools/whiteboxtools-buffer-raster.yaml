@@ -1,0 +1,13 @@
+id: whiteboxtools-buffer-raster
+kind: implementation
+name: BufferRaster
+software: whiteboxtools
+call: {interface: cli, name: BufferRaster}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  size: {type: Float, required: true}
+  gridcells: {type: Boolean}
+status: active
+review: {state: harvested, source: whitebox}

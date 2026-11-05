@@ -1,0 +1,29 @@
+id: grass-r-colors-out
+kind: implementation
+name: r.colors.out
+software: grass
+call: {interface: cli, name: r.colors.out}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, note: cell name; multiple values}
+  file: {type: string, note: file name}
+  color: {type: string, values: [aspect, aspectcolr, bcyr, bgyr, blues, byg, byr, celsius, corine, curvature, differences,
+      elevation, etopo2, evi, fahrenheit, forest_cover, gdd, grass, greens, grey, grey.eq, grey.log, grey1.0, grey255, gyr,
+      haxby, inferno, kelvin, magma, ndvi, ndwi, nlcd, oranges, plasma, population, population_dens, precipitation, precipitation_daily,
+      precipitation_monthly, rainbow, ramp, random, reds, roygbiv, rstcurv, ryb, ryg, sepia, slope, soilmoisture, srtm, srtm_percent,
+      srtm_plus, terrain, viridis, water, wave], note: colortable name}
+  raster: {type: string, note: cell name}
+  raster_3d: {type: string, note: grid3 name}
+  rules: {type: string, note: file name}
+  offset: {type: float, default: 0.0}
+  scale: {type: float, default: 1.0}
+  flag_r: {type: boolean, note: flag -r}
+  flag_w: {type: boolean, note: flag -w}
+  flag_l: {type: boolean, note: flag -l}
+  flag_d: {type: boolean, note: flag -d}
+  flag_n: {type: boolean, note: flag -n}
+  flag_g: {type: boolean, note: flag -g}
+  flag_a: {type: boolean, note: flag -a}
+  flag_e: {type: boolean, note: flag -e}
+status: active
+review: {state: harvested, source: grass}

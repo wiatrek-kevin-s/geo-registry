@@ -1,0 +1,17 @@
+id: grass-i-eb-soilheatflux
+kind: implementation
+name: i.eb.soilheatflux
+software: grass
+call: {interface: cli, name: i.eb.soilheatflux}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  albedo: {type: string, required: true, note: cell name}
+  ndvi: {type: string, required: true, note: cell name}
+  temperature: {type: string, required: true, note: cell name}
+  netradiation: {type: string, required: true, note: cell name}
+  localutctime: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  flag_r: {type: boolean, note: flag -r}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,11 @@
+id: qgis-native-pointtolayer
+kind: implementation
+name: native:pointtolayer
+software: qgis
+call: {interface: qgis-process, name: 'native:pointtolayer'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: point, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

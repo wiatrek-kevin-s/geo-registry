@@ -1,0 +1,14 @@
+id: whiteboxtools-normalized-difference-index
+kind: implementation
+name: NormalizedDifferenceIndex
+software: whiteboxtools
+call: {interface: cli, name: NormalizedDifferenceIndex}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input1: {type: 'ExistingFile:Raster', required: true}
+  input2: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  clip: {type: Float, default: '0.0'}
+  correction: {type: Float, default: '0.0'}
+status: active
+review: {state: harvested, source: whitebox}

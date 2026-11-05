@@ -1,0 +1,20 @@
+id: qgis-native-writevectortiles-mbtiles
+kind: implementation
+name: native:writevectortiles_mbtiles
+software: qgis
+call: {interface: qgis-process, name: 'native:writevectortiles_mbtiles'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  EXTENT: {type: extent}
+  LAYERS: {type: vectortilewriterlayers, required: true}
+  MAX_ZOOM: {type: number, required: true, default: 3}
+  META_ATTRIBUTION: {type: string}
+  META_CENTER: {type: string}
+  META_DESCRIPTION: {type: string}
+  META_NAME: {type: string}
+  META_TYPE: {type: string}
+  META_VERSION: {type: string}
+  MIN_ZOOM: {type: number, required: true, default: 0}
+  OUTPUT: {type: vectorTileDestination, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

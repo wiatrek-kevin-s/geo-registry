@@ -1,0 +1,16 @@
+id: qgis-pdal-virtualpointcloud
+kind: implementation
+name: pdal:virtualpointcloud
+software: qgis
+call: {interface: qgis-process, name: 'pdal:virtualpointcloud'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BOUNDARY: {type: boolean, required: true, default: false}
+  CONVERT_COPC: {type: boolean, required: true, default: false}
+  LAYERS: {type: multilayer, required: true}
+  OUTPUT: {type: pointCloudDestination, required: true, note: output}
+  OVERVIEW: {type: boolean, required: true, default: false}
+  OVERVIEW_LENGTH: {type: number}
+  STATISTICS: {type: boolean, required: true, default: false}
+status: active
+review: {state: harvested, source: qgis}

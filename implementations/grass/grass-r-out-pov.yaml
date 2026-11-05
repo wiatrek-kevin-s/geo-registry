@@ -1,0 +1,15 @@
+id: grass-r-out-pov
+kind: implementation
+name: r.out.pov
+software: grass
+call: {interface: cli, name: r.out.pov}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output file}
+  hftype: {type: integer}
+  bias: {type: float}
+  scale: {type: float}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,12 @@
+id: grass-r-surf-area
+kind: implementation
+name: r.surf.area
+software: grass
+call: {interface: cli, name: r.surf.area}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: cell name}
+  vscale: {type: float, default: 1.0}
+  units: {type: string, values: [miles, feet, meters, kilometers, acres, hectares]}
+status: active
+review: {state: harvested, source: grass}

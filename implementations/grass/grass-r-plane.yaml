@@ -1,0 +1,17 @@
+id: grass-r-plane
+kind: implementation
+name: r.plane
+software: grass
+call: {interface: cli, name: r.plane}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  output: {type: string, required: true, note: output cell}
+  dip: {type: float, required: true, default: 0.0, values: [-90-90]}
+  azimuth: {type: float, required: true, default: 0.0, values: [0-360]}
+  easting: {type: float, required: true}
+  northing: {type: float, required: true}
+  elevation: {type: float, required: true}
+  type: {type: string, default: FCELL, values: [CELL, FCELL, DCELL]}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

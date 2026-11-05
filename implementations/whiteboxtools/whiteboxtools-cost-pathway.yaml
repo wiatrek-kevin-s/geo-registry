@@ -1,0 +1,13 @@
+id: whiteboxtools-cost-pathway
+kind: implementation
+name: CostPathway
+software: whiteboxtools
+call: {interface: cli, name: CostPathway}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  destination: {type: 'ExistingFile:Raster', required: true}
+  backlink: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  zero_background: {type: Boolean, required: true}
+status: active
+review: {state: harvested, source: whitebox}

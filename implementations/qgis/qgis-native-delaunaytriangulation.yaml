@@ -1,0 +1,13 @@
+id: qgis-native-delaunaytriangulation
+kind: implementation
+name: native:delaunaytriangulation
+software: qgis
+call: {interface: qgis-process, name: 'native:delaunaytriangulation'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ADD_ATTRIBUTES: {type: boolean, required: true, default: true}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  TOLERANCE: {type: number, default: 0}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,16 @@
+id: grass-d-histogram
+kind: implementation
+name: d.histogram
+software: grass
+call: {interface: cli, name: d.histogram}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: cell name}
+  style: {type: string, default: bar, values: [pie, bar]}
+  color: {type: string, default: black, note: color name}
+  bgcolor: {type: string, default: white, note: color_none name}
+  nsteps: {type: integer, default: 255}
+  flag_n: {type: boolean, note: flag -n}
+  flag_c: {type: boolean, note: flag -c}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,11 @@
+id: grass-g-mkfontcap
+kind: implementation
+name: g.mkfontcap
+software: grass
+call: {interface: cli, name: g.mkfontcap}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  extradirs: {type: string}
+  flag_s: {type: boolean, note: flag -s}
+status: active
+review: {state: harvested, source: grass}

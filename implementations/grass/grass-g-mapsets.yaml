@@ -1,0 +1,16 @@
+id: grass-g-mapsets
+kind: implementation
+name: g.mapsets
+software: grass
+call: {interface: cli, name: g.mapsets}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  mapset: {type: string, required: true, note: mapset name; multiple values}
+  operation: {type: string, required: true, default: add, values: [set, add, remove]}
+  format: {type: string, required: true, default: plain, values: [plain, json]}
+  separator: {type: string, note: separator name}
+  flag_l: {type: boolean, note: flag -l}
+  flag_p: {type: boolean, note: flag -p}
+  flag_s: {type: boolean, note: flag -s}
+status: active
+review: {state: harvested, source: grass}

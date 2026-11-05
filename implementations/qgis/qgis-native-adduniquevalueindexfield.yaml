@@ -1,0 +1,14 @@
+id: qgis-native-adduniquevalueindexfield
+kind: implementation
+name: native:adduniquevalueindexfield
+software: qgis
+call: {interface: qgis-process, name: 'native:adduniquevalueindexfield'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  FIELD: {type: field, required: true}
+  FIELD_NAME: {type: string, required: true, default: NUM_FIELD}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, note: output}
+  SUMMARY_OUTPUT: {type: sink, note: output}
+status: active
+review: {state: harvested, source: qgis}

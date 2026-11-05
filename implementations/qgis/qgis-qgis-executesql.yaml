@@ -1,0 +1,17 @@
+id: qgis-qgis-executesql
+kind: implementation
+name: qgis:executesql
+software: qgis
+call: {interface: qgis-process, name: 'qgis:executesql'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT_DATASOURCES: {type: multilayer}
+  INPUT_GEOMETRY_CRS: {type: crs}
+  INPUT_GEOMETRY_FIELD: {type: string}
+  INPUT_GEOMETRY_TYPE: {type: enum, required: true, default: 0, values: [0, 1, 2, 3, 4, 5, 6, 7], note: '0 Autodetect, 1 No
+      geometry, 2 Point, 3 LineString, 4 Polygon, 5 MultiPoint, 6 MultiLineString, 7 MultiPolygon'}
+  INPUT_QUERY: {type: execute_sql, required: true}
+  INPUT_UID_FIELD: {type: string}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

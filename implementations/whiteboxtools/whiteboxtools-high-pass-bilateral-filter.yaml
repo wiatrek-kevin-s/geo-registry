@@ -1,0 +1,13 @@
+id: whiteboxtools-high-pass-bilateral-filter
+kind: implementation
+name: HighPassBilateralFilter
+software: whiteboxtools
+call: {interface: cli, name: HighPassBilateralFilter}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  sigma_dist: {type: Float, default: '0.75'}
+  sigma_int: {type: Float, default: '1.0'}
+status: active
+review: {state: harvested, source: whitebox}

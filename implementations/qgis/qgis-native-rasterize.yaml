@@ -1,0 +1,17 @@
+id: qgis-native-rasterize
+kind: implementation
+name: native:rasterize
+software: qgis
+call: {interface: qgis-process, name: 'native:rasterize'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  EXTENT: {type: extent, required: true}
+  EXTENT_BUFFER: {type: number, default: 0}
+  LAYERS: {type: multilayer}
+  MAKE_BACKGROUND_TRANSPARENT: {type: boolean, required: true, default: false}
+  MAP_THEME: {type: maptheme}
+  MAP_UNITS_PER_PIXEL: {type: number, default: 100}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  TILE_SIZE: {type: number, required: true, default: 1024}
+status: active
+review: {state: harvested, source: qgis}

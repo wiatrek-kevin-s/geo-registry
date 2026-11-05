@@ -1,0 +1,12 @@
+id: whiteboxtools-find-ridges
+kind: implementation
+name: FindRidges
+software: whiteboxtools
+call: {interface: cli, name: FindRidges}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  line_thin: {type: Boolean, default: 'true'}
+status: active
+review: {state: harvested, source: whitebox}

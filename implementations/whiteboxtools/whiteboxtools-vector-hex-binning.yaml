@@ -1,0 +1,13 @@
+id: whiteboxtools-vector-hex-binning
+kind: implementation
+name: VectorHexBinning
+software: whiteboxtools
+call: {interface: cli, name: VectorHexBinning}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Vector:Point', required: true}
+  output: {type: 'NewFile:Vector:Polygon', required: true, note: output}
+  width: {type: Float, required: true}
+  orientation: {type: OptionList, default: horizontal, values: [horizontal, vertical]}
+status: active
+review: {state: harvested, source: whitebox}

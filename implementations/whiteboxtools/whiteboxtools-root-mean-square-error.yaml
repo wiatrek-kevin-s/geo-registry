@@ -1,0 +1,11 @@
+id: whiteboxtools-root-mean-square-error
+kind: implementation
+name: RootMeanSquareError
+software: whiteboxtools
+call: {interface: cli, name: RootMeanSquareError}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  base: {type: 'ExistingFile:Raster', required: true}
+status: active
+review: {state: harvested, source: whitebox}

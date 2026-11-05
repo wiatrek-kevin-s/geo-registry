@@ -1,0 +1,19 @@
+id: qgis-native-cellstackpercentrankfromrasterlayer
+kind: implementation
+name: native:cellstackpercentrankfromrasterlayer
+software: qgis
+call: {interface: qgis-process, name: 'native:cellstackpercentrankfromrasterlayer'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CREATION_OPTIONS: {type: string}
+  IGNORE_NODATA: {type: boolean, required: true, default: true}
+  INPUT: {type: multilayer, required: true}
+  INPUT_VALUE_RASTER: {type: raster, required: true}
+  METHOD: {type: enum, required: true, default: 0, values: [0, 1], note: '0 Inclusive linear interpolation (PERCENTRANK.INC),
+      1 Exclusive linear interpolation (PERCENTRANK.EXC)'}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  OUTPUT_NODATA_VALUE: {type: number, required: true, default: -9999}
+  REFERENCE_LAYER: {type: raster, required: true}
+  VALUE_RASTER_BAND: {type: band, required: true, default: 1}
+status: active
+review: {state: harvested, source: qgis}

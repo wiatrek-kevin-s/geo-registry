@@ -1,0 +1,9 @@
+id: grass-g-gui-gcp
+kind: implementation
+name: g.gui.gcp
+software: grass
+call: {interface: cli, name: g.gui.gcp}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters: {}
+status: active
+review: {state: harvested, source: grass}

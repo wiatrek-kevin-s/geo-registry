@@ -1,0 +1,14 @@
+id: grass-v-db-addtable
+kind: implementation
+name: v.db.addtable
+software: grass
+call: {interface: cli, name: v.db.addtable}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: vector name}
+  table: {type: string}
+  layer: {type: integer, default: 1}
+  key: {type: string, default: cat}
+  columns: {type: string, note: multiple values}
+status: active
+review: {state: harvested, source: grass}

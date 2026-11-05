@@ -1,0 +1,21 @@
+id: grass-v-clean
+kind: implementation
+name: v.clean
+software: grass
+call: {interface: cli, name: v.clean}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '-1', note: layer_all name}
+  type: {type: string, default: 'point,line,boundary,centroid,area,face,kernel', values: [point, line, boundary, centroid,
+      area, face, kernel], note: multiple values}
+  output: {type: string, required: true, note: output vector}
+  error: {type: string, note: output vector}
+  tool: {type: string, required: true, values: [break, snap, rmdangle, chdangle, rmbridge, chbridge, rmdupl, rmdac, bpol,
+      prune, rmarea, rmline, rmsa], note: multiple values}
+  threshold: {type: float, note: multiple values}
+  flag_b: {type: boolean, note: flag -b}
+  flag_c: {type: boolean, note: flag -c}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,10 @@
+id: qgis-native-createspatialindex
+kind: implementation
+name: native:createspatialindex
+software: qgis
+call: {interface: qgis-process, name: 'native:createspatialindex'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: vector, required: true}
+status: active
+review: {state: harvested, source: qgis}

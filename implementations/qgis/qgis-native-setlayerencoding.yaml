@@ -1,0 +1,11 @@
+id: qgis-native-setlayerencoding
+kind: implementation
+name: native:setlayerencoding
+software: qgis
+call: {interface: qgis-process, name: 'native:setlayerencoding'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ENCODING: {type: string, required: true}
+  INPUT: {type: vector, required: true}
+status: active
+review: {state: harvested, source: qgis}

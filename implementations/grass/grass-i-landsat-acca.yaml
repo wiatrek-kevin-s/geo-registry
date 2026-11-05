@@ -1,0 +1,20 @@
+id: grass-i-landsat-acca
+kind: implementation
+name: i.landsat.acca
+software: grass
+call: {interface: cli, name: i.landsat.acca}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  b56composite: {type: float, default: 225.0}
+  b45ratio: {type: float, default: 1.0}
+  histogram: {type: integer, default: 100}
+  flag_5: {type: boolean, note: flag -5}
+  flag_f: {type: boolean, note: flag -f}
+  flag_x: {type: boolean, note: flag -x}
+  flag_2: {type: boolean, note: flag -2}
+  flag_s: {type: boolean, note: flag -s}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

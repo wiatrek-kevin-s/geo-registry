@@ -1,0 +1,17 @@
+id: qgis-native-rasterbooleanand
+kind: implementation
+name: native:rasterbooleanand
+software: qgis
+call: {interface: qgis-process, name: 'native:rasterbooleanand'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CREATION_OPTIONS: {type: string}
+  DATA_TYPE: {type: enum, required: true, default: 5, values: [0, 1, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9], note: '0 Byte, 1 Int16,
+      10 CFloat64, 11 Int8, 2 UInt16, 3 Int32, 4 UInt32, 5 Float32, 6 Float64, 7 CInt16, 8 CInt32, 9 CFloat32'}
+  INPUT: {type: multilayer, required: true}
+  NODATA_AS_FALSE: {type: boolean, required: true, default: false}
+  NO_DATA: {type: number, required: true, default: -9999}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  REF_LAYER: {type: raster, required: true}
+status: active
+review: {state: harvested, source: qgis}

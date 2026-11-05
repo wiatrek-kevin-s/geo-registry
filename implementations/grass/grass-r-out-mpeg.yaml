@@ -1,0 +1,17 @@
+id: grass-r-out-mpeg
+kind: implementation
+name: r.out.mpeg
+software: grass
+call: {interface: cli, name: r.out.mpeg}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  view1: {type: string, required: true, note: cell name; multiple values}
+  view2: {type: string, note: cell name; multiple values}
+  view3: {type: string, note: cell name; multiple values}
+  view4: {type: string, note: cell name; multiple values}
+  output: {type: string, required: true, note: output file}
+  quality: {type: integer, default: 3, values: [1-5]}
+  flag_c: {type: boolean, note: flag -c}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

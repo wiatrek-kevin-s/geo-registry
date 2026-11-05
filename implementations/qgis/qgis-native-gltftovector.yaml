@@ -1,0 +1,12 @@
+id: qgis-native-gltftovector
+kind: implementation
+name: native:gltftovector
+software: qgis
+call: {interface: qgis-process, name: 'native:gltftovector'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: file, required: true}
+  OUTPUT_LINES: {type: sink, note: output}
+  OUTPUT_POLYGONS: {type: sink, note: output}
+status: active
+review: {state: harvested, source: qgis}

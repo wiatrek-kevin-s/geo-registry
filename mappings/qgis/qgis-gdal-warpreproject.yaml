@@ -1,0 +1,10 @@
+id: qgis-gdal-warpreproject
+implements: reproject-raster
+crosswalk:
+  raster: INPUT
+  output: OUTPUT
+  crs: TARGET_CRS
+  resampling: { param: RESAMPLING, values: { nearest: 0, bilinear: 1, cubic: 2, average: 5, mode: 6 } }
+  resolution: TARGET_RESOLUTION
+effects: { modifies_input: false, network: false }
+review: { state: draft }

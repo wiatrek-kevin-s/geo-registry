@@ -1,0 +1,20 @@
+id: grass-t-list
+kind: implementation
+name: t.list
+software: grass
+call: {interface: cli, name: t.list}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  type: {type: string, default: strds, values: [strds, str3ds, stvds, raster, raster_3d, vector]}
+  temporaltype: {type: string, default: 'absolute,relative', values: [absolute, relative], note: multiple values}
+  order: {type: string, default: id, values: [id, name, semantic_label, creator, mapset, number_of_maps, creation_time, start_time,
+      end_time, interval, north, south, west, east, granularity], note: multiple values}
+  columns: {type: string, default: id, values: [id, name, semantic_label, creator, mapset, number_of_maps, creation_time,
+      start_time, end_time, north, south, west, east, granularity, all], note: multiple values}
+  where: {type: string}
+  separator: {type: string, default: pipe, note: separator name}
+  output: {type: string, note: output file}
+  flag_c: {type: boolean, note: flag -c}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

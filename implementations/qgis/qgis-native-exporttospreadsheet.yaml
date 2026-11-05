@@ -1,0 +1,14 @@
+id: qgis-native-exporttospreadsheet
+kind: implementation
+name: native:exporttospreadsheet
+software: qgis
+call: {interface: qgis-process, name: 'native:exporttospreadsheet'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  FORMATTED_VALUES: {type: boolean, required: true, default: false}
+  LAYERS: {type: multilayer, required: true}
+  OUTPUT: {type: fileDestination, required: true, note: output}
+  OVERWRITE: {type: boolean, required: true, default: true}
+  USE_ALIAS: {type: boolean, required: true, default: false}
+status: active
+review: {state: harvested, source: qgis}

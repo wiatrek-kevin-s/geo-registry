@@ -1,0 +1,27 @@
+id: grass-d-text
+kind: implementation
+name: d.text
+software: grass
+call: {interface: cli, name: d.text}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  text: {type: string}
+  input: {type: string, note: file name}
+  color: {type: string, default: gray, note: color name}
+  bgcolor: {type: string, default: none, note: color_none name}
+  rotation: {type: float, default: 0.0}
+  linespacing: {type: float, default: 1.25}
+  at: {type: float}
+  line: {type: integer, values: [1-1000]}
+  align: {type: string, default: ll, values: [ll, lc, lr, cl, cc, cr, ul, uc, ur]}
+  font: {type: string}
+  size: {type: float, default: 5.0, values: [0-100]}
+  path: {type: string, note: font name}
+  charset: {type: string}
+  flag_p: {type: boolean, note: flag -p}
+  flag_g: {type: boolean, note: flag -g}
+  flag_b: {type: boolean, note: flag -b}
+  flag_r: {type: boolean, note: flag -r}
+  flag_s: {type: boolean, note: flag -s}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,16 @@
+id: whiteboxtools-lidar-digital-surface-model
+kind: implementation
+name: LidarDigitalSurfaceModel
+software: whiteboxtools
+call: {interface: cli, name: LidarDigitalSurfaceModel}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar'}
+  output: {type: 'NewFile:Raster', note: output}
+  resolution: {type: Float, default: '1.0'}
+  radius: {type: Float, default: '0.5'}
+  minz: {type: Float}
+  maxz: {type: Float}
+  max_triangle_edge_length: {type: Float}
+status: active
+review: {state: harvested, source: whitebox}

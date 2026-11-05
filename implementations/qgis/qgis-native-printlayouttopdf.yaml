@@ -1,0 +1,23 @@
+id: qgis-native-printlayouttopdf
+kind: implementation
+name: native:printlayouttopdf
+software: qgis
+call: {interface: qgis-process, name: 'native:printlayouttopdf'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  DISABLE_TILED: {type: boolean, required: true, default: false}
+  DPI: {type: number}
+  FORCE_RASTER: {type: boolean, required: true, default: false}
+  FORCE_VECTOR: {type: boolean, required: true, default: false}
+  GEOREFERENCE: {type: boolean, required: true, default: true}
+  IMAGE_COMPRESSION: {type: enum, required: true, default: 0, values: [0, 1], note: '0 Lossy (JPEG), 1 Lossless'}
+  INCLUDE_METADATA: {type: boolean, required: true, default: true}
+  LAYERS: {type: multilayer}
+  LAYOUT: {type: layout, required: true}
+  OUTPUT: {type: fileDestination, required: true, note: output}
+  SEPARATE_LAYERS: {type: boolean, required: true, default: false}
+  SIMPLIFY: {type: boolean, required: true, default: true}
+  TEXT_FORMAT: {type: enum, required: true, default: 0, values: [0, 1, 2], note: '0 Always Export Text as Paths (Recommended),
+      1 Always Export Text as Text Objects, 2 Prefer Exporting Text as Text Objects'}
+status: active
+review: {state: harvested, source: qgis}

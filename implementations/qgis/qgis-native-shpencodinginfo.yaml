@@ -1,0 +1,10 @@
+id: qgis-native-shpencodinginfo
+kind: implementation
+name: native:shpencodinginfo
+software: qgis
+call: {interface: qgis-process, name: 'native:shpencodinginfo'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: file, required: true}
+status: active
+review: {state: harvested, source: qgis}

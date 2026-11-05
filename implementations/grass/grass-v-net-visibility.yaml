@@ -1,0 +1,14 @@
+id: grass-v-net-visibility
+kind: implementation
+name: v.net.visibility
+software: grass
+call: {interface: cli, name: v.net.visibility}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  output: {type: string, required: true, note: output vector}
+  coordinates: {type: float, note: coords name}
+  visibility: {type: string, note: vector name}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

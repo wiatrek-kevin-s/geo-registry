@@ -1,0 +1,12 @@
+id: whiteboxtools-single-part-to-multi-part
+kind: implementation
+name: SinglePartToMultiPart
+software: whiteboxtools
+call: {interface: cli, name: SinglePartToMultiPart}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Vector:Any', required: true}
+  field: {type: VectorAttributeField}
+  output: {type: 'NewFile:Vector:Any', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

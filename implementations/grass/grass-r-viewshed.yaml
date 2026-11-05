@@ -1,0 +1,24 @@
+id: grass-r-viewshed
+kind: implementation
+name: r.viewshed
+software: grass
+call: {interface: cli, name: r.viewshed}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  coordinates: {type: float, required: true, note: coords name}
+  observer_elevation: {type: float, default: 1.75}
+  target_elevation: {type: float, default: 0.0}
+  max_distance: {type: float, default: -1.0}
+  direction_range: {type: float, values: [0-360]}
+  refraction_coeff: {type: float, default: 0.14286, values: [0.0-1.0]}
+  memory: {type: integer, default: 500}
+  directory: {type: string}
+  flag_c: {type: boolean, note: flag -c}
+  flag_r: {type: boolean, note: flag -r}
+  flag_b: {type: boolean, note: flag -b}
+  flag_e: {type: boolean, note: flag -e}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

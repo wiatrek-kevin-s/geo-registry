@@ -1,0 +1,15 @@
+id: whiteboxtools-create-rectangular-vector-grid
+kind: implementation
+name: CreateRectangularVectorGrid
+software: whiteboxtools
+call: {interface: cli, name: CreateRectangularVectorGrid}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:RasterAndVector:Any', required: true}
+  output: {type: 'NewFile:Vector:Polygon', required: true, note: output}
+  width: {type: Float, required: true}
+  height: {type: Float, required: true}
+  xorig: {type: Float, default: '0'}
+  yorig: {type: Float, default: '0'}
+status: active
+review: {state: harvested, source: whitebox}

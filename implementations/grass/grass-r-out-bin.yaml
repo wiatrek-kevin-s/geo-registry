@@ -1,0 +1,19 @@
+id: grass-r-out-bin
+kind: implementation
+name: r.out.bin
+software: grass
+call: {interface: cli, name: r.out.bin}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string}
+  'null': {type: float, default: 0.0}
+  bytes: {type: integer, values: ['1', '2', '4', '8']}
+  order: {type: string, default: native, values: [big, little, native, swap]}
+  flag_i: {type: boolean, note: flag -i}
+  flag_f: {type: boolean, note: flag -f}
+  flag_h: {type: boolean, note: flag -h}
+  flag_b: {type: boolean, note: flag -b}
+  flag_s: {type: boolean, note: flag -s}
+status: active
+review: {state: harvested, source: grass}

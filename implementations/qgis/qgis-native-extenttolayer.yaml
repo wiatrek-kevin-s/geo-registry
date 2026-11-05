@@ -1,0 +1,11 @@
+id: qgis-native-extenttolayer
+kind: implementation
+name: native:extenttolayer
+software: qgis
+call: {interface: qgis-process, name: 'native:extenttolayer'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: extent, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

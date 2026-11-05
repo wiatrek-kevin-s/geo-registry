@@ -1,0 +1,15 @@
+id: grass-v-delaunay
+kind: implementation
+name: v.delaunay
+software: grass
+call: {interface: cli, name: v.delaunay}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '-1', note: layer_all name}
+  output: {type: string, required: true, note: output vector}
+  flag_r: {type: boolean, note: flag -r}
+  flag_l: {type: boolean, note: flag -l}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

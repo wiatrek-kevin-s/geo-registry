@@ -1,0 +1,18 @@
+id: grass-r-kappa
+kind: implementation
+name: r.kappa
+software: grass
+call: {interface: cli, name: r.kappa}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  classification: {type: string, required: true, note: cell name}
+  reference: {type: string, required: true, note: cell name}
+  output: {type: string, note: output file}
+  title: {type: string, default: ACCURACY ASSESSMENT}
+  format: {type: string, required: true, default: plain, values: [plain, json]}
+  flag_w: {type: boolean, note: flag -w}
+  flag_h: {type: boolean, note: flag -h}
+  flag_m: {type: boolean, note: flag -m}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

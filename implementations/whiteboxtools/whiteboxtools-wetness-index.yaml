@@ -1,0 +1,12 @@
+id: whiteboxtools-wetness-index
+kind: implementation
+name: WetnessIndex
+software: whiteboxtools
+call: {interface: cli, name: WetnessIndex}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  sca: {type: 'ExistingFile:Raster', required: true}
+  slope: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

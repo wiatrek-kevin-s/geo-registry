@@ -1,0 +1,15 @@
+id: whiteboxtools-max-elevation-deviation
+kind: implementation
+name: MaxElevationDeviation
+software: whiteboxtools
+call: {interface: cli, name: MaxElevationDeviation}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  out_mag: {type: 'NewFile:Raster', required: true, note: output}
+  out_scale: {type: 'NewFile:Raster', required: true, note: output}
+  min_scale: {type: Integer, required: true}
+  max_scale: {type: Integer, required: true}
+  step: {type: Integer, required: true, default: '1'}
+status: active
+review: {state: harvested, source: whitebox}

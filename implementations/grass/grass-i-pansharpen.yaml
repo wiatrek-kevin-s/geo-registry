@@ -1,0 +1,20 @@
+id: grass-i-pansharpen
+kind: implementation
+name: i.pansharpen
+software: grass
+call: {interface: cli, name: i.pansharpen}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  red: {type: string, required: true, note: cell name}
+  green: {type: string, required: true, note: cell name}
+  blue: {type: string, required: true, note: cell name}
+  pan: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  method: {type: string, required: true, default: ihs, values: [brovey, ihs, pca]}
+  bitdepth: {type: integer, required: true, default: 8, values: [2-32]}
+  flag_s: {type: boolean, note: flag -s}
+  flag_l: {type: boolean, note: flag -l}
+  flag_r: {type: boolean, note: flag -r}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

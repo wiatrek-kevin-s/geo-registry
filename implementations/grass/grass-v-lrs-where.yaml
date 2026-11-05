@@ -1,0 +1,17 @@
+id: grass-v-lrs-where
+kind: implementation
+name: v.lrs.where
+software: grass
+call: {interface: cli, name: v.lrs.where}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  lines: {type: string, required: true, note: vector name}
+  points: {type: string, required: true, note: vector name}
+  llayer: {type: string, default: '1', note: layer name}
+  player: {type: string, default: '1', note: layer name}
+  rsdriver: {type: string, default: sqlite, values: [dbf, ogr, pg, sqlite]}
+  rsdatabase: {type: string, default: $GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db}
+  rstable: {type: string, required: true}
+  threshold: {type: float, default: 1000.0}
+status: active
+review: {state: harvested, source: grass}

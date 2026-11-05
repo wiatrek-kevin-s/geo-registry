@@ -1,0 +1,12 @@
+id: qgis-native-raiseexception
+kind: implementation
+name: native:raiseexception
+software: qgis
+call: {interface: qgis-process, name: 'native:raiseexception'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CONDITION: {type: expression}
+  MESSAGE: {type: string, required: true}
+notes: Deprecated in QGIS.
+status: active
+review: {state: harvested, source: qgis}

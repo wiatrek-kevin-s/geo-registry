@@ -1,0 +1,16 @@
+id: grass-g-gisenv
+kind: implementation
+name: g.gisenv
+software: grass
+call: {interface: cli, name: g.gisenv}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  get: {type: string, note: multiple values}
+  set: {type: string}
+  unset: {type: string, note: multiple values}
+  store: {type: string, default: gisrc, values: [gisrc, mapset]}
+  separator: {type: string, default: newline, note: separator name}
+  flag_s: {type: boolean, note: flag -s}
+  flag_n: {type: boolean, note: flag -n}
+status: active
+review: {state: harvested, source: grass}

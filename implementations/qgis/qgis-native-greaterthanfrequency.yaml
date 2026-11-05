@@ -1,0 +1,16 @@
+id: qgis-native-greaterthanfrequency
+kind: implementation
+name: native:greaterthanfrequency
+software: qgis
+call: {interface: qgis-process, name: 'native:greaterthanfrequency'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CREATION_OPTIONS: {type: string}
+  IGNORE_NODATA: {type: boolean, required: true, default: false}
+  INPUT_RASTERS: {type: multilayer, required: true}
+  INPUT_VALUE_RASTER: {type: raster, required: true}
+  INPUT_VALUE_RASTER_BAND: {type: band, required: true, default: 1}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  OUTPUT_NODATA_VALUE: {type: number, default: -9999}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,22 @@
+id: grass-v-net-flow
+kind: implementation
+name: v.net.flow
+software: grass
+call: {interface: cli, name: v.net.flow}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  arc_layer: {type: string, default: '1', note: layer name}
+  node_layer: {type: string, default: '2', note: layer name}
+  output: {type: string, required: true, note: output vector}
+  cut: {type: string, required: true, note: output vector}
+  arc_column: {type: string, note: dbcolumn name}
+  arc_backward_column: {type: string, note: dbcolumn name}
+  node_column: {type: string, note: dbcolumn name}
+  source_cats: {type: string, note: cats name}
+  source_where: {type: string, note: sql_query name}
+  sink_cats: {type: string, note: cats name}
+  sink_where: {type: string, note: sql_query name}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,9 @@
+id: whiteboxtools-slope
+implements: slope
+crosswalk:
+  raster: dem
+  output: output
+  units: units
+  z_unit: { fixed: crs-units, note: "Elevation is taken in the CRS's horizontal units; otherwise set zfactor." }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

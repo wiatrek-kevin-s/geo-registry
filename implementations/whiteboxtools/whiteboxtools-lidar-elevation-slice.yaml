@@ -1,0 +1,16 @@
+id: whiteboxtools-lidar-elevation-slice
+kind: implementation
+name: LidarElevationSlice
+software: whiteboxtools
+call: {interface: cli, name: LidarElevationSlice}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar', required: true}
+  output: {type: 'NewFile:Lidar', required: true, note: output}
+  minz: {type: Float}
+  maxz: {type: Float}
+  class: {type: Boolean}
+  inclassval: {type: Integer, default: '2'}
+  outclassval: {type: Integer, default: '1'}
+status: active
+review: {state: harvested, source: whitebox}

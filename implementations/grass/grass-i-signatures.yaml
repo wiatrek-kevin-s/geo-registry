@@ -1,0 +1,16 @@
+id: grass-i-signatures
+kind: implementation
+name: i.signatures
+software: grass
+call: {interface: cli, name: i.signatures}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  type: {type: string, values: [sig, sigset, libsvm], note: sigtype name}
+  format: {type: string, required: true, default: plain, values: [plain, json]}
+  mapset: {type: string, note: mapset name; multiple values}
+  remove: {type: string, note: signatures name; multiple values}
+  rename: {type: string, note: signatures name; multiple values}
+  copy: {type: string, note: signatures name; multiple values}
+  flag_p: {type: boolean, note: flag -p}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,13 @@
+id: whiteboxtools-lidar-histogram
+kind: implementation
+name: LidarHistogram
+software: whiteboxtools
+call: {interface: cli, name: LidarHistogram}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar', required: true}
+  output: {type: 'NewFile:Html', required: true, note: output}
+  parameter: {type: OptionList, default: elevation, values: [elevation, intensity, scan angle, class, time]}
+  clip: {type: Float, default: '1.0'}
+status: active
+review: {state: harvested, source: whitebox}

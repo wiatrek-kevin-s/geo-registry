@@ -1,0 +1,17 @@
+id: whiteboxtools-k-means-clustering
+kind: implementation
+name: KMeansClustering
+software: whiteboxtools
+call: {interface: cli, name: KMeansClustering}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  inputs: {type: 'FileList:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  out_html: {type: 'NewFile:Html', note: output}
+  classes: {type: Integer, required: true}
+  max_iterations: {type: Integer, default: '10'}
+  class_change: {type: Float, default: '2.0'}
+  initialize: {type: OptionList, default: diagonal, values: [diagonal, random]}
+  min_class_size: {type: Integer, default: '10'}
+status: active
+review: {state: harvested, source: whitebox}

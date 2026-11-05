@@ -1,0 +1,15 @@
+id: qgis-native-writevectortiles-xyz
+kind: implementation
+name: native:writevectortiles_xyz
+software: qgis
+call: {interface: qgis-process, name: 'native:writevectortiles_xyz'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  EXTENT: {type: extent}
+  LAYERS: {type: vectortilewriterlayers, required: true}
+  MAX_ZOOM: {type: number, required: true, default: 3}
+  MIN_ZOOM: {type: number, required: true, default: 0}
+  OUTPUT_DIRECTORY: {type: folderDestination, required: true, note: output}
+  XYZ_TEMPLATE: {type: string, required: true, default: '{z}/{x}/{y}.pbf'}
+status: active
+review: {state: harvested, source: qgis}

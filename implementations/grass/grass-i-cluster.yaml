@@ -1,0 +1,21 @@
+id: grass-i-cluster
+kind: implementation
+name: i.cluster
+software: grass
+call: {interface: cli, name: i.cluster}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  group: {type: string, required: true, note: group name}
+  subgroup: {type: string, required: true, note: subgroup name}
+  signaturefile: {type: string, required: true, note: output signatures/sig}
+  classes: {type: integer, required: true, values: [1-255]}
+  seed: {type: string, note: signatures/sig name}
+  sample: {type: integer}
+  iterations: {type: integer, default: 30}
+  convergence: {type: float, default: 98.0, values: [0-100]}
+  separation: {type: float, default: 0.0}
+  min_size: {type: integer, default: 17}
+  reportfile: {type: string, note: output file}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

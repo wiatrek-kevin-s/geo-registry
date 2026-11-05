@@ -1,0 +1,20 @@
+id: qgis-native-setmetadatafields
+kind: implementation
+name: native:setmetadatafields
+software: qgis
+call: {interface: qgis-process, name: 'native:setmetadatafields'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ABSTRACT: {type: string}
+  CRS: {type: crs}
+  ENCODING: {type: string}
+  FEES: {type: string}
+  IDENTIFIER: {type: string}
+  IGNORE_EMPTY: {type: boolean, required: true, default: false}
+  INPUT: {type: layer, required: true}
+  LANGUAGE: {type: string}
+  PARENT_IDENTIFIER: {type: string}
+  TITLE: {type: string}
+  TYPE: {type: string}
+status: active
+review: {state: harvested, source: qgis}

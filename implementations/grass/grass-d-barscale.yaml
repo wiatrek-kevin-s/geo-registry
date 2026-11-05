@@ -1,0 +1,27 @@
+id: grass-d-barscale
+kind: implementation
+name: d.barscale
+software: grass
+call: {interface: cli, name: d.barscale}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  style: {type: string, default: classic, values: [classic, line, solid, hollow, full_checker, part_checker, mixed_checker,
+      tail_checker, up_ticks, down_ticks, both_ticks, arrow_ends], note: barscale name}
+  at: {type: float, default: '0.0,10.0', values: [0-100]}
+  length: {type: integer, default: 0, values: [0-]}
+  units: {type: string, values: [meters, kilometers, feet, miles]}
+  label: {type: string}
+  segment: {type: integer, default: 10, values: [1-100]}
+  color: {type: string, default: black, note: color name}
+  bgcolor: {type: string, default: white, note: color_none name}
+  text_position: {type: string, default: right, values: [under, over, left, right]}
+  width_scale: {type: float, default: 1.0, values: [0.5-100]}
+  font: {type: string}
+  fontsize: {type: float, default: 12.0, values: [1-360]}
+  path: {type: string, note: font name}
+  charset: {type: string}
+  flag_f: {type: boolean, note: flag -f}
+  flag_t: {type: boolean, note: flag -t}
+  flag_n: {type: boolean, note: flag -n}
+status: active
+review: {state: harvested, source: grass}

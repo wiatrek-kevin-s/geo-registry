@@ -1,0 +1,15 @@
+id: grass-r-rescale-eq
+kind: implementation
+name: r.rescale.eq
+software: grass
+call: {interface: cli, name: r.rescale.eq}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  from: {type: integer}
+  output: {type: string, required: true, note: output cell}
+  to: {type: integer, required: true}
+  title: {type: string}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

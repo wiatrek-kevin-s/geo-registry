@@ -1,0 +1,13 @@
+id: qgis-gdal-clipvectorbypolygon
+kind: implementation
+name: gdal:clipvectorbypolygon
+software: qgis
+call: {interface: qgis-process, name: 'gdal:clipvectorbypolygon'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  MASK: {type: source, required: true}
+  OPTIONS: {type: string, default: ''}
+  OUTPUT: {type: vectorDestination, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

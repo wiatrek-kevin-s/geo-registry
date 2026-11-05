@@ -1,0 +1,17 @@
+id: qgis-pdal-classifyground
+kind: implementation
+name: pdal:classifyground
+software: qgis
+call: {interface: qgis-process, name: 'pdal:classifyground'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CELL_SIZE: {type: number, required: true, default: 1.0}
+  INPUT: {type: pointcloud, required: true}
+  OUTPUT: {type: pointCloudDestination, required: true, note: output}
+  SCALAR: {type: number, required: true, default: 1.25}
+  SLOPE: {type: number, required: true, default: 0.15}
+  THRESHOLD: {type: number, required: true, default: 0.5}
+  VPC_OUTPUT_FORMAT: {type: enum, required: true, default: COPC, values: [0, 1, 2], note: '0 COPC, 1 LAZ, 2 LAS'}
+  WINDOW_SIZE: {type: number, required: true, default: 18.0}
+status: active
+review: {state: harvested, source: qgis}

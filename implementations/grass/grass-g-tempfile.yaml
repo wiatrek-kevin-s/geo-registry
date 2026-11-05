@@ -1,0 +1,11 @@
+id: grass-g-tempfile
+kind: implementation
+name: g.tempfile
+software: grass
+call: {interface: cli, name: g.tempfile}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  pid: {type: integer, required: true}
+  flag_d: {type: boolean, note: flag -d}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,14 @@
+id: grass-g-gui-iclass
+kind: implementation
+name: g.gui.iclass
+software: grass
+call: {interface: cli, name: g.gui.iclass}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  group: {type: string, note: group name}
+  subgroup: {type: string, note: subgroup name}
+  map: {type: string, note: cell name}
+  trainingmap: {type: string, note: vector name}
+  flag_m: {type: boolean, note: flag -m}
+status: active
+review: {state: harvested, source: grass}

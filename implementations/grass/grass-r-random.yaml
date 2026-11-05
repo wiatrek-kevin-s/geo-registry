@@ -1,0 +1,20 @@
+id: grass-r-random
+kind: implementation
+name: r.random
+software: grass
+call: {interface: cli, name: r.random}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  cover: {type: string, note: cell name}
+  npoints: {type: string, required: true}
+  raster: {type: string, note: output cell}
+  vector: {type: string, note: output vector}
+  seed: {type: integer}
+  flag_s: {type: boolean, note: flag -s}
+  flag_n: {type: boolean, note: flag -n}
+  flag_z: {type: boolean, note: flag -z}
+  flag_b: {type: boolean, note: flag -b}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,14 @@
+id: grass-v-segment
+kind: implementation
+name: v.segment
+software: grass
+call: {interface: cli, name: v.segment}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '1', note: layer name}
+  output: {type: string, required: true, note: output vector}
+  rules: {type: string, note: file name}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

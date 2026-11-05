@@ -1,0 +1,13 @@
+id: grass-r-coin
+kind: implementation
+name: r.coin
+software: grass
+call: {interface: cli, name: r.coin}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  first: {type: string, required: true, note: cell name}
+  second: {type: string, required: true, note: cell name}
+  units: {type: string, required: true, values: [c, p, x, y, a, h, k, m]}
+  flag_w: {type: boolean, note: flag -w}
+status: active
+review: {state: harvested, source: grass}

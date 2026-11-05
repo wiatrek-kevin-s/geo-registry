@@ -1,0 +1,15 @@
+id: grass-d-title
+kind: implementation
+name: d.title
+software: grass
+call: {interface: cli, name: d.title}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: cell name}
+  color: {type: string, default: black, note: color name}
+  size: {type: float, default: 4.0, values: [0-100]}
+  flag_d: {type: boolean, note: flag -d}
+  flag_f: {type: boolean, note: flag -f}
+  flag_s: {type: boolean, note: flag -s}
+status: active
+review: {state: harvested, source: grass}

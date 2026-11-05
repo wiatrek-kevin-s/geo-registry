@@ -1,0 +1,14 @@
+id: grass-r-out-ppm3
+kind: implementation
+name: r.out.ppm3
+software: grass
+call: {interface: cli, name: r.out.ppm3}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  red: {type: string, required: true, note: cell name}
+  green: {type: string, required: true, note: cell name}
+  blue: {type: string, required: true, note: cell name}
+  output: {type: string, required: true}
+  flag_c: {type: boolean, note: flag -c}
+status: active
+review: {state: harvested, source: grass}

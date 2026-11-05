@@ -1,0 +1,15 @@
+id: qgis-gdal-ogrinfo
+kind: implementation
+name: gdal:ogrinfo
+software: qgis
+call: {interface: qgis-process, name: 'gdal:ogrinfo'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ALL_LAYERS: {type: boolean, required: true, default: false}
+  EXTRA: {type: string}
+  INPUT: {type: vector, required: true}
+  NO_METADATA: {type: boolean, required: true, default: false}
+  OUTPUT: {type: fileDestination, required: true, note: output}
+  SUMMARY_ONLY: {type: boolean, required: true, default: true}
+status: active
+review: {state: harvested, source: qgis}

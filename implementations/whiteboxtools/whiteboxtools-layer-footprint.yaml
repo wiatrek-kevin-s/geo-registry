@@ -1,0 +1,11 @@
+id: whiteboxtools-layer-footprint
+kind: implementation
+name: LayerFootprint
+software: whiteboxtools
+call: {interface: cli, name: LayerFootprint}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:RasterAndVector:Any', required: true}
+  output: {type: 'NewFile:Vector:Polygon', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

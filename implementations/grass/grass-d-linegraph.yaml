@@ -1,0 +1,45 @@
+id: grass-d-linegraph
+kind: implementation
+name: d.linegraph
+software: grass
+call: {interface: cli, name: d.linegraph}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  x_file: {type: string, required: true}
+  y_file: {type: string, required: true, note: multiple values}
+  directory: {type: string}
+  y_color: {type: string, note: color name; multiple values}
+  color_table: {type: string, values: [aspect, aspectcolr, bcyr, bgyr, blues, byg, byr, celsius, corine, curvature, differences,
+      elevation, etopo2, evi, fahrenheit, forest_cover, gdd, grass, greens, grey, grey.eq, grey.log, grey1.0, grey255, gyr,
+      haxby, inferno, kelvin, magma, ndvi, ndwi, nlcd, oranges, plasma, population, population_dens, precipitation, precipitation_daily,
+      precipitation_monthly, rainbow, ramp, random, reds, roygbiv, rstcurv, ryb, ryg, sepia, slope, soilmoisture, srtm, srtm_percent,
+      srtm_plus, terrain, viridis, water, wave], note: colortable name}
+  width: {type: integer, note: multiple values}
+  title_color: {type: string, default: black, note: color name}
+  x_title: {type: string}
+  y_title: {type: string}
+  title: {type: string}
+  y_range: {type: float}
+  y_tics: {type: float, note: multiple values}
+  x_scale: {type: float}
+  y_scale: {type: float}
+  icon: {type: string, default: basic/circle, values: [basic/arrow, basic/arrow1, basic/arrow2, basic/arrow3, basic/box, basic/circle,
+      basic/cross1, basic/cross2, basic/cross3, basic/diamond, basic/hexagon, basic/marker, basic/octagon, basic/pin, basic/pin_dot,
+      basic/point, basic/pushpin, basic/star, basic/triangle, basic/x, demo/muchomurka, demo/smrk, extra/4pt_star, extra/adcp,
+      extra/airport, extra/alpha_flag, extra/bridge, extra/dim_arrow, extra/dive_flag, extra/fiducial, extra/fish, extra/half-box,
+      extra/half-circle, extra/offbox_ne, extra/offbox_nw, extra/offbox_se, extra/offbox_sw, extra/pentagon, extra/ping, extra/ring,
+      extra/simple_zia, extra/target, geology/circle_cross, geology/half-arrow_left, geology/half-arrow_right, geology/strike_box,
+      geology/strike_circle, geology/strike_cleavage, geology/strike_half-bowtie, geology/strike_line, geology/strike_parallel,
+      geology/strike_triangle, legend/area, legend/area_curved, legend/line, legend/line_crooked, n_arrows/basic_compass,
+      n_arrows/fancy_compass, n_arrows/n_arrow1a, n_arrows/n_arrow1b, n_arrows/n_arrow2, n_arrows/n_arrow3, n_arrows/n_arrow4,
+      n_arrows/n_arrow5, n_arrows/n_arrow6, n_arrows/n_arrow7a, n_arrows/n_arrow7b, n_arrows/n_arrow8a, n_arrows/n_arrow8b,
+      n_arrows/n_arrow9]}
+  point_size: {type: float, default: 5.0}
+  secondary_color: {type: string, default: black, note: color_none name}
+  secondary_width: {type: float, default: '0.1', note: multiple values}
+  flag_x: {type: boolean, note: flag -x}
+  flag_y: {type: boolean, note: flag -y}
+  flag_s: {type: boolean, note: flag -s}
+  flag_l: {type: boolean, note: flag -l}
+status: active
+review: {state: harvested, source: grass}

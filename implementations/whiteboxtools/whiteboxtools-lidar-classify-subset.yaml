@@ -1,0 +1,14 @@
+id: whiteboxtools-lidar-classify-subset
+kind: implementation
+name: LidarClassifySubset
+software: whiteboxtools
+call: {interface: cli, name: LidarClassifySubset}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  base: {type: 'ExistingFile:Lidar', required: true}
+  subset: {type: 'ExistingFile:Lidar', required: true}
+  output: {type: 'NewFile:Lidar', required: true, note: output}
+  subset_class: {type: Float, required: true}
+  nonsubset_class: {type: Float}
+status: active
+review: {state: harvested, source: whitebox}

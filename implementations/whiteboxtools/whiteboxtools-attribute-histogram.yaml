@@ -1,0 +1,12 @@
+id: whiteboxtools-attribute-histogram
+kind: implementation
+name: AttributeHistogram
+software: whiteboxtools
+call: {interface: cli, name: AttributeHistogram}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Vector:Any', required: true}
+  field: {type: VectorAttributeField, required: true}
+  output: {type: 'NewFile:Html', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

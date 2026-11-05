@@ -1,0 +1,15 @@
+id: qgis-qgis-topologicalcoloring
+kind: implementation
+name: qgis:topologicalcoloring
+software: qgis
+call: {interface: qgis-process, name: 'qgis:topologicalcoloring'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BALANCE: {type: enum, required: true, default: 0, values: [0, 1, 2], note: '0 By feature count, 1 By assigned area, 2 By
+      distance between colors'}
+  INPUT: {type: source, required: true}
+  MIN_COLORS: {type: number, required: true, default: 4}
+  MIN_DISTANCE: {type: distance, required: true, default: 0.0}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,25 @@
+id: grass-g-extension
+kind: implementation
+name: g.extension
+software: grass
+call: {interface: cli, name: g.extension}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  extension: {type: string, required: true}
+  operation: {type: string, required: true, default: add, values: [add, remove]}
+  url: {type: string}
+  prefix: {type: string, default: $GRASS_ADDON_BASE}
+  proxy: {type: string, note: multiple values}
+  branch: {type: string}
+  flag_l: {type: boolean, note: flag -l}
+  flag_c: {type: boolean, note: flag -c}
+  flag_g: {type: boolean, note: flag -g}
+  flag_a: {type: boolean, note: flag -a}
+  flag_s: {type: boolean, note: flag -s}
+  flag_d: {type: boolean, note: flag -d}
+  flag_i: {type: boolean, note: flag -i}
+  flag_f: {type: boolean, note: flag -f}
+  flag_t: {type: boolean, note: flag -t}
+  flag_o: {type: boolean, note: flag -o}
+status: active
+review: {state: harvested, source: grass}

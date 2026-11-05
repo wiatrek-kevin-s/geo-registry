@@ -1,0 +1,27 @@
+id: grass-d-mon
+kind: implementation
+name: d.mon
+software: grass
+call: {interface: cli, name: d.mon}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  start: {type: string, values: [wx0, wx1, wx2, wx3, wx4, wx5, wx6, wx7, png, ps, html, cairo]}
+  stop: {type: string, values: [wx0, wx1, wx2, wx3, wx4, wx5, wx6, wx7, png, ps, html, cairo]}
+  select: {type: string, values: [wx0, wx1, wx2, wx3, wx4, wx5, wx6, wx7, png, ps, html, cairo]}
+  width: {type: integer}
+  height: {type: integer}
+  resolution: {type: integer}
+  bgcolor: {type: string, default: white, note: color_none name}
+  output: {type: string, note: output file}
+  flag_l: {type: boolean, note: flag -l}
+  flag_p: {type: boolean, note: flag -p}
+  flag_c: {type: boolean, note: flag -c}
+  flag_g: {type: boolean, note: flag -g}
+  flag_s: {type: boolean, note: flag -s}
+  flag_r: {type: boolean, note: flag -r}
+  flag_t: {type: boolean, note: flag -t}
+  flag_u: {type: boolean, note: flag -u}
+  flag_x: {type: boolean, note: flag -x}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

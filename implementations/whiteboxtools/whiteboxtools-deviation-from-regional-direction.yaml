@@ -1,0 +1,11 @@
+id: whiteboxtools-deviation-from-regional-direction
+kind: implementation
+name: DeviationFromRegionalDirection
+software: whiteboxtools
+call: {interface: cli, name: DeviationFromRegionalDirection}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Vector:Polygon', required: true}
+  elong_threshold: {type: Float, default: '0.75'}
+status: active
+review: {state: harvested, source: whitebox}

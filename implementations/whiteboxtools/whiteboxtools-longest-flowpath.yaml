@@ -1,0 +1,12 @@
+id: whiteboxtools-longest-flowpath
+kind: implementation
+name: LongestFlowpath
+software: whiteboxtools
+call: {interface: cli, name: LongestFlowpath}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  dem: {type: 'ExistingFile:Raster', required: true}
+  basins: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Vector:Line', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

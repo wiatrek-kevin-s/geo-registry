@@ -1,0 +1,15 @@
+id: grass-db-execute
+kind: implementation
+name: db.execute
+software: grass
+call: {interface: cli, name: db.execute}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  sql: {type: string}
+  input: {type: string, note: file name}
+  driver: {type: string, default: sqlite, values: [dbf, ogr, pg, sqlite], note: dbdriver name}
+  database: {type: string, default: $GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db, note: dbname name}
+  schema: {type: string}
+  flag_i: {type: boolean, note: flag -i}
+status: active
+review: {state: harvested, source: grass}

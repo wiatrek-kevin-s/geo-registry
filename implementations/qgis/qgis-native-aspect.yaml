@@ -1,0 +1,14 @@
+id: qgis-native-aspect
+kind: implementation
+name: native:aspect
+software: qgis
+call: {interface: qgis-process, name: 'native:aspect'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CREATION_OPTIONS: {type: string}
+  INPUT: {type: raster, required: true}
+  NODATA: {type: number, required: true, default: -9999.0}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  Z_FACTOR: {type: number, required: true, default: 1.0}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,14 @@
+id: qgis-native-buffer
+implements: buffer
+crosswalk:
+  layer: INPUT
+  output: OUTPUT
+  distance: DISTANCE
+  unit: { fixed: crs-units, note: Distance is in the layer's CRS units; convert it first. }
+  dissolve: DISSOLVE
+  segments: SEGMENTS
+differences:
+  - Distance is in the layer's CRS units, so data in a geographic CRS is buffered in degrees.
+  - Defaults to 5 segments per quarter circle (Columbus uses 8).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

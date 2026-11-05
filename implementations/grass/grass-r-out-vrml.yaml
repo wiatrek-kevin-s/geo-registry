@@ -1,0 +1,14 @@
+id: grass-r-out-vrml
+kind: implementation
+name: r.out.vrml
+software: grass
+call: {interface: cli, name: r.out.vrml}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  elevation: {type: string, required: true, note: cell name}
+  color: {type: string, note: cell name}
+  exaggeration: {type: float, default: 1.0}
+  output: {type: string, required: true, note: output file}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

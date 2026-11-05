@@ -1,0 +1,17 @@
+id: grass-g-search-modules
+kind: implementation
+name: g.search.modules
+software: grass
+call: {interface: cli, name: g.search.modules}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  keyword: {type: string, note: multiple values}
+  flag_a: {type: boolean, note: flag -a}
+  flag_n: {type: boolean, note: flag -n}
+  flag_m: {type: boolean, note: flag -m}
+  flag_k: {type: boolean, note: flag -k}
+  flag_c: {type: boolean, note: flag -c}
+  flag_g: {type: boolean, note: flag -g}
+  flag_j: {type: boolean, note: flag -j}
+status: active
+review: {state: harvested, source: grass}

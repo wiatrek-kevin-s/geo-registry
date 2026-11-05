@@ -1,0 +1,19 @@
+id: whiteboxtools-lidar-nearest-neighbour-gridding
+kind: implementation
+name: LidarNearestNeighbourGridding
+software: whiteboxtools
+call: {interface: cli, name: LidarNearestNeighbourGridding}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar'}
+  output: {type: 'NewFile:Raster', note: output}
+  parameter: {type: OptionList, default: elevation, values: [elevation, intensity, class, return_number, number_of_returns,
+      scan angle, rgb, user data, time]}
+  returns: {type: OptionList, default: all, values: [all, last, first]}
+  resolution: {type: Float, default: '1.0'}
+  radius: {type: Float, default: '2.5'}
+  exclude_cls: {type: String}
+  minz: {type: Float}
+  maxz: {type: Float}
+status: active
+review: {state: harvested, source: whitebox}

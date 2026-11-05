@@ -1,0 +1,16 @@
+id: grass-r-shade
+kind: implementation
+name: r.shade
+software: grass
+call: {interface: cli, name: r.shade}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  shade: {type: string, required: true, note: cell name}
+  color: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  brighten: {type: integer, default: 0, values: [-99-99]}
+  bgcolor: {type: string, note: color_none name}
+  flag_c: {type: boolean, note: flag -c}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

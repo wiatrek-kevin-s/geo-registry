@@ -1,0 +1,12 @@
+id: whiteboxtools-select-tiles-by-polygon
+kind: implementation
+name: SelectTilesByPolygon
+software: whiteboxtools
+call: {interface: cli, name: SelectTilesByPolygon}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  indir: {type: Directory, required: true}
+  outdir: {type: Directory, required: true}
+  polygons: {type: 'ExistingFile:Vector:Polygon', required: true}
+status: active
+review: {state: harvested, source: whitebox}

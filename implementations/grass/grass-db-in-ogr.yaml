@@ -1,0 +1,17 @@
+id: grass-db-in-ogr
+kind: implementation
+name: db.in.ogr
+software: grass
+call: {interface: cli, name: db.in.ogr}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: bin name}
+  gdal_config: {type: string}
+  gdal_doo: {type: string}
+  db_table: {type: string}
+  output: {type: string, note: output dbtable}
+  key: {type: string}
+  encoding: {type: string}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

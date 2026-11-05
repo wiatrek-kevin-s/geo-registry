@@ -1,0 +1,13 @@
+id: qgis-native-combinestyles
+kind: implementation
+name: native:combinestyles
+software: qgis
+call: {interface: qgis-process, name: 'native:combinestyles'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: multilayer, required: true}
+  OBJECTS: {type: enum, required: true, values: [0, 1, 2, 3], note: '0 Symbols, 1 Color ramps, 2 Text formats, 3 Label settings;
+      multiple values; default [0, 1, 2, 3]'}
+  OUTPUT: {type: fileDestination, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

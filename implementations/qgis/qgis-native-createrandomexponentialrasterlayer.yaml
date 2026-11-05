@@ -1,0 +1,16 @@
+id: qgis-native-createrandomexponentialrasterlayer
+kind: implementation
+name: native:createrandomexponentialrasterlayer
+software: qgis
+call: {interface: qgis-process, name: 'native:createrandomexponentialrasterlayer'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CREATION_OPTIONS: {type: string}
+  EXTENT: {type: extent, required: true}
+  LAMBDA: {type: number, required: true, default: 1.0}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  OUTPUT_TYPE: {type: enum, required: true, default: 0, values: [0, 1], note: '0 Float32, 1 Float64'}
+  PIXEL_SIZE: {type: number, required: true, default: 1}
+  TARGET_CRS: {type: crs, required: true, default: ProjectCrs}
+status: active
+review: {state: harvested, source: qgis}

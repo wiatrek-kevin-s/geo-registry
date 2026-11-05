@@ -1,0 +1,33 @@
+id: grass-v-out-ogr
+kind: implementation
+name: v.out.ogr
+software: grass
+call: {interface: cli, name: v.out.ogr}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '1', note: layer name}
+  type: {type: string, default: auto, values: [point, line, boundary, centroid, area, face, kernel, auto], note: multiple
+      values}
+  output: {type: string, required: true, note: output file}
+  format: {type: string, required: true, default: GPKG, values: [AmigoCloud, CSV, Carto, DGN, DXF, ESRI_Shapefile, Elasticsearch,
+      FlatGeobuf, GML, GMLAS, GPKG, GPSBabel, GPX, GeoJSON, GeoJSONSeq, GeoRSS, JML, JSONFG, KML, LIBKML, MBTiles, MEM, MVT,
+      MapInfo_File, MapML, MiraMonVector, NGW, ODS, OGR_GMT, OpenFileGDB, PCIDSK, PDS4, PGDUMP, PMTiles, S57, SQLite, Selafin,
+      VDV, VICAR, WAsP, XLSX]}
+  output_layer: {type: string}
+  output_type: {type: string, values: [line, boundary], note: multiple values}
+  dsco: {type: string, note: multiple values}
+  lco: {type: string, note: multiple values}
+  method: {type: string, default: fast, values: [fast, slow]}
+  flag_u: {type: boolean, note: flag -u}
+  flag_a: {type: boolean, note: flag -a}
+  flag_s: {type: boolean, note: flag -s}
+  flag_c: {type: boolean, note: flag -c}
+  flag_e: {type: boolean, note: flag -e}
+  flag_2: {type: boolean, note: flag -2}
+  flag_m: {type: boolean, note: flag -m}
+  flag_n: {type: boolean, note: flag -n}
+  flag_l: {type: boolean, note: flag -l}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

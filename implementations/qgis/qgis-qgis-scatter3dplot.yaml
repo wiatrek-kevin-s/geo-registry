@@ -1,0 +1,18 @@
+id: qgis-qgis-scatter3dplot
+kind: implementation
+name: qgis:scatter3dplot
+software: qgis
+call: {interface: qgis-process, name: 'qgis:scatter3dplot'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: fileDestination, required: true, note: output}
+  TITLE: {type: string}
+  XAXIS_TITLE: {type: string}
+  XFIELD: {type: field, required: true}
+  YAXIS_TITLE: {type: string}
+  YFIELD: {type: field, required: true}
+  ZAXIS_TITLE: {type: string}
+  ZFIELD: {type: field, required: true}
+status: active
+review: {state: harvested, source: qgis}

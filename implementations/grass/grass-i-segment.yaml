@@ -1,0 +1,28 @@
+id: grass-i-segment
+kind: implementation
+name: i.segment
+software: grass
+call: {interface: cli, name: i.segment}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  group: {type: string, required: true, note: cell name; multiple values}
+  output: {type: string, required: true, note: output cell}
+  band_suffix: {type: string, note: output cell}
+  threshold: {type: float, required: true}
+  radius: {type: float, default: 1.5}
+  hr: {type: float}
+  method: {type: string, default: region_growing, values: [region_growing, mean_shift]}
+  similarity: {type: string, default: euclidean, values: [euclidean, manhattan]}
+  minsize: {type: integer, default: 1, values: [1-100000]}
+  memory: {type: integer, default: 300}
+  iterations: {type: integer}
+  seeds: {type: string, note: cell name}
+  bounds: {type: string, note: cell name}
+  goodness: {type: string, note: output cell}
+  flag_d: {type: boolean, note: flag -d}
+  flag_w: {type: boolean, note: flag -w}
+  flag_a: {type: boolean, note: flag -a}
+  flag_p: {type: boolean, note: flag -p}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

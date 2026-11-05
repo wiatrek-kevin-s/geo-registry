@@ -1,0 +1,15 @@
+id: grass-r3-colors-out
+kind: implementation
+name: r3.colors.out
+software: grass
+call: {interface: cli, name: r3.colors.out}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: grid3 name}
+  rules: {type: string, note: output file}
+  format: {type: string, required: true, default: plain, values: [plain, json]}
+  color_format: {type: string, required: true, default: hex, values: [rgb, hex, hsv, triplet]}
+  flag_p: {type: boolean, note: flag -p}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

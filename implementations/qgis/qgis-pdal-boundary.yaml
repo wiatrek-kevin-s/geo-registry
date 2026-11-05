@@ -1,0 +1,15 @@
+id: qgis-pdal-boundary
+kind: implementation
+name: pdal:boundary
+software: qgis
+call: {interface: qgis-process, name: 'pdal:boundary'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  FILTER_EXPRESSION: {type: expression}
+  FILTER_EXTENT: {type: extent}
+  INPUT: {type: pointcloud, required: true}
+  OUTPUT: {type: vectorDestination, required: true, note: output}
+  RESOLUTION: {type: number}
+  THRESHOLD: {type: number}
+status: active
+review: {state: harvested, source: qgis}

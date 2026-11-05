@@ -1,0 +1,6 @@
+# GRASS, for the module harvest.
+name: geo-registry-grass
+channels:
+  - conda-forge
+dependencies:
+  - grass

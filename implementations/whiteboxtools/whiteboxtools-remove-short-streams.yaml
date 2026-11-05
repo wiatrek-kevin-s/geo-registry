@@ -1,0 +1,14 @@
+id: whiteboxtools-remove-short-streams
+kind: implementation
+name: RemoveShortStreams
+software: whiteboxtools
+call: {interface: cli, name: RemoveShortStreams}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  d8_pntr: {type: 'ExistingFile:Raster', required: true}
+  streams: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  min_length: {type: Float, required: true}
+  esri_pntr: {type: Boolean, default: 'false'}
+status: active
+review: {state: harvested, source: whitebox}

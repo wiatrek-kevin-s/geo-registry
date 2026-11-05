@@ -1,0 +1,14 @@
+id: grass-v-in-mapgen
+kind: implementation
+name: v.in.mapgen
+software: grass
+call: {interface: cli, name: v.in.mapgen}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: file name}
+  output: {type: string, note: output vector}
+  flag_f: {type: boolean, note: flag -f}
+  flag_z: {type: boolean, note: flag -z}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

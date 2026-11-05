@@ -1,0 +1,14 @@
+id: whiteboxtools-new-raster-from-base
+kind: implementation
+name: NewRasterFromBase
+software: whiteboxtools
+call: {interface: cli, name: NewRasterFromBase}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  base: {type: 'ExistingFile:RasterAndVector:Any', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  value: {type: StringOrNumber, default: nodata}
+  data_type: {type: OptionList, default: float, values: [double, float, integer]}
+  cell_size: {type: Float}
+status: active
+review: {state: harvested, source: whitebox}

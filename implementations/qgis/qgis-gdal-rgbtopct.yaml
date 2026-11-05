@@ -1,0 +1,12 @@
+id: qgis-gdal-rgbtopct
+kind: implementation
+name: gdal:rgbtopct
+software: qgis
+call: {interface: qgis-process, name: 'gdal:rgbtopct'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: raster, required: true}
+  NCOLORS: {type: number, required: true, default: 2}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

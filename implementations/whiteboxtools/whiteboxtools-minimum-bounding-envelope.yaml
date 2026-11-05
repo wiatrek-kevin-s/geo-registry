@@ -1,0 +1,12 @@
+id: whiteboxtools-minimum-bounding-envelope
+kind: implementation
+name: MinimumBoundingEnvelope
+software: whiteboxtools
+call: {interface: cli, name: MinimumBoundingEnvelope}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Vector:Any', required: true}
+  output: {type: 'NewFile:Vector:Polygon', required: true, note: output}
+  features: {type: Boolean, default: 'true'}
+status: active
+review: {state: harvested, source: whitebox}

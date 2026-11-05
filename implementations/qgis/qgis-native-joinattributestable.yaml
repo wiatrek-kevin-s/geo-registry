@@ -1,0 +1,20 @@
+id: qgis-native-joinattributestable
+kind: implementation
+name: native:joinattributestable
+software: qgis
+call: {interface: qgis-process, name: 'native:joinattributestable'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  DISCARD_NONMATCHING: {type: boolean, required: true, default: false}
+  FIELD: {type: field, required: true}
+  FIELDS_TO_COPY: {type: field, note: multiple values}
+  FIELD_2: {type: field, required: true}
+  INPUT: {type: source, required: true}
+  INPUT_2: {type: source, required: true}
+  METHOD: {type: enum, required: true, default: 1, values: [0, 1], note: '0 Create separate feature for each matching feature
+      (one-to-many), 1 Take attributes of the first matching feature only (one-to-one)'}
+  NON_MATCHING: {type: sink, note: output}
+  OUTPUT: {type: sink, note: output}
+  PREFIX: {type: string}
+status: active
+review: {state: harvested, source: qgis}

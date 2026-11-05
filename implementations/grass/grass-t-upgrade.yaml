@@ -1,0 +1,9 @@
+id: grass-t-upgrade
+kind: implementation
+name: t.upgrade
+software: grass
+call: {interface: cli, name: t.upgrade}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters: {}
+status: active
+review: {state: harvested, source: grass}

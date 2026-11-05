@@ -1,0 +1,17 @@
+id: grass-v-db-univar
+kind: implementation
+name: v.db.univar
+software: grass
+call: {interface: cli, name: v.db.univar}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '1', note: layer name}
+  column: {type: string, required: true, note: dbcolumn name}
+  where: {type: string, note: sql_query name}
+  percentile: {type: float, default: '90', values: [0-100], note: multiple values}
+  format: {type: string, required: true, default: plain, values: [plain, json, shell]}
+  flag_e: {type: boolean, note: flag -e}
+  flag_g: {type: boolean, note: flag -g}
+status: active
+review: {state: harvested, source: grass}

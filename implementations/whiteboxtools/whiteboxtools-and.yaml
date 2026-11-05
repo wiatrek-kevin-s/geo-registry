@@ -1,0 +1,12 @@
+id: whiteboxtools-and
+kind: implementation
+name: And
+software: whiteboxtools
+call: {interface: cli, name: And}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input1: {type: 'ExistingFile:Raster', required: true}
+  input2: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

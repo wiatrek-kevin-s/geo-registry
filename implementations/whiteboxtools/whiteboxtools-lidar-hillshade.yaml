@@ -1,0 +1,14 @@
+id: whiteboxtools-lidar-hillshade
+kind: implementation
+name: LidarHillshade
+software: whiteboxtools
+call: {interface: cli, name: LidarHillshade}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar', required: true}
+  output: {type: 'NewFile:Lidar', required: true, note: output}
+  azimuth: {type: Float, default: '315.0'}
+  altitude: {type: Float, default: '30.0'}
+  radius: {type: Float, required: true, default: '1.0'}
+status: active
+review: {state: harvested, source: whitebox}

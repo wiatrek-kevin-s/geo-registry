@@ -1,0 +1,14 @@
+id: qgis-gdal-tpitopographicpositionindex
+kind: implementation
+name: gdal:tpitopographicpositionindex
+software: qgis
+call: {interface: qgis-process, name: 'gdal:tpitopographicpositionindex'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BAND: {type: band, required: true, default: 1}
+  COMPUTE_EDGES: {type: boolean, required: true, default: false}
+  CREATION_OPTIONS: {type: string, default: ''}
+  INPUT: {type: raster, required: true}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,19 @@
+id: grass-r3-out-ascii
+kind: implementation
+name: r3.out.ascii
+software: grass
+call: {interface: cli, name: r3.out.ascii}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: grid3 name}
+  output: {type: string, note: output file}
+  precision: {type: integer, default: 8, values: [0-20]}
+  null_value: {type: string, default: '*'}
+  flag_h: {type: boolean, note: flag -h}
+  flag_r: {type: boolean, note: flag -r}
+  flag_d: {type: boolean, note: flag -d}
+  flag_c: {type: boolean, note: flag -c}
+  flag_m: {type: boolean, note: flag -m}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

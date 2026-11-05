@@ -1,0 +1,21 @@
+id: grass-r-flow
+kind: implementation
+name: r.flow
+software: grass
+call: {interface: cli, name: r.flow}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  elevation: {type: string, required: true, note: cell name}
+  aspect: {type: string, note: cell name}
+  barrier: {type: string, note: cell name}
+  skip: {type: integer}
+  bound: {type: integer}
+  flowline: {type: string, note: output vector}
+  flowlength: {type: string, note: output cell}
+  flowaccumulation: {type: string, note: output cell}
+  flag_u: {type: boolean, note: flag -u}
+  flag_3: {type: boolean, note: flag -3}
+  flag_m: {type: boolean, note: flag -m}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

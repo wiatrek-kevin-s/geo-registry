@@ -1,0 +1,12 @@
+id: qgis-native-segmentizebymaxangle
+kind: implementation
+name: native:segmentizebymaxangle
+software: qgis
+call: {interface: qgis-process, name: 'native:segmentizebymaxangle'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ANGLE: {type: number, required: true, default: 5.0}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

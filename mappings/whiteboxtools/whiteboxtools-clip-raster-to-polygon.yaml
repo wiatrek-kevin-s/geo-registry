@@ -1,0 +1,8 @@
+id: whiteboxtools-clip-raster-to-polygon
+implements: clip-raster
+crosswalk:
+  raster: input
+  mask: polygons
+  output: output
+effects: { modifies_input: false, network: false }
+review: { state: draft }

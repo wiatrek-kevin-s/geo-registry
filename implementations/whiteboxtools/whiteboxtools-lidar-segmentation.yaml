@@ -1,0 +1,21 @@
+id: whiteboxtools-lidar-segmentation
+kind: implementation
+name: LidarSegmentation
+software: whiteboxtools
+call: {interface: cli, name: LidarSegmentation}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar', required: true}
+  output: {type: 'NewFile:Lidar', required: true, note: output}
+  radius: {type: Float, default: '2.0'}
+  num_iter: {type: Integer, default: '50'}
+  num_samples: {type: Integer, default: '10'}
+  threshold: {type: Float, default: '0.15'}
+  model_size: {type: Integer, default: '15'}
+  max_slope: {type: Float, default: '80.0'}
+  norm_diff: {type: Float, default: '10.0'}
+  maxzdiff: {type: Float, default: '1.0'}
+  classes: {type: Boolean, default: 'false'}
+  ground: {type: Boolean, default: 'false'}
+status: active
+review: {state: harvested, source: whitebox}

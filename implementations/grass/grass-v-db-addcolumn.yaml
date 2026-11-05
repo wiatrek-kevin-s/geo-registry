@@ -1,0 +1,12 @@
+id: grass-v-db-addcolumn
+kind: implementation
+name: v.db.addcolumn
+software: grass
+call: {interface: cli, name: v.db.addcolumn}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '1', note: layer name}
+  columns: {type: string, required: true, note: multiple values}
+status: active
+review: {state: harvested, source: grass}

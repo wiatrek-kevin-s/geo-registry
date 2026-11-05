@@ -1,0 +1,12 @@
+id: grass-r-colors-stddev
+kind: implementation
+name: r.colors.stddev
+software: grass
+call: {interface: cli, name: r.colors.stddev}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: cell name}
+  flag_b: {type: boolean, note: flag -b}
+  flag_z: {type: boolean, note: flag -z}
+status: active
+review: {state: harvested, source: grass}

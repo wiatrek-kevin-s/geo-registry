@@ -1,0 +1,27 @@
+id: grass-v-surf-bspline
+kind: implementation
+name: v.surf.bspline
+software: grass
+call: {interface: cli, name: v.surf.bspline}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  layer: {type: string, default: '1', note: layer name}
+  column: {type: string, note: dbcolumn name}
+  sparse_input: {type: string, note: vector name}
+  output: {type: string, note: output vector}
+  raster_output: {type: string, note: output cell}
+  mask: {type: string, note: cell name}
+  ew_step: {type: float}
+  ns_step: {type: float}
+  method: {type: string, default: bilinear, values: [bilinear, bicubic]}
+  lambda_i: {type: float, default: 0.01}
+  solver: {type: string, default: cholesky, values: [cholesky, cg]}
+  maxit: {type: integer, default: 10000}
+  error: {type: float, default: 1.0e-06}
+  memory: {type: integer, default: 300}
+  flag_c: {type: boolean, note: flag -c}
+  flag_e: {type: boolean, note: flag -e}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

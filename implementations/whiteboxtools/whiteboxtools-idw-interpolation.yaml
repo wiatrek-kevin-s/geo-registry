@@ -1,0 +1,18 @@
+id: whiteboxtools-idw-interpolation
+kind: implementation
+name: IdwInterpolation
+software: whiteboxtools
+call: {interface: cli, name: IdwInterpolation}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Vector:Point', required: true}
+  field: {type: VectorAttributeField, required: true}
+  use_z: {type: Boolean, default: 'false'}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  weight: {type: Float, default: '2.0'}
+  radius: {type: Float}
+  min_points: {type: Integer}
+  cell_size: {type: Float}
+  base: {type: 'ExistingFile:Raster'}
+status: active
+review: {state: harvested, source: whitebox}

@@ -1,0 +1,9 @@
+id: qgis-native-slope
+implements: slope
+crosswalk:
+  raster: INPUT
+  output: OUTPUT
+  units: { fixed: degrees }
+  z_unit: { fixed: crs-units, note: "Elevation is taken in the CRS's horizontal units; otherwise set Z_FACTOR." }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

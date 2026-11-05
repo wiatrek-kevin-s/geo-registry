@@ -1,0 +1,12 @@
+id: whiteboxtools-clip-lidar-to-polygon
+kind: implementation
+name: ClipLidarToPolygon
+software: whiteboxtools
+call: {interface: cli, name: ClipLidarToPolygon}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar', required: true}
+  polygons: {type: 'ExistingFile:Vector:Polygon', required: true}
+  output: {type: 'NewFile:Lidar', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

@@ -1,0 +1,16 @@
+id: grass-r-fill-dir
+kind: implementation
+name: r.fill.dir
+software: grass
+call: {interface: cli, name: r.fill.dir}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  direction: {type: string, required: true, note: output cell}
+  areas: {type: string, note: output cell}
+  format: {type: string, default: grass, values: [agnps, answers, grass]}
+  flag_f: {type: boolean, note: flag -f}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

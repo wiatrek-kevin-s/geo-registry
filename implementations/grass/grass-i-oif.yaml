@@ -1,0 +1,14 @@
+id: grass-i-oif
+kind: implementation
+name: i.oif
+software: grass
+call: {interface: cli, name: i.oif}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: cell name; multiple values}
+  output: {type: string, note: output file}
+  flag_g: {type: boolean, note: flag -g}
+  flag_s: {type: boolean, note: flag -s}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

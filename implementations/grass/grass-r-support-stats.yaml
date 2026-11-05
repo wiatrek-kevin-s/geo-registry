@@ -1,0 +1,10 @@
+id: grass-r-support-stats
+kind: implementation
+name: r.support.stats
+software: grass
+call: {interface: cli, name: r.support.stats}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: cell name}
+status: active
+review: {state: harvested, source: grass}

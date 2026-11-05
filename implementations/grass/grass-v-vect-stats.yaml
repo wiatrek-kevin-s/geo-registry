@@ -1,0 +1,26 @@
+id: grass-v-vect-stats
+kind: implementation
+name: v.vect.stats
+software: grass
+call: {interface: cli, name: v.vect.stats}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  points: {type: string, required: true, note: vector name}
+  areas: {type: string, required: true, note: vector name}
+  type: {type: string, default: point, values: [point, centroid], note: multiple values}
+  points_layer: {type: string, default: '1', note: layer name}
+  points_cats: {type: string, note: cats name}
+  points_where: {type: string, note: sql_query name}
+  areas_layer: {type: string, default: '1', note: layer name}
+  areas_cats: {type: string, note: cats name}
+  areas_where: {type: string, note: sql_query name}
+  method: {type: string, values: [sum, average, median, mode, minimum, min_cat, maximum, max_cat, range, stddev, variance,
+      diversity]}
+  points_column: {type: string, note: dbcolumn name}
+  count_column: {type: string, note: dbcolumn name}
+  stats_column: {type: string, note: dbcolumn name}
+  separator: {type: string, note: separator name}
+  format: {type: string, required: true, default: plain, values: [plain, csv, json]}
+  flag_p: {type: boolean, note: flag -p}
+status: active
+review: {state: harvested, source: grass}

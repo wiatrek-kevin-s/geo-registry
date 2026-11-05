@@ -1,0 +1,17 @@
+id: qgis-native-meshrasterize
+kind: implementation
+name: native:meshrasterize
+software: qgis
+call: {interface: qgis-process, name: 'native:meshrasterize'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  CREATION_OPTIONS: {type: string}
+  CRS_OUTPUT: {type: crs}
+  DATASET_GROUPS: {type: meshdatasetgroups, note: 'default []'}
+  DATASET_TIME: {type: meshdatasettime, required: true}
+  EXTENT: {type: extent}
+  INPUT: {type: mesh, required: true}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  PIXEL_SIZE: {type: distance, required: true, default: 1}
+status: active
+review: {state: harvested, source: qgis}

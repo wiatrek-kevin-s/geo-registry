@@ -1,0 +1,11 @@
+id: qgis-native-setlayerstyle
+kind: implementation
+name: native:setlayerstyle
+software: qgis
+call: {interface: qgis-process, name: 'native:setlayerstyle'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: layer, required: true}
+  STYLE: {type: file, required: true}
+status: active
+review: {state: harvested, source: qgis}

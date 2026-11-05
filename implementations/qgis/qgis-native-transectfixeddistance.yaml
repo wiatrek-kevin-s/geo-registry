@@ -1,0 +1,17 @@
+id: qgis-native-transectfixeddistance
+kind: implementation
+name: native:transectfixeddistance
+software: qgis
+call: {interface: qgis-process, name: 'native:transectfixeddistance'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ANGLE: {type: number, required: true, default: 90.0}
+  DIRECTION: {type: enum, default: 0, values: [0, 1], note: '0 Right to Left, 1 Left to Right'}
+  INCLUDE_START: {type: boolean, required: true, default: true}
+  INPUT: {type: source, required: true}
+  INTERVAL: {type: distance, required: true, default: 10.0}
+  LENGTH: {type: distance, required: true, default: 5.0}
+  OUTPUT: {type: sink, required: true, note: output}
+  SIDE: {type: enum, required: true, default: 2, values: [0, 1, 2], note: '0 Left, 1 Right, 2 Both'}
+status: active
+review: {state: harvested, source: qgis}

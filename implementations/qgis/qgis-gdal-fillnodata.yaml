@@ -1,0 +1,17 @@
+id: qgis-gdal-fillnodata
+kind: implementation
+name: gdal:fillnodata
+software: qgis
+call: {interface: qgis-process, name: 'gdal:fillnodata'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BAND: {type: band, required: true, default: 1}
+  CREATION_OPTIONS: {type: string, default: ''}
+  DISTANCE: {type: number, required: true, default: 10}
+  EXTRA: {type: string}
+  INPUT: {type: raster, required: true}
+  ITERATIONS: {type: number, required: true, default: 0}
+  MASK_LAYER: {type: raster}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

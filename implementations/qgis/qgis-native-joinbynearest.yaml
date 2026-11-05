@@ -1,0 +1,18 @@
+id: qgis-native-joinbynearest
+kind: implementation
+name: native:joinbynearest
+software: qgis
+call: {interface: qgis-process, name: 'native:joinbynearest'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  DISCARD_NONMATCHING: {type: boolean, required: true, default: false}
+  FIELDS_TO_COPY: {type: field, note: multiple values}
+  INPUT: {type: source, required: true}
+  INPUT_2: {type: source, required: true}
+  MAX_DISTANCE: {type: distance}
+  NEIGHBORS: {type: number, required: true, default: 1}
+  NON_MATCHING: {type: sink, note: output}
+  OUTPUT: {type: sink, note: output}
+  PREFIX: {type: string}
+status: active
+review: {state: harvested, source: qgis}

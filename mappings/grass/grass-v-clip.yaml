@@ -1,0 +1,8 @@
+id: grass-v-clip
+implements: clip
+crosswalk:
+  layer: input
+  mask: clip
+  output: output
+effects: { modifies_input: false, network: false }
+review: { state: draft }

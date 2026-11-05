@@ -1,0 +1,10 @@
+id: qgis-gdal-cliprasterbymasklayer
+implements: clip-raster
+crosswalk:
+  raster: INPUT
+  mask: MASK
+  output: OUTPUT
+differences:
+  - Runs GDAL's warp underneath; CROP_TO_CUTLINE (on by default) shrinks the output to the mask's extent.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

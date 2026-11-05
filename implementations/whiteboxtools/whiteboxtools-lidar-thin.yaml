@@ -1,0 +1,14 @@
+id: whiteboxtools-lidar-thin
+kind: implementation
+name: LidarThin
+software: whiteboxtools
+call: {interface: cli, name: LidarThin}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar', required: true}
+  output: {type: 'NewFile:Lidar', required: true, note: output}
+  resolution: {type: Float, default: '2.0'}
+  method: {type: OptionList, default: lowest, values: [first, last, lowest, highest, nearest]}
+  save_filtered: {type: Boolean, default: 'false'}
+status: active
+review: {state: harvested, source: whitebox}

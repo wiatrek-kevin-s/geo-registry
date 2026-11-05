@@ -1,0 +1,13 @@
+id: whiteboxtools-write-function-memory-insertion
+kind: implementation
+name: WriteFunctionMemoryInsertion
+software: whiteboxtools
+call: {interface: cli, name: WriteFunctionMemoryInsertion}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input1: {type: 'ExistingFile:Raster', required: true}
+  input2: {type: 'ExistingFile:Raster', required: true}
+  input3: {type: 'ExistingFile:Raster'}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

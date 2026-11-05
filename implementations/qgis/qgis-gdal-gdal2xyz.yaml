@@ -1,0 +1,16 @@
+id: qgis-gdal-gdal2xyz
+kind: implementation
+name: gdal:gdal2xyz
+software: qgis
+call: {interface: qgis-process, name: 'gdal:gdal2xyz'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BAND: {type: band, required: true, default: 1}
+  CSV: {type: boolean, required: true, default: false}
+  INPUT: {type: raster, required: true}
+  NODATA_INPUT: {type: number}
+  NODATA_OUTPUT: {type: number}
+  OUTPUT: {type: fileDestination, required: true, note: output}
+  SKIP_NODATA: {type: boolean, required: true, default: false}
+status: active
+review: {state: harvested, source: qgis}

@@ -1,0 +1,11 @@
+id: grass-g-extension-all
+kind: implementation
+name: g.extension.all
+software: grass
+call: {interface: cli, name: g.extension.all}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  operation: {type: string, default: rebuild, values: [rebuild, remove]}
+  flag_f: {type: boolean, note: flag -f}
+status: active
+review: {state: harvested, source: grass}

@@ -1,0 +1,12 @@
+id: whiteboxtools-set-nodata-value
+kind: implementation
+name: SetNodataValue
+software: whiteboxtools
+call: {interface: cli, name: SetNodataValue}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  back_value: {type: Float, default: '0.0'}
+status: active
+review: {state: harvested, source: whitebox}

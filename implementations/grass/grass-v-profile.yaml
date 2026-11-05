@@ -1,0 +1,26 @@
+id: grass-v-profile
+kind: implementation
+name: v.profile
+software: grass
+call: {interface: cli, name: v.profile}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: vector name}
+  type: {type: string, default: 'point,line', values: [point, line], note: multiple values}
+  where: {type: string, note: sql_query name}
+  layer: {type: string, default: '1', note: layer name}
+  output: {type: string, default: '-', note: file name}
+  separator: {type: string, default: pipe, note: separator name}
+  dp: {type: integer, default: 2, values: [0-32]}
+  format: {type: string, default: plain, values: [plain, csv, json]}
+  buffer: {type: float, required: true, default: 10.0}
+  map_output: {type: string, note: output vector}
+  coordinates: {type: float, note: coords name; multiple values}
+  profile_map: {type: string, note: vector name}
+  profile_where: {type: string}
+  profile_layer: {type: integer, default: 1}
+  flag_c: {type: boolean, note: flag -c}
+  flag_z: {type: boolean, note: flag -z}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

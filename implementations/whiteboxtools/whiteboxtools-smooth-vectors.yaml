@@ -1,0 +1,12 @@
+id: whiteboxtools-smooth-vectors
+kind: implementation
+name: SmoothVectors
+software: whiteboxtools
+call: {interface: cli, name: SmoothVectors}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Vector:Any', required: true}
+  output: {type: 'NewFile:Vector:Any', required: true, note: output}
+  filter: {type: Integer, default: '3'}
+status: active
+review: {state: harvested, source: whitebox}

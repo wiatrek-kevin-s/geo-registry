@@ -1,0 +1,18 @@
+id: grass-i-group
+kind: implementation
+name: i.group
+software: grass
+call: {interface: cli, name: i.group}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  group: {type: string, required: true, note: group name}
+  subgroup: {type: string, note: subgroup name}
+  input: {type: string, note: cell name; multiple values}
+  file: {type: string, note: file name}
+  format: {type: string, required: true, default: plain, values: [plain, shell, json]}
+  flag_r: {type: boolean, note: flag -r}
+  flag_l: {type: boolean, note: flag -l}
+  flag_s: {type: boolean, note: flag -s}
+  flag_g: {type: boolean, note: flag -g}
+status: active
+review: {state: harvested, source: grass}

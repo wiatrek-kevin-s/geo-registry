@@ -1,0 +1,15 @@
+id: whiteboxtools-correct-vignetting
+kind: implementation
+name: CorrectVignetting
+software: whiteboxtools
+call: {interface: cli, name: CorrectVignetting}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  pp: {type: 'ExistingFile:Vector:Point', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  focal_length: {type: Float, default: '304.8'}
+  image_width: {type: Float, default: '228.6'}
+  n: {type: Float, default: '4.0'}
+status: active
+review: {state: harvested, source: whitebox}

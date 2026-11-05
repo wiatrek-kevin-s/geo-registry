@@ -1,0 +1,12 @@
+id: whiteboxtools-classify-buildings-in-lidar
+kind: implementation
+name: ClassifyBuildingsInLidar
+software: whiteboxtools
+call: {interface: cli, name: ClassifyBuildingsInLidar}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Lidar', required: true}
+  buildings: {type: 'ExistingFile:Vector:Polygon', required: true}
+  output: {type: 'NewFile:Lidar', required: true, note: output}
+status: active
+review: {state: harvested, source: whitebox}

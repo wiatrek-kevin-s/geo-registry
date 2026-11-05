@@ -1,0 +1,13 @@
+id: whiteboxtools-intersect
+kind: implementation
+name: Intersect
+software: whiteboxtools
+call: {interface: cli, name: Intersect}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Vector:Any', required: true}
+  overlay: {type: 'ExistingFile:Vector:Any', required: true}
+  output: {type: 'NewFile:Vector:Any', required: true, note: output}
+  snap: {type: Float, default: '0.0'}
+status: active
+review: {state: harvested, source: whitebox}

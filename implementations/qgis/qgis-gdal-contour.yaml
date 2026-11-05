@@ -1,0 +1,19 @@
+id: qgis-gdal-contour
+kind: implementation
+name: gdal:contour
+software: qgis
+call: {interface: qgis-process, name: 'gdal:contour'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  BAND: {type: band, required: true, default: 1}
+  CREATE_3D: {type: boolean, required: true, default: false}
+  EXTRA: {type: string}
+  FIELD_NAME: {type: string, default: ELEV}
+  IGNORE_NODATA: {type: boolean, required: true, default: false}
+  INPUT: {type: raster, required: true}
+  INTERVAL: {type: number, required: true, default: 10.0}
+  NODATA: {type: number}
+  OFFSET: {type: number, default: 0.0}
+  OUTPUT: {type: vectorDestination, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

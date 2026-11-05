@@ -1,0 +1,18 @@
+id: qgis-native-fixgeometryhole
+kind: implementation
+name: native:fixgeometryhole
+software: qgis
+call: {interface: qgis-process, name: 'native:fixgeometryhole'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  ERRORS: {type: source, required: true}
+  INPUT: {type: source, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  PART_IDX: {type: field, required: true, default: gc_partidx}
+  REPORT: {type: sink, required: true, note: output}
+  RING_IDX: {type: field, required: true, default: gc_ringidx}
+  TOLERANCE: {type: number, required: true, default: 8}
+  UNIQUE_ID: {type: field, required: true, default: id}
+  VERTEX_IDX: {type: field, required: true, default: gc_vertidx}
+status: active
+review: {state: harvested, source: qgis}

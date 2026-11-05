@@ -1,0 +1,14 @@
+id: whiteboxtools-adaptive-filter
+kind: implementation
+name: AdaptiveFilter
+software: whiteboxtools
+call: {interface: cli, name: AdaptiveFilter}
+harvest: {harvester: whitebox, engine_version: 2.4.0}
+parameters:
+  input: {type: 'ExistingFile:Raster', required: true}
+  output: {type: 'NewFile:Raster', required: true, note: output}
+  filterx: {type: Integer, default: '11'}
+  filtery: {type: Integer, default: '11'}
+  threshold: {type: Float, default: '2.0'}
+status: active
+review: {state: harvested, source: whitebox}

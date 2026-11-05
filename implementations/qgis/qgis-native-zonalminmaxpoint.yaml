@@ -1,0 +1,13 @@
+id: qgis-native-zonalminmaxpoint
+kind: implementation
+name: native:zonalminmaxpoint
+software: qgis
+call: {interface: qgis-process, name: 'native:zonalminmaxpoint'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  INPUT: {type: source, required: true}
+  INPUT_RASTER: {type: raster, required: true}
+  OUTPUT: {type: sink, required: true, note: output}
+  RASTER_BAND: {type: band, required: true, default: 1}
+status: active
+review: {state: harvested, source: qgis}

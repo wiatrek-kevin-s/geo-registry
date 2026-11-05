@@ -1,0 +1,13 @@
+id: grass-r-transect
+kind: implementation
+name: r.transect
+software: grass
+call: {interface: cli, name: r.transect}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: cell name}
+  line: {type: string, required: true, note: multiple values}
+  null_value: {type: string, default: '*'}
+  flag_g: {type: boolean, note: flag -g}
+status: active
+review: {state: harvested, source: grass}

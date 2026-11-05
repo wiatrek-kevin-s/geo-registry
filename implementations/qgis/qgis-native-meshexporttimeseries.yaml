@@ -1,0 +1,18 @@
+id: qgis-native-meshexporttimeseries
+kind: implementation
+name: native:meshexporttimeseries
+software: qgis
+call: {interface: qgis-process, name: 'native:meshexporttimeseries'}
+harvest: {harvester: qgis, engine_version: 4.2.3}
+parameters:
+  COORDINATES_DIGITS: {type: number, required: true, default: 2}
+  DATASET_DIGITS: {type: number, required: true, default: 2}
+  DATASET_GROUPS: {type: meshdatasetgroups, required: true, note: 'default []'}
+  FINISHING_TIME: {type: meshdatasettime, required: true}
+  INPUT: {type: mesh, required: true}
+  INPUT_POINTS: {type: source, required: true}
+  OUTPUT: {type: fileDestination, required: true, note: output}
+  STARTING_TIME: {type: meshdatasettime, required: true}
+  TIME_STEP: {type: number, default: 0}
+status: active
+review: {state: harvested, source: qgis}

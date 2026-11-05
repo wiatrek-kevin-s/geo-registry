@@ -1,0 +1,15 @@
+id: grass-r-uslek
+kind: implementation
+name: r.uslek
+software: grass
+call: {interface: cli, name: r.uslek}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  psand: {type: string, required: true, note: cell name}
+  pclay: {type: string, required: true, note: cell name}
+  psilt: {type: string, required: true, note: cell name}
+  pomat: {type: string, required: true, note: cell name}
+  output: {type: string, required: true, note: output cell}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

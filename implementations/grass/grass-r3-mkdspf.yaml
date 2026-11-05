@@ -1,0 +1,19 @@
+id: grass-r3-mkdspf
+kind: implementation
+name: r3.mkdspf
+software: grass
+call: {interface: cli, name: r3.mkdspf}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  input: {type: string, required: true, note: grid3 name}
+  dspf: {type: string, required: true, note: output file}
+  levels: {type: float, note: multiple values}
+  min: {type: float}
+  max: {type: float}
+  step: {type: float}
+  tnum: {type: integer, default: 7}
+  flag_q: {type: boolean, note: flag -q}
+  flag_f: {type: boolean, note: flag -f}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}

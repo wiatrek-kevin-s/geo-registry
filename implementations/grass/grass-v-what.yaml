@@ -1,0 +1,23 @@
+id: grass-v-what
+kind: implementation
+name: v.what
+software: grass
+call: {interface: cli, name: v.what}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: vector name; multiple values}
+  layer: {type: string, default: '-1', note: layer_all name; multiple values}
+  type: {type: string, default: 'point,line,area,face', values: [point, line, boundary, centroid, area, face, kernel], note: multiple
+      values}
+  coordinates: {type: float, required: true, note: coords name}
+  distance: {type: float, default: 0.0}
+  columns: {type: string, note: dbcolumn name; multiple values}
+  format: {type: string, values: [plain, shell, json]}
+  flag_a: {type: boolean, note: flag -a}
+  flag_i: {type: boolean, note: flag -i}
+  flag_d: {type: boolean, note: flag -d}
+  flag_g: {type: boolean, note: flag -g}
+  flag_j: {type: boolean, note: flag -j}
+  flag_m: {type: boolean, note: flag -m}
+status: active
+review: {state: harvested, source: grass}

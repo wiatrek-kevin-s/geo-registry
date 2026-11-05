@@ -1,0 +1,14 @@
+id: grass-v-build
+kind: implementation
+name: v.build
+software: grass
+call: {interface: cli, name: v.build}
+harvest: {harvester: grass, engine_version: 8.5.0}
+parameters:
+  map: {type: string, required: true, note: vector name}
+  error: {type: string, note: output vector}
+  option: {type: string, required: true, default: build, values: [build, dump, sdump, cdump, fdump], note: multiple values}
+  flag_e: {type: boolean, note: flag -e}
+  flag_overwrite: {type: boolean, note: flag --overwrite}
+status: active
+review: {state: harvested, source: grass}
