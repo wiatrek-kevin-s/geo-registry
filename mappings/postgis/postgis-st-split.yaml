@@ -1,0 +1,9 @@
+id: postgis-st-split
+implements: split-by-lines
+crosswalk:
+  layer: "#1"
+  lines: "#2"
+differences:
+  - Returns one GeometryCollection of the pieces per feature; ST_Dump them for separate features.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

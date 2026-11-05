@@ -1,0 +1,18 @@
+id: split-by-lines
+kind: operation
+name: Split by Lines
+aka: [Split, split with lines, Split Polygons, cut polygons, blade]
+summary: Cuts each feature into pieces where lines from another layer cross it.
+group: vector/overlay
+inputs:
+  - { name: layer, type: vector }
+  - { name: lines, type: vector, geometry: line }
+outputs:
+  - { name: output, type: vector }
+checks: [crs.agreement, geometry.valid]
+pitfalls:
+  - Some functions return the pieces as one collection per feature rather than separate features.
+  - A line that ends inside a polygon without crossing it does not split it.
+related: [intersect, union-overlay, explode-lines]
+status: active
+review: { state: draft }

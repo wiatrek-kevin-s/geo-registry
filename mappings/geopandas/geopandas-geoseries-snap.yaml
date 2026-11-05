@@ -1,0 +1,10 @@
+id: geopandas-geoseries-snap
+implements: snap
+crosswalk:
+  reference: other
+  tolerance: tolerance
+  unit: { fixed: crs-units }
+differences:
+  - other is one geometry or a GeoSeries matched row by row (align), not a whole reference layer.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

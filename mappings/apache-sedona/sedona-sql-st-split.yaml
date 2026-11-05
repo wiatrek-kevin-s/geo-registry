@@ -1,0 +1,9 @@
+id: sedona-sql-st-split
+implements: split-by-lines
+crosswalk:
+  layer: input
+  lines: blade
+differences:
+  - 'A Spark SQL function: arguments are columns or column names, run over a Spark DataFrame.'
+effects: { modifies_input: false, network: false }
+review: { state: draft }

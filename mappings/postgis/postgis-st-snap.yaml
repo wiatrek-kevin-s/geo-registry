@@ -1,0 +1,11 @@
+id: postgis-st-snap
+implements: snap
+crosswalk:
+  layer: "#1"
+  reference: "#2"
+  tolerance: "#3"
+  unit: { fixed: crs-units }
+differences:
+  - 'One geometry against one reference geometry: ST_Collect the reference layer first.'
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,9 @@
+id: sedona-sql-st-makeline
+implements: points-to-line
+crosswalk:
+  layer: geom1
+differences:
+  - Joins two geometries (geom1, geom2) or an array of points; collect the points first.
+  - 'A Spark SQL function: arguments are columns or column names, run over a Spark DataFrame.'
+effects: { modifies_input: false, network: false }
+review: { state: draft }

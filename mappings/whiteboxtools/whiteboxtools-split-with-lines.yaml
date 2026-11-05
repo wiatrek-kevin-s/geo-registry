@@ -1,0 +1,8 @@
+id: whiteboxtools-split-with-lines
+implements: split-by-lines
+crosswalk:
+  layer: input
+  lines: split
+  output: output
+effects: { modifies_input: false, network: false }
+review: { state: draft }

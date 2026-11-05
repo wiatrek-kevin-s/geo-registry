@@ -1,0 +1,11 @@
+id: terra-snap
+implements: snap
+crosswalk:
+  layer: x
+  reference: y
+  tolerance: tolerance
+  unit: { fixed: crs-units }
+differences:
+  - Without y, snaps the layer's own features to each other.
+effects: { modifies_input: false, network: false }
+review: { state: draft }
