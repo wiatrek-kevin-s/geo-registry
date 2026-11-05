@@ -7,13 +7,14 @@ themes:
 - us-federal-hazards
 - open-data-sources
 coverage:
-  region: Unspecified
+  region: Global
 license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
-- type: http
+- type: api
   url: https://earthquake.usgs.gov/fdsnws/event/1/
   auth: none
+  notes: FDSN event web service (query, count); GeoJSON among the formats.
 notes: GeoJSON feeds
 status: active
 review:

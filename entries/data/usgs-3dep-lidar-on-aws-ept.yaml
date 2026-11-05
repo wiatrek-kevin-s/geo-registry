@@ -7,13 +7,22 @@ themes:
 - lidar-data-sources
 - point-clouds-lidar-3d
 coverage:
-  region: Unspecified
+  region: United States
 license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
 - type: http
   url: https://registry.opendata.aws/usgs-lidar/
   auth: none
+- type: ept
+  url: https://s3-us-west-2.amazonaws.com/usgs-lidar-public/
+  index: https://usgs.entwine.io/boundaries/resources.geojson
+  auth: none
+  notes: Public EPT bucket (no AWS account needed), one resource per project.
+- type: stac
+  url: https://usgs-lidar-stac.s3-us-west-2.amazonaws.com/ept/catalog.json
+  auth: none
+  notes: STAC catalog of the EPT resources (listed on the AWS registry page).
 notes: PDAL can query by AOI with readers.ept.
 status: active
 review:

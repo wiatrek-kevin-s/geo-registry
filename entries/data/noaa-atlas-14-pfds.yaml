@@ -7,13 +7,17 @@ themes:
 - us-federal-noaa
 - open-data-sources
 coverage:
-  region: Unspecified
+  region: United States
 license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
 - type: http
   url: https://hdsc.nws.noaa.gov/pfds/
   auth: none
+- type: download
+  url: https://hdsc.nws.noaa.gov/pub/hdsc/data/
+  auth: none
+  notes: Zipped ASCII grids by volume (Texas is volume 11, code tx), with XML grid metadata at /pfds/meta/na14_vol{N}_{code}_grid_metadata.xml.
 notes: Used in drainage design
 status: active
 review:

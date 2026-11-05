@@ -7,7 +7,7 @@ themes:
 - us-federal-noaa
 - open-data-sources
 coverage:
-  region: Unspecified
+  region: Global
 license: LicenseRef-Public-Domain
 license_original: Public domain
 access:

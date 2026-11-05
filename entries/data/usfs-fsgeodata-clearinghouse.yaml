@@ -7,12 +7,19 @@ themes:
 - us-federal-usfs
 - open-data-sources
 coverage:
-  region: Unspecified
+  region: United States
 license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
 - type: http
   url: https://data.fs.usda.gov/geodata/
+  auth: none
+- type: arcgis-rest
+  url: https://apps.fs.usda.gov/arcx/rest/services/EDW
+  auth: none
+  notes: Nationwide Enterprise Data Warehouse map services; some data is published forest by forest.
+- type: download
+  url: https://data.fs.usda.gov/geodata/edw/datasets.php
   auth: none
 status: active
 review:

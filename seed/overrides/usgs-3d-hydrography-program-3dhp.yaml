@@ -1,0 +1,17 @@
+# PROPOSED by agent research on 2026-11-05 for US federal review batch 3. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/us-federal-batch-3-2026-11.md
+id: usgs-3d-hydrography-program-3dhp
+coverage:
+  region: United States
+access:
+- type: http
+  url: https://www.usgs.gov/3d-hydrography-program
+  auth: none
+- type: arcgis-rest
+  url: https://hydro.nationalmap.gov/arcgis/rest/services/3DHP_all/MapServer
+  auth: none
+  notes: 3DHP web services, updated quarterly (last July 2026).
+- type: download
+  url: https://www.sciencebase.gov/catalog/item/6930876ed4be027594fed169
+  auth: none
+  notes: 3DHP downloadable data, 2025 annual product.

@@ -1,0 +1,14 @@
+# PROPOSED by agent research on 2026-11-05 for US federal review batch 3. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/us-federal-batch-3-2026-11.md
+id: noaa-digital-coast-data-access-viewer
+coverage:
+  region: United States (coasts, Great Lakes, territories)
+access:
+- type: http
+  url: https://coast.noaa.gov/dataviewer/
+  auth: none
+- type: s3
+  url: https://noaa-nos-coastal-lidar-pds.s3.amazonaws.com/
+  auth: none
+  notes: 'Coastal lidar by project id (laz/geoid18/<id>/): LAZ tiles, tile index (shapefile, GeoPackage), STAC collection
+    and COPC item collection.'

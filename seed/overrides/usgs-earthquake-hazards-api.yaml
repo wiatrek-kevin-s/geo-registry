@@ -1,0 +1,10 @@
+# PROPOSED by agent research on 2026-11-05 for US federal review batch 3. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/us-federal-batch-3-2026-11.md
+id: usgs-earthquake-hazards-api
+coverage:
+  region: Global
+access:
+- type: api
+  url: https://earthquake.usgs.gov/fdsnws/event/1/
+  auth: none
+  notes: FDSN event web service (query, count); GeoJSON among the formats.
