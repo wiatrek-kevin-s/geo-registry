@@ -1,0 +1,10 @@
+id: terra-aggregate--dissolve
+variant_of: terra-aggregate
+implements: dissolve
+crosswalk:
+  layer: x
+  by: by
+differences:
+  - On a SpatVector, dissolve = TRUE (the default) merges the shapes of each group; without by, everything becomes one.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

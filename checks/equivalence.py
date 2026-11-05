@@ -708,7 +708,8 @@ def run_grass(grass: str, impl: dict, op: dict, case: Case):
         if raster_out:
             lines.append(f"r.out.gdal --quiet input={result} output={out} format=GTiff")
         else:
-            lines.append(f"v.out.ogr --quiet input={result} output={out} format=GPKG")
+            # -c: also features with no category (lines converted from boundaries have none)
+            lines.append(f"v.out.ogr --quiet -c input={result} output={out} format=GPKG")
         script = Path(tmp) / "run.sh"
         script.write_text("\n".join(lines) + "\n")
         import os
