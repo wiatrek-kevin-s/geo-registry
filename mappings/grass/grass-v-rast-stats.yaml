@@ -4,6 +4,8 @@ crosswalk:
   zones: map
   raster: raster
   stats: { param: method, values: { count: number, mean: average, min: minimum, max: maximum, sum: sum, std: stddev } }
+presets:
+  column_prefix: zonal
 differences:
   - Writes the statistics as new columns in the zone map's own attribute table; there is no separate output.
 effects: { modifies_input: true, network: false }

@@ -42,21 +42,22 @@ jobs:
         with:
           environment-file: harvest/environment.yml
           cache-environment: true
-      - name: PostGIS, QGIS, WhiteboxTools, R (sf, terra)
+      - name: PostGIS, QGIS, WhiteboxTools, GRASS, R (sf, terra)
         shell: bash -el {0}
         run: |
-          for e in postgis qgis whitebox r; do micromamba create -y -q -f "harvest/environment-$e.yml"; done
+          for e in postgis qgis whitebox grass r; do micromamba create -y -q -f "harvest/environment-$e.yml"; done
           envs="$MAMBA_ROOT_PREFIX/envs"
           echo "PGBIN=$envs/geo-registry-postgis/bin" >> "$GITHUB_ENV"
           echo "QGIS_PROCESS=$envs/geo-registry-qgis/bin/qgis_process" >> "$GITHUB_ENV"
           echo "WBT=$envs/geo-registry-whitebox/bin/whitebox_tools" >> "$GITHUB_ENV"
           echo "RSCRIPT=$envs/geo-registry-r/bin/Rscript" >> "$GITHUB_ENV"
+          echo "GRASS=$envs/geo-registry-grass/bin/grass" >> "$GITHUB_ENV"
       - name: Run every mapped implementation on the same inputs
         shell: bash -el {0}
         run: |
           dsn=$(harvest/start-postgis.sh "$PGBIN" "$RUNNER_TEMP/pg")
           python -I checks/equivalence.py dist --gdal "$(which gdal)" --psql "$PGBIN/psql" --dsn "$dsn" \
-            --qgis-process "$QGIS_PROCESS" --wbt "$WBT" --rscript "$RSCRIPT"
+            --qgis-process "$QGIS_PROCESS" --wbt "$WBT" --rscript "$RSCRIPT" --grass "$GRASS"
 
   harvest:
     name: Re-harvest engines

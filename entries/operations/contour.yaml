@@ -15,7 +15,7 @@ parameters:
   band: { type: integer, default: 1 }
 checks: [raster.nodata, geometry.valid]
 pitfalls:
-  - Contours follow cell centres, so they stop half a cell short of the raster's edge and are only as precise as the cell size.
+  - Contours are interpolated between cell centres, so they are only as precise as the cell size; engines differ on whether lines stop at the outermost cell centres (GRASS) or run to the raster's edge (GDAL).
   - Some engines smooth or simplify the lines by default, which changes their lengths and positions slightly.
 related: [slope, hillshade]
 status: active
