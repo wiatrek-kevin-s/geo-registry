@@ -2,21 +2,34 @@ id: naip
 kind: data
 name: NAIP
 summary: USDA leaf-on aerial imagery at about 0.6–1 m covering the continental US.
-publisher: Unknown
+publisher: U.S. Department of Agriculture (Farm Service Agency)
 themes:
 - us-federal-imagery
 - open-data-sources
 coverage:
   region: United States
+  bbox:
+  - -179.2
+  - 17.8
+  - -64.5
+  - 71.4
 license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
 - type: http
   url: https://naip-usdaonline.hub.arcgis.com/
   auth: none
+- type: arcgis-rest
+  url: https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer
+  auth: none
+  notes: The National Map's NAIP mosaic, mostly 0.6 m four-band; natural colour, CIR and NDVI functions.
+    Tested 2026-11-05.
 notes: COGs on Planetary Computer/AWS
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1241
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

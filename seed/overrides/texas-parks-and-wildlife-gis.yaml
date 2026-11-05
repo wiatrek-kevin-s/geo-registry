@@ -1,0 +1,11 @@
+# PROPOSED by agent research on 2026-11-05 for the Texas review batch. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/texas-2026-11.md
+id: texas-parks-and-wildlife-gis
+access:
+  - type: http
+    url: https://tpwd.texas.gov/gis/
+    auth: none
+  - type: arcgis-rest
+    url: https://tpwd.texas.gov/server/rest/services
+    auth: none
+    notes: TPWD ArcGIS Server (Parks, Wildlife, Cultural folders). Wildlife/WildlifeManagementAssociations/MapServer tested 2026-11-05.

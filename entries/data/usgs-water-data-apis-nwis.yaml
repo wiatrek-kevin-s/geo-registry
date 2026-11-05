@@ -7,13 +7,15 @@ themes:
 - us-federal-hydrography
 - open-data-sources
 coverage:
-  region: Unspecified
+  region: United States
 license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
-- type: http
-  url: https://api.waterdata.usgs.gov/
+- type: ogc-api-features
+  url: https://api.waterdata.usgs.gov/ogcapi/
   auth: none
+  notes: Modernized Water Data APIs; they replace waterservices.usgs.gov, which USGS decommissions in
+    the first quarter of 2027.
 notes: OGC API-Features endpoints
 status: active
 review:

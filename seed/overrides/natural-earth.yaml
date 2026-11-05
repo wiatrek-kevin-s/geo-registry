@@ -1,0 +1,25 @@
+# Researched by an agent on 2026-11-05 for global review batch 1. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/global-batch-1-2026-11.md
+# Approved by the project lead (wiatrek-kevin-s) on 2026-11-05; endpoints answered the Health check that day.
+id: natural-earth
+publisher: North American Cartographic Information Society (NACIS)
+access:
+- type: http
+  url: https://www.naturalearthdata.com/
+  auth: none
+- type: s3
+  url: s3://naturalearth/
+  auth: none
+  notes: Zipped shapefiles, public, no AWS account.
+coverage:
+  region: Global
+  bbox:
+  - -180.0
+  - -90.0
+  - 180.0
+  - 90.0
+last_verified: '2026-11-05'
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

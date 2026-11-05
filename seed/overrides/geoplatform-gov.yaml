@@ -1,0 +1,15 @@
+# PROPOSED by agent research on 2026-11-05 for US federal review batch 3. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/us-federal-batch-3-2026-11.md
+id: geoplatform-gov
+publisher: Federal Geographic Data Committee
+coverage:
+  region: United States
+access:
+- type: http
+  url: https://www.geoplatform.gov/
+  auth: none
+- type: stac
+  url: http://stac.geoplatform.gov
+  auth: none
+  notes: Listed as operational on FGDC's Geospatial Platform status page (modified 2026-10-22); only an http address
+    is published.

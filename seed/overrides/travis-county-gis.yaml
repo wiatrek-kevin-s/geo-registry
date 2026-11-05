@@ -1,0 +1,22 @@
+# Researched by an agent on 2026-11-05 for the Texas review batch. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/texas-2026-11.md
+# Approved by the project lead (wiatrek-kevin-s) on 2026-11-05; endpoints answered the Health check that day.
+id: travis-county-gis
+access:
+- type: http
+  url: https://www.traviscountytx.gov/tnr/gis
+  auth: none
+- type: arcgis-rest
+  url: https://gis.traviscountytx.gov/server1/rest/services
+  auth: none
+  notes: Travis County ArcGIS Server (folders include TNR, Boundaries_and_Jurisdictions, Services_and_Facilities,
+    Natural_Resources, Public_Works, BCP_BCCP, MS4). Layers tested 2026-11-05.
+notes: Some layers are copies of other agencies' data (RRC pipelines, TCEQ water districts, TCAD parcels) with those
+  agencies' terms.
+coverage:
+  region: Texas
+last_verified: '2026-11-05'
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

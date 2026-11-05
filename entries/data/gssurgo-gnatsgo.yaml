@@ -2,20 +2,35 @@ id: gssurgo-gnatsgo
 kind: data
 name: gSSURGO / gNATSGO
 summary: Gridded state and national SSURGO-based soils in file geodatabase form.
-publisher: Unknown
+publisher: USDA Natural Resources Conservation Service
 themes:
 - us-federal-usda
 - open-data-sources
 coverage:
   region: United States
+  bbox:
+  - -179.2
+  - 17.8
+  - -64.5
+  - 71.4
 license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
-- type: http
-  url: https://www.nrcs.usda.gov/resources/data-and-reports/gridded-soil-survey-geographic-gssurgo-database
+- type: api
+  url: https://SDMDataAccess.sc.egov.usda.gov/Tabular/post.rest
   auth: none
+  notes: Soil Data Access (SSURGO) query service, POST only, up to 100,000 rows; documented at https://sdmdataaccess.sc.egov.usda.gov/webservicehelp.aspx
+- type: ogc-wfs
+  url: https://SDMDataAccess.sc.egov.usda.gov/Spatial/SDMWGS84Geographic.wfs
+  auth: none
+  notes: SSURGO map units (also NAD83 and Web Mercator versions); up to 250,000 features per request.
+notes: Soil Data Access serves SSURGO; gSSURGO and gNATSGO are the gridded file geodatabase downloads
+  of the same survey (download page still to add).
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1273
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

@@ -1,0 +1,30 @@
+# Researched by an agent on 2026-11-05 for the US federal review batch. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/us-federal-2026-11.md
+# Approved by the project lead (wiatrek-kevin-s) on 2026-11-05; endpoints answered the Health check that day.
+id: layercake-osm-us
+publisher: OpenStreetMap US
+coverage:
+  region: Global
+  bbox:
+  - -180.0
+  - -90.0
+  - 180.0
+  - 90.0
+access:
+- type: http
+  url: https://layercake.openstreetmap.us/layers/
+  auth: none
+  notes: Nine global GeoParquet layers (addresses, boundaries, buildings, highways, parks, POIs, settlements, waterways,
+    wetlands).
+- type: download
+  url: https://data.openstreetmap.us/layercake/buildings.parquet
+  auth: none
+  notes: One GeoParquet file per layer for the whole planet; the others follow the same pattern.
+formats_out:
+- GeoParquet
+notes: Data (c) OpenStreetMap contributors, under the Open Database License; credit OpenStreetMap contributors.
+last_verified: '2026-11-05'
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

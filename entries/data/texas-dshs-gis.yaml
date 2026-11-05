@@ -14,9 +14,11 @@ access:
 - type: http
   url: https://www.dshs.texas.gov/
   auth: none
-notes: Unsure of a dedicated GIS portal
-status: active
+notes: 'Retired 2026-11-05: DSHS offers GIS work by request form, not data; health statistics are on healthdata.dshs.texas.gov.'
+status: retired
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1348
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

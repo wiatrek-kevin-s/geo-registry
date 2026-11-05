@@ -1,0 +1,13 @@
+# PROPOSED by agent research on 2026-11-05 for the Texas review batch. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/texas-2026-11.md
+id: texas-historical-commission-atlas
+access:
+  - type: http
+    url: https://atlas.thc.texas.gov/Data/GISData
+    auth: none
+    notes: 11 layers as file geodatabase or shapefile zips (markers, cemeteries, courthouses, museums, National Register, historic sites and highways, neighborhood surveys, USGS quads). Tested 2026-11-05.
+  - type: download
+    url: https://atlas.thc.texas.gov/staticFile/HistoricalMarkers_shp.zip
+    auth: none
+    notes: Official Texas Historical Markers (points).
+notes: Archeological site data is restricted (separate archeological login) and not in the public downloads.

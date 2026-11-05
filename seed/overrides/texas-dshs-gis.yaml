@@ -1,0 +1,9 @@
+# Decision approved by the project lead (wiatrek-kevin-s) on 2026-11-05: Retired: not a data source (GIS work is by request form).
+# Evidence and reasoning: reviews/texas-2026-11.md
+id: texas-dshs-gis
+status: retired
+notes: 'Retired 2026-11-05: DSHS offers GIS work by request form, not data; health statistics are on healthdata.dshs.texas.gov.'
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

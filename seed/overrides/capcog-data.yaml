@@ -1,0 +1,22 @@
+# Researched by an agent on 2026-11-05 for the Texas review batch. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/texas-2026-11.md
+# Approved by the project lead (wiatrek-kevin-s) on 2026-11-05; endpoints answered the Health check that day.
+id: capcog-data
+access:
+- type: http
+  url: https://regional-open-data-capcog.opendata.arcgis.com
+  auth: none
+  notes: CAPCOG Regional Open Data Site (ArcGIS Hub) for Bastrop, Blanco, Burnet, Caldwell, Fayette, Hays, Lee,
+    Llano, Travis and Williamson counties.
+- type: api
+  url: https://regional-open-data-capcog.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+  auth: none
+  notes: DCAT-US catalog feed (ArcGIS Hub convention). Not yet tested.
+update: monthly (9-1-1 address points and street centerlines, about the sixth business day)
+coverage:
+  region: Texas
+last_verified: '2026-11-05'
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

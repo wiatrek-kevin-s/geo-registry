@@ -1,0 +1,22 @@
+# PROPOSED by agent research on 2026-11-05 for the Texas review batch. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/texas-2026-11.md
+id: railroad-commission-of-texas-gis
+access:
+  - type: http
+    url: https://www.rrc.texas.gov/resource-center/research/data-sets-available-for-download/
+    auth: none
+    notes: Free shapefiles by county, updated twice a week. Tested 2026-11-05.
+  - type: download
+    url: https://mft.rrc.texas.gov/link/d551fb20-442e-4b67-84fa-ac3f23ecabb4
+    auth: none
+    notes: Well layers by county (ArcView shapefiles).
+  - type: download
+    url: https://mft.rrc.texas.gov/link/c7cbab0c-afe2-4f6f-91ae-e6ed7d3a7ab6
+    auth: none
+    notes: Pipeline layers by county (ArcView shapefiles).
+  - type: http
+    url: https://gis.rrc.texas.gov/GISViewer/
+    auth: none
+    notes: Public GIS Viewer (interactive only).
+update: twice weekly
+notes: "Digital map data is in latitude/longitude on NAD 27 (a .prj is included), not NAD 83: transform before combining with other layers."

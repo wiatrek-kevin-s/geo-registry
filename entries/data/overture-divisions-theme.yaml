@@ -13,8 +13,11 @@ access:
 - type: http
   url: https://docs.overturemaps.org/guides/divisions/
   auth: none
-status: active
+status: retired
+replaced_by: overture-maps-data
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1312
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

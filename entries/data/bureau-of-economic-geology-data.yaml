@@ -2,7 +2,7 @@ id: bureau-of-economic-geology-data
 kind: data
 name: Bureau of Economic Geology data
 summary: UT Austin geologic maps and coastal/subsurface datasets for Texas.
-publisher: Unknown
+publisher: Bureau of Economic Geology, The University of Texas at Austin
 themes:
 - texas
 - open-data-sources
@@ -14,7 +14,13 @@ access:
 - type: http
   url: https://www.beg.utexas.edu/
   auth: none
-notes: Some products sold
+- type: arcgis-rest
+  url: https://feature.geographic.texas.gov/arcgis/rest/services/Geologic_Database/GeologicDatabaseofTexas/MapServer
+  auth: none
+  notes: 'Geologic Database of Texas: the 38 Geologic Atlas of Texas sheets (1:250,000) compiled by BEG,
+    digitized by USGS, served by TxGIO. Tested 2026-11-05 (service page).'
+notes: Paper and digital products are also sold through the BEG store (store.beg.utexas.edu); licence
+  varies by product.
 status: active
 review:
   state: seeded

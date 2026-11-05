@@ -2,20 +2,36 @@ id: watershed-boundary-dataset-wbd
 kind: data
 name: Watershed Boundary Dataset (WBD)
 summary: Nested hydrologic unit (HUC2–HUC12) watershed boundaries.
-publisher: Unknown
+publisher: U.S. Geological Survey
 themes:
 - us-federal-hydrography
 - open-data-sources
 coverage:
-  region: Unspecified
+  region: United States
+  bbox:
+  - -179.2
+  - 17.8
+  - -64.5
+  - 71.4
 license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
 - type: http
   url: https://www.usgs.gov/national-hydrography/watershed-boundary-dataset
   auth: none
+- type: arcgis-rest
+  url: https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer
+  auth: none
+  notes: Hydrologic units to 12 digits. No longer updated since USGS moved to 3DHP in 2024; kept for reference.
+- type: http
+  url: https://prd-tnm.s3.amazonaws.com/index.html?prefix=StagedProducts%2FHydrography%2FWBD%2F
+  auth: none
+  notes: Staged WBD downloads by HU2 and national.
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1238
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

@@ -8,15 +8,28 @@ themes:
 - display-visualization
 coverage:
   region: United States
+  bbox:
+  - -179.2
+  - 17.8
+  - -64.5
+  - 71.4
 license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
 - type: http
   url: https://basemap.nationalmap.gov/
   auth: none
+- type: arcgis-rest
+  url: https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer
+  auth: none
+  notes: Cached topographic base map (Web Mercator, 24 levels); refreshed 2026-09-04. Other base maps
+    (imagery, shaded relief) are on the same server.
 notes: Free, US coverage
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1176
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

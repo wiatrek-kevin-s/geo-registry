@@ -1,0 +1,15 @@
+# PROPOSED by agent research on 2026-11-05 for US federal review batch 3. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/us-federal-batch-3-2026-11.md
+id: data-gov
+publisher: U.S. General Services Administration
+coverage:
+  region: United States
+access:
+- type: http
+  url: https://catalog.data.gov/
+  auth: none
+- type: api
+  url: https://api.gsa.gov/technology/datagov/v3/
+  auth: api-key
+  notes: CKAN API (action/package_search, ...); needs an api.data.gov key in the x-api-key header (DEMO_KEY for
+    trials).

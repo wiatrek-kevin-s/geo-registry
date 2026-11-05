@@ -2,19 +2,33 @@ id: global-building-footprints-models-microsoft
 kind: data
 name: Global Building Footprints models (Microsoft)
 summary: Microsoft AI-derived building footprint datasets extracted from imagery.
-publisher: Unknown
+publisher: Microsoft
 themes:
 - geoai-deep-learning
 - imagery-remote-sensing-geoai
 coverage:
   region: Global
+  bbox:
+  - -180.0
+  - -90.0
+  - 180.0
+  - 90.0
 license: ODbL-1.0
 access:
 - type: http
   url: https://github.com/microsoft/GlobalMLBuildingFootprints
   auth: none
+- type: stac
+  url: https://planetarycomputer.microsoft.com/api/stac/v1
+  index: ms-buildings
+  auth: none
+  notes: 'Planetary Computer collection ms-buildings: GeoParquet on Azure (account bingmlbuildings, container
+    footprints), partitioned by region and quadkey.'
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 463
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

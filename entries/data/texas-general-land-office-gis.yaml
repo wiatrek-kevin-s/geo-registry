@@ -1,7 +1,7 @@
 id: texas-general-land-office-gis
 kind: data
 name: Texas General Land Office GIS
-summary: State lands, coastal boundaries, original land survey maps and leases.
+summary: State lands, coastal boundaries, beach access and lease data from the Texas General Land Office.
 publisher: Texas General Land Office
 themes:
 - texas
@@ -12,8 +12,15 @@ license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
 - type: http
+  url: https://data-glo.hub.arcgis.com
+  auth: none
+  notes: GLO open data (ArcGIS Hub) - coastal zone boundary, beach access points, coastal, oil and gas,
+    hard mineral and upland surface leases, Permanent School Fund lands.
+- type: http
   url: https://www.glo.texas.gov/land/land-management/gis/index.html
   auth: none
+notes: The Original Texas Land Survey grid is shown in GLO viewers but not distributed by the GLO. GLO
+  data is not suitable for navigation and does not establish land boundaries.
 status: active
 review:
   state: seeded

@@ -7,15 +7,35 @@ themes:
 - us-federal-epa
 - open-data-sources
 coverage:
-  region: Unspecified
+  region: United States
+  bbox:
+  - -179.2
+  - 17.8
+  - -64.5
+  - 71.4
 license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
 - type: http
   url: https://echo.epa.gov/
   auth: none
+- type: arcgis-rest
+  url: https://geodata.epa.gov/arcgis/rest/services/OEI/FRS_INTERESTS/MapServer
+  auth: none
+  notes: FRS facilities map service (listed as public on EPA's FRS data resources page).
+- type: http
+  url: https://www.epa.gov/frs/geospatial-data-download-service
+  auth: none
+  notes: FRS geospatial download (KMZ, CSV), updated monthly.
+- type: api
+  url: https://www.epa.gov/frs/frs-api
+  auth: none
+  notes: FRS API (REST; JSON, XML).
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1284
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

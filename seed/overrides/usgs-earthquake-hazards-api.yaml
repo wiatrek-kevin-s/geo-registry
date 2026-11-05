@@ -1,0 +1,21 @@
+# Researched by an agent on 2026-11-05 for US federal review batch 3. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/us-federal-batch-3-2026-11.md
+# Approved by the project lead (wiatrek-kevin-s) on 2026-11-05; endpoints answered the Health check that day.
+id: usgs-earthquake-hazards-api
+coverage:
+  region: Global
+  bbox:
+  - -180.0
+  - -90.0
+  - 180.0
+  - 90.0
+access:
+- type: api
+  url: https://earthquake.usgs.gov/fdsnws/event/1/
+  auth: none
+  notes: FDSN event web service (query, count); GeoJSON among the formats.
+last_verified: '2026-11-05'
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

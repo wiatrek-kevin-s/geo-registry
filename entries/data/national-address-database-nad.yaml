@@ -14,8 +14,11 @@ access:
 - type: http
   url: https://www.transportation.gov/gis/national-address-database
   auth: none
-status: active
+status: retired
+replaced_by: national-address-database
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 844
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

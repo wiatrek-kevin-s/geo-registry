@@ -1,0 +1,32 @@
+# Researched by an agent on 2026-11-05 for US federal review batch 3. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/us-federal-batch-3-2026-11.md
+# Approved by the project lead (wiatrek-kevin-s) on 2026-11-05; endpoints answered the Health check that day.
+id: epa-echo-frs
+coverage:
+  region: United States
+  bbox:
+  - -179.2
+  - 17.8
+  - -64.5
+  - 71.4
+access:
+- type: http
+  url: https://echo.epa.gov/
+  auth: none
+- type: arcgis-rest
+  url: https://geodata.epa.gov/arcgis/rest/services/OEI/FRS_INTERESTS/MapServer
+  auth: none
+  notes: FRS facilities map service (listed as public on EPA's FRS data resources page).
+- type: http
+  url: https://www.epa.gov/frs/geospatial-data-download-service
+  auth: none
+  notes: FRS geospatial download (KMZ, CSV), updated monthly.
+- type: api
+  url: https://www.epa.gov/frs/frs-api
+  auth: none
+  notes: FRS API (REST; JSON, XML).
+last_verified: '2026-11-05'
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

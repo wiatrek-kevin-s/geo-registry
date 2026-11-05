@@ -1,0 +1,27 @@
+# Researched by an agent on 2026-11-05 for the Texas review batch. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/texas-2026-11.md
+# Approved by the project lead (wiatrek-kevin-s) on 2026-11-05; endpoints answered the Health check that day.
+id: txdot-roadway-inventory-dfo-lrs
+access:
+- type: arcgis-rest
+  url: https://services.arcgis.com/KTcxiTD9dsQw4r7Z/arcgis/rest/services/TxDOT_Roadways/FeatureServer
+  index: '0'
+  auth: none
+  notes: TxDOT Roadways, with measures stored as M values; query supported, 2000 records per request. Tested 2026-11-05.
+- type: download
+  url: https://www.txdot.gov/content/dam/docs/division/tpp/roadway-inventory/2025.zip
+  auth: none
+  notes: Annual roadway inventory (GIS linework and all inventory attributes), 2025 edition; other years from https://www.txdot.gov/inside-txdot/division/transportation-planning/roadway-inventory.html
+update: annual (roadway inventory); the service is updated by TxDOT TPP
+coverage:
+  region: Texas
+  bbox:
+  - -106.916
+  - 25.665
+  - -93.478
+  - 36.727
+last_verified: '2026-11-05'
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

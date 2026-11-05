@@ -2,19 +2,32 @@ id: geoboundaries
 kind: data
 name: geoBoundaries
 summary: Open administrative boundaries for every country with an API.
-publisher: Unknown
+publisher: William & Mary geoLab
 themes:
 - global-boundaries
 - open-data-sources
 coverage:
   region: Global
+  bbox:
+  - -180.0
+  - -90.0
+  - 180.0
+  - 90.0
 license: CC-BY-4.0
 access:
 - type: http
   url: https://www.geoboundaries.org/
   auth: none
+- type: api
+  url: https://www.geoboundaries.org/api/current/gbOpen/
+  auth: none
+  notes: Pattern api/current/gbOpen/{ISO3}/{ADM level}/ (ALL for every country or level); gbAuthoritative
+    and gbHumanitarian are the other releases.
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1316
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

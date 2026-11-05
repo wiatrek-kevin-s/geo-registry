@@ -2,21 +2,38 @@ id: copernicus-dem
 kind: data
 name: Copernicus DEM
 summary: Global 30 m and 90 m DSM derived from TanDEM-X.
-publisher: Unknown
+publisher: European Space Agency (Copernicus)
 themes:
 - global-elevation
 - open-data-sources
 coverage:
   region: Global
+  bbox:
+  - -180.0
+  - -90.0
+  - 180.0
+  - 90.0
 license: LicenseRef-Copernicus-DEM
 license_original: Copernicus DEM licence
 access:
 - type: http
   url: https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM
   auth: none
+- type: s3
+  url: s3://copernicus-dem-30m/
+  auth: none
+  notes: GLO-30 Cloud Optimized GeoTIFFs, eu-central-1, managed by Sinergise; GLO-90 in copernicus-dem-90m.
+- type: stac
+  url: https://earth-search.aws.element84.com/v1
+  index: cop-dem-glo-30
+  auth: none
+  notes: Earth Search collections cop-dem-glo-30 and cop-dem-glo-90.
 notes: GLO-30 free; COGs on AWS
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1296
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

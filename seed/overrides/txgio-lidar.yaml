@@ -1,0 +1,24 @@
+# Researched by an agent on 2026-11-05 for the Texas review batch. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/texas-2026-11.md
+# Approved by the project lead (wiatrek-kevin-s) on 2026-11-05; endpoints answered the Health check that day.
+id: txgio-lidar
+access:
+- type: http
+  url: https://www.geographic.texas.gov/stratmap/elevation-lidar.html
+  auth: none
+- type: arcgis-rest
+  url: https://feature.geographic.texas.gov/arcgis/rest/services/Status_Maps/Lidar_Index_Public/FeatureServer
+  auth: none
+  notes: Tile index of every lidar project TxGIO hosts. Item info read 2026-11-05 (no licence text in the item).
+coverage:
+  region: Texas
+  bbox:
+  - -106.916
+  - 25.665
+  - -93.478
+  - 36.727
+last_verified: '2026-11-05'
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

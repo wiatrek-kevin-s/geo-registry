@@ -1,0 +1,27 @@
+# Researched by an agent on 2026-11-05 for global review batch 1. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/global-batch-1-2026-11.md
+# Approved by the project lead (wiatrek-kevin-s) on 2026-11-05; endpoints answered the Health check that day.
+id: global-building-footprints-models-microsoft
+publisher: Microsoft
+access:
+- type: http
+  url: https://github.com/microsoft/GlobalMLBuildingFootprints
+  auth: none
+- type: stac
+  url: https://planetarycomputer.microsoft.com/api/stac/v1
+  index: ms-buildings
+  auth: none
+  notes: 'Planetary Computer collection ms-buildings: GeoParquet on Azure (account bingmlbuildings, container footprints),
+    partitioned by region and quadkey.'
+coverage:
+  region: Global
+  bbox:
+  - -180.0
+  - -90.0
+  - 180.0
+  - 90.0
+last_verified: '2026-11-05'
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

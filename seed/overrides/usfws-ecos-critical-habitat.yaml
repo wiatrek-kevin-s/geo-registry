@@ -1,0 +1,13 @@
+# PROPOSED by agent research on 2026-11-05 for US federal review batch 3. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/us-federal-batch-3-2026-11.md
+id: usfws-ecos-critical-habitat
+coverage:
+  region: United States
+access:
+- type: http
+  url: https://ecos.fws.gov/ecp/report/table/critical-habitat.html
+  auth: none
+- type: arcgis-rest
+  url: https://mapsd.ecosphere.fws.gov/server/rest/services/Datawarehouse/Critical_Habitat/MapServer
+  auth: none
+  notes: Final critical habitat designations; query formats JSON, GeoJSON, PBF; 2,000 records per request.

@@ -1,0 +1,12 @@
+# PROPOSED by agent research on 2026-11-05 for the US federal review batch. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/us-federal-2026-11.md
+id: neon-aop-lidar
+publisher: National Ecological Observatory Network (NEON)
+access:
+  - type: http
+    url: https://www.neonscience.org/data-collection/airborne-remote-sensing
+    auth: none
+  - type: api
+    url: https://data.neonscience.org/api/v0/
+    auth: none
+    notes: NEON data API (products, sites, data); discrete return lidar point clouds are product DP1.30003.001.

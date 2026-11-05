@@ -1,0 +1,30 @@
+# Researched by an agent on 2026-11-05 for global review batch 1; theme entries merged here on
+# the project lead's approval (2026-11-05). Evidence: reviews/global-batch-1-2026-11.md
+# Approved by the project lead (wiatrek-kevin-s) on 2026-11-05; endpoints answered the Health check that day.
+id: overture-maps-data
+access:
+- type: http
+  url: https://overturemaps.org/
+  auth: none
+- type: s3
+  url: s3://overturemaps-us-west-2/release/
+  auth: none
+  notes: 'GeoParquet by release, theme and type: release/{release}/theme={theme}/type={type}/ (for example 2026-10-21.0).'
+- type: stac
+  url: https://stac.overturemaps.org/catalog.json
+  auth: none
+  notes: Points to the latest release.
+notes: 'Themes (merged from their own entries): buildings ODbL-1.0, transportation ODbL-1.0, divisions ODbL-1.0,
+  places CDLA-Permissive-2.0, addresses licence varies by source. Query with DuckDB on S3 or Azure.'
+coverage:
+  region: Global
+  bbox:
+  - -180.0
+  - -90.0
+  - 180.0
+  - 90.0
+last_verified: '2026-11-05'
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

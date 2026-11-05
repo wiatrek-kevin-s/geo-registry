@@ -2,18 +2,23 @@ id: data-gov
 kind: data
 name: data.gov
 summary: Federal open-data catalog indexing datasets across agencies via CKAN.
-publisher: Unknown
+publisher: U.S. General Services Administration
 themes:
 - us-federal-catalogs
 - open-data-sources
 coverage:
-  region: Unspecified
+  region: United States
 license: LicenseRef-Multiple
 license_original: Mixed
 access:
 - type: http
   url: https://catalog.data.gov/
   auth: none
+- type: api
+  url: https://api.gsa.gov/technology/datagov/v3/
+  auth: api-key
+  notes: CKAN API (action/package_search, ...); needs an api.data.gov key in the x-api-key header (DEMO_KEY
+    for trials).
 notes: CKAN API search
 status: active
 review:

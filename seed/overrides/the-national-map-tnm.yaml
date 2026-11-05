@@ -1,0 +1,26 @@
+# Researched by an agent on 2026-11-05 for the US federal review batch. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/us-federal-2026-11.md
+# Approved by the project lead (wiatrek-kevin-s) on 2026-11-05; endpoints answered the Health check that day.
+id: the-national-map-tnm
+publisher: U.S. Geological Survey
+access:
+- type: http
+  url: https://apps.nationalmap.gov/downloader/
+  auth: none
+- type: api
+  url: https://tnmaccess.nationalmap.gov/api/v1/products
+  auth: none
+  notes: TNM Access API - products by bbox, datasets (for example "Digital Elevation Model (DEM) 1 meter") and format;
+    documented examples need no key.
+coverage:
+  region: United States
+  bbox:
+  - -179.2
+  - 17.8
+  - -64.5
+  - 71.4
+last_verified: '2026-11-05'
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

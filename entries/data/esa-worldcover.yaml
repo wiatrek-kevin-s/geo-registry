@@ -8,13 +8,30 @@ themes:
 - open-data-sources
 coverage:
   region: Global
+  bbox:
+  - -180.0
+  - -90.0
+  - 180.0
+  - 90.0
 license: CC-BY-4.0
 access:
 - type: http
   url: https://esa-worldcover.org/
   auth: none
+- type: s3
+  url: s3://esa-worldcover/
+  auth: none
+  notes: 2020 (v100) and 2021 (v200); public, no AWS account; managed by VITO. Changes between the two
+    years mix real change with algorithm changes.
+- type: stac
+  url: https://services.terrascope.be/stac/
+  auth: none
+  notes: Terrascope STAC (listed on the AWS registry page).
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1300
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

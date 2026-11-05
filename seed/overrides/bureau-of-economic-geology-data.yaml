@@ -1,0 +1,13 @@
+# PROPOSED by agent research on 2026-11-05 for the Texas review batch. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/texas-2026-11.md
+id: bureau-of-economic-geology-data
+publisher: Bureau of Economic Geology, The University of Texas at Austin
+access:
+  - type: http
+    url: https://www.beg.utexas.edu/
+    auth: none
+  - type: arcgis-rest
+    url: https://feature.geographic.texas.gov/arcgis/rest/services/Geologic_Database/GeologicDatabaseofTexas/MapServer
+    auth: none
+    notes: "Geologic Database of Texas: the 38 Geologic Atlas of Texas sheets (1:250,000) compiled by BEG, digitized by USGS, served by TxGIO. Tested 2026-11-05 (service page)."
+notes: Paper and digital products are also sold through the BEG store (store.beg.utexas.edu); licence varies by product.

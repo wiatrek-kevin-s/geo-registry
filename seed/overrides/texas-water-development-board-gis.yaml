@@ -1,0 +1,26 @@
+# Researched by an agent on 2026-11-05 for the Texas review batch. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/texas-2026-11.md
+# Approved by the project lead (wiatrek-kevin-s) on 2026-11-05; endpoints answered the Health check that day.
+id: texas-water-development-board-gis
+access:
+- type: http
+  url: https://www.twdb.texas.gov/mapping/gisdata.asp
+  auth: none
+- type: arcgis-rest
+  url: https://services.twdb.texas.gov/arcgis/rest/services
+  auth: none
+  notes: 51 services (Base, GAMs, Operational, Public, PWS, Surface, Utilities) per the sitemap fetched 2026-11-05
+    - well reports, groundwater database, regional water planning areas, groundwater conservation districts, public
+    water service areas.
+coverage:
+  region: Texas
+  bbox:
+  - -106.916
+  - 25.665
+  - -93.478
+  - 36.727
+last_verified: '2026-11-05'
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

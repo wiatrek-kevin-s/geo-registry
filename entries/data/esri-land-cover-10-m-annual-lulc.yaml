@@ -2,20 +2,32 @@ id: esri-land-cover-10-m-annual-lulc
 kind: data
 name: Esri Land Cover (10 m annual LULC)
 summary: Annual 10 m global land use/land cover from Sentinel-2 by Impact Observatory and Esri.
-publisher: Esri
+publisher: Impact Observatory and Esri
 themes:
 - global-land-cover
 - open-data-sources
 coverage:
   region: Global
+  bbox:
+  - -180.0
+  - -90.0
+  - 180.0
+  - 90.0
 license: CC-BY-4.0
 access:
 - type: http
   url: https://livingatlas.arcgis.com/landcover/
   auth: none
+- type: s3
+  url: s3://io-10m-annual-lulc/
+  auth: none
+  notes: Annual 9-class maps 2017-2024, COGs, public; managed by Impact Observatory.
 notes: Also on Planetary Computer and AWS
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1302
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

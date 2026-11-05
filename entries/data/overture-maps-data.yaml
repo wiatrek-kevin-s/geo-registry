@@ -9,15 +9,34 @@ themes:
 - osm-overture-tooling
 coverage:
   region: Global
+  bbox:
+  - -180.0
+  - -90.0
+  - 180.0
+  - 90.0
 license: LicenseRef-Multiple
 license_original: CDLA-Permissive-2.0; ODbL-1.0
 access:
 - type: http
   url: https://overturemaps.org/
   auth: none
-notes: Licence varies by theme (ODbL for OSM-derived); query with DuckDB on S3/Azure
+- type: s3
+  url: s3://overturemaps-us-west-2/release/
+  auth: none
+  notes: 'GeoParquet by release, theme and type: release/{release}/theme={theme}/type={type}/ (for example
+    2026-10-21.0).'
+- type: stac
+  url: https://stac.overturemaps.org/catalog.json
+  auth: none
+  notes: Points to the latest release.
+notes: 'Themes (merged from their own entries): buildings ODbL-1.0, transportation ODbL-1.0, divisions
+  ODbL-1.0, places CDLA-Permissive-2.0, addresses licence varies by source. Query with DuckDB on S3 or
+  Azure.'
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1230
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

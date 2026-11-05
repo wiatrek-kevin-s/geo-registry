@@ -14,9 +14,17 @@ access:
 - type: http
   url: https://data.austintexas.gov/
   auth: none
+- type: api
+  url: https://data.austintexas.gov/api/views/g7cx-4kmk
+  auth: none
+  notes: 'Socrata platform: dataset metadata at /api/views/<id>, rows at /resource/<id>.json (SODA). Identifier
+    from the data.gov harvest record; not yet fetched.'
 notes: Socrata SODA API
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1349
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

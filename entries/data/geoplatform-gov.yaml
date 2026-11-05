@@ -2,18 +2,23 @@ id: geoplatform-gov
 kind: data
 name: GeoPlatform.gov
 summary: Federal geospatial catalog and NGDA dataset hub.
-publisher: Unknown
+publisher: Federal Geographic Data Committee
 themes:
 - us-federal-catalogs
 - open-data-sources
 coverage:
-  region: Unspecified
+  region: United States
 license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
 - type: http
   url: https://www.geoplatform.gov/
   auth: none
+- type: stac
+  url: http://stac.geoplatform.gov
+  auth: none
+  notes: Listed as operational on FGDC's Geospatial Platform status page (modified 2026-10-22); only an
+    http address is published.
 status: active
 review:
   state: seeded

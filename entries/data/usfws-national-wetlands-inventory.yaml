@@ -8,14 +8,30 @@ themes:
 - open-data-sources
 coverage:
   region: United States
+  bbox:
+  - -179.2
+  - 17.8
+  - -64.5
+  - 71.4
 license: LicenseRef-Public-Domain
 license_original: Public domain
+update: twice a year (with the Wetlands Mapper)
 access:
 - type: http
-  url: https://www.fws.gov/program/national-wetlands-inventory
+  url: https://www.fws.gov/wetlands/data/web-map-services.html
   auth: none
+- type: arcgis-rest
+  url: https://fwspublicservices.wim.usgs.gov/wetlandsmapservice/rest/services
+  auth: none
+  notes: Wetlands, Data_Source, WetlandsRaster, Wetlands_Status and Riparian services.
+- type: ogc-wms
+  url: https://fwspublicservices.wim.usgs.gov/wetlandsmapservice/services/Wetlands/MapServer/WMSServer
+  auth: none
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1277
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

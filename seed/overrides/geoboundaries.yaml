@@ -1,0 +1,26 @@
+# Researched by an agent on 2026-11-05 for global review batch 1. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/global-batch-1-2026-11.md
+# Approved by the project lead (wiatrek-kevin-s) on 2026-11-05; endpoints answered the Health check that day.
+id: geoboundaries
+publisher: William & Mary geoLab
+access:
+- type: http
+  url: https://www.geoboundaries.org/
+  auth: none
+- type: api
+  url: https://www.geoboundaries.org/api/current/gbOpen/
+  auth: none
+  notes: Pattern api/current/gbOpen/{ISO3}/{ADM level}/ (ALL for every country or level); gbAuthoritative and gbHumanitarian
+    are the other releases.
+coverage:
+  region: Global
+  bbox:
+  - -180.0
+  - -90.0
+  - 180.0
+  - 90.0
+last_verified: '2026-11-05'
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

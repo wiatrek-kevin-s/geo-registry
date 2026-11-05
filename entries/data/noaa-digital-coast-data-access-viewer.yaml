@@ -7,16 +7,24 @@ themes:
 - lidar-data-sources
 - point-clouds-lidar-3d
 coverage:
-  region: Unspecified
+  region: United States (coasts, Great Lakes, territories)
 license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
 - type: http
   url: https://coast.noaa.gov/dataviewer/
   auth: none
+- type: s3
+  url: s3://noaa-nos-coastal-lidar-pds/
+  auth: none
+  notes: 'Coastal lidar by project id (laz/geoid18/<id>/): LAZ tiles, tile index (shapefile, GeoPackage),
+    STAC collection and COPC item collection.'
 notes: Coastal and topobathy lidar.
-status: active
+status: retired
+replaced_by: noaa-digital-coast
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 638
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

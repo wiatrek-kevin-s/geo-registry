@@ -10,15 +10,32 @@ themes:
 - open-data-sources
 coverage:
   region: United States
+  bbox:
+  - -179.2
+  - 17.8
+  - -64.5
+  - 71.4
 license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
 - type: http
   url: https://www.usgs.gov/3d-elevation-program
   auth: none
+- type: arcgis-rest
+  url: https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer
+  auth: none
+  notes: Bare-earth DEM from multi-resolution 3DEP sources; hillshade, slope, aspect and contour functions;
+    WMS and WCS enabled. Tested 2026-11-05.
+- type: arcgis-rest
+  url: https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer
+  auth: none
+  notes: Index of 3DEP projects and products.
 notes: Primary US lidar source.
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 634
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

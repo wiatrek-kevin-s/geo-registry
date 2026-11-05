@@ -1,0 +1,9 @@
+# Decision approved by the project lead (wiatrek-kevin-s) on 2026-11-05: Merged into eox-sentinel-2-cloudless (same product).
+# Evidence and reasoning: reviews/global-batch-1-2026-11.md
+id: eoxhub-eox-sentinel-2-cloudless
+status: retired
+replaced_by: eox-sentinel-2-cloudless
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

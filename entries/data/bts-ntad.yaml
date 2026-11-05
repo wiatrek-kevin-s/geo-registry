@@ -8,14 +8,30 @@ themes:
 - open-data-sources
 coverage:
   region: United States
+  bbox:
+  - -179.2
+  - 17.8
+  - -64.5
+  - 71.4
 license: LicenseRef-Public-Domain
 license_original: Public domain
+update: rolling, as source agencies publish (Fall 2026 release, 2026-10-23)
 access:
 - type: http
-  url: https://www.bts.gov/ntad
+  url: https://geodata.bts.gov/
   auth: none
+  notes: BTS Geospatial Data Catalog (ArcGIS Hub); downloads in file geodatabase, shapefile, GeoJSON,
+    CSV and KML, and a web feature service per dataset.
+- type: api
+  url: https://hub.arcgis.com/api/feed/all/csv?target=geodata.bts.gov
+  auth: none
+  notes: Catalog of NTAD datasets with each one's service URL (named by BTS's Fall 2026 release note).
+    Not yet fetched.
+last_verified: '2026-11-05'
 status: active
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 1286
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

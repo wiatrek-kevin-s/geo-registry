@@ -2,7 +2,7 @@ id: eox-sentinel-2-cloudless
 kind: data
 name: EOX Sentinel-2 cloudless
 summary: Cloud-free global Sentinel-2 mosaic served as WMTS/WMS; licence varies by year.
-publisher: Unknown
+publisher: EOX IT Services
 themes:
 - basemap-providers
 - display-visualization

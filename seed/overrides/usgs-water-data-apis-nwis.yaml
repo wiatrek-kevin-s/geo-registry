@@ -1,0 +1,11 @@
+# PROPOSED by agent research on 2026-11-05 for US federal review batch 3. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/us-federal-batch-3-2026-11.md
+id: usgs-water-data-apis-nwis
+coverage:
+  region: United States
+access:
+- type: ogc-api-features
+  url: https://api.waterdata.usgs.gov/ogcapi/
+  auth: none
+  notes: Modernized Water Data APIs; they replace waterservices.usgs.gov, which USGS decommissions in the first
+    quarter of 2027.

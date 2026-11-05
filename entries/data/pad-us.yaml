@@ -2,7 +2,7 @@ id: pad-us
 kind: data
 name: PAD-US
 summary: 'Protected Areas Database of the US: public lands and conservation areas.'
-publisher: Unknown
+publisher: U.S. Geological Survey (Gap Analysis Project)
 themes:
 - us-federal-protected-areas
 - open-data-sources
@@ -12,8 +12,13 @@ license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
 - type: http
-  url: https://www.usgs.gov/programs/gap-analysis-project/science/pad-us-data-overview
+  url: https://www.usgs.gov/programs/gap-analysis-project/science/pad-us-data-download
   auth: none
+  notes: PAD-US 4 (DOI 10.5066/P96WBCHS) downloads.
+- type: http
+  url: https://www.usgs.gov/programs/gap-analysis-project/science/pad-us-web-services
+  auth: none
+  notes: Feature layer views on ArcGIS Online (GAP status, public access, managers, designations).
 status: active
 review:
   state: seeded

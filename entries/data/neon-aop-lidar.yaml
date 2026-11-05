@@ -2,7 +2,7 @@ id: neon-aop-lidar
 kind: data
 name: NEON AOP lidar
 summary: Airborne lidar and derived products over NEON ecological field sites in the US.
-publisher: Unknown
+publisher: National Ecological Observatory Network (NEON)
 themes:
 - lidar-data-sources
 - point-clouds-lidar-3d
@@ -13,6 +13,10 @@ access:
 - type: http
   url: https://www.neonscience.org/data-collection/airborne-remote-sensing
   auth: none
+- type: api
+  url: https://data.neonscience.org/api/v0/
+  auth: none
+  notes: NEON data API (products, sites, data); discrete return lidar point clouds are product DP1.30003.001.
 notes: Research-grade ecological lidar.
 status: active
 review:

@@ -1,0 +1,28 @@
+# Researched by an agent on 2026-11-05 for the US federal review batch. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/us-federal-2026-11.md
+# Approved by the project lead (wiatrek-kevin-s) on 2026-11-05; endpoints answered the Health check that day.
+id: usfws-national-wetlands-inventory
+access:
+- type: http
+  url: https://www.fws.gov/wetlands/data/web-map-services.html
+  auth: none
+- type: arcgis-rest
+  url: https://fwspublicservices.wim.usgs.gov/wetlandsmapservice/rest/services
+  auth: none
+  notes: Wetlands, Data_Source, WetlandsRaster, Wetlands_Status and Riparian services.
+- type: ogc-wms
+  url: https://fwspublicservices.wim.usgs.gov/wetlandsmapservice/services/Wetlands/MapServer/WMSServer
+  auth: none
+update: twice a year (with the Wetlands Mapper)
+coverage:
+  region: United States
+  bbox:
+  - -179.2
+  - 17.8
+  - -64.5
+  - 71.4
+last_verified: '2026-11-05'
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'
