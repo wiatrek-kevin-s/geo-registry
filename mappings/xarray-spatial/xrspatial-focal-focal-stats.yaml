@@ -1,0 +1,8 @@
+id: xrspatial-focal-focal-stats
+implements: focal-statistics
+crosswalk:
+  raster: agg
+  statistic: { param: stats_funcs, note: A list of statistic names. }
+  size: { note: "kernel: an array, e.g. from xrspatial.convolution.circle_kernel or a square of ones." }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,10 @@
+id: qgis-gdal-gridinversedistance
+implements: idw-interpolation
+crosswalk:
+  layer: INPUT
+  output: OUTPUT
+  field: Z_FIELD
+  resolution: { note: "No cell size argument; set the output size or resolution with -tr in EXTRA." }
+  power: POWER
+effects: { modifies_input: false, network: false }
+review: { state: draft }

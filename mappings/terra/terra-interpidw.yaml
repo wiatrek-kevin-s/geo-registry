@@ -1,0 +1,11 @@
+id: terra-interpidw
+implements: idw-interpolation
+crosswalk:
+  layer: y
+  field: field
+  resolution: { note: "x is a template raster on the target grid." }
+  power: power
+differences:
+  - radius is required; cells with no point within it get fill (default NA).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

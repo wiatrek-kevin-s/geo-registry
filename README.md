@@ -169,13 +169,13 @@ status: active
 review: { state: draft }
 ```
 
-- Today: 35 operations: the 16 ops Columbus's `vector_op` and `raster_op` run, plus
+- Today: 39 operations: the 16 ops Columbus's `vector_op` and `raster_op` run, plus
   `table-to-points`; then `centroid`, `convex-hull`, `difference`, `union-overlay`,
   `symmetric-difference`, `multipart-to-singlepart`, `polygons-to-lines`,
   `lines-to-polygons`, `voronoi`, `nearest-join`, `count-points-in-polygon`,
   `select-by-location`, `merge-layers`, `rasterize`, `raster-to-polygons`, `contour`,
-  `resample-raster` and `mosaic`, which Columbus can run through engine plugins and
-  `run_tool`.
+  `resample-raster`, `mosaic`, `idw-interpolation`, `focal-statistics`, `fill-sinks` and
+  `flow-accumulation`, which Columbus can run through engine plugins and `run_tool`.
 - A port with `many: true` takes a list (the rasters of a mosaic, the layers of a merge).
 - Ids are hyphenated slugs. `columbus` records the Columbus tool and op in Columbus's own
   names (`vector_op` / `spatial_join`), so neither project has to rename anything; an

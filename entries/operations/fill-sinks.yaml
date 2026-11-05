@@ -1,0 +1,17 @@
+id: fill-sinks
+kind: operation
+name: Fill Sinks
+aka: [Fill, fill depressions, pit filling, hydrologically conditioned DEM]
+summary: Raises cells in closed depressions of an elevation raster so every cell can drain to the edge.
+group: raster/hydrology
+inputs:
+  - { name: raster, type: raster }
+outputs:
+  - { name: output, type: raster }
+checks: [raster.nodata]
+pitfalls:
+  - Filling also flattens real depressions (quarries, sinkholes); breaching is the alternative that cuts through barriers.
+  - Some engines add a tiny gradient across filled flats so water still flows; others leave them flat.
+related: [flow-accumulation]
+status: active
+review: { state: draft }

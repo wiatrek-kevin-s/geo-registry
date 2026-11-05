@@ -1,0 +1,9 @@
+id: whiteboxtools-mean-filter
+implements: focal-statistics
+crosswalk:
+  raster: input
+  output: output
+  statistic: { fixed: mean, note: "Other filters are separate tools (MedianFilter, MaximumFilter, ...)." }
+  size: { note: "filterx and filtery: the window's width and height in cells." }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

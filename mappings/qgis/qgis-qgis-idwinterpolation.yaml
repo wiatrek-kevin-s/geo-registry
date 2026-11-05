@@ -1,0 +1,10 @@
+id: qgis-qgis-idwinterpolation
+implements: idw-interpolation
+crosswalk:
+  output: OUTPUT
+  layer: { note: "Layers, fields and types go in INTERPOLATION_DATA as one encoded string." }
+  field: { note: "Encoded in INTERPOLATION_DATA." }
+  resolution: PIXEL_SIZE
+  power: DISTANCE_COEFFICIENT
+effects: { modifies_input: false, network: false }
+review: { state: draft }
