@@ -1,0 +1,11 @@
+id: gdal-raster-aspect
+implements: aspect
+crosswalk:
+  raster: input
+  output: output
+  band: band
+  z_unit: { note: Aspect does not depend on the elevation unit. }
+differences:
+  - convention chooses compass bearings (azimuth, the default) or mathematical angles.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

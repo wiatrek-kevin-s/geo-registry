@@ -1,0 +1,13 @@
+id: pdal-filters-separatescanline
+kind: implementation
+name: filters.separatescanline
+software: pdal
+call: {interface: pdal-pipeline, name: filters.separatescanline}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  groupby: {type: option, default: '1'}
+docs: https://pdal.org/en/master/stages/filters.separatescanline.html
+status: active
+review: {state: harvested, source: pdal}

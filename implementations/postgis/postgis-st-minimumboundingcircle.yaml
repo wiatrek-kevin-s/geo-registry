@@ -1,0 +1,16 @@
+id: postgis-st-minimumboundingcircle
+kind: implementation
+name: st_minimumboundingcircle
+software: postgis
+call: {interface: sql, name: st_minimumboundingcircle}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  inputgeom: {type: geometry}
+  segs_per_quarter: {type: integer, default: '48'}
+signatures:
+- arguments:
+  - {name: inputgeom, type: geometry}
+  - {name: segs_per_quarter, type: integer, default: '48'}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

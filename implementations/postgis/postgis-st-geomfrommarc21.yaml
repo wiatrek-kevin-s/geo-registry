@@ -1,0 +1,14 @@
+id: postgis-st-geomfrommarc21
+kind: implementation
+name: st_geomfrommarc21
+software: postgis
+call: {interface: sql, name: st_geomfrommarc21}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  marc21xml: {type: text}
+signatures:
+- arguments:
+  - {name: marc21xml, type: text}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

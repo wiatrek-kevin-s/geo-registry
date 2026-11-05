@@ -1,0 +1,12 @@
+id: geopandas-geoseries-buffer
+implements: buffer
+crosswalk:
+  distance: distance
+  unit: { fixed: crs-units, note: Distance is in the series' CRS units; convert it first. }
+  dissolve: { fixed: false, note: Call union_all or dissolve on the result. }
+  segments: quad_segs
+differences:
+  - Called on the GeoSeries itself; returns a GeoSeries without the other columns.
+  - Warns but still buffers in degrees when the CRS is geographic.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,18 @@
+id: postgis-st-wrapx
+kind: implementation
+name: st_wrapx
+software: postgis
+call: {interface: sql, name: st_wrapx}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geom: {type: geometry}
+  wrap: {type: double precision}
+  move: {type: double precision}
+signatures:
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: wrap, type: double precision}
+  - {name: move, type: double precision}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

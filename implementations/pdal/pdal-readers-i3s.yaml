@@ -1,0 +1,20 @@
+id: pdal-readers-i3s
+kind: implementation
+name: readers.i3s
+software: pdal
+call: {interface: pdal-pipeline, name: readers.i3s}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  filename: {type: option}
+  count: {type: option, default: '18446744073709551615'}
+  override_srs: {type: option}
+  default_srs: {type: option}
+  obb: {type: option}
+  threads: {type: option, default: '4'}
+  dimensions: {type: option}
+  min_density: {type: option, default: '-1'}
+  max_density: {type: option, default: '-1'}
+docs: https://pdal.org/en/master/stages/readers.i3s.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

@@ -1,0 +1,13 @@
+id: pdal-filters-groupby
+kind: implementation
+name: filters.groupby
+software: pdal
+call: {interface: pdal-pipeline, name: filters.groupby}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  dimension: {type: option}
+docs: https://pdal.org/en/master/stages/filters.groupby.html
+status: active
+review: {state: harvested, source: pdal}

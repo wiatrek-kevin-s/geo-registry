@@ -1,0 +1,14 @@
+id: geopandas-overlay
+kind: implementation
+name: geopandas.overlay
+software: geopandas
+call: {interface: python, name: geopandas.overlay}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  df1: {type: GeoDataFrame, required: true}
+  df2: {type: GeoDataFrame, required: true}
+  how: {type: Literal, default: intersection}
+  keep_geom_type: {type: Union}
+  make_valid: {type: bool, default: true}
+status: active
+review: {state: harvested, source: python-libs}

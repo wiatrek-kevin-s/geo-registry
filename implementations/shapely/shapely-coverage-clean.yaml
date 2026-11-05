@@ -1,0 +1,13 @@
+id: shapely-coverage-clean
+kind: implementation
+name: shapely.coverage_clean
+software: shapely
+call: {interface: python, name: shapely.coverage_clean}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geometry: {type: any, required: true}
+  gap_width: {type: number, default: 0.0}
+  snapping_distance: {type: integer, default: -1}
+  merge_strategy: {type: string, default: longest_border}
+status: active
+review: {state: harvested, source: python-libs}

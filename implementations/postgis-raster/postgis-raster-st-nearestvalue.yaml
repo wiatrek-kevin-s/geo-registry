@@ -1,0 +1,40 @@
+id: postgis-raster-st-nearestvalue
+kind: implementation
+name: st_nearestvalue
+software: postgis-raster
+call: {interface: sql, name: st_nearestvalue}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  band: {type: integer}
+  columnx: {type: integer}
+  rowy: {type: integer}
+  exclude_nodata_value: {type: boolean, default: 'true'}
+  pt: {type: geometry}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: band, type: integer}
+  - {name: columnx, type: integer}
+  - {name: rowy, type: integer}
+  - {name: exclude_nodata_value, type: boolean, default: 'true'}
+  returns: double precision
+- arguments:
+  - {name: rast, type: raster}
+  - {name: band, type: integer}
+  - {name: pt, type: geometry}
+  - {name: exclude_nodata_value, type: boolean, default: 'true'}
+  returns: double precision
+- arguments:
+  - {name: rast, type: raster}
+  - {name: columnx, type: integer}
+  - {name: rowy, type: integer}
+  - {name: exclude_nodata_value, type: boolean, default: 'true'}
+  returns: double precision
+- arguments:
+  - {name: rast, type: raster}
+  - {name: pt, type: geometry}
+  - {name: exclude_nodata_value, type: boolean, default: 'true'}
+  returns: double precision
+status: active
+review: {state: harvested, source: postgis}

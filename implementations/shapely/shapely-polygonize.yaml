@@ -1,0 +1,10 @@
+id: shapely-polygonize
+kind: implementation
+name: shapely.polygonize
+software: shapely
+call: {interface: python, name: shapely.polygonize}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geometries: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-libs}

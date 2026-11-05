@@ -1,0 +1,20 @@
+id: postgis-raster-st-setz
+kind: implementation
+name: st_setz
+software: postgis-raster
+call: {interface: sql, name: st_setz}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  geom: {type: geometry}
+  resample: {type: text, default: '''nearest''::text'}
+  band: {type: integer, default: '1'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: geom, type: geometry}
+  - {name: resample, type: text, default: '''nearest''::text'}
+  - {name: band, type: integer, default: '1'}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

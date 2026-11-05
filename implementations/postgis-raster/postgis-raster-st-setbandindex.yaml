@@ -1,0 +1,20 @@
+id: postgis-raster-st-setbandindex
+kind: implementation
+name: st_setbandindex
+software: postgis-raster
+call: {interface: sql, name: st_setbandindex}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  band: {type: integer}
+  outdbindex: {type: integer}
+  force: {type: boolean, default: 'false'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: band, type: integer}
+  - {name: outdbindex, type: integer}
+  - {name: force, type: boolean, default: 'false'}
+  returns: raster
+status: active
+review: {state: harvested, source: postgis}

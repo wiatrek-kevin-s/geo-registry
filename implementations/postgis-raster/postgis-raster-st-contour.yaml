@@ -1,0 +1,24 @@
+id: postgis-raster-st-contour
+kind: implementation
+name: st_contour
+software: postgis-raster
+call: {interface: sql, name: st_contour}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  bandnumber: {type: integer, default: '1'}
+  level_interval: {type: double precision, default: '100.0'}
+  level_base: {type: double precision, default: '0.0'}
+  fixed_levels: {type: 'double precision[]', default: 'ARRAY[]::double precision[]'}
+  polygonize: {type: boolean, default: 'false'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: bandnumber, type: integer, default: '1'}
+  - {name: level_interval, type: double precision, default: '100.0'}
+  - {name: level_base, type: double precision, default: '0.0'}
+  - {name: fixed_levels, type: 'double precision[]', default: 'ARRAY[]::double precision[]'}
+  - {name: polygonize, type: boolean, default: 'false'}
+  returns: TABLE(geom geometry, id integer, value double precision)
+status: active
+review: {state: harvested, source: postgis}

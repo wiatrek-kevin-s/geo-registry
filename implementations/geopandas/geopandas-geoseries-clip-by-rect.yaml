@@ -1,0 +1,13 @@
+id: geopandas-geoseries-clip-by-rect
+kind: implementation
+name: GeoSeries.clip_by_rect
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.clip_by_rect}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  xmin: {type: any, required: true}
+  ymin: {type: any, required: true}
+  xmax: {type: any, required: true}
+  ymax: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-libs}

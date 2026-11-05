@@ -1,0 +1,17 @@
+id: pdal-filters-trajectory
+kind: implementation
+name: filters.trajectory
+software: pdal
+call: {interface: pdal-pipeline, name: filters.trajectory}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  dtr: {type: option, default: '0.001'}
+  dts: {type: option, default: '0.001'}
+  minsep: {type: option, default: '0.01'}
+  tblock: {type: option, default: '1'}
+  tout: {type: option, default: '0.01'}
+docs: https://pdal.org/en/master/stages/filters.trajectory.html
+status: active
+review: {state: harvested, source: pdal}

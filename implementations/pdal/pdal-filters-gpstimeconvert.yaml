@@ -1,0 +1,20 @@
+id: pdal-filters-gpstimeconvert
+kind: implementation
+name: filters.gpstimeconvert
+software: pdal
+call: {interface: pdal-pipeline, name: filters.gpstimeconvert}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  conversion: {type: option}
+  in_time: {type: option}
+  out_time: {type: option}
+  start_date: {type: option}
+  wrap: {type: option, default: 'false'}
+  wrapped: {type: option, default: 'false'}
+  wrapped_tolerance: {type: option, default: '1'}
+docs: https://pdal.org/en/master/stages/filters.gpstimeconvert.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

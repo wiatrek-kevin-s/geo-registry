@@ -1,0 +1,10 @@
+id: geopandas-geoseries-invalid-coverage-edges
+kind: implementation
+name: GeoSeries.invalid_coverage_edges
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.invalid_coverage_edges}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  gap_width: {type: number, default: 0.0}
+status: active
+review: {state: harvested, source: python-libs}

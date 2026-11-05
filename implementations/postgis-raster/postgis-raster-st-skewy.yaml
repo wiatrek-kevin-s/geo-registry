@@ -1,0 +1,13 @@
+id: postgis-raster-st-skewy
+kind: implementation
+name: st_skewy
+software: postgis-raster
+call: {interface: sql, name: st_skewy}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: raster}
+  returns: double precision
+status: active
+review: {state: harvested, source: postgis}

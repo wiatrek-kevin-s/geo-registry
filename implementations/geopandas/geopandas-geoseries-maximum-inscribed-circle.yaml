@@ -1,0 +1,10 @@
+id: geopandas-geoseries-maximum-inscribed-circle
+kind: implementation
+name: GeoSeries.maximum_inscribed_circle
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.maximum_inscribed_circle}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  tolerance: {type: any}
+status: active
+review: {state: harvested, source: python-libs}

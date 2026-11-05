@@ -1,0 +1,22 @@
+id: postgis-st-generatepoints
+kind: implementation
+name: st_generatepoints
+software: postgis
+call: {interface: sql, name: st_generatepoints}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  area: {type: geometry}
+  npoints: {type: integer}
+  seed: {type: integer}
+signatures:
+- arguments:
+  - {name: area, type: geometry}
+  - {name: npoints, type: integer}
+  returns: geometry
+- arguments:
+  - {name: area, type: geometry}
+  - {name: npoints, type: integer}
+  - {name: seed, type: integer}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

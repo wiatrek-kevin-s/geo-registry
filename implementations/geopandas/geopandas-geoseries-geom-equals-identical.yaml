@@ -1,0 +1,11 @@
+id: geopandas-geoseries-geom-equals-identical
+kind: implementation
+name: GeoSeries.geom_equals_identical
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.geom_equals_identical}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  other: {type: any, required: true}
+  align: {type: any}
+status: active
+review: {state: harvested, source: python-libs}

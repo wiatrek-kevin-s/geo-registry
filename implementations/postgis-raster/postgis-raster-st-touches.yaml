@@ -1,0 +1,24 @@
+id: postgis-raster-st-touches
+kind: implementation
+name: st_touches
+software: postgis-raster
+call: {interface: sql, name: st_touches}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast1: {type: raster}
+  nband1: {type: integer}
+  rast2: {type: raster}
+  nband2: {type: integer}
+signatures:
+- arguments:
+  - {name: rast1, type: raster}
+  - {name: nband1, type: integer}
+  - {name: rast2, type: raster}
+  - {name: nband2, type: integer}
+  returns: boolean
+- arguments:
+  - {name: rast1, type: raster}
+  - {name: rast2, type: raster}
+  returns: boolean
+status: active
+review: {state: harvested, source: postgis}

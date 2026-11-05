@@ -1,0 +1,11 @@
+id: shapely-set-srid
+kind: implementation
+name: shapely.set_srid
+software: shapely
+call: {interface: python, name: shapely.set_srid}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geometry: {type: any, required: true}
+  srid: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-libs}

@@ -1,0 +1,16 @@
+id: pdal-filters-neighborclassifier
+kind: implementation
+name: filters.neighborclassifier
+software: pdal
+call: {interface: pdal-pipeline, name: filters.neighborclassifier}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  domain: {type: option}
+  k: {type: option}
+  candidate: {type: option}
+  dimension: {type: option, default: Classification}
+docs: https://pdal.org/en/master/stages/filters.neighborclassifier.html
+status: active
+review: {state: harvested, source: pdal}

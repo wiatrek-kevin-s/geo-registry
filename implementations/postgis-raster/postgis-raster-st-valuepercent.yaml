@@ -1,0 +1,96 @@
+id: postgis-raster-st-valuepercent
+kind: implementation
+name: st_valuepercent
+software: postgis-raster
+call: {interface: sql, name: st_valuepercent}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  nband: {type: integer, default: '1'}
+  exclude_nodata_value: {type: boolean, default: 'true'}
+  searchvalue: {type: double precision}
+  roundto: {type: double precision, default: '0'}
+  searchvalues: {type: 'double precision[]', default: 'NULL::double precision[]'}
+  rastertable: {type: text}
+  rastercolumn: {type: text}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: exclude_nodata_value, type: boolean}
+  - {name: searchvalue, type: double precision}
+  - {name: roundto, type: double precision, default: '0'}
+  returns: double precision
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer, default: '1'}
+  - {name: exclude_nodata_value, type: boolean, default: 'true'}
+  - {name: searchvalues, type: 'double precision[]', default: 'NULL::double precision[]'}
+  - {name: roundto, type: double precision, default: '0'}
+  returns: SETOF record
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: searchvalue, type: double precision}
+  - {name: roundto, type: double precision, default: '0'}
+  returns: double precision
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: searchvalues, type: 'double precision[]'}
+  - {name: roundto, type: double precision, default: '0'}
+  returns: SETOF record
+- arguments:
+  - {name: rast, type: raster}
+  - {name: searchvalue, type: double precision}
+  - {name: roundto, type: double precision, default: '0'}
+  returns: double precision
+- arguments:
+  - {name: rast, type: raster}
+  - {name: searchvalues, type: 'double precision[]'}
+  - {name: roundto, type: double precision, default: '0'}
+  returns: SETOF record
+- arguments:
+  - {name: rastertable, type: text}
+  - {name: rastercolumn, type: text}
+  - {name: nband, type: integer}
+  - {name: exclude_nodata_value, type: boolean}
+  - {name: searchvalue, type: double precision}
+  - {name: roundto, type: double precision, default: '0'}
+  returns: double precision
+- arguments:
+  - {name: rastertable, type: text}
+  - {name: rastercolumn, type: text}
+  - {name: nband, type: integer, default: '1'}
+  - {name: exclude_nodata_value, type: boolean, default: 'true'}
+  - {name: searchvalues, type: 'double precision[]', default: 'NULL::double precision[]'}
+  - {name: roundto, type: double precision, default: '0'}
+  returns: SETOF record
+- arguments:
+  - {name: rastertable, type: text}
+  - {name: rastercolumn, type: text}
+  - {name: nband, type: integer}
+  - {name: searchvalue, type: double precision}
+  - {name: roundto, type: double precision, default: '0'}
+  returns: double precision
+- arguments:
+  - {name: rastertable, type: text}
+  - {name: rastercolumn, type: text}
+  - {name: nband, type: integer}
+  - {name: searchvalues, type: 'double precision[]'}
+  - {name: roundto, type: double precision, default: '0'}
+  returns: SETOF record
+- arguments:
+  - {name: rastertable, type: text}
+  - {name: rastercolumn, type: text}
+  - {name: searchvalue, type: double precision}
+  - {name: roundto, type: double precision, default: '0'}
+  returns: double precision
+- arguments:
+  - {name: rastertable, type: text}
+  - {name: rastercolumn, type: text}
+  - {name: searchvalues, type: 'double precision[]'}
+  - {name: roundto, type: double precision, default: '0'}
+  returns: SETOF record
+status: active
+review: {state: harvested, source: postgis}

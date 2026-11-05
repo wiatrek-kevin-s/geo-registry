@@ -1,0 +1,27 @@
+id: gdal-raster-hillshade
+kind: implementation
+name: gdal raster hillshade
+software: gdal
+call: {interface: cli, name: gdal raster hillshade}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  input-format: {type: string_list}
+  open-option: {type: string_list}
+  input: {type: dataset_list, required: true, note: raster dataset}
+  output-format: {type: string}
+  creation-option: {type: string_list}
+  overwrite: {type: boolean, default: false, note: exclusive group overwrite-append}
+  append: {type: boolean, default: false, note: exclusive group overwrite-append}
+  band: {type: integer, default: 1}
+  zfactor: {type: real, note: more than 0.0}
+  xscale: {type: real, note: more than 0.0}
+  yscale: {type: real, note: more than 0.0}
+  azimuth: {type: real, default: 315.0}
+  altitude: {type: real, default: 45.0, note: from 0.0 to 90.0}
+  gradient-alg: {type: string, default: Horn, values: [Horn, ZevenbergenThorne]}
+  variant: {type: string, default: regular, values: [regular, combined, multidirectional, Igor]}
+  no-edges: {type: boolean}
+  output: {type: dataset, required: true, note: input and output; raster dataset}
+docs: https://gdal.org/programs/gdal_raster_hillshade.html
+status: active
+review: {state: harvested, source: gdal}

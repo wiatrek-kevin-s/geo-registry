@@ -1,0 +1,39 @@
+id: postgis-raster-st-tile
+kind: implementation
+name: st_tile
+software: postgis-raster
+call: {interface: sql, name: st_tile}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  nband: {type: 'integer | integer[]'}
+  width: {type: integer}
+  height: {type: integer}
+  padwithnodata: {type: boolean, default: 'false'}
+  nodataval: {type: double precision, default: 'NULL::double precision'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: width, type: integer}
+  - {name: height, type: integer}
+  - {name: padwithnodata, type: boolean, default: 'false'}
+  - {name: nodataval, type: double precision, default: 'NULL::double precision'}
+  returns: SETOF raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: 'integer[]'}
+  - {name: width, type: integer}
+  - {name: height, type: integer}
+  - {name: padwithnodata, type: boolean, default: 'false'}
+  - {name: nodataval, type: double precision, default: 'NULL::double precision'}
+  returns: SETOF raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: width, type: integer}
+  - {name: height, type: integer}
+  - {name: padwithnodata, type: boolean, default: 'false'}
+  - {name: nodataval, type: double precision, default: 'NULL::double precision'}
+  returns: SETOF raster
+status: active
+review: {state: harvested, source: postgis}

@@ -1,0 +1,13 @@
+id: geopandas-geodataframe-overlay
+kind: implementation
+name: GeoDataFrame.overlay
+software: geopandas
+call: {interface: python, name: geopandas.GeoDataFrame.overlay}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  right: {type: GeoDataFrame, required: true}
+  how: {type: 'Literal[''intersection'', ''union'', ''identity'', ''symmetric_difference'', ''difference'']', default: intersection}
+  keep_geom_type: {type: bool | None}
+  make_valid: {type: bool, default: true}
+status: active
+review: {state: harvested, source: python-libs}

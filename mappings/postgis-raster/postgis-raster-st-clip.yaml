@@ -1,0 +1,9 @@
+id: postgis-raster-st-clip
+implements: clip-raster
+crosswalk:
+  raster: rast
+  mask: geom
+  all_touched: touched
+  bbox: { note: Pass the box as a geometry (ST_MakeEnvelope). }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

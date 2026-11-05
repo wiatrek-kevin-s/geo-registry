@@ -1,0 +1,13 @@
+id: postgis-raster-st-rastfromwkb
+kind: implementation
+name: st_rastfromwkb
+software: postgis-raster
+call: {interface: sql, name: st_rastfromwkb}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: bytea}
+  returns: raster
+status: active
+review: {state: harvested, source: postgis}

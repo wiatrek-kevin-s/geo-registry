@@ -1,0 +1,18 @@
+id: postgis-st-offsetcurve
+kind: implementation
+name: st_offsetcurve
+software: postgis
+call: {interface: sql, name: st_offsetcurve}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  line: {type: geometry}
+  distance: {type: double precision}
+  params: {type: text, default: '''''::text'}
+signatures:
+- arguments:
+  - {name: line, type: geometry}
+  - {name: distance, type: double precision}
+  - {name: params, type: text, default: '''''::text'}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

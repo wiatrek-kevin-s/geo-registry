@@ -1,0 +1,14 @@
+id: geopandas-geodataframe-sjoin
+kind: implementation
+name: GeoDataFrame.sjoin
+software: geopandas
+call: {interface: python, name: geopandas.GeoDataFrame.sjoin}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  df: {type: GeoDataFrame, required: true}
+  how: {type: 'Literal[''left'', ''right'', ''inner'']', default: inner}
+  predicate: {type: str, default: intersects}
+  lsuffix: {type: str, default: left}
+  rsuffix: {type: str, default: right}
+status: active
+review: {state: harvested, source: python-libs}

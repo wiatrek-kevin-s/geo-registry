@@ -1,0 +1,20 @@
+id: postgis-st-locatebetween
+kind: implementation
+name: st_locatebetween
+software: postgis
+call: {interface: sql, name: st_locatebetween}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geometry: {type: geometry}
+  frommeasure: {type: double precision}
+  tomeasure: {type: double precision}
+  leftrightoffset: {type: double precision, default: '0.0'}
+signatures:
+- arguments:
+  - {name: geometry, type: geometry}
+  - {name: frommeasure, type: double precision}
+  - {name: tomeasure, type: double precision}
+  - {name: leftrightoffset, type: double precision, default: '0.0'}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

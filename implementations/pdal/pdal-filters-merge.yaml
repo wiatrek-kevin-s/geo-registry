@@ -1,0 +1,13 @@
+id: pdal-filters-merge
+kind: implementation
+name: filters.merge
+software: pdal
+call: {interface: pdal-pipeline, name: filters.merge}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+docs: https://pdal.org/en/master/stages/filters.merge.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

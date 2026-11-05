@@ -1,0 +1,14 @@
+id: postgis-raster-st-metadata
+kind: implementation
+name: st_metadata
+software: postgis-raster
+call: {interface: sql, name: st_metadata}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  returns: record
+status: active
+review: {state: harvested, source: postgis}

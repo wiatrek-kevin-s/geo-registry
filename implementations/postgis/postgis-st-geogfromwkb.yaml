@@ -1,0 +1,13 @@
+id: postgis-st-geogfromwkb
+kind: implementation
+name: st_geogfromwkb
+software: postgis
+call: {interface: sql, name: st_geogfromwkb}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: bytea}
+  returns: geography
+status: active
+review: {state: harvested, source: postgis}

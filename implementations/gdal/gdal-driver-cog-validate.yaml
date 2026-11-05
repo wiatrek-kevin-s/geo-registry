@@ -1,0 +1,13 @@
+id: gdal-driver-cog-validate
+kind: implementation
+name: gdal driver cog validate
+software: gdal
+call: {interface: cli, name: gdal driver cog validate}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  dataset: {type: dataset, required: true, note: raster dataset}
+  full-check: {type: string, default: auto, values: [auto, 'yes', 'no']}
+  output-string: {type: string, note: output}
+docs: https://gdal.org/programs/gdal_driver_cog_validate.html
+status: active
+review: {state: harvested, source: gdal}

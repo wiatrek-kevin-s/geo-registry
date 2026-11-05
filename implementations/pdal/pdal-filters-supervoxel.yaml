@@ -1,0 +1,14 @@
+id: pdal-filters-supervoxel
+kind: implementation
+name: filters.supervoxel
+software: pdal
+call: {interface: pdal-pipeline, name: filters.supervoxel}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  knn: {type: option, default: '32'}
+  resolution: {type: option, default: '1'}
+docs: https://pdal.org/en/master/stages/filters.supervoxel.html
+status: active
+review: {state: harvested, source: pdal}

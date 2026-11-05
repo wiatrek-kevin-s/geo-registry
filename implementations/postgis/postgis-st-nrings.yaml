@@ -1,0 +1,13 @@
+id: postgis-st-nrings
+kind: implementation
+name: st_nrings
+software: postgis
+call: {interface: sql, name: st_nrings}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  returns: integer
+status: active
+review: {state: harvested, source: postgis}

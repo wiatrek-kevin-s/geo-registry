@@ -1,0 +1,19 @@
+id: pdal-filters-radiusassign
+kind: implementation
+name: filters.radiusassign
+software: pdal
+call: {interface: pdal-pipeline, name: filters.radiusassign}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  src_domain: {type: option}
+  reference_domain: {type: option}
+  radius: {type: option}
+  update_expression: {type: option}
+  is3d: {type: option, default: 'false'}
+  max2d_above: {type: option, default: '-1'}
+  max2d_below: {type: option, default: '-1'}
+docs: https://pdal.org/en/master/stages/filters.radiusassign.html
+status: active
+review: {state: harvested, source: pdal}

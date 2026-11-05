@@ -1,0 +1,17 @@
+id: postgis-st-geomfromgml
+kind: implementation
+name: st_geomfromgml
+software: postgis
+call: {interface: sql, name: st_geomfromgml}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: text}
+  returns: geometry
+- arguments:
+  - {type: text}
+  - {type: integer}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

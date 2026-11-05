@@ -1,0 +1,20 @@
+id: postgis-raster-st-createoverview
+kind: implementation
+name: st_createoverview
+software: postgis-raster
+call: {interface: sql, name: st_createoverview}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  tab: {type: regclass}
+  col: {type: name}
+  factor: {type: integer}
+  algo: {type: text, default: '''NearestNeighbour''::text'}
+signatures:
+- arguments:
+  - {name: tab, type: regclass}
+  - {name: col, type: name}
+  - {name: factor, type: integer}
+  - {name: algo, type: text, default: '''NearestNeighbour''::text'}
+  returns: regclass
+status: active
+review: {state: harvested, source: postgis}

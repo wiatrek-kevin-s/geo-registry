@@ -1,0 +1,13 @@
+id: geopandas-geoseries-offset-curve
+kind: implementation
+name: GeoSeries.offset_curve
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.offset_curve}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  distance: {type: any, required: true}
+  quad_segs: {type: integer, default: 8}
+  join_style: {type: string, default: round}
+  mitre_limit: {type: number, default: 5.0}
+status: active
+review: {state: harvested, source: python-libs}

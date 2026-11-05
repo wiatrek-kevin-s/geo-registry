@@ -1,0 +1,14 @@
+id: pdal-filters-locate
+kind: implementation
+name: filters.locate
+software: pdal
+call: {interface: pdal-pipeline, name: filters.locate}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  dimension: {type: option}
+  minmax: {type: option, default: max}
+docs: https://pdal.org/en/master/stages/filters.locate.html
+status: active
+review: {state: harvested, source: pdal}

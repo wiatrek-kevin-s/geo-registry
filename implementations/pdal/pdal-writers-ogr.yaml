@@ -1,0 +1,19 @@
+id: pdal-writers-ogr
+kind: implementation
+name: writers.ogr
+software: pdal
+call: {interface: pdal-pipeline, name: writers.ogr}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  filename: {type: option}
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  multicount: {type: option, default: '1'}
+  measure_dim: {type: option}
+  ogrdriver: {type: option}
+  ogr_options: {type: option}
+  attr_dims: {type: option}
+docs: https://pdal.org/en/master/stages/writers.ogr.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

@@ -1,0 +1,30 @@
+id: gdal-raster-clip
+kind: implementation
+name: gdal raster clip
+software: gdal
+call: {interface: cli, name: gdal raster clip}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  input-format: {type: string_list}
+  open-option: {type: string_list}
+  input: {type: dataset_list, required: true, note: raster dataset}
+  output-format: {type: string}
+  creation-option: {type: string_list}
+  overwrite: {type: boolean, default: false, note: exclusive group overwrite-append}
+  append: {type: boolean, default: false, note: exclusive group overwrite-append}
+  bbox: {type: real_list, note: exclusive group bbox-window-geometry-like}
+  bbox-crs: {type: string}
+  window: {type: integer_list, note: exclusive group bbox-window-geometry-like}
+  geometry: {type: string, note: exclusive group bbox-window-geometry-like}
+  geometry-crs: {type: string}
+  like: {type: dataset, note: raster or vector dataset; exclusive group bbox-window-geometry-like}
+  like-sql: {type: string, note: exclusive group sql-where}
+  like-layer: {type: string}
+  like-where: {type: string, note: exclusive group sql-where}
+  only-bbox: {type: boolean}
+  allow-bbox-outside-source: {type: boolean}
+  add-alpha: {type: boolean}
+  output: {type: dataset, required: true, note: input and output; raster dataset}
+docs: https://gdal.org/programs/gdal_raster_clip.html
+status: active
+review: {state: harvested, source: gdal}

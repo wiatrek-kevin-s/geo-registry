@@ -1,0 +1,16 @@
+id: postgis-raster-st-intersectionfractions
+kind: implementation
+name: st_intersectionfractions
+software: postgis-raster
+call: {interface: sql, name: st_intersectionfractions}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  geom: {type: geometry}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: geom, type: geometry}
+  returns: raster
+status: active
+review: {state: harvested, source: postgis}

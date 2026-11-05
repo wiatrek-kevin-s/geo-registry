@@ -1,0 +1,20 @@
+id: postgis-raster-st-asgdalraster
+kind: implementation
+name: st_asgdalraster
+software: postgis-raster
+call: {interface: sql, name: st_asgdalraster}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  format: {type: text}
+  options: {type: 'text[]', default: 'NULL::text[]'}
+  srid: {type: integer, default: 'NULL::integer'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: format, type: text}
+  - {name: options, type: 'text[]', default: 'NULL::text[]'}
+  - {name: srid, type: integer, default: 'NULL::integer'}
+  returns: bytea
+status: active
+review: {state: harvested, source: postgis}

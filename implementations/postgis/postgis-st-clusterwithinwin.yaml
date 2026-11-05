@@ -1,0 +1,15 @@
+id: postgis-st-clusterwithinwin
+kind: implementation
+name: st_clusterwithinwin
+software: postgis
+call: {interface: sql, name: st_clusterwithinwin}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  distance: {type: double precision}
+signatures:
+- arguments:
+  - {type: geometry}
+  - {name: distance, type: double precision}
+  returns: integer
+status: active
+review: {state: harvested, source: postgis}

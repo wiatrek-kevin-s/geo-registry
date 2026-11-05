@@ -1,0 +1,10 @@
+id: geopandas-geoseries-estimate-utm-crs
+kind: implementation
+name: GeoSeries.estimate_utm_crs
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.estimate_utm_crs}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  datum_name: {type: str, default: WGS 84}
+status: active
+review: {state: harvested, source: python-libs}

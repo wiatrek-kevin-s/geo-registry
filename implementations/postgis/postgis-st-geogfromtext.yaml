@@ -1,0 +1,13 @@
+id: postgis-st-geogfromtext
+kind: implementation
+name: st_geogfromtext
+software: postgis
+call: {interface: sql, name: st_geogfromtext}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: text}
+  returns: geography
+status: active
+review: {state: harvested, source: postgis}

@@ -1,0 +1,9 @@
+id: geopandas-geoseries-is-valid-reason
+kind: implementation
+name: GeoSeries.is_valid_reason
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.is_valid_reason}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-libs}

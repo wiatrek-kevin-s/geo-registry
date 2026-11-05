@@ -1,0 +1,20 @@
+id: pdal-filters-hag-dem
+kind: implementation
+name: filters.hag_dem
+software: pdal
+call: {interface: pdal-pipeline, name: filters.hag_dem}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  raster: {type: option}
+  band: {type: option, default: '1'}
+  zero_ground: {type: option, default: 'true'}
+  min_clamp: {type: option, default: '2.225073859e-308'}
+  max_clamp: {type: option, default: '1.797693135e+308'}
+  nodata_hag: {type: option, default: '0'}
+  class: {type: option, default: '2'}
+docs: https://pdal.org/en/master/stages/filters.hag_dem.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

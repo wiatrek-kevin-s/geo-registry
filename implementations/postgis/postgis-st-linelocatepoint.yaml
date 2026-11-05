@@ -1,0 +1,26 @@
+id: postgis-st-linelocatepoint
+kind: implementation
+name: st_linelocatepoint
+software: postgis
+call: {interface: sql, name: st_linelocatepoint}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  use_spheroid: {type: boolean, default: 'true'}
+  geom1: {type: geometry}
+  geom2: {type: geometry}
+signatures:
+- arguments:
+  - {type: geography}
+  - {type: geography}
+  - {name: use_spheroid, type: boolean, default: 'true'}
+  returns: double precision
+- arguments:
+  - {name: geom1, type: geometry}
+  - {name: geom2, type: geometry}
+  returns: double precision
+- arguments:
+  - {type: text}
+  - {type: text}
+  returns: double precision
+status: active
+review: {state: harvested, source: postgis}

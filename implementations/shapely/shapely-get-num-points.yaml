@@ -1,0 +1,10 @@
+id: shapely-get-num-points
+kind: implementation
+name: shapely.get_num_points
+software: shapely
+call: {interface: python, name: shapely.get_num_points}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geometry: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-libs}

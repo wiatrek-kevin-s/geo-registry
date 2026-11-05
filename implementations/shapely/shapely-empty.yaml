@@ -1,0 +1,12 @@
+id: shapely-empty
+kind: implementation
+name: shapely.empty
+software: shapely
+call: {interface: python, name: shapely.empty}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  shape: {type: any, required: true}
+  geom_type: {type: any}
+  order: {type: string, default: C}
+status: active
+review: {state: harvested, source: python-libs}

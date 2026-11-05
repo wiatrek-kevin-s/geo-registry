@@ -1,0 +1,20 @@
+id: postgis-st-point
+kind: implementation
+name: st_point
+software: postgis
+call: {interface: sql, name: st_point}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  srid: {type: integer}
+signatures:
+- arguments:
+  - {type: double precision}
+  - {type: double precision}
+  returns: geometry
+- arguments:
+  - {type: double precision}
+  - {type: double precision}
+  - {name: srid, type: integer}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

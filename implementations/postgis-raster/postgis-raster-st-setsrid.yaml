@@ -1,0 +1,16 @@
+id: postgis-raster-st-setsrid
+kind: implementation
+name: st_setsrid
+software: postgis-raster
+call: {interface: sql, name: st_setsrid}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  srid: {type: integer}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: srid, type: integer}
+  returns: raster
+status: active
+review: {state: harvested, source: postgis}

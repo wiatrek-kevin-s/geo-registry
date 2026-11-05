@@ -1,0 +1,17 @@
+id: postgis-st-clusterdbscan
+kind: implementation
+name: st_clusterdbscan
+software: postgis
+call: {interface: sql, name: st_clusterdbscan}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  eps: {type: double precision}
+  minpoints: {type: integer}
+signatures:
+- arguments:
+  - {type: geometry}
+  - {name: eps, type: double precision}
+  - {name: minpoints, type: integer}
+  returns: integer
+status: active
+review: {state: harvested, source: postgis}

@@ -1,0 +1,22 @@
+id: pdal-filters-colorinterp
+kind: implementation
+name: filters.colorinterp
+software: pdal
+call: {interface: pdal-pipeline, name: filters.colorinterp}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  dimension: {type: option, default: Z}
+  minimum: {type: option, default: NaN}
+  maximum: {type: option, default: NaN}
+  clamp: {type: option, default: 'false'}
+  ramp: {type: option, default: pestel_shades}
+  invert: {type: option, default: 'false'}
+  mad: {type: option, default: 'false'}
+  mad_multiplier: {type: option, default: '1.4862'}
+  k: {type: option, default: '0'}
+docs: https://pdal.org/en/master/stages/filters.colorinterp.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

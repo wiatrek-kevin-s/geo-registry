@@ -1,0 +1,12 @@
+id: shapely-contains-xy
+kind: implementation
+name: shapely.contains_xy
+software: shapely
+call: {interface: python, name: shapely.contains_xy}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geom: {type: any, required: true}
+  x: {type: any, required: true}
+  y: {type: any}
+status: active
+review: {state: harvested, source: python-libs}

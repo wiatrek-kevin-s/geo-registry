@@ -1,0 +1,12 @@
+id: shapely-to-ragged-array
+kind: implementation
+name: shapely.to_ragged_array
+software: shapely
+call: {interface: python, name: shapely.to_ragged_array}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geometries: {type: any, required: true}
+  include_z: {type: any}
+  include_m: {type: any}
+status: active
+review: {state: harvested, source: python-libs}

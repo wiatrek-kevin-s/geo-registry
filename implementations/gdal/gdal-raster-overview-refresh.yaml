@@ -1,0 +1,19 @@
+id: gdal-raster-overview-refresh
+kind: implementation
+name: gdal raster overview refresh
+software: gdal
+call: {interface: cli, name: gdal raster overview refresh}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  open-option: {type: string_list}
+  input: {type: dataset, required: true, note: raster dataset}
+  external: {type: boolean}
+  resampling: {type: string, values: [nearest, average, cubic, cubicspline, lanczos, bilinear, gauss, average_magphase, rms,
+      mode]}
+  levels: {type: integer_list, note: at least 2}
+  bbox: {type: real_list, note: exclusive group refresh}
+  like: {type: string_list, note: exclusive group refresh}
+  use-source-timestamp: {type: boolean, note: exclusive group refresh}
+docs: https://gdal.org/programs/gdal_raster_overview_refresh.html
+status: active
+review: {state: harvested, source: gdal}

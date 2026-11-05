@@ -1,0 +1,12 @@
+id: gdal-vsi-delete
+kind: implementation
+name: gdal vsi delete
+software: gdal
+call: {interface: cli, name: gdal vsi delete}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  filename: {type: string, required: true}
+  recursive: {type: boolean}
+docs: https://gdal.org/programs/gdal_vsi_delete.html
+status: active
+review: {state: harvested, source: gdal}

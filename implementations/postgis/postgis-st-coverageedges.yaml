@@ -1,0 +1,21 @@
+id: postgis-st-coverageedges
+kind: implementation
+name: st_coverageedges
+software: postgis
+call: {interface: sql, name: st_coverageedges}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geom: {type: geometry}
+  edgetype: {type: integer, default: '0'}
+  geoms: {type: 'geometry[]'}
+signatures:
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: edgetype, type: integer, default: '0'}
+  returns: geometry
+- arguments:
+  - {name: geoms, type: 'geometry[]'}
+  - {name: edgetype, type: integer, default: '0'}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

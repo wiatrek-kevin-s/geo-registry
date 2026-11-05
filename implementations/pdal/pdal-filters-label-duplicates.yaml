@@ -1,0 +1,13 @@
+id: pdal-filters-label-duplicates
+kind: implementation
+name: filters.label_duplicates
+software: pdal
+call: {interface: pdal-pipeline, name: filters.label_duplicates}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  dimensions: {type: option}
+docs: https://pdal.org/en/master/stages/filters.label_duplicates.html
+status: active
+review: {state: harvested, source: pdal}

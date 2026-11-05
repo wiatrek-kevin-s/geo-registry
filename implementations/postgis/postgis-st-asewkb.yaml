@@ -1,0 +1,17 @@
+id: postgis-st-asewkb
+kind: implementation
+name: st_asewkb
+software: postgis
+call: {interface: sql, name: st_asewkb}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  returns: bytea
+- arguments:
+  - {type: geometry}
+  - {type: text}
+  returns: bytea
+status: active
+review: {state: harvested, source: postgis}

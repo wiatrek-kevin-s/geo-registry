@@ -1,0 +1,61 @@
+id: postgis-raster-st-approxquantile
+kind: implementation
+name: st_approxquantile
+software: postgis-raster
+call: {interface: sql, name: st_approxquantile}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  exclude_nodata_value: {type: boolean, default: 'true'}
+  quantile: {type: double precision, default: 'NULL::double precision'}
+  nband: {type: integer, default: '1'}
+  sample_percent: {type: double precision, default: '0.1'}
+  quantiles: {type: 'double precision[]', default: 'NULL::double precision[]'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: exclude_nodata_value, type: boolean}
+  - {name: quantile, type: double precision, default: 'NULL::double precision'}
+  returns: double precision
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: exclude_nodata_value, type: boolean}
+  - {name: sample_percent, type: double precision}
+  - {name: quantile, type: double precision}
+  returns: double precision
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer, default: '1'}
+  - {name: exclude_nodata_value, type: boolean, default: 'true'}
+  - {name: sample_percent, type: double precision, default: '0.1'}
+  - {name: quantiles, type: 'double precision[]', default: 'NULL::double precision[]'}
+  returns: SETOF record
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: sample_percent, type: double precision}
+  - {name: quantile, type: double precision}
+  returns: double precision
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: sample_percent, type: double precision}
+  - {name: quantiles, type: 'double precision[]', default: 'NULL::double precision[]'}
+  returns: SETOF record
+- arguments:
+  - {name: rast, type: raster}
+  - {name: quantiles, type: 'double precision[]'}
+  returns: SETOF record
+- arguments:
+  - {name: rast, type: raster}
+  - {name: sample_percent, type: double precision}
+  - {name: quantile, type: double precision}
+  returns: double precision
+- arguments:
+  - {name: rast, type: raster}
+  - {name: sample_percent, type: double precision}
+  - {name: quantiles, type: 'double precision[]', default: 'NULL::double precision[]'}
+  returns: SETOF record
+status: active
+review: {state: harvested, source: postgis}

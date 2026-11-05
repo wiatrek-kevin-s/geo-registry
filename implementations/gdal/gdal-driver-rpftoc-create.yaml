@@ -1,0 +1,17 @@
+id: gdal-driver-rpftoc-create
+kind: implementation
+name: gdal driver rpftoc create
+software: gdal
+call: {interface: cli, name: gdal driver rpftoc create}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  input: {type: string, required: true}
+  output: {type: string}
+  scale: {type: integer, note: more than 0}
+  producer-id: {type: string}
+  producer-name: {type: string}
+  country-code: {type: string}
+  classification: {type: string, default: U, values: [U, R, C, S, T]}
+docs: https://gdal.org/drivers/raster/rpftoc.html
+status: active
+review: {state: harvested, source: gdal}

@@ -1,0 +1,20 @@
+id: pdal-filters-crop
+kind: implementation
+name: filters.crop
+software: pdal
+call: {interface: pdal-pipeline, name: filters.crop}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  outside: {type: option}
+  a_srs: {type: option}
+  bounds: {type: option}
+  point: {type: option}
+  distance: {type: option}
+  polygon: {type: option}
+  ogr: {type: option}
+docs: https://pdal.org/en/master/stages/filters.crop.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

@@ -1,0 +1,29 @@
+id: gdal-vector-create
+kind: implementation
+name: gdal vector create
+software: gdal
+call: {interface: cli, name: gdal vector create}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  input-format: {type: string_list}
+  open-option: {type: string_list}
+  input: {type: dataset_list, note: vector dataset; exclusive group like-schema-field}
+  input-layer: {type: string_list}
+  output-format: {type: string}
+  output-open-option: {type: string_list}
+  creation-option: {type: string_list}
+  layer-creation-option: {type: string_list}
+  overwrite: {type: boolean, default: false}
+  update: {type: boolean, default: false}
+  overwrite-layer: {type: boolean, default: false}
+  output-layer: {type: string}
+  geometry-type: {type: string}
+  geometry-field: {type: string, default: geom}
+  crs: {type: string}
+  fid: {type: string}
+  schema: {type: string, note: exclusive group like-schema-field}
+  field: {type: string_list, note: exclusive group like-schema-field}
+  output: {type: dataset, required: true, note: input and output; vector dataset}
+docs: https://gdal.org/programs/gdal_vector_create.html
+status: active
+review: {state: harvested, source: gdal}

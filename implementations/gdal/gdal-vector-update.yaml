@@ -1,0 +1,19 @@
+id: gdal-vector-update
+kind: implementation
+name: gdal vector update
+software: gdal
+call: {interface: cli, name: gdal vector update}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  input-format: {type: string_list}
+  open-option: {type: string_list}
+  input: {type: dataset_list, required: true, note: vector dataset}
+  input-layer: {type: string_list}
+  output-open-option: {type: string_list}
+  output-layer: {type: string}
+  mode: {type: string, default: merge, values: [merge, update-only, append-only]}
+  key: {type: string_list}
+  output: {type: dataset, required: true, note: input and output; vector dataset}
+docs: https://gdal.org/programs/gdal_vector_update.html
+status: active
+review: {state: harvested, source: gdal}

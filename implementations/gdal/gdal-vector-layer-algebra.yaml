@@ -1,0 +1,35 @@
+id: gdal-vector-layer-algebra
+kind: implementation
+name: gdal vector layer-algebra
+software: gdal
+call: {interface: cli, name: gdal vector layer-algebra}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  operation: {type: string, required: true, values: [union, intersection, sym-difference, identity, update, clip, erase]}
+  output-format: {type: string}
+  open-option: {type: string_list}
+  input-format: {type: string_list}
+  input: {type: dataset, required: true, note: vector dataset}
+  method: {type: dataset, required: true, note: vector dataset}
+  creation-option: {type: string_list}
+  layer-creation-option: {type: string_list}
+  overwrite: {type: boolean, default: false}
+  update: {type: boolean, default: false}
+  overwrite-layer: {type: boolean, default: false}
+  append: {type: boolean, default: false}
+  input-layer: {type: string}
+  method-layer: {type: string}
+  output-layer: {type: string}
+  geometry-type: {type: string}
+  input-prefix: {type: string}
+  input-field: {type: string_list, note: exclusive group input-field}
+  no-input-field: {type: boolean, note: exclusive group input-field}
+  all-input-field: {type: boolean, note: exclusive group input-field}
+  method-prefix: {type: string}
+  method-field: {type: string_list, note: exclusive group method-field}
+  no-method-field: {type: boolean, note: exclusive group method-field}
+  all-method-field: {type: boolean, note: exclusive group method-field}
+  output: {type: dataset, required: true, note: input and output; vector dataset}
+docs: https://gdal.org/programs/gdal_vector_layer_algebra.html
+status: active
+review: {state: harvested, source: gdal}

@@ -1,0 +1,10 @@
+id: geopandas-geoseries-length
+kind: implementation
+name: GeoSeries.length
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.length}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters: {}
+notes: Property.
+status: active
+review: {state: harvested, source: python-libs}

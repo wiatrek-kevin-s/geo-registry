@@ -1,0 +1,22 @@
+id: gdal-raster-blend
+kind: implementation
+name: gdal raster blend
+software: gdal
+call: {interface: cli, name: gdal raster blend}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  input-format: {type: string_list}
+  open-option: {type: string_list}
+  input: {type: dataset_list, required: true, note: raster dataset}
+  overlay: {type: dataset, required: true, note: raster dataset}
+  output-format: {type: string}
+  creation-option: {type: string_list}
+  overwrite: {type: boolean, default: false, note: exclusive group overwrite-append}
+  append: {type: boolean, default: false, note: exclusive group overwrite-append}
+  operator: {type: string, default: src-over, values: [src-over, hsv-value, multiply, screen, overlay, hard-light, darken,
+      lighten, color-dodge, color-burn]}
+  opacity: {type: integer, default: 100, note: from 0 to 100}
+  output: {type: dataset, required: true, note: input and output; raster dataset}
+docs: https://gdal.org/programs/gdal_raster_blend.html
+status: active
+review: {state: harvested, source: gdal}

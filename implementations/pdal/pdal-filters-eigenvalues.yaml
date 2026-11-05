@@ -1,0 +1,17 @@
+id: pdal-filters-eigenvalues
+kind: implementation
+name: filters.eigenvalues
+software: pdal
+call: {interface: pdal-pipeline, name: filters.eigenvalues}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  knn: {type: option, default: '8'}
+  normalize: {type: option, default: 'false'}
+  stride: {type: option, default: '1'}
+  radius: {type: option}
+  min_k: {type: option, default: '3'}
+docs: https://pdal.org/en/master/stages/filters.eigenvalues.html
+status: active
+review: {state: harvested, source: pdal}

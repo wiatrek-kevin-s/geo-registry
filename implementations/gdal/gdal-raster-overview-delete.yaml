@@ -1,0 +1,13 @@
+id: gdal-raster-overview-delete
+kind: implementation
+name: gdal raster overview delete
+software: gdal
+call: {interface: cli, name: gdal raster overview delete}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  open-option: {type: string_list}
+  input: {type: dataset, required: true, note: raster dataset}
+  external: {type: boolean}
+docs: https://gdal.org/programs/gdal_raster_overview_delete.html
+status: active
+review: {state: harvested, source: gdal}

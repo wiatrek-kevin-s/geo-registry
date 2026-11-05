@@ -1,0 +1,31 @@
+id: postgis-raster-st-union
+kind: implementation
+name: st_union
+software: postgis-raster
+call: {interface: sql, name: st_union}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: raster}
+  returns: raster (aggregate)
+- arguments:
+  - {type: raster}
+  - {type: integer}
+  returns: raster (aggregate)
+- arguments:
+  - {type: raster}
+  - {type: integer}
+  - {type: text}
+  returns: raster (aggregate)
+- arguments:
+  - {type: raster}
+  - {type: text}
+  returns: raster (aggregate)
+- arguments:
+  - {type: raster}
+  - {type: 'unionarg[]'}
+  returns: raster (aggregate)
+notes: Has an aggregate form.
+status: active
+review: {state: harvested, source: postgis}

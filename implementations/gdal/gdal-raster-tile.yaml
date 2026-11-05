@@ -1,0 +1,50 @@
+id: gdal-raster-tile
+kind: implementation
+name: gdal raster tile
+software: gdal
+call: {interface: cli, name: gdal raster tile}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  input-format: {type: string_list}
+  open-option: {type: string_list}
+  input: {type: dataset_list, required: true, note: raster dataset}
+  output-format: {type: string, default: PNG}
+  creation-option: {type: string_list}
+  output: {type: string, required: true}
+  tiling-scheme: {type: string, default: WebMercatorQuad, values: [raster, WebMercatorQuad, WorldCRS84Quad, WorldMercatorWGS84Quad,
+      GoogleCRS84Quad, PseudoTMS_GlobalMercator, GlobalGeodeticOriginLat270, LINZAntarticaMapTilegrid, APSTILE, CBMTILE, NZTM2000]}
+  min-zoom: {type: integer, note: at least 0}
+  max-zoom: {type: integer, note: at least 0}
+  min-x: {type: integer, note: at least 0}
+  max-x: {type: integer, note: at least 0}
+  min-y: {type: integer, note: at least 0}
+  max-y: {type: integer, note: at least 0}
+  no-intersection-ok: {type: boolean}
+  resampling: {type: string, default: cubic, values: [nearest, bilinear, cubic, cubicspline, lanczos, average, rms, mode,
+      min, max, med, q1, q3, sum]}
+  overview-resampling: {type: string, values: [nearest, bilinear, cubic, cubicspline, lanczos, average, rms, mode, min, max,
+      med, q1, q3, sum]}
+  convention: {type: string, default: xyz, values: [xyz, tms]}
+  tile-size: {type: integer, note: from 64 to 32768}
+  add-alpha: {type: boolean, note: exclusive group alpha}
+  no-alpha: {type: boolean, note: exclusive group alpha}
+  output-nodata: {type: real}
+  skip-blank: {type: boolean}
+  metadata: {type: string_list}
+  copy-src-metadata: {type: boolean}
+  aux-xml: {type: boolean}
+  kml: {type: boolean}
+  resume: {type: boolean}
+  num-threads: {type: string, default: ALL_CPUS}
+  parallel-method: {type: string, values: [thread, spawn, fork]}
+  excluded-values: {type: string}
+  excluded-values-pct-threshold: {type: real, default: 50.0, note: from 0.0 to 100.0}
+  nodata-values-pct-threshold: {type: real, default: 100.0, note: from 0.0 to 100.0}
+  webviewer: {type: string_list, default: all, values: [none, all, leaflet, openlayers, mapml, stac]}
+  url: {type: string}
+  title: {type: string}
+  copyright: {type: string}
+  mapml-template: {type: string}
+docs: https://gdal.org/programs/gdal_raster_tile.html
+status: active
+review: {state: harvested, source: gdal}

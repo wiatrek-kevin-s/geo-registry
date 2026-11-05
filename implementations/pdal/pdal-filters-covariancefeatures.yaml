@@ -1,0 +1,20 @@
+id: pdal-filters-covariancefeatures
+kind: implementation
+name: filters.covariancefeatures
+software: pdal
+call: {interface: pdal-pipeline, name: filters.covariancefeatures}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  knn: {type: option, default: '10'}
+  threads: {type: option, default: '1'}
+  feature_set: {type: option, default: dimensionality}
+  stride: {type: option, default: '1'}
+  radius: {type: option}
+  min_k: {type: option, default: '3'}
+  mode: {type: option, default: sqrtnormalized}
+  optimized: {type: option, default: 'false'}
+docs: https://pdal.org/en/master/stages/filters.covariancefeatures.html
+status: active
+review: {state: harvested, source: pdal}

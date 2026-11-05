@@ -1,0 +1,14 @@
+id: pdal-filters-tail
+kind: implementation
+name: filters.tail
+software: pdal
+call: {interface: pdal-pipeline, name: filters.tail}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  count: {type: option, default: '10'}
+  invert: {type: option}
+docs: https://pdal.org/en/master/stages/filters.tail.html
+status: active
+review: {state: harvested, source: pdal}

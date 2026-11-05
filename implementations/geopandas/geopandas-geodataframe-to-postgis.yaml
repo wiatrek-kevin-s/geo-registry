@@ -1,0 +1,17 @@
+id: geopandas-geodataframe-to-postgis
+kind: implementation
+name: GeoDataFrame.to_postgis
+software: geopandas
+call: {interface: python, name: geopandas.GeoDataFrame.to_postgis}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  name: {type: str, required: true}
+  con: {type: any, required: true}
+  schema: {type: str | None}
+  if_exists: {type: 'Literal[''fail'', ''replace'', ''append'']', default: fail}
+  index: {type: bool, default: false}
+  index_label: {type: 'Iterable[str] | str | None'}
+  chunksize: {type: int | None}
+  dtype: {type: any}
+status: active
+review: {state: harvested, source: python-libs}

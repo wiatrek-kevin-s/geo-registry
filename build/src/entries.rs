@@ -96,6 +96,157 @@ pub fn load_dir(dir: &Path) -> Result<Vec<EntryFile>> {
     Ok(out)
 }
 
+fn yaml_files(dir: &Path) -> Result<Vec<PathBuf>> {
+    let mut paths: Vec<PathBuf> = fs::read_dir(dir)
+        .with_context(|| format!("reading {}", dir.display()))?
+        .filter_map(|e| e.ok().map(|e| e.path()))
+        .filter(|p| {
+            p.is_file()
+                && matches!(
+                    p.extension().and_then(|e| e.to_str()),
+                    Some("yaml") | Some("yml")
+                )
+        })
+        .collect();
+    paths.sort();
+    Ok(paths)
+}
+
+fn sub_dirs(dir: &Path) -> Result<Vec<PathBuf>> {
+    let mut dirs: Vec<PathBuf> = fs::read_dir(dir)
+        .with_context(|| format!("reading {}", dir.display()))?
+        .filter_map(|e| e.ok().map(|e| e.path()))
+        .filter(|p| p.is_dir())
+        .collect();
+    dirs.sort();
+    Ok(dirs)
+}
+
+fn stem_of(path: &Path) -> String {
+    path.file_stem()
+        .and_then(|s| s.to_str())
+        .unwrap_or_default()
+        .to_string()
+}
+
+/// A problem found while loading, before schema validation (a mapping with
+/// no harvested implementation, a mapping that sets harvested fields, ...).
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct LoadProblem {
+    pub file: String,
+    pub message: String,
+}
+
+/// Fields a person may set in `mappings/<software>/<id>.yaml`. Everything
+/// else (name, call, parameters, signatures, harvest, ...) comes from the
+/// harvester and is replaced on every re-harvest.
+pub const MAPPING_FIELDS: &[&str] = &[
+    "id",
+    "implements",
+    "crosswalk",
+    "presets",
+    "differences",
+    "effects",
+    "requires",
+    "notes",
+    "review",
+];
+
+/// Load harvested implementations from `implementations/<software>/*.yaml`
+/// and merge the person-written parts from `mappings/<software>/<id>.yaml`.
+/// A missing directory means none. Each implementation must sit in the
+/// folder named after its `software`; every mapping must match an
+/// implementation (a stale mapping after a re-harvest is reported, not dropped).
+pub fn load_implementations(
+    dir: &Path,
+    mappings: &Path,
+) -> Result<(Vec<EntryFile>, Vec<LoadProblem>)> {
+    let mut files = Vec::new();
+    let mut problems = Vec::new();
+    if dir.is_dir() {
+        for folder in sub_dirs(dir)? {
+            let software = stem_of(&folder);
+            for path in yaml_files(&folder)? {
+                let value = fs::read_to_string(&path)
+                    .map_err(|e| e.to_string())
+                    .and_then(|t| parse_yaml(&t));
+                if let Ok(v) = &value {
+                    let declared = v.get("software").and_then(Value::as_str);
+                    if declared != Some(software.as_str()) {
+                        problems.push(LoadProblem {
+                            file: path.display().to_string(),
+                            message: format!(
+                                "software {:?} does not match its folder '{software}'",
+                                declared.unwrap_or("")
+                            ),
+                        });
+                    }
+                }
+                files.push(EntryFile {
+                    stem: stem_of(&path),
+                    path,
+                    dir_kind: "implementation",
+                    value,
+                });
+            }
+        }
+    }
+    if mappings.is_dir() {
+        for folder in sub_dirs(mappings)? {
+            let software = stem_of(&folder);
+            for path in yaml_files(&folder)? {
+                let display = path.display().to_string();
+                let mut problem = |message: String| {
+                    problems.push(LoadProblem {
+                        file: display.clone(),
+                        message,
+                    })
+                };
+                let mapping = match fs::read_to_string(&path)
+                    .map_err(|e| e.to_string())
+                    .and_then(|t| parse_yaml(&t))
+                {
+                    Ok(m) => m,
+                    Err(e) => {
+                        problem(format!("YAML parse error: {e}"));
+                        continue;
+                    }
+                };
+                let stem = stem_of(&path);
+                if mapping.get("id").and_then(Value::as_str) != Some(stem.as_str()) {
+                    problem(format!("id must be '{stem}', the file name"));
+                    continue;
+                }
+                let target = files.iter_mut().find(|f| {
+                    f.stem == stem && f.path.parent().map(stem_of).as_deref() == Some(&software)
+                });
+                let Some(target) = target else {
+                    problem(format!(
+                        "no harvested implementation '{stem}' in implementations/{software}/ \
+                         (renamed or removed by the engine? update or delete this mapping)"
+                    ));
+                    continue;
+                };
+                let Ok(Value::Object(entry)) = &mut target.value else {
+                    continue;
+                };
+                for (k, v) in mapping.as_object().into_iter().flatten() {
+                    if !MAPPING_FIELDS.contains(&k.as_str()) {
+                        problem(format!(
+                            "a mapping may not set '{k}': it comes from the harvester \
+                             (a mapping may set {})",
+                            MAPPING_FIELDS[1..].join(", ")
+                        ));
+                    } else if k != "id" {
+                        entry.insert(k.clone(), v.clone());
+                    }
+                }
+            }
+        }
+    }
+    Ok((files, problems))
+}
+
 /// Return only the successfully parsed entries (used after validation passed).
 pub fn values(files: &[EntryFile]) -> Vec<Value> {
     files

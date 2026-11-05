@@ -1,0 +1,14 @@
+id: postgis-st-knots
+kind: implementation
+name: st_knots
+software: postgis
+call: {interface: sql, name: st_knots}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  nurbscurve: {type: geometry}
+signatures:
+- arguments:
+  - {name: nurbscurve, type: geometry}
+  returns: double precision[]
+status: active
+review: {state: harvested, source: postgis}

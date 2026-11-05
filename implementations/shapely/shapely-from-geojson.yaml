@@ -1,0 +1,11 @@
+id: shapely-from-geojson
+kind: implementation
+name: shapely.from_geojson
+software: shapely
+call: {interface: python, name: shapely.from_geojson}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geometry: {type: any, required: true}
+  on_invalid: {type: string, default: raise}
+status: active
+review: {state: harvested, source: python-libs}

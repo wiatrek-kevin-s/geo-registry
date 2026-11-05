@@ -1,0 +1,22 @@
+id: postgis-st-tileenvelope
+kind: implementation
+name: st_tileenvelope
+software: postgis
+call: {interface: sql, name: st_tileenvelope}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  zoom: {type: integer}
+  x: {type: integer}
+  y: {type: integer}
+  bounds: {type: geometry, default: '''0102000020110F00000200000093107C45F81B73C193107C45F81B73C193107C45F81B734193107C45F81B7341''::geometry'}
+  margin: {type: double precision, default: '0.0'}
+signatures:
+- arguments:
+  - {name: zoom, type: integer}
+  - {name: x, type: integer}
+  - {name: y, type: integer}
+  - {name: bounds, type: geometry, default: '''0102000020110F00000200000093107C45F81B73C193107C45F81B73C193107C45F81B734193107C45F81B7341''::geometry'}
+  - {name: margin, type: double precision, default: '0.0'}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

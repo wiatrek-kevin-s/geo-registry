@@ -1,0 +1,37 @@
+id: postgis-raster-st-astiff
+kind: implementation
+name: st_astiff
+software: postgis-raster
+call: {interface: sql, name: st_astiff}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  compression: {type: text}
+  srid: {type: integer, default: 'NULL::integer'}
+  nbands: {type: 'integer[]'}
+  options: {type: 'text[]', default: 'NULL::text[]'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: compression, type: text}
+  - {name: srid, type: integer, default: 'NULL::integer'}
+  returns: bytea
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nbands, type: 'integer[]'}
+  - {name: compression, type: text}
+  - {name: srid, type: integer, default: 'NULL::integer'}
+  returns: bytea
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nbands, type: 'integer[]'}
+  - {name: options, type: 'text[]', default: 'NULL::text[]'}
+  - {name: srid, type: integer, default: 'NULL::integer'}
+  returns: bytea
+- arguments:
+  - {name: rast, type: raster}
+  - {name: options, type: 'text[]', default: 'NULL::text[]'}
+  - {name: srid, type: integer, default: 'NULL::integer'}
+  returns: bytea
+status: active
+review: {state: harvested, source: postgis}

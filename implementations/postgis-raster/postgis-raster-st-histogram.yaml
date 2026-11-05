@@ -1,0 +1,44 @@
+id: postgis-raster-st-histogram
+kind: implementation
+name: st_histogram
+software: postgis-raster
+call: {interface: sql, name: st_histogram}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  nband: {type: integer, default: '1'}
+  bins: {type: integer, default: '0'}
+  right: {type: boolean, default: 'false'}
+  width: {type: 'double precision[]', default: 'NULL::double precision[]'}
+  exclude_nodata_value: {type: boolean, default: 'true'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: bins, type: integer}
+  - {name: right, type: boolean}
+  returns: SETOF record
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: bins, type: integer}
+  - {name: width, type: 'double precision[]', default: 'NULL::double precision[]'}
+  - {name: right, type: boolean, default: 'false'}
+  returns: SETOF record
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: exclude_nodata_value, type: boolean}
+  - {name: bins, type: integer}
+  - {name: right, type: boolean}
+  returns: SETOF record
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer, default: '1'}
+  - {name: exclude_nodata_value, type: boolean, default: 'true'}
+  - {name: bins, type: integer, default: '0'}
+  - {name: width, type: 'double precision[]', default: 'NULL::double precision[]'}
+  - {name: right, type: boolean, default: 'false'}
+  returns: SETOF record
+status: active
+review: {state: harvested, source: postgis}

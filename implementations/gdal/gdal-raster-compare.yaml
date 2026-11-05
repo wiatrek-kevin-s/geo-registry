@@ -1,0 +1,25 @@
+id: gdal-raster-compare
+kind: implementation
+name: gdal raster compare
+software: gdal
+call: {interface: cli, name: gdal raster compare}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  reference: {type: dataset, required: true, note: raster dataset}
+  input-format: {type: string_list}
+  open-option: {type: string_list}
+  input: {type: dataset_list, required: true, note: raster dataset}
+  skip-all-optional: {type: boolean}
+  skip-binary: {type: boolean}
+  skip-crs: {type: boolean}
+  skip-geotransform: {type: boolean}
+  skip-overview: {type: boolean}
+  skip-metadata: {type: boolean}
+  skip-rpc: {type: boolean}
+  skip-geolocation: {type: boolean}
+  skip-subdataset: {type: boolean}
+  output-string: {type: string, note: output}
+  return-code: {type: integer, note: output}
+docs: https://gdal.org/programs/gdal_raster_compare.html
+status: active
+review: {state: harvested, source: gdal}

@@ -1,0 +1,18 @@
+id: postgis-raster-st-setupperleft
+kind: implementation
+name: st_setupperleft
+software: postgis-raster
+call: {interface: sql, name: st_setupperleft}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  upperleftx: {type: double precision}
+  upperlefty: {type: double precision}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: upperleftx, type: double precision}
+  - {name: upperlefty, type: double precision}
+  returns: raster
+status: active
+review: {state: harvested, source: postgis}

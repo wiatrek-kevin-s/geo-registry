@@ -1,0 +1,12 @@
+id: gdal-dataset-delete
+kind: implementation
+name: gdal dataset delete
+software: gdal
+call: {interface: cli, name: gdal dataset delete}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  filename: {type: string_list, required: true}
+  format: {type: string}
+docs: https://gdal.org/programs/gdal_dataset_delete.html
+status: active
+review: {state: harvested, source: gdal}

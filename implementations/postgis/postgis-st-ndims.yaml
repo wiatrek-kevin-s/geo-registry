@@ -1,0 +1,13 @@
+id: postgis-st-ndims
+kind: implementation
+name: st_ndims
+software: postgis
+call: {interface: sql, name: st_ndims}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  returns: smallint
+status: active
+review: {state: harvested, source: postgis}

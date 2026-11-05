@@ -1,0 +1,9 @@
+id: geopandas-geoseries-force-2d
+kind: implementation
+name: GeoSeries.force_2d
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.force_2d}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-libs}

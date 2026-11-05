@@ -1,0 +1,25 @@
+id: postgis-st-linesubstring
+kind: implementation
+name: st_linesubstring
+software: postgis
+call: {interface: sql, name: st_linesubstring}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geography}
+  - {type: double precision}
+  - {type: double precision}
+  returns: geography
+- arguments:
+  - {type: geometry}
+  - {type: double precision}
+  - {type: double precision}
+  returns: geometry
+- arguments:
+  - {type: text}
+  - {type: double precision}
+  - {type: double precision}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

@@ -1,0 +1,22 @@
+id: pdal-writers-gltf
+kind: implementation
+name: writers.gltf
+software: pdal
+call: {interface: pdal-pipeline, name: writers.gltf}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  filename: {type: option}
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  metallic: {type: option}
+  roughness: {type: option}
+  red: {type: option}
+  green: {type: option}
+  blue: {type: option}
+  alpha: {type: option, default: '1'}
+  double_sided: {type: option}
+  colors: {type: option}
+  normals: {type: option}
+docs: https://pdal.org/en/master/stages/writers.gltf.html
+status: active
+review: {state: harvested, source: pdal}

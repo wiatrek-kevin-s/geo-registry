@@ -1,0 +1,26 @@
+id: gdal-vector-partition
+kind: implementation
+name: gdal vector partition
+software: gdal
+call: {interface: cli, name: gdal vector partition}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  input-format: {type: string_list}
+  open-option: {type: string_list}
+  input: {type: dataset_list, required: true, note: vector dataset}
+  output: {type: string, required: true}
+  overwrite: {type: boolean, default: false, note: exclusive group overwrite-append}
+  append: {type: boolean, default: false, note: exclusive group overwrite-append}
+  output-format: {type: string}
+  creation-option: {type: string_list}
+  layer-creation-option: {type: string_list}
+  field: {type: string_list}
+  scheme: {type: string, default: hive, values: [hive, flat]}
+  pattern: {type: string}
+  feature-limit: {type: integer, note: more than 0}
+  max-file-size: {type: string}
+  omit-partitioned-field: {type: boolean}
+  skip-errors: {type: boolean}
+docs: https://gdal.org/programs/gdal_vector_partition.html
+status: active
+review: {state: harvested, source: gdal}

@@ -1,0 +1,14 @@
+id: postgis-st-closestpointofapproach
+kind: implementation
+name: st_closestpointofapproach
+software: postgis
+call: {interface: sql, name: st_closestpointofapproach}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  - {type: geometry}
+  returns: double precision
+status: active
+review: {state: harvested, source: postgis}

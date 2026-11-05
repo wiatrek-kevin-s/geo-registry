@@ -1,0 +1,15 @@
+id: gdal-vsi-sync
+kind: implementation
+name: gdal vsi sync
+software: gdal
+call: {interface: cli, name: gdal vsi sync}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  source: {type: string, required: true}
+  destination: {type: string, required: true}
+  recursive: {type: boolean}
+  strategy: {type: string, default: timestamp, values: [timestamp, ETag, overwrite]}
+  num-threads: {type: string}
+docs: https://gdal.org/programs/gdal_vsi_sync.html
+status: active
+review: {state: harvested, source: gdal}

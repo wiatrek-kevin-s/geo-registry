@@ -1,0 +1,12 @@
+id: gdal-vsi-move
+kind: implementation
+name: gdal vsi move
+software: gdal
+call: {interface: cli, name: gdal vsi move}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  source: {type: string, required: true}
+  destination: {type: string, required: true}
+docs: https://gdal.org/programs/gdal_vsi_move.html
+status: active
+review: {state: harvested, source: gdal}

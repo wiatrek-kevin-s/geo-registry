@@ -1,0 +1,16 @@
+id: postgis-st-linecrossingdirection
+kind: implementation
+name: st_linecrossingdirection
+software: postgis
+call: {interface: sql, name: st_linecrossingdirection}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  line1: {type: geometry}
+  line2: {type: geometry}
+signatures:
+- arguments:
+  - {name: line1, type: geometry}
+  - {name: line2, type: geometry}
+  returns: integer
+status: active
+review: {state: harvested, source: postgis}

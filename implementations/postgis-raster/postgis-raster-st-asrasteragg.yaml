@@ -1,0 +1,27 @@
+id: postgis-raster-st-asrasteragg
+kind: implementation
+name: st_asrasteragg
+software: postgis-raster
+call: {interface: sql, name: st_asrasteragg}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geom: {type: geometry}
+  val: {type: double precision}
+  ref: {type: raster}
+  pixeltype: {type: text}
+  nodataval: {type: double precision}
+  uniontype: {type: text}
+  touched: {type: boolean}
+signatures:
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: val, type: double precision}
+  - {name: ref, type: raster}
+  - {name: pixeltype, type: text}
+  - {name: nodataval, type: double precision}
+  - {name: uniontype, type: text}
+  - {name: touched, type: boolean}
+  returns: raster (aggregate)
+notes: Has an aggregate form.
+status: active
+review: {state: harvested, source: postgis}

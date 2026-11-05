@@ -1,0 +1,13 @@
+id: postgis-st-zmflag
+kind: implementation
+name: st_zmflag
+software: postgis
+call: {interface: sql, name: st_zmflag}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  returns: smallint
+status: active
+review: {state: harvested, source: postgis}

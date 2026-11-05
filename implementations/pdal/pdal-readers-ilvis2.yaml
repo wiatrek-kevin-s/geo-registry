@@ -1,0 +1,17 @@
+id: pdal-readers-ilvis2
+kind: implementation
+name: readers.ilvis2
+software: pdal
+call: {interface: pdal-pipeline, name: readers.ilvis2}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  filename: {type: option}
+  count: {type: option, default: '18446744073709551615'}
+  override_srs: {type: option}
+  default_srs: {type: option}
+  mapping: {type: option, default: All}
+  metadata: {type: option}
+docs: https://pdal.org/en/master/stages/readers.ilvis2.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

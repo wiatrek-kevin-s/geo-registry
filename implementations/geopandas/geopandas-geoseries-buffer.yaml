@@ -1,0 +1,15 @@
+id: geopandas-geoseries-buffer
+kind: implementation
+name: GeoSeries.buffer
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.buffer}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  distance: {type: any, required: true}
+  quad_segs: {type: any}
+  cap_style: {type: string, default: round}
+  join_style: {type: string, default: round}
+  mitre_limit: {type: number, default: 5.0}
+  single_sided: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-libs}

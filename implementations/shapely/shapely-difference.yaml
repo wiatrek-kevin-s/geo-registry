@@ -1,0 +1,12 @@
+id: shapely-difference
+kind: implementation
+name: shapely.difference
+software: shapely
+call: {interface: python, name: shapely.difference}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  a: {type: any, required: true}
+  b: {type: any, required: true}
+  grid_size: {type: any}
+status: active
+review: {state: harvested, source: python-libs}

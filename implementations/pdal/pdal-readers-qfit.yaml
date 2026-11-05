@@ -1,0 +1,16 @@
+id: pdal-readers-qfit
+kind: implementation
+name: readers.qfit
+software: pdal
+call: {interface: pdal-pipeline, name: readers.qfit}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  filename: {type: option}
+  count: {type: option, default: '18446744073709551615'}
+  override_srs: {type: option}
+  default_srs: {type: option}
+  flip_coordinates: {type: option}
+  scale_z: {type: option, default: '0.001'}
+docs: https://pdal.org/en/master/stages/readers.qfit.html
+status: active
+review: {state: harvested, source: pdal}

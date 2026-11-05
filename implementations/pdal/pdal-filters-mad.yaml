@@ -1,0 +1,15 @@
+id: pdal-filters-mad
+kind: implementation
+name: filters.mad
+software: pdal
+call: {interface: pdal-pipeline, name: filters.mad}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  k: {type: option, default: '2'}
+  dimension: {type: option}
+  mad_multiplier: {type: option, default: '1.4862'}
+docs: https://pdal.org/en/master/stages/filters.mad.html
+status: active
+review: {state: harvested, source: pdal}

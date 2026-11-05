@@ -1,0 +1,16 @@
+id: postgis-st-clusterrelatewin
+kind: implementation
+name: st_clusterrelatewin
+software: postgis
+call: {interface: sql, name: st_clusterrelatewin}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geom: {type: geometry}
+  relate_matrix: {type: text}
+signatures:
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: relate_matrix, type: text}
+  returns: integer
+status: active
+review: {state: harvested, source: postgis}

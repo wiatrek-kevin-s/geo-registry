@@ -1,0 +1,15 @@
+id: pdal-filters-griddecimation
+kind: implementation
+name: filters.gridDecimation
+software: pdal
+call: {interface: pdal-pipeline, name: filters.gridDecimation}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  resolution: {type: option, default: '1'}
+  output_type: {type: option, default: max}
+  value: {type: option}
+docs: https://pdal.org/en/master/stages/filters.gridDecimation.html
+status: active
+review: {state: harvested, source: pdal}

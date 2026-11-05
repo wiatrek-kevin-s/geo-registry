@@ -1,0 +1,23 @@
+id: postgis-raster-st-setskew
+kind: implementation
+name: st_setskew
+software: postgis-raster
+call: {interface: sql, name: st_setskew}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  skew: {type: double precision}
+  skewx: {type: double precision}
+  skewy: {type: double precision}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: skew, type: double precision}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: skewx, type: double precision}
+  - {name: skewy, type: double precision}
+  returns: raster
+status: active
+review: {state: harvested, source: postgis}

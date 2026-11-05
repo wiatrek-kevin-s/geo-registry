@@ -1,0 +1,12 @@
+id: shapely-hausdorff-distance
+kind: implementation
+name: shapely.hausdorff_distance
+software: shapely
+call: {interface: python, name: shapely.hausdorff_distance}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  a: {type: any, required: true}
+  b: {type: any, required: true}
+  densify: {type: any}
+status: active
+review: {state: harvested, source: python-libs}

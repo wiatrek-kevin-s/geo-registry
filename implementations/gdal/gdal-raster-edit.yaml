@@ -1,0 +1,29 @@
+id: gdal-raster-edit
+kind: implementation
+name: gdal raster edit
+software: gdal
+call: {interface: cli, name: gdal raster edit}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  dataset: {type: dataset, required: true, note: raster dataset}
+  open-option: {type: string_list}
+  auxiliary: {type: boolean}
+  band: {type: integer}
+  crs: {type: string}
+  bbox: {type: real_list}
+  nodata: {type: string}
+  color-interpretation: {type: string_list}
+  color-map: {type: string, note: exclusive group color-table}
+  scale: {type: string_list}
+  offset: {type: string_list}
+  metadata: {type: string_list}
+  unset-color-table: {type: boolean, note: exclusive group color-table}
+  unset-metadata: {type: string_list}
+  unset-metadata-domain: {type: string_list}
+  gcp: {type: string_list}
+  stats: {type: boolean, note: exclusive group stats}
+  approx-stats: {type: boolean, note: exclusive group stats}
+  hist: {type: boolean}
+docs: https://gdal.org/programs/gdal_raster_edit.html
+status: active
+review: {state: harvested, source: gdal}

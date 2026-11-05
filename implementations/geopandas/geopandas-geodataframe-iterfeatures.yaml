@@ -1,0 +1,12 @@
+id: geopandas-geodataframe-iterfeatures
+kind: implementation
+name: GeoDataFrame.iterfeatures
+software: geopandas
+call: {interface: python, name: geopandas.GeoDataFrame.iterfeatures}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  na: {type: str, default: 'null'}
+  show_bbox: {type: bool, default: false}
+  drop_id: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-libs}

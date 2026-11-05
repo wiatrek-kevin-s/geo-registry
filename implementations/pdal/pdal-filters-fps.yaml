@@ -1,0 +1,13 @@
+id: pdal-filters-fps
+kind: implementation
+name: filters.fps
+software: pdal
+call: {interface: pdal-pipeline, name: filters.fps}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  count: {type: option, default: '1000'}
+docs: https://pdal.org/en/master/stages/filters.fps.html
+status: active
+review: {state: harvested, source: pdal}

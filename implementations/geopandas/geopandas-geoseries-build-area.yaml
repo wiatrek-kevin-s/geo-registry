@@ -1,0 +1,10 @@
+id: geopandas-geoseries-build-area
+kind: implementation
+name: GeoSeries.build_area
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.build_area}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  node: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-libs}

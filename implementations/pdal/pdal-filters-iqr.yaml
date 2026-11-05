@@ -1,0 +1,14 @@
+id: pdal-filters-iqr
+kind: implementation
+name: filters.iqr
+software: pdal
+call: {interface: pdal-pipeline, name: filters.iqr}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  k: {type: option, default: '1.5'}
+  dimension: {type: option}
+docs: https://pdal.org/en/master/stages/filters.iqr.html
+status: active
+review: {state: harvested, source: pdal}

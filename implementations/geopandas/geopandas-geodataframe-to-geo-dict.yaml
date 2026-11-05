@@ -1,0 +1,12 @@
+id: geopandas-geodataframe-to-geo-dict
+kind: implementation
+name: GeoDataFrame.to_geo_dict
+software: geopandas
+call: {interface: python, name: geopandas.GeoDataFrame.to_geo_dict}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  na: {type: str | None, default: 'null'}
+  show_bbox: {type: bool, default: false}
+  drop_id: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-libs}

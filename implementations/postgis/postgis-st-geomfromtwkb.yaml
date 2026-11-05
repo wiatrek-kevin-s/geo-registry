@@ -1,0 +1,13 @@
+id: postgis-st-geomfromtwkb
+kind: implementation
+name: st_geomfromtwkb
+software: postgis
+call: {interface: sql, name: st_geomfromtwkb}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: bytea}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

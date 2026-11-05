@@ -1,0 +1,84 @@
+id: postgis-raster-st-mapalgebrafct
+kind: implementation
+name: st_mapalgebrafct
+software: postgis-raster
+call: {interface: sql, name: st_mapalgebrafct}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  band: {type: integer}
+  onerastuserfunc: {type: regprocedure}
+  args: {type: 'text[]'}
+  pixeltype: {type: text, default: 'NULL::text'}
+  rast1: {type: raster}
+  band1: {type: integer}
+  rast2: {type: raster}
+  band2: {type: integer}
+  tworastuserfunc: {type: regprocedure}
+  extenttype: {type: text, default: '''INTERSECTION''::text'}
+  userargs: {type: 'text[]', default: 'NULL::text[]'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: band, type: integer}
+  - {name: onerastuserfunc, type: regprocedure}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: band, type: integer}
+  - {name: onerastuserfunc, type: regprocedure}
+  - {name: args, type: 'text[]'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: band, type: integer}
+  - {name: pixeltype, type: text}
+  - {name: onerastuserfunc, type: regprocedure}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: band, type: integer}
+  - {name: pixeltype, type: text}
+  - {name: onerastuserfunc, type: regprocedure}
+  - {name: args, type: 'text[]'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: onerastuserfunc, type: regprocedure}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: onerastuserfunc, type: regprocedure}
+  - {name: args, type: 'text[]'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: pixeltype, type: text}
+  - {name: onerastuserfunc, type: regprocedure}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: pixeltype, type: text}
+  - {name: onerastuserfunc, type: regprocedure}
+  - {name: args, type: 'text[]'}
+  returns: raster
+- arguments:
+  - {name: rast1, type: raster}
+  - {name: band1, type: integer}
+  - {name: rast2, type: raster}
+  - {name: band2, type: integer}
+  - {name: tworastuserfunc, type: regprocedure}
+  - {name: pixeltype, type: text, default: 'NULL::text'}
+  - {name: extenttype, type: text, default: '''INTERSECTION''::text'}
+  - {name: userargs, type: 'text[]', default: 'NULL::text[]'}
+  returns: raster
+- arguments:
+  - {name: rast1, type: raster}
+  - {name: rast2, type: raster}
+  - {name: tworastuserfunc, type: regprocedure}
+  - {name: pixeltype, type: text, default: 'NULL::text'}
+  - {name: extenttype, type: text, default: '''INTERSECTION''::text'}
+  - {name: userargs, type: 'text[]', default: 'NULL::text[]'}
+  returns: raster
+status: active
+review: {state: harvested, source: postgis}

@@ -1,0 +1,20 @@
+id: postgis-st-geometricmedian
+kind: implementation
+name: st_geometricmedian
+software: postgis
+call: {interface: sql, name: st_geometricmedian}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  g: {type: geometry}
+  tolerance: {type: double precision, default: 'NULL::double precision'}
+  max_iter: {type: integer, default: '10000'}
+  fail_if_not_converged: {type: boolean, default: 'false'}
+signatures:
+- arguments:
+  - {name: g, type: geometry}
+  - {name: tolerance, type: double precision, default: 'NULL::double precision'}
+  - {name: max_iter, type: integer, default: '10000'}
+  - {name: fail_if_not_converged, type: boolean, default: 'false'}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

@@ -1,0 +1,10 @@
+id: shapely-setup-signal-checks
+kind: implementation
+name: shapely.setup_signal_checks
+software: shapely
+call: {interface: python, name: shapely.setup_signal_checks}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  interval: {type: integer, default: 10000}
+status: active
+review: {state: harvested, source: python-libs}

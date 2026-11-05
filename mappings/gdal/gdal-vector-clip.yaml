@@ -1,0 +1,10 @@
+id: gdal-vector-clip
+implements: clip
+crosswalk:
+  layer: input
+  mask: like
+  output: output
+differences:
+  - Can also clip to a bbox or to a geometry given as WKT, instead of a mask layer.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

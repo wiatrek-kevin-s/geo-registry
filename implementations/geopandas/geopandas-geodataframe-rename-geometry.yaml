@@ -1,0 +1,11 @@
+id: geopandas-geodataframe-rename-geometry
+kind: implementation
+name: GeoDataFrame.rename_geometry
+software: geopandas
+call: {interface: python, name: geopandas.GeoDataFrame.rename_geometry}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  col: {type: str, required: true}
+  inplace: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-libs}

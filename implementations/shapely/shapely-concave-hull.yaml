@@ -1,0 +1,12 @@
+id: shapely-concave-hull
+kind: implementation
+name: shapely.concave_hull
+software: shapely
+call: {interface: python, name: shapely.concave_hull}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geometry: {type: any, required: true}
+  ratio: {type: number, default: 0.0}
+  allow_holes: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-libs}

@@ -1,0 +1,9 @@
+id: postgis-st-simplifypreservetopology
+implements: simplify
+crosswalk:
+  layer: "#1"
+  tolerance: "#2"
+  unit: { fixed: crs-units }
+  preserve_topology: { fixed: true, note: Use ST_Simplify when topology need not be kept. }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

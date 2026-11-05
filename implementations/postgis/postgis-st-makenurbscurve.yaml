@@ -1,0 +1,20 @@
+id: postgis-st-makenurbscurve
+kind: implementation
+name: st_makenurbscurve
+software: postgis
+call: {interface: sql, name: st_makenurbscurve}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  degree: {type: integer}
+  control_points: {type: geometry}
+  weights: {type: 'double precision[]', default: 'NULL::double precision[]'}
+  knots: {type: 'double precision[]', default: 'NULL::double precision[]'}
+signatures:
+- arguments:
+  - {name: degree, type: integer}
+  - {name: control_points, type: geometry}
+  - {name: weights, type: 'double precision[]', default: 'NULL::double precision[]'}
+  - {name: knots, type: 'double precision[]', default: 'NULL::double precision[]'}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

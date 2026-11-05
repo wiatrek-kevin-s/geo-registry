@@ -1,0 +1,15 @@
+id: postgis-st-makepointm
+kind: implementation
+name: st_makepointm
+software: postgis
+call: {interface: sql, name: st_makepointm}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: double precision}
+  - {type: double precision}
+  - {type: double precision}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

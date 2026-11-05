@@ -1,0 +1,14 @@
+id: postgis-st-distancecpa
+kind: implementation
+name: st_distancecpa
+software: postgis
+call: {interface: sql, name: st_distancecpa}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  - {type: geometry}
+  returns: double precision
+status: active
+review: {state: harvested, source: postgis}

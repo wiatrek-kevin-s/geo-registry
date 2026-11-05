@@ -1,0 +1,15 @@
+id: postgis-st-removeirrelevantpointsforview
+kind: implementation
+name: st_removeirrelevantpointsforview
+software: postgis
+call: {interface: sql, name: st_removeirrelevantpointsforview}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  - {type: box2d}
+  - {type: boolean, default: 'false'}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

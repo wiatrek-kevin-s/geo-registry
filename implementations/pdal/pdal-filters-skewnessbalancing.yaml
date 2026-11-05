@@ -1,0 +1,15 @@
+id: pdal-filters-skewnessbalancing
+kind: implementation
+name: filters.skewnessbalancing
+software: pdal
+call: {interface: pdal-pipeline, name: filters.skewnessbalancing}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  ground_class: {type: option, default: '2'}
+  other_class: {type: option, default: '1'}
+  only_ground: {type: option, default: 'false'}
+docs: https://pdal.org/en/master/stages/filters.skewnessbalancing.html
+status: active
+review: {state: harvested, source: pdal}

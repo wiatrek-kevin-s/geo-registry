@@ -1,0 +1,17 @@
+id: pdal-readers-memoryview
+kind: implementation
+name: readers.memoryview
+software: pdal
+call: {interface: pdal-pipeline, name: readers.memoryview}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  filename: {type: option}
+  count: {type: option, default: '18446744073709551615'}
+  override_srs: {type: option}
+  default_srs: {type: option}
+  order: {type: option, default: row}
+  shape: {type: option}
+docs: https://pdal.org/en/master/stages/readers.memoryview.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

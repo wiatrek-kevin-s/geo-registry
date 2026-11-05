@@ -1,0 +1,22 @@
+id: gdal-raster-sieve
+kind: implementation
+name: gdal raster sieve
+software: gdal
+call: {interface: cli, name: gdal raster sieve}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  input-format: {type: string_list}
+  open-option: {type: string_list}
+  input: {type: dataset_list, required: true, note: raster dataset}
+  output-format: {type: string}
+  creation-option: {type: string_list}
+  overwrite: {type: boolean, default: false, note: exclusive group overwrite-append}
+  append: {type: boolean, default: false, note: exclusive group overwrite-append}
+  mask: {type: dataset, note: raster dataset}
+  band: {type: integer}
+  size-threshold: {type: integer, default: 2}
+  connect-diagonal-pixels: {type: boolean, default: false}
+  output: {type: dataset, required: true, note: input and output; raster dataset}
+docs: https://gdal.org/programs/gdal_raster_sieve.html
+status: active
+review: {state: harvested, source: gdal}

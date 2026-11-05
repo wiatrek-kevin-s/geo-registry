@@ -1,0 +1,11 @@
+id: geopandas-geoseries-crosses
+kind: implementation
+name: GeoSeries.crosses
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.crosses}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  other: {type: any, required: true}
+  align: {type: any}
+status: active
+review: {state: harvested, source: python-libs}

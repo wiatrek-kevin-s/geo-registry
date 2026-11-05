@@ -1,0 +1,18 @@
+id: pdal-readers-text
+kind: implementation
+name: readers.text
+software: pdal
+call: {interface: pdal-pipeline, name: readers.text}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  filename: {type: option}
+  count: {type: option, default: '18446744073709551615'}
+  override_srs: {type: option}
+  default_srs: {type: option}
+  separator: {type: option, default: '32'}
+  header: {type: option}
+  skip: {type: option}
+docs: https://pdal.org/en/master/stages/readers.text.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

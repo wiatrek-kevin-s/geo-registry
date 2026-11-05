@@ -1,0 +1,16 @@
+id: pdal-filters-decimation
+kind: implementation
+name: filters.decimation
+software: pdal
+call: {interface: pdal-pipeline, name: filters.decimation}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  step: {type: option, default: '1'}
+  offset: {type: option}
+  limit: {type: option, default: '18446744073709551615'}
+docs: https://pdal.org/en/master/stages/filters.decimation.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

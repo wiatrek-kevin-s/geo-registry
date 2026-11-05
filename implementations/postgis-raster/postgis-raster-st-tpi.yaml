@@ -1,0 +1,28 @@
+id: postgis-raster-st-tpi
+kind: implementation
+name: st_tpi
+software: postgis-raster
+call: {interface: sql, name: st_tpi}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  nband: {type: integer, default: '1'}
+  customextent: {type: raster}
+  pixeltype: {type: text, default: '''32BF''::text'}
+  interpolate_nodata: {type: boolean, default: 'false'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: customextent, type: raster}
+  - {name: pixeltype, type: text, default: '''32BF''::text'}
+  - {name: interpolate_nodata, type: boolean, default: 'false'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer, default: '1'}
+  - {name: pixeltype, type: text, default: '''32BF''::text'}
+  - {name: interpolate_nodata, type: boolean, default: 'false'}
+  returns: raster
+status: active
+review: {state: harvested, source: postgis}

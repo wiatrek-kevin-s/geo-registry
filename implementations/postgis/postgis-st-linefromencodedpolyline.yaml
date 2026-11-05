@@ -1,0 +1,16 @@
+id: postgis-st-linefromencodedpolyline
+kind: implementation
+name: st_linefromencodedpolyline
+software: postgis
+call: {interface: sql, name: st_linefromencodedpolyline}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  txtin: {type: text}
+  nprecision: {type: integer, default: '5'}
+signatures:
+- arguments:
+  - {name: txtin, type: text}
+  - {name: nprecision, type: integer, default: '5'}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

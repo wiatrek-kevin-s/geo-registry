@@ -1,0 +1,27 @@
+id: postgis-st-assvg
+kind: implementation
+name: st_assvg
+software: postgis
+call: {interface: sql, name: st_assvg}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geog: {type: geography}
+  rel: {type: integer, default: '0'}
+  maxdecimaldigits: {type: integer, default: '15'}
+  geom: {type: geometry}
+signatures:
+- arguments:
+  - {name: geog, type: geography}
+  - {name: rel, type: integer, default: '0'}
+  - {name: maxdecimaldigits, type: integer, default: '15'}
+  returns: text
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: rel, type: integer, default: '0'}
+  - {name: maxdecimaldigits, type: integer, default: '15'}
+  returns: text
+- arguments:
+  - {type: text}
+  returns: text
+status: active
+review: {state: harvested, source: postgis}

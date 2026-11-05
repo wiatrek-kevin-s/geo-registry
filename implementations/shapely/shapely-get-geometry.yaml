@@ -1,0 +1,11 @@
+id: shapely-get-geometry
+kind: implementation
+name: shapely.get_geometry
+software: shapely
+call: {interface: python, name: shapely.get_geometry}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geometry: {type: any, required: true}
+  index: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-libs}

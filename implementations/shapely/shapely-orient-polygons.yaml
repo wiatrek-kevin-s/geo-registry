@@ -1,0 +1,11 @@
+id: shapely-orient-polygons
+kind: implementation
+name: shapely.orient_polygons
+software: shapely
+call: {interface: python, name: shapely.orient_polygons}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geometry: {type: any, required: true}
+  exterior_cw: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-libs}

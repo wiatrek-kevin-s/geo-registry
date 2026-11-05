@@ -1,0 +1,20 @@
+id: pdal-readers-pgpointcloud
+kind: implementation
+name: readers.pgpointcloud
+software: pdal
+call: {interface: pdal-pipeline, name: readers.pgpointcloud}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  filename: {type: option}
+  count: {type: option, default: '18446744073709551615'}
+  override_srs: {type: option}
+  default_srs: {type: option}
+  table: {type: option}
+  connection: {type: option}
+  column: {type: option, default: pa}
+  schema: {type: option}
+  where: {type: option}
+docs: https://pdal.org/en/master/stages/readers.pgpointcloud.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

@@ -1,0 +1,16 @@
+id: pdal-readers-e57
+kind: implementation
+name: readers.e57
+software: pdal
+call: {interface: pdal-pipeline, name: readers.e57}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  filename: {type: option}
+  count: {type: option, default: '18446744073709551615'}
+  override_srs: {type: option}
+  default_srs: {type: option}
+  extra_dims: {type: option}
+docs: https://pdal.org/en/master/stages/readers.e57.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

@@ -1,0 +1,33 @@
+id: postgis-raster-st-setgeoreference
+kind: implementation
+name: st_setgeoreference
+software: postgis-raster
+call: {interface: sql, name: st_setgeoreference}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  georef: {type: text}
+  format: {type: text, default: '''GDAL''::text'}
+  upperleftx: {type: double precision}
+  upperlefty: {type: double precision}
+  scalex: {type: double precision}
+  scaley: {type: double precision}
+  skewx: {type: double precision}
+  skewy: {type: double precision}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: georef, type: text}
+  - {name: format, type: text, default: '''GDAL''::text'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: upperleftx, type: double precision}
+  - {name: upperlefty, type: double precision}
+  - {name: scalex, type: double precision}
+  - {name: scaley, type: double precision}
+  - {name: skewx, type: double precision}
+  - {name: skewy, type: double precision}
+  returns: raster
+status: active
+review: {state: harvested, source: postgis}

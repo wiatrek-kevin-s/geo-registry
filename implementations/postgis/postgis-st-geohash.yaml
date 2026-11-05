@@ -1,0 +1,21 @@
+id: postgis-st-geohash
+kind: implementation
+name: st_geohash
+software: postgis
+call: {interface: sql, name: st_geohash}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geog: {type: geography}
+  maxchars: {type: integer, default: '0'}
+  geom: {type: geometry}
+signatures:
+- arguments:
+  - {name: geog, type: geography}
+  - {name: maxchars, type: integer, default: '0'}
+  returns: text
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: maxchars, type: integer, default: '0'}
+  returns: text
+status: active
+review: {state: harvested, source: postgis}

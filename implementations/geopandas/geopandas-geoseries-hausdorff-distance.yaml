@@ -1,0 +1,12 @@
+id: geopandas-geoseries-hausdorff-distance
+kind: implementation
+name: GeoSeries.hausdorff_distance
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.hausdorff_distance}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  other: {type: any, required: true}
+  align: {type: any}
+  densify: {type: any}
+status: active
+review: {state: harvested, source: python-libs}

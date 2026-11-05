@@ -1,0 +1,16 @@
+id: pdal-filters-divider
+kind: implementation
+name: filters.divider
+software: pdal
+call: {interface: pdal-pipeline, name: filters.divider}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  mode: {type: option, default: partition}
+  count: {type: option}
+  capacity: {type: option}
+  expression: {type: option}
+docs: https://pdal.org/en/master/stages/filters.divider.html
+status: active
+review: {state: harvested, source: pdal}

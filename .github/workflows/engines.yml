@@ -1,0 +1,96 @@
+name: Engines
+
+# Runs real GIS engines (GDAL, PDAL, Shapely, GeoPandas, PostGIS) from conda-forge:
+# - equivalence: every mapped implementation is run on the same small inputs
+#   and must agree (checks/equivalence.py);
+# - harvest: the harvesters are re-run against the newest engine releases and,
+#   if any tool or parameter changed, a pull request with the changes is opened.
+
+on:
+  pull_request:
+    paths:
+      - "mappings/**"
+      - "implementations/**"
+      - "entries/operations/**"
+      - "harvest/**"
+      - "checks/equivalence.py"
+      - "schema/**"
+      - "build/**"
+      - ".github/workflows/engines.yml"
+  schedule:
+    - cron: "17 6 * * 1"   # Mondays 06:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  equivalence:
+    name: Equivalence tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: build
+      - name: Build the index
+        working-directory: build
+        run: cargo run --locked --release -q -- build --out ../dist
+      - uses: mamba-org/setup-micromamba@v2
+        with:
+          environment-file: harvest/environment.yml
+          cache-environment: true
+      - name: PostGIS
+        shell: bash -el {0}
+        run: |
+          micromamba create -y -q -f harvest/environment-postgis.yml
+          echo "PGBIN=$MAMBA_ROOT_PREFIX/envs/geo-registry-postgis/bin" >> "$GITHUB_ENV"
+      - name: Run every mapped implementation on the same inputs
+        shell: bash -el {0}
+        run: |
+          dsn=$(harvest/start-postgis.sh "$PGBIN" "$RUNNER_TEMP/pg")
+          python -I checks/equivalence.py dist --gdal "$(which gdal)" --psql "$PGBIN/psql" --dsn "$dsn"
+
+  harvest:
+    name: Re-harvest engines
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: mamba-org/setup-micromamba@v2
+        with:
+          environment-file: harvest/environment.yml
+      - name: Engines
+        shell: bash -el {0}
+        run: |
+          micromamba create -y -q -f harvest/environment-pdal.yml
+          micromamba create -y -q -f harvest/environment-postgis.yml
+          echo "PGBIN=$MAMBA_ROOT_PREFIX/envs/geo-registry-postgis/bin" >> "$GITHUB_ENV"
+          echo "PDAL=$MAMBA_ROOT_PREFIX/envs/geo-registry-pdal/bin/pdal" >> "$GITHUB_ENV"
+      - name: Harvest
+        shell: bash -el {0}
+        run: |
+          dsn=$(harvest/start-postgis.sh "$PGBIN" "$RUNNER_TEMP/pg")
+          python harvest/gdal.py --gdal "$(which gdal)" | tee -a "$RUNNER_TEMP/summary.txt"
+          python harvest/pdal.py --pdal "$PDAL" | tee -a "$RUNNER_TEMP/summary.txt"
+          python harvest/postgis.py --psql "$PGBIN/psql" --dsn "$dsn" | tee -a "$RUNNER_TEMP/summary.txt"
+          python harvest/python_libs.py | tee -a "$RUNNER_TEMP/summary.txt"
+          {
+            echo "Re-harvested from the newest engine releases on conda-forge:"
+            echo
+            sed 's/^/- /' "$RUNNER_TEMP/summary.txt"
+            echo
+            echo "Check that mappings still validate (CI) and the equivalence tests pass before merging."
+          } > "$RUNNER_TEMP/body.md"
+      - name: Open a pull request if anything changed
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: harvest/engines
+          commit-message: "Re-harvest engines"
+          title: "Re-harvest engines: new tool descriptions"
+          body-path: ${{ runner.temp }}/body.md
+          add-paths: implementations/**

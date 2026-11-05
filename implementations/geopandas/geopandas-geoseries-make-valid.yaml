@@ -1,0 +1,11 @@
+id: geopandas-geoseries-make-valid
+kind: implementation
+name: GeoSeries.make_valid
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.make_valid}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  method: {type: string, default: linework}
+  keep_collapsed: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-libs}

@@ -1,0 +1,11 @@
+id: shapely-shared-paths
+kind: implementation
+name: shapely.shared_paths
+software: shapely
+call: {interface: python, name: shapely.shared_paths}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  a: {type: any, required: true}
+  b: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-libs}

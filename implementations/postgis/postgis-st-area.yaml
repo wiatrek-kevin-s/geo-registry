@@ -1,0 +1,22 @@
+id: postgis-st-area
+kind: implementation
+name: st_area
+software: postgis
+call: {interface: sql, name: st_area}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geog: {type: geography}
+  use_spheroid: {type: boolean, default: 'true'}
+signatures:
+- arguments:
+  - {name: geog, type: geography}
+  - {name: use_spheroid, type: boolean, default: 'true'}
+  returns: double precision
+- arguments:
+  - {type: geometry}
+  returns: double precision
+- arguments:
+  - {type: text}
+  returns: double precision
+status: active
+review: {state: harvested, source: postgis}

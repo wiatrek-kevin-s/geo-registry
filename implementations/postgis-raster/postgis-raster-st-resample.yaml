@@ -1,0 +1,59 @@
+id: postgis-raster-st-resample
+kind: implementation
+name: st_resample
+software: postgis-raster
+call: {interface: sql, name: st_resample}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  ref: {type: raster}
+  algorithm: {type: text, default: '''NearestNeighbour''::text'}
+  maxerr: {type: double precision, default: '0.125'}
+  usescale: {type: boolean, default: 'true'}
+  scalex: {type: double precision, default: '0'}
+  scaley: {type: double precision, default: '0'}
+  gridx: {type: double precision, default: 'NULL::double precision'}
+  gridy: {type: double precision, default: 'NULL::double precision'}
+  skewx: {type: double precision, default: '0'}
+  skewy: {type: double precision, default: '0'}
+  width: {type: integer}
+  height: {type: integer}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: ref, type: raster}
+  - {name: algorithm, type: text, default: '''NearestNeighbour''::text'}
+  - {name: maxerr, type: double precision, default: '0.125'}
+  - {name: usescale, type: boolean, default: 'true'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: ref, type: raster}
+  - {name: usescale, type: boolean}
+  - {name: algorithm, type: text, default: '''NearestNeighbour''::text'}
+  - {name: maxerr, type: double precision, default: '0.125'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: scalex, type: double precision, default: '0'}
+  - {name: scaley, type: double precision, default: '0'}
+  - {name: gridx, type: double precision, default: 'NULL::double precision'}
+  - {name: gridy, type: double precision, default: 'NULL::double precision'}
+  - {name: skewx, type: double precision, default: '0'}
+  - {name: skewy, type: double precision, default: '0'}
+  - {name: algorithm, type: text, default: '''NearestNeighbour''::text'}
+  - {name: maxerr, type: double precision, default: '0.125'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: width, type: integer}
+  - {name: height, type: integer}
+  - {name: gridx, type: double precision, default: 'NULL::double precision'}
+  - {name: gridy, type: double precision, default: 'NULL::double precision'}
+  - {name: skewx, type: double precision, default: '0'}
+  - {name: skewy, type: double precision, default: '0'}
+  - {name: algorithm, type: text, default: '''NearestNeighbour''::text'}
+  - {name: maxerr, type: double precision, default: '0.125'}
+  returns: raster
+status: active
+review: {state: harvested, source: postgis}

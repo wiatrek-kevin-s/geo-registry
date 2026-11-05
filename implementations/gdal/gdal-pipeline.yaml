@@ -1,0 +1,15 @@
+id: gdal-pipeline
+kind: implementation
+name: gdal pipeline
+software: gdal
+call: {interface: cli, name: gdal pipeline}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  input: {type: dataset_list, note: raster or vector dataset}
+  output-format: {type: string}
+  pipeline: {type: string}
+  output-string: {type: string, note: output}
+  output: {type: dataset, note: input and output; raster or vector dataset}
+docs: https://gdal.org/programs/gdal_pipeline.html
+status: active
+review: {state: harvested, source: gdal}

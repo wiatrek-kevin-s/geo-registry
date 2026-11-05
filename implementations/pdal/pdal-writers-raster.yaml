@@ -1,0 +1,18 @@
+id: pdal-writers-raster
+kind: implementation
+name: writers.raster
+software: pdal
+call: {interface: pdal-pipeline, name: writers.raster}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  filename: {type: option}
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  gdaldriver: {type: option, default: GTiff}
+  gdalopts: {type: option}
+  rasters: {type: option}
+  data_type: {type: option, default: double}
+  nodata: {type: option, default: NaN}
+docs: https://pdal.org/en/master/stages/writers.raster.html
+status: active
+review: {state: harvested, source: pdal}

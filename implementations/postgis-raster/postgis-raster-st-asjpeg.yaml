@@ -1,0 +1,39 @@
+id: postgis-raster-st-asjpeg
+kind: implementation
+name: st_asjpeg
+software: postgis-raster
+call: {interface: sql, name: st_asjpeg}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  nband: {type: integer}
+  options: {type: 'text[]', default: 'NULL::text[]'}
+  quality: {type: integer}
+  nbands: {type: 'integer[]'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: options, type: 'text[]', default: 'NULL::text[]'}
+  returns: bytea
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: quality, type: integer}
+  returns: bytea
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nbands, type: 'integer[]'}
+  - {name: options, type: 'text[]', default: 'NULL::text[]'}
+  returns: bytea
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nbands, type: 'integer[]'}
+  - {name: quality, type: integer}
+  returns: bytea
+- arguments:
+  - {name: rast, type: raster}
+  - {name: options, type: 'text[]', default: 'NULL::text[]'}
+  returns: bytea
+status: active
+review: {state: harvested, source: postgis}

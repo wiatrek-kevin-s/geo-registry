@@ -1,0 +1,15 @@
+id: postgis-st-chaikinsmoothing
+kind: implementation
+name: st_chaikinsmoothing
+software: postgis
+call: {interface: sql, name: st_chaikinsmoothing}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  - {type: integer, default: '1'}
+  - {type: boolean, default: 'false'}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

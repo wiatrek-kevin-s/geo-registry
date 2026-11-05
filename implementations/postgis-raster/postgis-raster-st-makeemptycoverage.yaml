@@ -1,0 +1,34 @@
+id: postgis-raster-st-makeemptycoverage
+kind: implementation
+name: st_makeemptycoverage
+software: postgis-raster
+call: {interface: sql, name: st_makeemptycoverage}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  tilewidth: {type: integer}
+  tileheight: {type: integer}
+  width: {type: integer}
+  height: {type: integer}
+  upperleftx: {type: double precision}
+  upperlefty: {type: double precision}
+  scalex: {type: double precision}
+  scaley: {type: double precision}
+  skewx: {type: double precision}
+  skewy: {type: double precision}
+  srid: {type: integer, default: '0'}
+signatures:
+- arguments:
+  - {name: tilewidth, type: integer}
+  - {name: tileheight, type: integer}
+  - {name: width, type: integer}
+  - {name: height, type: integer}
+  - {name: upperleftx, type: double precision}
+  - {name: upperlefty, type: double precision}
+  - {name: scalex, type: double precision}
+  - {name: scaley, type: double precision}
+  - {name: skewx, type: double precision}
+  - {name: skewy, type: double precision}
+  - {name: srid, type: integer, default: '0'}
+  returns: SETOF raster
+status: active
+review: {state: harvested, source: postgis}

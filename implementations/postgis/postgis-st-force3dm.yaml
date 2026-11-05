@@ -1,0 +1,16 @@
+id: postgis-st-force3dm
+kind: implementation
+name: st_force3dm
+software: postgis
+call: {interface: sql, name: st_force3dm}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geom: {type: geometry}
+  mvalue: {type: double precision, default: '0.0'}
+signatures:
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: mvalue, type: double precision, default: '0.0'}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

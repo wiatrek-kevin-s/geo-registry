@@ -1,0 +1,14 @@
+id: postgis-st-scroll
+kind: implementation
+name: st_scroll
+software: postgis
+call: {interface: sql, name: st_scroll}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  - {type: geometry}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

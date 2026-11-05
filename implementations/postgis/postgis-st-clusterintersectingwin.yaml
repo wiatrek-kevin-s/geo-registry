@@ -1,0 +1,13 @@
+id: postgis-st-clusterintersectingwin
+kind: implementation
+name: st_clusterintersectingwin
+software: postgis
+call: {interface: sql, name: st_clusterintersectingwin}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  returns: integer
+status: active
+review: {state: harvested, source: postgis}

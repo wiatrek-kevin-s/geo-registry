@@ -1,0 +1,16 @@
+id: postgis-raster-st-notsamealignmentreason
+kind: implementation
+name: st_notsamealignmentreason
+software: postgis-raster
+call: {interface: sql, name: st_notsamealignmentreason}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast1: {type: raster}
+  rast2: {type: raster}
+signatures:
+- arguments:
+  - {name: rast1, type: raster}
+  - {name: rast2, type: raster}
+  returns: text
+status: active
+review: {state: harvested, source: postgis}

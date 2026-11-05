@@ -1,0 +1,10 @@
+id: geopandas-list-layers
+kind: implementation
+name: geopandas.list_layers
+software: geopandas
+call: {interface: python, name: geopandas.list_layers}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  filename: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-libs}

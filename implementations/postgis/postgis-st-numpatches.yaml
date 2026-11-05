@@ -1,0 +1,13 @@
+id: postgis-st-numpatches
+kind: implementation
+name: st_numpatches
+software: postgis
+call: {interface: sql, name: st_numpatches}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  returns: integer
+status: active
+review: {state: harvested, source: postgis}

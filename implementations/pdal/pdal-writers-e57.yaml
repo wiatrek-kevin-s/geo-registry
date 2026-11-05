@@ -1,0 +1,16 @@
+id: pdal-writers-e57
+kind: implementation
+name: writers.e57
+software: pdal
+call: {interface: pdal-pipeline, name: writers.e57}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  filename: {type: option}
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  double_precision: {type: option}
+  extra_dims: {type: option}
+docs: https://pdal.org/en/master/stages/writers.e57.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

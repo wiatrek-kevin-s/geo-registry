@@ -1,0 +1,23 @@
+id: pdal-filters-pmf
+kind: implementation
+name: filters.pmf
+software: pdal
+call: {interface: pdal-pipeline, name: filters.pmf}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  cell_size: {type: option, default: '1'}
+  exponential: {type: option, default: 'true'}
+  ignore: {type: option}
+  initial_distance: {type: option, default: '0.15'}
+  returns: {type: option, default: 'last, only'}
+  max_distance: {type: option, default: '2.5'}
+  max_window_size: {type: option, default: '33'}
+  slope: {type: option, default: '1'}
+  ground_class: {type: option, default: '2'}
+  other_class: {type: option, default: '1'}
+  only_ground: {type: option, default: 'false'}
+docs: https://pdal.org/en/master/stages/filters.pmf.html
+status: active
+review: {state: harvested, source: pdal}

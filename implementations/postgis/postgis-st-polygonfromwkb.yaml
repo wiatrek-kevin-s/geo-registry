@@ -1,0 +1,17 @@
+id: postgis-st-polygonfromwkb
+kind: implementation
+name: st_polygonfromwkb
+software: postgis
+call: {interface: sql, name: st_polygonfromwkb}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: bytea}
+  returns: geometry
+- arguments:
+  - {type: bytea}
+  - {type: integer}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

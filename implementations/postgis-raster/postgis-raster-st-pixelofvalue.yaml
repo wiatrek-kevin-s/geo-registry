@@ -1,0 +1,36 @@
+id: postgis-raster-st-pixelofvalue
+kind: implementation
+name: st_pixelofvalue
+software: postgis-raster
+call: {interface: sql, name: st_pixelofvalue}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  nband: {type: integer}
+  search: {type: 'double precision | double precision[]'}
+  exclude_nodata_value: {type: boolean, default: 'true'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: search, type: double precision}
+  - {name: exclude_nodata_value, type: boolean, default: 'true'}
+  returns: TABLE(x integer, y integer)
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: search, type: 'double precision[]'}
+  - {name: exclude_nodata_value, type: boolean, default: 'true'}
+  returns: TABLE(val double precision, x integer, y integer)
+- arguments:
+  - {name: rast, type: raster}
+  - {name: search, type: double precision}
+  - {name: exclude_nodata_value, type: boolean, default: 'true'}
+  returns: TABLE(x integer, y integer)
+- arguments:
+  - {name: rast, type: raster}
+  - {name: search, type: 'double precision[]'}
+  - {name: exclude_nodata_value, type: boolean, default: 'true'}
+  returns: TABLE(val double precision, x integer, y integer)
+status: active
+review: {state: harvested, source: postgis}

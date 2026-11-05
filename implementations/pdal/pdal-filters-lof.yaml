@@ -1,0 +1,13 @@
+id: pdal-filters-lof
+kind: implementation
+name: filters.lof
+software: pdal
+call: {interface: pdal-pipeline, name: filters.lof}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  minpts: {type: option, default: '10'}
+docs: https://pdal.org/en/master/stages/filters.lof.html
+status: active
+review: {state: harvested, source: pdal}

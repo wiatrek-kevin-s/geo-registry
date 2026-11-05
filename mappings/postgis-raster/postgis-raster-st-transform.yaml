@@ -1,0 +1,9 @@
+id: postgis-raster-st-transform
+implements: reproject-raster
+crosswalk:
+  raster: rast
+  crs: { param: srid, note: An SRID integer from spatial_ref_sys. }
+  resampling: { param: algorithm, values: { nearest: NearestNeighbour, bilinear: Bilinear, cubic: Cubic } }
+  resolution: scalexy
+effects: { modifies_input: false, network: false }
+review: { state: draft }

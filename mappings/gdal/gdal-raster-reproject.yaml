@@ -1,0 +1,10 @@
+id: gdal-raster-reproject
+implements: reproject-raster
+crosswalk:
+  raster: input
+  output: output
+  crs: output-crs
+  resampling: resampling
+  resolution: resolution
+effects: { modifies_input: false, network: false }
+review: { state: draft }

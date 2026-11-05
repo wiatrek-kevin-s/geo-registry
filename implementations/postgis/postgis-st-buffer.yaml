@@ -1,0 +1,52 @@
+id: postgis-st-buffer
+kind: implementation
+name: st_buffer
+software: postgis
+call: {interface: sql, name: st_buffer}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geom: {type: geometry}
+  radius: {type: double precision}
+  options: {type: text, default: '''''::text'}
+  quadsegs: {type: integer}
+signatures:
+- arguments:
+  - {type: geography}
+  - {type: double precision}
+  returns: geography
+- arguments:
+  - {type: geography}
+  - {type: double precision}
+  - {type: integer}
+  returns: geography
+- arguments:
+  - {type: geography}
+  - {type: double precision}
+  - {type: text}
+  returns: geography
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: radius, type: double precision}
+  - {name: options, type: text, default: '''''::text'}
+  returns: geometry
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: radius, type: double precision}
+  - {name: quadsegs, type: integer}
+  returns: geometry
+- arguments:
+  - {type: text}
+  - {type: double precision}
+  returns: geometry
+- arguments:
+  - {type: text}
+  - {type: double precision}
+  - {type: integer}
+  returns: geometry
+- arguments:
+  - {type: text}
+  - {type: double precision}
+  - {type: text}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}
