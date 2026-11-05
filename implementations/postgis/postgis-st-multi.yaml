@@ -1,0 +1,13 @@
+id: postgis-st-multi
+kind: implementation
+name: st_multi
+software: postgis
+call: {interface: sql, name: st_multi}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

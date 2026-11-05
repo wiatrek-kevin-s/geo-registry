@@ -1,0 +1,18 @@
+id: pdal-readers-arrow
+kind: implementation
+name: readers.arrow
+software: pdal
+call: {interface: pdal-pipeline, name: readers.arrow}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  filename: {type: option}
+  count: {type: option, default: '18446744073709551615'}
+  override_srs: {type: option}
+  default_srs: {type: option}
+  metadata: {type: option, default: 'false'}
+  geoarrow_dimension_name: {type: option, default: xyz}
+  format: {type: option}
+docs: https://pdal.org/en/master/stages/readers.arrow.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

@@ -1,0 +1,6 @@
+id: gdal-raster-info
+implements: describe-raster
+crosswalk:
+  raster: input
+effects: { modifies_input: false, network: false }
+review: { state: draft }

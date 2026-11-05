@@ -1,0 +1,25 @@
+id: pdal-writers-bpf
+kind: implementation
+name: writers.bpf
+software: pdal
+call: {interface: pdal-pipeline, name: writers.bpf}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  filename: {type: option}
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  compression: {type: option}
+  header_data: {type: option}
+  format: {type: option, default: Dimension}
+  coord_id: {type: option, default: auto}
+  bundledfile: {type: option}
+  output_dims: {type: option}
+  offset_x: {type: option}
+  offset_y: {type: option}
+  offset_z: {type: option}
+  scale_x: {type: option, default: '1'}
+  scale_y: {type: option, default: '1'}
+  scale_z: {type: option, default: '1'}
+docs: https://pdal.org/en/master/stages/writers.bpf.html
+status: active
+review: {state: harvested, source: pdal}

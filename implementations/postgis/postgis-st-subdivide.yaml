@@ -1,0 +1,18 @@
+id: postgis-st-subdivide
+kind: implementation
+name: st_subdivide
+software: postgis
+call: {interface: sql, name: st_subdivide}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geom: {type: geometry}
+  maxvertices: {type: integer, default: '256'}
+  gridsize: {type: double precision, default: '''-1.0''::numeric'}
+signatures:
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: maxvertices, type: integer, default: '256'}
+  - {name: gridsize, type: double precision, default: '''-1.0''::numeric'}
+  returns: SETOF geometry
+status: active
+review: {state: harvested, source: postgis}

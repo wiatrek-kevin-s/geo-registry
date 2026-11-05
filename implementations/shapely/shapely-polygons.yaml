@@ -1,0 +1,13 @@
+id: shapely-polygons
+kind: implementation
+name: shapely.polygons
+software: shapely
+call: {interface: python, name: shapely.polygons}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geometries: {type: any, required: true}
+  holes: {type: any}
+  indices: {type: any}
+  out: {type: any}
+status: active
+review: {state: harvested, source: python-libs}

@@ -1,0 +1,17 @@
+id: pdal-filters-normal
+kind: implementation
+name: filters.normal
+software: pdal
+call: {interface: pdal-pipeline, name: filters.normal}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  knn: {type: option, default: '8'}
+  radius: {type: option}
+  viewpoint: {type: option}
+  always_up: {type: option, default: 'true'}
+  refine: {type: option, default: 'false'}
+docs: https://pdal.org/en/master/stages/filters.normal.html
+status: active
+review: {state: harvested, source: pdal}

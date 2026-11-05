@@ -1,0 +1,27 @@
+id: postgis-raster-st-grayscale
+kind: implementation
+name: st_grayscale
+software: postgis-raster
+call: {interface: sql, name: st_grayscale}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  redband: {type: integer, default: '1'}
+  greenband: {type: integer, default: '2'}
+  blueband: {type: integer, default: '3'}
+  extenttype: {type: text, default: '''INTERSECTION''::text'}
+  rastbandargset: {type: 'rastbandarg[]'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: redband, type: integer, default: '1'}
+  - {name: greenband, type: integer, default: '2'}
+  - {name: blueband, type: integer, default: '3'}
+  - {name: extenttype, type: text, default: '''INTERSECTION''::text'}
+  returns: raster
+- arguments:
+  - {name: rastbandargset, type: 'rastbandarg[]'}
+  - {name: extenttype, type: text, default: '''INTERSECTION''::text'}
+  returns: raster
+status: active
+review: {state: harvested, source: postgis}

@@ -1,0 +1,14 @@
+id: postgis-st-3dextent
+kind: implementation
+name: st_3dextent
+software: postgis
+call: {interface: sql, name: st_3dextent}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  returns: box3d (aggregate)
+notes: Has an aggregate form.
+status: active
+review: {state: harvested, source: postgis}

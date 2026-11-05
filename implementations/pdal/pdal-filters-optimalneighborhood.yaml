@@ -1,0 +1,14 @@
+id: pdal-filters-optimalneighborhood
+kind: implementation
+name: filters.optimalneighborhood
+software: pdal
+call: {interface: pdal-pipeline, name: filters.optimalneighborhood}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  min_k: {type: option, default: '10'}
+  max_k: {type: option, default: '14'}
+docs: https://pdal.org/en/master/stages/filters.optimalneighborhood.html
+status: active
+review: {state: harvested, source: pdal}

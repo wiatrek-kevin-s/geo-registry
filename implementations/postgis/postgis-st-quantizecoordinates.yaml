@@ -1,0 +1,22 @@
+id: postgis-st-quantizecoordinates
+kind: implementation
+name: st_quantizecoordinates
+software: postgis
+call: {interface: sql, name: st_quantizecoordinates}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  g: {type: geometry}
+  prec_x: {type: integer}
+  prec_y: {type: integer, default: 'NULL::integer'}
+  prec_z: {type: integer, default: 'NULL::integer'}
+  prec_m: {type: integer, default: 'NULL::integer'}
+signatures:
+- arguments:
+  - {name: g, type: geometry}
+  - {name: prec_x, type: integer}
+  - {name: prec_y, type: integer, default: 'NULL::integer'}
+  - {name: prec_z, type: integer, default: 'NULL::integer'}
+  - {name: prec_m, type: integer, default: 'NULL::integer'}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

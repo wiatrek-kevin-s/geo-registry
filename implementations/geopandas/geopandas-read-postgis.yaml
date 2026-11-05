@@ -1,0 +1,18 @@
+id: geopandas-read-postgis
+kind: implementation
+name: geopandas.read_postgis
+software: geopandas
+call: {interface: python, name: geopandas.read_postgis}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  sql: {type: any, required: true}
+  con: {type: any, required: true}
+  geom_col: {type: string, default: geom}
+  crs: {type: any}
+  index_col: {type: any}
+  coerce_float: {type: boolean, default: true}
+  parse_dates: {type: any}
+  params: {type: any}
+  chunksize: {type: any}
+status: active
+review: {state: harvested, source: python-libs}

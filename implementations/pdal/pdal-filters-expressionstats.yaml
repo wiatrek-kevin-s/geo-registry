@@ -1,0 +1,15 @@
+id: pdal-filters-expressionstats
+kind: implementation
+name: filters.expressionstats
+software: pdal
+call: {interface: pdal-pipeline, name: filters.expressionstats}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  expressions: {type: option}
+  dimension: {type: option}
+docs: https://pdal.org/en/master/stages/filters.expressionstats.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

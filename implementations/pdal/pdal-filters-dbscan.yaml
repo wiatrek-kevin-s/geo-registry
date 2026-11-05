@@ -1,0 +1,15 @@
+id: pdal-filters-dbscan
+kind: implementation
+name: filters.dbscan
+software: pdal
+call: {interface: pdal-pipeline, name: filters.dbscan}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  min_points: {type: option, default: '6'}
+  eps: {type: option, default: '1'}
+  dimensions: {type: option, default: 'X, Y, Z'}
+docs: https://pdal.org/en/master/stages/filters.dbscan.html
+status: active
+review: {state: harvested, source: pdal}

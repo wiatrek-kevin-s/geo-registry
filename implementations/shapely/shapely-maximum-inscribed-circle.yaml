@@ -1,0 +1,11 @@
+id: shapely-maximum-inscribed-circle
+kind: implementation
+name: shapely.maximum_inscribed_circle
+software: shapely
+call: {interface: python, name: shapely.maximum_inscribed_circle}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geometry: {type: any, required: true}
+  tolerance: {type: any}
+status: active
+review: {state: harvested, source: python-libs}

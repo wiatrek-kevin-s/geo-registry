@@ -1,0 +1,11 @@
+id: gdal-driver-openfilegdb-repack
+kind: implementation
+name: gdal driver openfilegdb repack
+software: gdal
+call: {interface: cli, name: gdal driver openfilegdb repack}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  dataset: {type: dataset, required: true, note: raster or vector dataset}
+docs: https://gdal.org/drivers/vector/openfilegdb.html
+status: active
+review: {state: harvested, source: gdal}

@@ -184,6 +184,78 @@ pub fn validate_files(files: &[EntryFile], validator: &jsonschema::Validator) ->
                 }
             }
         }
+        // A crosswalk can only name the engine's own parameters. After a
+        // re-harvest, a renamed or removed engine parameter shows up here.
+        if let Some(cw) = v.get("crosswalk").and_then(Value::as_object) {
+            let mut engine: HashSet<&str> = v
+                .get("parameters")
+                .and_then(Value::as_object)
+                .map(|p| p.keys().map(String::as_str).collect())
+                .unwrap_or_default();
+            for sig in v
+                .get("signatures")
+                .and_then(Value::as_array)
+                .into_iter()
+                .flatten()
+            {
+                engine.extend(
+                    sig.get("arguments")
+                        .and_then(Value::as_array)
+                        .into_iter()
+                        .flatten()
+                        .filter_map(|a| a.get("name").and_then(Value::as_str)),
+                );
+            }
+            // `#N` names the Nth argument of an overload whose arguments have no names.
+            let max_args = v
+                .get("signatures")
+                .and_then(Value::as_array)
+                .into_iter()
+                .flatten()
+                .filter_map(|s| s.get("arguments").and_then(Value::as_array).map(Vec::len))
+                .max()
+                .unwrap_or(0);
+            let known = |p: &str| {
+                engine.contains(p)
+                    || p.strip_prefix('#')
+                        .and_then(|n| n.parse::<usize>().ok())
+                        .is_some_and(|n| n >= 1 && n <= max_args)
+            };
+            for p in v
+                .get("presets")
+                .and_then(Value::as_object)
+                .into_iter()
+                .flatten()
+                .map(|(k, _)| k)
+            {
+                if !known(p) {
+                    problem(format!(
+                        "presets sets '{p}', which is not a parameter of this implementation"
+                    ));
+                }
+            }
+            for (name, item) in cw {
+                let engine_param = match item {
+                    Value::String(s) => Some(s.as_str()),
+                    Value::Object(o) => o.get("param").and_then(Value::as_str),
+                    _ => None,
+                };
+                if let Some(p) = engine_param {
+                    if !known(p) {
+                        problem(format!(
+                            "crosswalk maps '{name}' to '{p}', which is not a parameter of this implementation"
+                        ));
+                    }
+                }
+                if let Value::Object(o) = item {
+                    if o.contains_key("param") && o.contains_key("fixed") {
+                        problem(format!(
+                            "crosswalk '{name}' has both param and fixed; fixed means the engine has no parameter for it"
+                        ));
+                    }
+                }
+            }
+        }
         // A crosswalk can only map parameters the operation defines.
         if let (Some(op), Some(cw)) = (
             v.get("implements").and_then(Value::as_str),

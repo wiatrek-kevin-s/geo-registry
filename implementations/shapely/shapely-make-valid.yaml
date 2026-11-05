@@ -1,0 +1,12 @@
+id: shapely-make-valid
+kind: implementation
+name: shapely.make_valid
+software: shapely
+call: {interface: python, name: shapely.make_valid}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geometry: {type: any, required: true}
+  method: {type: string, default: linework}
+  keep_collapsed: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-libs}

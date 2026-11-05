@@ -1,0 +1,12 @@
+id: geopandas-geoseries-rotate
+kind: implementation
+name: GeoSeries.rotate
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.rotate}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  angle: {type: any, required: true}
+  origin: {type: string, default: center}
+  use_radians: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-libs}

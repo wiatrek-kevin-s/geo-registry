@@ -1,0 +1,10 @@
+id: geopandas-geoseries-interiors
+kind: implementation
+name: GeoSeries.interiors
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.interiors}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters: {}
+notes: Property.
+status: active
+review: {state: harvested, source: python-libs}

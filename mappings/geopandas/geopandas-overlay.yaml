@@ -1,0 +1,11 @@
+id: geopandas-overlay
+implements: intersect
+crosswalk:
+  a: df1
+  b: df2
+presets:
+  how: intersection
+differences:
+  - keep_geom_type drops results of a different geometry type (lines from polygon overlaps) unless set to false.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

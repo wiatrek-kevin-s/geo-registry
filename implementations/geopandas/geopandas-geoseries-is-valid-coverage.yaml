@@ -1,0 +1,10 @@
+id: geopandas-geoseries-is-valid-coverage
+kind: implementation
+name: GeoSeries.is_valid_coverage
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.is_valid_coverage}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  gap_width: {type: number, default: 0.0}
+status: active
+review: {state: harvested, source: python-libs}

@@ -1,0 +1,10 @@
+id: geopandas-geoseries-line-merge
+kind: implementation
+name: GeoSeries.line_merge
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.line_merge}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  directed: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-libs}

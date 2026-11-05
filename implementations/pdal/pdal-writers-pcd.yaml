@@ -1,0 +1,17 @@
+id: pdal-writers-pcd
+kind: implementation
+name: writers.pcd
+software: pdal
+call: {interface: pdal-pipeline, name: writers.pcd}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  filename: {type: option}
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  compression: {type: option, default: ascii}
+  keep_unspecified: {type: option, default: 'true'}
+  order: {type: option}
+  precision: {type: option, default: '2'}
+docs: https://pdal.org/en/master/stages/writers.pcd.html
+status: active
+review: {state: harvested, source: pdal}

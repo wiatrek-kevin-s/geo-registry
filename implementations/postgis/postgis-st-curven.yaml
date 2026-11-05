@@ -1,0 +1,16 @@
+id: postgis-st-curven
+kind: implementation
+name: st_curven
+software: postgis
+call: {interface: sql, name: st_curven}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geometry: {type: geometry}
+  i: {type: integer}
+signatures:
+- arguments:
+  - {name: geometry, type: geometry}
+  - {name: i, type: integer}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

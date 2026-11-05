@@ -1,0 +1,15 @@
+id: pdal-filters-elm
+kind: implementation
+name: filters.elm
+software: pdal
+call: {interface: pdal-pipeline, name: filters.elm}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  cell: {type: option, default: '10'}
+  class: {type: option, default: '7'}
+  threshold: {type: option, default: '1'}
+docs: https://pdal.org/en/master/stages/filters.elm.html
+status: active
+review: {state: harvested, source: pdal}

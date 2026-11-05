@@ -1,0 +1,12 @@
+id: shapely-line-locate-point
+kind: implementation
+name: shapely.line_locate_point
+software: shapely
+call: {interface: python, name: shapely.line_locate_point}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  line: {type: any, required: true}
+  other: {type: any, required: true}
+  normalized: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-libs}

@@ -1,0 +1,41 @@
+id: postgis-raster-st-setvalue
+kind: implementation
+name: st_setvalue
+software: postgis-raster
+call: {interface: sql, name: st_setvalue}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  band: {type: integer}
+  x: {type: integer}
+  y: {type: integer}
+  newvalue: {type: double precision}
+  geom: {type: geometry}
+  nband: {type: integer}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: band, type: integer}
+  - {name: x, type: integer}
+  - {name: y, type: integer}
+  - {name: newvalue, type: double precision}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: geom, type: geometry}
+  - {name: newvalue, type: double precision}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: geom, type: geometry}
+  - {name: newvalue, type: double precision}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: x, type: integer}
+  - {name: y, type: integer}
+  - {name: newvalue, type: double precision}
+  returns: raster
+status: active
+review: {state: harvested, source: postgis}

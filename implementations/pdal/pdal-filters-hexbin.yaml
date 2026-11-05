@@ -1,0 +1,27 @@
+id: pdal-filters-hexbin
+kind: implementation
+name: filters.hexbin
+software: pdal
+call: {interface: pdal-pipeline, name: filters.hexbin}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  sample_size: {type: option, default: '5000'}
+  threshold: {type: option, default: '15'}
+  output_tesselation: {type: option}
+  edge_size: {type: option}
+  edge_length: {type: option}
+  precision: {type: option, default: '8'}
+  hole_cull_area_tolerance: {type: option}
+  smooth: {type: option, default: 'true'}
+  preserve_topology: {type: option, default: 'true'}
+  density: {type: option}
+  boundary: {type: option}
+  h3_grid: {type: option, default: 'false'}
+  h3_resolution: {type: option, default: '-1'}
+  ogrdriver: {type: option, default: GeoJSON}
+docs: https://pdal.org/en/master/stages/filters.hexbin.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

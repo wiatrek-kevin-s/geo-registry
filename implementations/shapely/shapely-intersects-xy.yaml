@@ -1,0 +1,12 @@
+id: shapely-intersects-xy
+kind: implementation
+name: shapely.intersects_xy
+software: shapely
+call: {interface: python, name: shapely.intersects_xy}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geom: {type: any, required: true}
+  x: {type: any, required: true}
+  y: {type: any}
+status: active
+review: {state: harvested, source: python-libs}

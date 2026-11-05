@@ -1,0 +1,146 @@
+id: postgis-raster-st-asraster
+kind: implementation
+name: st_asraster
+software: postgis-raster
+call: {interface: sql, name: st_asraster}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geom: {type: geometry}
+  ref: {type: raster}
+  pixeltype: {type: 'text | text[]', default: 'ARRAY[''8BUI''::text]'}
+  value: {type: 'double precision | double precision[]'}
+  nodataval: {type: 'double precision | double precision[]'}
+  touched: {type: boolean, default: 'false'}
+  scalex: {type: double precision}
+  scaley: {type: double precision}
+  gridx: {type: double precision, default: 'NULL::double precision'}
+  gridy: {type: double precision, default: 'NULL::double precision'}
+  skewx: {type: double precision, default: '0'}
+  skewy: {type: double precision, default: '0'}
+  upperleftx: {type: double precision, default: 'NULL::double precision'}
+  upperlefty: {type: double precision, default: 'NULL::double precision'}
+  width: {type: integer}
+  height: {type: integer}
+signatures:
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: ref, type: raster}
+  - {name: pixeltype, type: text}
+  - {name: value, type: double precision, default: '1'}
+  - {name: nodataval, type: double precision, default: '0'}
+  - {name: touched, type: boolean, default: 'false'}
+  returns: raster
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: ref, type: raster}
+  - {name: pixeltype, type: 'text[]', default: 'ARRAY[''8BUI''::text]'}
+  - {name: value, type: 'double precision[]', default: 'ARRAY[(1)::double precision]'}
+  - {name: nodataval, type: 'double precision[]', default: 'ARRAY[(0)::double precision]'}
+  - {name: touched, type: boolean, default: 'false'}
+  returns: raster
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: scalex, type: double precision}
+  - {name: scaley, type: double precision}
+  - {name: gridx, type: double precision}
+  - {name: gridy, type: double precision}
+  - {name: pixeltype, type: text}
+  - {name: value, type: double precision, default: '1'}
+  - {name: nodataval, type: double precision, default: '0'}
+  - {name: skewx, type: double precision, default: '0'}
+  - {name: skewy, type: double precision, default: '0'}
+  - {name: touched, type: boolean, default: 'false'}
+  returns: raster
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: scalex, type: double precision}
+  - {name: scaley, type: double precision}
+  - {name: gridx, type: double precision, default: 'NULL::double precision'}
+  - {name: gridy, type: double precision, default: 'NULL::double precision'}
+  - {name: pixeltype, type: 'text[]', default: 'ARRAY[''8BUI''::text]'}
+  - {name: value, type: 'double precision[]', default: 'ARRAY[(1)::double precision]'}
+  - {name: nodataval, type: 'double precision[]', default: 'ARRAY[(0)::double precision]'}
+  - {name: skewx, type: double precision, default: '0'}
+  - {name: skewy, type: double precision, default: '0'}
+  - {name: touched, type: boolean, default: 'false'}
+  returns: raster
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: scalex, type: double precision}
+  - {name: scaley, type: double precision}
+  - {name: pixeltype, type: text}
+  - {name: value, type: double precision, default: '1'}
+  - {name: nodataval, type: double precision, default: '0'}
+  - {name: upperleftx, type: double precision, default: 'NULL::double precision'}
+  - {name: upperlefty, type: double precision, default: 'NULL::double precision'}
+  - {name: skewx, type: double precision, default: '0'}
+  - {name: skewy, type: double precision, default: '0'}
+  - {name: touched, type: boolean, default: 'false'}
+  returns: raster
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: scalex, type: double precision}
+  - {name: scaley, type: double precision}
+  - {name: pixeltype, type: 'text[]'}
+  - {name: value, type: 'double precision[]', default: 'ARRAY[(1)::double precision]'}
+  - {name: nodataval, type: 'double precision[]', default: 'ARRAY[(0)::double precision]'}
+  - {name: upperleftx, type: double precision, default: 'NULL::double precision'}
+  - {name: upperlefty, type: double precision, default: 'NULL::double precision'}
+  - {name: skewx, type: double precision, default: '0'}
+  - {name: skewy, type: double precision, default: '0'}
+  - {name: touched, type: boolean, default: 'false'}
+  returns: raster
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: width, type: integer}
+  - {name: height, type: integer}
+  - {name: gridx, type: double precision}
+  - {name: gridy, type: double precision}
+  - {name: pixeltype, type: text}
+  - {name: value, type: double precision, default: '1'}
+  - {name: nodataval, type: double precision, default: '0'}
+  - {name: skewx, type: double precision, default: '0'}
+  - {name: skewy, type: double precision, default: '0'}
+  - {name: touched, type: boolean, default: 'false'}
+  returns: raster
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: width, type: integer}
+  - {name: height, type: integer}
+  - {name: gridx, type: double precision, default: 'NULL::double precision'}
+  - {name: gridy, type: double precision, default: 'NULL::double precision'}
+  - {name: pixeltype, type: 'text[]', default: 'ARRAY[''8BUI''::text]'}
+  - {name: value, type: 'double precision[]', default: 'ARRAY[(1)::double precision]'}
+  - {name: nodataval, type: 'double precision[]', default: 'ARRAY[(0)::double precision]'}
+  - {name: skewx, type: double precision, default: '0'}
+  - {name: skewy, type: double precision, default: '0'}
+  - {name: touched, type: boolean, default: 'false'}
+  returns: raster
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: width, type: integer}
+  - {name: height, type: integer}
+  - {name: pixeltype, type: text}
+  - {name: value, type: double precision, default: '1'}
+  - {name: nodataval, type: double precision, default: '0'}
+  - {name: upperleftx, type: double precision, default: 'NULL::double precision'}
+  - {name: upperlefty, type: double precision, default: 'NULL::double precision'}
+  - {name: skewx, type: double precision, default: '0'}
+  - {name: skewy, type: double precision, default: '0'}
+  - {name: touched, type: boolean, default: 'false'}
+  returns: raster
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: width, type: integer}
+  - {name: height, type: integer}
+  - {name: pixeltype, type: 'text[]'}
+  - {name: value, type: 'double precision[]', default: 'ARRAY[(1)::double precision]'}
+  - {name: nodataval, type: 'double precision[]', default: 'ARRAY[(0)::double precision]'}
+  - {name: upperleftx, type: double precision, default: 'NULL::double precision'}
+  - {name: upperlefty, type: double precision, default: 'NULL::double precision'}
+  - {name: skewx, type: double precision, default: '0'}
+  - {name: skewy, type: double precision, default: '0'}
+  - {name: touched, type: boolean, default: 'false'}
+  returns: raster
+status: active
+review: {state: harvested, source: postgis}

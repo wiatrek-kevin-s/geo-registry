@@ -1,0 +1,16 @@
+id: postgis-st-boundingdiagonal
+kind: implementation
+name: st_boundingdiagonal
+software: postgis
+call: {interface: sql, name: st_boundingdiagonal}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geom: {type: geometry}
+  fits: {type: boolean, default: 'false'}
+signatures:
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: fits, type: boolean, default: 'false'}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

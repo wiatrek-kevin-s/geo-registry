@@ -1,0 +1,58 @@
+id: postgis-raster-st-approxhistogram
+kind: implementation
+name: st_approxhistogram
+software: postgis-raster
+call: {interface: sql, name: st_approxhistogram}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  nband: {type: integer, default: '1'}
+  exclude_nodata_value: {type: boolean, default: 'true'}
+  sample_percent: {type: double precision, default: '0.1'}
+  bins: {type: integer, default: '0'}
+  right: {type: boolean, default: 'false'}
+  width: {type: 'double precision[]', default: 'NULL::double precision[]'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: exclude_nodata_value, type: boolean}
+  - {name: sample_percent, type: double precision}
+  - {name: bins, type: integer}
+  - {name: right, type: boolean}
+  returns: SETOF record
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer, default: '1'}
+  - {name: exclude_nodata_value, type: boolean, default: 'true'}
+  - {name: sample_percent, type: double precision, default: '0.1'}
+  - {name: bins, type: integer, default: '0'}
+  - {name: width, type: 'double precision[]', default: 'NULL::double precision[]'}
+  - {name: right, type: boolean, default: 'false'}
+  returns: SETOF record
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: sample_percent, type: double precision}
+  returns: SETOF record
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: sample_percent, type: double precision}
+  - {name: bins, type: integer}
+  - {name: right, type: boolean}
+  returns: SETOF record
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: sample_percent, type: double precision}
+  - {name: bins, type: integer}
+  - {name: width, type: 'double precision[]', default: 'NULL::double precision[]'}
+  - {name: right, type: boolean, default: 'false'}
+  returns: SETOF record
+- arguments:
+  - {name: rast, type: raster}
+  - {name: sample_percent, type: double precision}
+  returns: SETOF record
+status: active
+review: {state: harvested, source: postgis}

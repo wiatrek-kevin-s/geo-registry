@@ -1,0 +1,65 @@
+id: postgis-raster-st-setvalues
+kind: implementation
+name: st_setvalues
+software: postgis-raster
+call: {interface: sql, name: st_setvalues}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  nband: {type: integer}
+  geomvalset: {type: 'geomval[]'}
+  keepnodata: {type: boolean, default: 'false'}
+  x: {type: integer}
+  y: {type: integer}
+  newvalueset: {type: 'double precision[]'}
+  noset: {type: 'boolean[]', default: 'NULL::boolean[]'}
+  nosetvalue: {type: double precision}
+  width: {type: integer}
+  height: {type: integer}
+  newvalue: {type: double precision}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: geomvalset, type: 'geomval[]'}
+  - {name: keepnodata, type: boolean, default: 'false'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: x, type: integer}
+  - {name: y, type: integer}
+  - {name: newvalueset, type: 'double precision[]'}
+  - {name: noset, type: 'boolean[]', default: 'NULL::boolean[]'}
+  - {name: keepnodata, type: boolean, default: 'false'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: x, type: integer}
+  - {name: y, type: integer}
+  - {name: newvalueset, type: 'double precision[]'}
+  - {name: nosetvalue, type: double precision}
+  - {name: keepnodata, type: boolean, default: 'false'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: x, type: integer}
+  - {name: y, type: integer}
+  - {name: width, type: integer}
+  - {name: height, type: integer}
+  - {name: newvalue, type: double precision}
+  - {name: keepnodata, type: boolean, default: 'false'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: x, type: integer}
+  - {name: y, type: integer}
+  - {name: width, type: integer}
+  - {name: height, type: integer}
+  - {name: newvalue, type: double precision}
+  - {name: keepnodata, type: boolean, default: 'false'}
+  returns: raster
+status: active
+review: {state: harvested, source: postgis}

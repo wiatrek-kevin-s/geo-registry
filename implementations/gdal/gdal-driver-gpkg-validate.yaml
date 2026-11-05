@@ -1,0 +1,14 @@
+id: gdal-driver-gpkg-validate
+kind: implementation
+name: gdal driver gpkg validate
+software: gdal
+call: {interface: cli, name: gdal driver gpkg validate}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  dataset: {type: dataset, required: true, note: raster or vector dataset}
+  full-check: {type: boolean, default: false}
+  verbose: {type: boolean}
+  output-string: {type: string, note: output}
+docs: https://gdal.org/programs/gdal_driver_gpkg_validate.html
+status: active
+review: {state: harvested, source: gdal}

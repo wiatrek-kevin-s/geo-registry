@@ -1,0 +1,12 @@
+id: shapely-relate-pattern
+kind: implementation
+name: shapely.relate_pattern
+software: shapely
+call: {interface: python, name: shapely.relate_pattern}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  a: {type: any, required: true}
+  b: {type: any, required: true}
+  pattern: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-libs}

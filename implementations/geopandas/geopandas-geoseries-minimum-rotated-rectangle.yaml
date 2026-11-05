@@ -1,0 +1,9 @@
+id: geopandas-geoseries-minimum-rotated-rectangle
+kind: implementation
+name: GeoSeries.minimum_rotated_rectangle
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.minimum_rotated_rectangle}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-libs}

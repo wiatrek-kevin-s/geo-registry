@@ -1,0 +1,12 @@
+id: shapely-from-ragged-array
+kind: implementation
+name: shapely.from_ragged_array
+software: shapely
+call: {interface: python, name: shapely.from_ragged_array}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geometry_type: {type: any, required: true}
+  coords: {type: any, required: true}
+  offsets: {type: any}
+status: active
+review: {state: harvested, source: python-libs}

@@ -1,0 +1,6 @@
+id: shapely-make-valid
+implements: make-valid
+crosswalk:
+  layer: geometry
+effects: { modifies_input: false, network: false }
+review: { state: draft }

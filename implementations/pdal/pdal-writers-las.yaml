@@ -1,0 +1,39 @@
+id: pdal-writers-las
+kind: implementation
+name: writers.las
+software: pdal
+call: {interface: pdal-pipeline, name: writers.las}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  filename: {type: option}
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  a_srs: {type: option}
+  compression: {type: option, default: 'false'}
+  discard_high_return_numbers: {type: option}
+  extra_dims: {type: option}
+  forward: {type: option}
+  filesource_id: {type: option, default: '0'}
+  major_version: {type: option, default: '1'}
+  minor_version: {type: option, default: '4'}
+  dataformat_id: {type: option, default: '7'}
+  format: {type: option, default: '7'}
+  global_encoding: {type: option, default: '0'}
+  project_id: {type: option}
+  system_id: {type: option, default: "PDAL\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}
+  software_id: {type: option, default: "PDAL 2.10.2 (21d285)\0\0\0\0\0\0\0\0\0\0\0\0"}
+  creation_doy: {type: option, default: '309'}
+  creation_year: {type: option, default: '2026'}
+  pdal_metadata: {type: option, default: 'false'}
+  scale_x: {type: option, default: '.01'}
+  scale_y: {type: option, default: '.01'}
+  scale_z: {type: option, default: '.01'}
+  offset_x: {type: option}
+  offset_y: {type: option}
+  offset_z: {type: option}
+  vlrs: {type: option}
+  enhanced_srs_vlrs: {type: option, default: 'false'}
+docs: https://pdal.org/en/master/stages/writers.las.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

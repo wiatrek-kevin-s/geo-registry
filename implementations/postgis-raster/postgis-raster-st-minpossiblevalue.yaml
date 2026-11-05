@@ -1,0 +1,14 @@
+id: postgis-raster-st-minpossiblevalue
+kind: implementation
+name: st_minpossiblevalue
+software: postgis-raster
+call: {interface: sql, name: st_minpossiblevalue}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  pixeltype: {type: text}
+signatures:
+- arguments:
+  - {name: pixeltype, type: text}
+  returns: double precision
+status: active
+review: {state: harvested, source: postgis}

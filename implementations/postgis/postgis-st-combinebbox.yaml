@@ -1,0 +1,22 @@
+id: postgis-st-combinebbox
+kind: implementation
+name: st_combinebbox
+software: postgis
+call: {interface: sql, name: st_combinebbox}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: box2d}
+  - {type: geometry}
+  returns: box2d
+- arguments:
+  - {type: box3d}
+  - {type: box3d}
+  returns: box3d
+- arguments:
+  - {type: box3d}
+  - {type: geometry}
+  returns: box3d
+status: active
+review: {state: harvested, source: postgis}

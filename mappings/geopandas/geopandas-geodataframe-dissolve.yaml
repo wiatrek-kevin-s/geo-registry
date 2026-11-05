@@ -1,0 +1,8 @@
+id: geopandas-geodataframe-dissolve
+implements: dissolve
+crosswalk:
+  by: by
+differences:
+  - Other columns keep the first row's value per group unless aggfunc says otherwise.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,11 @@
+id: geopandas-geoseries-delaunay-triangles
+kind: implementation
+name: GeoSeries.delaunay_triangles
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.delaunay_triangles}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  tolerance: {type: number, default: 0.0}
+  only_edges: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-libs}

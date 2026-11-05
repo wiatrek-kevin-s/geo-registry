@@ -1,0 +1,23 @@
+id: postgis-raster-st-setscale
+kind: implementation
+name: st_setscale
+software: postgis-raster
+call: {interface: sql, name: st_setscale}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  scale: {type: double precision}
+  scalex: {type: double precision}
+  scaley: {type: double precision}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: scale, type: double precision}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: scalex, type: double precision}
+  - {name: scaley, type: double precision}
+  returns: raster
+status: active
+review: {state: harvested, source: postgis}

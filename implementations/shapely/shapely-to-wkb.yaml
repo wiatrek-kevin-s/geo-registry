@@ -1,0 +1,15 @@
+id: shapely-to-wkb
+kind: implementation
+name: shapely.to_wkb
+software: shapely
+call: {interface: python, name: shapely.to_wkb}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geometry: {type: any, required: true}
+  hex: {type: boolean, default: false}
+  output_dimension: {type: any}
+  byte_order: {type: integer, default: -1}
+  include_srid: {type: boolean, default: false}
+  flavor: {type: string, default: extended}
+status: active
+review: {state: harvested, source: python-libs}

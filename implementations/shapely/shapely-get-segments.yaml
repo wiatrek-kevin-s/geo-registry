@@ -1,0 +1,12 @@
+id: shapely-get-segments
+kind: implementation
+name: shapely.get_segments
+software: shapely
+call: {interface: python, name: shapely.get_segments}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geometry: {type: any, required: true}
+  include_z: {type: boolean, default: false}
+  return_index: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-libs}

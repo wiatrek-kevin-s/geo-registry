@@ -1,0 +1,10 @@
+id: geopandas-geoseries-has-sindex
+kind: implementation
+name: GeoSeries.has_sindex
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.has_sindex}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters: {}
+notes: Property.
+status: active
+review: {state: harvested, source: python-libs}

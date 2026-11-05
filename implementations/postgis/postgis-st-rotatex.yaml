@@ -1,0 +1,14 @@
+id: postgis-st-rotatex
+kind: implementation
+name: st_rotatex
+software: postgis
+call: {interface: sql, name: st_rotatex}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  - {type: double precision}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

@@ -1,0 +1,35 @@
+id: gdal-vector-clip
+kind: implementation
+name: gdal vector clip
+software: gdal
+call: {interface: cli, name: gdal vector clip}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  input-format: {type: string_list}
+  open-option: {type: string_list}
+  input: {type: dataset_list, required: true, note: vector dataset}
+  input-layer: {type: string_list}
+  output-format: {type: string}
+  output-open-option: {type: string_list}
+  creation-option: {type: string_list}
+  layer-creation-option: {type: string_list}
+  overwrite: {type: boolean, default: false}
+  update: {type: boolean, default: false}
+  overwrite-layer: {type: boolean, default: false}
+  append: {type: boolean, default: false, note: exclusive group append-upsert}
+  upsert: {type: boolean, note: exclusive group append-upsert}
+  output-layer: {type: string}
+  skip-errors: {type: boolean}
+  active-layer: {type: string}
+  bbox: {type: real_list, note: exclusive group bbox-geometry-like}
+  bbox-crs: {type: string}
+  geometry: {type: string, note: exclusive group bbox-geometry-like}
+  geometry-crs: {type: string}
+  like: {type: dataset, note: raster or vector dataset; exclusive group bbox-geometry-like}
+  like-sql: {type: string, note: exclusive group sql-where}
+  like-layer: {type: string}
+  like-where: {type: string, note: exclusive group sql-where}
+  output: {type: dataset, required: true, note: input and output; vector dataset}
+docs: https://gdal.org/programs/gdal_vector_clip.html
+status: active
+review: {state: harvested, source: gdal}

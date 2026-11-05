@@ -1,0 +1,23 @@
+id: gdal-raster-fill-nodata
+kind: implementation
+name: gdal raster fill-nodata
+software: gdal
+call: {interface: cli, name: gdal raster fill-nodata}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  input-format: {type: string_list}
+  open-option: {type: string_list}
+  input: {type: dataset_list, required: true, note: raster dataset}
+  output-format: {type: string}
+  creation-option: {type: string_list}
+  overwrite: {type: boolean, default: false, note: exclusive group overwrite-append}
+  append: {type: boolean, default: false, note: exclusive group overwrite-append}
+  band: {type: integer, default: 1}
+  max-distance: {type: integer, default: 100}
+  smoothing-iterations: {type: integer, default: 0}
+  mask: {type: dataset, note: raster or vector or multidim_raster dataset}
+  strategy: {type: string, default: invdist, values: [invdist, nearest]}
+  output: {type: dataset, required: true, note: input and output; raster dataset}
+docs: https://gdal.org/programs/gdal_raster_fill_nodata.html
+status: active
+review: {state: harvested, source: gdal}

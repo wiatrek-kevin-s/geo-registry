@@ -1,0 +1,28 @@
+id: postgis-raster-st-retile
+kind: implementation
+name: st_retile
+software: postgis-raster
+call: {interface: sql, name: st_retile}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  tab: {type: regclass}
+  col: {type: name}
+  ext: {type: geometry}
+  sfx: {type: double precision}
+  sfy: {type: double precision}
+  tw: {type: integer}
+  th: {type: integer}
+  algo: {type: text, default: '''NearestNeighbour''::text'}
+signatures:
+- arguments:
+  - {name: tab, type: regclass}
+  - {name: col, type: name}
+  - {name: ext, type: geometry}
+  - {name: sfx, type: double precision}
+  - {name: sfy, type: double precision}
+  - {name: tw, type: integer}
+  - {name: th, type: integer}
+  - {name: algo, type: text, default: '''NearestNeighbour''::text'}
+  returns: SETOF raster
+status: active
+review: {state: harvested, source: postgis}

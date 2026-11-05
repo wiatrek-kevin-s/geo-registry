@@ -1,0 +1,14 @@
+id: postgis-st-pointn
+kind: implementation
+name: st_pointn
+software: postgis
+call: {interface: sql, name: st_pointn}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  - {type: integer}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

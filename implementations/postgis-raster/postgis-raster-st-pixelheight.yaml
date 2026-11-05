@@ -1,0 +1,13 @@
+id: postgis-raster-st-pixelheight
+kind: implementation
+name: st_pixelheight
+software: postgis-raster
+call: {interface: sql, name: st_pixelheight}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: raster}
+  returns: double precision
+status: active
+review: {state: harvested, source: postgis}

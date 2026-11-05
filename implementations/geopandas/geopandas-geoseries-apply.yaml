@@ -1,0 +1,12 @@
+id: geopandas-geoseries-apply
+kind: implementation
+name: GeoSeries.apply
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.apply}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  func: {type: any, required: true}
+  convert_dtype: {type: bool | None}
+  args: {type: any, note: default ()}
+status: active
+review: {state: harvested, source: python-libs}

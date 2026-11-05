@@ -1,0 +1,15 @@
+id: pdal-filters-sparsesurface
+kind: implementation
+name: filters.sparsesurface
+software: pdal
+call: {interface: pdal-pipeline, name: filters.sparsesurface}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  radius: {type: option, default: '1'}
+  ground_class: {type: option, default: '2'}
+  low_point_class: {type: option, default: '7'}
+docs: https://pdal.org/en/master/stages/filters.sparsesurface.html
+status: active
+review: {state: harvested, source: pdal}

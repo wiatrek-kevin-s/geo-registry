@@ -1,0 +1,8 @@
+id: geopandas-geoseries-simplify
+implements: simplify
+crosswalk:
+  tolerance: tolerance
+  unit: { fixed: crs-units, note: Tolerance is in the series' CRS units; convert it first. }
+  preserve_topology: preserve_topology
+effects: { modifies_input: false, network: false }
+review: { state: draft }

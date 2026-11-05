@@ -1,0 +1,14 @@
+id: gdal-vsi-copy
+kind: implementation
+name: gdal vsi copy
+software: gdal
+call: {interface: cli, name: gdal vsi copy}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  source: {type: string, required: true}
+  destination: {type: string, required: true}
+  recursive: {type: boolean}
+  skip-errors: {type: boolean}
+docs: https://gdal.org/programs/gdal_vsi_copy.html
+status: active
+review: {state: harvested, source: gdal}

@@ -1,0 +1,11 @@
+id: shapely-remove-repeated-points
+kind: implementation
+name: shapely.remove_repeated_points
+software: shapely
+call: {interface: python, name: shapely.remove_repeated_points}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geometry: {type: any, required: true}
+  tolerance: {type: number, default: 0.0}
+status: active
+review: {state: harvested, source: python-libs}

@@ -1,0 +1,11 @@
+id: gdal-driver-gpkg-repack
+kind: implementation
+name: gdal driver gpkg repack
+software: gdal
+call: {interface: cli, name: gdal driver gpkg repack}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  dataset: {type: dataset, required: true, note: raster or vector dataset}
+docs: https://gdal.org/programs/gdal_driver_gpkg_repack.html
+status: active
+review: {state: harvested, source: gdal}

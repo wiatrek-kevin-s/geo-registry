@@ -1,0 +1,10 @@
+id: gdal-vector-make-point
+implements: table-to-points
+crosswalk:
+  table: input
+  output: output
+  x_field: x
+  y_field: y
+  crs: { param: output-crs, note: The CRS given to the new points. }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

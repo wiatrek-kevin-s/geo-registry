@@ -1,0 +1,13 @@
+id: postgis-raster-st-upperlefty
+kind: implementation
+name: st_upperlefty
+software: postgis-raster
+call: {interface: sql, name: st_upperlefty}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: raster}
+  returns: double precision
+status: active
+review: {state: harvested, source: postgis}

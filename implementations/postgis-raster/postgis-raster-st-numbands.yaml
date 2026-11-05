@@ -1,0 +1,13 @@
+id: postgis-raster-st-numbands
+kind: implementation
+name: st_numbands
+software: postgis-raster
+call: {interface: sql, name: st_numbands}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: raster}
+  returns: integer
+status: active
+review: {state: harvested, source: postgis}

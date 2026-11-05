@@ -1,0 +1,16 @@
+id: postgis-st-interpolatepoint
+kind: implementation
+name: st_interpolatepoint
+software: postgis
+call: {interface: sql, name: st_interpolatepoint}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  line: {type: geometry}
+  point: {type: geometry}
+signatures:
+- arguments:
+  - {name: line, type: geometry}
+  - {name: point, type: geometry}
+  returns: double precision
+status: active
+review: {state: harvested, source: postgis}

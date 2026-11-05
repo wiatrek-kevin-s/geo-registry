@@ -1,0 +1,10 @@
+id: geopandas-geoseries-has-z
+kind: implementation
+name: GeoSeries.has_z
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.has_z}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters: {}
+notes: Property.
+status: active
+review: {state: harvested, source: python-libs}

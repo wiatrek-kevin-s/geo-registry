@@ -1,0 +1,17 @@
+id: geopandas-sjoin
+kind: implementation
+name: geopandas.sjoin
+software: geopandas
+call: {interface: python, name: geopandas.sjoin}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  left_df: {type: any, required: true}
+  right_df: {type: any, required: true}
+  how: {type: string, default: inner}
+  predicate: {type: string, default: intersects}
+  lsuffix: {type: string, default: left}
+  rsuffix: {type: string, default: right}
+  distance: {type: any}
+  on_attribute: {type: any}
+status: active
+review: {state: harvested, source: python-libs}

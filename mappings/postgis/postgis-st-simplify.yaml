@@ -1,0 +1,11 @@
+id: postgis-st-simplify
+implements: simplify
+crosswalk:
+  layer: "#1"
+  tolerance: "#2"
+  unit: { fixed: crs-units }
+  preserve_topology: { fixed: false, note: Use ST_SimplifyPreserveTopology to keep topology. }
+differences:
+  - Can return invalid or collapsed geometries; the optional third argument keeps collapsed ones.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

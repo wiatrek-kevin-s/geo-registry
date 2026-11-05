@@ -1,0 +1,20 @@
+id: pdal-filters-georeference
+kind: implementation
+name: filters.georeference
+software: pdal
+call: {interface: pdal-pipeline, name: filters.georeference}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  trajectory_file: {type: option}
+  trajectory_options: {type: option}
+  scan2imu: {type: option}
+  reverse: {type: option, default: 'false'}
+  time_offset: {type: option, default: '0'}
+  coordinate_system: {type: option, default: NED}
+  transform_beam: {type: option, default: 'false'}
+docs: https://pdal.org/en/master/stages/filters.georeference.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

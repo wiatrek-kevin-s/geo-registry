@@ -1,0 +1,20 @@
+id: pdal-filters-reprojection
+kind: implementation
+name: filters.reprojection
+software: pdal
+call: {interface: pdal-pipeline, name: filters.reprojection}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  out_srs: {type: option}
+  in_srs: {type: option}
+  in_axis_ordering: {type: option}
+  out_axis_ordering: {type: option}
+  in_coord_epoch: {type: option}
+  out_coord_epoch: {type: option}
+  error_on_failure: {type: option}
+docs: https://pdal.org/en/master/stages/filters.reprojection.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

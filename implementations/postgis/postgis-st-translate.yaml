@@ -1,0 +1,21 @@
+id: postgis-st-translate
+kind: implementation
+name: st_translate
+software: postgis
+call: {interface: sql, name: st_translate}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  - {type: double precision}
+  - {type: double precision}
+  returns: geometry
+- arguments:
+  - {type: geometry}
+  - {type: double precision}
+  - {type: double precision}
+  - {type: double precision}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

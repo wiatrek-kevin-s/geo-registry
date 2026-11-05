@@ -1,0 +1,10 @@
+id: postgis-raster-st-hillshade
+implements: hillshade
+crosswalk:
+  raster: rast
+  band: nband
+  azimuth: azimuth
+  altitude: altitude
+  z_unit: { note: No unit argument; set scale when elevation and horizontal units differ. }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

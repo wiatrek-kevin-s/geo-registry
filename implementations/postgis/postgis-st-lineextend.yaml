@@ -1,0 +1,18 @@
+id: postgis-st-lineextend
+kind: implementation
+name: st_lineextend
+software: postgis
+call: {interface: sql, name: st_lineextend}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geom: {type: geometry}
+  distance_forward: {type: double precision}
+  distance_backward: {type: double precision, default: '0.0'}
+signatures:
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: distance_forward, type: double precision}
+  - {name: distance_backward, type: double precision, default: '0.0'}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

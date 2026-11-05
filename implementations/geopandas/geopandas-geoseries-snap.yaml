@@ -1,0 +1,12 @@
+id: geopandas-geoseries-snap
+kind: implementation
+name: GeoSeries.snap
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.snap}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  other: {type: any, required: true}
+  tolerance: {type: any, required: true}
+  align: {type: any}
+status: active
+review: {state: harvested, source: python-libs}

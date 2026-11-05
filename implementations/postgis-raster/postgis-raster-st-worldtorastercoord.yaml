@@ -1,0 +1,23 @@
+id: postgis-raster-st-worldtorastercoord
+kind: implementation
+name: st_worldtorastercoord
+software: postgis-raster
+call: {interface: sql, name: st_worldtorastercoord}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  longitude: {type: double precision}
+  latitude: {type: double precision}
+  pt: {type: geometry}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: longitude, type: double precision}
+  - {name: latitude, type: double precision}
+  returns: record
+- arguments:
+  - {name: rast, type: raster}
+  - {name: pt, type: geometry}
+  returns: record
+status: active
+review: {state: harvested, source: postgis}

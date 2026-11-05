@@ -1,0 +1,10 @@
+id: geopandas-geoseries-affine-transform
+kind: implementation
+name: GeoSeries.affine_transform
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.affine_transform}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  matrix: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-libs}

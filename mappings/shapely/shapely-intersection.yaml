@@ -1,0 +1,9 @@
+id: shapely-intersection
+implements: intersect
+crosswalk:
+  a: a
+  b: b
+differences:
+  - Intersects geometries pairwise (or element by element in arrays), not every feature of one layer with every feature of another.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,34 @@
+id: postgis-raster-st-approxcount
+kind: implementation
+name: st_approxcount
+software: postgis-raster
+call: {interface: sql, name: st_approxcount}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  exclude_nodata_value: {type: boolean, default: 'true'}
+  sample_percent: {type: double precision, default: '0.1'}
+  nband: {type: integer, default: '1'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: exclude_nodata_value, type: boolean}
+  - {name: sample_percent, type: double precision, default: '0.1'}
+  returns: bigint
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer, default: '1'}
+  - {name: exclude_nodata_value, type: boolean, default: 'true'}
+  - {name: sample_percent, type: double precision, default: '0.1'}
+  returns: bigint
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: sample_percent, type: double precision}
+  returns: bigint
+- arguments:
+  - {name: rast, type: raster}
+  - {name: sample_percent, type: double precision}
+  returns: bigint
+status: active
+review: {state: harvested, source: postgis}

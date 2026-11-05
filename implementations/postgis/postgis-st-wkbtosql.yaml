@@ -1,0 +1,14 @@
+id: postgis-st-wkbtosql
+kind: implementation
+name: st_wkbtosql
+software: postgis
+call: {interface: sql, name: st_wkbtosql}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  wkb: {type: bytea}
+signatures:
+- arguments:
+  - {name: wkb, type: bytea}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

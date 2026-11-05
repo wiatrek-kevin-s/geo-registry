@@ -1,0 +1,10 @@
+id: gdal-raster-clip
+implements: clip-raster
+crosswalk:
+  raster: input
+  mask: like
+  output: output
+  bbox: bbox
+  bbox_crs: bbox-crs
+effects: { modifies_input: false, network: false }
+review: { state: draft }

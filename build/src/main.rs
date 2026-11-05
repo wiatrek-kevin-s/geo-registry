@@ -1,7 +1,7 @@
 use anyhow::Result;
 use clap::{Parser, Subcommand, ValueEnum};
 use geo_registry::{default_path, entries, index, search, validate};
-use std::path::PathBuf;
+use std::path::{Path, PathBuf};
 use std::process::ExitCode;
 
 #[derive(Parser)]
@@ -20,6 +20,7 @@ enum Kind {
     Data,
     Tool,
     Operation,
+    Implementation,
 }
 
 impl Kind {
@@ -28,6 +29,7 @@ impl Kind {
             Kind::Data => "data",
             Kind::Tool => "tool",
             Kind::Operation => "operation",
+            Kind::Implementation => "implementation",
         }
     }
 }
@@ -71,13 +73,28 @@ fn run_validate(
     let entries_dir = entries_dir.unwrap_or_else(|| default_path("entries"));
     let schema = schema.unwrap_or_else(|| default_path("schema/entry.schema.json"));
     let validator = validate::load_schema(&schema)?;
-    let files = entries::load_dir(&entries_dir)?;
-    let problems = validate::validate_files(&files, &validator);
+    let mut files = entries::load_dir(&entries_dir)?;
+    // Harvested implementations and their mappings sit beside the entries
+    // folder (implementations/, mappings/); a missing folder means none.
+    let root = entries_dir.parent().unwrap_or(Path::new("."));
+    let (impls, load_problems) =
+        entries::load_implementations(&root.join("implementations"), &root.join("mappings"))?;
+    let impl_count = impls.len();
+    files.extend(impls);
+    let mut problems: Vec<validate::Problem> = load_problems
+        .into_iter()
+        .map(|p| validate::Problem {
+            file: p.file,
+            message: p.message,
+        })
+        .collect();
+    problems.extend(validate::validate_files(&files, &validator));
     if problems.is_empty() {
         println!(
-            "ok: {} entries in {} are valid",
+            "ok: {} entries in {} are valid ({} of them harvested implementations)",
             files.len(),
-            entries_dir.display()
+            entries_dir.display(),
+            impl_count
         );
         return Ok(Some(entries::values(&files)));
     }

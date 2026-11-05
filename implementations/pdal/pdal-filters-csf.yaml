@@ -1,0 +1,26 @@
+id: pdal-filters-csf
+kind: implementation
+name: filters.csf
+software: pdal
+call: {interface: pdal-pipeline, name: filters.csf}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  smooth: {type: option, default: 'true'}
+  step: {type: option, default: '0.65'}
+  threshold: {type: option, default: '0.5'}
+  hdiff: {type: option, default: '0.3'}
+  resolution: {type: option, default: '1'}
+  rigidness: {type: option, default: '3'}
+  iterations: {type: option, default: '500'}
+  ignore: {type: option}
+  returns: {type: option, default: 'last, only'}
+  debug: {type: option, default: 'false'}
+  dir: {type: option}
+  ground_class: {type: option, default: '2'}
+  other_class: {type: option, default: '1'}
+  only_ground: {type: option, default: 'false'}
+docs: https://pdal.org/en/master/stages/filters.csf.html
+status: active
+review: {state: harvested, source: pdal}

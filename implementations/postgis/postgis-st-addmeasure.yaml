@@ -1,0 +1,15 @@
+id: postgis-st-addmeasure
+kind: implementation
+name: st_addmeasure
+software: postgis
+call: {interface: sql, name: st_addmeasure}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  - {type: double precision}
+  - {type: double precision}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

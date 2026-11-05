@@ -1,0 +1,46 @@
+id: postgis-raster-st-samealignment
+kind: implementation
+name: st_samealignment
+software: postgis-raster
+call: {interface: sql, name: st_samealignment}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast1: {type: raster}
+  rast2: {type: raster}
+  ulx1: {type: double precision}
+  uly1: {type: double precision}
+  scalex1: {type: double precision}
+  scaley1: {type: double precision}
+  skewx1: {type: double precision}
+  skewy1: {type: double precision}
+  ulx2: {type: double precision}
+  uly2: {type: double precision}
+  scalex2: {type: double precision}
+  scaley2: {type: double precision}
+  skewx2: {type: double precision}
+  skewy2: {type: double precision}
+signatures:
+- arguments:
+  - {name: rast1, type: raster}
+  - {name: rast2, type: raster}
+  returns: boolean
+- arguments:
+  - {type: raster}
+  returns: boolean (aggregate)
+- arguments:
+  - {name: ulx1, type: double precision}
+  - {name: uly1, type: double precision}
+  - {name: scalex1, type: double precision}
+  - {name: scaley1, type: double precision}
+  - {name: skewx1, type: double precision}
+  - {name: skewy1, type: double precision}
+  - {name: ulx2, type: double precision}
+  - {name: uly2, type: double precision}
+  - {name: scalex2, type: double precision}
+  - {name: scaley2, type: double precision}
+  - {name: skewx2, type: double precision}
+  - {name: skewy2, type: double precision}
+  returns: boolean
+notes: Has an aggregate form.
+status: active
+review: {state: harvested, source: postgis}

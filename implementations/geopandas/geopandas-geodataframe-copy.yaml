@@ -1,0 +1,10 @@
+id: geopandas-geodataframe-copy
+kind: implementation
+name: GeoDataFrame.copy
+software: geopandas
+call: {interface: python, name: geopandas.GeoDataFrame.copy}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  deep: {type: bool, default: true}
+status: active
+review: {state: harvested, source: python-libs}

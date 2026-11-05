@@ -1,0 +1,13 @@
+id: postgis-st-xmin
+kind: implementation
+name: st_xmin
+software: postgis
+call: {interface: sql, name: st_xmin}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: box3d}
+  returns: double precision
+status: active
+review: {state: harvested, source: postgis}

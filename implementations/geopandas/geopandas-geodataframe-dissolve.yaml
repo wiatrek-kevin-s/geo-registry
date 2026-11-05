@@ -1,0 +1,18 @@
+id: geopandas-geodataframe-dissolve
+kind: implementation
+name: GeoDataFrame.dissolve
+software: geopandas
+call: {interface: python, name: geopandas.GeoDataFrame.dissolve}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  by: {type: str | None}
+  aggfunc: {type: string, default: first}
+  as_index: {type: bool, default: true}
+  level: {type: any}
+  sort: {type: bool, default: true}
+  observed: {type: bool, default: false}
+  dropna: {type: bool, default: true}
+  method: {type: 'Literal[''unary'', ''coverage'', ''disjoint_subset'']', default: unary}
+  grid_size: {type: float | None}
+status: active
+review: {state: harvested, source: python-libs}

@@ -1,0 +1,13 @@
+id: gdal-raster-zonal-stats
+implements: zonal-statistics
+crosswalk:
+  raster: input
+  zones: zones
+  output: output
+  stats: { param: stat, values: { count: count, mean: mean, min: min, max: max, sum: sum, std: stdev } }
+  band: band
+  all_touched: { param: pixels, values: { "true": all-touched, "false": default } }
+differences:
+  - Also offers fractional cell coverage (pixels fractional) and weighted statistics.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

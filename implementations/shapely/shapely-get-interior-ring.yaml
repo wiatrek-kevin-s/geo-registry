@@ -1,0 +1,11 @@
+id: shapely-get-interior-ring
+kind: implementation
+name: shapely.get_interior_ring
+software: shapely
+call: {interface: python, name: shapely.get_interior_ring}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geometry: {type: any, required: true}
+  index: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-libs}

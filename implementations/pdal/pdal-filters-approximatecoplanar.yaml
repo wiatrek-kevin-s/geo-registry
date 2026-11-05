@@ -1,0 +1,15 @@
+id: pdal-filters-approximatecoplanar
+kind: implementation
+name: filters.approximatecoplanar
+software: pdal
+call: {interface: pdal-pipeline, name: filters.approximatecoplanar}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  knn: {type: option, default: '8'}
+  thresh1: {type: option, default: '25'}
+  thresh2: {type: option, default: '6'}
+docs: https://pdal.org/en/master/stages/filters.approximatecoplanar.html
+status: active
+review: {state: harvested, source: pdal}

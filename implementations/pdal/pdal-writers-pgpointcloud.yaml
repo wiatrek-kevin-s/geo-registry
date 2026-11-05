@@ -1,0 +1,29 @@
+id: pdal-writers-pgpointcloud
+kind: implementation
+name: writers.pgpointcloud
+software: pdal
+call: {interface: pdal-pipeline, name: writers.pgpointcloud}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  output_dims: {type: option}
+  offset_x: {type: option}
+  offset_y: {type: option}
+  offset_z: {type: option}
+  scale_x: {type: option, default: '1'}
+  scale_y: {type: option, default: '1'}
+  scale_z: {type: option, default: '1'}
+  connection: {type: option}
+  table: {type: option}
+  column: {type: option, default: pa}
+  schema: {type: option}
+  compression: {type: option, default: dimensional}
+  overwrite: {type: option}
+  srid: {type: option, default: '4326'}
+  pcid: {type: option}
+  pre_sql: {type: option}
+  post_sql: {type: option}
+docs: https://pdal.org/en/master/stages/writers.pgpointcloud.html
+status: active
+review: {state: harvested, source: pdal}

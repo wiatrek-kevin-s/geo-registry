@@ -1,0 +1,23 @@
+id: gdal-mdim-convert
+kind: implementation
+name: gdal mdim convert
+software: gdal
+call: {interface: cli, name: gdal mdim convert}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  output-format: {type: string}
+  open-option: {type: string_list}
+  input-format: {type: string_list}
+  input: {type: dataset, required: true, note: raster or multidim_raster dataset}
+  creation-option: {type: string_list}
+  overwrite: {type: boolean, default: false}
+  array: {type: string_list}
+  array-option: {type: string_list}
+  group: {type: string_list}
+  subset: {type: string_list}
+  scale-axes: {type: string_list}
+  strict: {type: boolean}
+  output: {type: dataset, required: true, note: input and output; multidim_raster dataset}
+docs: https://gdal.org/programs/gdal_mdim_convert.html
+status: active
+review: {state: harvested, source: gdal}

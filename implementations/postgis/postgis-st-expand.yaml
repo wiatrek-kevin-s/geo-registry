@@ -1,0 +1,46 @@
+id: postgis-st-expand
+kind: implementation
+name: st_expand
+software: postgis
+call: {interface: sql, name: st_expand}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  box: {type: box2d | box3d}
+  dx: {type: double precision}
+  dy: {type: double precision}
+  dz: {type: double precision, default: '0'}
+  geom: {type: geometry}
+  dm: {type: double precision, default: '0'}
+signatures:
+- arguments:
+  - {name: box, type: box2d}
+  - {name: dx, type: double precision}
+  - {name: dy, type: double precision}
+  returns: box2d
+- arguments:
+  - {name: box, type: box3d}
+  - {name: dx, type: double precision}
+  - {name: dy, type: double precision}
+  - {name: dz, type: double precision, default: '0'}
+  returns: box3d
+- arguments:
+  - {type: box2d}
+  - {type: double precision}
+  returns: box2d
+- arguments:
+  - {type: box3d}
+  - {type: double precision}
+  returns: box3d
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: dx, type: double precision}
+  - {name: dy, type: double precision}
+  - {name: dz, type: double precision, default: '0'}
+  - {name: dm, type: double precision, default: '0'}
+  returns: geometry
+- arguments:
+  - {type: geometry}
+  - {type: double precision}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

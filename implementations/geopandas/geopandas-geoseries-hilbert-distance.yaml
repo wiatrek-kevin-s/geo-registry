@@ -1,0 +1,11 @@
+id: geopandas-geoseries-hilbert-distance
+kind: implementation
+name: GeoSeries.hilbert_distance
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.hilbert_distance}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  total_bounds: {type: any}
+  level: {type: integer, default: 16}
+status: active
+review: {state: harvested, source: python-libs}

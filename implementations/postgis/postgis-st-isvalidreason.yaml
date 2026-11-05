@@ -1,0 +1,17 @@
+id: postgis-st-isvalidreason
+kind: implementation
+name: st_isvalidreason
+software: postgis
+call: {interface: sql, name: st_isvalidreason}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  returns: text
+- arguments:
+  - {type: geometry}
+  - {type: integer}
+  returns: text
+status: active
+review: {state: harvested, source: postgis}

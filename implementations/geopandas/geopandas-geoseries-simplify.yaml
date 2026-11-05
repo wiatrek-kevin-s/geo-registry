@@ -1,0 +1,11 @@
+id: geopandas-geoseries-simplify
+kind: implementation
+name: GeoSeries.simplify
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.simplify}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  tolerance: {type: any, required: true}
+  preserve_topology: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-libs}

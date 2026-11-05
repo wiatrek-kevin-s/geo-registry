@@ -1,0 +1,22 @@
+id: postgis-st-pointzm
+kind: implementation
+name: st_pointzm
+software: postgis
+call: {interface: sql, name: st_pointzm}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  xcoordinate: {type: double precision}
+  ycoordinate: {type: double precision}
+  zcoordinate: {type: double precision}
+  mcoordinate: {type: double precision}
+  srid: {type: integer, default: '0'}
+signatures:
+- arguments:
+  - {name: xcoordinate, type: double precision}
+  - {name: ycoordinate, type: double precision}
+  - {name: zcoordinate, type: double precision}
+  - {name: mcoordinate, type: double precision}
+  - {name: srid, type: integer, default: '0'}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

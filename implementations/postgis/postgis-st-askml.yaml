@@ -1,0 +1,27 @@
+id: postgis-st-askml
+kind: implementation
+name: st_askml
+software: postgis
+call: {interface: sql, name: st_askml}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geog: {type: geography}
+  maxdecimaldigits: {type: integer, default: '15'}
+  nprefix: {type: text, default: '''''::text'}
+  geom: {type: geometry}
+signatures:
+- arguments:
+  - {name: geog, type: geography}
+  - {name: maxdecimaldigits, type: integer, default: '15'}
+  - {name: nprefix, type: text, default: '''''::text'}
+  returns: text
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: maxdecimaldigits, type: integer, default: '15'}
+  - {name: nprefix, type: text, default: '''''::text'}
+  returns: text
+- arguments:
+  - {type: text}
+  returns: text
+status: active
+review: {state: harvested, source: postgis}

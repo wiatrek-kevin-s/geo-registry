@@ -1,0 +1,28 @@
+id: postgis-raster-st-mapalgebrafctngb
+kind: implementation
+name: st_mapalgebrafctngb
+software: postgis-raster
+call: {interface: sql, name: st_mapalgebrafctngb}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  band: {type: integer}
+  pixeltype: {type: text}
+  ngbwidth: {type: integer}
+  ngbheight: {type: integer}
+  onerastngbuserfunc: {type: regprocedure}
+  nodatamode: {type: text}
+  args: {type: 'text[]'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: band, type: integer}
+  - {name: pixeltype, type: text}
+  - {name: ngbwidth, type: integer}
+  - {name: ngbheight, type: integer}
+  - {name: onerastngbuserfunc, type: regprocedure}
+  - {name: nodatamode, type: text}
+  - {name: args, type: 'text[]'}
+  returns: raster
+status: active
+review: {state: harvested, source: postgis}

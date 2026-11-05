@@ -1,0 +1,9 @@
+id: geopandas-geoseries-minimum-clearance
+kind: implementation
+name: GeoSeries.minimum_clearance
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.minimum_clearance}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-libs}

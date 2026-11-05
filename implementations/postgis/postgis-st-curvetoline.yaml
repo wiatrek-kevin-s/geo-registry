@@ -1,0 +1,20 @@
+id: postgis-st-curvetoline
+kind: implementation
+name: st_curvetoline
+software: postgis
+call: {interface: sql, name: st_curvetoline}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geom: {type: geometry}
+  tol: {type: double precision, default: '32'}
+  toltype: {type: integer, default: '0'}
+  flags: {type: integer, default: '0'}
+signatures:
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: tol, type: double precision, default: '32'}
+  - {name: toltype, type: integer, default: '0'}
+  - {name: flags, type: integer, default: '0'}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

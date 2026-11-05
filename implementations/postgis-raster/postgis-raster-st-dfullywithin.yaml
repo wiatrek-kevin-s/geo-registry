@@ -1,0 +1,27 @@
+id: postgis-raster-st-dfullywithin
+kind: implementation
+name: st_dfullywithin
+software: postgis-raster
+call: {interface: sql, name: st_dfullywithin}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast1: {type: raster}
+  nband1: {type: integer}
+  rast2: {type: raster}
+  nband2: {type: integer}
+  distance: {type: double precision}
+signatures:
+- arguments:
+  - {name: rast1, type: raster}
+  - {name: nband1, type: integer}
+  - {name: rast2, type: raster}
+  - {name: nband2, type: integer}
+  - {name: distance, type: double precision}
+  returns: boolean
+- arguments:
+  - {name: rast1, type: raster}
+  - {name: rast2, type: raster}
+  - {name: distance, type: double precision}
+  returns: boolean
+status: active
+review: {state: harvested, source: postgis}

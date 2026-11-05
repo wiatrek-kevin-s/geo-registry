@@ -1,0 +1,9 @@
+id: geopandas-geoseries-count-interior-rings
+kind: implementation
+name: GeoSeries.count_interior_rings
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.count_interior_rings}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-libs}

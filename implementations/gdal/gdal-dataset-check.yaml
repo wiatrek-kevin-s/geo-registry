@@ -1,0 +1,14 @@
+id: gdal-dataset-check
+kind: implementation
+name: gdal dataset check
+software: gdal
+call: {interface: cli, name: gdal dataset check}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  input: {type: dataset, required: true, note: raster or vector or multidim_raster dataset}
+  open-option: {type: string_list}
+  input-format: {type: string_list}
+  return-code: {type: integer, note: output}
+docs: https://gdal.org/programs/gdal_dataset_check.html
+status: active
+review: {state: harvested, source: gdal}

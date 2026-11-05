@@ -1,0 +1,18 @@
+id: postgis-st-forcesfs
+kind: implementation
+name: st_forcesfs
+software: postgis
+call: {interface: sql, name: st_forcesfs}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  version: {type: text}
+signatures:
+- arguments:
+  - {type: geometry}
+  returns: geometry
+- arguments:
+  - {type: geometry}
+  - {name: version, type: text}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

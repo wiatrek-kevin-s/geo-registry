@@ -1,0 +1,29 @@
+id: pdal-readers-stac
+kind: implementation
+name: readers.stac
+software: pdal
+call: {interface: pdal-pipeline, name: readers.stac}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  filename: {type: option}
+  count: {type: option, default: '18446744073709551615'}
+  override_srs: {type: option}
+  default_srs: {type: option}
+  asset_names: {type: option, default: data}
+  date_ranges: {type: option}
+  bounds: {type: option}
+  ogr: {type: option}
+  properties: {type: option}
+  items: {type: option}
+  catalogs: {type: option}
+  collections: {type: option}
+  validate_schema: {type: option, default: 'false'}
+  reader_args: {type: option}
+  requests: {type: option, default: '8'}
+  catalog_schema_url: {type: option, default: 'https://schemas.stacspec.org/v1.0.0/catalog-spec/json-schema/catalog.json'}
+  collection_schema_url: {type: option, default: 'https://schemas.stacspec.org/v1.0.0/collection-spec/json-schema/collection.json'}
+  feature_schema_url: {type: option, default: 'https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/item.json'}
+docs: https://pdal.org/en/master/stages/readers.stac.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

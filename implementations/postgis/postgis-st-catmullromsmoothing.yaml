@@ -1,0 +1,14 @@
+id: postgis-st-catmullromsmoothing
+kind: implementation
+name: st_catmullromsmoothing
+software: postgis
+call: {interface: sql, name: st_catmullromsmoothing}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  - {type: integer, default: '5'}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

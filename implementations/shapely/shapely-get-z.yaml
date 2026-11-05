@@ -1,0 +1,10 @@
+id: shapely-get-z
+kind: implementation
+name: shapely.get_z
+software: shapely
+call: {interface: python, name: shapely.get_z}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  point: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-libs}

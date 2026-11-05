@@ -1,0 +1,13 @@
+id: postgis-raster-st-memsize
+kind: implementation
+name: st_memsize
+software: postgis-raster
+call: {interface: sql, name: st_memsize}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: raster}
+  returns: integer
+status: active
+review: {state: harvested, source: postgis}

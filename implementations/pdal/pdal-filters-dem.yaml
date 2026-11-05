@@ -1,0 +1,16 @@
+id: pdal-filters-dem
+kind: implementation
+name: filters.dem
+software: pdal
+call: {interface: pdal-pipeline, name: filters.dem}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  limits: {type: option}
+  raster: {type: option}
+  band: {type: option, default: '1'}
+docs: https://pdal.org/en/master/stages/filters.dem.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

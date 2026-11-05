@@ -1,0 +1,25 @@
+id: pdal-writers-text
+kind: implementation
+name: writers.text
+software: pdal
+call: {interface: pdal-pipeline, name: writers.text}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  filename: {type: option}
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  format: {type: option, default: CSV}
+  jscallback: {type: option}
+  keep_unspecified: {type: option, default: 'true'}
+  order: {type: option}
+  write_header: {type: option, default: 'true'}
+  newline: {type: option, default: '
+
+      '}
+  delimiter: {type: option, default: ','}
+  quote_header: {type: option, default: 'true'}
+  precision: {type: option, default: '3'}
+docs: https://pdal.org/en/master/stages/writers.text.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

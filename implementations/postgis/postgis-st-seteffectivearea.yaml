@@ -1,0 +1,15 @@
+id: postgis-st-seteffectivearea
+kind: implementation
+name: st_seteffectivearea
+software: postgis
+call: {interface: sql, name: st_seteffectivearea}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  - {type: double precision, default: '''-1''::integer'}
+  - {type: integer, default: '1'}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

@@ -1,0 +1,13 @@
+id: shapely-transform-coordseq
+kind: implementation
+name: shapely.transform_coordseq
+software: shapely
+call: {interface: python, name: shapely.transform_coordseq}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geometry: {type: any, required: true}
+  transformation: {type: any, required: true}
+  include_z: {type: Union, default: false}
+  interleaved: {type: bool, default: true}
+status: active
+review: {state: harvested, source: python-libs}

@@ -1,0 +1,18 @@
+id: postgis-st-inversetransformpipeline
+kind: implementation
+name: st_inversetransformpipeline
+software: postgis
+call: {interface: sql, name: st_inversetransformpipeline}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geom: {type: geometry}
+  pipeline: {type: text}
+  to_srid: {type: integer, default: '0'}
+signatures:
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: pipeline, type: text}
+  - {name: to_srid, type: integer, default: '0'}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

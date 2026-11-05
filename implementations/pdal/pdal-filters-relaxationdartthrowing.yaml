@@ -1,0 +1,18 @@
+id: pdal-filters-relaxationdartthrowing
+kind: implementation
+name: filters.relaxationdartthrowing
+software: pdal
+call: {interface: pdal-pipeline, name: filters.relaxationdartthrowing}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  decay: {type: option, default: '0.9'}
+  radius: {type: option, default: '1'}
+  terminal_radius: {type: option, default: '0.001'}
+  count: {type: option, default: '1000'}
+  shuffle: {type: option, default: 'true'}
+  seed: {type: option}
+docs: https://pdal.org/en/master/stages/filters.relaxationdartthrowing.html
+status: active
+review: {state: harvested, source: pdal}

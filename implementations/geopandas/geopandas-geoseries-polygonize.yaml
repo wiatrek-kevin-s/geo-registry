@@ -1,0 +1,11 @@
+id: geopandas-geoseries-polygonize
+kind: implementation
+name: GeoSeries.polygonize
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.polygonize}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  node: {type: boolean, default: true}
+  full: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-libs}

@@ -1,0 +1,17 @@
+id: geopandas-sjoin-nearest
+kind: implementation
+name: geopandas.sjoin_nearest
+software: geopandas
+call: {interface: python, name: geopandas.sjoin_nearest}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  left_df: {type: GeoDataFrame, required: true}
+  right_df: {type: GeoDataFrame, required: true}
+  how: {type: str, default: inner}
+  max_distance: {type: Union}
+  lsuffix: {type: str, default: left}
+  rsuffix: {type: str, default: right}
+  distance_col: {type: Union}
+  exclusive: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-libs}

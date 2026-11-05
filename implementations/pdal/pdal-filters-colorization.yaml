@@ -1,0 +1,15 @@
+id: pdal-filters-colorization
+kind: implementation
+name: filters.colorization
+software: pdal
+call: {interface: pdal-pipeline, name: filters.colorization}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  raster: {type: option}
+  dimensions: {type: option}
+docs: https://pdal.org/en/master/stages/filters.colorization.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

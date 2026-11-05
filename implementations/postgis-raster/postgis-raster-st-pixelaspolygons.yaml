@@ -1,0 +1,18 @@
+id: postgis-raster-st-pixelaspolygons
+kind: implementation
+name: st_pixelaspolygons
+software: postgis-raster
+call: {interface: sql, name: st_pixelaspolygons}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  band: {type: integer, default: '1'}
+  exclude_nodata_value: {type: boolean, default: 'true'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: band, type: integer, default: '1'}
+  - {name: exclude_nodata_value, type: boolean, default: 'true'}
+  returns: TABLE(geom geometry, val double precision, x integer, y integer)
+status: active
+review: {state: harvested, source: postgis}

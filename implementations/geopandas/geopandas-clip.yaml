@@ -1,0 +1,13 @@
+id: geopandas-clip
+kind: implementation
+name: geopandas.clip
+software: geopandas
+call: {interface: python, name: geopandas.clip}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  gdf: {type: any, required: true}
+  mask: {type: any, required: true}
+  keep_geom_type: {type: boolean, default: false}
+  sort: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-libs}

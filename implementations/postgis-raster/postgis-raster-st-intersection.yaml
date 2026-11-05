@@ -1,0 +1,85 @@
+id: postgis-raster-st-intersection
+kind: implementation
+name: st_intersection
+software: postgis-raster
+call: {interface: sql, name: st_intersection}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geomin: {type: geometry}
+  rast: {type: raster}
+  band: {type: integer, default: '1'}
+  rast1: {type: raster}
+  band1: {type: integer}
+  rast2: {type: raster}
+  band2: {type: integer}
+  nodataval: {type: 'double precision | double precision[]', default: 'NULL::double precision[]'}
+  returnband: {type: text, default: '''BOTH''::text'}
+signatures:
+- arguments:
+  - {name: geomin, type: geometry}
+  - {name: rast, type: raster}
+  - {name: band, type: integer, default: '1'}
+  returns: SETOF geomval
+- arguments:
+  - {name: rast, type: raster}
+  - {name: band, type: integer}
+  - {name: geomin, type: geometry}
+  returns: SETOF geomval
+- arguments:
+  - {name: rast, type: raster}
+  - {name: geomin, type: geometry}
+  returns: SETOF geomval
+- arguments:
+  - {name: rast1, type: raster}
+  - {name: band1, type: integer}
+  - {name: rast2, type: raster}
+  - {name: band2, type: integer}
+  - {name: nodataval, type: double precision}
+  returns: raster
+- arguments:
+  - {name: rast1, type: raster}
+  - {name: band1, type: integer}
+  - {name: rast2, type: raster}
+  - {name: band2, type: integer}
+  - {name: nodataval, type: 'double precision[]'}
+  returns: raster
+- arguments:
+  - {name: rast1, type: raster}
+  - {name: band1, type: integer}
+  - {name: rast2, type: raster}
+  - {name: band2, type: integer}
+  - {name: returnband, type: text}
+  - {name: nodataval, type: double precision}
+  returns: raster
+- arguments:
+  - {name: rast1, type: raster}
+  - {name: band1, type: integer}
+  - {name: rast2, type: raster}
+  - {name: band2, type: integer}
+  - {name: returnband, type: text, default: '''BOTH''::text'}
+  - {name: nodataval, type: 'double precision[]', default: 'NULL::double precision[]'}
+  returns: raster
+- arguments:
+  - {name: rast1, type: raster}
+  - {name: rast2, type: raster}
+  - {name: nodataval, type: double precision}
+  returns: raster
+- arguments:
+  - {name: rast1, type: raster}
+  - {name: rast2, type: raster}
+  - {name: nodataval, type: 'double precision[]'}
+  returns: raster
+- arguments:
+  - {name: rast1, type: raster}
+  - {name: rast2, type: raster}
+  - {name: returnband, type: text}
+  - {name: nodataval, type: double precision}
+  returns: raster
+- arguments:
+  - {name: rast1, type: raster}
+  - {name: rast2, type: raster}
+  - {name: returnband, type: text, default: '''BOTH''::text'}
+  - {name: nodataval, type: 'double precision[]', default: 'NULL::double precision[]'}
+  returns: raster
+status: active
+review: {state: harvested, source: postgis}

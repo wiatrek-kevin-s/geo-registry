@@ -1,0 +1,25 @@
+id: pdal-filters-smrf
+kind: implementation
+name: filters.smrf
+software: pdal
+call: {interface: pdal-pipeline, name: filters.smrf}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  cell: {type: option, default: '1'}
+  slope: {type: option, default: '0.15'}
+  scalar: {type: option, default: '1.25'}
+  threshold: {type: option, default: '0.5'}
+  cut: {type: option, default: '0'}
+  dir: {type: option}
+  ignore: {type: option}
+  returns: {type: option, default: 'last, only'}
+  classbits: {type: option}
+  window: {type: option}
+  ground_class: {type: option, default: '2'}
+  other_class: {type: option, default: '1'}
+  only_ground: {type: option, default: 'false'}
+docs: https://pdal.org/en/master/stages/filters.smrf.html
+status: active
+review: {state: harvested, source: pdal}

@@ -1,0 +1,18 @@
+id: pdal-filters-greedyprojection
+kind: implementation
+name: filters.greedyprojection
+software: pdal
+call: {interface: pdal-pipeline, name: filters.greedyprojection}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  multiplier: {type: option}
+  radius: {type: option}
+  num_neighbors: {type: option, default: '100'}
+  min_angle: {type: option, default: '0.1745329252'}
+  max_angle: {type: option, default: '2.094395102'}
+  eps_angle: {type: option, default: '0.7853981634'}
+docs: https://pdal.org/en/master/stages/filters.greedyprojection.html
+status: active
+review: {state: harvested, source: pdal}

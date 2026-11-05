@@ -1,0 +1,16 @@
+id: geopandas-make-grid
+kind: implementation
+name: geopandas.make_grid
+software: geopandas
+call: {interface: python, name: geopandas.make_grid}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  input_geometry: {type: Union, required: true}
+  cell_size: {type: float, required: true}
+  grid_type: {type: Literal, default: square}
+  feature_type: {type: Literal, default: polygons}
+  offset: {type: Union}
+  intersect: {type: bool, default: true}
+  flat_topped: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-libs}

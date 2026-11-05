@@ -1,0 +1,14 @@
+id: postgis-raster-st-summary
+kind: implementation
+name: st_summary
+software: postgis-raster
+call: {interface: sql, name: st_summary}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  returns: text
+status: active
+review: {state: harvested, source: postgis}

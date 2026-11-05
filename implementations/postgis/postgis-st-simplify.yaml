@@ -1,0 +1,19 @@
+id: postgis-st-simplify
+kind: implementation
+name: st_simplify
+software: postgis
+call: {interface: sql, name: st_simplify}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  - {type: double precision}
+  returns: geometry
+- arguments:
+  - {type: geometry}
+  - {type: double precision}
+  - {type: boolean}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

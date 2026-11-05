@@ -1,0 +1,14 @@
+id: pdal-filters-mongo
+kind: implementation
+name: filters.mongo
+software: pdal
+call: {interface: pdal-pipeline, name: filters.mongo}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  expression: {type: option}
+docs: https://pdal.org/en/master/stages/filters.mongo.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

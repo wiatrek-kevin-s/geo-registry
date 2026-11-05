@@ -1,0 +1,10 @@
+id: geopandas-points-from-xy
+implements: table-to-points
+crosswalk:
+  x_field: { param: x, pass: values }
+  y_field: { param: y, pass: values }
+  crs: crs
+differences:
+  - Returns the point geometries only; build the GeoDataFrame from the table and them.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

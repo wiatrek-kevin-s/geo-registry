@@ -1,0 +1,59 @@
+id: postgis-raster-st-clip
+kind: implementation
+name: st_clip
+software: postgis-raster
+call: {interface: sql, name: st_clip}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  geom: {type: geometry}
+  crop: {type: boolean, default: 'true'}
+  touched: {type: boolean, default: 'false'}
+  nodataval: {type: 'double precision | double precision[]', default: 'NULL::double precision[]'}
+  nband: {type: 'integer | integer[]'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: geom, type: geometry}
+  - {name: crop, type: boolean}
+  - {name: touched, type: boolean, default: 'false'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: geom, type: geometry}
+  - {name: nodataval, type: double precision}
+  - {name: crop, type: boolean, default: 'true'}
+  - {name: touched, type: boolean, default: 'false'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: geom, type: geometry}
+  - {name: nodataval, type: 'double precision[]', default: 'NULL::double precision[]'}
+  - {name: crop, type: boolean, default: 'true'}
+  - {name: touched, type: boolean, default: 'false'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: geom, type: geometry}
+  - {name: crop, type: boolean, default: 'true'}
+  - {name: touched, type: boolean, default: 'false'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  - {name: geom, type: geometry}
+  - {name: nodataval, type: double precision}
+  - {name: crop, type: boolean, default: 'true'}
+  - {name: touched, type: boolean, default: 'false'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: 'integer[]'}
+  - {name: geom, type: geometry}
+  - {name: nodataval, type: 'double precision[]'}
+  - {name: crop, type: boolean, default: 'true'}
+  - {name: touched, type: boolean, default: 'false'}
+  returns: raster
+status: active
+review: {state: harvested, source: postgis}

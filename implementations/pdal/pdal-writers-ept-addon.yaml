@@ -1,0 +1,14 @@
+id: pdal-writers-ept-addon
+kind: implementation
+name: writers.ept_addon
+software: pdal
+call: {interface: pdal-pipeline, name: writers.ept_addon}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  addons: {type: option}
+  threads: {type: option}
+docs: https://pdal.org/en/master/stages/writers.ept_addon.html
+status: active
+review: {state: harvested, source: pdal}

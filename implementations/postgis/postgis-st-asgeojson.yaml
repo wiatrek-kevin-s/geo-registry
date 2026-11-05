@@ -1,0 +1,38 @@
+id: postgis-st-asgeojson
+kind: implementation
+name: st_asgeojson
+software: postgis
+call: {interface: sql, name: st_asgeojson}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geog: {type: geography}
+  maxdecimaldigits: {type: integer, default: '9'}
+  options: {type: integer}
+  geom: {type: geometry}
+  r: {type: record}
+  geom_column: {type: text, default: '''''::text'}
+  pretty_bool: {type: boolean, default: 'false'}
+  id_column: {type: text, default: '''''::text'}
+signatures:
+- arguments:
+  - {name: geog, type: geography}
+  - {name: maxdecimaldigits, type: integer, default: '9'}
+  - {name: options, type: integer, default: '0'}
+  returns: text
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: maxdecimaldigits, type: integer, default: '9'}
+  - {name: options, type: integer, default: '8'}
+  returns: text
+- arguments:
+  - {name: r, type: record}
+  - {name: geom_column, type: text, default: '''''::text'}
+  - {name: maxdecimaldigits, type: integer, default: '9'}
+  - {name: pretty_bool, type: boolean, default: 'false'}
+  - {name: id_column, type: text, default: '''''::text'}
+  returns: text
+- arguments:
+  - {type: text}
+  returns: text
+status: active
+review: {state: harvested, source: postgis}

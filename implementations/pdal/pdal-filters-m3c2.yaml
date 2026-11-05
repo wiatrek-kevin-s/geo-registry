@@ -1,0 +1,18 @@
+id: pdal-filters-m3c2
+kind: implementation
+name: filters.m3c2
+software: pdal
+call: {interface: pdal-pipeline, name: filters.m3c2}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  normal_radius: {type: option, default: '2'}
+  cyl_radius: {type: option, default: '2'}
+  cyl_halflen: {type: option, default: '5'}
+  reg_error: {type: option, default: '0'}
+  orientation: {type: option, default: up}
+  min_points: {type: option, default: '1'}
+docs: https://pdal.org/en/master/stages/filters.m3c2.html
+status: active
+review: {state: harvested, source: pdal}

@@ -1,0 +1,22 @@
+id: postgis-raster-st-rastertoworldcoordx
+kind: implementation
+name: st_rastertoworldcoordx
+software: postgis-raster
+call: {interface: sql, name: st_rastertoworldcoordx}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  xr: {type: integer}
+  yr: {type: integer}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: xr, type: integer}
+  returns: double precision
+- arguments:
+  - {name: rast, type: raster}
+  - {name: xr, type: integer}
+  - {name: yr, type: integer}
+  returns: double precision
+status: active
+review: {state: harvested, source: postgis}

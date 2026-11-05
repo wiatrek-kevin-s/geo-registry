@@ -1,0 +1,18 @@
+id: postgis-st-simplifypolygonhull
+kind: implementation
+name: st_simplifypolygonhull
+software: postgis
+call: {interface: sql, name: st_simplifypolygonhull}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geom: {type: geometry}
+  vertex_fraction: {type: double precision}
+  is_outer: {type: boolean, default: 'true'}
+signatures:
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: vertex_fraction, type: double precision}
+  - {name: is_outer, type: boolean, default: 'true'}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

@@ -1,0 +1,19 @@
+id: pdal-filters-sample
+kind: implementation
+name: filters.sample
+software: pdal
+call: {interface: pdal-pipeline, name: filters.sample}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  cell: {type: option}
+  radius: {type: option}
+  dimension: {type: option}
+  origin_x: {type: option}
+  origin_y: {type: option}
+  origin_z: {type: option}
+docs: https://pdal.org/en/master/stages/filters.sample.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

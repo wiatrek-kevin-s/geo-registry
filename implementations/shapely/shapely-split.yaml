@@ -1,0 +1,11 @@
+id: shapely-split
+kind: implementation
+name: shapely.split
+software: shapely
+call: {interface: python, name: shapely.split}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geometry: {type: any, required: true}
+  splitter: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-libs}

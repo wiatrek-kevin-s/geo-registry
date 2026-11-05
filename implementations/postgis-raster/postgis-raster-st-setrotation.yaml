@@ -1,0 +1,16 @@
+id: postgis-raster-st-setrotation
+kind: implementation
+name: st_setrotation
+software: postgis-raster
+call: {interface: sql, name: st_setrotation}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  rotation: {type: double precision}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: rotation, type: double precision}
+  returns: raster
+status: active
+review: {state: harvested, source: postgis}

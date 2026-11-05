@@ -1,0 +1,21 @@
+id: gdal-raster-tri
+kind: implementation
+name: gdal raster tri
+software: gdal
+call: {interface: cli, name: gdal raster tri}
+harvest: {harvester: gdal, engine_version: 3.13.3}
+parameters:
+  input-format: {type: string_list}
+  open-option: {type: string_list}
+  input: {type: dataset_list, required: true, note: raster dataset}
+  output-format: {type: string}
+  creation-option: {type: string_list}
+  overwrite: {type: boolean, default: false, note: exclusive group overwrite-append}
+  append: {type: boolean, default: false, note: exclusive group overwrite-append}
+  band: {type: integer, default: 1}
+  algorithm: {type: string, default: Riley, values: [Riley, Wilson]}
+  no-edges: {type: boolean}
+  output: {type: dataset, required: true, note: input and output; raster dataset}
+docs: https://gdal.org/programs/gdal_raster_tri.html
+status: active
+review: {state: harvested, source: gdal}

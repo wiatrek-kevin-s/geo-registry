@@ -1,0 +1,17 @@
+id: postgis-st-linemerge
+kind: implementation
+name: st_linemerge
+software: postgis
+call: {interface: sql, name: st_linemerge}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: geometry}
+  returns: geometry
+- arguments:
+  - {type: geometry}
+  - {type: boolean}
+  returns: geometry
+status: active
+review: {state: harvested, source: postgis}

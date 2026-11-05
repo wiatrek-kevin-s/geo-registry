@@ -1,0 +1,12 @@
+id: shapely-intersection
+kind: implementation
+name: shapely.intersection
+software: shapely
+call: {interface: python, name: shapely.intersection}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  a: {type: any, required: true}
+  b: {type: any, required: true}
+  grid_size: {type: any}
+status: active
+review: {state: harvested, source: python-libs}

@@ -1,0 +1,15 @@
+id: pdal-filters-voxeldownsize
+kind: implementation
+name: filters.voxeldownsize
+software: pdal
+call: {interface: pdal-pipeline, name: filters.voxeldownsize}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  cell: {type: option, default: '0.001'}
+  mode: {type: option, default: center}
+docs: https://pdal.org/en/master/stages/filters.voxeldownsize.html
+notes: streamable
+status: active
+review: {state: harvested, source: pdal}

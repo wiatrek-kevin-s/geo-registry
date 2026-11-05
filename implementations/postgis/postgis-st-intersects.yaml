@@ -1,0 +1,26 @@
+id: postgis-st-intersects
+kind: implementation
+name: st_intersects
+software: postgis
+call: {interface: sql, name: st_intersects}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geog1: {type: geography}
+  geog2: {type: geography}
+  geom1: {type: geometry}
+  geom2: {type: geometry}
+signatures:
+- arguments:
+  - {name: geog1, type: geography}
+  - {name: geog2, type: geography}
+  returns: boolean
+- arguments:
+  - {name: geom1, type: geometry}
+  - {name: geom2, type: geometry}
+  returns: boolean
+- arguments:
+  - {type: text}
+  - {type: text}
+  returns: boolean
+status: active
+review: {state: harvested, source: postgis}

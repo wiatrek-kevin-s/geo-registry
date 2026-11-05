@@ -1,0 +1,10 @@
+id: shapely-total-bounds
+kind: implementation
+name: shapely.total_bounds
+software: shapely
+call: {interface: python, name: shapely.total_bounds}
+harvest: {harvester: python-libs, engine_version: 2.2.0}
+parameters:
+  geometry: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-libs}

@@ -1,0 +1,16 @@
+id: postgis-st-asencodedpolyline
+kind: implementation
+name: st_asencodedpolyline
+software: postgis
+call: {interface: sql, name: st_asencodedpolyline}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  geom: {type: geometry}
+  nprecision: {type: integer, default: '5'}
+signatures:
+- arguments:
+  - {name: geom, type: geometry}
+  - {name: nprecision, type: integer, default: '5'}
+  returns: text
+status: active
+review: {state: harvested, source: postgis}

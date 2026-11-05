@@ -1,0 +1,9 @@
+id: shapely-simplify
+implements: simplify
+crosswalk:
+  layer: geometry
+  tolerance: tolerance
+  unit: { fixed: crs-units, note: Shapely has no CRS; tolerance is in the coordinates' units. }
+  preserve_topology: preserve_topology
+effects: { modifies_input: false, network: false }
+review: { state: draft }

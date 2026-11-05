@@ -1,0 +1,10 @@
+id: geopandas-geoseries-force-3d
+kind: implementation
+name: GeoSeries.force_3d
+software: geopandas
+call: {interface: python, name: geopandas.GeoSeries.force_3d}
+harvest: {harvester: python-libs, engine_version: 1.2.0}
+parameters:
+  z: {type: integer, default: 0}
+status: active
+review: {state: harvested, source: python-libs}

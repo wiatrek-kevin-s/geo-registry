@@ -1,0 +1,13 @@
+id: postgis-st-ysize
+kind: implementation
+name: st_ysize
+software: postgis
+call: {interface: sql, name: st_ysize}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters: {}
+signatures:
+- arguments:
+  - {type: box3d}
+  returns: double precision
+status: active
+review: {state: harvested, source: postgis}

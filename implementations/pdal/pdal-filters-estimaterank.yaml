@@ -1,0 +1,14 @@
+id: pdal-filters-estimaterank
+kind: implementation
+name: filters.estimaterank
+software: pdal
+call: {interface: pdal-pipeline, name: filters.estimaterank}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  knn: {type: option, default: '8'}
+  thresh: {type: option, default: '0.01'}
+docs: https://pdal.org/en/master/stages/filters.estimaterank.html
+status: active
+review: {state: harvested, source: pdal}

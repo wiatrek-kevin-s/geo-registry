@@ -1,0 +1,27 @@
+id: postgis-raster-st-band
+kind: implementation
+name: st_band
+software: postgis-raster
+call: {interface: sql, name: st_band}
+harvest: {harvester: postgis, engine_version: 3.7.0}
+parameters:
+  rast: {type: raster}
+  nband: {type: integer}
+  nbands: {type: 'integer[] | text', default: 'ARRAY[1]'}
+  delimiter: {type: character, default: ''',''::bpchar'}
+signatures:
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nband, type: integer}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nbands, type: 'integer[]', default: 'ARRAY[1]'}
+  returns: raster
+- arguments:
+  - {name: rast, type: raster}
+  - {name: nbands, type: text}
+  - {name: delimiter, type: character, default: ''',''::bpchar'}
+  returns: raster
+status: active
+review: {state: harvested, source: postgis}

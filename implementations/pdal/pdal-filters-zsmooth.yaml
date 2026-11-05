@@ -1,0 +1,15 @@
+id: pdal-filters-zsmooth
+kind: implementation
+name: filters.zsmooth
+software: pdal
+call: {interface: pdal-pipeline, name: filters.zsmooth}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  radius: {type: option, default: '1'}
+  medianpercent: {type: option, default: '50'}
+  dim: {type: option}
+docs: https://pdal.org/en/master/stages/filters.zsmooth.html
+status: active
+review: {state: harvested, source: pdal}

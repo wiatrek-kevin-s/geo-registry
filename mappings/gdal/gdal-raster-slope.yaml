@@ -1,0 +1,10 @@
+id: gdal-raster-slope
+implements: slope
+crosswalk:
+  raster: input
+  output: output
+  units: { param: unit, values: { degrees: degree, percent: percent } }
+  band: band
+  z_unit: { note: "No unit argument; when elevation and horizontal units differ, set xscale and yscale (see GDAL's page)." }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

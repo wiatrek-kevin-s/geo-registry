@@ -1,0 +1,18 @@
+id: pdal-writers-ply
+kind: implementation
+name: writers.ply
+software: pdal
+call: {interface: pdal-pipeline, name: writers.ply}
+harvest: {harvester: pdal, engine_version: 2.10.2}
+parameters:
+  filename: {type: option}
+  where: {type: option}
+  where_merge: {type: option, default: auto}
+  storage_mode: {type: option, default: ascii}
+  dims: {type: option}
+  faces: {type: option}
+  sized_types: {type: option, default: 'true'}
+  precision: {type: option, default: '3'}
+docs: https://pdal.org/en/master/stages/writers.ply.html
+status: active
+review: {state: harvested, source: pdal}
