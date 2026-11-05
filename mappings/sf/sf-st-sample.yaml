@@ -1,0 +1,10 @@
+id: sf-st-sample
+implements: random-points-in-polygons
+crosswalk:
+  layer: x
+  count: size
+  seed: { note: Call set.seed() first; there is no seed argument. }
+differences:
+  - size is the total over all polygons, shared by area, unless given one value per polygon.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

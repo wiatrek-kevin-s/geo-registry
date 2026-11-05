@@ -174,6 +174,14 @@ CASES = [
     Case("explode-lines", "segments keep the length", {"layer": [shapely.LineString(
          [(621000, 3349000), (621050, 3349000), (621050, 3349050), (621100, 3349050)])]}, {}, "length", expected=150.0,
          tolerance=1e-6),
+    Case("split-lines-by-length", "100 m line in 30 m pieces: four", {"layer": [shapely.LineString(
+         [(621000, 3349000), (621100, 3349000)])]}, {"length": 30, "unit": "m"}, "count", expected=4),
+    Case("split-lines-by-length", "pieces keep the length", {"layer": [shapely.LineString(
+         [(621000, 3349000), (621100, 3349000)])]}, {"length": 30, "unit": "m"}, "length", expected=100.0, tolerance=1e-6),
+    Case("random-points-in-polygons", "ten points in a square", {"layer": [poly(621000, 3349000, 621100, 3349100)]},
+         {"count": 10, "seed": 1}, "vertices", expected=10),
+    Case("random-points-in-polygons", "ten points, no seed", {"layer": [poly(621000, 3349000, 621100, 3349100)]},
+         {"count": 10}, "vertices", expected=10),
     Case("polygons-to-lines", "outline of a 100 m square", {"layer": [poly(0, 0, 100, 100)]}, {}, "length", expected=400.0),
     Case("lines-to-polygons", "closed square line", {"layer": [shapely.LineString([(0, 0), (100, 0), (100, 100), (0, 100), (0, 0)])]},
          {}, "area", expected=10000.0),
@@ -214,6 +222,8 @@ SAMPLE_POINTS = [shapely.Point(DEM_ORIGIN[0] + dx, DEM_ORIGIN[1] - dy) for dx, d
 RASTER_WEST, RASTER_EAST = "raster:west", "raster:east"  # its western and eastern 10 columns
 RASTER_TARGET = "raster:target"  # same grid, nodata except one cell (TARGET_CELL) of value 1
 RASTER_TARGET_ZERO = "raster:target0"  # the same with a background of 0 instead of nodata
+RASTER_HOLE = "raster:hole"  # the DEM with one interior cell (HOLE_CELL) set to nodata
+HOLE_CELL = (10, 10)
 TARGET_CELL = (5, 5)  # row, column
 
 
@@ -279,6 +289,21 @@ RASTER_CASES = [
          {"resampling": "nearest"}, "value:value", expected=5.5 + 12.5 + 16.5, tolerance=1e-6),
     Case("extract-values-to-points", "the same points, interpolated", {"points": SAMPLE_POINTS, "raster": RASTER},
          {"resampling": "bilinear"}, "value:value", expected=5.2 + 12.7 + 16.8, tolerance=1e-5),
+    # Every cell of the plane drains west.
+    Case("flow-direction", "plane draining west, Esri codes: 16", {"raster": RASTER}, {"encoding": "esri"},
+         "raster_median", expected=16.0),
+    Case("flow-direction", "plane draining west, WhiteboxTools codes: 32", {"raster": RASTER}, {"encoding": "whitebox"},
+         "raster_median", expected=32.0),
+    Case("flow-direction", "plane draining west, GRASS codes: 4", {"raster": RASTER}, {"encoding": "grass"},
+         "raster_median", expected=4.0),
+    Case("flow-direction", "plane draining west, in degrees: 180", {"raster": RASTER}, {"encoding": "degrees"},
+         "raster_median", expected=180.0),
+    # One missing interior cell on the plane: any interpolation from its neighbours restores it.
+    Case("fill-nodata", "one missing cell: all 400 cells have values", {"raster": RASTER_HOLE}, {}, "raster_count",
+         expected=400.0),
+    Case("fill-nodata", "the filled value continues the plane", {"raster": RASTER_HOLE}, {}, "raster_mean",
+         expected=10.0, tolerance=1e-4),
+    Case("raster-to-points", "one point per cell", {"raster": RASTER}, {}, "count", expected=400.0),
     Case("rasterize", "50 m by 30 m rectangle at 10 m cells", {"layer": [dem_box(0, 5, 0, 3)]},
          {"resolution": 10}, "raster_count", expected=15.0),
     # The DEM's 20 columns each hold one value (0.5, 1.5, ... 19.5), so 20 strips.
@@ -475,6 +500,14 @@ KNOWN_DIFFERENCES = {
         "a positive distance offsets to the right of the line's direction",
     ("turf-lineoffset", "a left turn, inside of the bend"):
         "a positive distance offsets to the right of the line's direction (the outside of the bend)",
+    ("gdal-raster-fill-nodata", "the filled value continues the plane"):
+        "the missing cell is filled with 10.96 where its neighbours average 10.5",
+    ("qgis-gdal-fillnodata", "the filled value continues the plane"):
+        "the missing cell is filled with 10.96 where its neighbours average 10.5 (GDAL's fill)",
+    ("rasterio-fill-fillnodata", "the filled value continues the plane"):
+        "the missing cell is filled with 10.96 where its neighbours average 10.5 (GDAL's fill)",
+    ("rioxarray-raster-array-rasterarray-interpolate-na", "the filled value continues the plane"):
+        "method defaults to nearest: the gap takes one neighbour's value",
     ("turf-envelope", "a tilted rectangle's bounding box"):
         "the box follows longitude and latitude, not the projected CRS's axes",
     ("qgis-native-densifygeometriesgivenaninterval", "100 m line, segments of at most 10 m"):
@@ -489,6 +522,10 @@ KNOWN_DIFFERENCES = {
 # Engine bugs the tests hit at random, recorded on the mapping: an error containing this
 # text is reported as "differs" with the reason instead of failing. (implementation id, case title)
 KNOWN_ERRORS = {
+    ("qgis-native-randompointsinpolygons", "ten points in a square"): (
+        "UNIQUE constraint failed", "copies the polygon's GeoPackage fid onto every point, so the GeoPackage output fails"),
+    ("qgis-native-randompointsinpolygons", "ten points, no seed"): (
+        "UNIQUE constraint failed", "copies the polygon's GeoPackage fid onto every point, so the GeoPackage output fails"),
     ("grass-v-parallel", "eastward line, 10 m to the left"): (
         "point array must contain 0 or >1 elements", "GRASS 8.5's v.parallel returns a one-vertex line for a two-vertex line"),
     ("grass-v-parallel", "its length"): (
@@ -616,6 +653,11 @@ def run_pylib(impl: dict, op: dict, case: Case):
             import rasterio.mask
             import rasterio.warp
             with rasterio.open(dem) as ds:
+                if name == "rasterio.fill.fillnodata":
+                    import rasterio.fill
+                    band = ds.read(1)
+                    out = rasterio.fill.fillnodata(**{ports["raster"]: band}, mask=(band != ds.nodata).astype("uint8"), **args)
+                    return valid_cells(out, ds.nodata)
                 if name == "rasterio.sample.sample_gen":
                     import rasterio.sample
                     xy = [(g.x, g.y) for g in case.inputs["points"]]
@@ -913,7 +955,8 @@ def write_dem(path: Path, part: str = RASTER) -> None:
     from osgeo import gdal, osr
     import numpy as np
     gdal.UseExceptions()
-    c0, c1 = {RASTER: (0, DEM_SIZE), RASTER_TARGET: (0, DEM_SIZE), RASTER_TARGET_ZERO: (0, DEM_SIZE), RASTER_WEST: (0, DEM_SIZE // 2),
+    c0, c1 = {RASTER: (0, DEM_SIZE), RASTER_TARGET: (0, DEM_SIZE), RASTER_TARGET_ZERO: (0, DEM_SIZE),
+              RASTER_HOLE: (0, DEM_SIZE), RASTER_WEST: (0, DEM_SIZE // 2),
               RASTER_EAST: (DEM_SIZE // 2, DEM_SIZE)}[part]
     ds = gdal.GetDriverByName("GTiff").Create(str(path), c1 - c0, DEM_SIZE, 1, gdal.GDT_Float32)
     ds.SetGeoTransform((DEM_ORIGIN[0] + c0 * DEM_CELL, DEM_CELL, 0, DEM_ORIGIN[1], 0, -DEM_CELL))
@@ -923,6 +966,8 @@ def write_dem(path: Path, part: str = RASTER) -> None:
     band = ds.GetRasterBand(1)
     band.SetNoDataValue(DEM_NODATA)
     values = np.array([row[c0:c1] for row in dem_values()], dtype="float32")
+    if part == RASTER_HOLE:
+        values[HOLE_CELL] = DEM_NODATA
     if part in (RASTER_TARGET, RASTER_TARGET_ZERO):
         values[:] = DEM_NODATA if part == RASTER_TARGET else 0
         values[TARGET_CELL] = 1

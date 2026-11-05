@@ -1,0 +1,10 @@
+id: postgis-st-generatepoints
+implements: random-points-in-polygons
+crosswalk:
+  layer: "#1"
+  count: "#2"
+  seed: "#3"
+differences:
+  - Returns one MultiPoint per polygon.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,9 @@
+id: grass-r-fillnulls
+implements: fill-nodata
+crosswalk:
+  raster: input
+  output: output
+differences:
+  - Regularized spline with tension by default (method rst); bilinear and bicubic are also offered.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

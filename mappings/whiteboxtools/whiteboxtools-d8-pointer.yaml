@@ -1,0 +1,10 @@
+id: whiteboxtools-d8-pointer
+implements: flow-direction
+crosswalk:
+  raster: dem
+  output: output
+  encoding: { param: esri_pntr, values: { esri: true, whitebox: false }, unsupported: [grass, degrees] }
+differences:
+  - Codes directions clockwise from north-east (1, 2, 4, ... 128) unless esri_pntr is set.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

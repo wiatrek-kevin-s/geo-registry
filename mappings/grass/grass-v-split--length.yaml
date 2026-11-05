@@ -1,0 +1,14 @@
+id: grass-v-split--length
+variant_of: grass-v-split
+implements: split-lines-by-length
+crosswalk:
+  layer: input
+  output: output
+  length: length
+  unit: { param: units, values: { m: meters, ft: feet, us-ft: surveyfeet, km: kilometers, mi: miles } }
+presets:
+  flag_f: true
+differences:
+  - Splits into equal pieces no longer than the length unless flag f is set; this mapping sets f, for pieces of the given length and a shorter last one.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

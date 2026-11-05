@@ -1,0 +1,9 @@
+id: whiteboxtools-fill-missing-data
+implements: fill-nodata
+crosswalk:
+  raster: input
+  output: output
+differences:
+  - Inverse distance weighting within filter (11 cells); no_edges (on by default) leaves gaps that touch the raster's edge.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,17 @@
+id: raster-to-points
+kind: operation
+name: Raster to Points
+aka: [Raster To Point, pixels to points, cell centroids, raster to vector points]
+summary: One point at the centre of every raster cell that has a value, carrying that value.
+group: raster/conversion
+inputs:
+  - { name: raster, type: raster }
+outputs:
+  - { name: output, type: vector, geometry: point }
+checks: [raster.nodata]
+pitfalls:
+  - A large raster becomes millions of points; clip it first.
+  - Engines differ on whether nodata cells are skipped.
+related: [raster-to-polygons, extract-values-to-points]
+status: active
+review: { state: draft }

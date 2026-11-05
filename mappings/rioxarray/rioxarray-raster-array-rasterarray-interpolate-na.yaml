@@ -1,0 +1,7 @@
+id: rioxarray-raster-array-rasterarray-interpolate-na
+implements: fill-nodata
+crosswalk: {}
+differences:
+  - A method of the DataArray's rio accessor; method defaults to nearest, so a gap takes one neighbour's value; linear and cubic (scipy's griddata) interpolate.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

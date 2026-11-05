@@ -1,0 +1,12 @@
+id: qgis-native-randompointsinpolygons
+implements: random-points-in-polygons
+crosswalk:
+  layer: INPUT
+  output: OUTPUT
+  count: POINTS_NUMBER
+  seed: SEED
+differences:
+  - INCLUDE_POLYGON_ATTRIBUTES (on by default) copies the polygon's attributes, including a GeoPackage's fid, so writing the points to a GeoPackage fails on duplicate fids; turn it off or write another format.
+  - MIN_DISTANCE keeps points apart; it may place fewer points when they do not fit.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,17 @@
+id: fill-nodata
+kind: operation
+name: Fill NoData
+aka: [fill gaps, fill missing data, interpolate nodata, fill nulls, Elevation Void Fill]
+summary: Fills nodata cells of a raster by interpolating from the valid cells around them.
+group: raster/surface
+inputs:
+  - { name: raster, type: raster }
+outputs:
+  - { name: output, type: raster }
+checks: [raster.nodata]
+pitfalls:
+  - Engines interpolate differently (inverse distance from the gap's edge, splines, bilinear, nearest), so large gaps come out differently.
+  - Most engines stop at a maximum distance and leave larger gaps as nodata.
+related: [idw-interpolation, focal-statistics]
+status: active
+review: { state: draft }

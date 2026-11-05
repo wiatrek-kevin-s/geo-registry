@@ -1,0 +1,20 @@
+id: random-points-in-polygons
+kind: operation
+name: Random Points in Polygons
+aka: [Create Random Points, random sample, generate points, sample points]
+summary: A given number of randomly placed points inside each polygon.
+group: vector/sampling
+inputs:
+  - { name: layer, type: vector, geometry: polygon }
+outputs:
+  - { name: output, type: vector, geometry: point }
+parameters:
+  count: { type: integer, required: true, note: Points per polygon. }
+  seed: { type: integer, note: "A seed for the random numbers, so a run can be repeated." }
+checks: [geometry.valid]
+pitfalls:
+  - Some engines spread the count over the whole layer rather than placing it in each polygon.
+  - Some return one multipoint per polygon rather than separate points.
+related: [create-grid]
+status: active
+review: { state: draft }

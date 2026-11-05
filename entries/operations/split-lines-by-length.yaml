@@ -1,0 +1,20 @@
+id: split-lines-by-length
+kind: operation
+name: Split Lines by Length
+aka: [Split Line By Length, chunk lines, line chunk, segment lines]
+summary: Cuts each line into pieces of a given length, with a shorter last piece.
+group: vector/geometry
+inputs:
+  - { name: layer, type: vector, geometry: line }
+outputs:
+  - { name: output, type: vector, geometry: line }
+parameters:
+  length: { type: length, required: true }
+  unit: { type: enum, required: true, values: [m, ft, us-ft, km, mi] }
+checks: [crs.measure]
+pitfalls:
+  - Some tools make all pieces equal (and shorter than the length) instead of leaving a short last piece.
+  - In a geographic CRS the length is in degrees unless the engine measures on the ellipsoid.
+related: [explode-lines, points-along-lines, densify]
+status: active
+review: { state: draft }

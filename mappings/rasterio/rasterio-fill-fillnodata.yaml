@@ -1,0 +1,9 @@
+id: rasterio-fill-fillnodata
+implements: fill-nodata
+crosswalk:
+  raster: image
+differences:
+  - GDAL's algorithm on a NumPy array; mask marks the valid cells (0 for the cells to fill).
+  - A single missing cell on a plane (neighbours averaging 10.5) was filled with 10.96, as GDAL's fill does.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

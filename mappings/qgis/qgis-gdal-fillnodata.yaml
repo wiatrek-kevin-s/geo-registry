@@ -1,0 +1,10 @@
+id: qgis-gdal-fillnodata
+implements: fill-nodata
+crosswalk:
+  raster: INPUT
+  output: OUTPUT
+differences:
+  - A single missing cell on a plane (neighbours averaging 10.5) was filled with 10.96, as GDAL's fill does.
+  - Runs GDAL's fill nodata; DISTANCE (10 cells by default) limits the search.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

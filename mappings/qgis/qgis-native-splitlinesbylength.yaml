@@ -1,0 +1,9 @@
+id: qgis-native-splitlinesbylength
+implements: split-lines-by-length
+crosswalk:
+  layer: INPUT
+  output: OUTPUT
+  length: LENGTH
+  unit: { fixed: crs-units }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

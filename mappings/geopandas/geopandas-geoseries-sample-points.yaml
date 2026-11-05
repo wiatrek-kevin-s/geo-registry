@@ -1,0 +1,9 @@
+id: geopandas-geoseries-sample-points
+implements: random-points-in-polygons
+crosswalk:
+  count: size
+  seed: rng
+differences:
+  - Returns one MultiPoint per row; method can also use pointpats' cluster processes.
+effects: { modifies_input: false, network: false }
+review: { state: draft }
