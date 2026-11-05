@@ -1,5 +1,5 @@
-# PROPOSED by agent research on 2026-11-05 for global review batch 1. Not reviewed:
-# review.state stays seeded until a person checks it. Evidence: reviews/global-batch-1-2026-11.md
+# PROPOSED by agent research on 2026-11-05 for global review batch 1; theme entries merged here on
+# the project lead's approval (2026-11-05). Evidence: reviews/global-batch-1-2026-11.md
 id: overture-maps-data
 access:
 - type: http
@@ -13,3 +13,5 @@ access:
   url: https://stac.overturemaps.org/catalog.json
   auth: none
   notes: Points to the latest release.
+notes: 'Themes (merged from their own entries): buildings ODbL-1.0, transportation ODbL-1.0, divisions ODbL-1.0,
+  places CDLA-Permissive-2.0, addresses licence varies by source. Query with DuckDB on S3 or Azure.'

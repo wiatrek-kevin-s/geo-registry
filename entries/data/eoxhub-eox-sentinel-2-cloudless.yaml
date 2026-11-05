@@ -14,8 +14,11 @@ access:
   url: https://s2maps.eu
   auth: none
 notes: Non-commercial for newer years
-status: active
+status: retired
+replaced_by: eox-sentinel-2-cloudless
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 417
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

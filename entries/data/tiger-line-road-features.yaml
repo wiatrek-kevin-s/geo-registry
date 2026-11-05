@@ -14,8 +14,11 @@ access:
 - type: http
   url: https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html
   auth: none
-status: active
+status: retired
+replaced_by: census-tiger-line
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 888
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

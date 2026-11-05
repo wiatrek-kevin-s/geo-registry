@@ -15,8 +15,11 @@ access:
   url: https://docs.overturemaps.org/guides/addresses/
   auth: none
 notes: Licence varies by source
-status: active
+status: retired
+replaced_by: overture-maps-data
 review:
-  state: seeded
+  state: reviewed
   source: geospatial-tool-atlas
   source_row: 846
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

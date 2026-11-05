@@ -1,0 +1,9 @@
+# Decision approved by the project lead (wiatrek-kevin-s) on 2026-11-05: Merged into census-tiger-line (roads are a TIGER/Line layer).
+# Evidence and reasoning: reviews/us-federal-2026-11.md
+id: tiger-line-road-features
+status: retired
+replaced_by: census-tiger-line
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

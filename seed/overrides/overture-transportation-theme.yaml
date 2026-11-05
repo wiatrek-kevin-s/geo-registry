@@ -1,0 +1,9 @@
+# Decision approved by the project lead (wiatrek-kevin-s) on 2026-11-05: Merged into overture-maps-data (a theme of the same release).
+# Evidence and reasoning: reviews/global-batch-1-2026-11.md
+id: overture-transportation-theme
+status: retired
+replaced_by: overture-maps-data
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

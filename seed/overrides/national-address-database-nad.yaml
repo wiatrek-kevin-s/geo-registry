@@ -1,0 +1,9 @@
+# Decision approved by the project lead (wiatrek-kevin-s) on 2026-11-05: Merged into national-address-database (same product).
+# Evidence and reasoning: reviews/us-federal-2026-11.md
+id: national-address-database-nad
+status: retired
+replaced_by: national-address-database
+review:
+  state: reviewed
+  reviewed_by: wiatrek-kevin-s
+  reviewed_on: '2026-11-05'

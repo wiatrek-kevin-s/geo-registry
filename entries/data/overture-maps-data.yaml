@@ -24,7 +24,9 @@ access:
   url: https://stac.overturemaps.org/catalog.json
   auth: none
   notes: Points to the latest release.
-notes: Licence varies by theme (ODbL for OSM-derived); query with DuckDB on S3/Azure
+notes: 'Themes (merged from their own entries): buildings ODbL-1.0, transportation ODbL-1.0, divisions
+  ODbL-1.0, places CDLA-Permissive-2.0, addresses licence varies by source. Query with DuckDB on S3 or
+  Azure.'
 status: active
 review:
   state: seeded

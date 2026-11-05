@@ -1,0 +1,17 @@
+# Decision approved by the project lead (wiatrek-kevin-s) on 2026-11-05: Keeps the Data Access Viewer's access after the merge.
+# Evidence and reasoning: reviews/us-federal-batch-3-2026-11.md
+id: noaa-digital-coast
+coverage:
+  region: United States (coasts, Great Lakes, territories)
+access:
+- type: http
+  url: https://coast.noaa.gov/digitalcoast/
+  auth: none
+- type: http
+  url: https://coast.noaa.gov/dataviewer/
+  auth: none
+- type: s3
+  url: https://noaa-nos-coastal-lidar-pds.s3.amazonaws.com/
+  auth: none
+  notes: 'Coastal lidar by project id (laz/geoid18/<id>/): LAZ tiles, tile index (shapefile, GeoPackage), STAC collection
+    and COPC item collection.'
