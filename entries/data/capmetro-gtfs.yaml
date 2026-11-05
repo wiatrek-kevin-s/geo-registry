@@ -11,9 +11,13 @@ coverage:
 license: NOASSERTION
 license_original: Unknown
 access:
-- type: http
-  url: https://www.capmetro.org/
+- type: download
+  url: https://data.texas.gov/download/r4v4-vz24/application/zip
   auth: none
+  notes: 'Official GTFS schedule feed (Mobility Database mdb-150); validated with no errors on 2026-11-04.
+    Licence terms: https://www.capmetro.org/metrolabs/ (not yet read).'
+formats_out:
+- GTFS
 status: active
 review:
   state: seeded

@@ -1,0 +1,11 @@
+# PROPOSED by agent research on 2026-11-05 for the Texas review batch. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/texas-2026-11.md
+id: txgio-datahub
+access:
+  - type: http
+    url: https://data.geographic.texas.gov/
+    auth: none
+  - type: api
+    url: https://api.tnris.org
+    auth: none
+    notes: TxGIO (formerly TNRIS) data API behind the DataHub; only /areas is documented publicly. Not yet tested.

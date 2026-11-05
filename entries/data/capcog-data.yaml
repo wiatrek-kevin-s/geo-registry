@@ -10,10 +10,17 @@ coverage:
   region: Texas
 license: NOASSERTION
 license_original: Unknown
+update: monthly (9-1-1 address points and street centerlines, about the sixth business day)
 access:
 - type: http
-  url: https://www.capcog.org/
+  url: https://regional-open-data-capcog.opendata.arcgis.com
   auth: none
+  notes: CAPCOG Regional Open Data Site (ArcGIS Hub) for Bastrop, Blanco, Burnet, Caldwell, Fayette, Hays,
+    Lee, Llano, Travis and Williamson counties.
+- type: api
+  url: https://regional-open-data-capcog.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+  auth: none
+  notes: DCAT-US catalog feed (ArcGIS Hub convention). Not yet tested.
 status: active
 review:
   state: seeded

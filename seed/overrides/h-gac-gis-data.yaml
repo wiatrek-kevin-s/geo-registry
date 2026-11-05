@@ -1,0 +1,12 @@
+# PROPOSED by agent research on 2026-11-05 for the Texas review batch. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/texas-2026-11.md
+id: h-gac-gis-data
+access:
+  - type: http
+    url: https://gishub-h-gac.hub.arcgis.com/
+    auth: none
+    notes: H-GAC Regional Data Hub (ArcGIS Hub).
+  - type: api
+    url: https://gishub-h-gac.hub.arcgis.com/api/feed/dcat-us/1.1.json
+    auth: none
+    notes: DCAT-US catalog feed (listed by the Dateno catalog registry). Not yet tested.

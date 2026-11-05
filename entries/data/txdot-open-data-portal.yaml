@@ -14,6 +14,11 @@ access:
 - type: http
   url: https://gis-txdot.opendata.arcgis.com/
   auth: none
+- type: arcgis-rest
+  url: https://services.arcgis.com/KTcxiTD9dsQw4r7Z/arcgis/rest/services
+  auth: none
+  notes: TxDOT's ArcGIS Online services (TxDOT_Roadways, Route_County, TxDOT_Proposed_Functional_Classification,
+    ...).
 notes: ArcGIS Hub
 status: active
 review:

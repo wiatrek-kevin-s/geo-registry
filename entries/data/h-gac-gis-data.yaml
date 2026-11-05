@@ -12,8 +12,13 @@ license: NOASSERTION
 license_original: Unknown
 access:
 - type: http
-  url: https://www.h-gac.com/
+  url: https://gishub-h-gac.hub.arcgis.com/
   auth: none
+  notes: H-GAC Regional Data Hub (ArcGIS Hub).
+- type: api
+  url: https://gishub-h-gac.hub.arcgis.com/api/feed/dcat-us/1.1.json
+  auth: none
+  notes: DCAT-US catalog feed (listed by the Dateno catalog registry). Not yet tested.
 status: active
 review:
   state: seeded

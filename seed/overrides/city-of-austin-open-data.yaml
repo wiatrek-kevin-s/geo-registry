@@ -1,0 +1,11 @@
+# PROPOSED by agent research on 2026-11-05 for the Texas review batch. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/texas-2026-11.md
+id: city-of-austin-open-data
+access:
+  - type: http
+    url: https://data.austintexas.gov/
+    auth: none
+  - type: api
+    url: https://data.austintexas.gov/api/views/g7cx-4kmk
+    auth: none
+    notes: "Socrata platform: dataset metadata at /api/views/<id>, rows at /resource/<id>.json (SODA). Identifier from the data.gov harvest record; not yet fetched."

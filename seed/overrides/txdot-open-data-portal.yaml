@@ -1,0 +1,11 @@
+# PROPOSED by agent research on 2026-11-05 for the Texas review batch. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/texas-2026-11.md
+id: txdot-open-data-portal
+access:
+  - type: http
+    url: https://gis-txdot.opendata.arcgis.com/
+    auth: none
+  - type: arcgis-rest
+    url: https://services.arcgis.com/KTcxiTD9dsQw4r7Z/arcgis/rest/services
+    auth: none
+    notes: TxDOT's ArcGIS Online services (TxDOT_Roadways, Route_County, TxDOT_Proposed_Functional_Classification, ...).

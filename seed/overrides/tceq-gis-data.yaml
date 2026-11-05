@@ -1,0 +1,12 @@
+# PROPOSED by agent research on 2026-11-05 for the Texas review batch. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/texas-2026-11.md
+id: tceq-gis-data
+access:
+  - type: http
+    url: https://www.tceq.texas.gov/gis
+    auth: none
+  - type: http
+    url: https://www.tceq.texas.gov/gis/metadata/metadata
+    auth: none
+    notes: Metadata for TCEQ datasets (Edwards Aquifer recharge zone, land use / land cover); no download or service links found on 2026-11-05.
+notes: No machine-readable endpoint found from TCEQ itself; its water district and Edwards Aquifer layers are viewable in TCEQ's map viewers and republished by others.
