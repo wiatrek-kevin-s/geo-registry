@@ -1,0 +1,11 @@
+id: spopt-region-util-distribute-regions-among-components
+kind: implementation
+name: spopt.region.util.distribute_regions_among_components
+software: spopt
+call: {interface: python, name: spopt.region.util.distribute_regions_among_components}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  component_labels: {type: any, required: true}
+  n_regions: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

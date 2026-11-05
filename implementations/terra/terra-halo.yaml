@@ -1,0 +1,16 @@
+id: terra-halo
+kind: implementation
+name: terra::halo
+software: terra
+call: {interface: r, name: 'terra::halo'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, default: 'NULL'}
+  labels: {type: any, required: true}
+  col: {type: any, default: '"black"'}
+  hc: {type: any, default: '"white"'}
+  hw: {type: any, default: '0.1'}
+  '...': {type: dots, note: further arguments passed on}
+status: active
+review: {state: harvested, source: r-packages}

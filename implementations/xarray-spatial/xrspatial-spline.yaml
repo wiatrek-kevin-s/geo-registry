@@ -1,0 +1,16 @@
+id: xrspatial-spline
+kind: implementation
+name: xrspatial.spline
+software: xarray-spatial
+call: {interface: python, name: xrspatial.spline}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any}
+  z: {type: any}
+  template: {type: any}
+  smoothing: {type: number, default: 0.0}
+  name: {type: string, default: spline}
+  column: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

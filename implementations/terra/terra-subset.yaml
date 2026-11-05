@@ -1,0 +1,19 @@
+id: terra-subset
+kind: implementation
+name: terra::subset
+software: terra
+call: {interface: r, name: 'terra::subset'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  subset: {type: any, required: true}
+  negate: {type: any, default: 'FALSE'}
+  NSE: {type: any, default: 'FALSE'}
+  filename: {type: any, default: '""'}
+  overwrite: {type: any, default: 'FALSE'}
+  select: {type: any, required: true}
+  drop: {type: any, default: 'FALSE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

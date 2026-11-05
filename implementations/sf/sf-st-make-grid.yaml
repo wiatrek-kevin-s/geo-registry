@@ -1,0 +1,17 @@
+id: sf-st-make-grid
+kind: implementation
+name: sf::st_make_grid
+software: sf
+call: {interface: r, name: 'sf::st_make_grid'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  x: {type: any, required: true}
+  cellsize: {type: any, default: 'c(diff(st_bbox(x)[c(1, 3)]), diff(st_bbox(x)[c(2, 4)]))/n'}
+  offset: {type: any, default: 'st_bbox(x)[c("xmin", "ymin")]'}
+  n: {type: any, default: 'c(10, 10)'}
+  crs: {type: any, default: if (missing(x)) NA_crs_ else st_crs(x)}
+  what: {type: any, default: '"polygons"'}
+  square: {type: any, default: 'TRUE'}
+  flat_topped: {type: any, default: 'FALSE'}
+status: active
+review: {state: harvested, source: r-packages}

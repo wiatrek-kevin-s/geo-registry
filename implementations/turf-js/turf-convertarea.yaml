@@ -1,0 +1,13 @@
+id: turf-convertarea
+kind: implementation
+name: turf.convertArea
+software: turf-js
+call: {interface: js, name: turf.convertArea}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  area: {type: number, required: true}
+  originalUnit: {type: AreaUnits}
+  finalUnit: {type: AreaUnits}
+notes: From @turf/helpers.
+status: active
+review: {state: harvested, source: turf}

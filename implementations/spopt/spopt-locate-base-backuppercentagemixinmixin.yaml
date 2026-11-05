@@ -1,0 +1,10 @@
+id: spopt-locate-base-backuppercentagemixinmixin
+kind: implementation
+name: spopt.locate.base.BackupPercentageMixinMixin
+software: spopt
+call: {interface: python, name: spopt.locate.base.BackupPercentageMixinMixin}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

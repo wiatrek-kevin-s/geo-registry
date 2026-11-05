@@ -1,0 +1,12 @@
+id: spopt-region-azp-assert-feasible
+kind: implementation
+name: spopt.region.azp.assert_feasible
+software: spopt
+call: {interface: python, name: spopt.region.azp.assert_feasible}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  solution: {type: any, required: true}
+  adj: {type: any, required: true}
+  n_regions: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

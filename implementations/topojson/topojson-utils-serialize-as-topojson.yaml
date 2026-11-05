@@ -1,0 +1,11 @@
+id: topojson-utils-serialize-as-topojson
+kind: implementation
+name: topojson.utils.serialize_as_topojson
+software: topojson
+call: {interface: python, name: topojson.utils.serialize_as_topojson}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  data: {type: any, required: true}
+  options: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

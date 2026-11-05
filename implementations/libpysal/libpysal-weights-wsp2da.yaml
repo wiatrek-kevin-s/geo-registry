@@ -1,0 +1,13 @@
+id: libpysal-weights-wsp2da
+kind: implementation
+name: libpysal.weights.wsp2da
+software: libpysal
+call: {interface: python, name: libpysal.weights.wsp2da}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  data: {type: any, required: true}
+  wsp: {type: any, required: true}
+  attrs: {type: any, note: 'default {}'}
+  coords: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

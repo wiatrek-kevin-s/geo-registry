@@ -1,0 +1,10 @@
+id: sedona-sql-expandaddress
+kind: implementation
+name: sedona.sql.ExpandAddress
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ExpandAddress}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  address: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,14 @@
+id: sedona-sql-st-rotate
+kind: implementation
+name: sedona.sql.ST_Rotate
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_Rotate}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geometry: {type: Union, required: true}
+  angle: {type: Union, required: true}
+  originX: {type: Union}
+  originY: {type: Union}
+  pointOrigin: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

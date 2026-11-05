@@ -1,0 +1,12 @@
+id: gstools-transform-array-boxcox
+kind: implementation
+name: gstools.transform.array_boxcox
+software: gstools
+call: {interface: python, name: gstools.transform.array_boxcox}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  field: {type: any, required: true}
+  lmbda: {type: integer, default: 1}
+  shift: {type: integer, default: 0}
+status: active
+review: {state: harvested, source: python-packages}

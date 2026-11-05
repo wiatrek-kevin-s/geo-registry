@@ -1,0 +1,15 @@
+id: xrspatial-focal-apply
+kind: implementation
+name: xrspatial.focal.apply
+software: xarray-spatial
+call: {interface: python, name: xrspatial.focal.apply}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: any}
+  kernel: {type: any}
+  func: {type: any}
+  name: {type: string, default: focal_apply}
+  boundary: {type: string, default: nan}
+  raster: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

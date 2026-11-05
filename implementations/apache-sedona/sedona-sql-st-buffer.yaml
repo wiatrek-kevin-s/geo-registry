@@ -1,0 +1,13 @@
+id: sedona-sql-st-buffer
+kind: implementation
+name: sedona.sql.ST_Buffer
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_Buffer}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geometry: {type: Union, required: true}
+  buffer: {type: Union, required: true}
+  useSpheroid: {type: Union, default: false}
+  parameters: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

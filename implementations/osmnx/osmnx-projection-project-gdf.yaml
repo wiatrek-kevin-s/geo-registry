@@ -1,0 +1,12 @@
+id: osmnx-projection-project-gdf
+kind: implementation
+name: osmnx.projection.project_gdf
+software: osmnx
+call: {interface: python, name: osmnx.projection.project_gdf}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  gdf: {type: gpd.GeoDataFrame, required: true}
+  to_crs: {type: Any | None}
+  to_latlong: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

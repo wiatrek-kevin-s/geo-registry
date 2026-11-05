@@ -1,0 +1,18 @@
+id: osmium-forwardreferencewriter
+kind: implementation
+name: osmium.ForwardReferenceWriter
+software: pyosmium
+call: {interface: python, name: osmium.ForwardReferenceWriter}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters:
+  outfile: {type: Union, required: true}
+  ref_src: {type: Union, required: true}
+  overwrite: {type: bool, default: false}
+  back_references: {type: bool, default: true}
+  remove_tags: {type: bool, default: true}
+  forward_relation_depth: {type: int, default: 0}
+  backward_relation_depth: {type: int, default: 1}
+  thread_pool: {type: Optional}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: spreg-moran-kp
+kind: implementation
+name: spreg.moran_KP
+software: spreg
+call: {interface: python, name: spreg.moran_KP}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  w: {type: any, required: true}
+  u: {type: any, required: true}
+  sig2i: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: sedona-sql-st-makeline
+kind: implementation
+name: sedona.sql.ST_MakeLine
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_MakeLine}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geom1: {type: Union, required: true}
+  geom2: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

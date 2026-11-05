@@ -1,0 +1,10 @@
+id: fiona-properties
+kind: implementation
+name: fiona.Properties
+software: fiona
+call: {interface: python, name: fiona.Properties}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

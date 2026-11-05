@@ -1,0 +1,10 @@
+id: osmium-tools-pyosmium-up-to-date-compute-start-point
+kind: implementation
+name: osmium.tools.pyosmium_up_to_date.compute_start_point
+software: pyosmium
+call: {interface: python, name: osmium.tools.pyosmium_up_to_date.compute_start_point}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters:
+  options: {type: Any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

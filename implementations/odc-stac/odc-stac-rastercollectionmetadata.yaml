@@ -1,0 +1,14 @@
+id: odc-stac-rastercollectionmetadata
+kind: implementation
+name: odc.stac.RasterCollectionMetadata
+software: odc-stac
+call: {interface: python, name: odc.stac.RasterCollectionMetadata}
+harvest: {harvester: python-packages, engine_version: 0.5.3}
+parameters:
+  name: {type: str, required: true}
+  meta: {type: RasterGroupMetadata, required: true}
+  has_proj: {type: bool, required: true}
+  band2grid: {type: 'Dict[str, str]', required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

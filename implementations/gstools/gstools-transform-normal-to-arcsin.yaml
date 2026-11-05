@@ -1,0 +1,16 @@
+id: gstools-transform-normal-to-arcsin
+kind: implementation
+name: gstools.transform.normal_to_arcsin
+software: gstools
+call: {interface: python, name: gstools.transform.normal_to_arcsin}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  fld: {type: any, required: true}
+  a: {type: any}
+  b: {type: any}
+  field: {type: string, default: field}
+  store: {type: boolean, default: true}
+  process: {type: boolean, default: false}
+  keep_mean: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

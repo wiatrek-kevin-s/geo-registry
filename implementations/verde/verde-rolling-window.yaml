@@ -1,0 +1,15 @@
+id: verde-rolling-window
+kind: implementation
+name: verde.rolling_window
+software: verde
+call: {interface: python, name: verde.rolling_window}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  coordinates: {type: any, required: true}
+  size: {type: any, required: true}
+  spacing: {type: any}
+  shape: {type: any}
+  region: {type: any}
+  adjust: {type: string, default: spacing}
+status: active
+review: {state: harvested, source: python-packages}

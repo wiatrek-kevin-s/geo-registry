@@ -1,0 +1,10 @@
+id: spaghetti-analysis-upper-triangle-as-vector
+kind: implementation
+name: spaghetti.analysis.upper_triangle_as_vector
+software: spaghetti
+call: {interface: python, name: spaghetti.analysis.upper_triangle_as_vector}
+harvest: {harvester: python-packages, engine_version: 1.7.6}
+parameters:
+  matrix: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

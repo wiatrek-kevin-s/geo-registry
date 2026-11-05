@@ -1,0 +1,10 @@
+id: skgstat-util-cross-validation-get-likelihood
+kind: implementation
+name: skgstat.util.cross_validation.get_likelihood
+software: scikit-gstat
+call: {interface: python, name: skgstat.util.cross_validation.get_likelihood}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  variogram: {type: Variogram, required: true}
+status: active
+review: {state: harvested, source: python-packages}

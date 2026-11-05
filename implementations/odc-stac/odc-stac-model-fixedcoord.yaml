@@ -1,0 +1,15 @@
+id: odc-stac-model-fixedcoord
+kind: implementation
+name: odc.stac.model.FixedCoord
+software: odc-stac
+call: {interface: python, name: odc.stac.model.FixedCoord}
+harvest: {harvester: python-packages, engine_version: 0.5.3}
+parameters:
+  name: {type: str, required: true}
+  values: {type: 'Sequence[Any]', required: true}
+  dtype: {type: str, default: ''}
+  dim: {type: str, default: ''}
+  units: {type: str, default: '1'}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

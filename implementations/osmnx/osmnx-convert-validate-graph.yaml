@@ -1,0 +1,11 @@
+id: osmnx-convert-validate-graph
+kind: implementation
+name: osmnx.convert.validate_graph
+software: osmnx
+call: {interface: python, name: osmnx.convert.validate_graph}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  G: {type: nx.MultiDiGraph, required: true}
+  strict: {type: bool, default: true}
+status: active
+review: {state: harvested, source: python-packages}

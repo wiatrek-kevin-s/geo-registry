@@ -1,0 +1,11 @@
+id: laspy-header-globalencoding
+kind: implementation
+name: laspy.header.GlobalEncoding
+software: laspy
+call: {interface: python, name: laspy.header.GlobalEncoding}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  value: {type: integer, default: 0}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

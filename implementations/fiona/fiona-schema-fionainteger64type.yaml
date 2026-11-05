@@ -1,0 +1,10 @@
+id: fiona-schema-fionainteger64type
+kind: implementation
+name: fiona.schema.FionaInteger64Type
+software: fiona
+call: {interface: python, name: fiona.schema.FionaInteger64Type}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

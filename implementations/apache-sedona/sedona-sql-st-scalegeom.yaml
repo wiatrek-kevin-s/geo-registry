@@ -1,0 +1,12 @@
+id: sedona-sql-st-scalegeom
+kind: implementation
+name: sedona.sql.ST_ScaleGeom
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_ScaleGeom}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geometry: {type: Union, required: true}
+  factor: {type: Union, required: true}
+  origin: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

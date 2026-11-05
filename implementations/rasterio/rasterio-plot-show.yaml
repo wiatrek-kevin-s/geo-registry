@@ -1,0 +1,19 @@
+id: rasterio-plot-show
+kind: implementation
+name: rasterio.plot.show
+software: rasterio
+call: {interface: python, name: rasterio.plot.show}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  source: {type: any, required: true}
+  with_bounds: {type: boolean, default: true}
+  contour: {type: boolean, default: false}
+  contour_label_kws: {type: any}
+  indexes: {type: any}
+  ax: {type: any}
+  title: {type: any}
+  transform: {type: any}
+  percent_range: {type: any}
+  adjust: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

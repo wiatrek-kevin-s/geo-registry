@@ -1,0 +1,19 @@
+id: momepy-streetscape
+kind: implementation
+name: momepy.Streetscape
+software: momepy
+call: {interface: python, name: momepy.Streetscape}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  streets: {type: GeoDataFrame, required: true}
+  buildings: {type: GeoDataFrame, required: true}
+  sightline_length: {type: float, default: 50}
+  tangent_length: {type: float, default: 300}
+  sightline_spacing: {type: float, default: 3}
+  intersection_offset: {type: float, default: 0.5}
+  angle_tolerance: {type: float, default: 5}
+  height_col: {type: any}
+  category_col: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,9 @@
+id: topojson-ops-ignore-shapely2-warnings
+kind: implementation
+name: topojson.ops.ignore_shapely2_warnings
+software: topojson
+call: {interface: python, name: topojson.ops.ignore_shapely2_warnings}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

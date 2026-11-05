@@ -1,0 +1,14 @@
+id: esda-moranlocalconditional
+kind: implementation
+name: esda.MoranLocalConditional
+software: esda
+call: {interface: python, name: esda.MoranLocalConditional}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  permutations: {type: integer, default: 999}
+  unit_scale: {type: boolean, default: true}
+  transformer: {type: any}
+  alternative: {type: string, default: two-sided}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

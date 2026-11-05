@@ -1,0 +1,18 @@
+id: terra-writevector
+kind: implementation
+name: terra::writeVector
+software: terra
+call: {interface: r, name: 'terra::writeVector'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  filename: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  filetype: {type: any, default: 'NULL'}
+  layer: {type: any, default: 'NULL'}
+  insert: {type: any, default: 'FALSE'}
+  overwrite: {type: any, default: 'FALSE'}
+  options: {type: any, default: '"ENCODING=UTF-8"'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

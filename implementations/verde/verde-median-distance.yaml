@@ -1,0 +1,12 @@
+id: verde-median-distance
+kind: implementation
+name: verde.median_distance
+software: verde
+call: {interface: python, name: verde.median_distance}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  coordinates: {type: any, required: true}
+  k_nearest: {type: integer, default: 1}
+  projection: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

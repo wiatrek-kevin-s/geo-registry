@@ -1,0 +1,11 @@
+id: xrspatial-fused-overlap
+kind: implementation
+name: xrspatial.fused_overlap
+software: xarray-spatial
+call: {interface: python, name: xrspatial.fused_overlap}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: any, required: true}
+  boundary: {type: string, default: nan}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,13 @@
+id: movingpandas-spatiotemporal-utils-get-speed
+kind: implementation
+name: movingpandas.spatiotemporal_utils.get_speed
+software: movingpandas
+call: {interface: python, name: movingpandas.spatiotemporal_utils.get_speed}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  tpt0: {type: any, required: true}
+  tpt1: {type: any, required: true}
+  is_latlon: {type: any, required: true}
+  conversion: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

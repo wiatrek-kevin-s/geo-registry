@@ -1,0 +1,10 @@
+id: pointpats-minimum-bounding-circle
+kind: implementation
+name: pointpats.minimum_bounding_circle
+software: pointpats
+call: {interface: python, name: pointpats.minimum_bounding_circle}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  points: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

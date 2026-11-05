@@ -1,0 +1,10 @@
+id: libpysal-io-iohandlers-mat-matio
+kind: implementation
+name: libpysal.io.iohandlers.mat.MatIO
+software: libpysal
+call: {interface: python, name: libpysal.io.iohandlers.mat.MatIO}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

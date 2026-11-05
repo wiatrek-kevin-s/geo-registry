@@ -1,0 +1,11 @@
+id: rasterio-plot-contrast-strech
+kind: implementation
+name: rasterio.plot.contrast_strech
+software: rasterio
+call: {interface: python, name: rasterio.plot.contrast_strech}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  arr: {type: any, required: true}
+  percent_range: {type: any, note: 'default (2.0, 98.0)'}
+status: active
+review: {state: harvested, source: python-packages}

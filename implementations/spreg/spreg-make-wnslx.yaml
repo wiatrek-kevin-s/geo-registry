@@ -1,0 +1,13 @@
+id: spreg-make-wnslx
+kind: implementation
+name: spreg.make_wnslx
+software: spreg
+call: {interface: python, name: spreg.make_wnslx}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  coords: {type: any, required: true}
+  params: {type: any, required: true}
+  leafsize: {type: integer, default: 30}
+  distance_metric: {type: string, default: Euclidean}
+status: active
+review: {state: harvested, source: python-packages}

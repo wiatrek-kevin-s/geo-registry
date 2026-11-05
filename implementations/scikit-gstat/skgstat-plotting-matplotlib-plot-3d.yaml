@@ -1,0 +1,14 @@
+id: skgstat-plotting-matplotlib-plot-3d
+kind: implementation
+name: skgstat.plotting.matplotlib_plot_3d
+software: scikit-gstat
+call: {interface: python, name: skgstat.plotting.matplotlib_plot_3d}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  stvariogram: {type: any, required: true}
+  kind: {type: string, default: scatter}
+  ax: {type: any}
+  elev: {type: integer, default: 30}
+  azim: {type: integer, default: 220}
+status: active
+review: {state: harvested, source: python-packages}

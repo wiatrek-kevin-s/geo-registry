@@ -1,0 +1,12 @@
+id: spreg-sur-lmtest
+kind: implementation
+name: spreg.sur_lmtest
+software: spreg
+call: {interface: python, name: spreg.sur_lmtest}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  n: {type: any, required: true}
+  n_eq: {type: any, required: true}
+  sig: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

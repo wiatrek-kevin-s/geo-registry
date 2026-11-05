@@ -1,0 +1,12 @@
+id: terra-warp-scale
+kind: implementation
+name: terra::warp_scale
+software: terra
+call: {interface: r, name: 'terra::warp_scale'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  n: {type: any, default: '21'}
+status: active
+review: {state: harvested, source: r-packages}

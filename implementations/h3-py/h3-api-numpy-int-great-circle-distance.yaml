@@ -1,0 +1,12 @@
+id: h3-api-numpy-int-great-circle-distance
+kind: implementation
+name: h3.api.numpy_int.great_circle_distance
+software: h3-py
+call: {interface: python, name: h3.api.numpy_int.great_circle_distance}
+harvest: {harvester: python-packages, engine_version: 4.5.0}
+parameters:
+  latlng1: {type: any, required: true}
+  latlng2: {type: any, required: true}
+  unit: {type: string, default: km}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,20 @@
+id: libpysal-weights-distanceband
+kind: implementation
+name: libpysal.weights.DistanceBand
+software: libpysal
+call: {interface: python, name: libpysal.weights.DistanceBand}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  data: {type: any, required: true}
+  threshold: {type: any, required: true}
+  p: {type: integer, default: 2}
+  alpha: {type: number, default: -1.0}
+  binary: {type: boolean, default: true}
+  ids: {type: any}
+  build_sp: {type: boolean, default: true}
+  silence_warnings: {type: boolean, default: false}
+  distance_metric: {type: string, default: euclidean}
+  radius: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

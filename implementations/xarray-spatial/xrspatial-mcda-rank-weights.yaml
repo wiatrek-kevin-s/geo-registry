@@ -1,0 +1,11 @@
+id: xrspatial-mcda-rank-weights
+kind: implementation
+name: xrspatial.mcda.rank_weights
+software: xarray-spatial
+call: {interface: python, name: xrspatial.mcda.rank_weights}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  ranking: {type: 'list[str]', required: true}
+  method: {type: str, default: roc}
+status: active
+review: {state: harvested, source: python-packages}

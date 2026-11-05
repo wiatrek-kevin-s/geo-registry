@@ -1,0 +1,14 @@
+id: xrspatial-hydro-stream-order-mfd
+kind: implementation
+name: xrspatial.hydro.stream_order_mfd
+software: xarray-spatial
+call: {interface: python, name: xrspatial.hydro.stream_order_mfd}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  fractions: {type: xr.DataArray, required: true}
+  flow_accum: {type: xr.DataArray, required: true}
+  threshold: {type: float, default: 100}
+  method: {type: str, default: strahler}
+  name: {type: str, default: stream_order_mfd}
+status: active
+review: {state: harvested, source: python-packages}

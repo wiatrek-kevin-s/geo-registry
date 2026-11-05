@@ -1,0 +1,12 @@
+id: dask-geopandas-clip
+kind: implementation
+name: dask_geopandas.clip
+software: dask-geopandas
+call: {interface: python, name: dask_geopandas.clip}
+harvest: {harvester: python-packages, engine_version: 0.5.0}
+parameters:
+  gdf: {type: any, required: true}
+  mask: {type: any, required: true}
+  keep_geom_type: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

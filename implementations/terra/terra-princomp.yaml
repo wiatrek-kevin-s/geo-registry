@@ -1,0 +1,16 @@
+id: terra-princomp
+kind: implementation
+name: terra::princomp
+software: terra
+call: {interface: r, name: 'terra::princomp'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  cor: {type: any, default: 'FALSE'}
+  fix_sign: {type: any, default: 'TRUE'}
+  use: {type: any, default: '"pairwise.complete.obs"'}
+  maxcell: {type: any, default: Inf}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

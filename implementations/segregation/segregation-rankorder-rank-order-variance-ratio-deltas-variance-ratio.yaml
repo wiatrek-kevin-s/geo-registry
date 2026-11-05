@@ -1,0 +1,10 @@
+id: segregation-rankorder-rank-order-variance-ratio-deltas-variance-ratio
+kind: implementation
+name: segregation.rankorder.rank_order_variance_ratio.deltas_variance_ratio
+software: segregation
+call: {interface: python, name: segregation.rankorder.rank_order_variance_ratio.deltas_variance_ratio}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  degree: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

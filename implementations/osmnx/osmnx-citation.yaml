@@ -1,0 +1,10 @@
+id: osmnx-citation
+kind: implementation
+name: osmnx.citation
+software: osmnx
+call: {interface: python, name: osmnx.citation}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  style: {type: str, default: bibtex}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,14 @@
+id: spopt-region-base-modify-components
+kind: implementation
+name: spopt.region.base.modify_components
+software: spopt
+call: {interface: python, name: spopt.region.base.modify_components}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  gdf: {type: any, required: true}
+  w: {type: any, required: true}
+  threshold_var: {type: any, required: true}
+  threshold: {type: any, required: true}
+  policy: {type: string, default: single}
+status: active
+review: {state: harvested, source: python-packages}

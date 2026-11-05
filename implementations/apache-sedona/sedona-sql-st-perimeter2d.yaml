@@ -1,0 +1,12 @@
+id: sedona-sql-st-perimeter2d
+kind: implementation
+name: sedona.sql.ST_Perimeter2D
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_Perimeter2D}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geom: {type: Union, required: true}
+  use_spheroid: {type: Union}
+  lenient: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

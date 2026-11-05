@@ -1,0 +1,23 @@
+id: odc-stac-output-geobox
+kind: implementation
+name: odc.stac.output_geobox
+software: odc-stac
+call: {interface: python, name: odc.stac.output_geobox}
+harvest: {harvester: python-packages, engine_version: 0.5.3}
+parameters:
+  items: {type: 'Sequence[ParsedItem]', required: true}
+  bands: {type: 'Optional[Sequence[str]]'}
+  crs: {type: MaybeCRS, note: default <odc.geo.types.Unset object>}
+  resolution: {type: 'Optional[SomeResolution]'}
+  anchor: {type: 'Optional[GeoboxAnchor]'}
+  align: {type: 'Optional[Union[float, int, XY[float]]]'}
+  geobox: {type: 'Optional[GeoBox]'}
+  like: {type: 'Optional[Any]'}
+  geopolygon: {type: 'Optional[Any]'}
+  bbox: {type: 'Optional[Tuple[float, float, float, float]]'}
+  lon: {type: 'Optional[Tuple[float, float]]'}
+  lat: {type: 'Optional[Tuple[float, float]]'}
+  x: {type: 'Optional[Tuple[float, float]]'}
+  y: {type: 'Optional[Tuple[float, float]]'}
+status: active
+review: {state: harvested, source: python-packages}

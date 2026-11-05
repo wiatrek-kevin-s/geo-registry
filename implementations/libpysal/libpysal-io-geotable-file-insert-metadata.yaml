@@ -1,0 +1,14 @@
+id: libpysal-io-geotable-file-insert-metadata
+kind: implementation
+name: libpysal.io.geotable.file.insert_metadata
+software: libpysal
+call: {interface: python, name: libpysal.io.geotable.file.insert_metadata}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  df: {type: any, required: true}
+  obj: {type: any, required: true}
+  name: {type: any}
+  inplace: {type: boolean, default: true}
+  overwrite: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

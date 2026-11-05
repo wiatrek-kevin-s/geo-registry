@@ -1,0 +1,17 @@
+id: terra-thresh
+kind: implementation
+name: terra::thresh
+software: terra
+call: {interface: r, name: 'terra::thresh'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  method: {type: any, default: '"otsu"'}
+  maxcell: {type: any, default: 1e+06}
+  combine: {type: any, default: 'FALSE'}
+  as.raster: {type: any, default: 'TRUE'}
+  filename: {type: any, default: '""'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

@@ -1,0 +1,13 @@
+id: spreg-lmtests
+kind: implementation
+name: spreg.LMtests
+software: spreg
+call: {interface: python, name: spreg.LMtests}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  ols: {type: any, required: true}
+  w: {type: any, required: true}
+  tests: {type: any, note: 'default [''all'']'}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

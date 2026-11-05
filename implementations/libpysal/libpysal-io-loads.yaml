@@ -1,0 +1,10 @@
+id: libpysal-io-loads
+kind: implementation
+name: libpysal.io.loads
+software: libpysal
+call: {interface: python, name: libpysal.io.loads}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  s: {type: str, required: true}
+status: active
+review: {state: harvested, source: python-packages}

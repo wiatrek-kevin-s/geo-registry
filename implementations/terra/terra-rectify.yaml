@@ -1,0 +1,17 @@
+id: terra-rectify
+kind: implementation
+name: terra::rectify
+software: terra
+call: {interface: r, name: 'terra::rectify'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  method: {type: any, default: '"bilinear"'}
+  aoi: {type: any, default: 'NULL'}
+  snap: {type: any, default: 'TRUE'}
+  threads: {type: any, default: 'FALSE'}
+  filename: {type: any, default: '""'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

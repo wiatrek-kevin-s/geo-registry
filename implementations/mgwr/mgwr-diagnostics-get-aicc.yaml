@@ -1,0 +1,10 @@
+id: mgwr-diagnostics-get-aicc
+kind: implementation
+name: mgwr.diagnostics.get_AICc
+software: mgwr
+call: {interface: python, name: mgwr.diagnostics.get_AICc}
+harvest: {harvester: python-packages, engine_version: 2.2.1}
+parameters:
+  gwr: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

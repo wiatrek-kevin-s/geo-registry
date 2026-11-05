@@ -1,0 +1,21 @@
+id: pyproj-transformer-transformergroup
+kind: implementation
+name: pyproj.transformer.TransformerGroup
+software: pyproj
+call: {interface: python, name: pyproj.transformer.TransformerGroup}
+harvest: {harvester: python-packages, engine_version: 3.8.0}
+parameters:
+  crs_from: {type: Any, required: true}
+  crs_to: {type: Any, required: true}
+  always_xy: {type: bool, default: false}
+  area_of_interest: {type: any}
+  authority: {type: any}
+  accuracy: {type: any}
+  allow_ballpark: {type: bool, default: true}
+  allow_superseded: {type: bool, default: false}
+  crs_extent_use: {type: Union}
+  pivot_crs: {type: any}
+  grid_check: {type: Optional}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,13 @@
+id: spopt-locate-flow-compute-facility-usage
+kind: implementation
+name: spopt.locate.flow.compute_facility_usage
+software: spopt
+call: {interface: python, name: spopt.locate.flow.compute_facility_usage}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  origin: {type: Any, required: true}
+  destination: {type: Any, required: true}
+  facility: {type: Any, required: true}
+  combination: {type: list, required: true}
+status: active
+review: {state: harvested, source: python-packages}

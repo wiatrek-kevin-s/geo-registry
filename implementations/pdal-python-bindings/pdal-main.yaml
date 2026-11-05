@@ -1,0 +1,9 @@
+id: pdal-main
+kind: implementation
+name: pdal.main
+software: pdal-python-bindings
+call: {interface: python, name: pdal.main}
+harvest: {harvester: python-packages, engine_version: 3.5.5}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

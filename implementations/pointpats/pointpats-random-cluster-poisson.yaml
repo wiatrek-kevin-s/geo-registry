@@ -1,0 +1,15 @@
+id: pointpats-random-cluster-poisson
+kind: implementation
+name: pointpats.random.cluster_poisson
+software: pointpats
+call: {interface: python, name: pointpats.random.cluster_poisson}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  hull: {type: any, required: true}
+  intensity: {type: any}
+  size: {type: any}
+  n_seeds: {type: integer, default: 2}
+  cluster_radius: {type: any}
+  rng: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

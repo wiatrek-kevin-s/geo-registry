@@ -1,0 +1,15 @@
+id: turf-lineintersect
+kind: implementation
+name: turf.lineIntersect
+software: turf-js
+call: {interface: js, name: turf.lineIntersect}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  line1: {type: FeatureCollection<G1> | Feature<G1> | G1, required: true}
+  line2: {type: FeatureCollection<G2> | Feature<G2> | G2, required: true}
+  options: {type: '{ removeDuplicates?: boolean; ignoreSelfIntersections?: boolean; }'}
+  options.removeDuplicates: {type: boolean, note: field of options}
+  options.ignoreSelfIntersections: {type: boolean, note: field of options}
+notes: From @turf/line-intersect.
+status: active
+review: {state: harvested, source: turf}

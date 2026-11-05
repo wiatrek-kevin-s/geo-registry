@@ -1,0 +1,29 @@
+id: rasterio-warp-reproject
+kind: implementation
+name: rasterio.warp.reproject
+software: rasterio
+call: {interface: python, name: rasterio.warp.reproject}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  source: {type: any, required: true}
+  destination: {type: any}
+  src_transform: {type: any}
+  gcps: {type: any}
+  rpcs: {type: any}
+  src_crs: {type: any}
+  src_nodata: {type: any}
+  dst_transform: {type: any}
+  dst_crs: {type: any}
+  dst_nodata: {type: any}
+  dst_resolution: {type: any}
+  src_alpha: {type: integer, default: 0}
+  dst_alpha: {type: integer, default: 0}
+  masked: {type: boolean, default: false}
+  resampling: {type: integer, note: 'default <Resampling.nearest: 0>'}
+  num_threads: {type: integer, default: 1}
+  init_dest_nodata: {type: boolean, default: true}
+  tolerance: {type: number, default: 0.125}
+  warp_mem_limit: {type: integer, default: 0}
+  src_geoloc_array: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,14 @@
+id: geocube-rasterize-rasterize-points-radial
+kind: implementation
+name: geocube.rasterize.rasterize_points_radial
+software: geocube
+call: {interface: python, name: geocube.rasterize.rasterize_points_radial}
+harvest: {harvester: python-packages, engine_version: 0.7.1}
+parameters:
+  geometry_array: {type: GeoSeries, required: true}
+  data_values: {type: NDArray, required: true}
+  grid_coords: {type: dict, required: true}
+  method: {type: str, default: linear}
+  filter_nan: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

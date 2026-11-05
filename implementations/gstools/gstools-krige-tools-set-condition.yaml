@@ -1,0 +1,12 @@
+id: gstools-krige-tools-set-condition
+kind: implementation
+name: gstools.krige.tools.set_condition
+software: gstools
+call: {interface: python, name: gstools.krige.tools.set_condition}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  cond_pos: {type: any, required: true}
+  cond_val: {type: any, required: true}
+  dim: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

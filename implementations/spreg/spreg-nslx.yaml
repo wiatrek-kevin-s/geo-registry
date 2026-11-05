@@ -1,0 +1,27 @@
+id: spreg-nslx
+kind: implementation
+name: spreg.NSLX
+software: spreg
+call: {interface: python, name: spreg.NSLX}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  y: {type: any, required: true}
+  x: {type: any, required: true}
+  coords: {type: any, required: true}
+  params: {type: any, note: 'default [(10, inf, ''exponential'')]'}
+  distance_metric: {type: string, default: Euclidean}
+  leafsize: {type: integer, default: 30}
+  slx_vars: {type: string, default: All}
+  var_flag: {type: integer, default: 1}
+  conv_flag: {type: integer, default: 0}
+  verbose: {type: boolean, default: false}
+  options: {type: any}
+  vm: {type: boolean, default: false}
+  name_y: {type: any}
+  name_x: {type: any}
+  name_ds: {type: any}
+  name_coords: {type: any}
+  latex: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

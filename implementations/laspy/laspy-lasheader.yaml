@@ -1,0 +1,12 @@
+id: laspy-lasheader
+kind: implementation
+name: laspy.LasHeader
+software: laspy
+call: {interface: python, name: laspy.LasHeader}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  version: {type: Union}
+  point_format: {type: Union}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

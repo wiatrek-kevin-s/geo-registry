@@ -1,0 +1,10 @@
+id: verde-utils-meshgrid-to-1d
+kind: implementation
+name: verde.utils.meshgrid_to_1d
+software: verde
+call: {interface: python, name: verde.utils.meshgrid_to_1d}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  coordinates: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

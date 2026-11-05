@@ -1,0 +1,12 @@
+id: spopt-region-azp-sub-adj-matrix
+kind: implementation
+name: spopt.region.azp.sub_adj_matrix
+software: spopt
+call: {interface: python, name: spopt.region.azp.sub_adj_matrix}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  adj: {type: any, required: true}
+  nodes: {type: any, required: true}
+  wo_nodes: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

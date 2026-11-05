@@ -1,0 +1,10 @@
+id: rasterio-plot-reshape-as-raster
+kind: implementation
+name: rasterio.plot.reshape_as_raster
+software: rasterio
+call: {interface: python, name: rasterio.plot.reshape_as_raster}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  arr: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

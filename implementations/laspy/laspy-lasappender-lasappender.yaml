@@ -1,0 +1,14 @@
+id: laspy-lasappender-lasappender
+kind: implementation
+name: laspy.lasappender.LasAppender
+software: laspy
+call: {interface: python, name: laspy.lasappender.LasAppender}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  dest: {type: BinaryIO, required: true}
+  laz_backend: {type: Union}
+  closefd: {type: bool, default: true}
+  encoding_errors: {type: str, default: strict}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

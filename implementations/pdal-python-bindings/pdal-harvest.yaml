@@ -1,0 +1,10 @@
+id: pdal-harvest
+kind: implementation
+name: pdal.harvest
+software: pdal-python-bindings
+call: {interface: python, name: pdal.harvest}
+harvest: {harvester: python-packages, engine_version: 3.5.5}
+parameters:
+  pdal: {type: str, required: true}
+status: active
+review: {state: harvested, source: python-packages}

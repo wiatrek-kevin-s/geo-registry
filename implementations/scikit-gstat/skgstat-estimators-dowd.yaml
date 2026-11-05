@@ -1,0 +1,10 @@
+id: skgstat-estimators-dowd
+kind: implementation
+name: skgstat.estimators.dowd
+software: scikit-gstat
+call: {interface: python, name: skgstat.estimators.dowd}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  x: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

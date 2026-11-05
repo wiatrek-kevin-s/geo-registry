@@ -1,0 +1,12 @@
+id: odc-stac-extract-collection-metadata
+kind: implementation
+name: odc.stac.extract_collection_metadata
+software: odc-stac
+call: {interface: python, name: odc.stac.extract_collection_metadata}
+harvest: {harvester: python-packages, engine_version: 0.5.3}
+parameters:
+  item: {type: pystac.item.Item, required: true}
+  cfg: {type: 'Optional[ConversionConfig]'}
+  md_plugin: {type: MDParser | None}
+status: active
+review: {state: harvested, source: python-packages}

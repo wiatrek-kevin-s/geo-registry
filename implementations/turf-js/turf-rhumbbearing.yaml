@@ -1,0 +1,14 @@
+id: turf-rhumbbearing
+kind: implementation
+name: turf.rhumbBearing
+software: turf-js
+call: {interface: js, name: turf.rhumbBearing}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  start: {type: Coord, required: true}
+  end: {type: Coord, required: true}
+  options: {type: '{ final?: boolean; }'}
+  options.final: {type: boolean, note: field of options}
+notes: From @turf/rhumb-bearing.
+status: active
+review: {state: harvested, source: turf}

@@ -1,0 +1,13 @@
+id: sf-sf-colors
+kind: implementation
+name: sf::sf.colors
+software: sf
+call: {interface: r, name: 'sf::sf.colors'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  n: {type: any, default: '10'}
+  cutoff.tails: {type: any, default: 'c(0.35, 0.2)'}
+  alpha: {type: any, default: '1'}
+  categorical: {type: any, default: 'FALSE'}
+status: active
+review: {state: harvested, source: r-packages}

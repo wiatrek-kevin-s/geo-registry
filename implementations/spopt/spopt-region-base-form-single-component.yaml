@@ -1,0 +1,12 @@
+id: spopt-region-base-form-single-component
+kind: implementation
+name: spopt.region.base.form_single_component
+software: spopt
+call: {interface: python, name: spopt.region.base.form_single_component}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  gdf: {type: any, required: true}
+  w: {type: any, required: true}
+  linkage: {type: string, default: single}
+status: active
+review: {state: harvested, source: python-packages}

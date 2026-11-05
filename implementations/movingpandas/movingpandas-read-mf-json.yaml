@@ -1,0 +1,12 @@
+id: movingpandas-read-mf-json
+kind: implementation
+name: movingpandas.read_mf_json
+software: movingpandas
+call: {interface: python, name: movingpandas.read_mf_json}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  json_file_path: {type: any, required: true}
+  traj_id_property: {type: any}
+  traj_id: {type: integer, default: 0}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: fiona-fio-options-validate-multilayer-file-index
+kind: implementation
+name: fiona.fio.options.validate_multilayer_file_index
+software: fiona
+call: {interface: python, name: fiona.fio.options.validate_multilayer_file_index}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  files: {type: any, required: true}
+  layerdict: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

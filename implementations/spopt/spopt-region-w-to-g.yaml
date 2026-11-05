@@ -1,0 +1,10 @@
+id: spopt-region-w-to-g
+kind: implementation
+name: spopt.region.w_to_g
+software: spopt
+call: {interface: python, name: spopt.region.w_to_g}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  w: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

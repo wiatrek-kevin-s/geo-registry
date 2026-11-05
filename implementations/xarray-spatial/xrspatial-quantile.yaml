@@ -1,0 +1,13 @@
+id: xrspatial-quantile
+kind: implementation
+name: xrspatial.quantile
+software: xarray-spatial
+call: {interface: python, name: xrspatial.quantile}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: xr.DataArray, required: true}
+  k: {type: int, default: 4}
+  num_sample: {type: 'Optional[int]', default: 20000}
+  name: {type: 'Optional[str]', default: quantile}
+status: active
+review: {state: harvested, source: python-packages}

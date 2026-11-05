@@ -1,0 +1,11 @@
+id: movingpandas-trajectory-apply-offset-seconds
+kind: implementation
+name: Trajectory.apply_offset_seconds
+software: movingpandas
+call: {interface: python, name: movingpandas.Trajectory.apply_offset_seconds}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  column: {type: any, required: true}
+  offset: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

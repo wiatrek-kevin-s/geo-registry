@@ -1,0 +1,21 @@
+id: xrspatial-kde
+kind: implementation
+name: xrspatial.kde
+software: xarray-spatial
+call: {interface: python, name: xrspatial.kde}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  x: {type: 'Union[np.ndarray, list]', required: true}
+  y: {type: 'Optional[Union[np.ndarray, list]]'}
+  weights: {type: 'Optional[Union[np.ndarray, list]]'}
+  bandwidth: {type: 'Union[float, str]', default: silverman}
+  kernel: {type: str, default: gaussian}
+  template: {type: 'Optional[xr.DataArray]'}
+  x_range: {type: 'Optional[Tuple[float, float]]'}
+  y_range: {type: 'Optional[Tuple[float, float]]'}
+  width: {type: int, default: 256}
+  height: {type: int, default: 256}
+  name: {type: str, default: kde}
+  column: {type: 'Optional[str]'}
+status: active
+review: {state: harvested, source: python-packages}

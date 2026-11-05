@@ -1,0 +1,12 @@
+id: geopy-distance-lonlat
+kind: implementation
+name: geopy.distance.lonlat
+software: geopy
+call: {interface: python, name: geopy.distance.lonlat}
+harvest: {harvester: python-packages, engine_version: 2.5.0}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  z: {type: integer, default: 0}
+status: active
+review: {state: harvested, source: python-packages}

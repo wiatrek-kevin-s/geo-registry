@@ -1,0 +1,12 @@
+id: spopt-region-components-check-contiguity
+kind: implementation
+name: spopt.region.components.check_contiguity
+software: spopt
+call: {interface: python, name: spopt.region.components.check_contiguity}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  w: {type: any, required: true}
+  neighbors: {type: any, required: true}
+  leaver: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

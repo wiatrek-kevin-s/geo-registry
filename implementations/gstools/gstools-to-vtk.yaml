@@ -1,0 +1,12 @@
+id: gstools-to-vtk
+kind: implementation
+name: gstools.to_vtk
+software: gstools
+call: {interface: python, name: gstools.to_vtk}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  pos: {type: any, required: true}
+  fields: {type: any, required: true}
+  mesh_type: {type: string, default: unstructured}
+status: active
+review: {state: harvested, source: python-packages}

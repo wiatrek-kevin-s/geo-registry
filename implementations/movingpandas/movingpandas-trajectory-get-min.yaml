@@ -1,0 +1,10 @@
+id: movingpandas-trajectory-get-min
+kind: implementation
+name: Trajectory.get_min
+software: movingpandas
+call: {interface: python, name: movingpandas.Trajectory.get_min}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  column: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

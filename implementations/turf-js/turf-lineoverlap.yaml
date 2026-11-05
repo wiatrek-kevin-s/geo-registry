@@ -1,0 +1,14 @@
+id: turf-lineoverlap
+kind: implementation
+name: turf.lineOverlap
+software: turf-js
+call: {interface: js, name: turf.lineOverlap}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  line1: {type: Feature<G1> | G1, required: true}
+  line2: {type: Feature<G2> | G2, required: true}
+  options: {type: '{ tolerance?: number; }'}
+  options.tolerance: {type: number, note: field of options}
+notes: From @turf/line-overlap.
+status: active
+review: {state: harvested, source: turf}

@@ -1,0 +1,17 @@
+id: rioxarray-raster-dataset-rasterdataset-to-raster
+kind: implementation
+name: RasterDataset.to_raster
+software: rioxarray
+call: {interface: python, name: rioxarray.raster_dataset.RasterDataset.to_raster}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  raster_path: {type: Union, required: true}
+  driver: {type: Optional}
+  dtype: {type: Union}
+  tags: {type: Optional}
+  windowed: {type: bool, default: false}
+  recalc_transform: {type: bool, default: true}
+  lock: {type: Optional}
+  compute: {type: bool, default: true}
+status: active
+review: {state: harvested, source: python-packages}

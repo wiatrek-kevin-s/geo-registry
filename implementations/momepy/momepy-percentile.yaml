@@ -1,0 +1,12 @@
+id: momepy-percentile
+kind: implementation
+name: momepy.percentile
+software: momepy
+call: {interface: python, name: momepy.percentile}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  y: {type: Series, required: true}
+  graph: {type: Graph, required: true}
+  q: {type: any, note: 'default [25, 50, 75]'}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,10 @@
+id: momepy-orientation
+kind: implementation
+name: momepy.orientation
+software: momepy
+call: {interface: python, name: momepy.orientation}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  geometry: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

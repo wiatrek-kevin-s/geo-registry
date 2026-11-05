@@ -1,0 +1,12 @@
+id: rasterio-merge-subdivide
+kind: implementation
+name: rasterio.merge.subdivide
+software: rasterio
+call: {interface: python, name: rasterio.merge.subdivide}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  window: {type: any, required: true}
+  height: {type: any, required: true}
+  width: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,16 @@
+id: xrspatial-multispectral-true-color
+kind: implementation
+name: xrspatial.multispectral.true_color
+software: xarray-spatial
+call: {interface: python, name: xrspatial.multispectral.true_color}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  r: {type: any, required: true}
+  g: {type: any, required: true}
+  b: {type: any, required: true}
+  nodata: {type: integer, default: 1}
+  c: {type: number, default: 10.0}
+  th: {type: number, default: 0.125}
+  name: {type: string, default: true_color}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: libpysal-weights-comb
+kind: implementation
+name: libpysal.weights.comb
+software: libpysal
+call: {interface: python, name: libpysal.weights.comb}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  items: {type: any, required: true}
+  n: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

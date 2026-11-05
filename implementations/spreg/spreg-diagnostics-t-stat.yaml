@@ -1,0 +1,11 @@
+id: spreg-diagnostics-t-stat
+kind: implementation
+name: spreg.diagnostics.t_stat
+software: spreg
+call: {interface: python, name: spreg.diagnostics.t_stat}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  reg: {type: any, required: true}
+  z_stat: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,16 @@
+id: gstools-transform-normal-to-uniform
+kind: implementation
+name: gstools.transform.normal_to_uniform
+software: gstools
+call: {interface: python, name: gstools.transform.normal_to_uniform}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  fld: {type: any, required: true}
+  low: {type: number, default: 0.0}
+  high: {type: number, default: 1.0}
+  field: {type: string, default: field}
+  store: {type: boolean, default: true}
+  process: {type: boolean, default: false}
+  keep_mean: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

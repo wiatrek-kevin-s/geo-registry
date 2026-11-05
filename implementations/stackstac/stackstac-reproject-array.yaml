@@ -1,0 +1,13 @@
+id: stackstac-reproject-array
+kind: implementation
+name: stackstac.reproject_array
+software: stackstac
+call: {interface: python, name: stackstac.reproject_array}
+harvest: {harvester: python-packages, engine_version: 0.5.1}
+parameters:
+  arr: {type: DataArray, required: true}
+  spec: {type: RasterSpec, required: true}
+  interpolation: {type: Literal, default: nearest}
+  fill_value: {type: Union, note: default nan}
+status: active
+review: {state: harvested, source: python-packages}

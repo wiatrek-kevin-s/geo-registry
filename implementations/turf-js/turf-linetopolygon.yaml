@@ -1,0 +1,16 @@
+id: turf-linetopolygon
+kind: implementation
+name: turf.lineToPolygon
+software: turf-js
+call: {interface: js, name: turf.lineToPolygon}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  lines: {type: Feature<G> | FeatureCollection<G> | G, required: true}
+  options: {type: '{ properties?: GeoJsonProperties; autoComplete?: boolean; orderCoords?: boolean; mutate?: boolean; }'}
+  options.properties: {type: GeoJsonProperties, note: field of options}
+  options.autoComplete: {type: boolean, note: field of options}
+  options.orderCoords: {type: boolean, note: field of options}
+  options.mutate: {type: boolean, note: field of options}
+notes: From @turf/line-to-polygon.
+status: active
+review: {state: harvested, source: turf}

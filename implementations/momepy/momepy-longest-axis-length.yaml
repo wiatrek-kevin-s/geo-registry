@@ -1,0 +1,10 @@
+id: momepy-longest-axis-length
+kind: implementation
+name: momepy.longest_axis_length
+software: momepy
+call: {interface: python, name: momepy.longest_axis_length}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  geometry: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

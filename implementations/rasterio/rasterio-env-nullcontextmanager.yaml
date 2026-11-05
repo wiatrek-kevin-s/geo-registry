@@ -1,0 +1,10 @@
+id: rasterio-env-nullcontextmanager
+kind: implementation
+name: rasterio.env.NullContextManager
+software: rasterio
+call: {interface: python, name: rasterio.env.NullContextManager}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

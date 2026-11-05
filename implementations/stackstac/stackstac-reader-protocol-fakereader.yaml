@@ -1,0 +1,11 @@
+id: stackstac-reader-protocol-fakereader
+kind: implementation
+name: stackstac.reader_protocol.FakeReader
+software: stackstac
+call: {interface: python, name: stackstac.reader_protocol.FakeReader}
+harvest: {harvester: python-packages, engine_version: 0.5.1}
+parameters:
+  dtype: {type: np.dtype, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

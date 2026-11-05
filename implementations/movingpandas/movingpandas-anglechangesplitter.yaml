@@ -1,0 +1,11 @@
+id: movingpandas-anglechangesplitter
+kind: implementation
+name: movingpandas.AngleChangeSplitter
+software: movingpandas
+call: {interface: python, name: movingpandas.AngleChangeSplitter}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  traj: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

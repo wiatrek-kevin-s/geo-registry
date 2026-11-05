@@ -1,0 +1,14 @@
+id: odc-stac-configure-s3-access
+kind: implementation
+name: odc.stac.configure_s3_access
+software: odc-stac
+call: {interface: python, name: odc.stac.configure_s3_access}
+harvest: {harvester: python-packages, engine_version: 0.5.3}
+parameters:
+  profile: {type: str | None}
+  region_name: {type: str, default: auto}
+  aws_unsigned: {type: bool | None}
+  requester_pays: {type: bool, default: false}
+  cloud_defaults: {type: bool, default: true}
+status: active
+review: {state: harvested, source: python-packages}

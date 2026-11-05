@@ -1,0 +1,13 @@
+id: xrspatial-kde-points-from-geodataframe
+kind: implementation
+name: xrspatial.kde.points_from_geodataframe
+software: xarray-spatial
+call: {interface: python, name: xrspatial.kde.points_from_geodataframe}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  gdf: {type: any, required: true}
+  column: {type: any, required: true}
+  value_required: {type: any, required: true}
+  func_name: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

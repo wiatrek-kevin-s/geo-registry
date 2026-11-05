@@ -1,0 +1,18 @@
+id: xrspatial-kriging
+kind: implementation
+name: xrspatial.kriging
+software: xarray-spatial
+call: {interface: python, name: xrspatial.kriging}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any}
+  z: {type: any}
+  template: {type: any}
+  variogram_model: {type: string, default: spherical}
+  nlags: {type: integer, default: 15}
+  return_variance: {type: boolean, default: false}
+  name: {type: string, default: kriging}
+  column: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

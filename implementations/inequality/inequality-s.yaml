@@ -1,0 +1,20 @@
+id: inequality-s
+kind: implementation
+name: inequality.S
+software: inequality
+call: {interface: python, name: inequality.S}
+harvest: {harvester: python-packages, engine_version: 1.2.0}
+parameters:
+  df: {type: any, required: true}
+  g: {type: any, required: true}
+  column: {type: any, required: true}
+  k: {type: integer, default: 2}
+  bins: {type: any}
+  permutations: {type: integer, default: 999}
+  seed: {type: any}
+  keep_sim: {type: boolean, default: false}
+  n_jobs: {type: integer, default: 1}
+  verbose: {type: boolean, default: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

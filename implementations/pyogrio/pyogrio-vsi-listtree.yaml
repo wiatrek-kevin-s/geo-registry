@@ -1,0 +1,11 @@
+id: pyogrio-vsi-listtree
+kind: implementation
+name: pyogrio.vsi_listtree
+software: pyogrio
+call: {interface: python, name: pyogrio.vsi_listtree}
+harvest: {harvester: python-packages, engine_version: 0.13.0}
+parameters:
+  path: {type: any, required: true}
+  pattern: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

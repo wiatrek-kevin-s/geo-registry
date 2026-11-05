@@ -1,0 +1,9 @@
+id: movingpandas-trajectory-get-direction
+kind: implementation
+name: Trajectory.get_direction
+software: movingpandas
+call: {interface: python, name: movingpandas.Trajectory.get_direction}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

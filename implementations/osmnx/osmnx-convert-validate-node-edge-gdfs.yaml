@@ -1,0 +1,12 @@
+id: osmnx-convert-validate-node-edge-gdfs
+kind: implementation
+name: osmnx.convert.validate_node_edge_gdfs
+software: osmnx
+call: {interface: python, name: osmnx.convert.validate_node_edge_gdfs}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  gdf_nodes: {type: gpd.GeoDataFrame, required: true}
+  gdf_edges: {type: gpd.GeoDataFrame, required: true}
+  strict: {type: bool, default: true}
+status: active
+review: {state: harvested, source: python-packages}

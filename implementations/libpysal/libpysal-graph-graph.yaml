@@ -1,0 +1,13 @@
+id: libpysal-graph-graph
+kind: implementation
+name: libpysal.graph.Graph
+software: libpysal
+call: {interface: python, name: libpysal.graph.Graph}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  adjacency: {type: any, required: true}
+  transformation: {type: string, default: O}
+  is_sorted: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

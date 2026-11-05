@@ -1,0 +1,12 @@
+id: skgstat-plotting-plotly-plot-2d
+kind: implementation
+name: skgstat.plotting.plotly_plot_2d
+software: scikit-gstat
+call: {interface: python, name: skgstat.plotting.plotly_plot_2d}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  stvariogram: {type: any, required: true}
+  kind: {type: string, default: contour}
+  fig: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

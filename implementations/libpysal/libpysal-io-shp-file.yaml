@@ -1,0 +1,13 @@
+id: libpysal-io-shp-file
+kind: implementation
+name: libpysal.io.shp_file
+software: libpysal
+call: {interface: python, name: libpysal.io.shp_file}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  fileName: {type: any, required: true}
+  mode: {type: string, default: r}
+  shape_type: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: osmnx-convert-to-digraph
+kind: implementation
+name: osmnx.convert.to_digraph
+software: osmnx
+call: {interface: python, name: osmnx.convert.to_digraph}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  G: {type: nx.MultiDiGraph, required: true}
+  weight: {type: str, default: length}
+status: active
+review: {state: harvested, source: python-packages}

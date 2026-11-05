@@ -1,0 +1,11 @@
+id: turf-geojsonrbush
+kind: implementation
+name: turf.geojsonRbush
+software: turf-js
+call: {interface: js, name: turf.geojsonRbush}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  maxEntries: {type: number}
+notes: From @turf/geojson-rbush.
+status: active
+review: {state: harvested, source: turf}

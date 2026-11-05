@@ -1,0 +1,11 @@
+id: movingpandas-trajectory-frechet-distance
+kind: implementation
+name: Trajectory.frechet_distance
+software: movingpandas
+call: {interface: python, name: movingpandas.Trajectory.frechet_distance}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  other: {type: any, required: true}
+  units: {type: any, note: 'default UNITS(distance=None, time=None, time2=None, crs=None)'}
+status: active
+review: {state: harvested, source: python-packages}

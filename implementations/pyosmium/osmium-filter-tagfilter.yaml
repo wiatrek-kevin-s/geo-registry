@@ -1,0 +1,10 @@
+id: osmium-filter-tagfilter
+kind: implementation
+name: osmium.filter.TagFilter
+software: pyosmium
+call: {interface: python, name: osmium.filter.TagFilter}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

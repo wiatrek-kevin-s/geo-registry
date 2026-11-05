@@ -1,0 +1,11 @@
+id: osmium-helper-node
+kind: implementation
+name: osmium.helper.Node
+software: pyosmium
+call: {interface: python, name: osmium.helper.Node}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters:
+  cnode: {type: cosm.COSMNode, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

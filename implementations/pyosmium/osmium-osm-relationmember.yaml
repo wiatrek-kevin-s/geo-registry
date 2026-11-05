@@ -1,0 +1,13 @@
+id: osmium-osm-relationmember
+kind: implementation
+name: osmium.osm.RelationMember
+software: pyosmium
+call: {interface: python, name: osmium.osm.RelationMember}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters:
+  ref: {type: int, required: true}
+  mtype: {type: str, required: true}
+  role: {type: str, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,28 @@
+id: pyogrio-geopandas-write
+kind: implementation
+name: pyogrio.geopandas.write
+software: pyogrio
+call: {interface: python, name: pyogrio.geopandas.write}
+harvest: {harvester: python-packages, engine_version: 0.13.0}
+parameters:
+  path: {type: any, required: true}
+  geometry: {type: any, required: true}
+  field_data: {type: any, required: true}
+  fields: {type: any, required: true}
+  field_mask: {type: any}
+  layer: {type: any}
+  driver: {type: any}
+  geometry_type: {type: any}
+  crs: {type: any}
+  encoding: {type: any}
+  promote_to_multi: {type: any}
+  nan_as_null: {type: boolean, default: true}
+  append: {type: boolean, default: false}
+  dataset_metadata: {type: any}
+  layer_metadata: {type: any}
+  metadata: {type: any}
+  dataset_options: {type: any}
+  layer_options: {type: any}
+  gdal_tz_offsets: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

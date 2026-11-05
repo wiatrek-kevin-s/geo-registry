@@ -1,0 +1,13 @@
+id: pointpats-hexagonm
+kind: implementation
+name: pointpats.HexagonM
+software: pointpats
+call: {interface: python, name: pointpats.HexagonM}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  pp: {type: any, required: true}
+  lh: {type: any, required: true}
+  window: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,14 @@
+id: xrspatial-focal-focal-stats
+kind: implementation
+name: xrspatial.focal.focal_stats
+software: xarray-spatial
+call: {interface: python, name: xrspatial.focal.focal_stats}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: any, required: true}
+  kernel: {type: any, required: true}
+  stats_funcs: {type: any}
+  name: {type: string, default: focal_stats}
+  boundary: {type: string, default: nan}
+status: active
+review: {state: harvested, source: python-packages}

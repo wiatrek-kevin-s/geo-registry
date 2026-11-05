@@ -1,0 +1,10 @@
+id: mgwr-diagnostics-get-cv
+kind: implementation
+name: mgwr.diagnostics.get_CV
+software: mgwr
+call: {interface: python, name: mgwr.diagnostics.get_CV}
+harvest: {harvester: python-packages, engine_version: 2.2.1}
+parameters:
+  gwr: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

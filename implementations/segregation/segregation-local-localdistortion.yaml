@@ -1,0 +1,17 @@
+id: segregation-local-localdistortion
+kind: implementation
+name: segregation.local.LocalDistortion
+software: segregation
+call: {interface: python, name: segregation.local.LocalDistortion}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  data: {type: any, required: true}
+  groups: {type: any}
+  metric: {type: string, default: euclidean}
+  network: {type: any}
+  distance_matrix: {type: any}
+  normalize: {type: boolean, default: true}
+  n_seeds: {type: integer, default: 4}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

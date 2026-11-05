@@ -1,0 +1,12 @@
+id: spreg-set-name-q
+kind: implementation
+name: spreg.set_name_q
+software: spreg
+call: {interface: python, name: spreg.set_name_q}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  name_q: {type: any, required: true}
+  q: {type: any, required: true}
+  q_lags: {type: integer, default: 0}
+status: active
+review: {state: harvested, source: python-packages}

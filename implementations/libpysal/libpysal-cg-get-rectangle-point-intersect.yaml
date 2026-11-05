@@ -1,0 +1,11 @@
+id: libpysal-cg-get-rectangle-point-intersect
+kind: implementation
+name: libpysal.cg.get_rectangle_point_intersect
+software: libpysal
+call: {interface: python, name: libpysal.cg.get_rectangle_point_intersect}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  rect: {type: any, required: true}
+  pt: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

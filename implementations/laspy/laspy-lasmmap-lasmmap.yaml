@@ -1,0 +1,11 @@
+id: laspy-lasmmap-lasmmap
+kind: implementation
+name: laspy.lasmmap.LasMMAP
+software: laspy
+call: {interface: python, name: laspy.lasmmap.LasMMAP}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  filename: {type: Union, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

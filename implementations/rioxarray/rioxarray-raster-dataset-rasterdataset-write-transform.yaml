@@ -1,0 +1,13 @@
+id: rioxarray-raster-dataset-rasterdataset-write-transform
+kind: implementation
+name: RasterDataset.write_transform
+software: rioxarray
+call: {interface: python, name: rioxarray.raster_dataset.RasterDataset.write_transform}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  transform: {type: Optional}
+  grid_mapping_name: {type: Optional}
+  convention: {type: Optional}
+  inplace: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

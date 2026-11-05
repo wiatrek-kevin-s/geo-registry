@@ -1,0 +1,9 @@
+id: xrspatial-dataset-support-supports-dataset-bands
+kind: implementation
+name: xrspatial.dataset_support.supports_dataset_bands
+software: xarray-spatial
+call: {interface: python, name: xrspatial.dataset_support.supports_dataset_bands}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

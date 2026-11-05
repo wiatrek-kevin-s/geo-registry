@@ -1,0 +1,15 @@
+id: movingpandas-trajectorycollectionaggregator
+kind: implementation
+name: movingpandas.TrajectoryCollectionAggregator
+software: movingpandas
+call: {interface: python, name: movingpandas.TrajectoryCollectionAggregator}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  traj_collection: {type: any, required: true}
+  max_distance: {type: any, required: true}
+  min_distance: {type: any, required: true}
+  min_stop_duration: {type: any, required: true}
+  min_angle: {type: integer, default: 45}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

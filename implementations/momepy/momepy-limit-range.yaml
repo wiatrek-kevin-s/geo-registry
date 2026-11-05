@@ -1,0 +1,11 @@
+id: momepy-limit-range
+kind: implementation
+name: momepy.limit_range
+software: momepy
+call: {interface: python, name: momepy.limit_range}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  vals: {type: any, required: true}
+  rng: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

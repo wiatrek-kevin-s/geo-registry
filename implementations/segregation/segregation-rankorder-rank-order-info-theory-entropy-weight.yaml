@@ -1,0 +1,10 @@
+id: segregation-rankorder-rank-order-info-theory-entropy-weight
+kind: implementation
+name: segregation.rankorder.rank_order_info_theory.entropy_weight
+software: segregation
+call: {interface: python, name: segregation.rankorder.rank_order_info_theory.entropy_weight}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  p: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

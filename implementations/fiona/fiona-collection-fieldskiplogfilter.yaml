@@ -1,0 +1,11 @@
+id: fiona-collection-fieldskiplogfilter
+kind: implementation
+name: fiona.collection.FieldSkipLogFilter
+software: fiona
+call: {interface: python, name: fiona.collection.FieldSkipLogFilter}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  name: {type: string, default: ''}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

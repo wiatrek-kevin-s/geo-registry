@@ -1,0 +1,13 @@
+id: xrspatial-savi
+kind: implementation
+name: xrspatial.savi
+software: xarray-spatial
+call: {interface: python, name: xrspatial.savi}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  nir_agg: {type: xr.DataArray, required: true}
+  red_agg: {type: xr.DataArray, required: true}
+  soil_factor: {type: float, default: 1.0}
+  name: {type: str, default: savi}
+status: active
+review: {state: harvested, source: python-packages}

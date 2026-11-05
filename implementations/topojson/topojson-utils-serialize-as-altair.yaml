@@ -1,0 +1,15 @@
+id: topojson-utils-serialize-as-altair
+kind: implementation
+name: topojson.utils.serialize_as_altair
+software: topojson
+call: {interface: python, name: topojson.utils.serialize_as_altair}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  topo_object: {type: any, required: true}
+  color: {type: any}
+  tooltip: {type: boolean, default: true}
+  projection: {type: string, default: identity}
+  objectname: {type: string, default: data}
+  geo_interface: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,17 @@
+id: terra-proj-pipelines
+kind: implementation
+name: terra::proj_pipelines
+software: terra
+call: {interface: r, name: 'terra::proj_pipelines'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  from: {type: any, required: true}
+  to: {type: any, required: true}
+  authority: {type: any, default: '""'}
+  AOI: {type: any, default: 'NULL'}
+  use: {type: any, default: '"NONE"'}
+  grid_availability: {type: any, default: '"USED"'}
+  desired_accuracy: {type: any, default: '-1'}
+  strict_containment: {type: any, default: 'FALSE'}
+status: active
+review: {state: harvested, source: r-packages}

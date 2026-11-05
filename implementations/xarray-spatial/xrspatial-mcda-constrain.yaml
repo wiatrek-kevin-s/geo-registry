@@ -1,0 +1,13 @@
+id: xrspatial-mcda-constrain
+kind: implementation
+name: xrspatial.mcda.constrain
+software: xarray-spatial
+call: {interface: python, name: xrspatial.mcda.constrain}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  suitability: {type: xr.DataArray, required: true}
+  exclude: {type: 'list[xr.DataArray]', required: true}
+  fill: {type: float, note: default nan}
+  name: {type: str | None}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,15 @@
+id: skgstat-kriging-custom-warning-format
+kind: implementation
+name: skgstat.Kriging.custom_warning_format
+software: scikit-gstat
+call: {interface: python, name: skgstat.Kriging.custom_warning_format}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  message: {type: any, required: true}
+  category: {type: any, required: true}
+  filename: {type: any, required: true}
+  lineno: {type: any, required: true}
+  file: {type: any}
+  line: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

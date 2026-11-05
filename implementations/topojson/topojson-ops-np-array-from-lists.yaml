@@ -1,0 +1,10 @@
+id: topojson-ops-np-array-from-lists
+kind: implementation
+name: topojson.ops.np_array_from_lists
+software: topojson
+call: {interface: python, name: topojson.ops.np_array_from_lists}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  nested_lists: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

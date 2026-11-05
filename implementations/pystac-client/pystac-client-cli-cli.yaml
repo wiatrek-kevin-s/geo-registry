@@ -1,0 +1,9 @@
+id: pystac-client-cli-cli
+kind: implementation
+name: pystac_client.cli.cli
+software: pystac-client
+call: {interface: python, name: pystac_client.cli.cli}
+harvest: {harvester: python-packages, engine_version: 0.9.1}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

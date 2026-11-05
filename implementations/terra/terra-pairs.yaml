@@ -1,0 +1,16 @@
+id: terra-pairs
+kind: implementation
+name: terra::pairs
+software: terra
+call: {interface: r, name: 'terra::pairs'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  hist: {type: any, default: 'TRUE'}
+  cor: {type: any, default: 'TRUE'}
+  use: {type: any, default: '"pairwise.complete.obs"'}
+  maxcells: {type: any, default: 1e+05}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

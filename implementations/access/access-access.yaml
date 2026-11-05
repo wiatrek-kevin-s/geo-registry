@@ -1,0 +1,24 @@
+id: access-access
+kind: implementation
+name: access.Access
+software: access
+call: {interface: python, name: access.Access}
+harvest: {harvester: python-packages, engine_version: 1.1.10.post3}
+parameters:
+  demand_df: {type: any, required: true}
+  demand_value: {type: any, required: true}
+  supply_df: {type: any, required: true}
+  supply_value: {type: boolean, default: false}
+  demand_index: {type: boolean, default: true}
+  supply_index: {type: boolean, default: true}
+  cost_df: {type: any}
+  cost_origin: {type: any}
+  cost_dest: {type: any}
+  cost_name: {type: any}
+  neighbor_cost_df: {type: any}
+  neighbor_cost_origin: {type: any}
+  neighbor_cost_dest: {type: any}
+  neighbor_cost_name: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: laspy-copc-httprangestream
+kind: implementation
+name: laspy.copc.HttpRangeStream
+software: laspy
+call: {interface: python, name: laspy.copc.HttpRangeStream}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  url: {type: str, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

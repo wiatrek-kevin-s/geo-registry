@@ -1,0 +1,12 @@
+id: giddy-rank-tau
+kind: implementation
+name: giddy.rank.Tau
+software: giddy
+call: {interface: python, name: giddy.rank.Tau}
+harvest: {harvester: python-packages, engine_version: 2.3.9}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

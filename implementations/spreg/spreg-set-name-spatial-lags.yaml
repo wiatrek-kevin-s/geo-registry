@@ -1,0 +1,13 @@
+id: spreg-set-name-spatial-lags
+kind: implementation
+name: spreg.set_name_spatial_lags
+software: spreg
+call: {interface: python, name: spreg.set_name_spatial_lags}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  names: {type: any, required: true}
+  w_lags: {type: any, required: true}
+  slx_vars: {type: string, default: all}
+  additional: {type: integer, default: 0}
+status: active
+review: {state: harvested, source: python-packages}

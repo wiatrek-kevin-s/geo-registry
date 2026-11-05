@@ -1,0 +1,15 @@
+id: geocube-vector-to-cube-geoboxmaker
+kind: implementation
+name: geocube.vector_to_cube.GeoBoxMaker
+software: geocube
+call: {interface: python, name: geocube.vector_to_cube.GeoBoxMaker}
+harvest: {harvester: python-packages, engine_version: 0.7.1}
+parameters:
+  output_crs: {type: Any, required: true}
+  resolution: {type: Union, required: true}
+  align: {type: Optional, required: true}
+  geom: {type: Union, required: true}
+  like: {type: Union, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

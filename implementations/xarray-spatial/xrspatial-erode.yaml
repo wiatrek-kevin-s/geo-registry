@@ -1,0 +1,13 @@
+id: xrspatial-erode
+kind: implementation
+name: xrspatial.erode
+software: xarray-spatial
+call: {interface: python, name: xrspatial.erode}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: any, required: true}
+  iterations: {type: integer, default: 50000}
+  seed: {type: integer, default: 42}
+  params: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

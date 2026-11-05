@@ -1,0 +1,11 @@
+id: h3-api-basic-int-cells-to-directed-edge
+kind: implementation
+name: h3.api.basic_int.cells_to_directed_edge
+software: h3-py
+call: {interface: python, name: h3.api.basic_int.cells_to_directed_edge}
+harvest: {harvester: python-packages, engine_version: 4.5.0}
+parameters:
+  origin: {type: any, required: true}
+  destination: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: sedona-sql-st-voronoipolygons
+kind: implementation
+name: sedona.sql.ST_VoronoiPolygons
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_VoronoiPolygons}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geometry: {type: Union, required: true}
+  tolerance: {type: Union, default: 0.0}
+  extendTo: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

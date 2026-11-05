@@ -1,0 +1,11 @@
+id: osmium-osm-types-outerringiterator
+kind: implementation
+name: osmium.osm.types.OuterRingIterator
+software: pyosmium
+call: {interface: python, name: osmium.osm.types.OuterRingIterator}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters:
+  parent: {type: Any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,16 @@
+id: laspy-laswriter
+kind: implementation
+name: laspy.LasWriter
+software: laspy
+call: {interface: python, name: laspy.LasWriter}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  dest: {type: BinaryIO, required: true}
+  header: {type: LasHeader, required: true}
+  do_compress: {type: Optional}
+  laz_backend: {type: Union}
+  closefd: {type: bool, default: true}
+  encoding_errors: {type: str, default: strict}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

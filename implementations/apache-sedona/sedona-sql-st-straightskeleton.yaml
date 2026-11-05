@@ -1,0 +1,11 @@
+id: sedona-sql-st-straightskeleton
+kind: implementation
+name: sedona.sql.ST_StraightSkeleton
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_StraightSkeleton}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geometry: {type: Union, required: true}
+  max_vertices: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

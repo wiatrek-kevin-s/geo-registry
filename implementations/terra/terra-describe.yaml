@@ -1,0 +1,19 @@
+id: terra-describe
+kind: implementation
+name: terra::describe
+software: terra
+call: {interface: r, name: 'terra::describe'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  source: {type: any, default: '1'}
+  sds: {type: any, default: 'FALSE'}
+  meta: {type: any, default: 'FALSE'}
+  parse: {type: any, default: 'FALSE'}
+  options: {type: any, default: '""'}
+  print: {type: any, default: 'FALSE'}
+  open_opt: {type: any, default: '""'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

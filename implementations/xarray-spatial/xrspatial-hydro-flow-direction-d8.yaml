@@ -1,0 +1,12 @@
+id: xrspatial-hydro-flow-direction-d8
+kind: implementation
+name: xrspatial.hydro.flow_direction_d8
+software: xarray-spatial
+call: {interface: python, name: xrspatial.hydro.flow_direction_d8}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: xr.DataArray, required: true}
+  name: {type: str, default: flow_direction}
+  boundary: {type: str, default: nan}
+status: active
+review: {state: harvested, source: python-packages}

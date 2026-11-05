@@ -1,0 +1,9 @@
+id: fiona-env-getenv
+kind: implementation
+name: fiona.env.getenv
+software: fiona
+call: {interface: python, name: fiona.env.getenv}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

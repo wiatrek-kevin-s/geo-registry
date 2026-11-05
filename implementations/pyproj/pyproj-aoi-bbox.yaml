@@ -1,0 +1,14 @@
+id: pyproj-aoi-bbox
+kind: implementation
+name: pyproj.aoi.BBox
+software: pyproj
+call: {interface: python, name: pyproj.aoi.BBox}
+harvest: {harvester: python-packages, engine_version: 3.8.0}
+parameters:
+  west: {type: float, required: true}
+  south: {type: float, required: true}
+  east: {type: float, required: true}
+  north: {type: float, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

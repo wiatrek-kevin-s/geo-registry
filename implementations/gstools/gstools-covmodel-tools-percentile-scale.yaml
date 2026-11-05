@@ -1,0 +1,11 @@
+id: gstools-covmodel-tools-percentile-scale
+kind: implementation
+name: gstools.covmodel.tools.percentile_scale
+software: gstools
+call: {interface: python, name: gstools.covmodel.tools.percentile_scale}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  model: {type: any, required: true}
+  per: {type: number, default: 0.9}
+status: active
+review: {state: harvested, source: python-packages}

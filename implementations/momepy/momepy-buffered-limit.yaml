@@ -1,0 +1,13 @@
+id: momepy-buffered-limit
+kind: implementation
+name: momepy.buffered_limit
+software: momepy
+call: {interface: python, name: momepy.buffered_limit}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  gdf: {type: any, required: true}
+  buffer: {type: integer, default: 100}
+  min_buffer: {type: float, default: 0}
+  max_buffer: {type: float, default: 100}
+status: active
+review: {state: harvested, source: python-packages}

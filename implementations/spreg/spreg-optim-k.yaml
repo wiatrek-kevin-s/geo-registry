@@ -1,0 +1,11 @@
+id: spreg-optim-k
+kind: implementation
+name: spreg.optim_k
+software: spreg
+call: {interface: python, name: spreg.optim_k}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  trace: {type: any, required: true}
+  window_size: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

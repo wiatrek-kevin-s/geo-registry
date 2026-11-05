@@ -1,0 +1,12 @@
+id: terra-unserialize
+kind: implementation
+name: terra::unserialize
+software: terra
+call: {interface: r, name: 'terra::unserialize'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  connection: {type: any, required: true}
+  refhook: {type: any, default: 'NULL'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

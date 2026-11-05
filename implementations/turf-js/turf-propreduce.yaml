@@ -1,0 +1,13 @@
+id: turf-propreduce
+kind: implementation
+name: turf.propReduce
+software: turf-js
+call: {interface: js, name: turf.propReduce}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  geojson: {type: 'Feature<any, P> | FeatureCollection<any, P> | Geometry', required: true}
+  callback: {type: '(previousValue: Reducer, currentProperties: P, featureIndex: number) => Reducer', required: true}
+  initialValue: {type: Reducer}
+notes: From @turf/meta.
+status: active
+review: {state: harvested, source: turf}

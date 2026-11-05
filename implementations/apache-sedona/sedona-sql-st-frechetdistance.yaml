@@ -1,0 +1,11 @@
+id: sedona-sql-st-frechetdistance
+kind: implementation
+name: sedona.sql.ST_FrechetDistance
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_FrechetDistance}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  g1: {type: Union, required: true}
+  g2: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

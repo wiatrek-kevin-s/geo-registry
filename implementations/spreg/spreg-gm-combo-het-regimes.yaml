@@ -1,0 +1,38 @@
+id: spreg-gm-combo-het-regimes
+kind: implementation
+name: spreg.GM_Combo_Het_Regimes
+software: spreg
+call: {interface: python, name: spreg.GM_Combo_Het_Regimes}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  y: {type: any, required: true}
+  x: {type: any, required: true}
+  regimes: {type: any, required: true}
+  yend: {type: any}
+  q: {type: any}
+  w: {type: any}
+  slx_lags: {type: integer, default: 0}
+  w_lags: {type: integer, default: 1}
+  lag_q: {type: boolean, default: true}
+  max_iter: {type: integer, default: 1}
+  epsilon: {type: number, default: 1.0e-05}
+  step1c: {type: boolean, default: false}
+  cores: {type: boolean, default: false}
+  inv_method: {type: string, default: power_exp}
+  constant_regi: {type: string, default: many}
+  cols2regi: {type: string, default: all}
+  regime_err_sep: {type: boolean, default: false}
+  regime_lag_sep: {type: boolean, default: false}
+  vm: {type: boolean, default: false}
+  name_y: {type: any}
+  name_x: {type: any}
+  name_yend: {type: any}
+  name_q: {type: any}
+  name_w: {type: any}
+  name_ds: {type: any}
+  name_regimes: {type: any}
+  latex: {type: boolean, default: false}
+  hard_bound: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

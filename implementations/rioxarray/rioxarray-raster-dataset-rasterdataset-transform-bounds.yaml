@@ -1,0 +1,12 @@
+id: rioxarray-raster-dataset-rasterdataset-transform-bounds
+kind: implementation
+name: RasterDataset.transform_bounds
+software: rioxarray
+call: {interface: python, name: rioxarray.raster_dataset.RasterDataset.transform_bounds}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  dst_crs: {type: Any, required: true}
+  densify_pts: {type: int, default: 21}
+  recalc: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

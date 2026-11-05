@@ -1,0 +1,12 @@
+id: rasterio-windows-shape
+kind: implementation
+name: rasterio.windows.shape
+software: rasterio
+call: {interface: python, name: rasterio.windows.shape}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  window: {type: any, required: true}
+  height: {type: integer, default: -1}
+  width: {type: integer, default: -1}
+status: active
+review: {state: harvested, source: python-packages}

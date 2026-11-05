@@ -1,0 +1,19 @@
+id: terra-make-rgb
+kind: implementation
+name: terra::make.RGB
+software: terra
+call: {interface: r, name: 'terra::make.RGB'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  col: {type: any, default: 'grDevices::rainbow(25)'}
+  breaks: {type: any, default: 'NULL'}
+  alpha: {type: any, default: 'FALSE'}
+  colNA: {type: any, default: '"white"'}
+  zlim: {type: any, default: 'NULL'}
+  zlimcol: {type: any, default: 'NULL'}
+  ext: {type: any, default: 'NULL'}
+  filename: {type: any, default: '""'}
+  '...': {type: dots, note: further arguments passed on}
+status: active
+review: {state: harvested, source: r-packages}

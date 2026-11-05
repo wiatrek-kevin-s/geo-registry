@@ -1,0 +1,10 @@
+id: h3-is-res-class-iii
+kind: implementation
+name: h3.is_res_class_III
+software: h3-py
+call: {interface: python, name: h3.is_res_class_III}
+harvest: {harvester: python-packages, engine_version: 4.5.0}
+parameters:
+  h: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

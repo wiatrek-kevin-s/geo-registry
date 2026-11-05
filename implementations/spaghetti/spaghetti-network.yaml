@@ -1,0 +1,18 @@
+id: spaghetti-network
+kind: implementation
+name: spaghetti.Network
+software: spaghetti
+call: {interface: python, name: spaghetti.Network}
+harvest: {harvester: python-packages, engine_version: 1.7.6}
+parameters:
+  in_data: {type: any}
+  vertex_sig: {type: integer, default: 11}
+  unique_arcs: {type: boolean, default: true}
+  extractgraph: {type: boolean, default: true}
+  w_components: {type: boolean, default: true}
+  weightings: {type: boolean, default: false}
+  weights_kws: {type: any, note: 'default {}'}
+  vertex_atol: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,14 @@
+id: fiona-env-require-gdal-version
+kind: implementation
+name: fiona.env.require_gdal_version
+software: fiona
+call: {interface: python, name: fiona.env.require_gdal_version}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  version: {type: any, required: true}
+  param: {type: any}
+  values: {type: any}
+  is_max_version: {type: boolean, default: false}
+  reason: {type: string, default: ''}
+status: active
+review: {state: harvested, source: python-packages}

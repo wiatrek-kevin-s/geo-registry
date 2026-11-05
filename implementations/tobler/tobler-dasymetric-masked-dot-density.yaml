@@ -1,0 +1,19 @@
+id: tobler-dasymetric-masked-dot-density
+kind: implementation
+name: tobler.dasymetric.masked_dot_density
+software: tobler
+call: {interface: python, name: tobler.dasymetric.masked_dot_density}
+harvest: {harvester: python-packages, engine_version: 0.14.0}
+parameters:
+  source_df: {type: any, required: true}
+  raster: {type: any, required: true}
+  pixel_values: {type: any, required: true}
+  scale: {type: integer, default: 1}
+  method: {type: string, default: uniform}
+  columns: {type: any}
+  rng: {type: any}
+  method_kwargs: {type: any}
+  nodata: {type: integer, default: 255}
+  n_jobs: {type: integer, default: -1}
+status: active
+review: {state: harvested, source: python-packages}

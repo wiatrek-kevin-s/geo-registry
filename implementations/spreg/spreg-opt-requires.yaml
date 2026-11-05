@@ -1,0 +1,9 @@
+id: spreg-opt-requires
+kind: implementation
+name: spreg.opt.requires
+software: spreg
+call: {interface: python, name: spreg.opt.requires}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

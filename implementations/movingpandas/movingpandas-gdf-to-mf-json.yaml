@@ -1,0 +1,19 @@
+id: movingpandas-gdf-to-mf-json
+kind: implementation
+name: movingpandas.gdf_to_mf_json
+software: movingpandas
+call: {interface: python, name: movingpandas.gdf_to_mf_json}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  gdf: {type: GeoDataFrame, required: true}
+  traj_id_column: {type: str, required: true}
+  datetime_column: {type: str, required: true}
+  temporal_columns: {type: list}
+  temporal_columns_static_fields: {type: Dict}
+  interpolation: {type: str}
+  crs: {type: any}
+  trs: {type: any}
+  datetime_encoder: {type: Callable}
+  datetime_to_str: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

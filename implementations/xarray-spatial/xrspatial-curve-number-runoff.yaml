@@ -1,0 +1,12 @@
+id: xrspatial-curve-number-runoff
+kind: implementation
+name: xrspatial.curve_number_runoff
+software: xarray-spatial
+call: {interface: python, name: xrspatial.curve_number_runoff}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  rainfall: {type: xr.DataArray, required: true}
+  curve_number: {type: 'Union[float, xr.DataArray]', required: true}
+  name: {type: str, default: curve_number_runoff}
+status: active
+review: {state: harvested, source: python-packages}

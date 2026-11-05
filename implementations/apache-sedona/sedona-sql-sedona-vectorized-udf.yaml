@@ -1,0 +1,11 @@
+id: sedona-sql-sedona-vectorized-udf
+kind: implementation
+name: sedona.sql.sedona_vectorized_udf
+software: apache-sedona
+call: {interface: python, name: sedona.sql.sedona_vectorized_udf}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  return_type: {type: DataType, required: true}
+  udf_type: {type: SedonaUDFType, note: 'default <SedonaUDFType.SHAPELY_SCALAR: ''ShapelyScalar''>'}
+status: active
+review: {state: harvested, source: python-packages}

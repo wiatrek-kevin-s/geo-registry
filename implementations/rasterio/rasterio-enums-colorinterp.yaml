@@ -1,0 +1,10 @@
+id: rasterio-enums-colorinterp
+kind: implementation
+name: rasterio.enums.ColorInterp
+software: rasterio
+call: {interface: python, name: rasterio.enums.ColorInterp}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

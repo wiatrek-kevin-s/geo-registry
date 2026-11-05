@@ -1,0 +1,10 @@
+id: fiona-features-collect
+kind: implementation
+name: fiona.features.collect
+software: fiona
+call: {interface: python, name: fiona.features.collect}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  geoms: {type: Iterable, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,9 @@
+id: rasterio-env-getenv
+kind: implementation
+name: rasterio.env.getenv
+software: rasterio
+call: {interface: python, name: rasterio.env.getenv}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

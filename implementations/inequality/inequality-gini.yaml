@@ -1,0 +1,12 @@
+id: inequality-gini
+kind: implementation
+name: inequality.Gini
+software: inequality
+call: {interface: python, name: inequality.Gini}
+harvest: {harvester: python-packages, engine_version: 1.2.0}
+parameters:
+  x: {type: any, required: true}
+  column: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

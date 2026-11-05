@@ -1,0 +1,10 @@
+id: xrspatial-morphology-cupy
+kind: implementation
+name: xrspatial.morphology.cupy
+software: xarray-spatial
+call: {interface: python, name: xrspatial.morphology.cupy}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

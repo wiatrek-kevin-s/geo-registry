@@ -1,0 +1,11 @@
+id: sedona-sql-st-relatematch
+kind: implementation
+name: sedona.sql.ST_RelateMatch
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_RelateMatch}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  matrix1: {type: Union, required: true}
+  matrix2: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

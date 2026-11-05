@@ -1,0 +1,9 @@
+id: movingpandas-show-versions
+kind: implementation
+name: movingpandas.show_versions
+software: movingpandas
+call: {interface: python, name: movingpandas.show_versions}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,28 @@
+id: terra-makevrt
+kind: implementation
+name: terra::makeVRT
+software: terra
+call: {interface: r, name: 'terra::makeVRT'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  filename: {type: any, required: true}
+  nrow: {type: any, required: true}
+  ncol: {type: any, required: true}
+  nlyr: {type: any, default: '1'}
+  extent: {type: any, required: true}
+  xmin: {type: any, required: true}
+  ymin: {type: any, required: true}
+  xres: {type: any, required: true}
+  yres: {type: any, default: xres}
+  xycenter: {type: any, default: 'TRUE'}
+  crs: {type: any, default: '"+proj=longlat"'}
+  lyrnms: {type: any, default: '""'}
+  datatype: {type: any, required: true}
+  NAflag: {type: any, default: NA}
+  bandorder: {type: any, default: '"BIL"'}
+  byteorder: {type: any, default: '"LSB"'}
+  toptobottom: {type: any, default: 'TRUE'}
+  offset: {type: any, default: '0'}
+  scale: {type: any, default: '1'}
+status: active
+review: {state: harvested, source: r-packages}

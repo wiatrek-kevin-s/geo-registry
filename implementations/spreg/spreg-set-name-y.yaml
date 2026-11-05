@@ -1,0 +1,10 @@
+id: spreg-set-name-y
+kind: implementation
+name: spreg.set_name_y
+software: spreg
+call: {interface: python, name: spreg.set_name_y}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  name_y: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

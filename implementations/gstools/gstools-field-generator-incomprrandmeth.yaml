@@ -1,0 +1,15 @@
+id: gstools-field-generator-incomprrandmeth
+kind: implementation
+name: gstools.field.generator.IncomprRandMeth
+software: gstools
+call: {interface: python, name: gstools.field.generator.IncomprRandMeth}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  model: {type: any, required: true}
+  mean_velocity: {type: number, default: 1.0}
+  mode_no: {type: integer, default: 1000}
+  seed: {type: any}
+  sampling: {type: string, default: auto}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

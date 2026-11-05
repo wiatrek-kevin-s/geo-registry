@@ -1,0 +1,12 @@
+id: turf-linesplit
+kind: implementation
+name: turf.lineSplit
+software: turf-js
+call: {interface: js, name: turf.lineSplit}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  line: {type: Feature<T> | T, required: true}
+  splitter: {type: Splitter, required: true}
+notes: From @turf/line-split.
+status: active
+review: {state: harvested, source: turf}

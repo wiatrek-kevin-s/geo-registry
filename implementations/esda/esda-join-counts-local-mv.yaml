@@ -1,0 +1,18 @@
+id: esda-join-counts-local-mv
+kind: implementation
+name: esda.Join_Counts_Local_MV
+software: esda
+call: {interface: python, name: esda.Join_Counts_Local_MV}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  connectivity: {type: any}
+  permutations: {type: integer, default: 999}
+  n_jobs: {type: integer, default: 1}
+  keep_simulations: {type: boolean, default: true}
+  seed: {type: any}
+  island_weight: {type: integer, default: 0}
+  drop_islands: {type: boolean, default: true}
+  alternative: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

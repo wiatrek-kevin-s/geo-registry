@@ -1,0 +1,10 @@
+id: osmnx-stats-self-loop-proportion
+kind: implementation
+name: osmnx.stats.self_loop_proportion
+software: osmnx
+call: {interface: python, name: osmnx.stats.self_loop_proportion}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  Gu: {type: nx.MultiGraph, required: true}
+status: active
+review: {state: harvested, source: python-packages}

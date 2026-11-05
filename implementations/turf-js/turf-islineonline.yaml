@@ -1,0 +1,12 @@
+id: turf-islineonline
+kind: implementation
+name: turf.isLineOnLine
+software: turf-js
+call: {interface: js, name: turf.isLineOnLine}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  lineString1: {type: LineString, required: true}
+  lineString2: {type: LineString, required: true}
+notes: From @turf/boolean-contains.
+status: active
+review: {state: harvested, source: turf}

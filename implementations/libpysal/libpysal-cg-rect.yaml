@@ -1,0 +1,14 @@
+id: libpysal-cg-rect
+kind: implementation
+name: libpysal.cg.Rect
+software: libpysal
+call: {interface: python, name: libpysal.cg.Rect}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  minx: {type: float, required: true}
+  miny: {type: float, required: true}
+  maxx: {type: float, required: true}
+  maxy: {type: float, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: skgstat-variogram-shannon-entropy
+kind: implementation
+name: skgstat.Variogram.shannon_entropy
+software: scikit-gstat
+call: {interface: python, name: skgstat.Variogram.shannon_entropy}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  x: {type: any, required: true}
+  bins: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: gstools-generate-st-grid
+kind: implementation
+name: gstools.generate_st_grid
+software: gstools
+call: {interface: python, name: gstools.generate_st_grid}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  pos: {type: any, required: true}
+  time: {type: any, required: true}
+  mesh_type: {type: string, default: unstructured}
+status: active
+review: {state: harvested, source: python-packages}

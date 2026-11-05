@@ -1,0 +1,17 @@
+id: geopy-banfrance
+kind: implementation
+name: geopy.BANFrance
+software: geopy
+call: {interface: python, name: geopy.BANFrance}
+harvest: {harvester: python-packages, engine_version: 2.5.0}
+parameters:
+  domain: {type: string, default: api-adresse.data.gouv.fr}
+  scheme: {type: any}
+  timeout: {type: any, note: default DEFAULT_SENTINEL}
+  proxies: {type: any, note: default DEFAULT_SENTINEL}
+  user_agent: {type: any}
+  ssl_context: {type: any, note: default DEFAULT_SENTINEL}
+  adapter_factory: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

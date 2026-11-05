@@ -1,0 +1,10 @@
+id: sedona-sql-st-bingtiletogeom
+kind: implementation
+name: sedona.sql.ST_BingTileToGeom
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_BingTileToGeom}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  quad_keys: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

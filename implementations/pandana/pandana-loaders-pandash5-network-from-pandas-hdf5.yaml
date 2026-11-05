@@ -1,0 +1,12 @@
+id: pandana-loaders-pandash5-network-from-pandas-hdf5
+kind: implementation
+name: pandana.loaders.pandash5.network_from_pandas_hdf5
+software: pandana
+call: {interface: python, name: pandana.loaders.pandash5.network_from_pandas_hdf5}
+harvest: {harvester: python-packages, engine_version: '0.8'}
+parameters:
+  cls: {type: any, required: true}
+  filename: {type: any, required: true}
+  migrate_legacy: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

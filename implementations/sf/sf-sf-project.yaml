@@ -1,0 +1,15 @@
+id: sf-sf-project
+kind: implementation
+name: sf::sf_project
+software: sf
+call: {interface: r, name: 'sf::sf_project'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  from: {type: any, default: character(0)}
+  to: {type: any, default: character(0)}
+  pts: {type: any, required: true}
+  keep: {type: any, default: 'FALSE'}
+  warn: {type: any, default: 'TRUE'}
+  authority_compliant: {type: any, default: st_axis_order()}
+status: active
+review: {state: harvested, source: r-packages}

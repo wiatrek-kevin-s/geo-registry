@@ -1,0 +1,11 @@
+id: rasterio-io-zipmemoryfile
+kind: implementation
+name: rasterio.io.ZipMemoryFile
+software: rasterio
+call: {interface: python, name: rasterio.io.ZipMemoryFile}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  file_or_bytes: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

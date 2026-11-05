@@ -1,0 +1,13 @@
+id: verde-vector-greens-func-2d
+kind: implementation
+name: verde.vector.greens_func_2d
+software: verde
+call: {interface: python, name: verde.vector.greens_func_2d}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  east: {type: any, required: true}
+  north: {type: any, required: true}
+  mindist: {type: any, required: true}
+  poisson: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

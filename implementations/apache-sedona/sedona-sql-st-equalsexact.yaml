@@ -1,0 +1,12 @@
+id: sedona-sql-st-equalsexact
+kind: implementation
+name: sedona.sql.ST_EqualsExact
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_EqualsExact}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  a: {type: Union, required: true}
+  b: {type: Union, required: true}
+  tolerance: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

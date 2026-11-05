@@ -1,0 +1,12 @@
+id: verde-minmax
+kind: implementation
+name: verde.minmax
+software: verde
+call: {interface: python, name: verde.minmax}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  nan: {type: boolean, default: true}
+  min_percentile: {type: integer, default: 0}
+  max_percentile: {type: integer, default: 100}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,10 @@
+id: lastools-laszip
+kind: implementation
+name: laszip
+software: lastools
+call: {interface: cli, name: laszip}
+harvest: {harvester: cli-packages, engine_version: '20171231'}
+parameters: {}
+notes: 'Listed by name: the program prints free-form usage (run it with -h), so its parameters are not harvested.'
+status: active
+review: {state: harvested, source: cli-packages}

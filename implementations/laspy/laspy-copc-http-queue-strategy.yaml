@@ -1,0 +1,13 @@
+id: laspy-copc-http-queue-strategy
+kind: implementation
+name: laspy.copc.http_queue_strategy
+software: laspy
+call: {interface: python, name: laspy.copc.http_queue_strategy}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  source: {type: HttpRangeStream, required: true}
+  byte_queries: {type: List, required: true}
+  out_compressed_bytes: {type: bytearray, required: true}
+  num_threads: {type: int, required: true}
+status: active
+review: {state: harvested, source: python-packages}

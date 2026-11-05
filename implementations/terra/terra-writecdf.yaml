@@ -1,0 +1,25 @@
+id: terra-writecdf
+kind: implementation
+name: terra::writeCDF
+software: terra
+call: {interface: r, name: 'terra::writeCDF'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  filename: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  varname: {type: any, required: true}
+  longname: {type: any, default: '""'}
+  unit: {type: any, default: '""'}
+  split: {type: any, default: 'FALSE'}
+  overwrite: {type: any, default: 'FALSE'}
+  timename: {type: any, default: '"time"'}
+  atts: {type: any, default: '""'}
+  gridmap: {type: any, default: '""'}
+  prec: {type: any, default: '"float"'}
+  compression: {type: any, default: NA}
+  missval: {type: any, required: true}
+  tags: {type: any, default: 'FALSE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

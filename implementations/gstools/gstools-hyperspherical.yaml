@@ -1,0 +1,23 @@
+id: gstools-hyperspherical
+kind: implementation
+name: gstools.HyperSpherical
+software: gstools
+call: {interface: python, name: gstools.HyperSpherical}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  dim: {type: integer, default: 3}
+  var: {type: number, default: 1.0}
+  len_scale: {type: number, default: 1.0}
+  nugget: {type: number, default: 0.0}
+  anis: {type: number, default: 1.0}
+  angles: {type: number, default: 0.0}
+  integral_scale: {type: any}
+  rescale: {type: any}
+  latlon: {type: boolean, default: false}
+  geo_scale: {type: number, default: 1.0}
+  temporal: {type: boolean, default: false}
+  spatial_dim: {type: any}
+  hankel_kw: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

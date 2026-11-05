@@ -1,0 +1,14 @@
+id: osmnx-graph-from-xml
+kind: implementation
+name: osmnx.graph_from_xml
+software: osmnx
+call: {interface: python, name: osmnx.graph_from_xml}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  filepath: {type: str | Path, required: true}
+  bidirectional: {type: bool, default: false}
+  simplify: {type: bool, default: true}
+  retain_all: {type: bool, default: false}
+  encoding: {type: str, default: utf-8}
+status: active
+review: {state: harvested, source: python-packages}

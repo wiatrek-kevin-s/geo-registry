@@ -1,0 +1,12 @@
+id: momepy-street-alignment
+kind: implementation
+name: momepy.street_alignment
+software: momepy
+call: {interface: python, name: momepy.street_alignment}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  building_orientation: {type: Series, required: true}
+  street_orientation: {type: Series, required: true}
+  street_index: {type: Series, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,7 +1,8 @@
 name: Engines
 
 # Runs real GIS engines from conda-forge (GDAL, PDAL, Shapely, GeoPandas, PostGIS,
-# QGIS, GRASS, WhiteboxTools):
+# QGIS, GRASS, WhiteboxTools, about 40 more Python packages, R's sf and terra, TauDEM,
+# LAStools), DuckDB spatial, RustGIS (PyPI) and Turf.js (npm):
 # - equivalence: every mapped implementation is run on the same small inputs
 #   and must agree (checks/equivalence.py);
 # - harvest: the harvesters are re-run against the newest engine releases and,
@@ -72,8 +73,13 @@ jobs:
       - name: Engines
         shell: bash -el {0}
         run: |
-          for e in pdal postgis qgis grass whitebox; do micromamba create -y -q -f "harvest/environment-$e.yml"; done
+          for e in pdal postgis qgis grass whitebox python r cli; do micromamba create -y -q -f "harvest/environment-$e.yml"; done
           envs="$MAMBA_ROOT_PREFIX/envs"
+          "$envs/geo-registry-python/bin/python" -m pip install -q rustgis
+          npm install --ignore-scripts --no-audit --no-fund --silent --prefix "$RUNNER_TEMP/turf" @turf/turf typescript@5
+          echo "PYENV=$envs/geo-registry-python" >> "$GITHUB_ENV"
+          echo "RSCRIPT=$envs/geo-registry-r/bin/Rscript" >> "$GITHUB_ENV"
+          echo "CLIENV=$envs/geo-registry-cli" >> "$GITHUB_ENV"
           echo "PGBIN=$envs/geo-registry-postgis/bin" >> "$GITHUB_ENV"
           echo "PDAL=$envs/geo-registry-pdal/bin/pdal" >> "$GITHUB_ENV"
           echo "QGIS_PROCESS=$envs/geo-registry-qgis/bin/qgis_process" >> "$GITHUB_ENV"
@@ -91,6 +97,12 @@ jobs:
           python harvest/qgis.py --qgis-process "$QGIS_PROCESS" | tee -a "$RUNNER_TEMP/summary.txt"
           PROJ_DATA="$GRASS_PROJ" python harvest/grass.py --grass "$GRASS" | grep -v '^  skipped' | tee -a "$RUNNER_TEMP/summary.txt"
           python harvest/whitebox.py --wbt "$WBT" | tee -a "$RUNNER_TEMP/summary.txt"
+          PYTHONWARNINGS=ignore "$PYENV/bin/python" harvest/python_packages.py 2>/dev/null | grep -v '^  ' | tee -a "$RUNNER_TEMP/summary.txt"
+          "$PYENV/bin/python" harvest/duckdb_spatial.py | tee -a "$RUNNER_TEMP/summary.txt"
+          "$PYENV/bin/python" harvest/rustgis.py | tee -a "$RUNNER_TEMP/summary.txt"
+          python harvest/r_packages.py --rscript "$RSCRIPT" | tee -a "$RUNNER_TEMP/summary.txt"
+          python harvest/cli_packages.py --prefix "$CLIENV" | tee -a "$RUNNER_TEMP/summary.txt"
+          python harvest/turf.py --node-modules "$RUNNER_TEMP/turf/node_modules" | tee -a "$RUNNER_TEMP/summary.txt"
           {
             echo "Re-harvested from the newest engine releases on conda-forge:"
             echo

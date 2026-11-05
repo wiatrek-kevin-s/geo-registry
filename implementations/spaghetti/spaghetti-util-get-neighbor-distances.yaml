@@ -1,0 +1,12 @@
+id: spaghetti-util-get-neighbor-distances
+kind: implementation
+name: spaghetti.util.get_neighbor_distances
+software: spaghetti
+call: {interface: python, name: spaghetti.util.get_neighbor_distances}
+harvest: {harvester: python-packages, engine_version: 1.7.6}
+parameters:
+  ntw: {type: any, required: true}
+  v0: {type: any, required: true}
+  link: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

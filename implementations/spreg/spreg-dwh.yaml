@@ -1,0 +1,10 @@
+id: spreg-dwh
+kind: implementation
+name: spreg.dwh
+software: spreg
+call: {interface: python, name: spreg.dwh}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  reg: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

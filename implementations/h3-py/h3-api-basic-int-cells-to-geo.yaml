@@ -1,0 +1,11 @@
+id: h3-api-basic-int-cells-to-geo
+kind: implementation
+name: h3.api.basic_int.cells_to_geo
+software: h3-py
+call: {interface: python, name: h3.api.basic_int.cells_to_geo}
+harvest: {harvester: python-packages, engine_version: 4.5.0}
+parameters:
+  cells: {type: any, required: true}
+  tight: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,10 @@
+id: spreg-check-k
+kind: implementation
+name: spreg.check_k
+software: spreg
+call: {interface: python, name: spreg.check_k}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  bigK: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

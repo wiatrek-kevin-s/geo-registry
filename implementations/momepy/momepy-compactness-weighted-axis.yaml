@@ -1,0 +1,11 @@
+id: momepy-compactness-weighted-axis
+kind: implementation
+name: momepy.compactness_weighted_axis
+software: momepy
+call: {interface: python, name: momepy.compactness_weighted_axis}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  geometry: {type: any, required: true}
+  longest_axis_length: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

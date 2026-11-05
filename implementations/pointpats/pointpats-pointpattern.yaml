@@ -1,0 +1,14 @@
+id: pointpats-pointpattern
+kind: implementation
+name: pointpats.PointPattern
+software: pointpats
+call: {interface: python, name: pointpats.PointPattern}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  points: {type: any, required: true}
+  window: {type: any}
+  names: {type: any}
+  coord_names: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

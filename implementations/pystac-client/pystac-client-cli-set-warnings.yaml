@@ -1,0 +1,11 @@
+id: pystac-client-cli-set-warnings
+kind: implementation
+name: pystac_client.cli.set_warnings
+software: pystac-client
+call: {interface: python, name: pystac_client.cli.set_warnings}
+harvest: {harvester: python-packages, engine_version: 0.9.1}
+parameters:
+  error: {type: any, required: true}
+  ignore: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,17 @@
+id: sf-gdal-read-mdim
+kind: implementation
+name: sf::gdal_read_mdim
+software: sf
+call: {interface: r, name: 'sf::gdal_read_mdim'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  file: {type: any, required: true}
+  array_name: {type: any, default: character(0)}
+  options: {type: any, default: character(0)}
+  offset: {type: any, default: integer(0)}
+  count: {type: any, default: integer(0)}
+  step: {type: any, default: integer(0)}
+  proxy: {type: any, default: 'FALSE'}
+  debug: {type: any, default: 'FALSE'}
+status: active
+review: {state: harvested, source: r-packages}

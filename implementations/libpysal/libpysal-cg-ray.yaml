@@ -1,0 +1,12 @@
+id: libpysal-cg-ray
+kind: implementation
+name: libpysal.cg.Ray
+software: libpysal
+call: {interface: python, name: libpysal.cg.Ray}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  origin: {type: any, required: true}
+  second_p: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

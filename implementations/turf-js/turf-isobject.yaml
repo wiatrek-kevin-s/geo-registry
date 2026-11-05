@@ -1,0 +1,11 @@
+id: turf-isobject
+kind: implementation
+name: turf.isObject
+software: turf-js
+call: {interface: js, name: turf.isObject}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  input: {type: any, required: true}
+notes: From @turf/helpers.
+status: active
+review: {state: harvested, source: turf}

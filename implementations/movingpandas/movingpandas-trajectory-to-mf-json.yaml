@@ -1,0 +1,11 @@
+id: movingpandas-trajectory-to-mf-json
+kind: implementation
+name: Trajectory.to_mf_json
+software: movingpandas
+call: {interface: python, name: movingpandas.Trajectory.to_mf_json}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  datetime_to_str: {type: boolean, default: true}
+  temporal_columns: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

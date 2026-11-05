@@ -1,0 +1,11 @@
+id: libpysal-io-geotable-file-series2shp
+kind: implementation
+name: libpysal.io.geotable.file.series2shp
+software: libpysal
+call: {interface: python, name: libpysal.io.geotable.file.series2shp}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  series: {type: any, required: true}
+  filepath: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

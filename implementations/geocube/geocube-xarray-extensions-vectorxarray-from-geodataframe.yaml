@@ -1,0 +1,10 @@
+id: geocube-xarray-extensions-vectorxarray-from-geodataframe
+kind: implementation
+name: geocube.xarray_extensions.vectorxarray.from_geodataframe
+software: geocube
+call: {interface: python, name: geocube.xarray_extensions.vectorxarray.from_geodataframe}
+harvest: {harvester: python-packages, engine_version: 0.7.1}
+parameters:
+  in_geodataframe: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

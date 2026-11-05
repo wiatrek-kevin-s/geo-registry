@@ -1,0 +1,11 @@
+id: dask-geopandas-backends-make-meta-shapely-geometry
+kind: implementation
+name: dask_geopandas.backends.make_meta_shapely_geometry
+software: dask-geopandas
+call: {interface: python, name: dask_geopandas.backends.make_meta_shapely_geometry}
+harvest: {harvester: python-packages, engine_version: 0.5.0}
+parameters:
+  x: {type: any, required: true}
+  index: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

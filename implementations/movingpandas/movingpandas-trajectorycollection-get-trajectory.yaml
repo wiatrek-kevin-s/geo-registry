@@ -1,0 +1,10 @@
+id: movingpandas-trajectorycollection-get-trajectory
+kind: implementation
+name: TrajectoryCollection.get_trajectory
+software: movingpandas
+call: {interface: python, name: movingpandas.TrajectoryCollection.get_trajectory}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  traj_id: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

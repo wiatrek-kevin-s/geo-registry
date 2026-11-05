@@ -1,0 +1,12 @@
+id: dask-geopandas-geohash-encode-geohash
+kind: implementation
+name: dask_geopandas.geohash.encode_geohash
+software: dask-geopandas
+call: {interface: python, name: dask_geopandas.geohash.encode_geohash}
+harvest: {harvester: python-packages, engine_version: 0.5.0}
+parameters:
+  coords: {type: any, required: true}
+  as_string: {type: any, required: true}
+  precision: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

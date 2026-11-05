@@ -1,0 +1,10 @@
+id: laspy-mmap
+kind: implementation
+name: laspy.mmap
+software: laspy
+call: {interface: python, name: laspy.mmap}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  filename: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

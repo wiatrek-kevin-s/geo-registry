@@ -1,0 +1,12 @@
+id: sf-st-line-merge
+kind: implementation
+name: sf::st_line_merge
+software: sf
+call: {interface: r, name: 'sf::st_line_merge'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  directed: {type: any, default: 'FALSE'}
+status: active
+review: {state: harvested, source: r-packages}

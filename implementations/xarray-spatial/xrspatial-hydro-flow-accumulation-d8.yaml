@@ -1,0 +1,12 @@
+id: xrspatial-hydro-flow-accumulation-d8
+kind: implementation
+name: xrspatial.hydro.flow_accumulation_d8
+software: xarray-spatial
+call: {interface: python, name: xrspatial.hydro.flow_accumulation_d8}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  flow_dir: {type: xr.DataArray, required: true}
+  weight: {type: xr.DataArray | None}
+  name: {type: str, default: flow_accumulation}
+status: active
+review: {state: harvested, source: python-packages}

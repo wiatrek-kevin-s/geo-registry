@@ -1,0 +1,11 @@
+id: libpysal-weights-lag-spatial
+kind: implementation
+name: libpysal.weights.lag_spatial
+software: libpysal
+call: {interface: python, name: libpysal.weights.lag_spatial}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  w: {type: any, required: true}
+  y: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

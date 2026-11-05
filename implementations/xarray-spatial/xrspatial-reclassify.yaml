@@ -1,0 +1,13 @@
+id: xrspatial-reclassify
+kind: implementation
+name: xrspatial.reclassify
+software: xarray-spatial
+call: {interface: python, name: xrspatial.reclassify}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: xr.DataArray, required: true}
+  bins: {type: 'List[int]', required: true}
+  new_values: {type: 'List[int]', required: true}
+  name: {type: 'Optional[str]', default: reclassify}
+status: active
+review: {state: harvested, source: python-packages}

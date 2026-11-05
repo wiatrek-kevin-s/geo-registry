@@ -1,0 +1,17 @@
+id: osmnx-graph-from-address
+kind: implementation
+name: osmnx.graph_from_address
+software: osmnx
+call: {interface: python, name: osmnx.graph_from_address}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  address: {type: str, required: true}
+  dist: {type: float, required: true}
+  dist_type: {type: str, default: bbox}
+  network_type: {type: str, default: all}
+  simplify: {type: bool, default: true}
+  retain_all: {type: bool, default: false}
+  truncate_by_edge: {type: bool, default: false}
+  custom_filter: {type: 'str | list[str] | None'}
+status: active
+review: {state: harvested, source: python-packages}

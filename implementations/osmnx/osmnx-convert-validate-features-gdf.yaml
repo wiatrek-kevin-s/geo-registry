@@ -1,0 +1,10 @@
+id: osmnx-convert-validate-features-gdf
+kind: implementation
+name: osmnx.convert.validate_features_gdf
+software: osmnx
+call: {interface: python, name: osmnx.convert.validate_features_gdf}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  gdf: {type: gpd.GeoDataFrame, required: true}
+status: active
+review: {state: harvested, source: python-packages}

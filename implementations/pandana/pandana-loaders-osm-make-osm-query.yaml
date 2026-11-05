@@ -1,0 +1,10 @@
+id: pandana-loaders-osm-make-osm-query
+kind: implementation
+name: pandana.loaders.osm.make_osm_query
+software: pandana
+call: {interface: python, name: pandana.loaders.osm.make_osm_query}
+harvest: {harvester: python-packages, engine_version: '0.8'}
+parameters:
+  query: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

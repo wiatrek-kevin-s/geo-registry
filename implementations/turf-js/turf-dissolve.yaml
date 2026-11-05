@@ -1,0 +1,13 @@
+id: turf-dissolve
+kind: implementation
+name: turf.dissolve
+software: turf-js
+call: {interface: js, name: turf.dissolve}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  fc: {type: FeatureCollection<Polygon>, required: true}
+  options: {type: '{ propertyName?: string; }'}
+  options.propertyName: {type: string, note: field of options}
+notes: From @turf/dissolve.
+status: active
+review: {state: harvested, source: turf}

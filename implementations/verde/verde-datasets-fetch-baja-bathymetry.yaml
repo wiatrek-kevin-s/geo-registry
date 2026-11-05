@@ -1,0 +1,9 @@
+id: verde-datasets-fetch-baja-bathymetry
+kind: implementation
+name: verde.datasets.fetch_baja_bathymetry
+software: verde
+call: {interface: python, name: verde.datasets.fetch_baja_bathymetry}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

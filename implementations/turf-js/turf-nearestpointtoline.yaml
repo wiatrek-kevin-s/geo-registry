@@ -1,0 +1,15 @@
+id: turf-nearestpointtoline
+kind: implementation
+name: turf.nearestPointToLine
+software: turf-js
+call: {interface: js, name: turf.nearestPointToLine}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  points: {type: FeatureCollection<Point> | Feature<GeometryCollection> | GeometryCollection, required: true}
+  line: {type: Feature<LineString> | LineString, required: true}
+  options: {type: '{ units?: Units; properties?: GeoJsonProperties; }'}
+  options.units: {type: Units, note: field of options}
+  options.properties: {type: GeoJsonProperties, note: field of options}
+notes: From @turf/nearest-point-to-line.
+status: active
+review: {state: harvested, source: turf}

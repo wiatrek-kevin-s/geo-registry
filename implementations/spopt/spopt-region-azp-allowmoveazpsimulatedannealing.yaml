@@ -1,0 +1,12 @@
+id: spopt-region-azp-allowmoveazpsimulatedannealing
+kind: implementation
+name: spopt.region.azp.AllowMoveAZPSimulatedAnnealing
+software: spopt
+call: {interface: python, name: spopt.region.azp.AllowMoveAZPSimulatedAnnealing}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  init_temperature: {type: any, required: true}
+  sa_moves_term: {type: number, note: default inf}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

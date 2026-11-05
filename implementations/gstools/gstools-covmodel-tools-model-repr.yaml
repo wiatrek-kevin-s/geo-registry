@@ -1,0 +1,10 @@
+id: gstools-covmodel-tools-model-repr
+kind: implementation
+name: gstools.covmodel.tools.model_repr
+software: gstools
+call: {interface: python, name: gstools.covmodel.tools.model_repr}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  model: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

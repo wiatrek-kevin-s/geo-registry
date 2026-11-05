@@ -1,0 +1,18 @@
+id: terra-adjacent
+kind: implementation
+name: terra::adjacent
+software: terra
+call: {interface: r, name: 'terra::adjacent'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  cells: {type: any, required: true}
+  directions: {type: any, default: '"rook"'}
+  pairs: {type: any, default: 'FALSE'}
+  include: {type: any, default: 'FALSE'}
+  symmetrical: {type: any, default: 'FALSE'}
+  type: {type: any, default: '"rook"'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

@@ -1,0 +1,12 @@
+id: osmnx-features-from-point
+kind: implementation
+name: osmnx.features_from_point
+software: osmnx
+call: {interface: python, name: osmnx.features_from_point}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  center_point: {type: 'tuple[float, float]', required: true}
+  tags: {type: 'dict[str, bool | str | list[str]]', required: true}
+  dist: {type: float, required: true}
+status: active
+review: {state: harvested, source: python-packages}

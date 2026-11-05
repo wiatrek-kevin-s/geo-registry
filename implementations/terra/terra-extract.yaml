@@ -1,0 +1,28 @@
+id: terra-extract
+kind: implementation
+name: terra::extract
+software: terra
+call: {interface: r, name: 'terra::extract'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  cells: {type: any, default: 'FALSE'}
+  xy: {type: any, default: 'FALSE'}
+  fun: {type: any, default: 'NULL'}
+  method: {type: any, default: '"simple"'}
+  ID: {type: any, default: 'TRUE'}
+  weights: {type: any, default: 'FALSE'}
+  exact: {type: any, default: 'FALSE'}
+  touches: {type: any, default: is.lines(y)}
+  small: {type: any, default: 'TRUE'}
+  layer: {type: any, default: 'NULL'}
+  bind: {type: any, default: 'FALSE'}
+  raw: {type: any, default: 'FALSE'}
+  search_radius: {type: any, default: '0'}
+  wide: {type: any, default: 'FALSE'}
+  count: {type: any, default: 'FALSE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

@@ -1,0 +1,10 @@
+id: osmium-geom-direction
+kind: implementation
+name: osmium.geom.direction
+software: pyosmium
+call: {interface: python, name: osmium.geom.direction}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,14 @@
+id: xrspatial-hydro-hand-dinf
+kind: implementation
+name: xrspatial.hydro.hand_dinf
+software: xarray-spatial
+call: {interface: python, name: xrspatial.hydro.hand_dinf}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  flow_dir_dinf: {type: xr.DataArray, required: true}
+  flow_accum: {type: xr.DataArray, required: true}
+  elevation: {type: xr.DataArray, required: true}
+  threshold: {type: float, default: 100}
+  name: {type: str, default: hand_dinf}
+status: active
+review: {state: harvested, source: python-packages}

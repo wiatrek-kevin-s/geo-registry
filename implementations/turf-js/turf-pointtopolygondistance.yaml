@@ -1,0 +1,15 @@
+id: turf-pointtopolygondistance
+kind: implementation
+name: turf.pointToPolygonDistance
+software: turf-js
+call: {interface: js, name: turf.pointToPolygonDistance}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  point: {type: Feature<Point> | Point | Position, required: true}
+  polygonOrMultiPolygon: {type: Feature<Polygon | MultiPolygon> | Polygon | MultiPolygon, required: true}
+  options: {type: '{ units?: Units; method?: "geodesic" | "planar"; }'}
+  options.units: {type: Units, note: field of options}
+  options.method: {type: '"geodesic" | "planar"', note: field of options}
+notes: From @turf/point-to-polygon-distance.
+status: active
+review: {state: harvested, source: turf}

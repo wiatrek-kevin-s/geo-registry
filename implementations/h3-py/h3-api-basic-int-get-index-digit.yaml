@@ -1,0 +1,11 @@
+id: h3-api-basic-int-get-index-digit
+kind: implementation
+name: h3.api.basic_int.get_index_digit
+software: h3-py
+call: {interface: python, name: h3.api.basic_int.get_index_digit}
+harvest: {harvester: python-packages, engine_version: 4.5.0}
+parameters:
+  h: {type: any, required: true}
+  res: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

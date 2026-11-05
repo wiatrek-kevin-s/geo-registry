@@ -1,0 +1,24 @@
+id: skgstat-rasterequidistantmetricspace
+kind: implementation
+name: skgstat.RasterEquidistantMetricSpace
+software: scikit-gstat
+call: {interface: python, name: skgstat.RasterEquidistantMetricSpace}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  coords: {type: any, required: true}
+  shape: {type: any, required: true}
+  extent: {type: any, required: true}
+  samples: {type: integer, default: 100}
+  ratio_subsample: {type: number, default: 0.2}
+  runs: {type: any}
+  n_jobs: {type: integer, default: 1}
+  exp_increase_fac: {type: number, note: default np.float64(1.4142135623730951)}
+  center_radius: {type: any}
+  equidistant_radii: {type: any}
+  max_dist: {type: any}
+  dist_metric: {type: string, default: euclidean}
+  rnd: {type: any}
+  verbose: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

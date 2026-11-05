@@ -1,0 +1,10 @@
+id: odc-stac-bench-load-results
+kind: implementation
+name: odc.stac.bench.load_results
+software: odc-stac
+call: {interface: python, name: odc.stac.bench.load_results}
+harvest: {harvester: python-packages, engine_version: 0.5.3}
+parameters:
+  sources: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

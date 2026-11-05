@@ -1,0 +1,12 @@
+id: topojson-utils-prettyjson
+kind: implementation
+name: topojson.utils.prettyjson
+software: topojson
+call: {interface: python, name: topojson.utils.prettyjson}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  obj: {type: any, required: true}
+  indent: {type: integer, default: 2}
+  maxlinelength: {type: integer, default: 80}
+status: active
+review: {state: harvested, source: python-packages}

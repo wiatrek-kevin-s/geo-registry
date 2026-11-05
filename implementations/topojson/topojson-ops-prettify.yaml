@@ -1,0 +1,10 @@
+id: topojson-ops-prettify
+kind: implementation
+name: topojson.ops.prettify
+software: topojson
+call: {interface: python, name: topojson.ops.prettify}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  topojson_object: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

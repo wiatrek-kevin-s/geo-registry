@@ -1,0 +1,10 @@
+id: rasterstats-point-geom-xys
+kind: implementation
+name: rasterstats.point.geom_xys
+software: rasterstats
+call: {interface: python, name: rasterstats.point.geom_xys}
+harvest: {harvester: python-packages, engine_version: 0.21.0}
+parameters:
+  geom: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,14 @@
+id: xrspatial-focal-hotspots
+kind: implementation
+name: xrspatial.focal.hotspots
+software: xarray-spatial
+call: {interface: python, name: xrspatial.focal.hotspots}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: any}
+  kernel: {type: any}
+  name: {type: string, default: hotspots}
+  boundary: {type: string, default: nan}
+  raster: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

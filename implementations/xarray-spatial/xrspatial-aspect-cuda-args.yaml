@@ -1,0 +1,10 @@
+id: xrspatial-aspect-cuda-args
+kind: implementation
+name: xrspatial.aspect.cuda_args
+software: xarray-spatial
+call: {interface: python, name: xrspatial.aspect.cuda_args}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  shape: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

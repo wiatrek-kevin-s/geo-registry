@@ -1,0 +1,17 @@
+id: momepy-cds-length
+kind: implementation
+name: momepy.cds_length
+software: momepy
+call: {interface: python, name: momepy.cds_length}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  graph: {type: Graph, required: true}
+  radius: {type: integer, default: 5}
+  mode: {type: str, default: sum}
+  name: {type: str, default: cds_len}
+  degree: {type: str, default: degree}
+  length: {type: str, default: mm_len}
+  distance: {type: any}
+  verbose: {type: bool, default: true}
+status: active
+review: {state: harvested, source: python-packages}

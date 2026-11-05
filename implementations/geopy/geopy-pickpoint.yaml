@@ -1,0 +1,18 @@
+id: geopy-pickpoint
+kind: implementation
+name: geopy.PickPoint
+software: geopy
+call: {interface: python, name: geopy.PickPoint}
+harvest: {harvester: python-packages, engine_version: 2.5.0}
+parameters:
+  api_key: {type: any, required: true}
+  timeout: {type: any, note: default DEFAULT_SENTINEL}
+  proxies: {type: any, note: default DEFAULT_SENTINEL}
+  domain: {type: string, default: api.pickpoint.io}
+  scheme: {type: any}
+  user_agent: {type: any}
+  ssl_context: {type: any, note: default DEFAULT_SENTINEL}
+  adapter_factory: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

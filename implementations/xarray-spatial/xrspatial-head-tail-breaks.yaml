@@ -1,0 +1,11 @@
+id: xrspatial-head-tail-breaks
+kind: implementation
+name: xrspatial.head_tail_breaks
+software: xarray-spatial
+call: {interface: python, name: xrspatial.head_tail_breaks}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: xr.DataArray, required: true}
+  name: {type: 'Optional[str]', default: head_tail_breaks}
+status: active
+review: {state: harvested, source: python-packages}

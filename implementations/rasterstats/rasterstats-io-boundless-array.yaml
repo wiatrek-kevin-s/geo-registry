@@ -1,0 +1,13 @@
+id: rasterstats-io-boundless-array
+kind: implementation
+name: rasterstats.io.boundless_array
+software: rasterstats
+call: {interface: python, name: rasterstats.io.boundless_array}
+harvest: {harvester: python-packages, engine_version: 0.21.0}
+parameters:
+  arr: {type: any, required: true}
+  window: {type: any, required: true}
+  nodata: {type: any, required: true}
+  masked: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

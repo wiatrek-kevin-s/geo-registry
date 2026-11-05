@@ -1,0 +1,10 @@
+id: spreg-w-utils-symmetrize
+kind: implementation
+name: spreg.w_utils.symmetrize
+software: spreg
+call: {interface: python, name: spreg.w_utils.symmetrize}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  w: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

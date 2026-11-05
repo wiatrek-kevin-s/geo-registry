@@ -1,0 +1,18 @@
+id: terra-update
+kind: implementation
+name: terra::update
+software: terra
+call: {interface: r, name: 'terra::update'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  object: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  crs: {type: any, default: 'FALSE'}
+  extent: {type: any, default: 'FALSE'}
+  names: {type: any, default: 'FALSE'}
+  cells: {type: any, default: 'NULL'}
+  values: {type: any, default: 'NULL'}
+  layer: {type: any, default: '0'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

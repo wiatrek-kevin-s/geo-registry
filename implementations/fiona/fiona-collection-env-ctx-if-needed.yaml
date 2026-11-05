@@ -1,0 +1,9 @@
+id: fiona-collection-env-ctx-if-needed
+kind: implementation
+name: fiona.collection.env_ctx_if_needed
+software: fiona
+call: {interface: python, name: fiona.collection.env_ctx_if_needed}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,17 @@
+id: pyproj-sync-get-transform-grid-list
+kind: implementation
+name: pyproj.sync.get_transform_grid_list
+software: pyproj
+call: {interface: python, name: pyproj.sync.get_transform_grid_list}
+harvest: {harvester: python-packages, engine_version: 3.8.0}
+parameters:
+  source_id: {type: any}
+  area_of_use: {type: any}
+  filename: {type: any}
+  bbox: {type: any}
+  spatial_test: {type: str, default: intersects}
+  include_world_coverage: {type: bool, default: true}
+  include_already_downloaded: {type: bool, default: false}
+  target_directory: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

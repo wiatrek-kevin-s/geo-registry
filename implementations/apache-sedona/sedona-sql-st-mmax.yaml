@@ -1,0 +1,10 @@
+id: sedona-sql-st-mmax
+kind: implementation
+name: sedona.sql.ST_MMax
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_MMax}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geom: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,20 @@
+id: terra-as-polygons
+kind: implementation
+name: terra::as.polygons
+software: terra
+call: {interface: r, name: 'terra::as.polygons'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  crs: {type: any, default: '""'}
+  round: {type: any, default: 'TRUE'}
+  aggregate: {type: any, default: 'TRUE'}
+  values: {type: any, default: 'TRUE'}
+  na.rm: {type: any, default: 'TRUE'}
+  na.all: {type: any, default: 'FALSE'}
+  extent: {type: any, default: 'FALSE'}
+  digits: {type: any, default: '0'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

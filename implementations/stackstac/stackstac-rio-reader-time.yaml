@@ -1,0 +1,11 @@
+id: stackstac-rio-reader-time
+kind: implementation
+name: stackstac.rio_reader.time
+software: stackstac
+call: {interface: python, name: stackstac.rio_reader.time}
+harvest: {harvester: python-packages, engine_version: 0.5.1}
+parameters:
+  statement: {type: str, required: true}
+  level: {type: integer, default: 10}
+status: active
+review: {state: harvested, source: python-packages}

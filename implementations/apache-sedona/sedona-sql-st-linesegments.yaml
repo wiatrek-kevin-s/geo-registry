@@ -1,0 +1,11 @@
+id: sedona-sql-st-linesegments
+kind: implementation
+name: sedona.sql.ST_LineSegments
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_LineSegments}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geom: {type: Union, required: true}
+  lenient: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

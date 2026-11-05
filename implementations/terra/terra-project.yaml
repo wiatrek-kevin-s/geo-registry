@@ -1,0 +1,28 @@
+id: terra-project
+kind: implementation
+name: terra::project
+software: terra
+call: {interface: r, name: 'terra::project'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  from: {type: any, required: true}
+  to: {type: any, required: true}
+  y: {type: any, required: true}
+  method: {type: any, required: true}
+  mask: {type: any, default: 'FALSE'}
+  align_only: {type: any, default: 'FALSE'}
+  res: {type: any, default: 'NULL'}
+  origin: {type: any, default: 'NULL'}
+  threads: {type: any, default: 'FALSE'}
+  use_gdal: {type: any, default: 'TRUE'}
+  by_util: {type: any, default: 'FALSE'}
+  pipeline: {type: any, default: '""'}
+  warpOpts: {type: any, default: 'NULL'}
+  transOpts: {type: any, default: 'NULL'}
+  filename: {type: any, default: '""'}
+  partial: {type: any, default: 'FALSE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

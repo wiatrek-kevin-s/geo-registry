@@ -1,0 +1,25 @@
+id: rasterio-merge-merge
+kind: implementation
+name: rasterio.merge.merge
+software: rasterio
+call: {interface: python, name: rasterio.merge.merge}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  sources: {type: any, required: true}
+  bounds: {type: any}
+  res: {type: any}
+  nodata: {type: any}
+  dtype: {type: any}
+  precision: {type: any}
+  indexes: {type: any}
+  output_count: {type: any}
+  resampling: {type: integer, note: 'default <Resampling.nearest: 0>'}
+  method: {type: string, default: first}
+  target_aligned_pixels: {type: boolean, default: false}
+  mem_limit: {type: integer, default: 64}
+  use_highest_res: {type: boolean, default: false}
+  masked: {type: boolean, default: false}
+  dst_path: {type: any}
+  dst_kwds: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

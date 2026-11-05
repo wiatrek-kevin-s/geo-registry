@@ -1,0 +1,11 @@
+id: gstools-covmodel-tools-spectral-rad-pdf
+kind: implementation
+name: gstools.covmodel.tools.spectral_rad_pdf
+software: gstools
+call: {interface: python, name: gstools.covmodel.tools.spectral_rad_pdf}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  model: {type: any, required: true}
+  r: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,27 @@
+id: access-fca-fca-ratio
+kind: implementation
+name: access.fca.fca_ratio
+software: access
+call: {interface: python, name: access.fca.fca_ratio}
+harvest: {harvester: python-packages, engine_version: 1.1.10.post3}
+parameters:
+  demand_df: {type: any, required: true}
+  supply_df: {type: any, required: true}
+  demand_cost_df: {type: any, required: true}
+  supply_cost_df: {type: any, required: true}
+  max_cost: {type: any, required: true}
+  demand_index: {type: string, default: geoid}
+  demand_name: {type: string, default: demand}
+  supply_index: {type: string, default: geoid}
+  supply_name: {type: string, default: supply}
+  demand_cost_origin: {type: string, default: origin}
+  demand_cost_dest: {type: string, default: dest}
+  demand_cost_name: {type: string, default: cost}
+  supply_cost_origin: {type: string, default: origin}
+  supply_cost_dest: {type: string, default: dest}
+  supply_cost_name: {type: string, default: cost}
+  weight_fn: {type: any}
+  normalize: {type: boolean, default: false}
+  noise: {type: string, default: quiet}
+status: active
+review: {state: harvested, source: python-packages}

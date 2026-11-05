@@ -1,0 +1,9 @@
+id: h3-api-basic-int-get-res0-cells
+kind: implementation
+name: h3.api.basic_int.get_res0_cells
+software: h3-py
+call: {interface: python, name: h3.api.basic_int.get_res0_cells}
+harvest: {harvester: python-packages, engine_version: 4.5.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

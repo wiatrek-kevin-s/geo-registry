@@ -1,0 +1,11 @@
+id: momepy-mean-nodes
+kind: implementation
+name: momepy.mean_nodes
+software: momepy
+call: {interface: python, name: momepy.mean_nodes}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  graph: {type: Graph, required: true}
+  attr: {type: Any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

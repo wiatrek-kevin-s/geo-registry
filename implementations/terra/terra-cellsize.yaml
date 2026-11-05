@@ -1,0 +1,18 @@
+id: terra-cellsize
+kind: implementation
+name: terra::cellSize
+software: terra
+call: {interface: r, name: 'terra::cellSize'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  mask: {type: any, default: 'FALSE'}
+  lyrs: {type: any, default: 'FALSE'}
+  unit: {type: any, default: '"m"'}
+  transform: {type: any, default: 'TRUE'}
+  rcx: {type: any, default: '100'}
+  filename: {type: any, default: '""'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

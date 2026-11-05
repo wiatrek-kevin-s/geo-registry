@@ -1,0 +1,13 @@
+id: spreg-sur-est
+kind: implementation
+name: spreg.sur_est
+software: spreg
+call: {interface: python, name: spreg.sur_est}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  bigXX: {type: any, required: true}
+  bigXy: {type: any, required: true}
+  bigE: {type: any, required: true}
+  bigK: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

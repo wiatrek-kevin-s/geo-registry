@@ -1,0 +1,17 @@
+id: turf-distanceweight
+kind: implementation
+name: turf.distanceWeight
+software: turf-js
+call: {interface: js, name: turf.distanceWeight}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  fc: {type: FeatureCollection<any>, required: true}
+  options: {type: '{ threshold?: number; p?: number; binary?: boolean; alpha?: number; standardization?: boolean; }'}
+  options.threshold: {type: number, note: field of options}
+  options.p: {type: number, note: field of options}
+  options.binary: {type: boolean, note: field of options}
+  options.alpha: {type: number, note: field of options}
+  options.standardization: {type: boolean, note: field of options}
+notes: From @turf/distance-weight.
+status: active
+review: {state: harvested, source: turf}

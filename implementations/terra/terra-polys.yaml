@@ -1,0 +1,25 @@
+id: terra-polys
+kind: implementation
+name: terra::polys
+software: terra
+call: {interface: r, name: 'terra::polys'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  col: {type: any, default: '"black"'}
+  alpha: {type: any, default: '1'}
+  mx: {type: any, default: '10000'}
+  dissolve: {type: any, default: 'TRUE'}
+  y: {type: any, default: 'NULL'}
+  border: {type: any, default: '"black"'}
+  lwd: {type: any, default: '1'}
+  lty: {type: any, default: '1'}
+  legend: {type: any, default: 'FALSE'}
+  field: {type: any, default: '""'}
+  popup: {type: any, default: 'TRUE'}
+  label: {type: any, default: 'NULL'}
+  fill: {type: any, default: 'NULL'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

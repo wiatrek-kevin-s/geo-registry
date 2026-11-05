@@ -1,0 +1,10 @@
+id: spreg-get-a2-hom
+kind: implementation
+name: spreg.get_A2_hom
+software: spreg
+call: {interface: python, name: spreg.get_A2_hom}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  s: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

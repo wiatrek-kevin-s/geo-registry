@@ -1,0 +1,14 @@
+id: rasterio-features-geometry-mask
+kind: implementation
+name: rasterio.features.geometry_mask
+software: rasterio
+call: {interface: python, name: rasterio.features.geometry_mask}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  geometries: {type: any, required: true}
+  out_shape: {type: any, required: true}
+  transform: {type: any, required: true}
+  all_touched: {type: boolean, default: false}
+  invert: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

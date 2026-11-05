@@ -1,0 +1,9 @@
+id: terra-gdal-has-pam
+kind: implementation
+name: terra::gdal_has_pam
+software: terra
+call: {interface: r, name: 'terra::gdal_has_pam'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters: {}
+status: active
+review: {state: harvested, source: r-packages}

@@ -1,0 +1,13 @@
+id: libpysal-cg-geogrid
+kind: implementation
+name: libpysal.cg.geogrid
+software: libpysal
+call: {interface: python, name: libpysal.cg.geogrid}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  pup: {type: any, required: true}
+  pdown: {type: any, required: true}
+  k: {type: any, required: true}
+  lonx: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

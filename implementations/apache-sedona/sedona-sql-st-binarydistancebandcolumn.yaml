@@ -1,0 +1,15 @@
+id: sedona-sql-st-binarydistancebandcolumn
+kind: implementation
+name: sedona.sql.ST_BinaryDistanceBandColumn
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_BinaryDistanceBandColumn}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geometry: {type: Union, required: true}
+  threshold: {type: Union, required: true}
+  include_zero_distance_neighbors: {type: Union, default: true}
+  include_self: {type: Union, default: false}
+  use_spheroid: {type: Union, default: false}
+  attributes: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

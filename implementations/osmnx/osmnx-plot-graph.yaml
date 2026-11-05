@@ -1,0 +1,27 @@
+id: osmnx-plot-graph
+kind: implementation
+name: osmnx.plot_graph
+software: osmnx
+call: {interface: python, name: osmnx.plot_graph}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  G: {type: nx.MultiGraph | nx.MultiDiGraph, required: true}
+  ax: {type: Axes | None}
+  figsize: {type: 'tuple[float, float]', note: 'default (8, 8)'}
+  bgcolor: {type: str, default: '#111111'}
+  node_color: {type: 'str | Sequence[str]', default: w}
+  node_size: {type: 'float | Sequence[float]', default: 15}
+  node_alpha: {type: float | None}
+  node_edgecolor: {type: 'str | Iterable[str]', default: none}
+  node_zorder: {type: int, default: 1}
+  edge_color: {type: 'str | Iterable[str]', default: '#999999'}
+  edge_linewidth: {type: 'float | Sequence[float]', default: 1}
+  edge_alpha: {type: float | None}
+  bbox: {type: 'tuple[float, float, float, float] | None'}
+  show: {type: bool, default: true}
+  close: {type: bool, default: false}
+  save: {type: bool, default: false}
+  filepath: {type: str | Path | None}
+  dpi: {type: int, default: 300}
+status: active
+review: {state: harvested, source: python-packages}

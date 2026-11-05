@@ -1,0 +1,10 @@
+id: rasterio-drivers-driver-from-extension
+kind: implementation
+name: rasterio.drivers.driver_from_extension
+software: rasterio
+call: {interface: python, name: rasterio.drivers.driver_from_extension}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  path: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

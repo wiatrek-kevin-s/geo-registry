@@ -1,0 +1,15 @@
+id: esda-plot-moran-facet
+kind: implementation
+name: esda.plot_moran_facet
+software: esda
+call: {interface: python, name: esda.plot_moran_facet}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  moran_matrix: {type: any, required: true}
+  figsize: {type: any, note: 'default (16, 12)'}
+  scatter_bv_kwds: {type: any}
+  fitline_bv_kwds: {type: any}
+  scatter_glob_kwds: {type: any, note: 'default {''color'': ''#737373''}'}
+  fitline_glob_kwds: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

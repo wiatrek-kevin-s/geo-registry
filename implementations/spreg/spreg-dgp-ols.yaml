@@ -1,0 +1,11 @@
+id: spreg-dgp-ols
+kind: implementation
+name: spreg.dgp_ols
+software: spreg
+call: {interface: python, name: spreg.dgp_ols}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  u: {type: any, required: true}
+  xb: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

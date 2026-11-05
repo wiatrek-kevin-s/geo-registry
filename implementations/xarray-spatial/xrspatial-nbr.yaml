@@ -1,0 +1,12 @@
+id: xrspatial-nbr
+kind: implementation
+name: xrspatial.nbr
+software: xarray-spatial
+call: {interface: python, name: xrspatial.nbr}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  nir_agg: {type: xr.DataArray, required: true}
+  swir2_agg: {type: xr.DataArray, required: true}
+  name: {type: string, default: nbr}
+status: active
+review: {state: harvested, source: python-packages}

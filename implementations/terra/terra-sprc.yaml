@@ -1,0 +1,19 @@
+id: terra-sprc
+kind: implementation
+name: terra::sprc
+software: terra
+call: {interface: r, name: 'terra::sprc'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  ids: {type: any, default: '0'}
+  opts: {type: any, default: 'NULL'}
+  raw: {type: any, default: 'FALSE'}
+  noflip: {type: any, default: 'FALSE'}
+  guessCRS: {type: any, default: 'TRUE'}
+  domains: {type: any, default: '""'}
+  group: {type: any, default: 'FALSE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

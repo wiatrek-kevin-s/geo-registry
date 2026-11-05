@@ -1,0 +1,11 @@
+id: sedona-sql-st-geometryn
+kind: implementation
+name: sedona.sql.ST_GeometryN
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_GeometryN}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  multi_geometry: {type: Union, required: true}
+  n: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

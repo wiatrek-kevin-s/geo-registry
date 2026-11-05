@@ -1,0 +1,10 @@
+id: movingpandas-trajectory-get-length
+kind: implementation
+name: Trajectory.get_length
+software: movingpandas
+call: {interface: python, name: movingpandas.Trajectory.get_length}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  units: {type: any, note: 'default UNITS(distance=None, time=None, time2=None, crs=None)'}
+status: active
+review: {state: harvested, source: python-packages}

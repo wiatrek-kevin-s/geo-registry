@@ -1,0 +1,15 @@
+id: terra-set-cats
+kind: implementation
+name: terra::set.cats
+software: terra
+call: {interface: r, name: 'terra::set.cats'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  layer: {type: any, default: '1'}
+  value: {type: any, required: true}
+  active: {type: any, default: '1'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

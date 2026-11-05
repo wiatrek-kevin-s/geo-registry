@@ -1,0 +1,16 @@
+id: laspy-header-extrabytesstruct
+kind: implementation
+name: laspy.header.ExtraBytesStruct
+software: laspy
+call: {interface: python, name: laspy.header.ExtraBytesStruct}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  name: {type: bytes, required: true}
+  data_type: {type: Union, required: true}
+  description: {type: bytes, note: default b''}
+  scale: {type: Optional}
+  offset: {type: Optional}
+  no_data: {type: Optional}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

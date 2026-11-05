@@ -1,0 +1,14 @@
+id: rasterio-warp-transform
+kind: implementation
+name: rasterio.warp.transform
+software: rasterio
+call: {interface: python, name: rasterio.warp.transform}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  src_crs: {type: any, required: true}
+  dst_crs: {type: any, required: true}
+  xs: {type: any, required: true}
+  ys: {type: any, required: true}
+  zs: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

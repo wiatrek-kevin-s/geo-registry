@@ -1,0 +1,10 @@
+id: movingpandas-trajectory-units
+kind: implementation
+name: movingpandas.trajectory.UNITS
+software: movingpandas
+call: {interface: python, name: movingpandas.trajectory.UNITS}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

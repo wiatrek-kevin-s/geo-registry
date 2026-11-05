@@ -1,0 +1,16 @@
+id: spopt-region-base-ok-moves
+kind: implementation
+name: spopt.region.base.ok_moves
+software: spopt
+call: {interface: python, name: spopt.region.base.ok_moves}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  candidates: {type: any, required: true}
+  regions: {type: any, required: true}
+  labels_: {type: any, required: true}
+  closest: {type: any, required: true}
+  g: {type: any, required: true}
+  w: {type: any, required: true}
+  areas: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

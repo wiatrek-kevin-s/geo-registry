@@ -1,0 +1,11 @@
+id: movingpandas-trajectory-clip
+kind: implementation
+name: Trajectory.clip
+software: movingpandas
+call: {interface: python, name: movingpandas.Trajectory.clip}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  polygon: {type: any, required: true}
+  point_based: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

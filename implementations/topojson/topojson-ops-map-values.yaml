@@ -1,0 +1,12 @@
+id: topojson-ops-map-values
+kind: implementation
+name: topojson.ops.map_values
+software: topojson
+call: {interface: python, name: topojson.ops.map_values}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  arr: {type: any, required: true}
+  search_vals: {type: any, required: true}
+  replace_vals: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

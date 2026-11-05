@@ -1,0 +1,13 @@
+id: giddy-directional-rose
+kind: implementation
+name: giddy.directional.Rose
+software: giddy
+call: {interface: python, name: giddy.directional.Rose}
+harvest: {harvester: python-packages, engine_version: 2.3.9}
+parameters:
+  Y: {type: any, required: true}
+  w: {type: any, required: true}
+  k: {type: integer, default: 8}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

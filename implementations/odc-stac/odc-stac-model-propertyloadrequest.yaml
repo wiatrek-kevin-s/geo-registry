@@ -1,0 +1,16 @@
+id: odc-stac-model-propertyloadrequest
+kind: implementation
+name: odc.stac.model.PropertyLoadRequest
+software: odc-stac
+call: {interface: python, name: odc.stac.model.PropertyLoadRequest}
+harvest: {harvester: python-packages, engine_version: 0.5.3}
+parameters:
+  key: {type: str, required: true}
+  name: {type: str | None}
+  dtype: {type: str, default: float32}
+  nodata: {type: float | None}
+  units: {type: str, default: '1'}
+  fuser: {type: 'Callable[[Sequence[Any]], Any]', note: default odc.stac.model._default_props_fuser}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

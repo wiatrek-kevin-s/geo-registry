@@ -1,0 +1,11 @@
+id: movingpandas-overlay-intersects
+kind: implementation
+name: movingpandas.overlay.intersects
+software: movingpandas
+call: {interface: python, name: movingpandas.overlay.intersects}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  traj: {type: any, required: true}
+  polygon: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

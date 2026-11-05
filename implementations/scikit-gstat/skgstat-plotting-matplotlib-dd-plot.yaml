@@ -1,0 +1,13 @@
+id: skgstat-plotting-matplotlib-dd-plot
+kind: implementation
+name: skgstat.plotting.matplotlib_dd_plot
+software: scikit-gstat
+call: {interface: python, name: skgstat.plotting.matplotlib_dd_plot}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  variogram: {type: any, required: true}
+  ax: {type: any}
+  plot_bins: {type: boolean, default: true}
+  show: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

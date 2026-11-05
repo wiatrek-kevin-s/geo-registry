@@ -1,0 +1,12 @@
+id: geopy-util-join-filter
+kind: implementation
+name: geopy.util.join_filter
+software: geopy
+call: {interface: python, name: geopy.util.join_filter}
+harvest: {harvester: python-packages, engine_version: 2.5.0}
+parameters:
+  sep: {type: any, required: true}
+  seq: {type: any, required: true}
+  pred: {type: any, note: default builtins.bool}
+status: active
+review: {state: harvested, source: python-packages}

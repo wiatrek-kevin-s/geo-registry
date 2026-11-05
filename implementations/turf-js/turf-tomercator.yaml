@@ -1,0 +1,13 @@
+id: turf-tomercator
+kind: implementation
+name: turf.toMercator
+software: turf-js
+call: {interface: js, name: turf.toMercator}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  geojson: {type: G, required: true}
+  options: {type: '{ mutate?: boolean; }'}
+  options.mutate: {type: boolean, note: field of options}
+notes: From @turf/projection.
+status: active
+review: {state: harvested, source: turf}

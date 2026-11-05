@@ -1,0 +1,10 @@
+id: gstools-summodel
+kind: implementation
+name: gstools.SumModel
+software: gstools
+call: {interface: python, name: gstools.SumModel}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

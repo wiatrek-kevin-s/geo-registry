@@ -1,0 +1,15 @@
+id: turf-standarddeviationalellipse
+kind: implementation
+name: turf.standardDeviationalEllipse
+software: turf-js
+call: {interface: js, name: turf.standardDeviationalEllipse}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  points: {type: FeatureCollection<Point>, required: true}
+  options: {type: '{ properties?: GeoJsonProperties; weight?: string; steps?: number; }'}
+  options.properties: {type: GeoJsonProperties, note: field of options}
+  options.weight: {type: string, note: field of options}
+  options.steps: {type: number, note: field of options}
+notes: From @turf/standard-deviational-ellipse.
+status: active
+review: {state: harvested, source: turf}

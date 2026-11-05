@@ -1,0 +1,18 @@
+id: xrspatial-zonal-crosstab
+kind: implementation
+name: xrspatial.zonal_crosstab
+software: xarray-spatial
+call: {interface: python, name: xrspatial.zonal_crosstab}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  zones: {type: any, required: true}
+  values: {type: xr.DataArray, required: true}
+  zone_ids: {type: 'Optional[List[Union[int, float]]]'}
+  cat_ids: {type: 'Optional[List[Union[int, float]]]'}
+  layer: {type: 'Optional[int]'}
+  agg: {type: 'Optional[str]', default: count}
+  nodata_values: {type: 'Optional[Union[int, float]]'}
+  column: {type: 'Optional[str]'}
+  rasterize_kw: {type: 'Optional[dict]'}
+status: active
+review: {state: harvested, source: python-packages}

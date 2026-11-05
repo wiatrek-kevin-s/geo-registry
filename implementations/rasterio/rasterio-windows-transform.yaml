@@ -1,0 +1,11 @@
+id: rasterio-windows-transform
+kind: implementation
+name: rasterio.windows.transform
+software: rasterio
+call: {interface: python, name: rasterio.windows.transform}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  window: {type: any, required: true}
+  transform: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

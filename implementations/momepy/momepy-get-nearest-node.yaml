@@ -1,0 +1,13 @@
+id: momepy-get-nearest-node
+kind: implementation
+name: momepy.get_nearest_node
+software: momepy
+call: {interface: python, name: momepy.get_nearest_node}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  buildings: {type: any, required: true}
+  nodes: {type: GeoDataFrame, required: true}
+  edges: {type: GeoDataFrame, required: true}
+  nearest_edge: {type: Series, required: true}
+status: active
+review: {state: harvested, source: python-packages}

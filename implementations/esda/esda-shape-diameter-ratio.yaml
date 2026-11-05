@@ -1,0 +1,11 @@
+id: esda-shape-diameter-ratio
+kind: implementation
+name: esda.shape.diameter_ratio
+software: esda
+call: {interface: python, name: esda.shape.diameter_ratio}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  collection: {type: any, required: true}
+  rotated: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

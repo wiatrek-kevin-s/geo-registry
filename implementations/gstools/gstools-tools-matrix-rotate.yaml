@@ -1,0 +1,11 @@
+id: gstools-tools-matrix-rotate
+kind: implementation
+name: gstools.tools.matrix_rotate
+software: gstools
+call: {interface: python, name: gstools.tools.matrix_rotate}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  dim: {type: any, required: true}
+  angles: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,10 @@
+id: movingpandas-trajectory-intersects
+kind: implementation
+name: Trajectory.intersects
+software: movingpandas
+call: {interface: python, name: movingpandas.Trajectory.intersects}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  polygon: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: turf-getcoords
+kind: implementation
+name: turf.getCoords
+software: turf-js
+call: {interface: js, name: turf.getCoords}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  coords: {type: 'any[] | Feature<G> | G', required: true}
+notes: From @turf/invariant.
+status: active
+review: {state: harvested, source: turf}

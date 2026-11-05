@@ -1,0 +1,14 @@
+id: laspy-copc-load-octree-for-query
+kind: implementation
+name: laspy.copc.load_octree_for_query
+software: laspy
+call: {interface: python, name: laspy.copc.load_octree_for_query}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  source: {type: any, required: true}
+  info: {type: CopcInfoVlr, required: true}
+  hierarchy_page: {type: HierarchyPage, required: true}
+  query_bounds: {type: Optional}
+  level_range: {type: Optional}
+status: active
+review: {state: harvested, source: python-packages}

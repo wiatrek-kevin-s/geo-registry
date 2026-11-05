@@ -1,0 +1,14 @@
+id: spreg-make-error
+kind: implementation
+name: spreg.make_error
+software: spreg
+call: {interface: python, name: spreg.make_error}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  rng: {type: any, required: true}
+  n: {type: any, required: true}
+  mu: {type: integer, default: 0}
+  varu: {type: integer, default: 1}
+  method: {type: string, default: normal}
+status: active
+review: {state: harvested, source: python-packages}

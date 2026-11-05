@@ -1,0 +1,12 @@
+id: pyogrio-list-drivers
+kind: implementation
+name: pyogrio.list_drivers
+software: pyogrio
+call: {interface: python, name: pyogrio.list_drivers}
+harvest: {harvester: python-packages, engine_version: 0.13.0}
+parameters:
+  read: {type: boolean, default: false}
+  write: {type: boolean, default: false}
+  append: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

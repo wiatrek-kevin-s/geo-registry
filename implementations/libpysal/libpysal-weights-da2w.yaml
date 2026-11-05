@@ -1,0 +1,16 @@
+id: libpysal-weights-da2w
+kind: implementation
+name: libpysal.weights.da2W
+software: libpysal
+call: {interface: python, name: libpysal.weights.da2W}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  da: {type: any, required: true}
+  criterion: {type: string, default: queen}
+  z_value: {type: any}
+  coords_labels: {type: any, note: 'default {}'}
+  k: {type: integer, default: 1}
+  include_nodata: {type: boolean, default: false}
+  n_jobs: {type: integer, default: 1}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,10 @@
+id: spreg-probit-ape
+kind: implementation
+name: spreg.probit_ape
+software: spreg
+call: {interface: python, name: spreg.probit_ape}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  regprob: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

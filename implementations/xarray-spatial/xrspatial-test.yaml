@@ -1,0 +1,9 @@
+id: xrspatial-test
+kind: implementation
+name: xrspatial.test
+software: xarray-spatial
+call: {interface: python, name: xrspatial.test}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

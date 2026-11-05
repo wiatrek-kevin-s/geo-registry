@@ -1,0 +1,11 @@
+id: libpysal-cg-point-touches-rectangle
+kind: implementation
+name: libpysal.cg.point_touches_rectangle
+software: libpysal
+call: {interface: python, name: libpysal.cg.point_touches_rectangle}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  point: {type: any, required: true}
+  rect: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

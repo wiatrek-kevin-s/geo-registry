@@ -1,0 +1,12 @@
+id: turf-flatteneach
+kind: implementation
+name: turf.flattenEach
+software: turf-js
+call: {interface: js, name: turf.flattenEach}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  geojson: {type: 'Feature<G, P> | FeatureCollection<G, P> | G | GeometryCollection | Feature<GeometryCollection, P>', required: true}
+  callback: {type: '(currentFeature: Feature<G, P>, featureIndex: number, multiFeatureIndex: number) => void', required: true}
+notes: From @turf/meta.
+status: active
+review: {state: harvested, source: turf}

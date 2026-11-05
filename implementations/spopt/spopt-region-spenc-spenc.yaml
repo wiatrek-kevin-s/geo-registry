@@ -1,0 +1,23 @@
+id: spopt-region-spenc-spenc
+kind: implementation
+name: spopt.region.spenc.SPENC
+software: spopt
+call: {interface: python, name: spopt.region.spenc.SPENC}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  n_clusters: {type: integer, default: 8}
+  eigen_solver: {type: any}
+  random_state: {type: any}
+  n_init: {type: integer, default: 10}
+  gamma: {type: number, default: 1.0}
+  affinity: {type: string, default: rbf}
+  n_neighbors: {type: integer, default: 10}
+  eigen_tol: {type: number, default: 1.0e-09}
+  assign_labels: {type: string, default: discretize}
+  degree: {type: integer, default: 3}
+  coef0: {type: integer, default: 1}
+  kernel_params: {type: any}
+  n_jobs: {type: integer, default: 1}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

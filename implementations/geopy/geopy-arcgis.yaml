@@ -1,0 +1,22 @@
+id: geopy-arcgis
+kind: implementation
+name: geopy.ArcGIS
+software: geopy
+call: {interface: python, name: geopy.ArcGIS}
+harvest: {harvester: python-packages, engine_version: 2.5.0}
+parameters:
+  username: {type: any}
+  password: {type: any}
+  referer: {type: any}
+  token_lifetime: {type: integer, default: 60}
+  scheme: {type: any}
+  timeout: {type: any, note: default DEFAULT_SENTINEL}
+  proxies: {type: any, note: default DEFAULT_SENTINEL}
+  user_agent: {type: any}
+  ssl_context: {type: any, note: default DEFAULT_SENTINEL}
+  adapter_factory: {type: any}
+  auth_domain: {type: string, default: www.arcgis.com}
+  domain: {type: string, default: geocode.arcgis.com}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

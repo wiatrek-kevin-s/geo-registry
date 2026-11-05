@@ -1,0 +1,12 @@
+id: geopy-units-degrees
+kind: implementation
+name: geopy.units.degrees
+software: geopy
+call: {interface: python, name: geopy.units.degrees}
+harvest: {harvester: python-packages, engine_version: 2.5.0}
+parameters:
+  radians: {type: integer, default: 0}
+  arcminutes: {type: integer, default: 0}
+  arcseconds: {type: integer, default: 0}
+status: active
+review: {state: harvested, source: python-packages}

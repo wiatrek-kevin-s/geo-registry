@@ -1,0 +1,12 @@
+id: libpysal-cg-shapely-ext-buffer
+kind: implementation
+name: libpysal.cg.shapely_ext.buffer
+software: libpysal
+call: {interface: python, name: libpysal.cg.shapely_ext.buffer}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  shape: {type: any, required: true}
+  radius: {type: any, required: true}
+  resolution: {type: integer, default: 16}
+status: active
+review: {state: harvested, source: python-packages}

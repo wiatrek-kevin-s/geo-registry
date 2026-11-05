@@ -1,0 +1,11 @@
+id: spopt-region-spenclib-abstracts-boundary-fraction
+kind: implementation
+name: spopt.region.spenclib.abstracts.boundary_fraction
+software: spopt
+call: {interface: python, name: spopt.region.spenclib.abstracts.boundary_fraction}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  W: {type: any, required: true}
+  labels: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

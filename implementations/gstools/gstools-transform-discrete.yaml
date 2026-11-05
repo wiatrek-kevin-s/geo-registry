@@ -1,0 +1,16 @@
+id: gstools-transform-discrete
+kind: implementation
+name: gstools.transform.discrete
+software: gstools
+call: {interface: python, name: gstools.transform.discrete}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  fld: {type: any, required: true}
+  values: {type: any, required: true}
+  thresholds: {type: string, default: arithmetic}
+  field: {type: string, default: field}
+  store: {type: boolean, default: true}
+  process: {type: boolean, default: false}
+  keep_mean: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: fiona-listdir
+kind: implementation
+name: fiona.listdir
+software: fiona
+call: {interface: python, name: fiona.listdir}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  fp: {type: any, required: true}
+  opener: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

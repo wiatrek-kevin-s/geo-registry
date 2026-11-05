@@ -1,0 +1,10 @@
+id: pyproj-datadir-set-data-dir
+kind: implementation
+name: pyproj.datadir.set_data_dir
+software: pyproj
+call: {interface: python, name: pyproj.datadir.set_data_dir}
+harvest: {harvester: python-packages, engine_version: 3.8.0}
+parameters:
+  proj_data_dir: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

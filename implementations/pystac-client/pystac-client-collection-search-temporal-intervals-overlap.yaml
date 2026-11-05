@@ -1,0 +1,11 @@
+id: pystac-client-collection-search-temporal-intervals-overlap
+kind: implementation
+name: pystac_client.collection_search.temporal_intervals_overlap
+software: pystac-client
+call: {interface: python, name: pystac_client.collection_search.temporal_intervals_overlap}
+harvest: {harvester: python-packages, engine_version: 0.9.1}
+parameters:
+  interval1: {type: tuple, required: true}
+  interval2: {type: tuple, required: true}
+status: active
+review: {state: harvested, source: python-packages}

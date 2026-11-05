@@ -1,0 +1,15 @@
+id: libpysal-io-util-weight-converter-weight-convert
+kind: implementation
+name: libpysal.io.util.weight_converter.weight_convert
+software: libpysal
+call: {interface: python, name: libpysal.io.util.weight_converter.weight_convert}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  inPath: {type: any, required: true}
+  outPath: {type: any, required: true}
+  inDataFormat: {type: any}
+  outDataFormat: {type: any}
+  useIdIndex: {type: boolean, default: true}
+  matrix_form: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

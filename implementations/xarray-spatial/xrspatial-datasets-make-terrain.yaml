@@ -1,0 +1,15 @@
+id: xrspatial-datasets-make-terrain
+kind: implementation
+name: xrspatial.datasets.make_terrain
+software: xarray-spatial
+call: {interface: python, name: xrspatial.datasets.make_terrain}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  shape: {type: any, note: 'default (1024, 1024)'}
+  scale: {type: number, default: 100.0}
+  octaves: {type: integer, default: 6}
+  persistence: {type: number, default: 0.5}
+  lacunarity: {type: number, default: 2.0}
+  chunks: {type: any, note: 'default (512, 512)'}
+status: active
+review: {state: harvested, source: python-packages}

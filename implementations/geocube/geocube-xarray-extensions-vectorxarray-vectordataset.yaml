@@ -1,0 +1,11 @@
+id: geocube-xarray-extensions-vectorxarray-vectordataset
+kind: implementation
+name: geocube.xarray_extensions.vectorxarray.VectorDataset
+software: geocube
+call: {interface: python, name: geocube.xarray_extensions.vectorxarray.VectorDataset}
+harvest: {harvester: python-packages, engine_version: 0.7.1}
+parameters:
+  xarray_obj: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

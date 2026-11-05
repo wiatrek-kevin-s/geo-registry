@@ -1,0 +1,14 @@
+id: gstools-field-tools-generate-on-mesh
+kind: implementation
+name: gstools.field.tools.generate_on_mesh
+software: gstools
+call: {interface: python, name: gstools.field.tools.generate_on_mesh}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  f_cls: {type: any, required: true}
+  mesh: {type: any, required: true}
+  points: {type: string, default: centroids}
+  direction: {type: string, default: all}
+  name: {type: string, default: field}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,14 @@
+id: esda-smoothing-standardized-mortality-ratio
+kind: implementation
+name: esda.smoothing.standardized_mortality_ratio
+software: esda
+call: {interface: python, name: esda.smoothing.standardized_mortality_ratio}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  e: {type: any, required: true}
+  b: {type: any, required: true}
+  s_e: {type: any, required: true}
+  s_b: {type: any, required: true}
+  n: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

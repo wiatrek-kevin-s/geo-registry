@@ -1,0 +1,11 @@
+id: momepy-shape-index
+kind: implementation
+name: momepy.shape_index
+software: momepy
+call: {interface: python, name: momepy.shape_index}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  geometry: {type: any, required: true}
+  longest_axis_length: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

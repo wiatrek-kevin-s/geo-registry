@@ -1,0 +1,15 @@
+id: movingpandas-ptsextractor
+kind: implementation
+name: movingpandas.PtsExtractor
+software: movingpandas
+call: {interface: python, name: movingpandas.PtsExtractor}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  traj: {type: any, required: true}
+  max_distance: {type: any, required: true}
+  min_distance: {type: any, required: true}
+  min_stop_duration: {type: any, required: true}
+  min_angle: {type: integer, default: 45}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

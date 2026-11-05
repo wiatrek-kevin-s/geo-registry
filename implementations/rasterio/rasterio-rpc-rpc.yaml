@@ -1,0 +1,26 @@
+id: rasterio-rpc-rpc
+kind: implementation
+name: rasterio.rpc.RPC
+software: rasterio
+call: {interface: python, name: rasterio.rpc.RPC}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  height_off: {type: any, required: true}
+  height_scale: {type: any, required: true}
+  lat_off: {type: any, required: true}
+  lat_scale: {type: any, required: true}
+  line_den_coeff: {type: any, required: true}
+  line_num_coeff: {type: any, required: true}
+  line_off: {type: any, required: true}
+  line_scale: {type: any, required: true}
+  long_off: {type: any, required: true}
+  long_scale: {type: any, required: true}
+  samp_den_coeff: {type: any, required: true}
+  samp_num_coeff: {type: any, required: true}
+  samp_off: {type: any, required: true}
+  samp_scale: {type: any, required: true}
+  err_bias: {type: any}
+  err_rand: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

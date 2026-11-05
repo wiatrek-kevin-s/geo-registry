@@ -1,0 +1,10 @@
+id: spreg-condition-index
+kind: implementation
+name: spreg.condition_index
+software: spreg
+call: {interface: python, name: spreg.condition_index}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  reg: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: terra-projnetwork
+kind: implementation
+name: terra::projNetwork
+software: terra
+call: {interface: r, name: 'terra::projNetwork'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  enable: {type: any, required: true}
+  url: {type: any, default: '""'}
+status: active
+review: {state: harvested, source: r-packages}

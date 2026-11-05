@@ -1,0 +1,15 @@
+id: turf-segmentreduce
+kind: implementation
+name: turf.segmentReduce
+software: turf-js
+call: {interface: js, name: turf.segmentReduce}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  geojson: {type: 'FeatureCollection<Lines, P> | Feature<Lines, P> | Lines | Feature<GeometryCollection, P> | GeometryCollection',
+    required: true}
+  callback: {type: '(previousValue?: Reducer, currentSegment?: Feature<LineString, P>, featureIndex?: number, multiFeatureIndex?:
+      number, segmentIndex?: number, geometryIndex?: number) => Reducer', required: true}
+  initialValue: {type: Reducer}
+notes: From @turf/meta.
+status: active
+review: {state: harvested, source: turf}

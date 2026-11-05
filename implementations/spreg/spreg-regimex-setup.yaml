@@ -1,0 +1,14 @@
+id: spreg-regimex-setup
+kind: implementation
+name: spreg.regimeX_setup
+software: spreg
+call: {interface: python, name: spreg.regimeX_setup}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  x: {type: any, required: true}
+  regimes: {type: any, required: true}
+  cols2regi: {type: any, required: true}
+  regimes_set: {type: any, required: true}
+  constant: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

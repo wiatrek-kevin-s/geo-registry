@@ -1,0 +1,11 @@
+id: pyproj-geod-reverse-azimuth
+kind: implementation
+name: pyproj.geod.reverse_azimuth
+software: pyproj
+call: {interface: python, name: pyproj.geod.reverse_azimuth}
+harvest: {harvester: python-packages, engine_version: 3.8.0}
+parameters:
+  azi: {type: Any, required: true}
+  radians: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

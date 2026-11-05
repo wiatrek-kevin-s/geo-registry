@@ -1,0 +1,14 @@
+id: verde-synthetic-checkerboard
+kind: implementation
+name: verde.synthetic.CheckerBoard
+software: verde
+call: {interface: python, name: verde.synthetic.CheckerBoard}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  amplitude: {type: integer, default: 1000}
+  region: {type: any, note: 'default (0, 5000, -5000, 0)'}
+  w_east: {type: any}
+  w_north: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: laspy-convert
+kind: implementation
+name: laspy.convert
+software: laspy
+call: {interface: python, name: laspy.convert}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  source_las: {type: any, required: true}
+  point_format_id: {type: any}
+  file_version: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

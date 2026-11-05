@@ -1,0 +1,12 @@
+id: xrspatial-convolution-convolve-2d
+kind: implementation
+name: xrspatial.convolution.convolve_2d
+software: xarray-spatial
+call: {interface: python, name: xrspatial.convolution.convolve_2d}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  data: {type: any, required: true}
+  kernel: {type: any, required: true}
+  boundary: {type: string, default: nan}
+status: active
+review: {state: harvested, source: python-packages}

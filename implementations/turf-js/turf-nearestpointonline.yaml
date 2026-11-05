@@ -1,0 +1,14 @@
+id: turf-nearestpointonline
+kind: implementation
+name: turf.nearestPointOnLine
+software: turf-js
+call: {interface: js, name: turf.nearestPointOnLine}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  lines: {type: Feature<G> | G, required: true}
+  inputPoint: {type: Coord, required: true}
+  options: {type: '{ units?: Units; }'}
+  options.units: {type: Units, note: field of options}
+notes: From @turf/nearest-point-on-line.
+status: active
+review: {state: harvested, source: turf}

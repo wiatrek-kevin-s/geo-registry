@@ -1,0 +1,11 @@
+id: xrspatial-aspect-warn-if-unit-mismatch
+kind: implementation
+name: xrspatial.aspect.warn_if_unit_mismatch
+software: xarray-spatial
+call: {interface: python, name: xrspatial.aspect.warn_if_unit_mismatch}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: xr.DataArray, required: true}
+  func_name: {type: str, default: slope}
+status: active
+review: {state: harvested, source: python-packages}

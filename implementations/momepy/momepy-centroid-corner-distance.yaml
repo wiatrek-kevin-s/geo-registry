@@ -1,0 +1,12 @@
+id: momepy-centroid-corner-distance
+kind: implementation
+name: momepy.centroid_corner_distance
+software: momepy
+call: {interface: python, name: momepy.centroid_corner_distance}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  geometry: {type: any, required: true}
+  eps: {type: float, default: 10}
+  include_interiors: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

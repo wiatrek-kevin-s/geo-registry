@@ -1,0 +1,15 @@
+id: esda-smoothing-age-adjusted-smoother
+kind: implementation
+name: esda.smoothing.Age_Adjusted_Smoother
+software: esda
+call: {interface: python, name: esda.smoothing.Age_Adjusted_Smoother}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  e: {type: any, required: true}
+  b: {type: any, required: true}
+  w: {type: any, required: true}
+  s: {type: any, required: true}
+  alpha: {type: number, default: 0.05}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

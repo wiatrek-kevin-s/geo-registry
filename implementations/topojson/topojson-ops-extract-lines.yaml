@@ -1,0 +1,10 @@
+id: topojson-ops-extract-lines
+kind: implementation
+name: topojson.ops.extract_lines
+software: topojson
+call: {interface: python, name: topojson.ops.extract_lines}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  geom: {type: BaseGeometry, required: true}
+status: active
+review: {state: harvested, source: python-packages}

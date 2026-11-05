@@ -1,0 +1,9 @@
+id: pyogrio-get-gdal-data-path
+kind: implementation
+name: pyogrio.get_gdal_data_path
+software: pyogrio
+call: {interface: python, name: pyogrio.get_gdal_data_path}
+harvest: {harvester: python-packages, engine_version: 0.13.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

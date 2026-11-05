@@ -1,0 +1,11 @@
+id: movingpandas-douglaspeuckergeneralizer
+kind: implementation
+name: movingpandas.DouglasPeuckerGeneralizer
+software: movingpandas
+call: {interface: python, name: movingpandas.DouglasPeuckerGeneralizer}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  traj: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: gstools-field-pgs
+kind: implementation
+name: gstools.field.PGS
+software: gstools
+call: {interface: python, name: gstools.field.PGS}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  dim: {type: any, required: true}
+  fields: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

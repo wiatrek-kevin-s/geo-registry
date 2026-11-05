@@ -1,0 +1,13 @@
+id: laspy-vlrs-known-basevlr
+kind: implementation
+name: laspy.vlrs.known.BaseVLR
+software: laspy
+call: {interface: python, name: laspy.vlrs.known.BaseVLR}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  user_id: {type: any, required: true}
+  record_id: {type: any, required: true}
+  description: {type: string, default: ''}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,14 @@
+id: rioxarray-rioxarray-affine-to-coords
+kind: implementation
+name: rioxarray.rioxarray.affine_to_coords
+software: rioxarray
+call: {interface: python, name: rioxarray.rioxarray.affine_to_coords}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  affine: {type: Affine, required: true}
+  width: {type: int, required: true}
+  height: {type: int, required: true}
+  x_dim: {type: str, default: x}
+  y_dim: {type: str, default: y}
+status: active
+review: {state: harvested, source: python-packages}

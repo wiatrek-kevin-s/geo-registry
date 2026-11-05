@@ -1,0 +1,17 @@
+id: rasterio-control-groundcontrolpoint
+kind: implementation
+name: rasterio.control.GroundControlPoint
+software: rasterio
+call: {interface: python, name: rasterio.control.GroundControlPoint}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  row: {type: any}
+  col: {type: any}
+  x: {type: any}
+  y: {type: any}
+  z: {type: any}
+  id: {type: any}
+  info: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

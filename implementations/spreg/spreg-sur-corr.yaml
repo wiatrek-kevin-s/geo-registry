@@ -1,0 +1,10 @@
+id: spreg-sur-corr
+kind: implementation
+name: spreg.sur_corr
+software: spreg
+call: {interface: python, name: spreg.sur_corr}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  sig: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

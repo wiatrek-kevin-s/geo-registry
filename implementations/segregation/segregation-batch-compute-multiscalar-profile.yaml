@@ -1,0 +1,20 @@
+id: segregation-batch-compute-multiscalar-profile
+kind: implementation
+name: segregation.batch.compute_multiscalar_profile
+software: segregation
+call: {interface: python, name: segregation.batch.compute_multiscalar_profile}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  gdf: {type: any, required: true}
+  segregation_index: {type: any}
+  groups: {type: any}
+  group_pop_var: {type: any}
+  total_pop_var: {type: any}
+  distances: {type: any}
+  network: {type: any}
+  decay: {type: string, default: linear}
+  function: {type: string, default: triangular}
+  precompute: {type: boolean, default: true}
+  check_crs: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

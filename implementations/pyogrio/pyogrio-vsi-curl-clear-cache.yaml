@@ -1,0 +1,10 @@
+id: pyogrio-vsi-curl-clear-cache
+kind: implementation
+name: pyogrio.vsi_curl_clear_cache
+software: pyogrio
+call: {interface: python, name: pyogrio.vsi_curl_clear_cache}
+harvest: {harvester: python-packages, engine_version: 0.13.0}
+parameters:
+  prefix: {type: str, default: ''}
+status: active
+review: {state: harvested, source: python-packages}

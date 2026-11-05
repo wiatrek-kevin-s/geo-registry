@@ -1,0 +1,12 @@
+id: rasterstats-point-point-window-unitxy
+kind: implementation
+name: rasterstats.point.point_window_unitxy
+software: rasterstats
+call: {interface: python, name: rasterstats.point.point_window_unitxy}
+harvest: {harvester: python-packages, engine_version: 0.21.0}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  affine: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

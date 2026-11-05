@@ -1,0 +1,14 @@
+id: verde-model-selection-score-estimator
+kind: implementation
+name: verde.model_selection.score_estimator
+software: verde
+call: {interface: python, name: verde.model_selection.score_estimator}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  scoring: {type: any, required: true}
+  estimator: {type: any, required: true}
+  coordinates: {type: any, required: true}
+  data: {type: any, required: true}
+  weights: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: giddy-mobility-markov-mobility
+kind: implementation
+name: giddy.mobility.markov_mobility
+software: giddy
+call: {interface: python, name: giddy.mobility.markov_mobility}
+harvest: {harvester: python-packages, engine_version: 2.3.9}
+parameters:
+  p: {type: any, required: true}
+  measure: {type: string, default: P}
+  ini: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

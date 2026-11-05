@@ -1,0 +1,11 @@
+id: spopt-region-azp-w-from-gdf
+kind: implementation
+name: spopt.region.azp.w_from_gdf
+software: spopt
+call: {interface: python, name: spopt.region.azp.w_from_gdf}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  gdf: {type: any, required: true}
+  contiguity: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

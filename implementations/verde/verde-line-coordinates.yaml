@@ -1,0 +1,15 @@
+id: verde-line-coordinates
+kind: implementation
+name: verde.line_coordinates
+software: verde
+call: {interface: python, name: verde.line_coordinates}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  start: {type: any, required: true}
+  stop: {type: any, required: true}
+  size: {type: any}
+  spacing: {type: any}
+  adjust: {type: string, default: spacing}
+  pixel_register: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

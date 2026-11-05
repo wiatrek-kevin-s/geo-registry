@@ -1,0 +1,14 @@
+id: sf-st-overlaps
+kind: implementation
+name: sf::st_overlaps
+software: sf
+call: {interface: r, name: 'sf::st_overlaps'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  sparse: {type: any, default: 'TRUE'}
+  prepared: {type: any, default: 'TRUE'}
+  '...': {type: dots, note: further arguments passed on}
+status: active
+review: {state: harvested, source: r-packages}

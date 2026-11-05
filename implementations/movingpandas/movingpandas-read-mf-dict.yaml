@@ -1,0 +1,12 @@
+id: movingpandas-read-mf-dict
+kind: implementation
+name: movingpandas.read_mf_dict
+software: movingpandas
+call: {interface: python, name: movingpandas.read_mf_dict}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  data: {type: dict, required: true}
+  traj_id: {type: integer, default: 0}
+  traj_id_property: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

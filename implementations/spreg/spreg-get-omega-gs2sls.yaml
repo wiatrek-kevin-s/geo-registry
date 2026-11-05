@@ -1,0 +1,15 @@
+id: spreg-get-omega-gs2sls
+kind: implementation
+name: spreg.get_Omega_GS2SLS
+software: spreg
+call: {interface: python, name: spreg.get_Omega_GS2SLS}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  w: {type: any, required: true}
+  lamb: {type: any, required: true}
+  reg: {type: any, required: true}
+  G: {type: any, required: true}
+  psi: {type: any, required: true}
+  P: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

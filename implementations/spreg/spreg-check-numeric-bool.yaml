@@ -1,0 +1,10 @@
+id: spreg-check-numeric-bool
+kind: implementation
+name: spreg.check_numeric_bool
+software: spreg
+call: {interface: python, name: spreg.check_numeric_bool}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  array: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

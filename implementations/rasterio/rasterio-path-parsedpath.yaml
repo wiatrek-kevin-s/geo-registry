@@ -1,0 +1,13 @@
+id: rasterio-path-parsedpath
+kind: implementation
+name: rasterio.path.ParsedPath
+software: rasterio
+call: {interface: python, name: rasterio.path.ParsedPath}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  path: {type: any, required: true}
+  archive: {type: any, required: true}
+  scheme: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

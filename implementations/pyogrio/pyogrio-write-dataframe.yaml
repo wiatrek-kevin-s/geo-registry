@@ -1,0 +1,24 @@
+id: pyogrio-write-dataframe
+kind: implementation
+name: pyogrio.write_dataframe
+software: pyogrio
+call: {interface: python, name: pyogrio.write_dataframe}
+harvest: {harvester: python-packages, engine_version: 0.13.0}
+parameters:
+  df: {type: any, required: true}
+  path: {type: any, required: true}
+  layer: {type: any}
+  driver: {type: any}
+  encoding: {type: any}
+  geometry_type: {type: any}
+  promote_to_multi: {type: any}
+  nan_as_null: {type: boolean, default: true}
+  append: {type: boolean, default: false}
+  use_arrow: {type: any}
+  dataset_metadata: {type: any}
+  layer_metadata: {type: any}
+  metadata: {type: any}
+  dataset_options: {type: any}
+  layer_options: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

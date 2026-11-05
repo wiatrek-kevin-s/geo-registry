@@ -1,0 +1,11 @@
+id: momepy-building-adjacency
+kind: implementation
+name: momepy.building_adjacency
+software: momepy
+call: {interface: python, name: momepy.building_adjacency}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  contiguity_graph: {type: Graph, required: true}
+  neighborhood_graph: {type: Graph, required: true}
+status: active
+review: {state: harvested, source: python-packages}

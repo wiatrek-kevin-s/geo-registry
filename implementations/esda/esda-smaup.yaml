@@ -1,0 +1,13 @@
+id: esda-smaup
+kind: implementation
+name: esda.Smaup
+software: esda
+call: {interface: python, name: esda.Smaup}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  n: {type: any, required: true}
+  k: {type: any, required: true}
+  rho: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

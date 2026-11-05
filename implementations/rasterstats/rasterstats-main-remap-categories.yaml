@@ -1,0 +1,11 @@
+id: rasterstats-main-remap-categories
+kind: implementation
+name: rasterstats.main.remap_categories
+software: rasterstats
+call: {interface: python, name: rasterstats.main.remap_categories}
+harvest: {harvester: python-packages, engine_version: 0.21.0}
+parameters:
+  category_map: {type: any, required: true}
+  stats: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

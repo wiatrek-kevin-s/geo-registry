@@ -1,0 +1,13 @@
+id: segregation-singlegroup-delta
+kind: implementation
+name: segregation.singlegroup.Delta
+software: segregation
+call: {interface: python, name: segregation.singlegroup.Delta}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  data: {type: any, required: true}
+  group_pop_var: {type: any, required: true}
+  total_pop_var: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

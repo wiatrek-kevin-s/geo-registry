@@ -1,0 +1,10 @@
+id: rasterio-session-parse-bool
+kind: implementation
+name: rasterio.session.parse_bool
+software: rasterio
+call: {interface: python, name: rasterio.session.parse_bool}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  v: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

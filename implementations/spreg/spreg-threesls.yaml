@@ -1,0 +1,23 @@
+id: spreg-threesls
+kind: implementation
+name: spreg.ThreeSLS
+software: spreg
+call: {interface: python, name: spreg.ThreeSLS}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  bigy: {type: any, required: true}
+  bigX: {type: any, required: true}
+  bigyend: {type: any, required: true}
+  bigq: {type: any, required: true}
+  df: {type: any}
+  regimes: {type: any}
+  nonspat_diag: {type: boolean, default: true}
+  name_bigy: {type: any}
+  name_bigX: {type: any}
+  name_bigyend: {type: any}
+  name_bigq: {type: any}
+  name_ds: {type: any}
+  name_regimes: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

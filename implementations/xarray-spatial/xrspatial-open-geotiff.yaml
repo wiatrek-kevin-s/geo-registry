@@ -1,0 +1,37 @@
+id: xrspatial-open-geotiff
+kind: implementation
+name: xrspatial.open_geotiff
+software: xarray-spatial
+call: {interface: python, name: xrspatial.open_geotiff}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  source: {type: str | BinaryIO, required: true}
+  dtype: {type: str | np.dtype | None}
+  window: {type: tuple | None}
+  bbox: {type: tuple | None}
+  overview_level: {type: int | None}
+  band: {type: int | None}
+  default_name: {type: str | None}
+  name: {type: str | None, note: default <object object>}
+  chunks: {type: int | tuple | None}
+  gpu: {type: bool, default: false}
+  max_pixels: {type: int | None}
+  max_cloud_bytes: {type: int | None, note: default <object object>}
+  on_gpu_failure: {type: str, note: default <object object>}
+  missing_sources: {type: str, note: default <object object>}
+  allow_rotated: {type: bool, default: false}
+  allow_unparseable_crs: {type: bool, default: false}
+  allow_invalid_nodata: {type: bool, default: false}
+  stable_only: {type: bool, default: false}
+  allow_experimental_codecs: {type: bool, default: false}
+  allow_internal_only_jpeg: {type: bool, default: false}
+  band_nodata: {type: str | None}
+  masked: {type: bool, default: false}
+  mask_nodata: {type: bool, note: default <object object>}
+  unpack: {type: bool, default: false}
+  mask_and_scale: {type: bool, note: default <object object>}
+  parse_coordinates: {type: bool, default: true}
+  lock: {type: object | None}
+  cache: {type: bool, default: true}
+status: active
+review: {state: harvested, source: python-packages}

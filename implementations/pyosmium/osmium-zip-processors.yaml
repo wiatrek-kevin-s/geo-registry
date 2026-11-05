@@ -1,0 +1,9 @@
+id: osmium-zip-processors
+kind: implementation
+name: osmium.zip_processors
+software: pyosmium
+call: {interface: python, name: osmium.zip_processors}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

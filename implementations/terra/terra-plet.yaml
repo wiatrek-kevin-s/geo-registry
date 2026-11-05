@@ -1,0 +1,41 @@
+id: terra-plet
+kind: implementation
+name: terra::plet
+software: terra
+call: {interface: r, name: 'terra::plet'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  y: {type: any, default: '1'}
+  col: {type: any, required: true}
+  alpha: {type: any, default: '0.8'}
+  main: {type: any, default: names(x)}
+  tiles: {type: any, default: 'c("Streets", "Esri.WorldImagery", "OpenTopoMap")'}
+  wrap: {type: any, default: 'TRUE'}
+  maxcell: {type: any, default: 5e+05}
+  stretch: {type: any, default: 'NULL'}
+  legend: {type: any, default: '"bottomright"'}
+  shared: {type: any, default: 'FALSE'}
+  panel: {type: any, default: 'FALSE'}
+  collapse: {type: any, default: 'TRUE'}
+  type: {type: any, default: 'NULL'}
+  breaks: {type: any, default: 'NULL'}
+  breakby: {type: any, default: '"eqint"'}
+  range: {type: any, default: 'NULL'}
+  fill_range: {type: any, default: 'FALSE'}
+  hover: {type: any, default: 'FALSE'}
+  map: {type: any, default: 'NULL'}
+  cex: {type: any, default: '1'}
+  lwd: {type: any, default: '2'}
+  lty: {type: any, default: 'NULL'}
+  border: {type: any, default: '"black"'}
+  popup: {type: any, default: 'TRUE'}
+  label: {type: any, default: 'FALSE'}
+  split: {type: any, default: 'FALSE'}
+  sort: {type: any, default: 'TRUE'}
+  reverse: {type: any, default: 'FALSE'}
+  fill: {type: any, default: 'NULL'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

@@ -1,0 +1,21 @@
+id: rasterstats-gen-point-query
+kind: implementation
+name: rasterstats.gen_point_query
+software: rasterstats
+call: {interface: python, name: rasterstats.gen_point_query}
+harvest: {harvester: python-packages, engine_version: 0.21.0}
+parameters:
+  vectors: {type: any, required: true}
+  raster: {type: any, required: true}
+  band: {type: integer, default: 1}
+  layer: {type: integer, default: 0}
+  nodata: {type: any}
+  affine: {type: any}
+  interpolate: {type: string, default: bilinear}
+  property_name: {type: string, default: value}
+  geojson_out: {type: boolean, default: false}
+  boundless: {type: boolean, default: true}
+  engine: {type: any}
+  chunk_size: {type: integer, default: 65536}
+status: active
+review: {state: harvested, source: python-packages}

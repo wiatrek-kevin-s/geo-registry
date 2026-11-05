@@ -1,0 +1,12 @@
+id: movingpandas-trajectorycollection-add-angular-difference
+kind: implementation
+name: TrajectoryCollection.add_angular_difference
+software: movingpandas
+call: {interface: python, name: movingpandas.TrajectoryCollection.add_angular_difference}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  overwrite: {type: boolean, default: false}
+  name: {type: string, default: angular_difference}
+  n_processes: {type: integer, default: 1}
+status: active
+review: {state: harvested, source: python-packages}

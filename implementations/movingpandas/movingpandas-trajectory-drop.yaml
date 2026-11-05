@@ -1,0 +1,9 @@
+id: movingpandas-trajectory-drop
+kind: implementation
+name: Trajectory.drop
+software: movingpandas
+call: {interface: python, name: movingpandas.Trajectory.drop}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

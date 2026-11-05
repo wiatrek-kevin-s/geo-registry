@@ -1,0 +1,15 @@
+id: turf-linestring
+kind: implementation
+name: turf.lineString
+software: turf-js
+call: {interface: js, name: turf.lineString}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  coordinates: {type: 'Position[]', required: true}
+  properties: {type: P}
+  options: {type: '{ bbox?: BBox; id?: Id; }'}
+  options.bbox: {type: BBox, note: field of options}
+  options.id: {type: Id, note: field of options}
+notes: From @turf/helpers.
+status: active
+review: {state: harvested, source: turf}

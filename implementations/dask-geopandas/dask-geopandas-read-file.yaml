@@ -1,0 +1,14 @@
+id: dask-geopandas-read-file
+kind: implementation
+name: dask_geopandas.read_file
+software: dask-geopandas
+call: {interface: python, name: dask_geopandas.read_file}
+harvest: {harvester: python-packages, engine_version: 0.5.0}
+parameters:
+  path: {type: any, required: true}
+  npartitions: {type: any}
+  chunksize: {type: any}
+  layer: {type: any}
+  columns: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

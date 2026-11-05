@@ -1,0 +1,10 @@
+id: pointpats-util-cached-property
+kind: implementation
+name: pointpats.util.cached_property
+software: pointpats
+call: {interface: python, name: pointpats.util.cached_property}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  fun: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

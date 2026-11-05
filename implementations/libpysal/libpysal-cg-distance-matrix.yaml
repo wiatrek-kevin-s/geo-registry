@@ -1,0 +1,12 @@
+id: libpysal-cg-distance-matrix
+kind: implementation
+name: libpysal.cg.distance_matrix
+software: libpysal
+call: {interface: python, name: libpysal.cg.distance_matrix}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  X: {type: any, required: true}
+  p: {type: number, default: 2.0}
+  threshold: {type: number, default: 50000000.0}
+status: active
+review: {state: harvested, source: python-packages}

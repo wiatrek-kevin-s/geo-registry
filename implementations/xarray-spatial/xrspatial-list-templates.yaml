@@ -1,0 +1,10 @@
+id: xrspatial-list-templates
+kind: implementation
+name: xrspatial.list_templates
+software: xarray-spatial
+call: {interface: python, name: xrspatial.list_templates}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  kind: {type: Optional}
+status: active
+review: {state: harvested, source: python-packages}

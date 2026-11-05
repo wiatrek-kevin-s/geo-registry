@@ -1,0 +1,12 @@
+id: spreg-get-psi-sigma
+kind: implementation
+name: spreg.get_psi_sigma
+software: spreg
+call: {interface: python, name: spreg.get_psi_sigma}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  w: {type: any, required: true}
+  u: {type: any, required: true}
+  lamb: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

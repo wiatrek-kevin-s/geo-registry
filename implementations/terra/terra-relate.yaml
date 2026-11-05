@@ -1,0 +1,16 @@
+id: terra-relate
+kind: implementation
+name: terra::relate
+software: terra
+call: {interface: r, name: 'terra::relate'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  relation: {type: any, required: true}
+  pairs: {type: any, default: 'FALSE'}
+  na.rm: {type: any, default: 'TRUE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

@@ -1,0 +1,21 @@
+id: libpysal-weights-kernel
+kind: implementation
+name: libpysal.weights.Kernel
+software: libpysal
+call: {interface: python, name: libpysal.weights.Kernel}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  data: {type: any, required: true}
+  bandwidth: {type: any}
+  fixed: {type: boolean, default: true}
+  k: {type: integer, default: 2}
+  function: {type: string, default: triangular}
+  eps: {type: number, default: 1.0000001}
+  ids: {type: any}
+  diagonal: {type: boolean, default: false}
+  distance_metric: {type: string, default: euclidean}
+  radius: {type: any}
+  normalize: {type: boolean, default: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

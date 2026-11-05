@@ -1,0 +1,10 @@
+id: xrspatial-convolution-custom-kernel
+kind: implementation
+name: xrspatial.convolution.custom_kernel
+software: xarray-spatial
+call: {interface: python, name: xrspatial.convolution.custom_kernel}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  kernel: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

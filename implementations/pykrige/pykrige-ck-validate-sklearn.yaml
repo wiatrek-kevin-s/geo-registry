@@ -1,0 +1,9 @@
+id: pykrige-ck-validate-sklearn
+kind: implementation
+name: pykrige.ck.validate_sklearn
+software: pykrige
+call: {interface: python, name: pykrige.ck.validate_sklearn}
+harvest: {harvester: python-packages, engine_version: 1.7.3}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

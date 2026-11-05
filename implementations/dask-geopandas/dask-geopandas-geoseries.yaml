@@ -1,0 +1,12 @@
+id: dask-geopandas-geoseries
+kind: implementation
+name: dask_geopandas.GeoSeries
+software: dask-geopandas
+call: {interface: python, name: dask_geopandas.GeoSeries}
+harvest: {harvester: python-packages, engine_version: 0.5.0}
+parameters:
+  expr: {type: any, required: true}
+  spatial_partitions: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,14 @@
+id: terra-summary
+kind: implementation
+name: terra::summary
+software: terra
+call: {interface: r, name: 'terra::summary'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  object: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  size: {type: any, default: 1e+05}
+  warn: {type: any, default: 'TRUE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

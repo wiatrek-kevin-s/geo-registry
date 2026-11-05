@@ -1,0 +1,14 @@
+id: spreg-buildr1var
+kind: implementation
+name: spreg.buildR1var
+software: spreg
+call: {interface: python, name: spreg.buildR1var}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  vari: {type: any, required: true}
+  kr: {type: any, required: true}
+  kf: {type: any, required: true}
+  kryd: {type: any, required: true}
+  nr: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,15 @@
+id: spreg-make-x
+kind: implementation
+name: spreg.make_x
+software: spreg
+call: {interface: python, name: spreg.make_x}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  rng: {type: any, required: true}
+  n: {type: any, required: true}
+  mu: {type: any, note: 'default [0]'}
+  varu: {type: any, note: 'default [1]'}
+  cor: {type: integer, default: 0}
+  method: {type: string, default: uniform}
+status: active
+review: {state: harvested, source: python-packages}

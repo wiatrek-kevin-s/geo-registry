@@ -1,0 +1,27 @@
+id: xrspatial-rasterize
+kind: implementation
+name: xrspatial.rasterize
+software: xarray-spatial
+call: {interface: python, name: xrspatial.rasterize}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  geometries: {type: Any, required: true}
+  width: {type: 'Optional[int]'}
+  height: {type: 'Optional[int]'}
+  bounds: {type: 'Optional[Tuple[float, float, float, float]]'}
+  column: {type: 'Optional[str]'}
+  columns: {type: 'Optional[Sequence[str]]'}
+  fill: {type: float, note: default nan}
+  dtype: {type: 'Optional[Union[str, np.dtype, type]]'}
+  all_touched: {type: bool, default: false}
+  gpu: {type: bool, default: false}
+  name: {type: str, default: rasterize}
+  resolution: {type: 'Optional[Union[float, Tuple[float, float]]]'}
+  like: {type: 'Optional[xr.DataArray]'}
+  merge: {type: 'Union[str, Callable]', default: last}
+  chunks: {type: 'Optional[Union[int, Tuple[int, int]]]'}
+  max_pixels: {type: int, default: 1000000000}
+  check_crs: {type: bool, default: true}
+  use_cuda: {type: 'Optional[bool]'}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,10 @@
+id: sf-stop-geos
+kind: implementation
+name: sf::.stop_geos
+software: sf
+call: {interface: r, name: 'sf::.stop_geos'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  msg: {type: any, required: true}
+status: active
+review: {state: harvested, source: r-packages}

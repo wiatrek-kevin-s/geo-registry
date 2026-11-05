@@ -1,0 +1,12 @@
+id: xrspatial-sobel-y
+kind: implementation
+name: xrspatial.sobel_y
+software: xarray-spatial
+call: {interface: python, name: xrspatial.sobel_y}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: any, required: true}
+  name: {type: string, default: sobel_y}
+  boundary: {type: string, default: nan}
+status: active
+review: {state: harvested, source: python-packages}

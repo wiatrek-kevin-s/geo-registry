@@ -1,0 +1,10 @@
+id: laspy-copc-copchierarchyvlr
+kind: implementation
+name: laspy.copc.CopcHierarchyVlr
+software: laspy
+call: {interface: python, name: laspy.copc.CopcHierarchyVlr}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,14 @@
+id: pyproj-crs-verticalcrs
+kind: implementation
+name: pyproj.crs.VerticalCRS
+software: pyproj
+call: {interface: python, name: pyproj.crs.VerticalCRS}
+harvest: {harvester: python-packages, engine_version: 3.8.0}
+parameters:
+  name: {type: str, required: true}
+  datum: {type: Any, required: true}
+  vertical_cs: {type: any}
+  geoid_model: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: xrspatial-rechunk-no-shuffle
+kind: implementation
+name: xrspatial.rechunk_no_shuffle
+software: xarray-spatial
+call: {interface: python, name: xrspatial.rechunk_no_shuffle}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: any, required: true}
+  target_mb: {type: integer, default: 128}
+status: active
+review: {state: harvested, source: python-packages}

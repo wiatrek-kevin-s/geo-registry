@@ -1,0 +1,13 @@
+id: libpysal-weights-lat2w
+kind: implementation
+name: libpysal.weights.lat2W
+software: libpysal
+call: {interface: python, name: libpysal.weights.lat2W}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  nrows: {type: integer, default: 5}
+  ncols: {type: integer, default: 5}
+  rook: {type: boolean, default: true}
+  id_type: {type: string, default: int}
+status: active
+review: {state: harvested, source: python-packages}

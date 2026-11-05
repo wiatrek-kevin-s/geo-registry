@@ -1,0 +1,15 @@
+id: spopt-region-regionkmeansheuristic
+kind: implementation
+name: spopt.region.RegionKMeansHeuristic
+software: spopt
+call: {interface: python, name: spopt.region.RegionKMeansHeuristic}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  data: {type: any, required: true}
+  n_clusters: {type: any, required: true}
+  w: {type: any, required: true}
+  drop_islands: {type: boolean, default: true}
+  seed: {type: integer, default: 0}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

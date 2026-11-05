@@ -1,0 +1,9 @@
+id: movingpandas-trajectory-populate-geometry-column
+kind: implementation
+name: Trajectory.populate_geometry_column
+software: movingpandas
+call: {interface: python, name: movingpandas.Trajectory.populate_geometry_column}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

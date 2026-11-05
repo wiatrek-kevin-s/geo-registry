@@ -1,0 +1,15 @@
+id: xrspatial-hillshade
+kind: implementation
+name: xrspatial.hillshade
+software: xarray-spatial
+call: {interface: python, name: xrspatial.hillshade}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: DataArray, required: true}
+  azimuth: {type: int, default: 225}
+  angle_altitude: {type: int, default: 25}
+  name: {type: Optional, default: hillshade}
+  shadows: {type: bool, default: false}
+  boundary: {type: str, default: nan}
+status: active
+review: {state: harvested, source: python-packages}

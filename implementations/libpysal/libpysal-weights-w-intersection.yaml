@@ -1,0 +1,12 @@
+id: libpysal-weights-w-intersection
+kind: implementation
+name: libpysal.weights.w_intersection
+software: libpysal
+call: {interface: python, name: libpysal.weights.w_intersection}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  w1: {type: any, required: true}
+  w2: {type: any, required: true}
+  w_shape: {type: string, default: w1}
+status: active
+review: {state: harvested, source: python-packages}

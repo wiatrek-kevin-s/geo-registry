@@ -1,0 +1,12 @@
+id: inequality-schutz
+kind: implementation
+name: inequality.Schutz
+software: inequality
+call: {interface: python, name: inequality.Schutz}
+harvest: {harvester: python-packages, engine_version: 1.2.0}
+parameters:
+  df: {type: any, required: true}
+  column_name: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

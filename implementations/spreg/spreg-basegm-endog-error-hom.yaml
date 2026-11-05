@@ -1,0 +1,19 @@
+id: spreg-basegm-endog-error-hom
+kind: implementation
+name: spreg.BaseGM_Endog_Error_Hom
+software: spreg
+call: {interface: python, name: spreg.BaseGM_Endog_Error_Hom}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  y: {type: any, required: true}
+  x: {type: any, required: true}
+  yend: {type: any, required: true}
+  q: {type: any, required: true}
+  w: {type: any, required: true}
+  max_iter: {type: integer, default: 1}
+  epsilon: {type: number, default: 1.0e-05}
+  A1: {type: string, default: hom_sc}
+  hard_bound: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

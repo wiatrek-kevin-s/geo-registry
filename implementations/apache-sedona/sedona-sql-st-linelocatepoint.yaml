@@ -1,0 +1,11 @@
+id: sedona-sql-st-linelocatepoint
+kind: implementation
+name: sedona.sql.ST_LineLocatePoint
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_LineLocatePoint}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  linestring: {type: Union, required: true}
+  point: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

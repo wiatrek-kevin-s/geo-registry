@@ -1,0 +1,19 @@
+id: libpysal-weights-vecw
+kind: implementation
+name: libpysal.weights.vecW
+software: libpysal
+call: {interface: python, name: libpysal.weights.vecW}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  origin_x: {type: any, required: true}
+  origin_y: {type: any, required: true}
+  dest_x: {type: any, required: true}
+  dest_y: {type: any, required: true}
+  threshold: {type: any, required: true}
+  p: {type: integer, default: 2}
+  alpha: {type: number, default: -1.0}
+  binary: {type: boolean, default: true}
+  ids: {type: any}
+  build_sp: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

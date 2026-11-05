@@ -1,0 +1,15 @@
+id: esda-moran-bv
+kind: implementation
+name: esda.Moran_BV
+software: esda
+call: {interface: python, name: esda.Moran_BV}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  w: {type: any, required: true}
+  transformation: {type: string, default: r}
+  permutations: {type: integer, default: 999}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

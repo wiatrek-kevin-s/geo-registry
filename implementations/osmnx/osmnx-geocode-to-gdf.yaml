@@ -1,0 +1,12 @@
+id: osmnx-geocode-to-gdf
+kind: implementation
+name: osmnx.geocode_to_gdf
+software: osmnx
+call: {interface: python, name: osmnx.geocode_to_gdf}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  query: {type: 'str | dict[str, str] | list[str | dict[str, str]]', required: true}
+  which_result: {type: 'int | None | list[int | None]'}
+  by_osmid: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

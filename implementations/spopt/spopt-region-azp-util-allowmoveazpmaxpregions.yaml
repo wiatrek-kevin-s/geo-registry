@@ -1,0 +1,13 @@
+id: spopt-region-azp-util-allowmoveazpmaxpregions
+kind: implementation
+name: spopt.region.azp_util.AllowMoveAZPMaxPRegions
+software: spopt
+call: {interface: python, name: spopt.region.azp_util.AllowMoveAZPMaxPRegions}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  spatially_extensive_attr: {type: any, required: true}
+  threshold: {type: any, required: true}
+  decorated_strategy: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

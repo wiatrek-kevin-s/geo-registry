@@ -1,0 +1,14 @@
+id: verde-make-xarray-grid
+kind: implementation
+name: verde.make_xarray_grid
+software: verde
+call: {interface: python, name: verde.make_xarray_grid}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  coordinates: {type: any, required: true}
+  data: {type: any, required: true}
+  data_names: {type: any, required: true}
+  dims: {type: any, note: 'default (''northing'', ''easting'')'}
+  extra_coords_names: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

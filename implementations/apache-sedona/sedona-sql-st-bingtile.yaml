@@ -1,0 +1,12 @@
+id: sedona-sql-st-bingtile
+kind: implementation
+name: sedona.sql.ST_BingTile
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_BingTile}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  tile_x: {type: Union, required: true}
+  tile_y: {type: Union, required: true}
+  zoom_level: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

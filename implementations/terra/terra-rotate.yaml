@@ -1,0 +1,17 @@
+id: terra-rotate
+kind: implementation
+name: terra::rotate
+software: terra
+call: {interface: r, name: 'terra::rotate'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  filename: {type: any, default: '""'}
+  longitude: {type: any, default: '0'}
+  split: {type: any, default: 'TRUE'}
+  left: {type: any, default: 'TRUE'}
+  normalize: {type: any, default: 'FALSE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

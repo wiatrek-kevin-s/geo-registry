@@ -1,0 +1,14 @@
+id: gstools-tools-tpl-exp-spec-dens
+kind: implementation
+name: gstools.tools.tpl_exp_spec_dens
+software: gstools
+call: {interface: python, name: gstools.tools.tpl_exp_spec_dens}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  k: {type: any, required: true}
+  dim: {type: any, required: true}
+  len_scale: {type: any, required: true}
+  hurst: {type: any, required: true}
+  len_low: {type: number, default: 0.0}
+status: active
+review: {state: harvested, source: python-packages}

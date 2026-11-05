@@ -1,0 +1,14 @@
+id: momepy-street-profile
+kind: implementation
+name: momepy.street_profile
+software: momepy
+call: {interface: python, name: momepy.street_profile}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  streets: {type: GeoDataFrame, required: true}
+  buildings: {type: GeoDataFrame, required: true}
+  distance: {type: float, default: 10}
+  tick_length: {type: float, default: 50}
+  height: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

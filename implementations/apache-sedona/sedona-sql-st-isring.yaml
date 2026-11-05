@@ -1,0 +1,10 @@
+id: sedona-sql-st-isring
+kind: implementation
+name: sedona.sql.ST_IsRing
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_IsRing}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  line_string: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

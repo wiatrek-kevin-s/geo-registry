@@ -1,0 +1,12 @@
+id: movingpandas-trajectorycollection-add-timedelta
+kind: implementation
+name: TrajectoryCollection.add_timedelta
+software: movingpandas
+call: {interface: python, name: movingpandas.TrajectoryCollection.add_timedelta}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  overwrite: {type: boolean, default: false}
+  name: {type: string, default: timedelta}
+  n_processes: {type: integer, default: 1}
+status: active
+review: {state: harvested, source: python-packages}

@@ -184,10 +184,13 @@ An implementation is one engine's tool: `gdal vector buffer`, `shapely.buffer`,
 `st_buffer`. They are **harvested**, never typed: each script in `harvest/` asks its
 engine to describe its own tools (GDAL's `--json-usage`, PostGIS's catalogue, Python
 introspection) and writes `implementations/<software>/<id>.yaml` with the parameters,
-types, defaults, choices and, for SQL, every overload. Today: GDAL, PDAL, PostGIS
-(geometry and raster), Shapely, GeoPandas, QGIS Processing, GRASS and WhiteboxTools,
-about 2,490 tools; ArcGIS Pro has a harvester that runs on a machine with Pro. See
-[harvest/README.md](harvest/README.md).
+types, defaults, choices and, for SQL, every overload. Today: about 6,600 tools from
+more than 50 packages: GDAL, PDAL, PostGIS (geometry and raster), QGIS Processing, GRASS,
+WhiteboxTools, Shapely, GeoPandas and about 40 more Python packages (rasterio, pyproj,
+the PySAL family, osmnx, momepy, Apache Sedona, ...), R's sf and terra, Turf.js,
+TauDEM and LAStools. DuckDB spatial and RustGIS are harvested by the weekly Engines
+workflow; ArcGIS Pro has a harvester that runs on a machine with Pro. See
+[harvest/README.md](harvest/README.md), including what is not harvested yet and why.
 
 What a person knows goes in `mappings/<software>/<id>.yaml`, merged at build time:
 

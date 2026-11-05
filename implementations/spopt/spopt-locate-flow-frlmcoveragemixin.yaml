@@ -1,0 +1,10 @@
+id: spopt-locate-flow-frlmcoveragemixin
+kind: implementation
+name: spopt.locate.flow.FRLMCoverageMixin
+software: spopt
+call: {interface: python, name: spopt.locate.flow.FRLMCoverageMixin}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

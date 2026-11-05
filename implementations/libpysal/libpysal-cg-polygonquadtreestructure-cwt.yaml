@@ -1,0 +1,12 @@
+id: libpysal-cg-polygonquadtreestructure-cwt
+kind: implementation
+name: libpysal.cg.polygonQuadTreeStructure.cwt
+software: libpysal
+call: {interface: python, name: libpysal.cg.polygonQuadTreeStructure.cwt}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  a: {type: any, required: true}
+  b: {type: any, required: true}
+  tolerance: {type: number, default: 1.0e-09}
+status: active
+review: {state: harvested, source: python-packages}

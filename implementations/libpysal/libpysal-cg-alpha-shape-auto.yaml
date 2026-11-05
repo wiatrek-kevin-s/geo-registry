@@ -1,0 +1,14 @@
+id: libpysal-cg-alpha-shape-auto
+kind: implementation
+name: libpysal.cg.alpha_shape_auto
+software: libpysal
+call: {interface: python, name: libpysal.cg.alpha_shape_auto}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  xys: {type: any, required: true}
+  step: {type: integer, default: 1}
+  verbose: {type: boolean, default: false}
+  return_radius: {type: boolean, default: false}
+  return_circles: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

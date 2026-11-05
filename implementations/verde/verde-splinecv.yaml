@@ -1,0 +1,18 @@
+id: verde-splinecv
+kind: implementation
+name: verde.SplineCV
+software: verde
+call: {interface: python, name: verde.SplineCV}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  mindists: {type: any}
+  dampings: {type: any, note: 'default (1e-10, 1e-05, 0.1)'}
+  force_coords: {type: any}
+  engine: {type: string, default: auto}
+  cv: {type: any}
+  client: {type: any}
+  delayed: {type: boolean, default: false}
+  scoring: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

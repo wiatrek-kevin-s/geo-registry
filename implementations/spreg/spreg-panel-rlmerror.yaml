@@ -1,0 +1,12 @@
+id: spreg-panel-rlmerror
+kind: implementation
+name: spreg.panel_rLMerror
+software: spreg
+call: {interface: python, name: spreg.panel_rLMerror}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  y: {type: any, required: true}
+  x: {type: any, required: true}
+  w: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

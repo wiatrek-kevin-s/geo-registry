@@ -1,0 +1,15 @@
+id: segregation-inference-singlevaluetest
+kind: implementation
+name: segregation.inference.SingleValueTest
+software: segregation
+call: {interface: python, name: segregation.inference.SingleValueTest}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  seg_class: {type: any, required: true}
+  iterations_under_null: {type: integer, default: 500}
+  null_approach: {type: string, default: systematic}
+  two_tailed: {type: boolean, default: true}
+  n_jobs: {type: integer, default: -1}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

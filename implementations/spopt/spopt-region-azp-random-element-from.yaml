@@ -1,0 +1,10 @@
+id: spopt-region-azp-random-element-from
+kind: implementation
+name: spopt.region.azp.random_element_from
+software: spopt
+call: {interface: python, name: spopt.region.azp.random_element_from}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  lst: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

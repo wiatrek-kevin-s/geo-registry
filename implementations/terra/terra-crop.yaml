@@ -1,0 +1,19 @@
+id: terra-crop
+kind: implementation
+name: terra::crop
+software: terra
+call: {interface: r, name: 'terra::crop'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  snap: {type: any, default: '"near"'}
+  mask: {type: any, default: 'FALSE'}
+  touches: {type: any, default: 'TRUE'}
+  extend: {type: any, default: 'FALSE'}
+  filename: {type: any, default: '""'}
+  ext: {type: any, default: 'FALSE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

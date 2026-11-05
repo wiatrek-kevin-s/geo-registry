@@ -1,0 +1,19 @@
+id: esda-correlogram
+kind: implementation
+name: esda.correlogram
+software: esda
+call: {interface: python, name: esda.correlogram}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  geometry: {type: GeoSeries, required: true}
+  variable: {type: any, required: true}
+  support: {type: any}
+  statistic: {type: any, note: default esda.moran.Moran}
+  distance_type: {type: str, default: band}
+  weights_kwargs: {type: dict}
+  stat_kwargs: {type: dict}
+  select_numeric: {type: bool, default: false}
+  n_jobs: {type: int, default: -1}
+  n_bins: {type: integer, default: 50}
+status: active
+review: {state: harvested, source: python-packages}

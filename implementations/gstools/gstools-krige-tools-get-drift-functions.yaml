@@ -1,0 +1,11 @@
+id: gstools-krige-tools-get-drift-functions
+kind: implementation
+name: gstools.krige.tools.get_drift_functions
+software: gstools
+call: {interface: python, name: gstools.krige.tools.get_drift_functions}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  dim: {type: any, required: true}
+  drift_type: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

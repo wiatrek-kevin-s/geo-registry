@@ -1,0 +1,13 @@
+id: fiona-geometry
+kind: implementation
+name: fiona.Geometry
+software: fiona
+call: {interface: python, name: fiona.Geometry}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  coordinates: {type: any}
+  type: {type: any}
+  geometries: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

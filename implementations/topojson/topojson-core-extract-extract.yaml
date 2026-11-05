@@ -1,0 +1,12 @@
+id: topojson-core-extract-extract
+kind: implementation
+name: topojson.core.extract.Extract
+software: topojson
+call: {interface: python, name: topojson.core.extract.Extract}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  data: {type: any, required: true}
+  options: {type: any, note: 'default {}'}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,17 @@
+id: terra-nearest
+kind: implementation
+name: terra::nearest
+software: terra
+call: {interface: r, name: 'terra::nearest'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  y: {type: any, default: 'NULL'}
+  pairs: {type: any, default: 'FALSE'}
+  centroids: {type: any, default: 'TRUE'}
+  lines: {type: any, default: 'FALSE'}
+  method: {type: any, default: '"geo"'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

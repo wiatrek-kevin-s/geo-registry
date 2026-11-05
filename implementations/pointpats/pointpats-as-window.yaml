@@ -1,0 +1,10 @@
+id: pointpats-as-window
+kind: implementation
+name: pointpats.as_window
+software: pointpats
+call: {interface: python, name: pointpats.as_window}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  pysal_polygon: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

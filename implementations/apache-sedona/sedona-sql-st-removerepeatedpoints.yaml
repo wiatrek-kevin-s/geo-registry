@@ -1,0 +1,11 @@
+id: sedona-sql-st-removerepeatedpoints
+kind: implementation
+name: sedona.sql.ST_RemoveRepeatedPoints
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_RemoveRepeatedPoints}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geom: {type: Union, required: true}
+  tolerance: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

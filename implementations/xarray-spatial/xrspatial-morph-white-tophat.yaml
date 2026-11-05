@@ -1,0 +1,13 @@
+id: xrspatial-morph-white-tophat
+kind: implementation
+name: xrspatial.morph_white_tophat
+software: xarray-spatial
+call: {interface: python, name: xrspatial.morph_white_tophat}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: any, required: true}
+  kernel: {type: any}
+  boundary: {type: string, default: nan}
+  name: {type: string, default: white_tophat}
+status: active
+review: {state: harvested, source: python-packages}

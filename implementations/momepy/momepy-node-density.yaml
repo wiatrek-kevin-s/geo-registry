@@ -1,0 +1,14 @@
+id: momepy-node-density
+kind: implementation
+name: momepy.node_density
+software: momepy
+call: {interface: python, name: momepy.node_density}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  graph: {type: Graph, required: true}
+  radius: {type: any, required: true}
+  length: {type: str, default: mm_len}
+  distance: {type: any}
+  verbose: {type: bool, default: true}
+status: active
+review: {state: harvested, source: python-packages}

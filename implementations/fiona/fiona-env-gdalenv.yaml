@@ -1,0 +1,10 @@
+id: fiona-env-gdalenv
+kind: implementation
+name: fiona.env.GDALEnv
+software: fiona
+call: {interface: python, name: fiona.env.GDALEnv}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

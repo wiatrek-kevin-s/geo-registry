@@ -1,0 +1,11 @@
+id: movingpandas-geometry-utils-calculate-initial-compass-bearing
+kind: implementation
+name: movingpandas.geometry_utils.calculate_initial_compass_bearing
+software: movingpandas
+call: {interface: python, name: movingpandas.geometry_utils.calculate_initial_compass_bearing}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  point1: {type: any, required: true}
+  point2: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

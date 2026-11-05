@@ -1,0 +1,13 @@
+id: spreg-aktest
+kind: implementation
+name: spreg.AKtest
+software: spreg
+call: {interface: python, name: spreg.AKtest}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  iv: {type: any, required: true}
+  w: {type: any, required: true}
+  case: {type: string, default: nosp}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

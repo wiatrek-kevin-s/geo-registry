@@ -1,0 +1,12 @@
+id: turf-filterproperties
+kind: implementation
+name: turf.filterProperties
+software: turf-js
+call: {interface: js, name: turf.filterProperties}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  properties: {type: 'Record<string, any>', required: true}
+  keys: {type: 'string[]', required: true}
+notes: From @turf/clusters.
+status: active
+review: {state: harvested, source: turf}

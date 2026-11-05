@@ -1,0 +1,14 @@
+id: spreg-w-regime
+kind: implementation
+name: spreg.w_regime
+software: spreg
+call: {interface: python, name: spreg.w_regime}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  w: {type: any, required: true}
+  regi_ids: {type: any, required: true}
+  regi_i: {type: any, required: true}
+  transform: {type: boolean, default: true}
+  min_n: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

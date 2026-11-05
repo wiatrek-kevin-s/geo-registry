@@ -1,0 +1,18 @@
+id: spopt-region-spenclib-abstracts-agglomerativeclustering
+kind: implementation
+name: spopt.region.spenclib.abstracts.AgglomerativeClustering
+software: spopt
+call: {interface: python, name: spopt.region.spenclib.abstracts.AgglomerativeClustering}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  n_clusters: {type: integer, default: 2}
+  metric: {type: string, default: euclidean}
+  memory: {type: any}
+  connectivity: {type: any}
+  compute_full_tree: {type: string, default: auto}
+  linkage: {type: string, default: ward}
+  distance_threshold: {type: any}
+  compute_distances: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

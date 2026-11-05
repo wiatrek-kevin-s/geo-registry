@@ -1,0 +1,17 @@
+id: sedona-sql-st-weighteddistancebandcolumn
+kind: implementation
+name: sedona.sql.ST_WeightedDistanceBandColumn
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_WeightedDistanceBandColumn}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geometry: {type: Union, required: true}
+  threshold: {type: Union, required: true}
+  alpha: {type: Union, required: true}
+  include_zero_distance_neighbors: {type: Union, default: true}
+  include_self: {type: Union, default: false}
+  self_weight: {type: Union, default: 1.0}
+  use_spheroid: {type: Union, default: false}
+  attributes: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

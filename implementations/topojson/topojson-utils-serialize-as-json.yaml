@@ -1,0 +1,14 @@
+id: topojson-utils-serialize-as-json
+kind: implementation
+name: topojson.utils.serialize_as_json
+software: topojson
+call: {interface: python, name: topojson.utils.serialize_as_json}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  topo_object: {type: any, required: true}
+  fp: {type: any, required: true}
+  pretty: {type: boolean, default: false}
+  indent: {type: integer, default: 4}
+  maxlinelength: {type: integer, default: 88}
+status: active
+review: {state: harvested, source: python-packages}

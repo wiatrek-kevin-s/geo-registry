@@ -1,0 +1,11 @@
+id: topojson-ops-get-matches
+kind: implementation
+name: topojson.ops.get_matches
+software: topojson
+call: {interface: python, name: topojson.ops.get_matches}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  geoms: {type: any, required: true}
+  tree_idx: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

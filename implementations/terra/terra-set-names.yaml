@@ -1,0 +1,15 @@
+id: terra-set-names
+kind: implementation
+name: terra::set.names
+software: terra
+call: {interface: r, name: 'terra::set.names'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  value: {type: any, required: true}
+  index: {type: any, default: '1:nlyr(x)'}
+  validate: {type: any, default: 'FALSE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

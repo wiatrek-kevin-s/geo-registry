@@ -1,0 +1,13 @@
+id: pointpats-spacetimeevents
+kind: implementation
+name: pointpats.SpaceTimeEvents
+software: pointpats
+call: {interface: python, name: pointpats.SpaceTimeEvents}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  path: {type: any, required: true}
+  time_col: {type: any, required: true}
+  infer_timestamp: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

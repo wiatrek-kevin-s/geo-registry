@@ -1,0 +1,11 @@
+id: xrspatial-diagnose
+kind: implementation
+name: xrspatial.diagnose
+software: xarray-spatial
+call: {interface: python, name: xrspatial.diagnose}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: xr.DataArray, required: true}
+  tool: {type: 'Optional[str]'}
+status: active
+review: {state: harvested, source: python-packages}

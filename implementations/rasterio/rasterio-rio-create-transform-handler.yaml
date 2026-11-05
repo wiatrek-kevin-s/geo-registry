@@ -1,0 +1,12 @@
+id: rasterio-rio-create-transform-handler
+kind: implementation
+name: rasterio.rio.create.transform_handler
+software: rasterio
+call: {interface: python, name: rasterio.rio.create.transform_handler}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  ctx: {type: any, required: true}
+  param: {type: any, required: true}
+  value: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

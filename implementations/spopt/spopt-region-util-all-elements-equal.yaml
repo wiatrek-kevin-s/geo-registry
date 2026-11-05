@@ -1,0 +1,10 @@
+id: spopt-region-util-all-elements-equal
+kind: implementation
+name: spopt.region.util.all_elements_equal
+software: spopt
+call: {interface: python, name: spopt.region.util.all_elements_equal}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  array: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

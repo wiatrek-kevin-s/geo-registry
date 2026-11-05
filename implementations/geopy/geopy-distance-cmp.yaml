@@ -1,0 +1,11 @@
+id: geopy-distance-cmp
+kind: implementation
+name: geopy.distance.cmp
+software: geopy
+call: {interface: python, name: geopy.distance.cmp}
+harvest: {harvester: python-packages, engine_version: 2.5.0}
+parameters:
+  a: {type: any, required: true}
+  b: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

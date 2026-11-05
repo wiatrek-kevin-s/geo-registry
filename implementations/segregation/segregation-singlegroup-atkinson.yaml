@@ -1,0 +1,19 @@
+id: segregation-singlegroup-atkinson
+kind: implementation
+name: segregation.singlegroup.Atkinson
+software: segregation
+call: {interface: python, name: segregation.singlegroup.Atkinson}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  data: {type: any, required: true}
+  group_pop_var: {type: any, required: true}
+  total_pop_var: {type: any, required: true}
+  w: {type: any}
+  network: {type: any}
+  distance: {type: any}
+  decay: {type: any}
+  precompute: {type: any}
+  function: {type: string, default: triangular}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

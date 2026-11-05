@@ -1,0 +1,14 @@
+id: odc-stac-model-rastergroupmetadata
+kind: implementation
+name: odc.stac.model.RasterGroupMetadata
+software: odc-stac
+call: {interface: python, name: odc.stac.model.RasterGroupMetadata}
+harvest: {harvester: python-packages, engine_version: 0.5.3}
+parameters:
+  bands: {type: 'Mapping[BandKey, RasterBandMetadata | AuxBandMetadata]', required: true}
+  aliases: {type: 'dict[str, list[BandKey]]', note: default <factory>}
+  extra_dims: {type: 'dict[str, int]', note: default <factory>}
+  extra_coords: {type: 'Sequence[FixedCoord]', note: default ()}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,21 @@
+id: gstools-krige-ordinary
+kind: implementation
+name: gstools.krige.Ordinary
+software: gstools
+call: {interface: python, name: gstools.krige.Ordinary}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  model: {type: any, required: true}
+  cond_pos: {type: any, required: true}
+  cond_val: {type: any, required: true}
+  normalizer: {type: any}
+  trend: {type: any}
+  exact: {type: boolean, default: false}
+  cond_err: {type: string, default: nugget}
+  pseudo_inv: {type: boolean, default: true}
+  pseudo_inv_type: {type: string, default: pinv}
+  fit_normalizer: {type: boolean, default: false}
+  fit_variogram: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

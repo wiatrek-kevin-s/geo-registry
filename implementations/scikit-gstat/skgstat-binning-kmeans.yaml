@@ -1,0 +1,13 @@
+id: skgstat-binning-kmeans
+kind: implementation
+name: skgstat.binning.kmeans
+software: scikit-gstat
+call: {interface: python, name: skgstat.binning.kmeans}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  distances: {type: any, required: true}
+  n: {type: any, required: true}
+  maxlag: {type: any, required: true}
+  binning_random_state: {type: integer, default: 42}
+status: active
+review: {state: harvested, source: python-packages}

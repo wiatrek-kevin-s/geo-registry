@@ -1,0 +1,10 @@
+id: libpysal-io-iohandlers-gal-galio
+kind: implementation
+name: libpysal.io.iohandlers.gal.GalIO
+software: libpysal
+call: {interface: python, name: libpysal.io.iohandlers.gal.GalIO}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

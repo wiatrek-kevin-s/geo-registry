@@ -1,0 +1,13 @@
+id: skgstat-plotting-matplotlib-variogram-scattergram
+kind: implementation
+name: skgstat.plotting.matplotlib_variogram_scattergram
+software: scikit-gstat
+call: {interface: python, name: skgstat.plotting.matplotlib_variogram_scattergram}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  variogram: {type: any, required: true}
+  ax: {type: any}
+  show: {type: boolean, default: true}
+  single_color: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

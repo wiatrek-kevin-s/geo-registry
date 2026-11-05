@@ -1,0 +1,12 @@
+id: xrspatial-hydro-fill-d8
+kind: implementation
+name: xrspatial.hydro.fill_d8
+software: xarray-spatial
+call: {interface: python, name: xrspatial.hydro.fill_d8}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  dem: {type: xr.DataArray, required: true}
+  z_limit: {type: any}
+  name: {type: str, default: fill}
+status: active
+review: {state: harvested, source: python-packages}

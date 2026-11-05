@@ -1,0 +1,10 @@
+id: movingpandas-trajectorycollection-get-intersecting
+kind: implementation
+name: TrajectoryCollection.get_intersecting
+software: movingpandas
+call: {interface: python, name: movingpandas.TrajectoryCollection.get_intersecting}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  polygon: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

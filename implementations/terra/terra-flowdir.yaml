@@ -1,0 +1,16 @@
+id: terra-flowdir
+kind: implementation
+name: terra::flowDir
+software: terra
+call: {interface: r, name: 'terra::flowDir'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  lambda: {type: any, default: '0.5'}
+  deviation_type: {type: any, default: 'c("ltd", "lad")'}
+  max_iters: {type: any, default: 10^6}
+  filename: {type: any, default: '""'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

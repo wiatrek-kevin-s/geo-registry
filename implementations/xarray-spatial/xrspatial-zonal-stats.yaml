@@ -1,0 +1,17 @@
+id: xrspatial-zonal-stats
+kind: implementation
+name: xrspatial.zonal_stats
+software: xarray-spatial
+call: {interface: python, name: xrspatial.zonal_stats}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  zones: {type: any, required: true}
+  values: {type: xr.DataArray, required: true}
+  zone_ids: {type: 'Optional[List[Union[int, float]]]'}
+  stats_funcs: {type: 'Optional[Union[Dict, List]]'}
+  nodata_values: {type: 'Union[int, float]'}
+  return_type: {type: str, default: pandas.DataFrame}
+  column: {type: 'Optional[str]'}
+  rasterize_kw: {type: 'Optional[dict]'}
+status: active
+review: {state: harvested, source: python-packages}

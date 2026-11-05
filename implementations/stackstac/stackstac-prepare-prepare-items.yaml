@@ -1,0 +1,19 @@
+id: stackstac-prepare-prepare-items
+kind: implementation
+name: stackstac.prepare.prepare_items
+software: stackstac
+call: {interface: python, name: stackstac.prepare.prepare_items}
+harvest: {harvester: python-packages, engine_version: 0.5.1}
+parameters:
+  items: {type: ItemSequence, required: true}
+  assets: {type: 'Optional[Union[List[str], AbstractSet[str]]]', note: 'default {''image/jp2'', ''image/tiff'', ''image/vnd.stac.geotiff'',
+      ''image/x.geotiff''}'}
+  epsg: {type: 'Optional[int]'}
+  resolution: {type: 'Optional[Union[IntFloat, Resolutions]]'}
+  bounds: {type: 'Optional[Bbox]'}
+  bounds_latlon: {type: 'Optional[Bbox]'}
+  snap_bounds: {type: bool, default: true}
+  rescale: {type: bool, default: true}
+  dtype: {type: np.dtype, note: default dtype('float64')}
+status: active
+review: {state: harvested, source: python-packages}

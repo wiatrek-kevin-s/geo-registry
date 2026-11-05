@@ -1,0 +1,13 @@
+id: gstools-covmodel-tools-set-model-angles
+kind: implementation
+name: gstools.covmodel.tools.set_model_angles
+software: gstools
+call: {interface: python, name: gstools.covmodel.tools.set_model_angles}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  dim: {type: any, required: true}
+  angles: {type: any, required: true}
+  latlon: {type: boolean, default: false}
+  temporal: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

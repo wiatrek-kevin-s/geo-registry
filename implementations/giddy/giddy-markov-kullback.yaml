@@ -1,0 +1,10 @@
+id: giddy-markov-kullback
+kind: implementation
+name: giddy.markov.kullback
+software: giddy
+call: {interface: python, name: giddy.markov.kullback}
+harvest: {harvester: python-packages, engine_version: 2.3.9}
+parameters:
+  F: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

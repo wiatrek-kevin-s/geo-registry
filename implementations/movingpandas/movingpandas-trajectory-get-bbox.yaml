@@ -1,0 +1,9 @@
+id: movingpandas-trajectory-get-bbox
+kind: implementation
+name: Trajectory.get_bbox
+software: movingpandas
+call: {interface: python, name: movingpandas.Trajectory.get_bbox}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

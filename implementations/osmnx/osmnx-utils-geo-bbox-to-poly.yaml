@@ -1,0 +1,10 @@
+id: osmnx-utils-geo-bbox-to-poly
+kind: implementation
+name: osmnx.utils_geo.bbox_to_poly
+software: osmnx
+call: {interface: python, name: osmnx.utils_geo.bbox_to_poly}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  bbox: {type: 'tuple[float, float, float, float]', required: true}
+status: active
+review: {state: harvested, source: python-packages}

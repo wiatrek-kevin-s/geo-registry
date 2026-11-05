@@ -1,0 +1,10 @@
+id: rasterio-transform-gcptransformerbase
+kind: implementation
+name: rasterio.transform.GCPTransformerBase
+software: rasterio
+call: {interface: python, name: rasterio.transform.GCPTransformerBase}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

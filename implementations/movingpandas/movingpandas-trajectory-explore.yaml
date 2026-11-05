@@ -1,0 +1,9 @@
+id: movingpandas-trajectory-explore
+kind: implementation
+name: Trajectory.explore
+software: movingpandas
+call: {interface: python, name: movingpandas.Trajectory.explore}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

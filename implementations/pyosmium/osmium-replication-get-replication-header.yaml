@@ -1,0 +1,10 @@
+id: osmium-replication-get-replication-header
+kind: implementation
+name: osmium.replication.get_replication_header
+software: pyosmium
+call: {interface: python, name: osmium.replication.get_replication_header}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters:
+  fname: {type: str, required: true}
+status: active
+review: {state: harvested, source: python-packages}

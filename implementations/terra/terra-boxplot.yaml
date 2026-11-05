@@ -1,0 +1,14 @@
+id: terra-boxplot
+kind: implementation
+name: terra::boxplot
+software: terra
+call: {interface: r, name: 'terra::boxplot'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  y: {type: any, default: 'NULL'}
+  maxcell: {type: any, default: 1e+05}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

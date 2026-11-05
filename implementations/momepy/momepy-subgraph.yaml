@@ -1,0 +1,26 @@
+id: momepy-subgraph
+kind: implementation
+name: momepy.subgraph
+software: momepy
+call: {interface: python, name: momepy.subgraph}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  graph: {type: Graph, required: true}
+  radius: {type: int, default: 5}
+  distance: {type: any}
+  meshedness: {type: bool, default: true}
+  cds_length: {type: bool, default: true}
+  mode: {type: str, default: sum}
+  degree: {type: str, default: degree}
+  length: {type: str, default: mm_len}
+  mean_node_degree: {type: bool, default: true}
+  proportion: {type: dict, note: 'default {3: True, 4: True, 0: True}'}
+  cyclomatic: {type: bool, default: true}
+  edge_node_ratio: {type: bool, default: true}
+  gamma: {type: bool, default: true}
+  local_closeness: {type: bool, default: true}
+  closeness_weight: {type: any}
+  node_density: {type: bool, default: true}
+  verbose: {type: bool, default: true}
+status: active
+review: {state: harvested, source: python-packages}

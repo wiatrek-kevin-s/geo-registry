@@ -1,0 +1,16 @@
+id: pointpats-knox
+kind: implementation
+name: pointpats.Knox
+software: pointpats
+call: {interface: python, name: pointpats.Knox}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  s_coords: {type: any, required: true}
+  t_coords: {type: any, required: true}
+  delta: {type: any, required: true}
+  tau: {type: any, required: true}
+  permutations: {type: integer, default: 99}
+  keep: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

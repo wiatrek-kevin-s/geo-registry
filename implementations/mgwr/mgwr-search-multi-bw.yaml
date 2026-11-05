@@ -1,0 +1,25 @@
+id: mgwr-search-multi-bw
+kind: implementation
+name: mgwr.search.multi_bw
+software: mgwr
+call: {interface: python, name: mgwr.search.multi_bw}
+harvest: {harvester: python-packages, engine_version: 2.2.1}
+parameters:
+  init: {type: any, required: true}
+  y: {type: any, required: true}
+  X: {type: any, required: true}
+  n: {type: any, required: true}
+  k: {type: any, required: true}
+  family: {type: any, required: true}
+  tol: {type: any, required: true}
+  max_iter: {type: any, required: true}
+  rss_score: {type: any, required: true}
+  gwr_func: {type: any, required: true}
+  bw_func: {type: any, required: true}
+  sel_func: {type: any, required: true}
+  multi_bw_min: {type: any, required: true}
+  multi_bw_max: {type: any, required: true}
+  bws_same_times: {type: any, required: true}
+  verbose: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

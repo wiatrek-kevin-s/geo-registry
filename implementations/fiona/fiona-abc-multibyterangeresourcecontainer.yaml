@@ -1,0 +1,10 @@
+id: fiona-abc-multibyterangeresourcecontainer
+kind: implementation
+name: fiona.abc.MultiByteRangeResourceContainer
+software: fiona
+call: {interface: python, name: fiona.abc.MultiByteRangeResourceContainer}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,14 @@
+id: xrspatial-rate-of-spread
+kind: implementation
+name: xrspatial.rate_of_spread
+software: xarray-spatial
+call: {interface: python, name: xrspatial.rate_of_spread}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  slope_agg: {type: xr.DataArray, required: true}
+  wind_speed_agg: {type: xr.DataArray, required: true}
+  fuel_moisture_agg: {type: xr.DataArray, required: true}
+  fuel_model: {type: int, default: 1}
+  name: {type: str, default: rate_of_spread}
+status: active
+review: {state: harvested, source: python-packages}

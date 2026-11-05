@@ -1,0 +1,12 @@
+id: rasterio-transform-gcptransformer
+kind: implementation
+name: rasterio.transform.GCPTransformer
+software: rasterio
+call: {interface: python, name: rasterio.transform.GCPTransformer}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  gcps: {type: any, required: true}
+  tps: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

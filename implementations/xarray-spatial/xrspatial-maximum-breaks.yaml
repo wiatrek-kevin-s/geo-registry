@@ -1,0 +1,13 @@
+id: xrspatial-maximum-breaks
+kind: implementation
+name: xrspatial.maximum_breaks
+software: xarray-spatial
+call: {interface: python, name: xrspatial.maximum_breaks}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: xr.DataArray, required: true}
+  k: {type: int, default: 5}
+  num_sample: {type: 'Optional[int]', default: 20000}
+  name: {type: 'Optional[str]', default: maximum_breaks}
+status: active
+review: {state: harvested, source: python-packages}

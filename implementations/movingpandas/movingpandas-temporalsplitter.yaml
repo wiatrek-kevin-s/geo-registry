@@ -1,0 +1,11 @@
+id: movingpandas-temporalsplitter
+kind: implementation
+name: movingpandas.TemporalSplitter
+software: movingpandas
+call: {interface: python, name: movingpandas.TemporalSplitter}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  traj: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

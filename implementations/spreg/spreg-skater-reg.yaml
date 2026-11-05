@@ -1,0 +1,14 @@
+id: spreg-skater-reg
+kind: implementation
+name: spreg.Skater_reg
+software: spreg
+call: {interface: python, name: spreg.Skater_reg}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  dissimilarity: {type: any, note: default sklearn.metrics.pairwise.euclidean_distances}
+  affinity: {type: any}
+  reduction: {type: any, note: default numpy.sum}
+  center: {type: any, note: default numpy.mean}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

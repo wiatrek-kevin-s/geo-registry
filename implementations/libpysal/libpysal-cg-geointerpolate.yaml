@@ -1,0 +1,13 @@
+id: libpysal-cg-geointerpolate
+kind: implementation
+name: libpysal.cg.geointerpolate
+software: libpysal
+call: {interface: python, name: libpysal.cg.geointerpolate}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  p0: {type: any, required: true}
+  p1: {type: any, required: true}
+  t: {type: any, required: true}
+  lonx: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

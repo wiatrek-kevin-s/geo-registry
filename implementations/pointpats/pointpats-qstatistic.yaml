@@ -1,0 +1,20 @@
+id: pointpats-qstatistic
+kind: implementation
+name: pointpats.QStatistic
+software: pointpats
+call: {interface: python, name: pointpats.QStatistic}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  pp: {type: any, required: true}
+  shape: {type: string, default: rectangle}
+  nx: {type: integer, default: 3}
+  ny: {type: integer, default: 3}
+  rectangle_width: {type: integer, default: 0}
+  rectangle_height: {type: integer, default: 0}
+  lh: {type: integer, default: 10}
+  realizations: {type: integer, default: 0}
+  window: {type: any}
+  rng: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,10 @@
+id: spreg-log-likelihood
+kind: implementation
+name: spreg.log_likelihood
+software: spreg
+call: {interface: python, name: spreg.log_likelihood}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  reg: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

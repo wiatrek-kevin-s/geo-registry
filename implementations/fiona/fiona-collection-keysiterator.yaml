@@ -1,0 +1,10 @@
+id: fiona-collection-keysiterator
+kind: implementation
+name: fiona.collection.KeysIterator
+software: fiona
+call: {interface: python, name: fiona.collection.KeysIterator}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: libpysal-weights-delaunay
+kind: implementation
+name: libpysal.weights.Delaunay
+software: libpysal
+call: {interface: python, name: libpysal.weights.Delaunay}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  coordinates: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: osmium-osm-relationmemberlist
+kind: implementation
+name: osmium.osm.RelationMemberList
+software: pyosmium
+call: {interface: python, name: osmium.osm.RelationMemberList}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters:
+  parent: {type: cosm.COSMRelation, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

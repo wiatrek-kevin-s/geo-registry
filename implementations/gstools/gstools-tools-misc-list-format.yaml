@@ -1,0 +1,11 @@
+id: gstools-tools-misc-list-format
+kind: implementation
+name: gstools.tools.misc.list_format
+software: gstools
+call: {interface: python, name: gstools.tools.misc.list_format}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  lst: {type: any, required: true}
+  prec: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

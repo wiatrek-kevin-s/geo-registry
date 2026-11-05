@@ -1,0 +1,22 @@
+id: inequality-pen-pengram
+kind: implementation
+name: inequality.pen.pengram
+software: inequality
+call: {interface: python, name: inequality.pen.pengram}
+harvest: {harvester: python-packages, engine_version: 1.2.0}
+parameters:
+  gdf: {type: any, required: true}
+  col: {type: any, required: true}
+  name: {type: any, required: true}
+  figsize: {type: any, note: 'default (8, 6)'}
+  k: {type: integer, default: 5}
+  scheme: {type: string, default: quantiles}
+  xticks: {type: boolean, default: true}
+  legend: {type: boolean, default: true}
+  leg_pos: {type: string, default: lower right}
+  fmt: {type: string, default: '{:.2f}'}
+  query: {type: any}
+  ax: {type: any}
+  inset_size: {type: string, default: 30%}
+status: active
+review: {state: harvested, source: python-packages}

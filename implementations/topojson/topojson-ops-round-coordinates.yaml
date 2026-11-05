@@ -1,0 +1,11 @@
+id: topojson-ops-round-coordinates
+kind: implementation
+name: topojson.ops.round_coordinates
+software: topojson
+call: {interface: python, name: topojson.ops.round_coordinates}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  linestrings: {type: any, required: true}
+  rounding_precision: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

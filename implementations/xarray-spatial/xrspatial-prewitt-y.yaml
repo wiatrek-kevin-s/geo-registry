@@ -1,0 +1,12 @@
+id: xrspatial-prewitt-y
+kind: implementation
+name: xrspatial.prewitt_y
+software: xarray-spatial
+call: {interface: python, name: xrspatial.prewitt_y}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: any, required: true}
+  name: {type: string, default: prewitt_y}
+  boundary: {type: string, default: nan}
+status: active
+review: {state: harvested, source: python-packages}

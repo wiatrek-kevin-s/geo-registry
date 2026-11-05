@@ -1,0 +1,10 @@
+id: osmnx-stats-circuity-avg
+kind: implementation
+name: osmnx.stats.circuity_avg
+software: osmnx
+call: {interface: python, name: osmnx.stats.circuity_avg}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  Gu: {type: nx.MultiGraph, required: true}
+status: active
+review: {state: harvested, source: python-packages}

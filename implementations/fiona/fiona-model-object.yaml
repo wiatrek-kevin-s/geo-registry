@@ -1,0 +1,10 @@
+id: fiona-model-object
+kind: implementation
+name: fiona.model.Object
+software: fiona
+call: {interface: python, name: fiona.model.Object}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

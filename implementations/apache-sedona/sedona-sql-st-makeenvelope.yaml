@@ -1,0 +1,14 @@
+id: sedona-sql-st-makeenvelope
+kind: implementation
+name: sedona.sql.ST_MakeEnvelope
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_MakeEnvelope}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  min_x: {type: Union, required: true}
+  min_y: {type: Union, required: true}
+  max_x: {type: Union, required: true}
+  max_y: {type: Union, required: true}
+  srid: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,9 @@
+id: terra-proj-ok
+kind: implementation
+name: terra::proj_ok
+software: terra
+call: {interface: r, name: 'terra::proj_ok'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters: {}
+status: active
+review: {state: harvested, source: r-packages}

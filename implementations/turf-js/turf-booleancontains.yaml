@@ -1,0 +1,12 @@
+id: turf-booleancontains
+kind: implementation
+name: turf.booleanContains
+software: turf-js
+call: {interface: js, name: turf.booleanContains}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  feature1: {type: Feature<any> | Geometry, required: true}
+  feature2: {type: Feature<any> | Geometry, required: true}
+notes: From @turf/boolean-contains.
+status: active
+review: {state: harvested, source: turf}

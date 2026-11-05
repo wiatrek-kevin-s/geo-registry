@@ -1,0 +1,12 @@
+id: libpysal-weights-lag-categorical
+kind: implementation
+name: libpysal.weights.lag_categorical
+software: libpysal
+call: {interface: python, name: libpysal.weights.lag_categorical}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  w: {type: any, required: true}
+  y: {type: any, required: true}
+  ties: {type: string, default: tryself}
+status: active
+review: {state: harvested, source: python-packages}

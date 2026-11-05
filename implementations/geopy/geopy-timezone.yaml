@@ -1,0 +1,12 @@
+id: geopy-timezone
+kind: implementation
+name: geopy.Timezone
+software: geopy
+call: {interface: python, name: geopy.Timezone}
+harvest: {harvester: python-packages, engine_version: 2.5.0}
+parameters:
+  pytz_timezone: {type: any, required: true}
+  raw: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

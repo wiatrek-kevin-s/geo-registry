@@ -1,0 +1,12 @@
+id: sedona-sql-st-snap
+kind: implementation
+name: sedona.sql.ST_Snap
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_Snap}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  input: {type: Union, required: true}
+  reference: {type: Union, required: true}
+  tolerance: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

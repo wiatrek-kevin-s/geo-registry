@@ -1,0 +1,13 @@
+id: spopt-locate-pcenter
+kind: implementation
+name: spopt.locate.PCenter
+software: spopt
+call: {interface: python, name: spopt.locate.PCenter}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  name: {type: str, required: true}
+  problem: {type: LpProblem, required: true}
+  aij: {type: array, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

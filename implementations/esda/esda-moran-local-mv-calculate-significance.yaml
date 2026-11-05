@@ -1,0 +1,12 @@
+id: esda-moran-local-mv-calculate-significance
+kind: implementation
+name: esda.moran_local_mv.calculate_significance
+software: esda
+call: {interface: python, name: esda.moran_local_mv.calculate_significance}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  test_stat: {type: any, required: true}
+  reference_distribution: {type: any, required: true}
+  alternative: {type: string, default: two-sided}
+status: active
+review: {state: harvested, source: python-packages}

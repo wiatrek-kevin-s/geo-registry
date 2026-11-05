@@ -1,0 +1,13 @@
+id: osmnx-save-graph-geopackage
+kind: implementation
+name: osmnx.save_graph_geopackage
+software: osmnx
+call: {interface: python, name: osmnx.save_graph_geopackage}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  G: {type: nx.MultiDiGraph, required: true}
+  filepath: {type: str | Path | None}
+  directed: {type: bool, default: false}
+  encoding: {type: str, default: utf-8}
+status: active
+review: {state: harvested, source: python-packages}

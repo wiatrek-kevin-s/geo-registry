@@ -1,0 +1,11 @@
+id: rasterio-dtypes-in-dtype-range
+kind: implementation
+name: rasterio.dtypes.in_dtype_range
+software: rasterio
+call: {interface: python, name: rasterio.dtypes.in_dtype_range}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  value: {type: any, required: true}
+  dtype: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,28 @@
+id: terra-distance
+kind: implementation
+name: terra::distance
+software: terra
+call: {interface: r, name: 'terra::distance'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  unit: {type: any, default: '"m"'}
+  rasterize: {type: any, default: 'FALSE'}
+  method: {type: any, default: '"haversine"'}
+  filename: {type: any, default: '""'}
+  target: {type: any, default: NA}
+  exclude: {type: any, default: 'NULL'}
+  maxdist: {type: any, default: NA}
+  values: {type: any, default: 'FALSE'}
+  sequential: {type: any, default: 'FALSE'}
+  pairs: {type: any, default: 'FALSE'}
+  symmetrical: {type: any, default: 'TRUE'}
+  use_nodes: {type: any, default: 'FALSE'}
+  names: {type: any, default: 'NULL'}
+  pairwise: {type: any, default: 'FALSE'}
+  lonlat: {type: any, required: true}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

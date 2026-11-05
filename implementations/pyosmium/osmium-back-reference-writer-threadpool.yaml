@@ -1,0 +1,10 @@
+id: osmium-back-reference-writer-threadpool
+kind: implementation
+name: osmium.back_reference_writer.ThreadPool
+software: pyosmium
+call: {interface: python, name: osmium.back_reference_writer.ThreadPool}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

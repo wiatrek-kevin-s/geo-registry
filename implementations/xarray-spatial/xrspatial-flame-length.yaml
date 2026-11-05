@@ -1,0 +1,11 @@
+id: xrspatial-flame-length
+kind: implementation
+name: xrspatial.flame_length
+software: xarray-spatial
+call: {interface: python, name: xrspatial.flame_length}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  intensity_agg: {type: xr.DataArray, required: true}
+  name: {type: str, default: flame_length}
+status: active
+review: {state: harvested, source: python-packages}

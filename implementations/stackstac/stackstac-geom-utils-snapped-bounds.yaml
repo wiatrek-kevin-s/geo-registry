@@ -1,0 +1,11 @@
+id: stackstac-geom-utils-snapped-bounds
+kind: implementation
+name: stackstac.geom_utils.snapped_bounds
+software: stackstac
+call: {interface: python, name: stackstac.geom_utils.snapped_bounds}
+harvest: {harvester: python-packages, engine_version: 0.5.1}
+parameters:
+  bounds: {type: Tuple, required: true}
+  resolutions_xy: {type: Tuple, required: true}
+status: active
+review: {state: harvested, source: python-packages}

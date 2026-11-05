@@ -1,0 +1,11 @@
+id: giddy-ergodic-mfpt
+kind: implementation
+name: giddy.ergodic.mfpt
+software: giddy
+call: {interface: python, name: giddy.ergodic.mfpt}
+harvest: {harvester: python-packages, engine_version: 2.3.9}
+parameters:
+  P: {type: any, required: true}
+  fill_empty_classes: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

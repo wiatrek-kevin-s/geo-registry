@@ -1,0 +1,10 @@
+id: xrspatial-convolution-calc-cellsize
+kind: implementation
+name: xrspatial.convolution.calc_cellsize
+software: xarray-spatial
+call: {interface: python, name: xrspatial.convolution.calc_cellsize}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  raster: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

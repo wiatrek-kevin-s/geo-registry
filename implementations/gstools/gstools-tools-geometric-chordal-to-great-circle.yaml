@@ -1,0 +1,11 @@
+id: gstools-tools-geometric-chordal-to-great-circle
+kind: implementation
+name: gstools.tools.geometric.chordal_to_great_circle
+software: gstools
+call: {interface: python, name: gstools.tools.geometric.chordal_to_great_circle}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  dist: {type: any, required: true}
+  radius: {type: number, default: 1.0}
+status: active
+review: {state: harvested, source: python-packages}

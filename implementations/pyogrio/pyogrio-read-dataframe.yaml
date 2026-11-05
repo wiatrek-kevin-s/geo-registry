@@ -1,0 +1,29 @@
+id: pyogrio-read-dataframe
+kind: implementation
+name: pyogrio.read_dataframe
+software: pyogrio
+call: {interface: python, name: pyogrio.read_dataframe}
+harvest: {harvester: python-packages, engine_version: 0.13.0}
+parameters:
+  path_or_buffer: {type: any, required: true}
+  layer: {type: any}
+  encoding: {type: any}
+  columns: {type: any}
+  read_geometry: {type: boolean, default: true}
+  force_2d: {type: boolean, default: false}
+  skip_features: {type: integer, default: 0}
+  max_features: {type: any}
+  where: {type: any}
+  bbox: {type: any}
+  mask: {type: any}
+  fids: {type: any}
+  sql: {type: any}
+  sql_dialect: {type: any}
+  fid_as_index: {type: boolean, default: false}
+  use_arrow: {type: any}
+  on_invalid: {type: string, default: raise}
+  arrow_to_pandas_kwargs: {type: any}
+  datetime_as_string: {type: boolean, default: false}
+  mixed_offsets_as_utc: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

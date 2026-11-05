@@ -1,0 +1,11 @@
+id: sedona-sql-st-force3dm
+kind: implementation
+name: sedona.sql.ST_Force3DM
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_Force3DM}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geometry: {type: Union, required: true}
+  mValue: {type: Union, default: 0.0}
+status: active
+review: {state: harvested, source: python-packages}

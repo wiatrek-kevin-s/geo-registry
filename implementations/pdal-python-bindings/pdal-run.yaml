@@ -1,0 +1,10 @@
+id: pdal-run
+kind: implementation
+name: pdal.run
+software: pdal-python-bindings
+call: {interface: python, name: pdal.run}
+harvest: {harvester: python-packages, engine_version: 3.5.5}
+parameters:
+  pdal: {type: str, required: true}
+status: active
+review: {state: harvested, source: python-packages}

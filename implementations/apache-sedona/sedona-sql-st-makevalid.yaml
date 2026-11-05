@@ -1,0 +1,11 @@
+id: sedona-sql-st-makevalid
+kind: implementation
+name: sedona.sql.ST_MakeValid
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_MakeValid}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geometry: {type: Union, required: true}
+  keep_collapsed: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: skgstat-estimators-percentile
+kind: implementation
+name: skgstat.estimators.percentile
+software: scikit-gstat
+call: {interface: python, name: skgstat.estimators.percentile}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  x: {type: any, required: true}
+  p: {type: integer, default: 50}
+status: active
+review: {state: harvested, source: python-packages}

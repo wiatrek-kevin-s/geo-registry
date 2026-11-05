@@ -1,0 +1,10 @@
+id: rasterio-path-parse-path
+kind: implementation
+name: rasterio.path.parse_path
+software: rasterio
+call: {interface: python, name: rasterio.path.parse_path}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  path: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

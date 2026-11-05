@@ -1,0 +1,17 @@
+id: geopy-photon
+kind: implementation
+name: geopy.Photon
+software: geopy
+call: {interface: python, name: geopy.Photon}
+harvest: {harvester: python-packages, engine_version: 2.5.0}
+parameters:
+  scheme: {type: any}
+  timeout: {type: any, note: default DEFAULT_SENTINEL}
+  proxies: {type: any, note: default DEFAULT_SENTINEL}
+  domain: {type: string, default: photon.komoot.io}
+  user_agent: {type: any}
+  ssl_context: {type: any, note: default DEFAULT_SENTINEL}
+  adapter_factory: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

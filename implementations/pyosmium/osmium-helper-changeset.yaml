@@ -1,0 +1,11 @@
+id: osmium-helper-changeset
+kind: implementation
+name: osmium.helper.Changeset
+software: pyosmium
+call: {interface: python, name: osmium.helper.Changeset}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters:
+  carea: {type: cosm.COSMChangeset, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

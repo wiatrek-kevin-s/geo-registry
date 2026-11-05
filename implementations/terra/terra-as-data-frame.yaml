@@ -1,0 +1,20 @@
+id: terra-as-data-frame
+kind: implementation
+name: terra::as.data.frame
+software: terra
+call: {interface: r, name: 'terra::as.data.frame'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  row.names: {type: any, default: 'NULL'}
+  optional: {type: any, default: 'FALSE'}
+  '...': {type: dots, note: further arguments passed on}
+  xy: {type: any, default: 'FALSE'}
+  cells: {type: any, default: 'FALSE'}
+  time: {type: any, default: 'FALSE'}
+  na.rm: {type: any, default: NA}
+  wide: {type: any, default: 'TRUE'}
+  geom: {type: any, default: 'NULL'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

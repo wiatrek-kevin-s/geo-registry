@@ -1,0 +1,9 @@
+id: movingpandas-trajectorycollection-get-direction-col
+kind: implementation
+name: TrajectoryCollection.get_direction_col
+software: movingpandas
+call: {interface: python, name: movingpandas.TrajectoryCollection.get_direction_col}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

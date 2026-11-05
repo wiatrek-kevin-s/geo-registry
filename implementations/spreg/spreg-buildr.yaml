@@ -1,0 +1,12 @@
+id: spreg-buildr
+kind: implementation
+name: spreg.buildR
+software: spreg
+call: {interface: python, name: spreg.buildR}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  kr: {type: any, required: true}
+  kf: {type: any, required: true}
+  nr: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

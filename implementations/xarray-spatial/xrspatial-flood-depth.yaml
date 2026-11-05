@@ -1,0 +1,12 @@
+id: xrspatial-flood-depth
+kind: implementation
+name: xrspatial.flood_depth
+software: xarray-spatial
+call: {interface: python, name: xrspatial.flood_depth}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  hand_agg: {type: xr.DataArray, required: true}
+  water_level: {type: float, required: true}
+  name: {type: str, default: flood_depth}
+status: active
+review: {state: harvested, source: python-packages}

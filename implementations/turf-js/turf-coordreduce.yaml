@@ -1,0 +1,15 @@
+id: turf-coordreduce
+kind: implementation
+name: turf.coordReduce
+software: turf-js
+call: {interface: js, name: turf.coordReduce}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  geojson: {type: AllGeoJSON, required: true}
+  callback: {type: '(previousValue: Reducer, currentCoord: number[], coordIndex: number, featureIndex: number, multiFeatureIndex:
+      number, geometryIndex: number) => Reducer', required: true}
+  initialValue: {type: Reducer}
+  excludeWrapCoord: {type: boolean}
+notes: From @turf/meta.
+status: active
+review: {state: harvested, source: turf}

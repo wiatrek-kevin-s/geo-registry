@@ -1,0 +1,17 @@
+id: terra-north
+kind: implementation
+name: terra::north
+software: terra
+call: {interface: r, name: 'terra::north'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  xy: {type: any, default: 'NULL'}
+  type: {type: any, default: '1'}
+  label: {type: any, default: '"N"'}
+  angle: {type: any, default: '0'}
+  d: {type: any, required: true}
+  head: {type: any, default: '0.1'}
+  xpd: {type: any, default: 'TRUE'}
+  '...': {type: dots, note: further arguments passed on}
+status: active
+review: {state: harvested, source: r-packages}

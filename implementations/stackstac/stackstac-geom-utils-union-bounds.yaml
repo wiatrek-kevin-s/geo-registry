@@ -1,0 +1,9 @@
+id: stackstac-geom-utils-union-bounds
+kind: implementation
+name: stackstac.geom_utils.union_bounds
+software: stackstac
+call: {interface: python, name: stackstac.geom_utils.union_bounds}
+harvest: {harvester: python-packages, engine_version: 0.5.1}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

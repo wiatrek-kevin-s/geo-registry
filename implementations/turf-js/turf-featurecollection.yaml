@@ -1,0 +1,14 @@
+id: turf-featurecollection
+kind: implementation
+name: turf.featureCollection
+software: turf-js
+call: {interface: js, name: turf.featureCollection}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  features: {type: 'Array<Feature<G, P>>', required: true}
+  options: {type: '{ bbox?: BBox; id?: Id; }'}
+  options.bbox: {type: BBox, note: field of options}
+  options.id: {type: Id, note: field of options}
+notes: From @turf/helpers.
+status: active
+review: {state: harvested, source: turf}

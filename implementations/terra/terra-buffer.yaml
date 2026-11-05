@@ -1,0 +1,21 @@
+id: terra-buffer
+kind: implementation
+name: terra::buffer
+software: terra
+call: {interface: r, name: 'terra::buffer'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  width: {type: any, required: true}
+  background: {type: any, default: '0'}
+  include: {type: any, default: 'TRUE'}
+  filename: {type: any, default: '""'}
+  quadsegs: {type: any, default: '10'}
+  capstyle: {type: any, default: '"round"'}
+  joinstyle: {type: any, default: '"round"'}
+  mitrelimit: {type: any, default: NA}
+  singlesided: {type: any, default: 'FALSE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

@@ -1,0 +1,15 @@
+id: libpysal-cg-polygonquadtreestructure-extract-connecting-borders-between-points
+kind: implementation
+name: libpysal.cg.polygonQuadTreeStructure.extract_connecting_borders_between_points
+software: libpysal
+call: {interface: python, name: libpysal.cg.polygonQuadTreeStructure.extract_connecting_borders_between_points}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  cell_min_point: {type: any, required: true}
+  cell_length_x: {type: any, required: true}
+  cell_length_y: {type: any, required: true}
+  point_begin: {type: any, required: true}
+  point_end: {type: any, required: true}
+  zero_tolerance: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

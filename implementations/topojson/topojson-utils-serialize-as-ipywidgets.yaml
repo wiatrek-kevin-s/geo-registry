@@ -1,0 +1,12 @@
+id: topojson-utils-serialize-as-ipywidgets
+kind: implementation
+name: topojson.utils.serialize_as_ipywidgets
+software: topojson
+call: {interface: python, name: topojson.utils.serialize_as_ipywidgets}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  topo_object: {type: any, required: true}
+  toposimplify: {type: any, required: true}
+  topoquantize: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

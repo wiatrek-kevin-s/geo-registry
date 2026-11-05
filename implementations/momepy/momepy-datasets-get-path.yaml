@@ -1,0 +1,11 @@
+id: momepy-datasets-get-path
+kind: implementation
+name: momepy.datasets.get_path
+software: momepy
+call: {interface: python, name: momepy.datasets.get_path}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  dataset: {type: any, required: true}
+  extension: {type: string, default: gpkg}
+status: active
+review: {state: harvested, source: python-packages}

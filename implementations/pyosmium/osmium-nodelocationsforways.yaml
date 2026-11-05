@@ -1,0 +1,10 @@
+id: osmium-nodelocationsforways
+kind: implementation
+name: osmium.NodeLocationsForWays
+software: pyosmium
+call: {interface: python, name: osmium.NodeLocationsForWays}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

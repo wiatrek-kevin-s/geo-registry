@@ -1,0 +1,11 @@
+id: movingpandas-trajectory-cleaner-trajectorycleaner
+kind: implementation
+name: movingpandas.trajectory_cleaner.TrajectoryCleaner
+software: movingpandas
+call: {interface: python, name: movingpandas.trajectory_cleaner.TrajectoryCleaner}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  traj: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

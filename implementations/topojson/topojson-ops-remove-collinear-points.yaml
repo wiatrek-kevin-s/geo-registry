@@ -1,0 +1,10 @@
+id: topojson-ops-remove-collinear-points
+kind: implementation
+name: topojson.ops.remove_collinear_points
+software: topojson
+call: {interface: python, name: topojson.ops.remove_collinear_points}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  line: {type: ndarray, required: true}
+status: active
+review: {state: harvested, source: python-packages}

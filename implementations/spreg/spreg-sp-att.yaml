@@ -1,0 +1,15 @@
+id: spreg-sp-att
+kind: implementation
+name: spreg.sp_att
+software: spreg
+call: {interface: python, name: spreg.sp_att}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  w: {type: any, required: true}
+  y: {type: any, required: true}
+  predy: {type: any, required: true}
+  w_y: {type: any, required: true}
+  rho: {type: any, required: true}
+  hard_bound: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

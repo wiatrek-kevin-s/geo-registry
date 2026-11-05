@@ -1,0 +1,13 @@
+id: osmnx-add-edge-speeds
+kind: implementation
+name: osmnx.add_edge_speeds
+software: osmnx
+call: {interface: python, name: osmnx.add_edge_speeds}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  G: {type: nx.MultiDiGraph, required: true}
+  hwy_speeds: {type: 'dict[str, float] | None'}
+  fallback: {type: float | None}
+  agg: {type: 'Callable[[Any], Any]', note: default numpy.mean}
+status: active
+review: {state: harvested, source: python-packages}

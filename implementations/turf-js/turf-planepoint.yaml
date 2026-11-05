@@ -1,0 +1,12 @@
+id: turf-planepoint
+kind: implementation
+name: turf.planepoint
+software: turf-js
+call: {interface: js, name: turf.planepoint}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  point: {type: Coord, required: true}
+  triangle: {type: Feature<Polygon> | Polygon, required: true}
+notes: From @turf/planepoint.
+status: active
+review: {state: harvested, source: turf}

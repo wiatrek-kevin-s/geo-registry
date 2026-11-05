@@ -1,0 +1,15 @@
+id: terra-split
+kind: implementation
+name: terra::split
+software: terra
+call: {interface: r, name: 'terra::split'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  f: {type: any, required: true}
+  drop: {type: any, default: 'FALSE'}
+  '...': {type: dots, note: further arguments passed on}
+  min_node_dist: {type: any, default: '10000'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

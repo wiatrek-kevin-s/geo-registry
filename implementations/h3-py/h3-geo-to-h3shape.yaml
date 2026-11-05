@@ -1,0 +1,10 @@
+id: h3-geo-to-h3shape
+kind: implementation
+name: h3.geo_to_h3shape
+software: h3-py
+call: {interface: python, name: h3.geo_to_h3shape}
+harvest: {harvester: python-packages, engine_version: 4.5.0}
+parameters:
+  geo: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

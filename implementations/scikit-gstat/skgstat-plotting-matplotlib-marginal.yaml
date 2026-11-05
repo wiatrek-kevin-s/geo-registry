@@ -1,0 +1,13 @@
+id: skgstat-plotting-matplotlib-marginal
+kind: implementation
+name: skgstat.plotting.matplotlib_marginal
+software: scikit-gstat
+call: {interface: python, name: skgstat.plotting.matplotlib_marginal}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  stvariogram: {type: any, required: true}
+  axes: {type: any}
+  sharey: {type: boolean, default: true}
+  include_model: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

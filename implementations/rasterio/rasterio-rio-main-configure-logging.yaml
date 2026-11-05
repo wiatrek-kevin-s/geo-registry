@@ -1,0 +1,10 @@
+id: rasterio-rio-main-configure-logging
+kind: implementation
+name: rasterio.rio.main.configure_logging
+software: rasterio
+call: {interface: python, name: rasterio.rio.main.configure_logging}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  verbosity: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

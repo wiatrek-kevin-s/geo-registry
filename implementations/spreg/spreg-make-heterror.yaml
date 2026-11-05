@@ -1,0 +1,11 @@
+id: spreg-make-heterror
+kind: implementation
+name: spreg.make_heterror
+software: spreg
+call: {interface: python, name: spreg.make_heterror}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  u: {type: any, required: true}
+  v: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

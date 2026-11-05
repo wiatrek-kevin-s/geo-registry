@@ -1,0 +1,13 @@
+id: giddy-markov-homogeneity
+kind: implementation
+name: giddy.markov.homogeneity
+software: giddy
+call: {interface: python, name: giddy.markov.homogeneity}
+harvest: {harvester: python-packages, engine_version: 2.3.9}
+parameters:
+  transition_matrices: {type: any, required: true}
+  regime_names: {type: any, note: 'default []'}
+  class_names: {type: any, note: 'default []'}
+  title: {type: string, default: Markov Homogeneity Test}
+status: active
+review: {state: harvested, source: python-packages}

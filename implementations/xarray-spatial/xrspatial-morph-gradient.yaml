@@ -1,0 +1,13 @@
+id: xrspatial-morph-gradient
+kind: implementation
+name: xrspatial.morph_gradient
+software: xarray-spatial
+call: {interface: python, name: xrspatial.morph_gradient}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: any, required: true}
+  kernel: {type: any}
+  boundary: {type: string, default: nan}
+  name: {type: string, default: gradient}
+status: active
+review: {state: harvested, source: python-packages}

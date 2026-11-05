@@ -1,0 +1,15 @@
+id: pykrige-kriging-tools-write-zmap-grid
+kind: implementation
+name: pykrige.kriging_tools.write_zmap_grid
+software: pykrige
+call: {interface: python, name: pykrige.kriging_tools.write_zmap_grid}
+harvest: {harvester: python-packages, engine_version: 1.7.3}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  z: {type: any, required: true}
+  filename: {type: string, default: output.zmap}
+  no_data: {type: number, default: -999.0}
+  coord_sys: {type: string, default: <null>}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,10 @@
+id: pykrige-core-euclid3-to-great-circle
+kind: implementation
+name: pykrige.core.euclid3_to_great_circle
+software: pykrige
+call: {interface: python, name: pykrige.core.euclid3_to_great_circle}
+harvest: {harvester: python-packages, engine_version: 1.7.3}
+parameters:
+  euclid3_distance: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

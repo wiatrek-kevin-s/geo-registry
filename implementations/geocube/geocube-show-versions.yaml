@@ -1,0 +1,9 @@
+id: geocube-show-versions
+kind: implementation
+name: geocube.show_versions
+software: geocube
+call: {interface: python, name: geocube.show_versions}
+harvest: {harvester: python-packages, engine_version: 0.7.1}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

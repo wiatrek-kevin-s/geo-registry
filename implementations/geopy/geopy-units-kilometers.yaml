@@ -1,0 +1,13 @@
+id: geopy-units-kilometers
+kind: implementation
+name: geopy.units.kilometers
+software: geopy
+call: {interface: python, name: geopy.units.kilometers}
+harvest: {harvester: python-packages, engine_version: 2.5.0}
+parameters:
+  meters: {type: integer, default: 0}
+  miles: {type: integer, default: 0}
+  feet: {type: integer, default: 0}
+  nautical: {type: integer, default: 0}
+status: active
+review: {state: harvested, source: python-packages}

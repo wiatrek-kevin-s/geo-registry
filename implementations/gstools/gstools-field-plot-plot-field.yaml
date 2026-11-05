@@ -1,0 +1,13 @@
+id: gstools-field-plot-plot-field
+kind: implementation
+name: gstools.field.plot.plot_field
+software: gstools
+call: {interface: python, name: gstools.field.plot.plot_field}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  fld: {type: any, required: true}
+  field: {type: string, default: field}
+  fig: {type: any}
+  ax: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

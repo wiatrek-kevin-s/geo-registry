@@ -1,0 +1,10 @@
+id: rasterio-enums-overviewresampling
+kind: implementation
+name: rasterio.enums.OverviewResampling
+software: rasterio
+call: {interface: python, name: rasterio.enums.OverviewResampling}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

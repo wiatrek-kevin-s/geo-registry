@@ -1,0 +1,11 @@
+id: libpysal-weights-queen
+kind: implementation
+name: libpysal.weights.Queen
+software: libpysal
+call: {interface: python, name: libpysal.weights.Queen}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  polygons: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

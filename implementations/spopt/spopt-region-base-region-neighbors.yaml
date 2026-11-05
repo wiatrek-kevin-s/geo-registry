@@ -1,0 +1,11 @@
+id: spopt-region-base-region-neighbors
+kind: implementation
+name: spopt.region.base.region_neighbors
+software: spopt
+call: {interface: python, name: spopt.region.base.region_neighbors}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  a_list: {type: any, required: true}
+  region: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

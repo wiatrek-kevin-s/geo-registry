@@ -1,0 +1,10 @@
+id: osmium-area-areamanager
+kind: implementation
+name: osmium.area.AreaManager
+software: pyosmium
+call: {interface: python, name: osmium.area.AreaManager}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

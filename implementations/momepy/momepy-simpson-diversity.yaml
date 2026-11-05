@@ -1,0 +1,12 @@
+id: momepy-simpson-diversity
+kind: implementation
+name: momepy.simpson_diversity
+software: momepy
+call: {interface: python, name: momepy.simpson_diversity}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  values: {type: any, required: true}
+  bins: {type: any}
+  categorical: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,15 @@
+id: skgstat-probabalisticmetricspace
+kind: implementation
+name: skgstat.ProbabalisticMetricSpace
+software: scikit-gstat
+call: {interface: python, name: skgstat.ProbabalisticMetricSpace}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  coords: {type: any, required: true}
+  dist_metric: {type: string, default: euclidean}
+  max_dist: {type: any}
+  samples: {type: number, default: 0.5}
+  rnd: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

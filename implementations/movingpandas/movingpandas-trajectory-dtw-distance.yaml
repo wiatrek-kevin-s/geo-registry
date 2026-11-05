@@ -1,0 +1,12 @@
+id: movingpandas-trajectory-dtw-distance
+kind: implementation
+name: Trajectory.dtw_distance
+software: movingpandas
+call: {interface: python, name: movingpandas.Trajectory.dtw_distance}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  other: {type: any, required: true}
+  units: {type: any, note: 'default UNITS(distance=None, time=None, time2=None, crs=None)'}
+  radius: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

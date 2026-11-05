@@ -1,0 +1,12 @@
+id: terra-mem-info
+kind: implementation
+name: terra::mem_info
+software: terra
+call: {interface: r, name: 'terra::mem_info'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  n: {type: any, default: '1'}
+  print: {type: any, default: 'TRUE'}
+status: active
+review: {state: harvested, source: r-packages}

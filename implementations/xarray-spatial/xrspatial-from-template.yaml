@@ -1,0 +1,17 @@
+id: xrspatial-from-template
+kind: implementation
+name: xrspatial.from_template
+software: xarray-spatial
+call: {interface: python, name: xrspatial.from_template}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  name: {type: str, required: true}
+  resolution: {type: Union}
+  height: {type: Optional}
+  width: {type: Optional}
+  preserve: {type: Optional}
+  backend: {type: str, default: numpy}
+  fill: {type: float, note: default nan}
+  chunks: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

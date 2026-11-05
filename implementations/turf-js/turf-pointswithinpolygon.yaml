@@ -1,0 +1,12 @@
+id: turf-pointswithinpolygon
+kind: implementation
+name: turf.pointsWithinPolygon
+software: turf-js
+call: {interface: js, name: turf.pointsWithinPolygon}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  points: {type: 'Feature<Point | MultiPoint, P> | FeatureCollection<Point | MultiPoint, P>', required: true}
+  polygons: {type: Feature<G> | FeatureCollection<G> | G, required: true}
+notes: From @turf/points-within-polygon.
+status: active
+review: {state: harvested, source: turf}

@@ -1,0 +1,10 @@
+id: libpysal-cg-shapely-ext-centroid
+kind: implementation
+name: libpysal.cg.shapely_ext.centroid
+software: libpysal
+call: {interface: python, name: libpysal.cg.shapely_ext.centroid}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  shape: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

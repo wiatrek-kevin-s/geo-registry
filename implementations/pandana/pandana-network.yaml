@@ -1,0 +1,16 @@
+id: pandana-network
+kind: implementation
+name: pandana.Network
+software: pandana
+call: {interface: python, name: pandana.Network}
+harvest: {harvester: python-packages, engine_version: '0.8'}
+parameters:
+  node_x: {type: any, required: true}
+  node_y: {type: any, required: true}
+  edge_from: {type: any, required: true}
+  edge_to: {type: any, required: true}
+  edge_weights: {type: any, required: true}
+  twoway: {type: boolean, default: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

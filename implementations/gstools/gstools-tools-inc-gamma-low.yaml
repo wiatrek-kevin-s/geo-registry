@@ -1,0 +1,11 @@
+id: gstools-tools-inc-gamma-low
+kind: implementation
+name: gstools.tools.inc_gamma_low
+software: gstools
+call: {interface: python, name: gstools.tools.inc_gamma_low}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  s: {type: any, required: true}
+  x: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

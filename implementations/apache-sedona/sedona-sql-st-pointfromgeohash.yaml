@@ -1,0 +1,11 @@
+id: sedona-sql-st-pointfromgeohash
+kind: implementation
+name: sedona.sql.ST_PointFromGeoHash
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_PointFromGeoHash}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geohash: {type: Union, required: true}
+  precision: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

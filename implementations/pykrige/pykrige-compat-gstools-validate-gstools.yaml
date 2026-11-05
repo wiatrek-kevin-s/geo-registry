@@ -1,0 +1,10 @@
+id: pykrige-compat-gstools-validate-gstools
+kind: implementation
+name: pykrige.compat_gstools.validate_gstools
+software: pykrige
+call: {interface: python, name: pykrige.compat_gstools.validate_gstools}
+harvest: {harvester: python-packages, engine_version: 1.7.3}
+parameters:
+  model: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

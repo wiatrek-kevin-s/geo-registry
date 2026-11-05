@@ -1,0 +1,17 @@
+id: rioxarray-raster-dataset-rasterdataset-clip-box
+kind: implementation
+name: RasterDataset.clip_box
+software: rioxarray
+call: {interface: python, name: rioxarray.raster_dataset.RasterDataset.clip_box}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  minx: {type: float, required: true}
+  miny: {type: float, required: true}
+  maxx: {type: float, required: true}
+  maxy: {type: float, required: true}
+  auto_expand: {type: Union, default: false}
+  auto_expand_limit: {type: int, default: 3}
+  crs: {type: Optional}
+  allow_one_dimensional_raster: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,17 @@
+id: spaghetti-analysis-funcbase
+kind: implementation
+name: spaghetti.analysis.FuncBase
+software: spaghetti
+call: {interface: python, name: spaghetti.analysis.FuncBase}
+harvest: {harvester: python-packages, engine_version: 1.7.6}
+parameters:
+  ntw: {type: any, required: true}
+  pointpattern: {type: any, required: true}
+  nsteps: {type: integer, default: 10}
+  permutations: {type: integer, default: 99}
+  threshold: {type: number, default: 0.5}
+  distribution: {type: string, default: uniform}
+  upperbound: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

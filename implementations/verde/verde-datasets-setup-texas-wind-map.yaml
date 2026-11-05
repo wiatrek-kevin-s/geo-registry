@@ -1,0 +1,12 @@
+id: verde-datasets-setup-texas-wind-map
+kind: implementation
+name: verde.datasets.setup_texas_wind_map
+software: verde
+call: {interface: python, name: verde.datasets.setup_texas_wind_map}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  ax: {type: any, required: true}
+  region: {type: any, note: 'default (-107, -93, 25.5, 37)'}
+  coastlines: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

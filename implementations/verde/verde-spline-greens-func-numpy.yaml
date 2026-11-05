@@ -1,0 +1,12 @@
+id: verde-spline-greens-func-numpy
+kind: implementation
+name: verde.spline.greens_func_numpy
+software: verde
+call: {interface: python, name: verde.spline.greens_func_numpy}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  east: {type: any, required: true}
+  north: {type: any, required: true}
+  mindist: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

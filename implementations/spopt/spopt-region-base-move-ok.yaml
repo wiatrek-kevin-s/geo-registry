@@ -1,0 +1,14 @@
+id: spopt-region-base-move-ok
+kind: implementation
+name: spopt.region.base.move_ok
+software: spopt
+call: {interface: python, name: spopt.region.base.move_ok}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  area: {type: any, required: true}
+  source: {type: any, required: true}
+  destination: {type: any, required: true}
+  g: {type: any, required: true}
+  w: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

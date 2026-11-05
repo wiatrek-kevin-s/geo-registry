@@ -1,0 +1,18 @@
+id: terra-as-points
+kind: implementation
+name: terra::as.points
+software: terra
+call: {interface: r, name: 'terra::as.points'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  crs: {type: any, default: '""'}
+  values: {type: any, default: 'TRUE'}
+  na.rm: {type: any, default: 'TRUE'}
+  na.all: {type: any, default: 'FALSE'}
+  multi: {type: any, default: 'FALSE'}
+  skiplast: {type: any, default: 'TRUE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

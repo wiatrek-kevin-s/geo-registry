@@ -1,0 +1,11 @@
+id: verde-datasets-setup-rio-magnetic-map
+kind: implementation
+name: verde.datasets.setup_rio_magnetic_map
+software: verde
+call: {interface: python, name: verde.datasets.setup_rio_magnetic_map}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  ax: {type: any, required: true}
+  region: {type: any, note: 'default (-42.6, -42, -22.5, -22)'}
+status: active
+review: {state: harvested, source: python-packages}

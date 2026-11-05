@@ -1,0 +1,11 @@
+id: verde-inside
+kind: implementation
+name: verde.inside
+software: verde
+call: {interface: python, name: verde.inside}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  coordinates: {type: any, required: true}
+  region: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

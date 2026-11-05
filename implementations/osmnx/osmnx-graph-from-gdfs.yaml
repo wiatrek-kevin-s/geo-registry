@@ -1,0 +1,12 @@
+id: osmnx-graph-from-gdfs
+kind: implementation
+name: osmnx.graph_from_gdfs
+software: osmnx
+call: {interface: python, name: osmnx.graph_from_gdfs}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  gdf_nodes: {type: gpd.GeoDataFrame, required: true}
+  gdf_edges: {type: gpd.GeoDataFrame, required: true}
+  graph_attrs: {type: 'dict[str, Any] | None'}
+status: active
+review: {state: harvested, source: python-packages}

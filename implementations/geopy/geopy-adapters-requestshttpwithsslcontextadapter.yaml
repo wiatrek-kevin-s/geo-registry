@@ -1,0 +1,11 @@
+id: geopy-adapters-requestshttpwithsslcontextadapter
+kind: implementation
+name: geopy.adapters.RequestsHTTPWithSSLContextAdapter
+software: geopy
+call: {interface: python, name: geopy.adapters.RequestsHTTPWithSSLContextAdapter}
+harvest: {harvester: python-packages, engine_version: 2.5.0}
+parameters:
+  ssl_context: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

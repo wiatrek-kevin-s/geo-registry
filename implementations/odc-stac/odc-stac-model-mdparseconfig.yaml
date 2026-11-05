@@ -1,0 +1,17 @@
+id: odc-stac-model-mdparseconfig
+kind: implementation
+name: odc.stac.model.MDParseConfig
+software: odc-stac
+call: {interface: python, name: odc.stac.model.MDParseConfig}
+harvest: {harvester: python-packages, engine_version: 0.5.3}
+parameters:
+  band_defaults: {type: RasterBandMetadata, note: default <factory>}
+  band_cfg: {type: 'Dict[str, RasterBandMetadata]', note: default <factory>}
+  aliases: {type: 'Dict[str, BandKey]', note: default <factory>}
+  ignore_proj: {type: bool, default: false}
+  extra_dims: {type: 'Dict[str, int]', note: default <factory>}
+  extra_coords: {type: 'Sequence[FixedCoord]', note: default ()}
+  with_props: {type: 'Sequence[PropertyLoadRequest]', note: default <factory>}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

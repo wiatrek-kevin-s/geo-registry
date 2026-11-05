@@ -1,0 +1,15 @@
+id: sf-st-read-db
+kind: implementation
+name: sf::st_read_db
+software: sf
+call: {interface: r, name: 'sf::st_read_db'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  conn: {type: any, default: 'NULL'}
+  table: {type: any, default: 'NULL'}
+  query: {type: any, default: 'NULL'}
+  geom_column: {type: any, default: 'NULL'}
+  EWKB: {type: any, default: 'TRUE'}
+  '...': {type: dots, note: further arguments passed on}
+status: active
+review: {state: harvested, source: r-packages}

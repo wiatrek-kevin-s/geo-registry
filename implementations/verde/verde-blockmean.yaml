@@ -1,0 +1,17 @@
+id: verde-blockmean
+kind: implementation
+name: verde.BlockMean
+software: verde
+call: {interface: python, name: verde.BlockMean}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  spacing: {type: any}
+  region: {type: any}
+  adjust: {type: string, default: spacing}
+  center_coordinates: {type: boolean, default: false}
+  uncertainty: {type: boolean, default: false}
+  shape: {type: any}
+  drop_coords: {type: boolean, default: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

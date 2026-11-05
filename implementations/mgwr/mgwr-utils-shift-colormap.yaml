@@ -1,0 +1,14 @@
+id: mgwr-utils-shift-colormap
+kind: implementation
+name: mgwr.utils.shift_colormap
+software: mgwr
+call: {interface: python, name: mgwr.utils.shift_colormap}
+harvest: {harvester: python-packages, engine_version: 2.2.1}
+parameters:
+  cmap: {type: any, required: true}
+  start: {type: integer, default: 0}
+  midpoint: {type: number, default: 0.5}
+  stop: {type: number, default: 1.0}
+  name: {type: string, default: shiftedcmap}
+status: active
+review: {state: harvested, source: python-packages}

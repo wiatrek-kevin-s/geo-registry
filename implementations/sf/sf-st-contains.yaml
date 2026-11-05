@@ -1,0 +1,15 @@
+id: sf-st-contains
+kind: implementation
+name: sf::st_contains
+software: sf
+call: {interface: r, name: 'sf::st_contains'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  sparse: {type: any, default: 'TRUE'}
+  prepared: {type: any, default: 'TRUE'}
+  '...': {type: dots, note: further arguments passed on}
+  model: {type: any, default: '"open"'}
+status: active
+review: {state: harvested, source: r-packages}

@@ -1,0 +1,10 @@
+id: libpysal-cg-ops-tabular-intersection
+kind: implementation
+name: libpysal.cg.ops.tabular.intersection
+software: libpysal
+call: {interface: python, name: libpysal.cg.ops.tabular.intersection}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  df: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

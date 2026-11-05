@@ -1,0 +1,14 @@
+id: terra-elongate
+kind: implementation
+name: terra::elongate
+software: terra
+call: {interface: r, name: 'terra::elongate'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  length: {type: any, default: '1'}
+  flat: {type: any, default: 'FALSE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

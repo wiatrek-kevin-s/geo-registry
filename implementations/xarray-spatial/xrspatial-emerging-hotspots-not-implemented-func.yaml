@@ -1,0 +1,11 @@
+id: xrspatial-emerging-hotspots-not-implemented-func
+kind: implementation
+name: xrspatial.emerging_hotspots.not_implemented_func
+software: xarray-spatial
+call: {interface: python, name: xrspatial.emerging_hotspots.not_implemented_func}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: any, required: true}
+  messages: {type: string, default: Not yet implemented.}
+status: active
+review: {state: harvested, source: python-packages}

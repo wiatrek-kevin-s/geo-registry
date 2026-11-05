@@ -1,0 +1,9 @@
+id: movingpandas-trajectory-plot
+kind: implementation
+name: Trajectory.plot
+software: movingpandas
+call: {interface: python, name: movingpandas.Trajectory.plot}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

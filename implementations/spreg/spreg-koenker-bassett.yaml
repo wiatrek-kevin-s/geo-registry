@@ -1,0 +1,11 @@
+id: spreg-koenker-bassett
+kind: implementation
+name: spreg.koenker_bassett
+software: spreg
+call: {interface: python, name: spreg.koenker_bassett}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  reg: {type: any, required: true}
+  z: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

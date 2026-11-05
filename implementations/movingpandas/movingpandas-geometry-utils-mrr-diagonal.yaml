@@ -1,0 +1,11 @@
+id: movingpandas-geometry-utils-mrr-diagonal
+kind: implementation
+name: movingpandas.geometry_utils.mrr_diagonal
+software: movingpandas
+call: {interface: python, name: movingpandas.geometry_utils.mrr_diagonal}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  geom: {type: any, required: true}
+  spherical: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

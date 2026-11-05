@@ -1,0 +1,10 @@
+id: rioxarray-raster-dataset-rasterdataset-y-dim
+kind: implementation
+name: RasterDataset.y_dim
+software: rioxarray
+call: {interface: python, name: rioxarray.raster_dataset.RasterDataset.y_dim}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters: {}
+notes: Property.
+status: active
+review: {state: harvested, source: python-packages}

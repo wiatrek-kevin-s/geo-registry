@@ -1,0 +1,11 @@
+id: rasterio-tools-jsonsequencetool
+kind: implementation
+name: rasterio.tools.JSONSequenceTool
+software: rasterio
+call: {interface: python, name: rasterio.tools.JSONSequenceTool}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  func: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

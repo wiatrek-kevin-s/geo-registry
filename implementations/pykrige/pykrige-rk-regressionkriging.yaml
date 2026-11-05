@@ -1,0 +1,30 @@
+id: pykrige-rk-regressionkriging
+kind: implementation
+name: pykrige.rk.RegressionKriging
+software: pykrige
+call: {interface: python, name: pykrige.rk.RegressionKriging}
+harvest: {harvester: python-packages, engine_version: 1.7.3}
+parameters:
+  regression_model: {type: any, note: default SVR()}
+  method: {type: string, default: ordinary}
+  variogram_model: {type: string, default: linear}
+  n_closest_points: {type: integer, default: 10}
+  nlags: {type: integer, default: 6}
+  weight: {type: boolean, default: false}
+  verbose: {type: boolean, default: false}
+  exact_values: {type: boolean, default: true}
+  pseudo_inv: {type: boolean, default: false}
+  pseudo_inv_type: {type: string, default: pinv}
+  variogram_parameters: {type: any}
+  variogram_function: {type: any}
+  anisotropy_scaling: {type: any, note: 'default (1.0, 1.0)'}
+  anisotropy_angle: {type: any, note: 'default (0.0, 0.0, 0.0)'}
+  enable_statistics: {type: boolean, default: false}
+  coordinates_type: {type: string, default: euclidean}
+  drift_terms: {type: any}
+  point_drift: {type: any}
+  ext_drift_grid: {type: any, note: 'default (None, None, None)'}
+  functional_drift: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

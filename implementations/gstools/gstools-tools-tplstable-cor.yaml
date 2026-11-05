@@ -1,0 +1,13 @@
+id: gstools-tools-tplstable-cor
+kind: implementation
+name: gstools.tools.tplstable_cor
+software: gstools
+call: {interface: python, name: gstools.tools.tplstable_cor}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  r: {type: any, required: true}
+  len_scale: {type: any, required: true}
+  hurst: {type: any, required: true}
+  alpha: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

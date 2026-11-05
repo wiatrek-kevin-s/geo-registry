@@ -1,0 +1,15 @@
+id: xrspatial-allocation
+kind: implementation
+name: xrspatial.allocation
+software: xarray-spatial
+call: {interface: python, name: xrspatial.allocation}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  raster: {type: DataArray, required: true}
+  x: {type: str, default: x}
+  y: {type: str, default: y}
+  target_values: {type: list}
+  max_distance: {type: float, note: default inf}
+  distance_metric: {type: str, default: EUCLIDEAN}
+status: active
+review: {state: harvested, source: python-packages}

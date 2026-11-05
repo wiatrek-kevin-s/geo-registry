@@ -1,0 +1,11 @@
+id: rasterio-rio-calc-funcmapper
+kind: implementation
+name: rasterio.rio.calc.FuncMapper
+software: rasterio
+call: {interface: python, name: rasterio.rio.calc.FuncMapper}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  dict: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: momepy-neighbors
+kind: implementation
+name: momepy.neighbors
+software: momepy
+call: {interface: python, name: momepy.neighbors}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  geometry: {type: any, required: true}
+  graph: {type: Graph, required: true}
+  weighted: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

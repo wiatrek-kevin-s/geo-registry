@@ -1,0 +1,10 @@
+id: pyproj-enums-baseenum
+kind: implementation
+name: pyproj.enums.BaseEnum
+software: pyproj
+call: {interface: python, name: pyproj.enums.BaseEnum}
+harvest: {harvester: python-packages, engine_version: 3.8.0}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

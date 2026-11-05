@@ -1,0 +1,19 @@
+id: terra-geom
+kind: implementation
+name: terra::geom
+software: terra
+call: {interface: r, name: 'terra::geom'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  wkt: {type: any, default: 'FALSE'}
+  hex: {type: any, default: 'FALSE'}
+  wkb: {type: any, default: 'FALSE'}
+  df: {type: any, default: 'FALSE'}
+  list: {type: any, default: 'FALSE'}
+  xnm: {type: any, default: '"x"'}
+  ynm: {type: any, default: '"y"'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

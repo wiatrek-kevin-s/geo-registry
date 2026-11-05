@@ -1,0 +1,9 @@
+id: rioxarray-show-versions
+kind: implementation
+name: rioxarray.show_versions
+software: rioxarray
+call: {interface: python, name: rioxarray.show_versions}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

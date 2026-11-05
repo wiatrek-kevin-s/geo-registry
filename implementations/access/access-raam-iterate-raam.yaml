@@ -1,0 +1,18 @@
+id: access-raam-iterate-raam
+kind: implementation
+name: access.raam.iterate_raam
+software: access
+call: {interface: python, name: access.raam.iterate_raam}
+harvest: {harvester: python-packages, engine_version: 1.1.10.post3}
+parameters:
+  demand: {type: any, required: true}
+  supply: {type: any, required: true}
+  travel: {type: any, required: true}
+  max_cycles: {type: integer, default: 151}
+  initial_step: {type: number, default: 0.2}
+  min_step: {type: number, default: 0.005}
+  half_life: {type: integer, default: 50}
+  limit_initial: {type: integer, default: 20}
+  verbose: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

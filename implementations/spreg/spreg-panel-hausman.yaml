@@ -1,0 +1,12 @@
+id: spreg-panel-hausman
+kind: implementation
+name: spreg.panel_Hausman
+software: spreg
+call: {interface: python, name: spreg.panel_Hausman}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  panel_fe: {type: any, required: true}
+  panel_re: {type: any, required: true}
+  sp_lag: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

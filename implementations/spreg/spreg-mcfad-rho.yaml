@@ -1,0 +1,10 @@
+id: spreg-mcfad-rho
+kind: implementation
+name: spreg.mcfad_rho
+software: spreg
+call: {interface: python, name: spreg.mcfad_rho}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  regprob: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

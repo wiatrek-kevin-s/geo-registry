@@ -1,0 +1,11 @@
+id: laspy-create
+kind: implementation
+name: laspy.create
+software: laspy
+call: {interface: python, name: laspy.create}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  point_format: {type: Union}
+  file_version: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

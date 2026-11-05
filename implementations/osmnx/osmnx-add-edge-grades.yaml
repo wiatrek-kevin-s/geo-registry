@@ -1,0 +1,11 @@
+id: osmnx-add-edge-grades
+kind: implementation
+name: osmnx.add_edge_grades
+software: osmnx
+call: {interface: python, name: osmnx.add_edge_grades}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  G: {type: nx.MultiDiGraph, required: true}
+  add_absolute: {type: bool, default: true}
+status: active
+review: {state: harvested, source: python-packages}

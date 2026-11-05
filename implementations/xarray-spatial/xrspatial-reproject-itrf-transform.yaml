@@ -1,0 +1,15 @@
+id: xrspatial-reproject-itrf-transform
+kind: implementation
+name: xrspatial.reproject.itrf_transform
+software: xarray-spatial
+call: {interface: python, name: xrspatial.reproject.itrf_transform}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  lon: {type: any, required: true}
+  lat: {type: any, required: true}
+  h: {type: number, default: 0.0}
+  src: {type: any, required: true}
+  tgt: {type: any, required: true}
+  epoch: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

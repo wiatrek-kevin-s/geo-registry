@@ -1,0 +1,11 @@
+id: pyproj-transformer
+kind: implementation
+name: pyproj.Transformer
+software: pyproj
+call: {interface: python, name: pyproj.Transformer}
+harvest: {harvester: python-packages, engine_version: 3.8.0}
+parameters:
+  transformer_maker: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

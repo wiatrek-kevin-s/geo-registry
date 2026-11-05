@@ -1,0 +1,19 @@
+id: spreg-panel-utils-prepare-panel
+kind: implementation
+name: spreg.panel_utils.prepare_panel
+software: spreg
+call: {interface: python, name: spreg.panel_utils.prepare_panel}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  y: {type: any, required: true}
+  x: {type: any, required: true}
+  w: {type: any, required: true}
+  name_y: {type: any, required: true}
+  name_x: {type: any, required: true}
+  slx_lags: {type: any, required: true}
+  slx_vars: {type: any, required: true}
+  title: {type: any, required: true}
+  time_effects: {type: any, required: true}
+  add_constant: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

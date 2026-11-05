@@ -1,0 +1,14 @@
+id: rasterio-io-memoryfile
+kind: implementation
+name: rasterio.io.MemoryFile
+software: rasterio
+call: {interface: python, name: rasterio.io.MemoryFile}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  file_or_bytes: {type: any}
+  dirname: {type: any}
+  filename: {type: any}
+  ext: {type: string, default: .tif}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

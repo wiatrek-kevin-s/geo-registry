@@ -1,0 +1,12 @@
+id: inequality-atkinson-atkinson
+kind: implementation
+name: inequality.atkinson.atkinson
+software: inequality
+call: {interface: python, name: inequality.atkinson.atkinson}
+harvest: {harvester: python-packages, engine_version: 1.2.0}
+parameters:
+  y: {type: any, required: true}
+  epsilon: {type: any, required: true}
+  column: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

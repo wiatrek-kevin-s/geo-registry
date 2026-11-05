@@ -1,0 +1,11 @@
+id: h3-api-memview-int-are-neighbor-cells
+kind: implementation
+name: h3.api.memview_int.are_neighbor_cells
+software: h3-py
+call: {interface: python, name: h3.api.memview_int.are_neighbor_cells}
+harvest: {harvester: python-packages, engine_version: 4.5.0}
+parameters:
+  h1: {type: any, required: true}
+  h2: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

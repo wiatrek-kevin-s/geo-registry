@@ -1,0 +1,11 @@
+id: turf-combine
+kind: implementation
+name: turf.combine
+software: turf-js
+call: {interface: js, name: turf.combine}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  fc: {type: FeatureCollection<Point | MultiPoint | LineString | MultiLineString | Polygon | MultiPolygon>, required: true}
+notes: From @turf/combine.
+status: active
+review: {state: harvested, source: turf}

@@ -1,0 +1,15 @@
+id: spreg-set-name-x-regimes
+kind: implementation
+name: spreg.set_name_x_regimes
+software: spreg
+call: {interface: python, name: spreg.set_name_x_regimes}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  name_x: {type: any, required: true}
+  constant_regi: {type: any, required: true}
+  cols2regi: {type: any, required: true}
+  regimes_set: {type: any, required: true}
+  xtype: {type: any, required: true}
+  rlist: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,26 @@
+id: spreg-pooledols
+kind: implementation
+name: spreg.PooledOLS
+software: spreg
+call: {interface: python, name: spreg.PooledOLS}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  y: {type: any, required: true}
+  x: {type: any, required: true}
+  w: {type: any, required: true}
+  slx_lags: {type: integer, default: 0}
+  slx_vars: {type: string, default: all}
+  time_effects: {type: boolean, default: false}
+  robust: {type: any}
+  vm: {type: boolean, default: false}
+  nonspat_diag: {type: boolean, default: false}
+  spat_diag: {type: boolean, default: true}
+  BSK_list: {type: any, note: 'default [''LMJ'', ''LM1'', ''LM2'']'}
+  name_y: {type: any}
+  name_x: {type: any}
+  name_w: {type: any}
+  name_ds: {type: any}
+  latex: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

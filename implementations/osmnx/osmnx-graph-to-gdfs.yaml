@@ -1,0 +1,14 @@
+id: osmnx-graph-to-gdfs
+kind: implementation
+name: osmnx.graph_to_gdfs
+software: osmnx
+call: {interface: python, name: osmnx.graph_to_gdfs}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  G: {type: nx.MultiGraph | nx.MultiDiGraph, required: true}
+  nodes: {type: bool, default: true}
+  edges: {type: bool, default: true}
+  node_geometry: {type: bool, default: true}
+  fill_edge_geometry: {type: bool, default: true}
+status: active
+review: {state: harvested, source: python-packages}

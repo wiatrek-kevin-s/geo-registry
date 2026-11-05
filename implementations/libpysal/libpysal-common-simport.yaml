@@ -1,0 +1,10 @@
+id: libpysal-common-simport
+kind: implementation
+name: libpysal.common.simport
+software: libpysal
+call: {interface: python, name: libpysal.common.simport}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  modname: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

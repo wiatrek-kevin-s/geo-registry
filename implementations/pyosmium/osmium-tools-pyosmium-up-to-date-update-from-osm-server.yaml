@@ -1,0 +1,11 @@
+id: osmium-tools-pyosmium-up-to-date-update-from-osm-server
+kind: implementation
+name: osmium.tools.pyosmium_up_to_date.update_from_osm_server
+software: pyosmium
+call: {interface: python, name: osmium.tools.pyosmium_up_to_date.update_from_osm_server}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters:
+  start: {type: ReplicationStart, required: true}
+  options: {type: Any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

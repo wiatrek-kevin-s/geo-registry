@@ -1,0 +1,13 @@
+id: fiona-feature
+kind: implementation
+name: fiona.Feature
+software: fiona
+call: {interface: python, name: fiona.Feature}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  geometry: {type: any}
+  id: {type: any}
+  properties: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

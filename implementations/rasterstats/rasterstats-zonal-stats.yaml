@@ -1,0 +1,9 @@
+id: rasterstats-zonal-stats
+kind: implementation
+name: rasterstats.zonal_stats
+software: rasterstats
+call: {interface: python, name: rasterstats.zonal_stats}
+harvest: {harvester: python-packages, engine_version: 0.21.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

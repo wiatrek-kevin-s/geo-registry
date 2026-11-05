@@ -1,0 +1,10 @@
+id: osmium-io-writer
+kind: implementation
+name: osmium.io.Writer
+software: pyosmium
+call: {interface: python, name: osmium.io.Writer}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

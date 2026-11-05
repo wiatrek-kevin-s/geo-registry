@@ -1,0 +1,11 @@
+id: topojson-ops-winding-order
+kind: implementation
+name: topojson.ops.winding_order
+software: topojson
+call: {interface: python, name: topojson.ops.winding_order}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  geom: {type: any, required: true}
+  order: {type: string, default: CW_CCW}
+status: active
+review: {state: harvested, source: python-packages}

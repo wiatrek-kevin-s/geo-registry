@@ -1,0 +1,13 @@
+id: turf-singlepolygontoline
+kind: implementation
+name: turf.singlePolygonToLine
+software: turf-js
+call: {interface: js, name: turf.singlePolygonToLine}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  poly: {type: 'Feature<G, P> | G', required: true}
+  options: {type: '{ properties?: any; }'}
+  options.properties: {type: any, note: field of options}
+notes: From @turf/polygon-to-line.
+status: active
+review: {state: harvested, source: turf}

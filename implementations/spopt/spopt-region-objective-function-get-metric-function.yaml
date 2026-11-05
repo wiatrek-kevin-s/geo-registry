@@ -1,0 +1,10 @@
+id: spopt-region-objective-function-get-metric-function
+kind: implementation
+name: spopt.region.objective_function.get_metric_function
+software: spopt
+call: {interface: python, name: spopt.region.objective_function.get_metric_function}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  metric: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

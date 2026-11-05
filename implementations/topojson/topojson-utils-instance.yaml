@@ -1,0 +1,10 @@
+id: topojson-utils-instance
+kind: implementation
+name: topojson.utils.instance
+software: topojson
+call: {interface: python, name: topojson.utils.instance}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  obj: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

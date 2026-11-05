@@ -1,0 +1,11 @@
+id: libpysal-cg-get-polygon-point-dist
+kind: implementation
+name: libpysal.cg.get_polygon_point_dist
+software: libpysal
+call: {interface: python, name: libpysal.cg.get_polygon_point_dist}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  poly: {type: any, required: true}
+  pt: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

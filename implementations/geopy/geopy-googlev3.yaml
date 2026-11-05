@@ -1,0 +1,21 @@
+id: geopy-googlev3
+kind: implementation
+name: geopy.GoogleV3
+software: geopy
+call: {interface: python, name: geopy.GoogleV3}
+harvest: {harvester: python-packages, engine_version: 2.5.0}
+parameters:
+  api_key: {type: any}
+  domain: {type: string, default: maps.googleapis.com}
+  scheme: {type: any}
+  client_id: {type: any}
+  secret_key: {type: any}
+  timeout: {type: any, note: default DEFAULT_SENTINEL}
+  proxies: {type: any, note: default DEFAULT_SENTINEL}
+  user_agent: {type: any}
+  ssl_context: {type: any, note: default DEFAULT_SENTINEL}
+  adapter_factory: {type: any}
+  channel: {type: string, default: ''}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

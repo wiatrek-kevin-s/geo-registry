@@ -1,0 +1,12 @@
+id: xrspatial-utils-height-implied-by-aspect-ratio
+kind: implementation
+name: xrspatial.utils.height_implied_by_aspect_ratio
+software: xarray-spatial
+call: {interface: python, name: xrspatial.utils.height_implied_by_aspect_ratio}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  W: {type: any, required: true}
+  X: {type: any, required: true}
+  Y: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,13 @@
+id: spreg-basesurerrorgm
+kind: implementation
+name: spreg.BaseSURerrorGM
+software: spreg
+call: {interface: python, name: spreg.BaseSURerrorGM}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  bigy: {type: any, required: true}
+  bigX: {type: any, required: true}
+  w: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

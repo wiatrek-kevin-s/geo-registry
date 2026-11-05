@@ -1,0 +1,14 @@
+id: gstools-covmodel-plot-plot-cor-spatial
+kind: implementation
+name: gstools.covmodel.plot.plot_cor_spatial
+software: gstools
+call: {interface: python, name: gstools.covmodel.plot.plot_cor_spatial}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  model: {type: any, required: true}
+  x_min: {type: number, default: 0.0}
+  x_max: {type: any}
+  fig: {type: any}
+  ax: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

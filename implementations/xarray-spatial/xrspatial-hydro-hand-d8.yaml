@@ -1,0 +1,14 @@
+id: xrspatial-hydro-hand-d8
+kind: implementation
+name: xrspatial.hydro.hand_d8
+software: xarray-spatial
+call: {interface: python, name: xrspatial.hydro.hand_d8}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  flow_dir: {type: xr.DataArray, required: true}
+  flow_accum: {type: xr.DataArray, required: true}
+  elevation: {type: xr.DataArray, required: true}
+  threshold: {type: float, default: 100}
+  name: {type: str, default: hand}
+status: active
+review: {state: harvested, source: python-packages}

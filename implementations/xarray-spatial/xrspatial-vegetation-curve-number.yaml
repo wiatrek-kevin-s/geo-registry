@@ -1,0 +1,13 @@
+id: xrspatial-vegetation-curve-number
+kind: implementation
+name: xrspatial.vegetation_curve_number
+software: xarray-spatial
+call: {interface: python, name: xrspatial.vegetation_curve_number}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  landcover_agg: {type: xr.DataArray, required: true}
+  soil_group_agg: {type: xr.DataArray, required: true}
+  lookup: {type: dict | None}
+  name: {type: str, default: curve_number}
+status: active
+review: {state: harvested, source: python-packages}

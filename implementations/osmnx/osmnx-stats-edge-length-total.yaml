@@ -1,0 +1,10 @@
+id: osmnx-stats-edge-length-total
+kind: implementation
+name: osmnx.stats.edge_length_total
+software: osmnx
+call: {interface: python, name: osmnx.stats.edge_length_total}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  G: {type: nx.MultiGraph, required: true}
+status: active
+review: {state: harvested, source: python-packages}

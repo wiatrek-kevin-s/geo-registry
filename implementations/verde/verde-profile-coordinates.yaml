@@ -1,0 +1,13 @@
+id: verde-profile-coordinates
+kind: implementation
+name: verde.profile_coordinates
+software: verde
+call: {interface: python, name: verde.profile_coordinates}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  point1: {type: any, required: true}
+  point2: {type: any, required: true}
+  size: {type: any, required: true}
+  extra_coords: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,10 @@
+id: skgstat-variogram-skgstat-to-krige
+kind: implementation
+name: skgstat.Variogram.skgstat_to_krige
+software: scikit-gstat
+call: {interface: python, name: skgstat.Variogram.skgstat_to_krige}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  variogram: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

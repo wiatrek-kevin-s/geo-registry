@@ -1,0 +1,14 @@
+id: sf-st-nearest-feature
+kind: implementation
+name: sf::st_nearest_feature
+software: sf
+call: {interface: r, name: 'sf::st_nearest_feature'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  check_crs: {type: any, default: 'TRUE'}
+  longlat: {type: any, default: isTRUE(st_is_longlat(x))}
+status: active
+review: {state: harvested, source: r-packages}

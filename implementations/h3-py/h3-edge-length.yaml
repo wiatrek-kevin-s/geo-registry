@@ -1,0 +1,11 @@
+id: h3-edge-length
+kind: implementation
+name: h3.edge_length
+software: h3-py
+call: {interface: python, name: h3.edge_length}
+harvest: {harvester: python-packages, engine_version: 4.5.0}
+parameters:
+  e: {type: any, required: true}
+  unit: {type: string, default: km}
+status: active
+review: {state: harvested, source: python-packages}

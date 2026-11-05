@@ -1,0 +1,16 @@
+id: terra-crds
+kind: implementation
+name: terra::crds
+software: terra
+call: {interface: r, name: 'terra::crds'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  df: {type: any, default: 'FALSE'}
+  na.rm: {type: any, default: 'TRUE'}
+  na.all: {type: any, default: 'FALSE'}
+  list: {type: any, default: 'FALSE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

@@ -1,0 +1,16 @@
+id: segregation-batch-spatialimplicitindex
+kind: implementation
+name: segregation.batch.SpatialImplicitIndex
+software: segregation
+call: {interface: python, name: segregation.batch.SpatialImplicitIndex}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  w: {type: any, required: true}
+  network: {type: any, required: true}
+  distance: {type: integer, default: 1000}
+  decay: {type: string, default: linear}
+  function: {type: string, default: triangular}
+  precompute: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

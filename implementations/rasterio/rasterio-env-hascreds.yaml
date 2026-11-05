@@ -1,0 +1,9 @@
+id: rasterio-env-hascreds
+kind: implementation
+name: rasterio.env.hascreds
+software: rasterio
+call: {interface: python, name: rasterio.env.hascreds}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

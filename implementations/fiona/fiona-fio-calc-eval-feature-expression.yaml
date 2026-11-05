@@ -1,0 +1,11 @@
+id: fiona-fio-calc-eval-feature-expression
+kind: implementation
+name: fiona.fio.calc.eval_feature_expression
+software: fiona
+call: {interface: python, name: fiona.fio.calc.eval_feature_expression}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  feature: {type: any, required: true}
+  expression: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

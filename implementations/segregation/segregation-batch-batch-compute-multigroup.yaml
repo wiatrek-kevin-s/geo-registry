@@ -1,0 +1,11 @@
+id: segregation-batch-batch-compute-multigroup
+kind: implementation
+name: segregation.batch.batch_compute_multigroup
+software: segregation
+call: {interface: python, name: segregation.batch.batch_compute_multigroup}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  gdf: {type: any, required: true}
+  groups: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

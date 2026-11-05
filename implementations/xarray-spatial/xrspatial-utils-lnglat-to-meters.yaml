@@ -1,0 +1,11 @@
+id: xrspatial-utils-lnglat-to-meters
+kind: implementation
+name: xrspatial.utils.lnglat_to_meters
+software: xarray-spatial
+call: {interface: python, name: xrspatial.utils.lnglat_to_meters}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  longitude: {type: any, required: true}
+  latitude: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

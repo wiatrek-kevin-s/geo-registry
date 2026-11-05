@@ -1,0 +1,11 @@
+id: pystac-client-client-call-modifier
+kind: implementation
+name: pystac_client.client.call_modifier
+software: pystac-client
+call: {interface: python, name: pystac_client.client.call_modifier}
+harvest: {harvester: python-packages, engine_version: 0.9.1}
+parameters:
+  modifier: {type: any, required: true}
+  obj: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

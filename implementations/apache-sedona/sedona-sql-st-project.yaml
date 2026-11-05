@@ -1,0 +1,13 @@
+id: sedona-sql-st-project
+kind: implementation
+name: sedona.sql.ST_Project
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_Project}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geom: {type: Union, required: true}
+  distance: {type: Union, required: true}
+  azimuth: {type: Union, required: true}
+  lenient: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

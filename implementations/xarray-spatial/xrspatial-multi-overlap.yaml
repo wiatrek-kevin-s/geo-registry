@@ -1,0 +1,15 @@
+id: xrspatial-multi-overlap
+kind: implementation
+name: xrspatial.multi_overlap
+software: xarray-spatial
+call: {interface: python, name: xrspatial.multi_overlap}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: any, required: true}
+  func: {type: any, required: true}
+  n_outputs: {type: any, required: true}
+  depth: {type: any, required: true}
+  boundary: {type: string, default: nan}
+  dtype: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

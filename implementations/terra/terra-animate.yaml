@@ -1,0 +1,20 @@
+id: terra-animate
+kind: implementation
+name: terra::animate
+software: terra
+call: {interface: r, name: 'terra::animate'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  pause: {type: any, default: '0.25'}
+  main: {type: any, required: true}
+  range: {type: any, default: 'NULL'}
+  maxcell: {type: any, default: '50000'}
+  n: {type: any, default: '1'}
+  vars: {type: any, default: 'NULL'}
+  add: {type: any, default: 'NULL'}
+  ext: {type: any, default: 'NULL'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

@@ -1,0 +1,12 @@
+id: rioxarray-raster-array-rasterarray-write-nodata
+kind: implementation
+name: RasterArray.write_nodata
+software: rioxarray
+call: {interface: python, name: rioxarray.raster_array.RasterArray.write_nodata}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  input_nodata: {type: Optional, required: true}
+  encoded: {type: bool, default: false}
+  inplace: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

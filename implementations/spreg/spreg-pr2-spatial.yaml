@@ -1,0 +1,10 @@
+id: spreg-pr2-spatial
+kind: implementation
+name: spreg.pr2_spatial
+software: spreg
+call: {interface: python, name: spreg.pr2_spatial}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  tslsreg: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,15 @@
+id: rioxarray-raster-array-rasterarray-reproject
+kind: implementation
+name: RasterArray.reproject
+software: rioxarray
+call: {interface: python, name: rioxarray.raster_array.RasterArray.reproject}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  dst_crs: {type: Any, required: true}
+  resolution: {type: Union}
+  shape: {type: Optional}
+  transform: {type: Optional}
+  resampling: {type: Union, note: 'default <Resampling.nearest: 0>'}
+  nodata: {type: Optional}
+status: active
+review: {state: harvested, source: python-packages}

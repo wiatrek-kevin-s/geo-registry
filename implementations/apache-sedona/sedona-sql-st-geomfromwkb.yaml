@@ -1,0 +1,10 @@
+id: sedona-sql-st-geomfromwkb
+kind: implementation
+name: sedona.sql.ST_GeomFromWKB
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_GeomFromWKB}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  wkb: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

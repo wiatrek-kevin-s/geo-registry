@@ -1,0 +1,12 @@
+id: turf-propeach
+kind: implementation
+name: turf.propEach
+software: turf-js
+call: {interface: js, name: turf.propEach}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  geojson: {type: Feature<any> | FeatureCollection<any> | Feature<GeometryCollection>, required: true}
+  callback: {type: '(currentProperties: Props, featureIndex: number) => void', required: true}
+notes: From @turf/meta.
+status: active
+review: {state: harvested, source: turf}

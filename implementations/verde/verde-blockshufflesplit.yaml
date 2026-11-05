@@ -1,0 +1,17 @@
+id: verde-blockshufflesplit
+kind: implementation
+name: verde.BlockShuffleSplit
+software: verde
+call: {interface: python, name: verde.BlockShuffleSplit}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  spacing: {type: any}
+  shape: {type: any}
+  n_splits: {type: integer, default: 10}
+  test_size: {type: number, default: 0.1}
+  train_size: {type: any}
+  random_state: {type: any}
+  balancing: {type: integer, default: 10}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

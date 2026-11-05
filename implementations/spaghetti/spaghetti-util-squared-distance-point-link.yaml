@@ -1,0 +1,11 @@
+id: spaghetti-util-squared-distance-point-link
+kind: implementation
+name: spaghetti.util.squared_distance_point_link
+software: spaghetti
+call: {interface: python, name: spaghetti.util.squared_distance_point_link}
+harvest: {harvester: python-packages, engine_version: 1.7.6}
+parameters:
+  point: {type: any, required: true}
+  link: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

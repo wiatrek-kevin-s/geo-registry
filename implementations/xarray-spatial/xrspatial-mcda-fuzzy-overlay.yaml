@@ -1,0 +1,13 @@
+id: xrspatial-mcda-fuzzy-overlay
+kind: implementation
+name: xrspatial.mcda.fuzzy_overlay
+software: xarray-spatial
+call: {interface: python, name: xrspatial.mcda.fuzzy_overlay}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  criteria: {type: xr.Dataset, required: true}
+  operator: {type: str, default: and}
+  gamma: {type: float, default: 0.9}
+  name: {type: str, default: fuzzy_overlay}
+status: active
+review: {state: harvested, source: python-packages}

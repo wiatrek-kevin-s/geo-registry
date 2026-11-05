@@ -1,0 +1,13 @@
+id: rasterio-transform-from-origin
+kind: implementation
+name: rasterio.transform.from_origin
+software: rasterio
+call: {interface: python, name: rasterio.transform.from_origin}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  west: {type: any, required: true}
+  north: {type: any, required: true}
+  xsize: {type: any, required: true}
+  ysize: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: rasterio-profiles-profile
+kind: implementation
+name: rasterio.profiles.Profile
+software: rasterio
+call: {interface: python, name: rasterio.profiles.Profile}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  data: {type: any, note: 'default {}'}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,16 @@
+id: xrspatial-bump
+kind: implementation
+name: xrspatial.bump
+software: xarray-spatial
+call: {interface: python, name: xrspatial.bump}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  width: {type: int}
+  height: {type: int}
+  count: {type: Optional}
+  height_func: {type: any}
+  spread: {type: int, default: 1}
+  agg: {type: DataArray}
+  name: {type: str, default: bump}
+status: active
+review: {state: harvested, source: python-packages}

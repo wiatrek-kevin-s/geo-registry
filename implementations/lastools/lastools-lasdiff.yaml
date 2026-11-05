@@ -1,0 +1,10 @@
+id: lastools-lasdiff
+kind: implementation
+name: lasdiff
+software: lastools
+call: {interface: cli, name: lasdiff}
+harvest: {harvester: cli-packages, engine_version: '20171231'}
+parameters: {}
+notes: 'Listed by name: the program prints free-form usage (run it with -h), so its parameters are not harvested.'
+status: active
+review: {state: harvested, source: cli-packages}

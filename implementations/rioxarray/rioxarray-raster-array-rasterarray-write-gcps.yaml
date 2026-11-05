@@ -1,0 +1,13 @@
+id: rioxarray-raster-array-rasterarray-write-gcps
+kind: implementation
+name: RasterArray.write_gcps
+software: rioxarray
+call: {interface: python, name: rioxarray.raster_array.RasterArray.write_gcps}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  gcps: {type: Iterable, required: true}
+  gcp_crs: {type: Any, required: true}
+  grid_mapping_name: {type: Optional}
+  inplace: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: odc-stac-bench-load-from-json
+kind: implementation
+name: odc.stac.bench.load_from_json
+software: odc-stac
+call: {interface: python, name: odc.stac.bench.load_from_json}
+harvest: {harvester: python-packages, engine_version: 0.5.3}
+parameters:
+  geojson: {type: any, required: true}
+  params: {type: BenchLoadParams, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: verde-model-selection-dispatch
+kind: implementation
+name: verde.model_selection.dispatch
+software: verde
+call: {interface: python, name: verde.model_selection.dispatch}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  function: {type: any, required: true}
+  delayed: {type: boolean, default: false}
+  client: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

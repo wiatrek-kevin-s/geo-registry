@@ -1,0 +1,17 @@
+id: terra-subst
+kind: implementation
+name: terra::subst
+software: terra
+call: {interface: r, name: 'terra::subst'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  from: {type: any, required: true}
+  to: {type: any, required: true}
+  others: {type: any, default: 'NULL'}
+  raw: {type: any, default: 'FALSE'}
+  filename: {type: any, default: '""'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

@@ -1,0 +1,14 @@
+id: xrspatial-mean
+kind: implementation
+name: xrspatial.mean
+software: xarray-spatial
+call: {interface: python, name: xrspatial.mean}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: any, required: true}
+  passes: {type: integer, default: 1}
+  excludes: {type: any}
+  name: {type: string, default: mean}
+  boundary: {type: string, default: nan}
+status: active
+review: {state: harvested, source: python-packages}

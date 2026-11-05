@@ -1,0 +1,12 @@
+id: sf-as-spatial
+kind: implementation
+name: sf::as_Spatial
+software: sf
+call: {interface: r, name: 'sf::as_Spatial'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  from: {type: any, required: true}
+  cast: {type: any, default: 'TRUE'}
+  IDs: {type: any, default: 'paste0("ID", seq_along(from))'}
+status: active
+review: {state: harvested, source: r-packages}

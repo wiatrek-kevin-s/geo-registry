@@ -1,0 +1,14 @@
+id: mgwr-gwr-gwrresultslite
+kind: implementation
+name: mgwr.gwr.GWRResultsLite
+software: mgwr
+call: {interface: python, name: mgwr.gwr.GWRResultsLite}
+harvest: {harvester: python-packages, engine_version: 2.2.1}
+parameters:
+  model: {type: any, required: true}
+  resid: {type: any, required: true}
+  influ: {type: any, required: true}
+  params: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

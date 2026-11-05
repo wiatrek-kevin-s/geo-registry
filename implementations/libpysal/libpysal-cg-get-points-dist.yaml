@@ -1,0 +1,11 @@
+id: libpysal-cg-get-points-dist
+kind: implementation
+name: libpysal.cg.get_points_dist
+software: libpysal
+call: {interface: python, name: libpysal.cg.get_points_dist}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  pt1: {type: any, required: true}
+  pt2: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

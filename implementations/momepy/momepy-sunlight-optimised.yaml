@@ -1,0 +1,14 @@
+id: momepy-sunlight-optimised
+kind: implementation
+name: momepy.sunlight_optimised
+software: momepy
+call: {interface: python, name: momepy.sunlight_optimised}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  geometry: {type: any, required: true}
+  graph: {type: any, required: true}
+  fr_ratio: {type: integer, default: 8}
+  elongation_ratio: {type: number, default: 0.9}
+  min_courtyard_area: {type: integer, default: 1}
+status: active
+review: {state: harvested, source: python-packages}

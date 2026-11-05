@@ -1,0 +1,9 @@
+id: laspy-cli-main-main
+kind: implementation
+name: laspy.cli.main.main
+software: laspy
+call: {interface: python, name: laspy.cli.main.main}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

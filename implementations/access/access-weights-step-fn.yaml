@@ -1,0 +1,10 @@
+id: access-weights-step-fn
+kind: implementation
+name: access.weights.step_fn
+software: access
+call: {interface: python, name: access.weights.step_fn}
+harvest: {harvester: python-packages, engine_version: 1.1.10.post3}
+parameters:
+  step_dict: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

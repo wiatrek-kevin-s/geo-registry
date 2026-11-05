@@ -1,0 +1,19 @@
+id: momepy-gdf-to-nx
+kind: implementation
+name: momepy.gdf_to_nx
+software: momepy
+call: {interface: python, name: momepy.gdf_to_nx}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  gdf_network: {type: any, required: true}
+  approach: {type: string, default: primal}
+  length: {type: string, default: mm_len}
+  multigraph: {type: boolean, default: true}
+  directed: {type: boolean, default: false}
+  angles: {type: boolean, default: true}
+  angle: {type: string, default: angle}
+  oneway_column: {type: any}
+  integer_labels: {type: boolean, default: false}
+  preserve_index: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

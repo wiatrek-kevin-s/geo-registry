@@ -1,0 +1,14 @@
+id: spreg-make-vmult
+kind: implementation
+name: spreg.make_vmult
+software: spreg
+call: {interface: python, name: spreg.make_vmult}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  n: {type: any, required: true}
+  method: {type: string, default: linear}
+  vlow: {type: any, note: 'default [1]'}
+  vup: {type: any, note: 'default [4]'}
+  rng: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

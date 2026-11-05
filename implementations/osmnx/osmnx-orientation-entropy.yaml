@@ -1,0 +1,13 @@
+id: osmnx-orientation-entropy
+kind: implementation
+name: osmnx.orientation_entropy
+software: osmnx
+call: {interface: python, name: osmnx.orientation_entropy}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  G: {type: nx.MultiGraph | nx.MultiDiGraph, required: true}
+  num_bins: {type: int, default: 36}
+  min_length: {type: float, default: 0}
+  weight: {type: str | None}
+status: active
+review: {state: harvested, source: python-packages}

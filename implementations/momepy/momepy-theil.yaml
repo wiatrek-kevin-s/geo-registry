@@ -1,0 +1,12 @@
+id: momepy-theil
+kind: implementation
+name: momepy.theil
+software: momepy
+call: {interface: python, name: momepy.theil}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  y: {type: Series, required: true}
+  graph: {type: Graph, required: true}
+  q: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

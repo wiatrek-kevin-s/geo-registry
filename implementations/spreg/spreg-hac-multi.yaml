@@ -1,0 +1,12 @@
+id: spreg-hac-multi
+kind: implementation
+name: spreg.hac_multi
+software: spreg
+call: {interface: python, name: spreg.hac_multi}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  reg: {type: any, required: true}
+  gwk: {type: any, required: true}
+  constant: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

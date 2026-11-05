@@ -1,0 +1,25 @@
+id: pystac-client-cli-search
+kind: implementation
+name: pystac_client.cli.search
+software: pystac-client
+call: {interface: python, name: pystac_client.cli.search}
+harvest: {harvester: python-packages, engine_version: 0.9.1}
+parameters:
+  client: {type: Client, required: true}
+  matched: {type: bool, default: false}
+  save: {type: any}
+  method: {type: str, default: GET}
+  max_items: {type: any}
+  limit: {type: any}
+  ids: {type: Union}
+  collections: {type: Union}
+  bbox: {type: Union}
+  intersects: {type: Union}
+  datetime: {type: Union}
+  query: {type: Union}
+  filter: {type: Union}
+  filter_lang: {type: any}
+  sortby: {type: Union}
+  fields: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

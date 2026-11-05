@@ -1,0 +1,15 @@
+id: spreg-power-expansion
+kind: implementation
+name: spreg.power_expansion
+software: spreg
+call: {interface: python, name: spreg.power_expansion}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  w: {type: any, required: true}
+  data: {type: any, required: true}
+  scalar: {type: any, required: true}
+  post_multiply: {type: boolean, default: false}
+  threshold: {type: number, default: 1.0e-10}
+  max_iterations: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

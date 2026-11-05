@@ -1,0 +1,12 @@
+id: spreg-spbroadcast
+kind: implementation
+name: spreg.spbroadcast
+software: spreg
+call: {interface: python, name: spreg.spbroadcast}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  a: {type: any, required: true}
+  b: {type: any, required: true}
+  array_out: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

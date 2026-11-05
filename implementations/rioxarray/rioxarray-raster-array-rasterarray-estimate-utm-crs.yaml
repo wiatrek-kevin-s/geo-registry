@@ -1,0 +1,10 @@
+id: rioxarray-raster-array-rasterarray-estimate-utm-crs
+kind: implementation
+name: RasterArray.estimate_utm_crs
+software: rioxarray
+call: {interface: python, name: rioxarray.raster_array.RasterArray.estimate_utm_crs}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  datum_name: {type: str, default: WGS 84}
+status: active
+review: {state: harvested, source: python-packages}

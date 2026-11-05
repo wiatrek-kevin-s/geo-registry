@@ -1,0 +1,10 @@
+id: fiona-features-vertex-count
+kind: implementation
+name: fiona.features.vertex_count
+software: fiona
+call: {interface: python, name: fiona.features.vertex_count}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  obj: {type: object, required: true}
+status: active
+review: {state: harvested, source: python-packages}

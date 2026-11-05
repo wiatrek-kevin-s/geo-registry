@@ -1,0 +1,12 @@
+id: xrspatial-multispectral-gci
+kind: implementation
+name: xrspatial.multispectral.gci
+software: xarray-spatial
+call: {interface: python, name: xrspatial.multispectral.gci}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  nir_agg: {type: xr.DataArray, required: true}
+  green_agg: {type: xr.DataArray, required: true}
+  name: {type: string, default: gci}
+status: active
+review: {state: harvested, source: python-packages}

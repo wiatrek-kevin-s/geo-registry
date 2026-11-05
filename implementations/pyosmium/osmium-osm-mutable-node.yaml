@@ -1,0 +1,12 @@
+id: osmium-osm-mutable-node
+kind: implementation
+name: osmium.osm.mutable.Node
+software: pyosmium
+call: {interface: python, name: osmium.osm.mutable.Node}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters:
+  base: {type: Union}
+  location: {type: Optional}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

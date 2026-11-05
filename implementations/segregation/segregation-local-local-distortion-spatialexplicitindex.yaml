@@ -1,0 +1,10 @@
+id: segregation-local-local-distortion-spatialexplicitindex
+kind: implementation
+name: segregation.local.local_distortion.SpatialExplicitIndex
+software: segregation
+call: {interface: python, name: segregation.local.local_distortion.SpatialExplicitIndex}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

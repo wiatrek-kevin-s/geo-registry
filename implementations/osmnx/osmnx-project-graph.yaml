@@ -1,0 +1,12 @@
+id: osmnx-project-graph
+kind: implementation
+name: osmnx.project_graph
+software: osmnx
+call: {interface: python, name: osmnx.project_graph}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  G: {type: nx.MultiDiGraph, required: true}
+  to_crs: {type: Any | None}
+  to_latlong: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

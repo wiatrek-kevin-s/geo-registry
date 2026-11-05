@@ -1,0 +1,10 @@
+id: laspy-lasreader-emptypointreader
+kind: implementation
+name: laspy.lasreader.EmptyPointReader
+software: laspy
+call: {interface: python, name: laspy.lasreader.EmptyPointReader}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

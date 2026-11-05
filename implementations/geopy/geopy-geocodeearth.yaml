@@ -1,0 +1,18 @@
+id: geopy-geocodeearth
+kind: implementation
+name: geopy.GeocodeEarth
+software: geopy
+call: {interface: python, name: geopy.GeocodeEarth}
+harvest: {harvester: python-packages, engine_version: 2.5.0}
+parameters:
+  api_key: {type: any, required: true}
+  domain: {type: string, default: api.geocode.earth}
+  timeout: {type: any, note: default DEFAULT_SENTINEL}
+  proxies: {type: any, note: default DEFAULT_SENTINEL}
+  user_agent: {type: any}
+  scheme: {type: any}
+  ssl_context: {type: any, note: default DEFAULT_SENTINEL}
+  adapter_factory: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

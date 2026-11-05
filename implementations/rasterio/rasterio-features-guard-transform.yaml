@@ -1,0 +1,10 @@
+id: rasterio-features-guard-transform
+kind: implementation
+name: rasterio.features.guard_transform
+software: rasterio
+call: {interface: python, name: rasterio.features.guard_transform}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  transform: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

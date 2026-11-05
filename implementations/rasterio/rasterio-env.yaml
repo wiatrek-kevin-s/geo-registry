@@ -1,0 +1,14 @@
+id: rasterio-env
+kind: implementation
+name: rasterio.Env
+software: rasterio
+call: {interface: python, name: rasterio.Env}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  session: {type: any}
+  aws_unsigned: {type: boolean, default: false}
+  profile_name: {type: any}
+  session_class: {type: any, note: default rasterio.session.Session.aws_or_dummy}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

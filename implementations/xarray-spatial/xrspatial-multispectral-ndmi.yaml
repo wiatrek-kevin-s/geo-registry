@@ -1,0 +1,12 @@
+id: xrspatial-multispectral-ndmi
+kind: implementation
+name: xrspatial.multispectral.ndmi
+software: xarray-spatial
+call: {interface: python, name: xrspatial.multispectral.ndmi}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  nir_agg: {type: xr.DataArray, required: true}
+  swir1_agg: {type: xr.DataArray, required: true}
+  name: {type: string, default: ndmi}
+status: active
+review: {state: harvested, source: python-packages}

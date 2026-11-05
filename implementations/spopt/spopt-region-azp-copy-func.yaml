@@ -1,0 +1,10 @@
+id: spopt-region-azp-copy-func
+kind: implementation
+name: spopt.region.azp.copy_func
+software: spopt
+call: {interface: python, name: spopt.region.azp.copy_func}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  f: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

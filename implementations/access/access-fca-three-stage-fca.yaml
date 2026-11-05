@@ -1,0 +1,22 @@
+id: access-fca-three-stage-fca
+kind: implementation
+name: access.fca.three_stage_fca
+software: access
+call: {interface: python, name: access.fca.three_stage_fca}
+harvest: {harvester: python-packages, engine_version: 1.1.10.post3}
+parameters:
+  demand_df: {type: any, required: true}
+  supply_df: {type: any, required: true}
+  cost_df: {type: any, required: true}
+  max_cost: {type: any, required: true}
+  demand_index: {type: string, default: geoid}
+  demand_name: {type: string, default: demand}
+  supply_index: {type: string, default: geoid}
+  supply_name: {type: string, default: supply}
+  cost_origin: {type: string, default: origin}
+  cost_dest: {type: string, default: dest}
+  cost_name: {type: string, default: cost}
+  weight_fn: {type: any}
+  normalize: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

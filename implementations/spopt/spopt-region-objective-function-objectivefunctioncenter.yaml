@@ -1,0 +1,13 @@
+id: spopt-region-objective-function-objectivefunctioncenter
+kind: implementation
+name: spopt.region.objective_function.ObjectiveFunctionCenter
+software: spopt
+call: {interface: python, name: spopt.region.objective_function.ObjectiveFunctionCenter}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  metric: {type: any}
+  center: {type: any, note: default numpy.mean}
+  reduction: {type: any, note: default numpy.sum}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

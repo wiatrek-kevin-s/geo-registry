@@ -1,0 +1,23 @@
+id: terra-focal3d
+kind: implementation
+name: terra::focal3D
+software: terra
+call: {interface: r, name: 'terra::focal3D'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  w: {type: any, default: '3'}
+  fun: {type: any, default: mean}
+  na.policy: {type: any, default: '"all"'}
+  fillvalue: {type: any, default: NA}
+  pad: {type: any, default: 'FALSE'}
+  padvalue: {type: any, default: fillvalue}
+  expand: {type: any, default: 'FALSE'}
+  silent: {type: any, default: 'TRUE'}
+  filename: {type: any, default: '""'}
+  overwrite: {type: any, default: 'FALSE'}
+  wopt: {type: any, default: list()}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

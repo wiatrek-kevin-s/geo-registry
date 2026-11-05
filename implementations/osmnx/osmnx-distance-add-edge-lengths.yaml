@@ -1,0 +1,11 @@
+id: osmnx-distance-add-edge-lengths
+kind: implementation
+name: osmnx.distance.add_edge_lengths
+software: osmnx
+call: {interface: python, name: osmnx.distance.add_edge_lengths}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  G: {type: nx.MultiDiGraph, required: true}
+  edges: {type: 'Iterable[tuple[int, int, int]] | None'}
+status: active
+review: {state: harvested, source: python-packages}

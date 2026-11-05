@@ -1,0 +1,12 @@
+id: xrspatial-hydro-flow-path-dinf
+kind: implementation
+name: xrspatial.hydro.flow_path_dinf
+software: xarray-spatial
+call: {interface: python, name: xrspatial.hydro.flow_path_dinf}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  flow_dir_dinf: {type: xr.DataArray, required: true}
+  start_points: {type: xr.DataArray, required: true}
+  name: {type: str, default: flow_path_dinf}
+status: active
+review: {state: harvested, source: python-packages}

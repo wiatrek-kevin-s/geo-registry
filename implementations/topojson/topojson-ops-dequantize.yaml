@@ -1,0 +1,12 @@
+id: topojson-ops-dequantize
+kind: implementation
+name: topojson.ops.dequantize
+software: topojson
+call: {interface: python, name: topojson.ops.dequantize}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  np_arcs: {type: any, required: true}
+  scale: {type: any, required: true}
+  translate: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

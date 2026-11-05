@@ -1,0 +1,10 @@
+id: pointpats-poly-from-bbox
+kind: implementation
+name: pointpats.poly_from_bbox
+software: pointpats
+call: {interface: python, name: pointpats.poly_from_bbox}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  bbox: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

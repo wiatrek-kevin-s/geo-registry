@@ -1,0 +1,10 @@
+id: xrspatial-hydro-flow-direction-mfd-cupy
+kind: implementation
+name: xrspatial.hydro.flow_direction_mfd.cupy
+software: xarray-spatial
+call: {interface: python, name: xrspatial.hydro.flow_direction_mfd.cupy}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

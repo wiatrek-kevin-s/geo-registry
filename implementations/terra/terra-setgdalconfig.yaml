@@ -1,0 +1,11 @@
+id: terra-setgdalconfig
+kind: implementation
+name: terra::setGDALconfig
+software: terra
+call: {interface: r, name: 'terra::setGDALconfig'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  option: {type: any, required: true}
+  value: {type: any, default: '""'}
+status: active
+review: {state: harvested, source: r-packages}

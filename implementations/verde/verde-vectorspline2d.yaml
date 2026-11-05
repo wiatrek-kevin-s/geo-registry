@@ -1,0 +1,15 @@
+id: verde-vectorspline2d
+kind: implementation
+name: verde.VectorSpline2D
+software: verde
+call: {interface: python, name: verde.VectorSpline2D}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  poisson: {type: number, default: 0.5}
+  mindist: {type: number, default: 10000.0}
+  damping: {type: any}
+  force_coords: {type: any}
+  engine: {type: string, default: auto}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

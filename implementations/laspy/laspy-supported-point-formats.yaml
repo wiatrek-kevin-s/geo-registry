@@ -1,0 +1,9 @@
+id: laspy-supported-point-formats
+kind: implementation
+name: laspy.supported_point_formats
+software: laspy
+call: {interface: python, name: laspy.supported_point_formats}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

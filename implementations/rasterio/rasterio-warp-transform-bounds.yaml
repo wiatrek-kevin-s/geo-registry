@@ -1,0 +1,16 @@
+id: rasterio-warp-transform-bounds
+kind: implementation
+name: rasterio.warp.transform_bounds
+software: rasterio
+call: {interface: python, name: rasterio.warp.transform_bounds}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  src_crs: {type: any, required: true}
+  dst_crs: {type: any, required: true}
+  left: {type: any, required: true}
+  bottom: {type: any, required: true}
+  right: {type: any, required: true}
+  top: {type: any, required: true}
+  densify_pts: {type: integer, default: 21}
+status: active
+review: {state: harvested, source: python-packages}

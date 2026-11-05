@@ -1,0 +1,14 @@
+id: spreg-get-vm-het
+kind: implementation
+name: spreg.get_vm_het
+software: spreg
+call: {interface: python, name: spreg.get_vm_het}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  G: {type: any, required: true}
+  lamb: {type: any, required: true}
+  reg: {type: any, required: true}
+  w: {type: any, required: true}
+  psi: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

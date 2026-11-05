@@ -1,0 +1,9 @@
+id: movingpandas-trajectory-copy
+kind: implementation
+name: Trajectory.copy
+software: movingpandas
+call: {interface: python, name: movingpandas.Trajectory.copy}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

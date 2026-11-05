@@ -1,0 +1,18 @@
+id: xrspatial-idw
+kind: implementation
+name: xrspatial.idw
+software: xarray-spatial
+call: {interface: python, name: xrspatial.idw}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any}
+  z: {type: any}
+  template: {type: any}
+  power: {type: number, default: 2.0}
+  k: {type: any}
+  fill_value: {type: number, note: default nan}
+  name: {type: string, default: idw}
+  column: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

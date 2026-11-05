@@ -1,0 +1,19 @@
+id: terra-maketiles
+kind: implementation
+name: terra::makeTiles
+software: terra
+call: {interface: r, name: 'terra::makeTiles'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  y: {type: any, required: true}
+  filename: {type: any, default: '"tile_.tif"'}
+  extend: {type: any, default: 'FALSE'}
+  na.rm: {type: any, default: 'FALSE'}
+  buffer: {type: any, default: '0'}
+  value: {type: any, default: '"files"'}
+  overwrite: {type: any, default: 'FALSE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

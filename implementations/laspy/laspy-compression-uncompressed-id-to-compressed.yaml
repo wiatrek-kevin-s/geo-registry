@@ -1,0 +1,10 @@
+id: laspy-compression-uncompressed-id-to-compressed
+kind: implementation
+name: laspy.compression.uncompressed_id_to_compressed
+software: laspy
+call: {interface: python, name: laspy.compression.uncompressed_id_to_compressed}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  point_format_id: {type: int, required: true}
+status: active
+review: {state: harvested, source: python-packages}

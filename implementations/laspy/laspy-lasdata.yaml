@@ -1,0 +1,12 @@
+id: laspy-lasdata
+kind: implementation
+name: laspy.LasData
+software: laspy
+call: {interface: python, name: laspy.LasData}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  header: {type: LasHeader, required: true}
+  points: {type: Union}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

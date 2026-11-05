@@ -1,0 +1,12 @@
+id: fiona-features-map-feature
+kind: implementation
+name: fiona.features.map_feature
+software: fiona
+call: {interface: python, name: fiona.features.map_feature}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  expression: {type: str, required: true}
+  feature: {type: Mapping, required: true}
+  dump_parts: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

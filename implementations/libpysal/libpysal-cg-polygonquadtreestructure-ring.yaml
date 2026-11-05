@@ -1,0 +1,11 @@
+id: libpysal-cg-polygonquadtreestructure-ring
+kind: implementation
+name: libpysal.cg.polygonQuadTreeStructure.Ring
+software: libpysal
+call: {interface: python, name: libpysal.cg.polygonQuadTreeStructure.Ring}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  vertices: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

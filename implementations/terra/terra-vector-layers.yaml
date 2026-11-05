@@ -1,0 +1,12 @@
+id: terra-vector-layers
+kind: implementation
+name: terra::vector_layers
+software: terra
+call: {interface: r, name: 'terra::vector_layers'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  filename: {type: any, required: true}
+  delete: {type: any, default: '""'}
+  return_error: {type: any, default: 'FALSE'}
+status: active
+review: {state: harvested, source: r-packages}

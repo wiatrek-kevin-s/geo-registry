@@ -1,0 +1,12 @@
+id: movingpandas-overlay-clip
+kind: implementation
+name: movingpandas.overlay.clip
+software: movingpandas
+call: {interface: python, name: movingpandas.overlay.clip}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  traj: {type: any, required: true}
+  polygon: {type: any, required: true}
+  pointbased: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

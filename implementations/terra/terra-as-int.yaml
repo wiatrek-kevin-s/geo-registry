@@ -1,0 +1,13 @@
+id: terra-as-int
+kind: implementation
+name: terra::as.int
+software: terra
+call: {interface: r, name: 'terra::as.int'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  filename: {type: any, default: '""'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

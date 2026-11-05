@@ -1,0 +1,15 @@
+id: osmnx-graph-from-polygon
+kind: implementation
+name: osmnx.graph_from_polygon
+software: osmnx
+call: {interface: python, name: osmnx.graph_from_polygon}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  polygon: {type: Polygon | MultiPolygon, required: true}
+  network_type: {type: str, default: all}
+  simplify: {type: bool, default: true}
+  retain_all: {type: bool, default: false}
+  truncate_by_edge: {type: bool, default: false}
+  custom_filter: {type: 'str | list[str] | None'}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,9 @@
+id: movingpandas-trajectory-to-linestring
+kind: implementation
+name: Trajectory.to_linestring
+software: movingpandas
+call: {interface: python, name: movingpandas.Trajectory.to_linestring}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

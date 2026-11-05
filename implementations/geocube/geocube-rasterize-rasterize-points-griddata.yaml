@@ -1,0 +1,16 @@
+id: geocube-rasterize-rasterize-points-griddata
+kind: implementation
+name: geocube.rasterize.rasterize_points_griddata
+software: geocube
+call: {interface: python, name: geocube.rasterize.rasterize_points_griddata}
+harvest: {harvester: python-packages, engine_version: 0.7.1}
+parameters:
+  geometry_array: {type: GeoSeries, required: true}
+  data_values: {type: NDArray, required: true}
+  grid_coords: {type: dict, required: true}
+  fill: {type: float, required: true}
+  method: {type: str, default: nearest}
+  rescale: {type: bool, default: false}
+  filter_nan: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

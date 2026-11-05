@@ -1,0 +1,11 @@
+id: rasterio-dtypes-can-cast-dtype
+kind: implementation
+name: rasterio.dtypes.can_cast_dtype
+software: rasterio
+call: {interface: python, name: rasterio.dtypes.can_cast_dtype}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  values: {type: any, required: true}
+  dtype: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,15 @@
+id: fiona-features-transform-geom
+kind: implementation
+name: fiona.features.transform_geom
+software: fiona
+call: {interface: python, name: fiona.features.transform_geom}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  src_crs: {type: any, required: true}
+  dst_crs: {type: any, required: true}
+  geom: {type: any, required: true}
+  antimeridian_cutting: {type: boolean, default: false}
+  antimeridian_offset: {type: number, default: 10.0}
+  precision: {type: integer, default: -1}
+status: active
+review: {state: harvested, source: python-packages}

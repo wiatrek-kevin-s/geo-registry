@@ -1,0 +1,13 @@
+id: spreg-spmultiplier
+kind: implementation
+name: spreg.spmultiplier
+software: spreg
+call: {interface: python, name: spreg.spmultiplier}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  w: {type: any, required: true}
+  rho: {type: any, required: true}
+  method: {type: string, default: simple}
+  mtol: {type: number, default: 1.0e-08}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,13 @@
+id: pyproj-crs-boundcrs
+kind: implementation
+name: pyproj.crs.BoundCRS
+software: pyproj
+call: {interface: python, name: pyproj.crs.BoundCRS}
+harvest: {harvester: python-packages, engine_version: 3.8.0}
+parameters:
+  source_crs: {type: Any, required: true}
+  target_crs: {type: Any, required: true}
+  transformation: {type: Any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

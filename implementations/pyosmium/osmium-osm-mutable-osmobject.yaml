@@ -1,0 +1,19 @@
+id: osmium-osm-mutable-osmobject
+kind: implementation
+name: osmium.osm.mutable.OSMObject
+software: pyosmium
+call: {interface: python, name: osmium.osm.mutable.OSMObject}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters:
+  base: {type: Optional}
+  id: {type: Optional}
+  version: {type: Optional}
+  visible: {type: Optional}
+  changeset: {type: Optional}
+  timestamp: {type: Optional}
+  uid: {type: Optional}
+  tags: {type: Optional}
+  user: {type: Optional}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

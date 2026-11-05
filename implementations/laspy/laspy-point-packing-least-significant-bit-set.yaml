@@ -1,0 +1,10 @@
+id: laspy-point-packing-least-significant-bit-set
+kind: implementation
+name: laspy.point.packing.least_significant_bit_set
+software: laspy
+call: {interface: python, name: laspy.point.packing.least_significant_bit_set}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  mask: {type: int, required: true}
+status: active
+review: {state: harvested, source: python-packages}

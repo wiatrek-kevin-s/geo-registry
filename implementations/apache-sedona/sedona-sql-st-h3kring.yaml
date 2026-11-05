@@ -1,0 +1,12 @@
+id: sedona-sql-st-h3kring
+kind: implementation
+name: sedona.sql.ST_H3KRing
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_H3KRing}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  cell: {type: Union, required: true}
+  k: {type: Union, required: true}
+  exact_ring: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

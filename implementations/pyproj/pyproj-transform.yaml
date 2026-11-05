@@ -1,0 +1,18 @@
+id: pyproj-transform
+kind: implementation
+name: pyproj.transform
+software: pyproj
+call: {interface: python, name: pyproj.transform}
+harvest: {harvester: python-packages, engine_version: 3.8.0}
+parameters:
+  p1: {type: Any, required: true}
+  p2: {type: Any, required: true}
+  x: {type: Any, required: true}
+  y: {type: Any, required: true}
+  z: {type: any}
+  tt: {type: any}
+  radians: {type: bool, default: false}
+  errcheck: {type: bool, default: false}
+  always_xy: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

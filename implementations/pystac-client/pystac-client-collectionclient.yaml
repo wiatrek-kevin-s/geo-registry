@@ -1,0 +1,25 @@
+id: pystac-client-collectionclient
+kind: implementation
+name: pystac_client.CollectionClient
+software: pystac-client
+call: {interface: python, name: pystac_client.CollectionClient}
+harvest: {harvester: python-packages, engine_version: 0.9.1}
+parameters:
+  id: {type: str, required: true}
+  description: {type: str, required: true}
+  extent: {type: pystac.Extent, required: true}
+  title: {type: str | None}
+  stac_extensions: {type: 'list[str] | None'}
+  href: {type: str | None}
+  extra_fields: {type: 'dict[str, Any] | None'}
+  catalog_type: {type: pystac.CatalogType | None}
+  license: {type: str, default: proprietary}
+  keywords: {type: 'list[str] | None'}
+  providers: {type: 'list[pystac.Provider] | None'}
+  summaries: {type: pystac.Summaries | None}
+  assets: {type: 'dict[str, pystac.Asset] | None'}
+  strategy: {type: HrefLayoutStrategy | None}
+  modifier: {type: 'Callable[[Modifiable], None] | None'}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

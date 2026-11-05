@@ -1,0 +1,10 @@
+id: geocube-logger-set-log-level
+kind: implementation
+name: geocube.logger.set_log_level
+software: geocube
+call: {interface: python, name: geocube.logger.set_log_level}
+harvest: {harvester: python-packages, engine_version: 0.7.1}
+parameters:
+  level: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,13 @@
+id: sf-st-zm
+kind: implementation
+name: sf::st_zm
+software: sf
+call: {interface: r, name: 'sf::st_zm'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  drop: {type: any, default: 'TRUE'}
+  what: {type: any, default: '"ZM"'}
+status: active
+review: {state: harvested, source: r-packages}

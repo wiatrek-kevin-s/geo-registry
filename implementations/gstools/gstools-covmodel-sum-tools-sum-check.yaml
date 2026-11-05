@@ -1,0 +1,10 @@
+id: gstools-covmodel-sum-tools-sum-check
+kind: implementation
+name: gstools.covmodel.sum_tools.sum_check
+software: gstools
+call: {interface: python, name: gstools.covmodel.sum_tools.sum_check}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  summod: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

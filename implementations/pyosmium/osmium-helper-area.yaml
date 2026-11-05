@@ -1,0 +1,11 @@
+id: osmium-helper-area
+kind: implementation
+name: osmium.helper.Area
+software: pyosmium
+call: {interface: python, name: osmium.helper.Area}
+harvest: {harvester: python-packages, engine_version: 4.3.2}
+parameters:
+  carea: {type: cosm.COSMArea, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

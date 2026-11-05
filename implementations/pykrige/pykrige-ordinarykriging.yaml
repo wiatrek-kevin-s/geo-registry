@@ -1,0 +1,27 @@
+id: pykrige-ordinarykriging
+kind: implementation
+name: pykrige.OrdinaryKriging
+software: pykrige
+call: {interface: python, name: pykrige.OrdinaryKriging}
+harvest: {harvester: python-packages, engine_version: 1.7.3}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  z: {type: any, required: true}
+  variogram_model: {type: string, default: linear}
+  variogram_parameters: {type: any}
+  variogram_function: {type: any}
+  nlags: {type: integer, default: 6}
+  weight: {type: boolean, default: false}
+  anisotropy_scaling: {type: number, default: 1.0}
+  anisotropy_angle: {type: number, default: 0.0}
+  verbose: {type: boolean, default: false}
+  enable_plotting: {type: boolean, default: false}
+  enable_statistics: {type: boolean, default: false}
+  coordinates_type: {type: string, default: euclidean}
+  exact_values: {type: boolean, default: true}
+  pseudo_inv: {type: boolean, default: false}
+  pseudo_inv_type: {type: string, default: pinv}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

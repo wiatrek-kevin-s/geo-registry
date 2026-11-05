@@ -1,0 +1,11 @@
+id: momepy-neighbor-distance
+kind: implementation
+name: momepy.neighbor_distance
+software: momepy
+call: {interface: python, name: momepy.neighbor_distance}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  geometry: {type: any, required: true}
+  graph: {type: Graph, required: true}
+status: active
+review: {state: harvested, source: python-packages}

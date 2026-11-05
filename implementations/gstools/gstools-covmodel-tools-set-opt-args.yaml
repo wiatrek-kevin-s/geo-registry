@@ -1,0 +1,11 @@
+id: gstools-covmodel-tools-set-opt-args
+kind: implementation
+name: gstools.covmodel.tools.set_opt_args
+software: gstools
+call: {interface: python, name: gstools.covmodel.tools.set_opt_args}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  model: {type: any, required: true}
+  opt_arg: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

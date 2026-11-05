@@ -1,0 +1,10 @@
+id: rasterio-crs
+kind: implementation
+name: rasterio.CRS
+software: rasterio
+call: {interface: python, name: rasterio.CRS}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: momepy-close-gaps
+kind: implementation
+name: momepy.close_gaps
+software: momepy
+call: {interface: python, name: momepy.close_gaps}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  gdf: {type: any, required: true}
+  tolerance: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

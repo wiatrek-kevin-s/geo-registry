@@ -1,0 +1,25 @@
+id: spreg-tsls-endog-regimes
+kind: implementation
+name: spreg.TSLS_Endog_Regimes
+software: spreg
+call: {interface: python, name: spreg.TSLS_Endog_Regimes}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  y: {type: any, required: true}
+  x: {type: any, required: true}
+  yend: {type: any, required: true}
+  q: {type: any, required: true}
+  w: {type: any}
+  n_clusters: {type: any}
+  quorum: {type: integer, default: -1}
+  trace: {type: boolean, default: true}
+  name_y: {type: any}
+  name_x: {type: any}
+  name_yend: {type: any}
+  name_q: {type: any}
+  constant_regi: {type: string, default: many}
+  cols2regi: {type: string, default: all}
+  regime_err_sep: {type: boolean, default: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

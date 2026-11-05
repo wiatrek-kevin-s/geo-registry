@@ -1,0 +1,19 @@
+id: sf-gdal-write
+kind: implementation
+name: sf::gdal_write
+software: sf
+call: {interface: r, name: 'sf::gdal_write'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  file: {type: any, required: true}
+  driver: {type: any, default: '"GTiff"'}
+  options: {type: any, default: character(0)}
+  type: {type: any, default: '"Float32"'}
+  NA_value: {type: any, default: NA_real_}
+  geotransform: {type: any, required: true}
+  update: {type: any, default: 'FALSE'}
+  scale_offset: {type: any, default: 'c(1, 0)'}
+status: active
+review: {state: harvested, source: r-packages}

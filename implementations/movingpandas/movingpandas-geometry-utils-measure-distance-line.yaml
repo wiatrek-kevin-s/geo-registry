@@ -1,0 +1,12 @@
+id: movingpandas-geometry-utils-measure-distance-line
+kind: implementation
+name: movingpandas.geometry_utils.measure_distance_line
+software: movingpandas
+call: {interface: python, name: movingpandas.geometry_utils.measure_distance_line}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  linestring: {type: any, required: true}
+  other: {type: any, required: true}
+  conversion: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

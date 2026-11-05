@@ -1,0 +1,12 @@
+id: gstools-random-dist-gen
+kind: implementation
+name: gstools.random.dist_gen
+software: gstools
+call: {interface: python, name: gstools.random.dist_gen}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  pdf_in: {type: any}
+  cdf_in: {type: any}
+  ppf_in: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,10 @@
+id: pykrige-kriging-tools-read-zmap-grid
+kind: implementation
+name: pykrige.kriging_tools.read_zmap_grid
+software: pykrige
+call: {interface: python, name: pykrige.kriging_tools.read_zmap_grid}
+harvest: {harvester: python-packages, engine_version: 1.7.3}
+parameters:
+  filename: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

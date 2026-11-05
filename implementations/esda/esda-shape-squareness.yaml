@@ -1,0 +1,10 @@
+id: esda-shape-squareness
+kind: implementation
+name: esda.shape.squareness
+software: esda
+call: {interface: python, name: esda.shape.squareness}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  collection: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

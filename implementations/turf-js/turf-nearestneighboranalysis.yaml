@@ -1,0 +1,15 @@
+id: turf-nearestneighboranalysis
+kind: implementation
+name: turf.nearestNeighborAnalysis
+software: turf-js
+call: {interface: js, name: turf.nearestNeighborAnalysis}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  dataset: {type: FeatureCollection<any>, required: true}
+  options: {type: '{ studyArea?: Feature<Polygon>; units?: Units & AreaUnits; properties?: GeoJsonProperties; }'}
+  options.studyArea: {type: Feature<Polygon>, note: field of options}
+  options.units: {type: Units & AreaUnits, note: field of options}
+  options.properties: {type: GeoJsonProperties, note: field of options}
+notes: From @turf/nearest-neighbor-analysis.
+status: active
+review: {state: harvested, source: turf}

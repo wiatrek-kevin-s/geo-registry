@@ -1,0 +1,10 @@
+id: xrspatial-hydro-flow-path-mfd-cupy
+kind: implementation
+name: xrspatial.hydro.flow_path_mfd.cupy
+software: xarray-spatial
+call: {interface: python, name: xrspatial.hydro.flow_path_mfd.cupy}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

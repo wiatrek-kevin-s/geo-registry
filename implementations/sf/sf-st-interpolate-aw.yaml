@@ -1,0 +1,13 @@
+id: sf-st-interpolate-aw
+kind: implementation
+name: sf::st_interpolate_aw
+software: sf
+call: {interface: r, name: 'sf::st_interpolate_aw'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  x: {type: any, required: true}
+  to: {type: any, required: true}
+  extensive: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+status: active
+review: {state: harvested, source: r-packages}

@@ -1,0 +1,10 @@
+id: spopt-region-util-check-solver
+kind: implementation
+name: spopt.region.util.check_solver
+software: spopt
+call: {interface: python, name: spopt.region.util.check_solver}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  solver: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: spreg-spmultiply
+kind: implementation
+name: spreg.spmultiply
+software: spreg
+call: {interface: python, name: spreg.spmultiply}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  a: {type: any, required: true}
+  b: {type: any, required: true}
+  array_out: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

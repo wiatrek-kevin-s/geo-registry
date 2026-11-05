@@ -1,0 +1,10 @@
+id: spreg-sur-dict2mat
+kind: implementation
+name: spreg.sur_dict2mat
+software: spreg
+call: {interface: python, name: spreg.sur_dict2mat}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  dicts: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,10 @@
+id: topojson-ops-cart
+kind: implementation
+name: topojson.ops.cart
+software: topojson
+call: {interface: python, name: topojson.ops.cart}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  arr: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

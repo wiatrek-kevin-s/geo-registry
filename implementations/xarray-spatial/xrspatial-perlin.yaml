@@ -1,0 +1,13 @@
+id: xrspatial-perlin
+kind: implementation
+name: xrspatial.perlin
+software: xarray-spatial
+call: {interface: python, name: xrspatial.perlin}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: xr.DataArray, required: true}
+  freq: {type: tuple, note: 'default (1, 1)'}
+  seed: {type: int, default: 5}
+  name: {type: str, default: perlin}
+status: active
+review: {state: harvested, source: python-packages}

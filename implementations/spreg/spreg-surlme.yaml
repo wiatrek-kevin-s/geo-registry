@@ -1,0 +1,13 @@
+id: spreg-surlme
+kind: implementation
+name: spreg.surLMe
+software: spreg
+call: {interface: python, name: spreg.surLMe}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  n_eq: {type: any, required: true}
+  WS: {type: any, required: true}
+  bigE: {type: any, required: true}
+  sig: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

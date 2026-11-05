@@ -1,0 +1,11 @@
+id: rioxarray-raster-array-rasterarray-update-attrs
+kind: implementation
+name: RasterArray.update_attrs
+software: rioxarray
+call: {interface: python, name: rioxarray.raster_array.RasterArray.update_attrs}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  new_attrs: {type: dict, required: true}
+  inplace: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

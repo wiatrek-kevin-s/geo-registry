@@ -1,0 +1,11 @@
+id: libpysal-cg-get-ray-segment-intersect
+kind: implementation
+name: libpysal.cg.get_ray_segment_intersect
+software: libpysal
+call: {interface: python, name: libpysal.cg.get_ray_segment_intersect}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  ray: {type: any, required: true}
+  seg: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

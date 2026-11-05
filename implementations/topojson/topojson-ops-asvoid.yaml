@@ -1,0 +1,10 @@
+id: topojson-ops-asvoid
+kind: implementation
+name: topojson.ops.asvoid
+software: topojson
+call: {interface: python, name: topojson.ops.asvoid}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  arr: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

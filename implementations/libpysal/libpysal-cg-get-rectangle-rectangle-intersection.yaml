@@ -1,0 +1,12 @@
+id: libpysal-cg-get-rectangle-rectangle-intersection
+kind: implementation
+name: libpysal.cg.get_rectangle_rectangle_intersection
+software: libpysal
+call: {interface: python, name: libpysal.cg.get_rectangle_rectangle_intersection}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  r0: {type: any, required: true}
+  r1: {type: any, required: true}
+  checkOverlap: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

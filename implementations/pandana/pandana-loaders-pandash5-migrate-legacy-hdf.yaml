@@ -1,0 +1,11 @@
+id: pandana-loaders-pandash5-migrate-legacy-hdf
+kind: implementation
+name: pandana.loaders.pandash5.migrate_legacy_hdf
+software: pandana
+call: {interface: python, name: pandana.loaders.pandash5.migrate_legacy_hdf}
+harvest: {harvester: python-packages, engine_version: '0.8'}
+parameters:
+  filename: {type: any, required: true}
+  output_filename: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: h3-api-numpy-int-average-hexagon-area
+kind: implementation
+name: h3.api.numpy_int.average_hexagon_area
+software: h3-py
+call: {interface: python, name: h3.api.numpy_int.average_hexagon_area}
+harvest: {harvester: python-packages, engine_version: 4.5.0}
+parameters:
+  res: {type: any, required: true}
+  unit: {type: string, default: km^2}
+status: active
+review: {state: harvested, source: python-packages}

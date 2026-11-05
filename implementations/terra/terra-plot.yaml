@@ -1,0 +1,67 @@
+id: terra-plot
+kind: implementation
+name: terra::plot
+software: terra
+call: {interface: r, name: 'terra::plot'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  background: {type: any, default: 'NULL'}
+  col: {type: any, default: '"black"'}
+  mar: {type: any, default: 'NULL'}
+  labels: {type: any, default: 'TRUE'}
+  retro: {type: any, default: 'FALSE'}
+  lab.loc: {type: any, default: 'c(1, 1)'}
+  lab.lon: {type: any, default: 'NULL'}
+  lab.lat: {type: any, default: 'NULL'}
+  lab.cex: {type: any, default: '0.65'}
+  lab.col: {type: any, default: '"black"'}
+  off.lat: {type: any, default: '0.25'}
+  off.lon: {type: any, default: '0.25'}
+  box: {type: any, default: 'FALSE'}
+  box.col: {type: any, default: '"black"'}
+  tickmarks: {type: any, default: 'FALSE'}
+  add: {type: any, default: 'FALSE'}
+  nodes: {type: any, default: 'TRUE'}
+  node.col: {type: any, default: '"red"'}
+  node.pch: {type: any, default: '20'}
+  cex: {type: any, default: '1'}
+  maxcell: {type: any, default: 1e+05}
+  warn: {type: any, default: 'TRUE'}
+  nc: {type: any, required: true}
+  nr: {type: any, required: true}
+  maxnl: {type: any, default: '16'}
+  smooth: {type: any, default: 'FALSE'}
+  gridded: {type: any, default: 'FALSE'}
+  ncol: {type: any, default: '25'}
+  nrow: {type: any, default: '25'}
+  main: {type: any, required: true}
+  plg: {type: any, default: list()}
+  pax: {type: any, default: list()}
+  type: {type: any, default: 'NULL'}
+  legend: {type: any, default: 'TRUE'}
+  axes: {type: any, default: '!add'}
+  range: {type: any, default: 'NULL'}
+  fill_range: {type: any, default: 'FALSE'}
+  levels: {type: any, default: 'NULL'}
+  all_levels: {type: any, default: 'FALSE'}
+  breaks: {type: any, default: 'NULL'}
+  breakby: {type: any, default: '"eqint"'}
+  fun: {type: any, default: 'NULL'}
+  colNA: {type: any, default: 'NULL'}
+  alpha: {type: any, default: 'NULL'}
+  sort: {type: any, default: 'FALSE'}
+  reverse: {type: any, default: 'FALSE'}
+  grid: {type: any, default: 'FALSE'}
+  zebra: {type: any, default: 'FALSE'}
+  ext: {type: any, default: 'NULL'}
+  reset: {type: any, default: 'FALSE'}
+  buffer: {type: any, default: 'FALSE'}
+  clip: {type: any, default: 'TRUE'}
+  overview: {type: any, default: 'NULL'}
+  values: {type: any, default: 'NULL'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

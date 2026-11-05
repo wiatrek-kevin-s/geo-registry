@@ -1,0 +1,10 @@
+id: rasterio-enums-transformdirection
+kind: implementation
+name: rasterio.enums.TransformDirection
+software: rasterio
+call: {interface: python, name: rasterio.enums.TransformDirection}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

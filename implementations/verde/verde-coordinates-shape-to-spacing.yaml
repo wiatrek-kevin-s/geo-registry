@@ -1,0 +1,12 @@
+id: verde-coordinates-shape-to-spacing
+kind: implementation
+name: verde.coordinates.shape_to_spacing
+software: verde
+call: {interface: python, name: verde.coordinates.shape_to_spacing}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  region: {type: any, required: true}
+  shape: {type: any, required: true}
+  pixel_register: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

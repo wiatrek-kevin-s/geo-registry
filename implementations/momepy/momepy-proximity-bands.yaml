@@ -1,0 +1,14 @@
+id: momepy-proximity-bands
+kind: implementation
+name: momepy.proximity_bands
+software: momepy
+call: {interface: python, name: momepy.proximity_bands}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  geometry: {type: any, required: true}
+  band: {type: integer, default: 20}
+  shrink: {type: float, default: 0.001}
+  segment: {type: float, default: 2}
+  single_sided: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

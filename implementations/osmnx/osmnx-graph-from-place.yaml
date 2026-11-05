@@ -1,0 +1,16 @@
+id: osmnx-graph-from-place
+kind: implementation
+name: osmnx.graph_from_place
+software: osmnx
+call: {interface: python, name: osmnx.graph_from_place}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  query: {type: 'str | dict[str, str] | list[str | dict[str, str]]', required: true}
+  network_type: {type: str, default: all}
+  simplify: {type: bool, default: true}
+  retain_all: {type: bool, default: false}
+  truncate_by_edge: {type: bool, default: false}
+  which_result: {type: 'int | None | list[int | None]'}
+  custom_filter: {type: 'str | list[str] | None'}
+status: active
+review: {state: harvested, source: python-packages}

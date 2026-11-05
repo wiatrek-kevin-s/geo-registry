@@ -1,0 +1,14 @@
+id: xrspatial-aspect-arraytypefunctionmapping
+kind: implementation
+name: xrspatial.aspect.ArrayTypeFunctionMapping
+software: xarray-spatial
+call: {interface: python, name: xrspatial.aspect.ArrayTypeFunctionMapping}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  numpy_func: {type: any, required: true}
+  cupy_func: {type: any, required: true}
+  dask_func: {type: any, required: true}
+  dask_cupy_func: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

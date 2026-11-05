@@ -1,0 +1,13 @@
+id: sedona-sql-st-translate
+kind: implementation
+name: sedona.sql.ST_Translate
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_Translate}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geometry: {type: Union, required: true}
+  deltaX: {type: Union, required: true}
+  deltaY: {type: Union, required: true}
+  deltaZ: {type: Union, default: 0.0}
+status: active
+review: {state: harvested, source: python-packages}

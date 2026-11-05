@@ -1,0 +1,12 @@
+id: turf-booleantouches
+kind: implementation
+name: turf.booleanTouches
+software: turf-js
+call: {interface: js, name: turf.booleanTouches}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  feature1: {type: Feature<any> | Geometry, required: true}
+  feature2: {type: Feature<any> | Geometry, required: true}
+notes: From @turf/boolean-touches.
+status: active
+review: {state: harvested, source: turf}

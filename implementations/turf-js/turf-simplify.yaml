@@ -1,0 +1,15 @@
+id: turf-simplify
+kind: implementation
+name: turf.simplify
+software: turf-js
+call: {interface: js, name: turf.simplify}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  geojson: {type: T, required: true}
+  options: {type: '{ tolerance?: number; highQuality?: boolean; mutate?: boolean; }'}
+  options.tolerance: {type: number, note: field of options}
+  options.highQuality: {type: boolean, note: field of options}
+  options.mutate: {type: boolean, note: field of options}
+notes: From @turf/simplify.
+status: active
+review: {state: harvested, source: turf}

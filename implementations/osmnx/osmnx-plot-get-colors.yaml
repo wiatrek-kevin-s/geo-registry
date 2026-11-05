@@ -1,0 +1,14 @@
+id: osmnx-plot-get-colors
+kind: implementation
+name: osmnx.plot.get_colors
+software: osmnx
+call: {interface: python, name: osmnx.plot.get_colors}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  n: {type: int, required: true}
+  cmap: {type: str, default: viridis}
+  start: {type: float, default: 0}
+  stop: {type: float, default: 1}
+  alpha: {type: float | None}
+status: active
+review: {state: harvested, source: python-packages}

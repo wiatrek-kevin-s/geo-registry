@@ -1,0 +1,9 @@
+id: pyogrio-list-drivers-details
+kind: implementation
+name: pyogrio.list_drivers_details
+software: pyogrio
+call: {interface: python, name: pyogrio.list_drivers_details}
+harvest: {harvester: python-packages, engine_version: 0.13.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

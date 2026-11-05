@@ -1,0 +1,22 @@
+id: sedona-sql-st-affine
+kind: implementation
+name: sedona.sql.ST_Affine
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_Affine}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geometry: {type: Union, required: true}
+  a: {type: Union, required: true}
+  b: {type: Union, required: true}
+  d: {type: Union, required: true}
+  e: {type: Union, required: true}
+  xOff: {type: Union, required: true}
+  yOff: {type: Union, required: true}
+  c: {type: Union}
+  f: {type: Union}
+  g: {type: Union}
+  h: {type: Union}
+  i: {type: Union}
+  zOff: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

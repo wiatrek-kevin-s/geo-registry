@@ -1,0 +1,12 @@
+id: terra-add-abline
+kind: implementation
+name: terra::add_abline
+software: terra
+call: {interface: r, name: 'terra::add_abline'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  h: {type: any, default: 'NULL'}
+  v: {type: any, default: 'NULL'}
+  '...': {type: dots, note: further arguments passed on}
+status: active
+review: {state: harvested, source: r-packages}

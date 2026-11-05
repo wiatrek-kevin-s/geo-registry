@@ -1,0 +1,10 @@
+id: stackstac-prepare-mimetype
+kind: implementation
+name: stackstac.prepare.Mimetype
+software: stackstac
+call: {interface: python, name: stackstac.prepare.Mimetype}
+harvest: {harvester: python-packages, engine_version: 0.5.1}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

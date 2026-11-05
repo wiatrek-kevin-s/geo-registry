@@ -1,0 +1,16 @@
+id: verde-blockkfold
+kind: implementation
+name: verde.BlockKFold
+software: verde
+call: {interface: python, name: verde.BlockKFold}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  spacing: {type: any}
+  shape: {type: any}
+  n_splits: {type: integer, default: 5}
+  shuffle: {type: boolean, default: false}
+  random_state: {type: any}
+  balance: {type: boolean, default: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

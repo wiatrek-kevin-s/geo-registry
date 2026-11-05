@@ -1,0 +1,10 @@
+id: fiona-collection-get-filetype
+kind: implementation
+name: fiona.collection.get_filetype
+software: fiona
+call: {interface: python, name: fiona.collection.get_filetype}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  bytesbuf: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

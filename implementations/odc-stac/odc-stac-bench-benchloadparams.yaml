@@ -1,0 +1,19 @@
+id: odc-stac-bench-benchloadparams
+kind: implementation
+name: odc.stac.bench.BenchLoadParams
+software: odc-stac
+call: {interface: python, name: odc.stac.bench.BenchLoadParams}
+harvest: {harvester: python-packages, engine_version: 0.5.3}
+parameters:
+  scenario: {type: str, default: ''}
+  method: {type: str, default: odc-stac}
+  chunks: {type: Tuple, note: 'default (2048, 2048)'}
+  bands: {type: Optional}
+  resolution: {type: Optional}
+  crs: {type: Optional}
+  resampling: {type: Optional}
+  patch_url: {type: Any}
+  extra: {type: Dict, note: default <factory>}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

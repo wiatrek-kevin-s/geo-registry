@@ -1,0 +1,17 @@
+id: skgstat-stmodels-product-sum
+kind: implementation
+name: skgstat.stmodels.product_sum
+software: scikit-gstat
+call: {interface: python, name: skgstat.stmodels.product_sum}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  lags: {type: any, required: true}
+  Vx: {type: any, required: true}
+  Vt: {type: any, required: true}
+  k1: {type: any, required: true}
+  k2: {type: any, required: true}
+  k3: {type: any, required: true}
+  Cx: {type: any, required: true}
+  Ct: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

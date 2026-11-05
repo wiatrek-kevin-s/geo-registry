@@ -1,0 +1,13 @@
+id: xrspatial-worley-worley
+kind: implementation
+name: xrspatial.worley.worley
+software: xarray-spatial
+call: {interface: python, name: xrspatial.worley.worley}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: any, required: true}
+  freq: {type: integer, default: 4}
+  seed: {type: integer, default: 5}
+  name: {type: string, default: worley}
+status: active
+review: {state: harvested, source: python-packages}

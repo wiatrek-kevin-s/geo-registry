@@ -1,0 +1,24 @@
+id: osmnx-plot-orientation
+kind: implementation
+name: osmnx.plot_orientation
+software: osmnx
+call: {interface: python, name: osmnx.plot_orientation}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  G: {type: nx.MultiGraph | nx.MultiDiGraph, required: true}
+  num_bins: {type: int, default: 36}
+  min_length: {type: float, default: 0}
+  weight: {type: str | None}
+  ax: {type: PolarAxes | None}
+  figsize: {type: 'tuple[float, float]', note: 'default (5, 5)'}
+  area: {type: bool, default: true}
+  color: {type: str, default: '#003366'}
+  edgecolor: {type: str, default: k}
+  linewidth: {type: float, default: 0.5}
+  alpha: {type: float, default: 0.7}
+  title: {type: str | None}
+  title_y: {type: float, default: 1.05}
+  title_font: {type: 'dict[str, Any] | None'}
+  xtick_font: {type: 'dict[str, Any] | None'}
+status: active
+review: {state: harvested, source: python-packages}

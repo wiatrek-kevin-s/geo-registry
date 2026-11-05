@@ -1,0 +1,11 @@
+id: rasterstats-io-beyond-extent
+kind: implementation
+name: rasterstats.io.beyond_extent
+software: rasterstats
+call: {interface: python, name: rasterstats.io.beyond_extent}
+harvest: {harvester: python-packages, engine_version: 0.21.0}
+parameters:
+  window: {type: any, required: true}
+  shape: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

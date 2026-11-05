@@ -1,0 +1,21 @@
+id: spreg-gm-kkp
+kind: implementation
+name: spreg.GM_KKP
+software: spreg
+call: {interface: python, name: spreg.GM_KKP}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  y: {type: any, required: true}
+  x: {type: any, required: true}
+  w: {type: any, required: true}
+  full_weights: {type: boolean, default: false}
+  regimes: {type: any}
+  vm: {type: boolean, default: false}
+  name_y: {type: any}
+  name_x: {type: any}
+  name_w: {type: any}
+  name_ds: {type: any}
+  name_regimes: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

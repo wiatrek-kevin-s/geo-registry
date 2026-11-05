@@ -1,0 +1,12 @@
+id: geopy-format-format-degrees
+kind: implementation
+name: geopy.format.format_degrees
+software: geopy
+call: {interface: python, name: geopy.format.format_degrees}
+harvest: {harvester: python-packages, engine_version: 2.5.0}
+parameters:
+  degrees: {type: any, required: true}
+  fmt: {type: string, default: '%(degrees)d%(deg)s %(minutes)d%(arcmin)s %(seconds)g%(arcsec)s'}
+  symbols: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

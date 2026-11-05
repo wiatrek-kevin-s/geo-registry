@@ -1,0 +1,13 @@
+id: verde-coordinates-spacing-to-size
+kind: implementation
+name: verde.coordinates.spacing_to_size
+software: verde
+call: {interface: python, name: verde.coordinates.spacing_to_size}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  start: {type: any, required: true}
+  stop: {type: any, required: true}
+  spacing: {type: any, required: true}
+  adjust: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

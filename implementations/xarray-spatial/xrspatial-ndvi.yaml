@@ -1,0 +1,12 @@
+id: xrspatial-ndvi
+kind: implementation
+name: xrspatial.ndvi
+software: xarray-spatial
+call: {interface: python, name: xrspatial.ndvi}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  nir_agg: {type: xr.DataArray, required: true}
+  red_agg: {type: xr.DataArray, required: true}
+  name: {type: string, default: ndvi}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,10 @@
+id: rioxarray-crs-crs-from-user-input
+kind: implementation
+name: rioxarray.crs.crs_from_user_input
+software: rioxarray
+call: {interface: python, name: rioxarray.crs.crs_from_user_input}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  crs_input: {type: Any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

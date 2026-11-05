@@ -1,0 +1,11 @@
+id: verde-trend
+kind: implementation
+name: verde.Trend
+software: verde
+call: {interface: python, name: verde.Trend}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  degree: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

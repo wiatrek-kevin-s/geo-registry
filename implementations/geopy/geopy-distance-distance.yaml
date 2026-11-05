@@ -1,0 +1,10 @@
+id: geopy-distance-distance
+kind: implementation
+name: geopy.distance.Distance
+software: geopy
+call: {interface: python, name: geopy.distance.Distance}
+harvest: {harvester: python-packages, engine_version: 2.5.0}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

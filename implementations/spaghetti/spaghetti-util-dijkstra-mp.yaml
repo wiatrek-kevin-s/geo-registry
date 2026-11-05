@@ -1,0 +1,10 @@
+id: spaghetti-util-dijkstra-mp
+kind: implementation
+name: spaghetti.util.dijkstra_mp
+software: spaghetti
+call: {interface: python, name: spaghetti.util.dijkstra_mp}
+harvest: {harvester: python-packages, engine_version: 1.7.6}
+parameters:
+  ntw_vertex: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

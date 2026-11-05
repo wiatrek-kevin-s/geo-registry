@@ -1,0 +1,22 @@
+id: segregation-singlegroup-modifiedgini
+kind: implementation
+name: segregation.singlegroup.ModifiedGini
+software: segregation
+call: {interface: python, name: segregation.singlegroup.ModifiedGini}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  data: {type: any, required: true}
+  group_pop_var: {type: any, required: true}
+  total_pop_var: {type: any, required: true}
+  iterations: {type: integer, default: 500}
+  w: {type: any}
+  network: {type: any}
+  distance: {type: any}
+  decay: {type: string, default: linear}
+  function: {type: string, default: triangular}
+  precompute: {type: any}
+  backend: {type: string, default: threading}
+  n_jobs: {type: integer, default: -1}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

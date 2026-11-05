@@ -1,0 +1,13 @@
+id: spreg-wald-test
+kind: implementation
+name: spreg.wald_test
+software: spreg
+call: {interface: python, name: spreg.wald_test}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  betas: {type: any, required: true}
+  r: {type: any, required: true}
+  q: {type: any, required: true}
+  vm: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

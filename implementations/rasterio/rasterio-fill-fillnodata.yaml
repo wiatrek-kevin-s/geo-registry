@@ -1,0 +1,13 @@
+id: rasterio-fill-fillnodata
+kind: implementation
+name: rasterio.fill.fillnodata
+software: rasterio
+call: {interface: python, name: rasterio.fill.fillnodata}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  image: {type: any, required: true}
+  mask: {type: any}
+  max_search_distance: {type: number, default: 100.0}
+  smoothing_iterations: {type: integer, default: 0}
+status: active
+review: {state: harvested, source: python-packages}

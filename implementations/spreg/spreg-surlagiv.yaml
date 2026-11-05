@@ -1,0 +1,30 @@
+id: spreg-surlagiv
+kind: implementation
+name: spreg.SURlagIV
+software: spreg
+call: {interface: python, name: spreg.SURlagIV}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  bigy: {type: any, required: true}
+  bigX: {type: any, required: true}
+  bigyend: {type: any}
+  bigq: {type: any}
+  w: {type: any}
+  df: {type: any}
+  regimes: {type: any}
+  vm: {type: boolean, default: false}
+  regime_lag_sep: {type: boolean, default: false}
+  w_lags: {type: integer, default: 1}
+  lag_q: {type: boolean, default: true}
+  nonspat_diag: {type: boolean, default: true}
+  spat_diag: {type: boolean, default: false}
+  name_bigy: {type: any}
+  name_bigX: {type: any}
+  name_bigyend: {type: any}
+  name_bigq: {type: any}
+  name_ds: {type: any}
+  name_w: {type: any}
+  name_regimes: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

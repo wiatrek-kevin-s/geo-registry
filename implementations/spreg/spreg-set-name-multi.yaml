@@ -1,0 +1,22 @@
+id: spreg-set-name-multi
+kind: implementation
+name: spreg.set_name_multi
+software: spreg
+call: {interface: python, name: spreg.set_name_multi}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  multireg: {type: any, required: true}
+  multi_set: {type: any, required: true}
+  name_multiID: {type: any, required: true}
+  y: {type: any, required: true}
+  x: {type: any, required: true}
+  name_y: {type: any, required: true}
+  name_x: {type: any, required: true}
+  name_ds: {type: any, required: true}
+  title: {type: any, required: true}
+  name_w: {type: any, required: true}
+  robust: {type: any, required: true}
+  endog: {type: boolean, default: false}
+  sp_lag: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

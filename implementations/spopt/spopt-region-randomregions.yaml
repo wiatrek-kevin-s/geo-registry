@@ -1,0 +1,18 @@
+id: spopt-region-randomregions
+kind: implementation
+name: spopt.region.RandomRegions
+software: spopt
+call: {interface: python, name: spopt.region.RandomRegions}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  area_ids: {type: any, required: true}
+  num_regions: {type: any}
+  cardinality: {type: any}
+  contiguity: {type: any}
+  maxiter: {type: integer, default: 100}
+  compact: {type: boolean, default: false}
+  max_swaps: {type: integer, default: 1000000}
+  permutations: {type: integer, default: 99}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

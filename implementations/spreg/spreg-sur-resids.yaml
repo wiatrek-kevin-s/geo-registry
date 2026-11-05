@@ -1,0 +1,12 @@
+id: spreg-sur-resids
+kind: implementation
+name: spreg.sur_resids
+software: spreg
+call: {interface: python, name: spreg.sur_resids}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  bigy: {type: any, required: true}
+  bigX: {type: any, required: true}
+  beta: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

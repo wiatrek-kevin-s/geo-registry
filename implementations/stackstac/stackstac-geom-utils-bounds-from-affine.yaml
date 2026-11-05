@@ -1,0 +1,14 @@
+id: stackstac-geom-utils-bounds-from-affine
+kind: implementation
+name: stackstac.geom_utils.bounds_from_affine
+software: stackstac
+call: {interface: python, name: stackstac.geom_utils.bounds_from_affine}
+harvest: {harvester: python-packages, engine_version: 0.5.1}
+parameters:
+  af: {type: Affine, required: true}
+  ysize: {type: int, required: true}
+  xsize: {type: int, required: true}
+  from_epsg: {type: int, required: true}
+  to_epsg: {type: int, required: true}
+status: active
+review: {state: harvested, source: python-packages}

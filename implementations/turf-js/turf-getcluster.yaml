@@ -1,0 +1,12 @@
+id: turf-getcluster
+kind: implementation
+name: turf.getCluster
+software: turf-js
+call: {interface: js, name: turf.getCluster}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  geojson: {type: 'FeatureCollection<G, P>', required: true}
+  filter: {type: any, required: true}
+notes: From @turf/clusters.
+status: active
+review: {state: harvested, source: turf}

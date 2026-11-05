@@ -1,0 +1,23 @@
+id: terra-stretch
+kind: implementation
+name: terra::stretch
+software: terra
+call: {interface: r, name: 'terra::stretch'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  minv: {type: any, default: '0'}
+  maxv: {type: any, default: '255'}
+  minq: {type: any, default: '0'}
+  maxq: {type: any, default: '1'}
+  smin: {type: any, default: NA}
+  smax: {type: any, default: NA}
+  histeq: {type: any, default: 'FALSE'}
+  scale: {type: any, default: '1'}
+  maxcell: {type: any, default: 5e+05}
+  bylayer: {type: any, default: 'TRUE'}
+  filename: {type: any, default: '""'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

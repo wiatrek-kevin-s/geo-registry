@@ -1,0 +1,31 @@
+id: spreg-ols
+kind: implementation
+name: spreg.OLS
+software: spreg
+call: {interface: python, name: spreg.OLS}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  y: {type: any, required: true}
+  x: {type: any, required: true}
+  w: {type: any}
+  robust: {type: any}
+  gwk: {type: any}
+  slx_lags: {type: integer, default: 0}
+  slx_vars: {type: string, default: All}
+  regimes: {type: any}
+  sig2n_k: {type: boolean, default: true}
+  nonspat_diag: {type: boolean, default: true}
+  spat_diag: {type: boolean, default: false}
+  moran: {type: boolean, default: false}
+  white_test: {type: boolean, default: false}
+  vif: {type: boolean, default: false}
+  vm: {type: boolean, default: false}
+  name_y: {type: any}
+  name_x: {type: any}
+  name_w: {type: any}
+  name_gwk: {type: any}
+  name_ds: {type: any}
+  latex: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

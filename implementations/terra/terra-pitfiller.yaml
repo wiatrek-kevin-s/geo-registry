@@ -1,0 +1,23 @@
+id: terra-pitfiller
+kind: implementation
+name: terra::pitfiller
+software: terra
+call: {interface: r, name: 'terra::pitfiller'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  pit: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  flowdir: {type: any, default: 'NULL'}
+  niter: {type: any, default: '10'}
+  lambda: {type: any, default: '0'}
+  deviation_type: {type: any, default: '"lad"'}
+  max_iters: {type: any, default: 10^6}
+  U: {type: any, default: '1'}
+  D: {type: any, default: '300'}
+  beta: {type: any, default: '0.9'}
+  theta_exp: {type: any, default: '0.5'}
+  filename: {type: any, default: '""'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

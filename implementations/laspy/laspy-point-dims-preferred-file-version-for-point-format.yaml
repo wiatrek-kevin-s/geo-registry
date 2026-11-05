@@ -1,0 +1,10 @@
+id: laspy-point-dims-preferred-file-version-for-point-format
+kind: implementation
+name: laspy.point.dims.preferred_file_version_for_point_format
+software: laspy
+call: {interface: python, name: laspy.point.dims.preferred_file_version_for_point_format}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  point_format_id: {type: int, required: true}
+status: active
+review: {state: harvested, source: python-packages}

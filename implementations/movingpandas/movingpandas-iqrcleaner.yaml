@@ -1,0 +1,11 @@
+id: movingpandas-iqrcleaner
+kind: implementation
+name: movingpandas.IqrCleaner
+software: movingpandas
+call: {interface: python, name: movingpandas.IqrCleaner}
+harvest: {harvester: python-packages, engine_version: 0.23.0}
+parameters:
+  traj: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

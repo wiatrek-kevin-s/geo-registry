@@ -1,0 +1,11 @@
+id: turf-tesselate
+kind: implementation
+name: turf.tesselate
+software: turf-js
+call: {interface: js, name: turf.tesselate}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  poly: {type: Feature<Polygon | MultiPolygon>, required: true}
+notes: From @turf/tesselate.
+status: active
+review: {state: harvested, source: turf}

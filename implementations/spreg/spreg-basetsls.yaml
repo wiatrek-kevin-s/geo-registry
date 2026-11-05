@@ -1,0 +1,18 @@
+id: spreg-basetsls
+kind: implementation
+name: spreg.BaseTSLS
+software: spreg
+call: {interface: python, name: spreg.BaseTSLS}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  y: {type: any, required: true}
+  x: {type: any, required: true}
+  yend: {type: any, required: true}
+  q: {type: any}
+  h: {type: any}
+  robust: {type: any}
+  gwk: {type: any}
+  sig2n_k: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

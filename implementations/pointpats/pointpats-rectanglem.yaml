@@ -1,0 +1,16 @@
+id: pointpats-rectanglem
+kind: implementation
+name: pointpats.RectangleM
+software: pointpats
+call: {interface: python, name: pointpats.RectangleM}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  pp: {type: any, required: true}
+  count_column: {type: integer, default: 3}
+  count_row: {type: integer, default: 3}
+  rectangle_width: {type: integer, default: 0}
+  rectangle_height: {type: integer, default: 0}
+  window: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

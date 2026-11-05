@@ -1,0 +1,13 @@
+id: pystac-client-collection-search-collection-matches
+kind: implementation
+name: pystac_client.collection_search.collection_matches
+software: pystac-client
+call: {interface: python, name: pystac_client.collection_search.collection_matches}
+harvest: {harvester: python-packages, engine_version: 0.9.1}
+parameters:
+  collection_dict: {type: dict, required: true}
+  bbox: {type: any}
+  temporal_interval_str: {type: any}
+  q: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

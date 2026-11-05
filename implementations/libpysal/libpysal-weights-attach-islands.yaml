@@ -1,0 +1,11 @@
+id: libpysal-weights-attach-islands
+kind: implementation
+name: libpysal.weights.attach_islands
+software: libpysal
+call: {interface: python, name: libpysal.weights.attach_islands}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  w: {type: any, required: true}
+  w_knn1: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

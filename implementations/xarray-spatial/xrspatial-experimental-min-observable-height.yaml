@@ -1,0 +1,15 @@
+id: xrspatial-experimental-min-observable-height
+kind: implementation
+name: xrspatial.experimental.min_observable_height
+software: xarray-spatial
+call: {interface: python, name: xrspatial.experimental.min_observable_height}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  raster: {type: DataArray, required: true}
+  x: {type: Union, required: true}
+  y: {type: Union, required: true}
+  max_height: {type: float, default: 100.0}
+  target_elev: {type: float, default: 0.0}
+  precision: {type: float, default: 1.0}
+status: active
+review: {state: harvested, source: python-packages}

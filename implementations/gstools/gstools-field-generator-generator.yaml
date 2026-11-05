@@ -1,0 +1,11 @@
+id: gstools-field-generator-generator
+kind: implementation
+name: gstools.field.generator.Generator
+software: gstools
+call: {interface: python, name: gstools.field.generator.Generator}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  model: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

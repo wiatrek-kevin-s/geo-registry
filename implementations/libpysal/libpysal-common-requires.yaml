@@ -1,0 +1,9 @@
+id: libpysal-common-requires
+kind: implementation
+name: libpysal.common.requires
+software: libpysal
+call: {interface: python, name: libpysal.common.requires}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,12 @@
+id: giddy-plotting-dynamic-lisa-heatmap
+kind: implementation
+name: giddy.plotting.dynamic_lisa_heatmap
+software: giddy
+call: {interface: python, name: giddy.plotting.dynamic_lisa_heatmap}
+harvest: {harvester: python-packages, engine_version: 2.3.9}
+parameters:
+  rose: {type: any, required: true}
+  p: {type: number, default: 0.05}
+  ax: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

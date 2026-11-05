@@ -1,0 +1,12 @@
+id: spopt-region-azp-azporig
+kind: implementation
+name: spopt.region.azp.AZPOrig
+software: spopt
+call: {interface: python, name: spopt.region.azp.AZPOrig}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  allow_move_strategy: {type: any}
+  random_state: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,15 @@
+id: tobler-dasymetric-raster-tools-extract-raster-features
+kind: implementation
+name: tobler.dasymetric.raster_tools.extract_raster_features
+software: tobler
+call: {interface: python, name: tobler.dasymetric.raster_tools.extract_raster_features}
+harvest: {harvester: python-packages, engine_version: 0.14.0}
+parameters:
+  gdf: {type: any, required: true}
+  raster_path: {type: any, required: true}
+  pixel_values: {type: any}
+  nodata: {type: integer, default: 255}
+  n_jobs: {type: integer, default: -1}
+  collapse_values: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

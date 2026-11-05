@@ -1,0 +1,15 @@
+id: turf-transformrotate
+kind: implementation
+name: turf.transformRotate
+software: turf-js
+call: {interface: js, name: turf.transformRotate}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  geojson: {type: T, required: true}
+  angle: {type: number, required: true}
+  options: {type: '{ pivot?: Coord; mutate?: boolean; }'}
+  options.pivot: {type: Coord, note: field of options}
+  options.mutate: {type: boolean, note: field of options}
+notes: From @turf/transform-rotate.
+status: active
+review: {state: harvested, source: turf}

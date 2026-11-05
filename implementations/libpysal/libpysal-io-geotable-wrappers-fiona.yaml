@@ -1,0 +1,11 @@
+id: libpysal-io-geotable-wrappers-fiona
+kind: implementation
+name: libpysal.io.geotable.wrappers.fiona
+software: libpysal
+call: {interface: python, name: libpysal.io.geotable.wrappers.fiona}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  filename: {type: any, required: true}
+  geom_type: {type: string, default: shapely}
+status: active
+review: {state: harvested, source: python-packages}

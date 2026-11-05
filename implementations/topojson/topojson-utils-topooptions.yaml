@@ -1,0 +1,23 @@
+id: topojson-utils-topooptions
+kind: implementation
+name: topojson.utils.TopoOptions
+software: topojson
+call: {interface: python, name: topojson.utils.TopoOptions}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  object: {type: any}
+  topology: {type: boolean, default: true}
+  prequantize: {type: boolean, default: false}
+  topoquantize: {type: boolean, default: false}
+  presimplify: {type: boolean, default: false}
+  toposimplify: {type: boolean, default: false}
+  shared_coords: {type: boolean, default: false}
+  prevent_oversimplify: {type: boolean, default: true}
+  simplify_with: {type: string, default: shapely}
+  simplify_algorithm: {type: string, default: dp}
+  winding_order: {type: any}
+  object_name: {type: string, default: data}
+  ignore_index: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

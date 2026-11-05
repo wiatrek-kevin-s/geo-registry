@@ -1,0 +1,19 @@
+id: spopt-region-maxp-maxp
+kind: implementation
+name: spopt.region.maxp.maxp
+software: spopt
+call: {interface: python, name: spopt.region.maxp.maxp}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  gdf: {type: any, required: true}
+  w: {type: any, required: true}
+  attrs_name: {type: any, required: true}
+  threshold_name: {type: any, required: true}
+  threshold: {type: any, required: true}
+  top_n: {type: any, required: true}
+  max_iterations_construction: {type: integer, default: 999}
+  max_iterations_sa: {type: integer, default: 10}
+  verbose: {type: boolean, default: false}
+  policy: {type: string, default: single}
+status: active
+review: {state: harvested, source: python-packages}

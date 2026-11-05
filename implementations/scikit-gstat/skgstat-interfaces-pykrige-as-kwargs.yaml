@@ -1,0 +1,12 @@
+id: skgstat-interfaces-pykrige-as-kwargs
+kind: implementation
+name: skgstat.interfaces.pykrige_as_kwargs
+software: scikit-gstat
+call: {interface: python, name: skgstat.interfaces.pykrige_as_kwargs}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  variogram: {type: any, required: true}
+  adjust_maxlag: {type: boolean, default: false}
+  adjust_nlags: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

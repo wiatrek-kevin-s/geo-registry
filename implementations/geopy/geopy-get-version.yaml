@@ -1,0 +1,9 @@
+id: geopy-get-version
+kind: implementation
+name: geopy.get_version
+software: geopy
+call: {interface: python, name: geopy.get_version}
+harvest: {harvester: python-packages, engine_version: 2.5.0}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

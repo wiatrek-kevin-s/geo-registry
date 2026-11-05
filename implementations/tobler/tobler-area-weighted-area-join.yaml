@@ -1,0 +1,12 @@
+id: tobler-area-weighted-area-join
+kind: implementation
+name: tobler.area_weighted.area_join
+software: tobler
+call: {interface: python, name: tobler.area_weighted.area_join}
+harvest: {harvester: python-packages, engine_version: 0.14.0}
+parameters:
+  source_df: {type: any, required: true}
+  target_df: {type: any, required: true}
+  variables: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

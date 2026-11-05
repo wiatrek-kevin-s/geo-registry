@@ -1,0 +1,12 @@
+id: spreg-check-constant
+kind: implementation
+name: spreg.check_constant
+software: spreg
+call: {interface: python, name: spreg.check_constant}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  x: {type: any, required: true}
+  name_x: {type: any}
+  just_rem: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,16 @@
+id: laspy-lasreader
+kind: implementation
+name: laspy.LasReader
+software: laspy
+call: {interface: python, name: laspy.LasReader}
+harvest: {harvester: python-packages, engine_version: 2.7.0}
+parameters:
+  source: {type: BinaryIO, required: true}
+  closefd: {type: bool, default: true}
+  laz_backend: {type: Union}
+  read_evlrs: {type: bool, default: true}
+  decompression_selection: {type: DecompressionSelection, note: 'default <DecompressionSelection.XY_RETURNS_CHANNEL|Z|CLASSIFICATION|FLAGS|INTENSITY|SCAN_ANGLE|USER_DATA|POINT_SOURCE_ID|GPS_TIME|RGB|NIR|WAVEPACKET|ALL_EXTRA_BYTES:
+      8191>'}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

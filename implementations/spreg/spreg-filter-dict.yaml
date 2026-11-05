@@ -1,0 +1,12 @@
+id: spreg-filter-dict
+kind: implementation
+name: spreg.filter_dict
+software: spreg
+call: {interface: python, name: spreg.filter_dict}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  lam: {type: any, required: true}
+  bigZ: {type: any, required: true}
+  bigZlag: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

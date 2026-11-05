@@ -1,0 +1,14 @@
+id: gstools-tools-geometric-pos2latlon
+kind: implementation
+name: gstools.tools.geometric.pos2latlon
+software: gstools
+call: {interface: python, name: gstools.tools.geometric.pos2latlon}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  pos: {type: any, required: true}
+  radius: {type: number, default: 1.0}
+  dtype: {type: any, note: default numpy.float64}
+  temporal: {type: boolean, default: false}
+  time_scale: {type: number, default: 1.0}
+status: active
+review: {state: harvested, source: python-packages}

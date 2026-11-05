@@ -1,0 +1,14 @@
+id: rasterio-transform-xy
+kind: implementation
+name: rasterio.transform.xy
+software: rasterio
+call: {interface: python, name: rasterio.transform.xy}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  transform: {type: any, required: true}
+  rows: {type: any, required: true}
+  cols: {type: any, required: true}
+  zs: {type: any}
+  offset: {type: string, default: center}
+status: active
+review: {state: harvested, source: python-packages}

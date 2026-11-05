@@ -1,0 +1,19 @@
+id: esda-path-silhouette
+kind: implementation
+name: esda.path_silhouette
+software: esda
+call: {interface: python, name: esda.path_silhouette}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  data: {type: any, required: true}
+  labels: {type: any, required: true}
+  W: {type: any, required: true}
+  D: {type: any}
+  metric: {type: any, note: default sklearn.metrics.pairwise.euclidean_distances}
+  closest: {type: boolean, default: false}
+  return_nbfc: {type: boolean, default: false}
+  return_nbfc_score: {type: boolean, default: false}
+  return_paths: {type: boolean, default: false}
+  directed: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

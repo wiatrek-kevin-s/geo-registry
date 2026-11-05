@@ -1,0 +1,17 @@
+id: tobler-pycno-pycno-interpolate
+kind: implementation
+name: tobler.pycno.pycno_interpolate
+software: tobler
+call: {interface: python, name: tobler.pycno.pycno_interpolate}
+harvest: {harvester: python-packages, engine_version: 0.14.0}
+parameters:
+  source_df: {type: any, required: true}
+  target_df: {type: any, required: true}
+  variables: {type: any, required: true}
+  cellsize: {type: any, required: true}
+  r: {type: number, default: 0.2}
+  handle_null: {type: boolean, default: true}
+  converge: {type: integer, default: 3}
+  verbose: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

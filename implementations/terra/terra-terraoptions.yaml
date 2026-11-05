@@ -1,0 +1,11 @@
+id: terra-terraoptions
+kind: implementation
+name: terra::terraOptions
+software: terra
+call: {interface: r, name: 'terra::terraOptions'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  '...': {type: dots, note: further arguments passed on}
+  print: {type: any, default: 'TRUE'}
+status: active
+review: {state: harvested, source: r-packages}

@@ -1,0 +1,10 @@
+id: rasterio-transform-get-transformer
+kind: implementation
+name: rasterio.transform.get_transformer
+software: rasterio
+call: {interface: python, name: rasterio.transform.get_transformer}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  transform: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: pykrige-ck-closure
+kind: implementation
+name: pykrige.ck.closure
+software: pykrige
+call: {interface: python, name: pykrige.ck.closure}
+harvest: {harvester: python-packages, engine_version: 1.7.3}
+parameters:
+  data: {type: any, required: true}
+  k: {type: number, default: 1.0}
+status: active
+review: {state: harvested, source: python-packages}

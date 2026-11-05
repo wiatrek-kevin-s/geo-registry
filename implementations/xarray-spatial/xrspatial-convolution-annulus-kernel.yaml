@@ -1,0 +1,13 @@
+id: xrspatial-convolution-annulus-kernel
+kind: implementation
+name: xrspatial.convolution.annulus_kernel
+software: xarray-spatial
+call: {interface: python, name: xrspatial.convolution.annulus_kernel}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  cellsize_x: {type: any, required: true}
+  cellsize_y: {type: any, required: true}
+  outer_radius: {type: any, required: true}
+  inner_radius: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

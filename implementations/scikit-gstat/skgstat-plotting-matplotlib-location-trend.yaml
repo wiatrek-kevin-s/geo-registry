@@ -1,0 +1,12 @@
+id: skgstat-plotting-matplotlib-location-trend
+kind: implementation
+name: skgstat.plotting.matplotlib_location_trend
+software: scikit-gstat
+call: {interface: python, name: skgstat.plotting.matplotlib_location_trend}
+harvest: {harvester: python-packages, engine_version: 1.0.22}
+parameters:
+  variogram: {type: any, required: true}
+  axes: {type: any}
+  show: {type: boolean, default: true}
+status: active
+review: {state: harvested, source: python-packages}

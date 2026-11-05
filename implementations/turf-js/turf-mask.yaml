@@ -1,0 +1,14 @@
+id: turf-mask
+kind: implementation
+name: turf.mask
+software: turf-js
+call: {interface: js, name: turf.mask}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  polygon: {type: T | Feature<T> | FeatureCollection<T>, required: true}
+  mask: {type: Polygon | Feature<Polygon>}
+  options: {type: '{ mutate?: boolean; }'}
+  options.mutate: {type: boolean, note: field of options}
+notes: From @turf/mask.
+status: active
+review: {state: harvested, source: turf}

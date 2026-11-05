@@ -1,0 +1,12 @@
+id: xrspatial-inundation
+kind: implementation
+name: xrspatial.inundation
+software: xarray-spatial
+call: {interface: python, name: xrspatial.inundation}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  hand_agg: {type: xr.DataArray, required: true}
+  water_level: {type: float, required: true}
+  name: {type: str, default: inundation}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,16 @@
+id: rasterio-session-swiftsession
+kind: implementation
+name: rasterio.session.SwiftSession
+software: rasterio
+call: {interface: python, name: rasterio.session.SwiftSession}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  session: {type: any}
+  swift_storage_url: {type: any}
+  swift_auth_token: {type: any}
+  swift_auth_v1_url: {type: any}
+  swift_user: {type: any}
+  swift_key: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

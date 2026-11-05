@@ -1,0 +1,13 @@
+id: rasterio-io-filepath
+kind: implementation
+name: rasterio.io.FilePath
+software: rasterio
+call: {interface: python, name: rasterio.io.FilePath}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  filelike_obj: {type: any, required: true}
+  dirname: {type: any}
+  filename: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

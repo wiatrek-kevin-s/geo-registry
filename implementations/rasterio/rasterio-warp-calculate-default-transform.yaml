@@ -1,0 +1,23 @@
+id: rasterio-warp-calculate-default-transform
+kind: implementation
+name: rasterio.warp.calculate_default_transform
+software: rasterio
+call: {interface: python, name: rasterio.warp.calculate_default_transform}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  src_crs: {type: any, required: true}
+  dst_crs: {type: any, required: true}
+  width: {type: any, required: true}
+  height: {type: any, required: true}
+  left: {type: any}
+  bottom: {type: any}
+  right: {type: any}
+  top: {type: any}
+  gcps: {type: any}
+  rpcs: {type: any}
+  resolution: {type: any}
+  dst_width: {type: any}
+  dst_height: {type: any}
+  src_geoloc_array: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

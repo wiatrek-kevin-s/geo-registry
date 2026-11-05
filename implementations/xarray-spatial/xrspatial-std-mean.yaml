@@ -1,0 +1,11 @@
+id: xrspatial-std-mean
+kind: implementation
+name: xrspatial.std_mean
+software: xarray-spatial
+call: {interface: python, name: xrspatial.std_mean}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: xr.DataArray, required: true}
+  name: {type: 'Optional[str]', default: std_mean}
+status: active
+review: {state: harvested, source: python-packages}

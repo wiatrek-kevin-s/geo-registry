@@ -1,0 +1,10 @@
+id: fiona-meta-supported-sub-field-types
+kind: implementation
+name: fiona.meta.supported_sub_field_types
+software: fiona
+call: {interface: python, name: fiona.meta.supported_sub_field_types}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  driver: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,13 @@
+id: giddy-markov-georank-markov
+kind: implementation
+name: giddy.markov.GeoRank_Markov
+software: giddy
+call: {interface: python, name: giddy.markov.GeoRank_Markov}
+harvest: {harvester: python-packages, engine_version: 2.3.9}
+parameters:
+  y: {type: any, required: true}
+  fill_empty_classes: {type: boolean, default: false}
+  summary: {type: boolean, default: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

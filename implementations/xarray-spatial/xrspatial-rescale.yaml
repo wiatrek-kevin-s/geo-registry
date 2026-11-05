@@ -1,0 +1,13 @@
+id: xrspatial-rescale
+kind: implementation
+name: xrspatial.rescale
+software: xarray-spatial
+call: {interface: python, name: xrspatial.rescale}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: any, required: true}
+  new_min: {type: number, default: 0.0}
+  new_max: {type: number, default: 1.0}
+  name: {type: string, default: rescale}
+status: active
+review: {state: harvested, source: python-packages}

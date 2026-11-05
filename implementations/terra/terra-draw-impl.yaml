@@ -1,0 +1,17 @@
+id: terra-draw-impl
+kind: implementation
+name: terra::draw
+software: terra
+call: {interface: r, name: 'terra::draw'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  col: {type: any, default: '"red"'}
+  lwd: {type: any, default: '2'}
+  id: {type: any, default: 'FALSE'}
+  n: {type: any, default: '1000'}
+  xpd: {type: any, default: 'TRUE'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

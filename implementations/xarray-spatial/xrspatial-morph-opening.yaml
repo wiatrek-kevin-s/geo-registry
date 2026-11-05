@@ -1,0 +1,13 @@
+id: xrspatial-morph-opening
+kind: implementation
+name: xrspatial.morph_opening
+software: xarray-spatial
+call: {interface: python, name: xrspatial.morph_opening}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: any, required: true}
+  kernel: {type: any}
+  boundary: {type: string, default: nan}
+  name: {type: string, default: opening}
+status: active
+review: {state: harvested, source: python-packages}

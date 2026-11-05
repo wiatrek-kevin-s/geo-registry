@@ -1,0 +1,13 @@
+id: spaghetti-pointpattern
+kind: implementation
+name: spaghetti.PointPattern
+software: spaghetti
+call: {interface: python, name: spaghetti.PointPattern}
+harvest: {harvester: python-packages, engine_version: 1.7.6}
+parameters:
+  in_data: {type: any}
+  idvariable: {type: any}
+  attribute: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

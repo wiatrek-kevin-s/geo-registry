@@ -1,0 +1,13 @@
+id: esda-adbscan-remap-lbls
+kind: implementation
+name: esda.adbscan.remap_lbls
+software: esda
+call: {interface: python, name: esda.adbscan.remap_lbls}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  solus: {type: any, required: true}
+  xys: {type: any, required: true}
+  xy: {type: any, note: 'default [''X'', ''Y'']'}
+  n_jobs: {type: integer, default: 1}
+status: active
+review: {state: harvested, source: python-packages}

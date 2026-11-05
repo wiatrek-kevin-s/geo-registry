@@ -1,0 +1,12 @@
+id: rasterio-features-bounds
+kind: implementation
+name: rasterio.features.bounds
+software: rasterio
+call: {interface: python, name: rasterio.features.bounds}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  geometry: {type: any, required: true}
+  north_up: {type: boolean, default: true}
+  transform: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

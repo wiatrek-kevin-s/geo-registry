@@ -1,0 +1,12 @@
+id: libpysal-cg-get-shared-segments
+kind: implementation
+name: libpysal.cg.get_shared_segments
+software: libpysal
+call: {interface: python, name: libpysal.cg.get_shared_segments}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  poly1: {type: any, required: true}
+  poly2: {type: any, required: true}
+  bool_ret: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

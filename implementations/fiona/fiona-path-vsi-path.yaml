@@ -1,0 +1,10 @@
+id: fiona-path-vsi-path
+kind: implementation
+name: fiona.path.vsi_path
+software: fiona
+call: {interface: python, name: fiona.path.vsi_path}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  path: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

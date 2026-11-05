@@ -1,0 +1,16 @@
+id: spreg-baseols
+kind: implementation
+name: spreg.BaseOLS
+software: spreg
+call: {interface: python, name: spreg.BaseOLS}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  y: {type: any, required: true}
+  x: {type: any, required: true}
+  robust: {type: any}
+  gwk: {type: any}
+  sig2n_k: {type: boolean, default: true}
+  pinv: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

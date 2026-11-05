@@ -1,0 +1,18 @@
+id: terra-viewshed
+kind: implementation
+name: terra::viewshed
+software: terra
+call: {interface: r, name: 'terra::viewshed'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  loc: {type: any, required: true}
+  observer: {type: any, default: '1.8'}
+  target: {type: any, default: '0'}
+  curvcoef: {type: any, default: 6/7}
+  output: {type: any, default: '"yes/no"'}
+  filename: {type: any, default: '""'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

@@ -1,0 +1,13 @@
+id: terra-focalmat
+kind: implementation
+name: terra::focalMat
+software: terra
+call: {interface: r, name: 'terra::focalMat'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  d: {type: any, required: true}
+  type: {type: any, default: 'c("circle", "Gauss", "rectangle")'}
+  fillNA: {type: any, default: 'FALSE'}
+status: active
+review: {state: harvested, source: r-packages}

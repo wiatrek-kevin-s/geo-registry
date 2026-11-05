@@ -1,0 +1,15 @@
+id: verde-spline-jacobian-numpy
+kind: implementation
+name: verde.spline.jacobian_numpy
+software: verde
+call: {interface: python, name: verde.spline.jacobian_numpy}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  east: {type: any, required: true}
+  north: {type: any, required: true}
+  force_east: {type: any, required: true}
+  force_north: {type: any, required: true}
+  mindist: {type: any, required: true}
+  jac: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

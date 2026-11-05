@@ -1,0 +1,12 @@
+id: libpysal-weights-adjtools-filter-adjlist
+kind: implementation
+name: libpysal.weights.adjtools.filter_adjlist
+software: libpysal
+call: {interface: python, name: libpysal.weights.adjtools.filter_adjlist}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  adjlist: {type: any, required: true}
+  focal_col: {type: string, default: focal}
+  neighbor_col: {type: string, default: neighbor}
+status: active
+review: {state: harvested, source: python-packages}

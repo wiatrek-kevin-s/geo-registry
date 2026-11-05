@@ -1,0 +1,13 @@
+id: osmnx-truncate-truncate-graph-dist
+kind: implementation
+name: osmnx.truncate.truncate_graph_dist
+software: osmnx
+call: {interface: python, name: osmnx.truncate.truncate_graph_dist}
+harvest: {harvester: python-packages, engine_version: 2.1.1}
+parameters:
+  G: {type: nx.MultiDiGraph, required: true}
+  source_node: {type: int, required: true}
+  dist: {type: float, required: true}
+  weight: {type: str, default: length}
+status: active
+review: {state: harvested, source: python-packages}

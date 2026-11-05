@@ -1,0 +1,18 @@
+id: stackstac-to-dask-asset-table-to-reader-and-window
+kind: implementation
+name: stackstac.to_dask.asset_table_to_reader_and_window
+software: stackstac
+call: {interface: python, name: stackstac.to_dask.asset_table_to_reader_and_window}
+harvest: {harvester: python-packages, engine_version: 0.5.1}
+parameters:
+  asset_table: {type: np.ndarray, required: true}
+  spec: {type: RasterSpec, required: true}
+  resampling: {type: Resampling, required: true}
+  dtype: {type: np.dtype, required: true}
+  fill_value: {type: 'Union[int, float]', required: true}
+  rescale: {type: bool, required: true}
+  gdal_env: {type: 'Optional[LayeredEnv]', required: true}
+  errors_as_nodata: {type: 'Tuple[Exception, ...]', required: true}
+  reader: {type: 'Type[Reader]', required: true}
+status: active
+review: {state: harvested, source: python-packages}

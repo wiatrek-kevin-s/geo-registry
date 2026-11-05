@@ -1,0 +1,12 @@
+id: topojson-utils-geometry
+kind: implementation
+name: topojson.utils.geometry
+software: topojson
+call: {interface: python, name: topojson.utils.geometry}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters:
+  obj: {type: any, required: true}
+  tp_arcs: {type: any, required: true}
+  transform: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

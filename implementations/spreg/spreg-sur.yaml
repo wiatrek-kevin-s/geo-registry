@@ -1,0 +1,27 @@
+id: spreg-sur
+kind: implementation
+name: spreg.SUR
+software: spreg
+call: {interface: python, name: spreg.SUR}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  bigy: {type: any, required: true}
+  bigX: {type: any, required: true}
+  df: {type: any}
+  w: {type: any}
+  regimes: {type: any}
+  nonspat_diag: {type: boolean, default: true}
+  spat_diag: {type: boolean, default: false}
+  vm: {type: boolean, default: false}
+  iter: {type: boolean, default: false}
+  maxiter: {type: integer, default: 5}
+  epsilon: {type: number, default: 1.0e-05}
+  verbose: {type: boolean, default: false}
+  name_bigy: {type: any}
+  name_bigX: {type: any}
+  name_ds: {type: any}
+  name_w: {type: any}
+  name_regimes: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

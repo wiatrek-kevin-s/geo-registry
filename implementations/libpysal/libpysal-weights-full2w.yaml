@@ -1,0 +1,11 @@
+id: libpysal-weights-full2w
+kind: implementation
+name: libpysal.weights.full2W
+software: libpysal
+call: {interface: python, name: libpysal.weights.full2W}
+harvest: {harvester: python-packages, engine_version: 4.15.1}
+parameters:
+  m: {type: any, required: true}
+  ids: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,13 @@
+id: pystac-client-cli-set-conforms-to
+kind: implementation
+name: pystac_client.cli.set_conforms_to
+software: pystac-client
+call: {interface: python, name: pystac_client.cli.set_conforms_to}
+harvest: {harvester: python-packages, engine_version: 0.9.1}
+parameters:
+  client: {type: Client, required: true}
+  clear: {type: bool, required: true}
+  remove: {type: any, required: true}
+  add: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

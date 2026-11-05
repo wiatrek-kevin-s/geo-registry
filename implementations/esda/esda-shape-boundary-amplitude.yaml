@@ -1,0 +1,10 @@
+id: esda-shape-boundary-amplitude
+kind: implementation
+name: esda.shape.boundary_amplitude
+software: esda
+call: {interface: python, name: esda.shape.boundary_amplitude}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  collection: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

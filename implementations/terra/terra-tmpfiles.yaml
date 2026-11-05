@@ -1,0 +1,13 @@
+id: terra-tmpfiles
+kind: implementation
+name: terra::tmpFiles
+software: terra
+call: {interface: r, name: 'terra::tmpFiles'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  current: {type: any, default: 'TRUE'}
+  orphan: {type: any, default: 'FALSE'}
+  old: {type: any, default: 'FALSE'}
+  remove: {type: any, default: 'FALSE'}
+status: active
+review: {state: harvested, source: r-packages}

@@ -1,0 +1,13 @@
+id: sedona-sql-st-expand
+kind: implementation
+name: sedona.sql.ST_Expand
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_Expand}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geometry: {type: Union, required: true}
+  deltaX_uniformDelta: {type: Union, required: true}
+  deltaY: {type: Union}
+  deltaZ: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

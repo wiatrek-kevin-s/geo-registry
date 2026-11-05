@@ -1,0 +1,14 @@
+id: verde-spline
+kind: implementation
+name: verde.Spline
+software: verde
+call: {interface: python, name: verde.Spline}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters:
+  mindist: {type: any}
+  damping: {type: any}
+  force_coords: {type: any}
+  engine: {type: string, default: auto}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

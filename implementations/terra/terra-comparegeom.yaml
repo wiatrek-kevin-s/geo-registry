@@ -1,0 +1,22 @@
+id: terra-comparegeom
+kind: implementation
+name: terra::compareGeom
+software: terra
+call: {interface: r, name: 'terra::compareGeom'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  y: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  lyrs: {type: any, default: 'FALSE'}
+  crs: {type: any, default: 'TRUE'}
+  warncrs: {type: any, default: 'FALSE'}
+  ext: {type: any, default: 'TRUE'}
+  rowcol: {type: any, default: 'TRUE'}
+  res: {type: any, default: 'FALSE'}
+  stopOnError: {type: any, default: 'TRUE'}
+  messages: {type: any, default: 'FALSE'}
+  tolerance: {type: any, default: 'NULL'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

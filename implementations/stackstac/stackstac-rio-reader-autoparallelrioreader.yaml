@@ -1,0 +1,18 @@
+id: stackstac-rio-reader-autoparallelrioreader
+kind: implementation
+name: stackstac.rio_reader.AutoParallelRioReader
+software: stackstac
+call: {interface: python, name: stackstac.rio_reader.AutoParallelRioReader}
+harvest: {harvester: python-packages, engine_version: 0.5.1}
+parameters:
+  url: {type: str, required: true}
+  spec: {type: RasterSpec, required: true}
+  resampling: {type: Resampling, required: true}
+  dtype: {type: np.dtype, required: true}
+  fill_value: {type: 'Union[int, float]', required: true}
+  scale_offset: {type: 'Tuple[Union[int, float], Union[int, float]]', required: true}
+  gdal_env: {type: 'Optional[LayeredEnv]'}
+  errors_as_nodata: {type: 'Tuple[Exception, ...]', note: default ()}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

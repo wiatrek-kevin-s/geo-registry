@@ -1,0 +1,15 @@
+id: momepy-simpson
+kind: implementation
+name: momepy.simpson
+software: momepy
+call: {interface: python, name: momepy.simpson}
+harvest: {harvester: python-packages, engine_version: 1.0.0}
+parameters:
+  y: {type: Series, required: true}
+  graph: {type: Graph, required: true}
+  binning: {type: str, default: HeadTailBreaks}
+  gini_simpson: {type: bool, default: false}
+  inverse: {type: bool, default: false}
+  categorical: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

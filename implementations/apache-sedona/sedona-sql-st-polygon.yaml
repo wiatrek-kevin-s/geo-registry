@@ -1,0 +1,11 @@
+id: sedona-sql-st-polygon
+kind: implementation
+name: sedona.sql.ST_Polygon
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_Polygon}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  line_string: {type: Union, required: true}
+  srid: {type: Union, required: true}
+status: active
+review: {state: harvested, source: python-packages}

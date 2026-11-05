@@ -1,0 +1,36 @@
+id: odc-stac-load
+kind: implementation
+name: odc.stac.load
+software: odc-stac
+call: {interface: python, name: odc.stac.load}
+harvest: {harvester: python-packages, engine_version: 0.5.3}
+parameters:
+  items: {type: 'Iterable[pystac.item.Item]', required: true}
+  bands: {type: 'str | Sequence[str] | None'}
+  groupby: {type: Groupby | None, default: time}
+  resampling: {type: 'str | dict[str, str] | None'}
+  dtype: {type: Band_DType}
+  chunks: {type: 'dict[str, int | Literal[''auto'']] | None'}
+  pool: {type: ThreadPoolExecutor | int | None}
+  crs: {type: MaybeCRS, note: default <odc.geo.types.Unset object>}
+  resolution: {type: SomeResolution | None}
+  anchor: {type: GeoboxAnchor | None}
+  geobox: {type: GeoBox | None}
+  bbox: {type: 'tuple[float, float, float, float] | None'}
+  lon: {type: 'tuple[float, float] | None'}
+  lat: {type: 'tuple[float, float] | None'}
+  x: {type: 'tuple[float, float] | None'}
+  y: {type: 'tuple[float, float] | None'}
+  like: {type: Any}
+  geopolygon: {type: Any}
+  intersects: {type: Any}
+  progress: {type: Any}
+  fail_on_error: {type: bool, default: true}
+  stac_cfg: {type: ConversionConfig | None}
+  with_properties: {type: 'Sequence[str | Mapping[str, Any]] | None'}
+  patch_url: {type: 'Callable[[str], str] | None'}
+  preserve_original_order: {type: bool, default: false}
+  driver: {type: ReaderDriverSpec | None}
+  fuse_func: {type: 'str | Mapping[str, str | None] | None'}
+status: active
+review: {state: harvested, source: python-packages}

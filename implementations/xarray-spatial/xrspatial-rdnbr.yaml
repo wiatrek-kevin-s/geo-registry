@@ -1,0 +1,12 @@
+id: xrspatial-rdnbr
+kind: implementation
+name: xrspatial.rdnbr
+software: xarray-spatial
+call: {interface: python, name: xrspatial.rdnbr}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  dnbr_agg: {type: xr.DataArray, required: true}
+  pre_nbr_agg: {type: xr.DataArray, required: true}
+  name: {type: str, default: rdnbr}
+status: active
+review: {state: harvested, source: python-packages}

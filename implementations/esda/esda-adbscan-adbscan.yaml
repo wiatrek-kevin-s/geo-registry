@@ -1,0 +1,18 @@
+id: esda-adbscan-adbscan
+kind: implementation
+name: esda.adbscan.ADBSCAN
+software: esda
+call: {interface: python, name: esda.adbscan.ADBSCAN}
+harvest: {harvester: python-packages, engine_version: 2.10.0}
+parameters:
+  eps: {type: any, required: true}
+  min_samples: {type: any, required: true}
+  algorithm: {type: string, default: auto}
+  n_jobs: {type: integer, default: 1}
+  pct_exact: {type: number, default: 0.1}
+  reps: {type: integer, default: 100}
+  keep_solus: {type: boolean, default: false}
+  pct_thr: {type: number, default: 0.9}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

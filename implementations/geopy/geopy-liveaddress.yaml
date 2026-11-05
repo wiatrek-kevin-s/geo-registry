@@ -1,0 +1,17 @@
+id: geopy-liveaddress
+kind: implementation
+name: geopy.LiveAddress
+software: geopy
+call: {interface: python, name: geopy.LiveAddress}
+harvest: {harvester: python-packages, engine_version: 2.5.0}
+parameters:
+  auth_id: {type: any, required: true}
+  auth_token: {type: any, required: true}
+  timeout: {type: any, note: default DEFAULT_SENTINEL}
+  proxies: {type: any, note: default DEFAULT_SENTINEL}
+  user_agent: {type: any}
+  ssl_context: {type: any, note: default DEFAULT_SENTINEL}
+  adapter_factory: {type: any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

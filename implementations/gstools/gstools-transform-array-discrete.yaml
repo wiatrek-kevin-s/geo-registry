@@ -1,0 +1,14 @@
+id: gstools-transform-array-discrete
+kind: implementation
+name: gstools.transform.array_discrete
+software: gstools
+call: {interface: python, name: gstools.transform.array_discrete}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  field: {type: any, required: true}
+  values: {type: any, required: true}
+  thresholds: {type: string, default: arithmetic}
+  mean: {type: any}
+  var: {type: any}
+status: active
+review: {state: harvested, source: python-packages}

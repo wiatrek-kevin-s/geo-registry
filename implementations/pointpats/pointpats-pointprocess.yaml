@@ -1,0 +1,14 @@
+id: pointpats-pointprocess
+kind: implementation
+name: pointpats.PointProcess
+software: pointpats
+call: {interface: python, name: pointpats.PointProcess}
+harvest: {harvester: python-packages, engine_version: 2.6.0}
+parameters:
+  window: {type: any, required: true}
+  n: {type: any, required: true}
+  samples: {type: any, required: true}
+  asPP: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

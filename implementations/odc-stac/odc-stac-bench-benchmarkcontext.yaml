@@ -1,0 +1,22 @@
+id: odc-stac-bench-benchmarkcontext
+kind: implementation
+name: odc.stac.bench.BenchmarkContext
+software: odc-stac
+call: {interface: python, name: odc.stac.bench.BenchmarkContext}
+harvest: {harvester: python-packages, engine_version: 0.5.3}
+parameters:
+  cluster_info: {type: Dict, required: true}
+  npix: {type: int, required: true}
+  nbytes: {type: int, required: true}
+  dtype: {type: str, required: true}
+  shape: {type: Tuple, required: true}
+  chunks: {type: Tuple, required: true}
+  crs: {type: str, required: true}
+  transform: {type: Affine, required: true}
+  scenario: {type: str, default: ''}
+  temporal_id: {type: str, default: ''}
+  method: {type: str, default: undefined}
+  extras: {type: Dict, note: default <factory>}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

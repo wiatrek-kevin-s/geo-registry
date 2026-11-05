@@ -1,0 +1,10 @@
+id: fiona-features-unary-projectable-constructive-wrapper
+kind: implementation
+name: fiona.features.unary_projectable_constructive_wrapper
+software: fiona
+call: {interface: python, name: fiona.features.unary_projectable_constructive_wrapper}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  func: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

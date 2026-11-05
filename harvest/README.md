@@ -14,10 +14,34 @@ files, so re-harvesting after a release shows exactly what the release changed.
 | `qgis.py` | QGIS Processing (all providers) | `qgis_process --json list` and `--json help` | `implementations/qgis/` |
 | `grass.py` | GRASS | each module's `--interface-description`, in a throwaway session | `implementations/grass/` |
 | `whitebox.py` | WhiteboxTools | `--listtools` and `--toolparameters` | `implementations/whiteboxtools/` |
+| `python_packages.py` | about 40 Python packages listed in `python-packages.yml` (rasterio, pyproj, the PySAL family, osmnx, momepy, movingpandas, Apache Sedona's SQL functions, ...) | the installed packages, by introspection | `implementations/<software>/` |
+| `r_packages.py` | R: sf, terra | each exported function's formals (and each S4 method's) | `implementations/sf/`, `implementations/terra/` |
+| `turf.py` | Turf.js | its TypeScript declarations, read with TypeScript 5's parser (Turf is not run) | `implementations/turf-js/` |
+| `cli_packages.py` | TauDEM, LAStools (open programs) | the conda package's file list; by name only | `implementations/taudem/`, `implementations/lastools/` |
+| `duckdb_spatial.py` | DuckDB spatial extension | `duckdb_functions()` before and after `LOAD spatial` | `implementations/duckdb-spatial-extension/` |
+| `rustgis.py` | RustGIS | `rustgis.Session().tools()` (PyPI package) | `implementations/rustgis/` |
 | `arcgis_pro_export.py` + `arcgis_pro.py` | ArcGIS Pro | ArcPy (`ListTools`, `GetParameterInfo`), on a machine with Pro | `implementations/arcgis-pro/` |
 
-Not yet: DuckDB spatial (its extension downloads from extensions.duckdb.org at
-run time, so it will be harvested in CI).
+DuckDB spatial and RustGIS run only in the Engines workflow: DuckDB downloads its
+extension at run time, and RustGIS is run there rather than on maintainers' machines.
+Their implementations appear with the first weekly harvest (or Actions → Engines →
+Run workflow).
+
+## Not harvested yet, and why
+
+| What | Why |
+| --- | --- |
+| ArcGIS Pro | needs one run of the export on a machine with Pro, and the Esri terms question settled |
+| SAGA GIS, Orfeo ToolBox | not on conda-forge for Linux; need another install route |
+| Oracle Spatial, SQL Server spatial | closed engines: to be read from a live database's catalogue, or entered by hand |
+| mapclassify, spglm, spint, harmonica, salem, regionmask | no software entry in the registry yet (the seed atlas lacks them) |
+| scikit-mobility | does not import with Shapely 2 (it uses the removed `cascaded_union`) |
+| r5py, geowombat, xESMF | need Java or very large dependencies; left out of the Python environment for now |
+| Whitebox Workflows, ArcGIS API for Python, Google Earth Engine | proprietary or service APIs: tools run on a vendor's servers or need an account |
+| TauDEM and LAStools parameters | their programs print free-form usage, so only their names are recorded |
+
+LAStools from conda-forge is the open part of the suite from 2017 (`lastools 20171231`);
+the licensed LAStools programs are not included.
 
 ## ArcGIS Pro
 
@@ -67,6 +91,10 @@ micromamba run -n geo-registry-engines python harvest/python_libs.py
 micromamba create -f harvest/environment-qgis.yml       # then: python harvest/qgis.py --qgis-process <path>
 micromamba create -f harvest/environment-grass.yml      # then: python harvest/grass.py --grass <path>
 micromamba create -f harvest/environment-whitebox.yml   # then: python harvest/whitebox.py --wbt <path>
+micromamba create -f harvest/environment-python.yml     # then, with its Python: python harvest/python_packages.py
+micromamba create -f harvest/environment-r.yml          # then: python harvest/r_packages.py --rscript <path>
+micromamba create -f harvest/environment-cli.yml        # then: python harvest/cli_packages.py --prefix <env>
+npm install --ignore-scripts --prefix /tmp/turf @turf/turf typescript@5   # then: python harvest/turf.py --node-modules /tmp/turf/node_modules
 ```
 
 `start-postgis.sh` starts a throwaway database on a Unix socket only (no network

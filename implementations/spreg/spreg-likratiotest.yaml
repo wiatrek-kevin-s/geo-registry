@@ -1,0 +1,11 @@
+id: spreg-likratiotest
+kind: implementation
+name: spreg.likratiotest
+software: spreg
+call: {interface: python, name: spreg.likratiotest}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  reg0: {type: any, required: true}
+  reg1: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

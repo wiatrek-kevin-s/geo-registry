@@ -1,0 +1,32 @@
+id: spreg-gmm-error-regimes
+kind: implementation
+name: spreg.GMM_Error_Regimes
+software: spreg
+call: {interface: python, name: spreg.GMM_Error_Regimes}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  y: {type: any, required: true}
+  x: {type: any, required: true}
+  regimes: {type: any, required: true}
+  w: {type: any, required: true}
+  yend: {type: any}
+  q: {type: any}
+  estimator: {type: string, default: het}
+  constant_regi: {type: string, default: many}
+  cols2regi: {type: string, default: all}
+  regime_err_sep: {type: boolean, default: false}
+  regime_lag_sep: {type: boolean, default: false}
+  add_wy: {type: boolean, default: false}
+  slx_lags: {type: integer, default: 0}
+  vm: {type: boolean, default: false}
+  name_y: {type: any}
+  name_x: {type: any}
+  name_w: {type: any}
+  name_regimes: {type: any}
+  name_yend: {type: any}
+  name_q: {type: any}
+  name_ds: {type: any}
+  latex: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,11 @@
+id: xrspatial-burn-severity-class
+kind: implementation
+name: xrspatial.burn_severity_class
+software: xarray-spatial
+call: {interface: python, name: xrspatial.burn_severity_class}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  dnbr_agg: {type: xr.DataArray, required: true}
+  name: {type: str, default: burn_severity_class}
+status: active
+review: {state: harvested, source: python-packages}

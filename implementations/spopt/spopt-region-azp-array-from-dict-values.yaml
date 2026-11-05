@@ -1,0 +1,13 @@
+id: spopt-region-azp-array-from-dict-values
+kind: implementation
+name: spopt.region.azp.array_from_dict_values
+software: spopt
+call: {interface: python, name: spopt.region.azp.array_from_dict_values}
+harvest: {harvester: python-packages, engine_version: 0.8.0}
+parameters:
+  dct: {type: any, required: true}
+  sorted_keys: {type: any}
+  flat_output: {type: boolean, default: false}
+  dtype: {type: any, note: default builtins.float}
+status: active
+review: {state: harvested, source: python-packages}

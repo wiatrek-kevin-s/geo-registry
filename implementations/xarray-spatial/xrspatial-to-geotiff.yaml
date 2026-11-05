@@ -1,0 +1,33 @@
+id: xrspatial-to-geotiff
+kind: implementation
+name: xrspatial.to_geotiff
+software: xarray-spatial
+call: {interface: python, name: xrspatial.to_geotiff}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  data: {type: xr.DataArray | np.ndarray, required: true}
+  path: {type: str | BinaryIO, required: true}
+  crs: {type: int | str | None}
+  nodata: {type: float | int | None}
+  compression: {type: str, default: zstd}
+  compression_level: {type: int | None}
+  tiled: {type: bool, default: true}
+  tile_size: {type: int, default: 256}
+  predictor: {type: bool | int, default: false}
+  cog: {type: bool, default: false}
+  overview_levels: {type: 'list[int] | None'}
+  overview_resampling: {type: str, default: mean}
+  bigtiff: {type: bool | None}
+  gpu: {type: bool | None}
+  streaming_buffer_bytes: {type: int, default: 268435456}
+  max_z_error: {type: float, default: 0.0}
+  photometric: {type: str | int, default: auto}
+  allow_internal_only_jpeg: {type: bool, default: false}
+  allow_experimental_codecs: {type: bool, default: false}
+  allow_unparseable_crs: {type: bool, default: false}
+  drop_rotation: {type: bool, default: false}
+  pack: {type: bool, default: false}
+  color_ramp: {type: str | bool | None}
+  color_ramp_range: {type: 'tuple[float, float] | None'}
+status: active
+review: {state: harvested, source: python-packages}

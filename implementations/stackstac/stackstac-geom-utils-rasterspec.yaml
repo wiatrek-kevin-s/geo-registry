@@ -1,0 +1,13 @@
+id: stackstac-geom-utils-rasterspec
+kind: implementation
+name: stackstac.geom_utils.RasterSpec
+software: stackstac
+call: {interface: python, name: stackstac.geom_utils.RasterSpec}
+harvest: {harvester: python-packages, engine_version: 0.5.1}
+parameters:
+  epsg: {type: int, required: true}
+  bounds: {type: Tuple, required: true}
+  resolutions_xy: {type: Tuple, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

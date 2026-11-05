@@ -1,0 +1,14 @@
+id: spreg-set-name-q-sp
+kind: implementation
+name: spreg.set_name_q_sp
+software: spreg
+call: {interface: python, name: spreg.set_name_q_sp}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  name_x: {type: any, required: true}
+  w_lags: {type: any, required: true}
+  name_q: {type: any, required: true}
+  lag_q: {type: any, required: true}
+  force_all: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

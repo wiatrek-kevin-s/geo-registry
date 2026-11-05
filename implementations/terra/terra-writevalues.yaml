@@ -1,0 +1,15 @@
+id: terra-writevalues
+kind: implementation
+name: terra::writeValues
+software: terra
+call: {interface: r, name: 'terra::writeValues'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  v: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  start: {type: any, required: true}
+  nrows: {type: any, required: true}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

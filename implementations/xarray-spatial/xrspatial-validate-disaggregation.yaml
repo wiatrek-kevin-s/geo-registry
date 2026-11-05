@@ -1,0 +1,13 @@
+id: xrspatial-validate-disaggregation
+kind: implementation
+name: xrspatial.validate_disaggregation
+software: xarray-spatial
+call: {interface: python, name: xrspatial.validate_disaggregation}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  result: {type: xr.DataArray, required: true}
+  zones: {type: xr.DataArray, required: true}
+  values: {type: 'Union[dict, pd.Series]', required: true}
+  tolerance: {type: float, default: 1.0e-06}
+status: active
+review: {state: harvested, source: python-packages}

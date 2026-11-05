@@ -1,0 +1,12 @@
+id: spreg-w-regimes-union
+kind: implementation
+name: spreg.w_regimes_union
+software: spreg
+call: {interface: python, name: spreg.w_regimes_union}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  w: {type: any, required: true}
+  w_regi_i: {type: any, required: true}
+  regimes_set: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

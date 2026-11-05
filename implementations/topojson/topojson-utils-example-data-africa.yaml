@@ -1,0 +1,9 @@
+id: topojson-utils-example-data-africa
+kind: implementation
+name: topojson.utils.example_data_africa
+software: topojson
+call: {interface: python, name: topojson.utils.example_data_africa}
+harvest: {harvester: python-packages, engine_version: '1.10'}
+parameters: {}
+status: active
+review: {state: harvested, source: python-packages}

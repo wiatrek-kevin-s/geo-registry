@@ -1,0 +1,26 @@
+id: fiona-collection-collection
+kind: implementation
+name: fiona.collection.Collection
+software: fiona
+call: {interface: python, name: fiona.collection.Collection}
+harvest: {harvester: python-packages, engine_version: 1.10.1}
+parameters:
+  path: {type: any, required: true}
+  mode: {type: string, default: r}
+  driver: {type: any}
+  schema: {type: any}
+  crs: {type: any}
+  encoding: {type: any}
+  layer: {type: any}
+  vsi: {type: any}
+  archive: {type: any}
+  enabled_drivers: {type: any}
+  crs_wkt: {type: any}
+  ignore_fields: {type: any}
+  ignore_geometry: {type: boolean, default: false}
+  include_fields: {type: any}
+  wkt_version: {type: any}
+  allow_unsupported_drivers: {type: boolean, default: false}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,10 @@
+id: pyproj-utils-datatype
+kind: implementation
+name: pyproj.utils.DataType
+software: pyproj
+call: {interface: python, name: pyproj.utils.DataType}
+harvest: {harvester: python-packages, engine_version: 3.8.0}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

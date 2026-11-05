@@ -1,0 +1,33 @@
+id: terra-spatsample
+kind: implementation
+name: terra::spatSample
+software: terra
+call: {interface: r, name: 'terra::spatSample'}
+harvest: {harvester: r-packages, engine_version: 1.9.50}
+parameters:
+  x: {type: any, required: true}
+  '...': {type: dots, note: further arguments passed on}
+  size: {type: any, required: true}
+  method: {type: any, default: '"random"'}
+  lonlat: {type: any, required: true}
+  as.points: {type: any, default: 'FALSE'}
+  exact: {type: any, default: 'FALSE'}
+  replace: {type: any, default: 'FALSE'}
+  na.rm: {type: any, default: 'FALSE'}
+  as.raster: {type: any, default: 'FALSE'}
+  as.df: {type: any, default: 'TRUE'}
+  as.mask: {type: any, default: 'FALSE'}
+  values: {type: any, default: hasValues(x)}
+  cells: {type: any, default: 'FALSE'}
+  xy: {type: any, default: 'FALSE'}
+  ext: {type: any, default: 'NULL'}
+  warn: {type: any, default: 'TRUE'}
+  weights: {type: any, default: 'NULL'}
+  exp: {type: any, default: '5'}
+  exhaustive: {type: any, default: 'FALSE'}
+  each: {type: any, default: 'TRUE'}
+  strata: {type: any, default: 'NULL'}
+  chess: {type: any, default: '""'}
+notes: 'S4 generic: parameters gathered from all its methods; each method takes a subset.'
+status: active
+review: {state: harvested, source: r-packages}

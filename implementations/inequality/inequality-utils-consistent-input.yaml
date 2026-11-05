@@ -1,0 +1,10 @@
+id: inequality-utils-consistent-input
+kind: implementation
+name: inequality.utils.consistent_input
+software: inequality
+call: {interface: python, name: inequality.utils.consistent_input}
+harvest: {harvester: python-packages, engine_version: 1.2.0}
+parameters:
+  func: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

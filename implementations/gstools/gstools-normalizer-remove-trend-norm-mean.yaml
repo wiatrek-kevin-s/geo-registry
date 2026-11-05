@@ -1,0 +1,19 @@
+id: gstools-normalizer-remove-trend-norm-mean
+kind: implementation
+name: gstools.normalizer.remove_trend_norm_mean
+software: gstools
+call: {interface: python, name: gstools.normalizer.remove_trend_norm_mean}
+harvest: {harvester: python-packages, engine_version: 1.7.0}
+parameters:
+  pos: {type: any, required: true}
+  field: {type: any, required: true}
+  mean: {type: any}
+  normalizer: {type: any}
+  trend: {type: any}
+  mesh_type: {type: string, default: unstructured}
+  value_type: {type: string, default: scalar}
+  check_shape: {type: boolean, default: true}
+  stacked: {type: boolean, default: false}
+  fit_normalizer: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

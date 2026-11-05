@@ -1,0 +1,10 @@
+id: geopy-util-pairwise
+kind: implementation
+name: geopy.util.pairwise
+software: geopy
+call: {interface: python, name: geopy.util.pairwise}
+harvest: {harvester: python-packages, engine_version: 2.5.0}
+parameters:
+  seq: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

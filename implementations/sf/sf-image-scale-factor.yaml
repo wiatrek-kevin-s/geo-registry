@@ -1,0 +1,18 @@
+id: sf-image-scale-factor
+kind: implementation
+name: sf::.image_scale_factor
+software: sf
+call: {interface: r, name: 'sf::.image_scale_factor'}
+harvest: {harvester: r-packages, engine_version: 1.1.3}
+parameters:
+  z: {type: any, required: true}
+  col: {type: any, required: true}
+  key.pos: {type: any, required: true}
+  add.axis: {type: any, default: 'TRUE'}
+  '...': {type: dots, note: further arguments passed on}
+  axes: {type: any, default: 'FALSE'}
+  key.width: {type: any, required: true}
+  key.length: {type: any, required: true}
+  cex.axis: {type: any, default: par("cex.axis")}
+status: active
+review: {state: harvested, source: r-packages}

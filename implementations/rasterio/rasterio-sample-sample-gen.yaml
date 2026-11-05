@@ -1,0 +1,13 @@
+id: rasterio-sample-sample-gen
+kind: implementation
+name: rasterio.sample.sample_gen
+software: rasterio
+call: {interface: python, name: rasterio.sample.sample_gen}
+harvest: {harvester: python-packages, engine_version: 1.5.2}
+parameters:
+  dataset: {type: any, required: true}
+  xy: {type: any, required: true}
+  indexes: {type: any}
+  masked: {type: boolean, default: false}
+status: active
+review: {state: harvested, source: python-packages}

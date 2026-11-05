@@ -1,0 +1,11 @@
+id: spreg-chow
+kind: implementation
+name: spreg.Chow
+software: spreg
+call: {interface: python, name: spreg.Chow}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  reg: {type: any, required: true}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

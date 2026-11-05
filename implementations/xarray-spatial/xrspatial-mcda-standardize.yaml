@@ -1,0 +1,24 @@
+id: xrspatial-mcda-standardize
+kind: implementation
+name: xrspatial.mcda.standardize
+software: xarray-spatial
+call: {interface: python, name: xrspatial.mcda.standardize}
+harvest: {harvester: python-packages, engine_version: 0.10.20}
+parameters:
+  agg: {type: xr.DataArray, required: true}
+  method: {type: str, default: linear}
+  direction: {type: str, default: higher_is_better}
+  bounds: {type: 'tuple[float, float] | None'}
+  midpoint: {type: float, default: 0.0}
+  spread: {type: float, default: 1.0}
+  mean: {type: float, default: 0.0}
+  std: {type: float, default: 1.0}
+  low: {type: float, default: 0.0}
+  peak: {type: float, default: 0.5}
+  high: {type: float, default: 1.0}
+  breakpoints: {type: 'list[float] | None'}
+  values: {type: 'list[float] | None'}
+  mapping: {type: dict | None}
+  name: {type: str | None}
+status: active
+review: {state: harvested, source: python-packages}

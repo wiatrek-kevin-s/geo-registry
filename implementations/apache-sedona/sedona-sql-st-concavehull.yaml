@@ -1,0 +1,12 @@
+id: sedona-sql-st-concavehull
+kind: implementation
+name: sedona.sql.ST_ConcaveHull
+software: apache-sedona
+call: {interface: python, name: sedona.sql.ST_ConcaveHull}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  geometry: {type: Union, required: true}
+  pctConvex: {type: Union, required: true}
+  allowHoles: {type: Union}
+status: active
+review: {state: harvested, source: python-packages}

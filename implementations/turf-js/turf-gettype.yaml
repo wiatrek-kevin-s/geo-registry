@@ -1,0 +1,12 @@
+id: turf-gettype
+kind: implementation
+name: turf.getType
+software: turf-js
+call: {interface: js, name: turf.getType}
+harvest: {harvester: turf, engine_version: 7.4.0}
+parameters:
+  geojson: {type: Feature<any> | FeatureCollection<any> | Geometry, required: true}
+  _name: {type: string}
+notes: From @turf/invariant.
+status: active
+review: {state: harvested, source: turf}

@@ -1,0 +1,16 @@
+id: odc-stac-rastersource
+kind: implementation
+name: odc.stac.RasterSource
+software: odc-stac
+call: {interface: python, name: odc.stac.RasterSource}
+harvest: {harvester: python-packages, engine_version: 0.5.3}
+parameters:
+  uri: {type: str, required: true}
+  band: {type: int, default: 1}
+  subdataset: {type: str | None}
+  geobox: {type: GeoBoxBase | None}
+  meta: {type: RasterBandMetadata | None}
+  driver_data: {type: Any}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

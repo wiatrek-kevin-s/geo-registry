@@ -1,0 +1,12 @@
+id: spreg-check-reg-list
+kind: implementation
+name: spreg.check_reg_list
+software: spreg
+call: {interface: python, name: spreg.check_reg_list}
+harvest: {harvester: python-packages, engine_version: 1.9.1}
+parameters:
+  regimes: {type: any, required: true}
+  name_regimes: {type: any, required: true}
+  n: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,10 @@
+id: geopy-get-geocoder-for-service
+kind: implementation
+name: geopy.get_geocoder_for_service
+software: geopy
+call: {interface: python, name: geopy.get_geocoder_for_service}
+harvest: {harvester: python-packages, engine_version: 2.5.0}
+parameters:
+  service: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}

@@ -1,0 +1,10 @@
+id: verde-datasets-checkerboard
+kind: implementation
+name: verde.datasets.CheckerBoard
+software: verde
+call: {interface: python, name: verde.datasets.CheckerBoard}
+harvest: {harvester: python-packages, engine_version: 1.9.0}
+parameters: {}
+notes: 'Class: called through its constructor.'
+status: active
+review: {state: harvested, source: python-packages}

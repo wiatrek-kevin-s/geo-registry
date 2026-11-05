@@ -1,0 +1,10 @@
+id: pyogrio-list-layers
+kind: implementation
+name: pyogrio.list_layers
+software: pyogrio
+call: {interface: python, name: pyogrio.list_layers}
+harvest: {harvester: python-packages, engine_version: 0.13.0}
+parameters:
+  path_or_buffer: {type: any, required: true}
+status: active
+review: {state: harvested, source: python-packages}
