@@ -1,0 +1,20 @@
+id: table-to-points
+kind: operation
+name: Table to points
+aka: [XY Table To Point, Create points layer from table, CSV to points, Display XY Data, points from xy]
+summary: Makes a point layer from a table with coordinate columns, such as a CSV of longitudes and latitudes.
+group: conversion/points
+inputs:
+  - { name: table, type: table }
+outputs:
+  - { name: output, type: vector, geometry: point }
+parameters:
+  x_field: { type: field, required: true, note: Longitude or easting column. }
+  y_field: { type: field, required: true, note: Latitude or northing column. }
+  crs: { type: crs, required: true, note: "The CRS the coordinates are in, not the one wanted." }
+checks: [crs.present, crs.area_of_use]
+pitfalls:
+  - Longitude and latitude swapped puts points in the wrong hemisphere or off the map.
+  - Coordinates stored as text, or with commas as decimal separators, are read as empty.
+status: active
+review: { state: draft }

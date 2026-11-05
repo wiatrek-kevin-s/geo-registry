@@ -26,14 +26,19 @@ pub fn fts_query(input: &str) -> Option<String> {
     }
 }
 
-/// Search the database. `kind` filters to `data` or `tool`. Retired entries
-/// are ranked last. Column weights: name 10, summary 4, category 2, themes 3, notes 1.
+/// Search the database. `kind` filters to `data` or `tool`; `operation`
+/// searches the operations table instead (operations are not in `entries`).
+/// Retired entries are ranked last. Column weights: name 10, summary 4,
+/// category 2, themes 3, notes 1.
 pub fn search(db: &Path, query: &str, kind: Option<&str>, limit: usize) -> Result<Vec<Hit>> {
     let Some(q) = fts_query(query) else {
         return Ok(Vec::new());
     };
     let conn = Connection::open_with_flags(db, OpenFlags::SQLITE_OPEN_READ_ONLY)
         .with_context(|| format!("opening {}", db.display()))?;
+    if kind == Some("operation") {
+        return search_operations(&conn, &q, limit);
+    }
     let mut stmt = conn.prepare(
         "SELECT bm25(entries_fts, 0.0, 10.0, 4.0, 2.0, 3.0, 1.0) AS score, e.card
            FROM entries_fts
@@ -59,10 +64,58 @@ pub fn search(db: &Path, query: &str, kind: Option<&str>, limit: usize) -> Resul
     Ok(hits)
 }
 
+/// Operations: name 10, summary 4, other names / parameters / types 4, notes 1.
+fn search_operations(conn: &Connection, q: &str, limit: usize) -> Result<Vec<Hit>> {
+    let mut stmt = conn.prepare(
+        "SELECT bm25(operations_fts, 0.0, 10.0, 4.0, 4.0, 1.0) AS score, o.card
+           FROM operations_fts
+           JOIN operations o ON o.id = operations_fts.id
+          WHERE operations_fts MATCH ?1
+          ORDER BY (o.status = 'retired'), score, o.id
+          LIMIT ?2",
+    )?;
+    let rows = stmt.query_map(params![q, limit as i64], |r| {
+        Ok((r.get::<_, f64>(0)?, r.get::<_, String>(1)?))
+    })?;
+    let mut hits = Vec::new();
+    for row in rows {
+        let (score, card) = row?;
+        hits.push(Hit {
+            rank: -score,
+            card: serde_json::from_str(&card)?,
+        });
+    }
+    Ok(hits)
+}
+
 /// One-line rendering of a hit for the terminal.
 pub fn render(i: usize, h: &Hit) -> String {
     let c = &h.card;
     let s = |k: &str| c.get(k).and_then(Value::as_str).unwrap_or("").to_string();
+    if s("kind") == "operation" {
+        let runs = c
+            .pointer("/columbus/tool")
+            .and_then(Value::as_str)
+            .map(|t| {
+                let op = c
+                    .pointer("/columbus/op")
+                    .and_then(Value::as_str)
+                    .unwrap_or("");
+                format!("Columbus {t} {op}")
+            })
+            .unwrap_or_else(|| "not in Columbus yet".into());
+        return format!(
+            "{:>2}. {} [{}] {:.2}\n    operation | {} | {} | {}\n    {}",
+            i + 1,
+            s("name"),
+            s("id"),
+            h.rank,
+            s("group"),
+            runs,
+            s("status"),
+            s("summary")
+        );
+    }
     let scope = if s("kind") == "data" {
         let access = c
             .get("access_types")

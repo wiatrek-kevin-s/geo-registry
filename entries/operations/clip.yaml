@@ -1,0 +1,18 @@
+id: clip
+kind: operation
+name: Clip
+aka: [Pairwise Clip, cookie cutter, extract by polygon]
+summary: Cuts vector features to the area of a mask layer, keeping only the parts inside it.
+group: vector/overlay
+inputs:
+  - { name: layer, type: vector }
+  - { name: mask, type: vector, geometry: polygon }
+outputs:
+  - { name: output, type: vector }
+checks: [crs.agreement, geometry.valid, extent.plausible]
+pitfalls:
+  - Attributes such as lengths and areas are copied, not recalculated, for the clipped parts.
+related: [intersect, clip-raster]
+columbus: { tool: vector_op, op: clip }
+status: active
+review: { state: draft }

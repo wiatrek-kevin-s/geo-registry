@@ -1,0 +1,20 @@
+id: simplify
+kind: operation
+name: Simplify
+aka: [Simplify Line, Simplify Polygon, generalize, Douglas-Peucker]
+summary: Removes vertices from lines and polygon outlines within a tolerance, keeping their overall shape.
+group: vector/geometry
+inputs:
+  - { name: layer, type: vector }
+outputs:
+  - { name: output, type: vector }
+parameters:
+  tolerance: { type: length, required: true }
+  unit: { type: enum, required: true, values: [m, ft, us-ft, km, mi] }
+  preserve_topology: { type: boolean, default: true, note: Avoid creating invalid or collapsed shapes. }
+checks: [crs.measure, geometry.valid]
+pitfalls:
+  - Simplifying polygons one at a time can open gaps and overlaps between neighbours that shared an edge.
+columbus: { tool: vector_op, op: simplify }
+status: active
+review: { state: draft }

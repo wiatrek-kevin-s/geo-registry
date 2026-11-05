@@ -1,0 +1,14 @@
+id: describe-raster
+kind: operation
+name: Describe raster
+aka: [Get Raster Properties, Raster information, raster info, gdalinfo]
+summary: Reports a raster's size, cell size, bands, data type, nodata value, CRS and extent.
+group: raster/inspection
+inputs:
+  - { name: raster, type: raster }
+outputs:
+  - { name: info, type: table }
+checks: [raster.nodata]
+columbus: { tool: raster_op, op: info }
+status: active
+review: { state: draft }

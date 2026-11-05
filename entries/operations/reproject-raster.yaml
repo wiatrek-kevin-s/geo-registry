@@ -1,0 +1,21 @@
+id: reproject-raster
+kind: operation
+name: Reproject raster
+aka: [Project Raster, Warp, Warp (reproject), gdalwarp]
+summary: Resamples a raster from its coordinate reference system into another.
+group: raster/crs
+inputs:
+  - { name: raster, type: raster }
+outputs:
+  - { name: output, type: raster }
+parameters:
+  crs: { type: crs, required: true }
+  resampling: { type: enum, values: [nearest, bilinear, cubic, average, mode] }
+  resolution: { type: number, note: Output cell size in the target CRS units. }
+checks: [crs.reprojected, raster.resampling, raster.nodata]
+pitfalls:
+  - Categorical rasters (land cover, classes) must use nearest or mode; other methods invent class values.
+related: [reproject]
+columbus: { tool: raster_op, op: reproject }
+status: active
+review: { state: draft }

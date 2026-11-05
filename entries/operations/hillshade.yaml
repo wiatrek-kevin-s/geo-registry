@@ -1,0 +1,20 @@
+id: hillshade
+kind: operation
+name: Hillshade
+aka: [shaded relief, gdaldem hillshade]
+summary: A shaded-relief image of an elevation raster, lit from a given direction and height.
+group: raster/terrain
+inputs:
+  - { name: raster, type: raster, note: An elevation model. }
+outputs:
+  - { name: output, type: raster }
+parameters:
+  z_unit: { type: enum, required: true, values: [m, ft, us-ft] }
+  azimuth: { type: number, default: 315, unit: degrees }
+  altitude: { type: number, default: 45, unit: degrees }
+  band: { type: integer }
+checks: [crs.geographic, raster.nodata]
+related: [slope, aspect]
+columbus: { tool: raster_op, op: hillshade }
+status: active
+review: { state: draft }

@@ -1,0 +1,22 @@
+id: zonal-statistics
+kind: operation
+name: Zonal statistics
+aka: [Zonal Statistics as Table, zonal stats, summarize raster within polygons]
+summary: Summary statistics of raster cell values inside each zone polygon.
+group: raster/statistics
+inputs:
+  - { name: raster, type: raster }
+  - { name: zones, type: vector, geometry: polygon }
+outputs:
+  - { name: output, type: vector }
+parameters:
+  stats: { type: list, values: [count, mean, min, max, sum, std] }
+  band: { type: integer }
+  all_touched: { type: boolean, note: "Count every cell a zone touches, not only cells whose centre is inside." }
+checks: [crs.agreement, raster.nodata, raster.stats_sampled]
+pitfalls:
+  - Zones smaller than a cell may get no cells at all unless all_touched is set.
+  - Overlapping zones are handled differently by different engines; some rasterize them and lose the overlap.
+columbus: { tool: raster_op, op: zonal_stats }
+status: active
+review: { state: draft }

@@ -1,0 +1,18 @@
+id: dissolve
+kind: operation
+name: Dissolve
+aka: [Pairwise Dissolve, merge by attribute, aggregate, union by field]
+summary: Merges features into one per value of the given fields, or into one shape for everything.
+group: vector/aggregation
+inputs:
+  - { name: layer, type: vector }
+outputs:
+  - { name: output, type: vector }
+parameters:
+  by: { type: fields, note: Field or fields to group by; omit to merge everything. }
+checks: [geometry.valid]
+pitfalls:
+  - Other attributes are dropped or summarized; decide how before dissolving.
+columbus: { tool: vector_op, op: dissolve }
+status: active
+review: { state: draft }

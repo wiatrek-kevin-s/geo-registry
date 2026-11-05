@@ -1,5 +1,6 @@
 //! Building the published index: `index.json`, `registry.sqlite`, `index.sha256`.
 
+use crate::entries::kind_of;
 use crate::FORMAT_VERSION;
 use anyhow::{Context, Result};
 use rusqlite::{params, Connection};
@@ -15,7 +16,75 @@ pub struct BuildOutput {
     pub index_json: PathBuf,
     pub sqlite: PathBuf,
     pub sha256: PathBuf,
+    /// Data and tool entries (the `entries` table / list).
     pub count: usize,
+    pub operations: usize,
+    pub implementations: usize,
+}
+
+/// True for the kinds Columbus reads from `entries` today (data and tool).
+/// Operations and implementations are published in their own tables, so
+/// existing readers of the index see exactly what they saw before.
+pub fn is_catalogue(entry: &Value) -> bool {
+    !matches!(kind_of(entry), Some("operation") | Some("implementation"))
+}
+
+fn sorted_by_id<'a>(entries: impl Iterator<Item = &'a Value>) -> Vec<&'a Value> {
+    let mut v: Vec<&Value> = entries.collect();
+    v.sort_by_key(|e| str_field(e, "id").unwrap_or_default().to_string());
+    v
+}
+
+/// The card for an operation: what it is, its other names and which
+/// Columbus tool runs it today.
+pub fn operation_card(entry: &Value) -> Value {
+    let mut c = Map::new();
+    for key in ["id", "kind", "name", "summary", "group"] {
+        c.insert(
+            key.into(),
+            Value::String(str_field(entry, key).unwrap_or_default().into()),
+        );
+    }
+    for key in ["aka", "columbus", "checks"] {
+        if let Some(v) = entry.get(key) {
+            c.insert(key.into(), v.clone());
+        }
+    }
+    c.insert(
+        "status".into(),
+        Value::String(str_field(entry, "status").unwrap_or("active").into()),
+    );
+    if let Some(r) = entry.pointer("/review/state") {
+        c.insert("review".into(), r.clone());
+    }
+    Value::Object(c)
+}
+
+/// Searchable text for an operation besides its name and summary: other
+/// names, parameter names and input/output types.
+fn operation_terms(entry: &Value) -> String {
+    let mut parts: Vec<String> = Vec::new();
+    if let Some(a) = entry.get("aka").and_then(Value::as_array) {
+        parts.extend(a.iter().filter_map(Value::as_str).map(str::to_string));
+    }
+    if let Some(p) = entry.get("parameters").and_then(Value::as_object) {
+        parts.extend(p.keys().map(|k| k.replace('_', " ")));
+    }
+    for ports in ["inputs", "outputs"] {
+        if let Some(list) = entry.get(ports).and_then(Value::as_array) {
+            for port in list {
+                for k in ["type", "geometry"] {
+                    if let Some(s) = port.get(k).and_then(Value::as_str) {
+                        parts.push(s.to_string());
+                    }
+                }
+            }
+        }
+    }
+    if let Some(op) = entry.pointer("/columbus/op").and_then(Value::as_str) {
+        parts.push(op.replace('_', " "));
+    }
+    parts.join(" ")
 }
 
 fn str_field<'a>(v: &'a Value, key: &str) -> Option<&'a str> {
@@ -140,18 +209,24 @@ pub fn format_rfc3339(secs: i64) -> String {
 }
 
 /// Build `index.json` contents (entries sorted by id).
+/// `entries` and `count` hold data and tool entries only, as before;
+/// operations follow in their own list.
 pub fn index_json(entries: &[Value], generated_at: &str) -> Value {
-    let mut cards: Vec<Value> = entries.iter().map(card).collect();
-    cards.sort_by(|a, b| {
-        str_field(a, "id")
-            .unwrap_or_default()
-            .cmp(str_field(b, "id").unwrap_or_default())
-    });
+    let cards: Vec<Value> = sorted_by_id(entries.iter().filter(|e| is_catalogue(e)))
+        .into_iter()
+        .map(card)
+        .collect();
+    let ops: Vec<Value> = sorted_by_id(entries.iter().filter(|e| kind_of(e) == Some("operation")))
+        .into_iter()
+        .map(operation_card)
+        .collect();
     json!({
         "format_version": FORMAT_VERSION,
         "generated_at": generated_at,
         "count": cards.len(),
         "entries": cards,
+        "operations_count": ops.len(),
+        "operations": ops,
     })
 }
 
@@ -177,14 +252,47 @@ pub fn write_sqlite(path: &Path, entries: &[Value], generated_at: &str) -> Resul
          CREATE VIRTUAL TABLE entries_fts USING fts5(
              id UNINDEXED, name, summary, category, themes, notes,
              tokenize = 'porter unicode61 remove_diacritics 2'
-         );",
+         );
+         -- Added in format 1 without changing the tables above.
+         CREATE TABLE operations (
+             id     TEXT PRIMARY KEY,
+             name   TEXT NOT NULL,
+             status TEXT NOT NULL,
+             card   TEXT NOT NULL,
+             entry  TEXT NOT NULL
+         );
+         CREATE VIRTUAL TABLE operations_fts USING fts5(
+             id UNINDEXED, name, summary, terms, notes,
+             tokenize = 'porter unicode61 remove_diacritics 2'
+         );
+         CREATE TABLE implementations (
+             id         TEXT PRIMARY KEY,
+             implements TEXT,           -- operation id, or NULL if not mapped yet
+             software   TEXT NOT NULL,  -- tool entry id
+             name       TEXT NOT NULL,
+             status     TEXT NOT NULL,
+             entry      TEXT NOT NULL
+         );
+         CREATE INDEX implementations_op ON implementations(implements);",
     )?;
+    let catalogue = sorted_by_id(entries.iter().filter(|e| is_catalogue(e)));
+    let operations = sorted_by_id(entries.iter().filter(|e| kind_of(e) == Some("operation")));
+    let implementations = sorted_by_id(
+        entries
+            .iter()
+            .filter(|e| kind_of(e) == Some("implementation")),
+    );
     let tx = conn.transaction()?;
     {
         let mut meta = tx.prepare("INSERT INTO meta (key, value) VALUES (?1, ?2)")?;
         meta.execute(params!["format_version", FORMAT_VERSION.to_string()])?;
         meta.execute(params!["generated_at", generated_at])?;
-        meta.execute(params!["count", entries.len().to_string()])?;
+        meta.execute(params!["count", catalogue.len().to_string()])?;
+        meta.execute(params!["operations_count", operations.len().to_string()])?;
+        meta.execute(params![
+            "implementations_count",
+            implementations.len().to_string()
+        ])?;
 
         let mut ins = tx.prepare(
             "INSERT INTO entries (id, kind, name, status, card, entry) VALUES (?1, ?2, ?3, ?4, ?5, ?6)",
@@ -193,9 +301,7 @@ pub fn write_sqlite(path: &Path, entries: &[Value], generated_at: &str) -> Resul
             "INSERT INTO entries_fts (id, name, summary, category, themes, notes)
              VALUES (?1, ?2, ?3, ?4, ?5, ?6)",
         )?;
-        let mut sorted: Vec<&Value> = entries.iter().collect();
-        sorted.sort_by_key(|e| str_field(e, "id").unwrap_or_default().to_string());
-        for e in sorted {
+        for e in &catalogue {
             let id = str_field(e, "id").unwrap_or_default();
             ins.execute(params![
                 id,
@@ -214,9 +320,52 @@ pub fn write_sqlite(path: &Path, entries: &[Value], generated_at: &str) -> Resul
                 str_field(e, "notes").unwrap_or_default(),
             ])?;
         }
+
+        let mut ins = tx.prepare(
+            "INSERT INTO operations (id, name, status, card, entry) VALUES (?1, ?2, ?3, ?4, ?5)",
+        )?;
+        let mut fts = tx.prepare(
+            "INSERT INTO operations_fts (id, name, summary, terms, notes) VALUES (?1, ?2, ?3, ?4, ?5)",
+        )?;
+        for e in &operations {
+            let id = str_field(e, "id").unwrap_or_default();
+            ins.execute(params![
+                id,
+                str_field(e, "name").unwrap_or_default(),
+                str_field(e, "status").unwrap_or("active"),
+                operation_card(e).to_string(),
+                e.to_string(),
+            ])?;
+            fts.execute(params![
+                id,
+                str_field(e, "name").unwrap_or_default(),
+                str_field(e, "summary").unwrap_or_default(),
+                operation_terms(e),
+                str_field(e, "notes").unwrap_or_default(),
+            ])?;
+        }
+
+        let mut ins = tx.prepare(
+            "INSERT INTO implementations (id, implements, software, name, status, entry)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6)",
+        )?;
+        for e in &implementations {
+            ins.execute(params![
+                str_field(e, "id").unwrap_or_default(),
+                str_field(e, "implements"),
+                str_field(e, "software").unwrap_or_default(),
+                str_field(e, "name").unwrap_or_default(),
+                str_field(e, "status").unwrap_or("active"),
+                e.to_string(),
+            ])?;
+        }
     }
     tx.commit()?;
-    conn.execute_batch("INSERT INTO entries_fts(entries_fts) VALUES ('optimize'); VACUUM;")?;
+    conn.execute_batch(
+        "INSERT INTO entries_fts(entries_fts) VALUES ('optimize');
+         INSERT INTO operations_fts(operations_fts) VALUES ('optimize');
+         VACUUM;",
+    )?;
     Ok(())
 }
 
@@ -254,7 +403,15 @@ pub fn build(entries: &[Value], out: &Path) -> Result<BuildOutput> {
         index_json: index_path,
         sqlite: db_path,
         sha256: sha_path,
-        count: entries.len(),
+        count: entries.iter().filter(|e| is_catalogue(e)).count(),
+        operations: entries
+            .iter()
+            .filter(|e| kind_of(e) == Some("operation"))
+            .count(),
+        implementations: entries
+            .iter()
+            .filter(|e| kind_of(e) == Some("implementation"))
+            .count(),
     })
 }
 
@@ -301,6 +458,21 @@ mod tests {
         assert_eq!(c["category"], "C");
         assert_eq!(c["url"], "https://t");
         assert!(c.get("access_types").is_none());
+    }
+
+    #[test]
+    fn operations_kept_out_of_entries() {
+        let es = vec![
+            json!({"id": "d", "kind": "data", "name": "D"}),
+            json!({"id": "buffer", "kind": "operation", "name": "Buffer", "group": "vector/proximity",
+                   "aka": ["proximity zone"], "columbus": {"tool": "vector_op", "op": "buffer"}}),
+        ];
+        let idx = index_json(&es, "x");
+        assert_eq!(idx["count"], 1);
+        assert_eq!(idx["entries"].as_array().unwrap().len(), 1);
+        assert_eq!(idx["operations_count"], 1);
+        assert_eq!(idx["operations"][0]["columbus"]["op"], "buffer");
+        assert_eq!(idx["operations"][0]["aka"][0], "proximity zone");
     }
 
     #[test]

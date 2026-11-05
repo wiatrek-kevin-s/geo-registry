@@ -48,7 +48,7 @@ fn validate_build_and_search_fixture() {
         "validate failed: {}",
         String::from_utf8_lossy(&out.stderr)
     );
-    assert!(String::from_utf8_lossy(&out.stdout).contains("3 entries"));
+    assert!(String::from_utf8_lossy(&out.stdout).contains("4 entries"));
 
     let dist = tempfile::tempdir().unwrap();
     let out = run(&[
@@ -68,7 +68,16 @@ fn validate_build_and_search_fixture() {
 
     let index: serde_json::Value =
         serde_json::from_str(&fs::read_to_string(dist.path().join("index.json")).unwrap()).unwrap();
+    // Operations stay out of `entries`, which Columbus servers read today.
     assert_eq!(index["count"], 3);
+    assert_eq!(index["entries"].as_array().unwrap().len(), 3);
+    assert!(index["entries"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .all(|c| c["kind"] == "data" || c["kind"] == "tool"));
+    assert_eq!(index["operations_count"], 1);
+    assert_eq!(index["operations"][0]["id"], "buffer-fixture");
     assert_eq!(index["format_version"], 1);
     assert_eq!(index["entries"][0]["id"], "raster-fixture-tool");
     let data = index["entries"]
@@ -98,6 +107,40 @@ fn validate_build_and_search_fixture() {
 
     let out = run(&["search", "raster", "--kind", "tool", "--db", s(&db)]);
     assert!(String::from_utf8_lossy(&out.stdout).contains("raster-fixture-tool"));
+
+    // An unfiltered search (what Columbus does) never returns operations;
+    // --kind operation finds them by name or by another name.
+    let out = run(&["search", "buffer", "--db", s(&db)]);
+    assert!(!String::from_utf8_lossy(&out.stdout).contains("buffer-fixture"));
+    let out = run(&[
+        "search",
+        "proximity zone",
+        "--kind",
+        "operation",
+        "--db",
+        s(&db),
+    ]);
+    let text = String::from_utf8_lossy(&out.stdout);
+    assert!(
+        text.contains("buffer-fixture") && text.contains("Columbus vector_op buffer"),
+        "{text}"
+    );
+
+    let conn = rusqlite::Connection::open(&db).unwrap();
+    let count: String = conn
+        .query_row("SELECT value FROM meta WHERE key = 'count'", [], |r| {
+            r.get(0)
+        })
+        .unwrap();
+    assert_eq!(count, "3");
+    let kinds: i64 = conn
+        .query_row(
+            "SELECT count(*) FROM entries WHERE kind NOT IN ('data', 'tool')",
+            [],
+            |r| r.get(0),
+        )
+        .unwrap();
+    assert_eq!(kinds, 0);
 }
 
 #[test]

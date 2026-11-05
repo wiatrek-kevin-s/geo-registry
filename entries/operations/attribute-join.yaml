@@ -1,0 +1,27 @@
+id: attribute-join
+kind: operation
+name: Attribute join
+aka: [Join Field, Add Join, table join, Join attributes by field value]
+summary: Adds the fields of a table to a layer by matching values in a key field.
+group: table/join
+inputs:
+  - { name: left, type: any }
+  - { name: right, type: table }
+outputs:
+  - { name: output, type: any }
+parameters:
+  left_key: { type: field, required: true }
+  right_key: { type: field, note: Defaults to the same name as left_key. }
+  how: { type: enum, values: [left, inner], note: Keep unmatched left rows (left) or drop them (inner). }
+  key_as_text: { type: boolean, note: "Compare keys as text, for codes stored as numbers on one side." }
+  trim: { type: boolean, note: Ignore leading and trailing spaces in keys. }
+  ignore_case: { type: boolean }
+  pad: { type: integer, note: Zero-pad keys to this many characters before matching. }
+checks: [join.unmatched, join.many_to_many, join.key_types, join.keys_normalized]
+pitfalls:
+  - Codes with leading zeros stored as text on one side and numbers on the other match nothing.
+  - Duplicate keys on the right side multiply rows on the left.
+related: [spatial-join]
+columbus: { tool: vector_op, op: join }
+status: active
+review: { state: draft }

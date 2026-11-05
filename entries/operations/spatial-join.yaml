@@ -1,0 +1,22 @@
+id: spatial-join
+kind: operation
+name: Spatial join
+aka: [Join attributes by location, sjoin, location join]
+summary: Adds the fields of features in one layer to features of another, matching by a spatial relationship.
+group: vector/join
+inputs:
+  - { name: left, type: vector }
+  - { name: right, type: vector }
+outputs:
+  - { name: output, type: vector }
+parameters:
+  predicate: { type: enum, default: intersects, values: [intersects, within, contains, touches, crosses, overlaps] }
+  how: { type: enum, default: left, values: [left, inner] }
+checks: [crs.agreement, join.unmatched, join.many_to_many]
+pitfalls:
+  - A feature matching several features on the other side becomes several rows unless the engine aggregates them.
+  - Features that share only a boundary count as intersecting.
+related: [attribute-join, intersect]
+columbus: { tool: vector_op, op: spatial_join }
+status: active
+review: { state: draft }
