@@ -1,0 +1,22 @@
+id: clip-raster
+kind: operation
+name: Clip raster
+aka: [Clip Raster, Extract by Mask, Clip raster by mask layer, Clip raster by extent]
+summary: Cuts a raster to a polygon mask or a bounding box.
+group: raster/extraction
+inputs:
+  - { name: raster, type: raster }
+  - { name: mask, type: vector, geometry: polygon, note: Optional; a bbox can be given instead. }
+outputs:
+  - { name: output, type: raster }
+parameters:
+  bbox: { type: extent, note: Used when there is no mask. }
+  bbox_crs: { type: crs }
+  all_touched: { type: boolean, note: "Keep every cell the mask touches, not only cells whose centre is inside." }
+checks: [crs.agreement, raster.nodata]
+pitfalls:
+  - Cells outside the mask become nodata; a raster without a nodata value turns them into real zeros.
+related: [clip]
+columbus: { tool: raster_op, op: clip }
+status: active
+review: { state: draft }

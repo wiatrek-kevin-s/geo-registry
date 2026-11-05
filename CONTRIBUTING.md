@@ -38,6 +38,23 @@ reviewed.
 uses, say so in the PR. A maintainer confirms the host is the publisher's own or an
 established mirror before merging.
 
+## Adding or reviewing an operation
+
+1. One file per operation in `entries/operations/`, named by its id (hyphenated, e.g.
+   `zonal-statistics`).
+2. One operation per meaning: two engine tools share an operation when the same inputs
+   give the same kind of output and their differences fit in parameters or notes. A
+   different kind of output is a different operation, linked with `broader`/`narrower`.
+3. List in `aka` the names analysts and engines actually use (ArcGIS Pro, QGIS, GRASS,
+   PostGIS), so a search by any of them finds it. Write `summary` and `pitfalls` in your
+   own words; do not copy vendor help text.
+4. If Columbus already runs it, use Columbus's input and parameter names and fill
+   `columbus` with its tool and op. Take `checks` ids from Columbus's check catalogue.
+5. New operations start as `review.state: draft`. A person who knows the operation in at
+   least two engines sets `reviewed`, `reviewed_by` and `reviewed_on`.
+
+Do not write implementation entries by hand; they come from the engine harvesters.
+
 ## Seeded entries and the converter
 
 `seed/convert.py` regenerates all seeded entries from `seed/geospatial-tool-atlas.csv`, and

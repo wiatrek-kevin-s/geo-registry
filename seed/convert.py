@@ -629,10 +629,17 @@ def write_entries(entries: dict[str, dict], out: Path) -> None:
         (out / rel).write_text(dump_yaml(entries[rel]), encoding="utf-8", newline="\n")
 
 
+SEEDED_DIRS = ("data", "tools")  # entries/operations/ is written by people, not the converter
+
+
+def _seeded(root: Path) -> set[str]:
+    return {p.relative_to(root).as_posix() for sub in SEEDED_DIRS for p in (root / sub).glob("*.yaml")}
+
+
 def diff_dirs(expected: Path, actual: Path) -> list[str]:
     problems: list[str] = []
-    exp = {p.relative_to(expected).as_posix() for p in expected.glob("*/*.yaml")}
-    act = {p.relative_to(actual).as_posix() for p in actual.glob("*/*.yaml")} if actual.exists() else set()
+    exp = _seeded(expected)
+    act = _seeded(actual) if actual.exists() else set()
     for rel in sorted(exp - act):
         problems.append(f"missing in entries/: {rel}")
     for rel in sorted(act - exp):

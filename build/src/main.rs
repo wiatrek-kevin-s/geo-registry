@@ -19,6 +19,7 @@ struct Cli {
 enum Kind {
     Data,
     Tool,
+    Operation,
 }
 
 impl Kind {
@@ -26,6 +27,7 @@ impl Kind {
         match self {
             Kind::Data => "data",
             Kind::Tool => "tool",
+            Kind::Operation => "operation",
         }
     }
 }
@@ -109,11 +111,27 @@ fn main() -> ExitCode {
             Some(values) => {
                 let o = index::build(&values, &out)?;
                 println!(
-                    "built {} entries:\n  {}\n  {}\n  {}",
+                    "built {} entries, {} operations, {} implementations:\n  {}\n  {}\n  {}",
                     o.count,
+                    o.operations,
+                    o.implementations,
                     o.index_json.display(),
                     o.sqlite.display(),
                     o.sha256.display()
+                );
+                let data: Vec<_> = values
+                    .iter()
+                    .filter(|v| entries::kind_of(v) == Some("data"))
+                    .collect();
+                let reviewed = data
+                    .iter()
+                    .filter(|v| {
+                        v.pointer("/review/state").and_then(|s| s.as_str()) == Some("reviewed")
+                    })
+                    .count();
+                println!(
+                    "data entries reviewed by a person: {reviewed} of {}",
+                    data.len()
                 );
                 Ok(true)
             }

@@ -1,0 +1,21 @@
+id: buffer
+kind: operation
+name: Buffer
+aka: [buffer zone, proximity zone, offset polygon, Pairwise Buffer]
+summary: Polygons covering everything within a given distance of the input features.
+group: vector/proximity
+inputs:
+  - { name: layer, type: vector }
+outputs:
+  - { name: output, type: vector, geometry: polygon }
+parameters:
+  distance: { type: length, required: true }
+  unit: { type: enum, required: true, values: [m, ft, us-ft, km, mi] }
+  dissolve: { type: boolean, default: false, note: Merge all buffers into one shape. }
+  segments: { type: integer, default: 8, note: Segments per quarter circle; more is smoother. }
+checks: [crs.measure, geometry.valid]
+pitfalls:
+  - A planar buffer of data in a geographic CRS is in degrees unless the engine switches to geodesic.
+columbus: { tool: vector_op, op: buffer }
+status: active
+review: { state: draft }

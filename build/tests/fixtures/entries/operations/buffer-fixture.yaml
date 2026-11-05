@@ -1,0 +1,16 @@
+id: buffer-fixture
+kind: operation
+name: Buffer fixture
+aka: [proximity zone]
+summary: Fixture operation for the CLI test.
+group: vector/proximity
+inputs:
+  - { name: layer, type: vector }
+outputs:
+  - { name: output, type: vector, geometry: polygon }
+parameters:
+  distance: { type: length, required: true }
+checks: [crs.measure]
+columbus: { tool: vector_op, op: buffer }
+status: active
+review: { state: draft }

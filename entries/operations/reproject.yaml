@@ -1,0 +1,20 @@
+id: reproject
+kind: operation
+name: Reproject
+aka: [Project, Reproject layer, transform, change coordinate system]
+summary: Transforms vector features from their coordinate reference system into another.
+group: vector/crs
+inputs:
+  - { name: layer, type: vector }
+outputs:
+  - { name: output, type: vector }
+parameters:
+  crs: { type: crs, required: true, note: "Target CRS, e.g. EPSG:3081." }
+checks: [crs.present, crs.area_of_use, crs.reprojected]
+pitfalls:
+  - A datum change (NAD27 to NAD83, or between NAD83 realizations) needs the right transformation, or positions shift by metres.
+  - Data with no CRS cannot be reprojected correctly; assigning a CRS is a different step from reprojecting.
+related: [reproject-raster]
+columbus: { tool: vector_op, op: reproject }
+status: active
+review: { state: draft }

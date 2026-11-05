@@ -1,0 +1,20 @@
+id: aspect
+kind: operation
+name: Aspect
+aka: [slope direction, facing direction, gdaldem aspect]
+summary: The compass direction each cell of an elevation raster faces downhill.
+group: raster/terrain
+inputs:
+  - { name: raster, type: raster, note: An elevation model. }
+outputs:
+  - { name: output, type: raster }
+parameters:
+  z_unit: { type: enum, required: true, values: [m, ft, us-ft] }
+  band: { type: integer }
+checks: [crs.geographic, raster.nodata]
+pitfalls:
+  - Flat cells have no aspect, and engines mark them with different special values; check before averaging.
+related: [slope, hillshade]
+columbus: { tool: raster_op, op: aspect }
+status: active
+review: { state: draft }

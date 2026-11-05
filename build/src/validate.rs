@@ -1,10 +1,10 @@
 //! Schema and cross-entry validation.
 
-use crate::entries::EntryFile;
+use crate::entries::{kind_of, EntryFile};
 use crate::RECIPE_TOOLS;
 use anyhow::{Context, Result};
 use serde_json::Value;
-use std::collections::{BTreeMap, HashSet};
+use std::collections::{BTreeMap, HashMap, HashSet};
 use std::fmt;
 use std::fs;
 use std::path::Path;
@@ -130,32 +130,90 @@ pub fn validate_files(files: &[EntryFile], validator: &jsonschema::Validator) ->
         }
     }
 
-    // Second pass: references must resolve.
+    // Second pass: references must resolve, and to the right kind of entry.
     let known: HashSet<&str> = ids.keys().map(String::as_str).collect();
+    let kinds: HashMap<&str, &str> = files
+        .iter()
+        .filter_map(|f| f.value.as_ref().ok())
+        .filter_map(|v| Some((v.get("id")?.as_str()?, kind_of(v)?)))
+        .collect();
     for f in files {
         let Ok(v) = &f.value else { continue };
         let self_id = v.get("id").and_then(Value::as_str).unwrap_or_default();
-        if let Some(rel) = v.get("related").and_then(Value::as_array) {
-            for r in rel {
-                match r.as_str() {
-                    Some(r) if r == self_id => problems.push(Problem {
-                        file: f.display(),
-                        message: format!("related lists the entry itself ('{r}')"),
-                    }),
-                    Some(r) if !known.contains(r) => problems.push(Problem {
-                        file: f.display(),
-                        message: format!("related id '{r}' does not resolve to any entry"),
-                    }),
-                    _ => {}
+        let self_kind = kind_of(v).unwrap_or_default();
+        let mut problem = |message: String| {
+            problems.push(Problem {
+                file: f.display(),
+                message,
+            })
+        };
+        for field in ["related", "broader", "narrower"] {
+            let Some(list) = v.get(field).and_then(Value::as_array) else {
+                continue;
+            };
+            for r in list.iter().filter_map(Value::as_str) {
+                if r == self_id {
+                    problem(format!("{field} lists the entry itself ('{r}')"));
+                } else if !known.contains(r) {
+                    problem(format!("{field} id '{r}' does not resolve to any entry"));
+                } else if field != "related" && kinds.get(r) != Some(&"operation") {
+                    problem(format!("{field} id '{r}' is not an operation"));
                 }
             }
         }
         if let Some(r) = v.get("replaced_by").and_then(Value::as_str) {
             if !known.contains(r) {
-                problems.push(Problem {
-                    file: f.display(),
-                    message: format!("replaced_by '{r}' does not resolve to any entry"),
-                });
+                problem(format!("replaced_by '{r}' does not resolve to any entry"));
+            } else if kinds.get(r) != Some(&self_kind) {
+                problem(format!("replaced_by '{r}' is not a {self_kind} entry"));
+            }
+        }
+        // An implementation names the operation it implements and the
+        // software (kind `tool`) it belongs to.
+        for (field, want) in [("implements", "operation"), ("software", "tool")] {
+            if self_kind != "implementation" {
+                break;
+            }
+            if let Some(r) = v.get(field).and_then(Value::as_str) {
+                match kinds.get(r) {
+                    None => problem(format!("{field} '{r}' does not resolve to any entry")),
+                    Some(k) if *k != want => {
+                        problem(format!("{field} '{r}' is of kind {k}, not {want}"))
+                    }
+                    _ => {}
+                }
+            }
+        }
+        // A crosswalk can only map parameters the operation defines.
+        if let (Some(op), Some(cw)) = (
+            v.get("implements").and_then(Value::as_str),
+            v.get("crosswalk").and_then(Value::as_object),
+        ) {
+            let target = files
+                .iter()
+                .filter_map(|f| f.value.as_ref().ok())
+                .find(|e| e.get("id").and_then(Value::as_str) == Some(op));
+            // Unresolved `implements` is reported above; nothing to compare.
+            let Some(target) = target else { continue };
+            let mut defined: HashSet<&str> = target
+                .get("parameters")
+                .and_then(Value::as_object)
+                .map(|p| p.keys().map(String::as_str).collect())
+                .unwrap_or_default();
+            for ports in ["inputs", "outputs"] {
+                if let Some(list) = target.get(ports).and_then(Value::as_array) {
+                    defined.extend(
+                        list.iter()
+                            .filter_map(|p| p.get("name").and_then(Value::as_str)),
+                    );
+                }
+            }
+            for name in cw.keys() {
+                if !defined.contains(name.as_str()) {
+                    problem(format!(
+                        "crosswalk maps '{name}', which operation '{op}' does not define"
+                    ));
+                }
             }
         }
     }
@@ -262,5 +320,92 @@ mod tests {
         let s = schema();
         let p = validate_files(&[file("a", "data", tool("a"))], &s);
         assert!(p.iter().any(|p| p.message.contains("does not belong")));
+    }
+
+    fn operation(id: &str) -> Value {
+        json!({
+            "id": id, "kind": "operation", "name": "Buffer",
+            "summary": "Polygons within a distance of the input features.",
+            "group": "vector/proximity",
+            "inputs": [{"name": "layer", "type": "vector"}],
+            "outputs": [{"name": "output", "type": "vector", "geometry": "polygon"}],
+            "parameters": {"distance": {"type": "length", "required": true},
+                           "dissolve": {"type": "boolean", "default": false}},
+            "checks": ["crs.measure"],
+            "columbus": {"tool": "vector_op", "op": "buffer"},
+            "status": "active", "review": {"state": "draft"}
+        })
+    }
+
+    fn implementation(id: &str) -> Value {
+        json!({
+            "id": id, "kind": "implementation", "name": "Buffer (QGIS)", "software": "a",
+            "implements": "buffer", "call": {"interface": "qgis-process", "name": "native:buffer"},
+            "harvest": {"harvester": "qgis", "engine_version": "3.44"},
+            "parameters": {"INPUT": {"type": "source", "required": true},
+                           "DISSOLVE": {"type": "boolean", "default": false}},
+            "crosswalk": {"layer": "INPUT", "dissolve": {"param": "DISSOLVE"}},
+            "effects": {"modifies_input": false},
+            "status": "active", "review": {"state": "harvested", "source": "qgis"}
+        })
+    }
+
+    #[test]
+    fn operations_and_implementations_pass() {
+        let s = schema();
+        let files = vec![
+            file("a", "tool", tool("a")),
+            file("buffer", "operation", operation("buffer")),
+            file("q", "implementation", implementation("q")),
+        ];
+        let p = validate_files(&files, &s);
+        assert!(p.is_empty(), "{p:?}");
+    }
+
+    #[test]
+    fn operation_schema_is_strict() {
+        let s = schema();
+        let mut o = operation("buffer");
+        o["review"] = json!({"state": "seeded"}); // data/tool states only
+        o["checks"] = json!(["not a check id"]);
+        o["columbus"] = json!({"tool": "run_shell", "op": "x"});
+        o["license"] = json!("MIT"); // operations have no licence
+        let errs = schema_errors(&s, &o);
+        assert!(errs.len() >= 4, "{errs:?}");
+        // Data and tool entries cannot take the new review states.
+        let mut d = data("d");
+        d["review"] = json!({"state": "draft"});
+        assert!(!schema_errors(&s, &d).is_empty());
+    }
+
+    #[test]
+    fn references_resolve_to_the_right_kind() {
+        let s = schema();
+        let mut o = operation("buffer");
+        o["narrower"] = json!(["a"]); // a tool, not an operation
+        let mut i = implementation("q");
+        i["software"] = json!("buffer"); // an operation, not a tool
+        i["crosswalk"] = json!({"segments": "SEGMENTS"}); // not a parameter of buffer
+        let files = vec![
+            file("a", "tool", tool("a")),
+            file("buffer", "operation", o),
+            file("q", "implementation", i),
+        ];
+        let p = validate_files(&files, &s);
+        let has = |m: &str| p.iter().any(|p| p.message.contains(m));
+        assert!(has("narrower id 'a' is not an operation"), "{p:?}");
+        assert!(
+            has("software 'buffer' is of kind operation, not tool"),
+            "{p:?}"
+        );
+        assert!(has("crosswalk maps 'segments'"), "{p:?}");
+
+        let mut i = implementation("q");
+        i["implements"] = json!("nothing");
+        let files = vec![file("a", "tool", tool("a")), file("q", "implementation", i)];
+        let p = validate_files(&files, &s);
+        assert!(p
+            .iter()
+            .any(|p| p.message.contains("implements 'nothing' does not resolve")));
     }
 }

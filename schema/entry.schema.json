@@ -2,11 +2,11 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/wiatrek-kevin-s/geo-registry/schema/entry.schema.json",
   "title": "geo-registry entry",
-  "description": "One GIS tool or data source in the Columbus geo-registry. Entries are CC0-1.0.",
+  "description": "One entry in the Columbus geo-registry: a data source, a piece of GIS software (kind `tool`), an engine-neutral geoprocessing operation, or one engine's implementation of an operation. Entries are CC0-1.0.",
   "type": "object",
-  "required": ["id", "kind", "name", "license", "status", "review"],
+  "required": ["id", "kind", "name", "status", "review"],
   "properties": {
-    "kind": { "enum": ["data", "tool"] }
+    "kind": { "enum": ["data", "tool", "operation", "implementation"] }
   },
   "allOf": [
     {
@@ -16,6 +16,14 @@
     {
       "if": { "properties": { "kind": { "const": "tool" } }, "required": ["kind"] },
       "then": { "$ref": "#/$defs/toolEntry" }
+    },
+    {
+      "if": { "properties": { "kind": { "const": "operation" } }, "required": ["kind"] },
+      "then": { "$ref": "#/$defs/operationEntry" }
+    },
+    {
+      "if": { "properties": { "kind": { "const": "implementation" } }, "required": ["kind"] },
+      "then": { "$ref": "#/$defs/implementationEntry" }
     }
   ],
   "$defs": {
@@ -52,6 +60,20 @@
       },
       "if": { "properties": { "state": { "const": "seeded" } } },
       "then": { "required": ["state", "source", "source_row"] }
+    },
+    "operationReview": {
+      "description": "Review state of an operation or implementation. `draft`: written but not yet checked by a person. `harvested`: generated from the engine's own description by the harvester named in `source`. `reviewed`: checked by a person. Data and tool entries keep the `review` states Columbus already reads.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state"],
+      "properties": {
+        "state": { "enum": ["draft", "harvested", "reviewed"] },
+        "source": { "type": "string" },
+        "reviewed_by": { "type": "string" },
+        "reviewed_on": { "type": "string", "format": "date" }
+      },
+      "if": { "properties": { "state": { "const": "harvested" } } },
+      "then": { "required": ["state", "source"] }
     },
     "relatedIds": {
       "type": "array",
@@ -226,6 +248,199 @@
         "status": { "$ref": "#/$defs/entryStatus" },
         "replaced_by": { "$ref": "#/$defs/id" },
         "review": { "$ref": "#/$defs/review" }
+      }
+    },
+    "paramName": {
+      "description": "Canonical parameter name. Where Columbus already has a name for the parameter, the operation uses it.",
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$",
+      "maxLength": 64
+    },
+    "scalar": { "type": ["string", "number", "boolean"] },
+    "port": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "type"],
+      "properties": {
+        "name": { "$ref": "#/$defs/paramName" },
+        "type": { "enum": ["vector", "raster", "table", "pointcloud", "any"] },
+        "geometry": { "enum": ["point", "line", "polygon", "any"] },
+        "note": { "type": "string", "maxLength": 300 }
+      }
+    },
+    "canonicalParam": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "enum": ["length", "number", "integer", "boolean", "string", "enum", "crs", "field", "fields", "extent", "list"]
+        },
+        "required": { "type": "boolean" },
+        "default": { "$ref": "#/$defs/scalar" },
+        "values": { "type": "array", "items": { "$ref": "#/$defs/scalar" }, "minItems": 1, "uniqueItems": true },
+        "unit": { "type": "string" },
+        "note": { "type": "string", "maxLength": 300 }
+      }
+    },
+    "checkId": {
+      "description": "A Columbus verification check id (design set, section 4), e.g. crs.measure.",
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*\\.[a-z][a-z0-9_]*$"
+    },
+    "operationEntry": {
+      "description": "An engine-neutral geoprocessing operation (Buffer, Clip, Zonal statistics). Implementations in each engine point to it.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "name", "summary", "group", "inputs", "outputs", "status", "review"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "kind": { "const": "operation" },
+        "name": { "$ref": "#/$defs/nonEmptyString" },
+        "aka": {
+          "description": "Other names analysts and engines use for it (searchable).",
+          "type": "array",
+          "items": { "$ref": "#/$defs/nonEmptyString" },
+          "uniqueItems": true
+        },
+        "summary": { "type": "string", "minLength": 1, "maxLength": 300 },
+        "group": {
+          "description": "Data family and topic, e.g. vector/proximity, raster/terrain.",
+          "type": "string",
+          "pattern": "^(vector|raster|table|pointcloud|conversion)(/[a-z0-9-]+)?$"
+        },
+        "inputs": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/port" } },
+        "outputs": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/port" } },
+        "parameters": {
+          "type": "object",
+          "propertyNames": { "$ref": "#/$defs/paramName" },
+          "additionalProperties": { "$ref": "#/$defs/canonicalParam" }
+        },
+        "broader": { "$ref": "#/$defs/relatedIds" },
+        "narrower": { "$ref": "#/$defs/relatedIds" },
+        "related": { "$ref": "#/$defs/relatedIds" },
+        "checks": {
+          "description": "Verification checks that always apply to this operation, whichever engine runs it.",
+          "type": "array",
+          "items": { "$ref": "#/$defs/checkId" },
+          "uniqueItems": true
+        },
+        "pitfalls": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1, "maxLength": 300 }
+        },
+        "columbus": {
+          "description": "The Columbus server tool and op that run this operation today, in Columbus's own names.",
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["tool", "op"],
+          "properties": {
+            "tool": { "enum": ["vector_op", "raster_op", "pointcloud_pipeline"] },
+            "op": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" }
+          }
+        },
+        "notes": { "type": "string" },
+        "status": { "$ref": "#/$defs/entryStatus" },
+        "replaced_by": { "$ref": "#/$defs/id" },
+        "review": { "$ref": "#/$defs/operationReview" }
+      }
+    },
+    "engineParam": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type"],
+      "properties": {
+        "type": { "$ref": "#/$defs/nonEmptyString" },
+        "required": { "type": "boolean" },
+        "default": { "$ref": "#/$defs/scalar" },
+        "values": { "type": "array", "items": { "$ref": "#/$defs/scalar" }, "uniqueItems": true },
+        "units": { "type": "string" },
+        "note": { "type": "string", "maxLength": 300 }
+      }
+    },
+    "crosswalkItem": {
+      "description": "How a canonical parameter maps onto the engine: the engine parameter's name, or a mapping with value translation and the canonical values the engine cannot honour.",
+      "oneOf": [
+        { "type": "string", "minLength": 1 },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "param": { "type": "string", "minLength": 1 },
+            "values": { "type": "object", "additionalProperties": { "$ref": "#/$defs/scalar" } },
+            "unsupported": { "type": "array", "items": { "$ref": "#/$defs/scalar" }, "uniqueItems": true }
+          }
+        }
+      ]
+    },
+    "implementationEntry": {
+      "description": "One callable in one engine (arcpy.analysis.Buffer, QGIS native:buffer, PostGIS ST_Buffer). Parameters come from the engine's own description via a harvester; implements, crosswalk, differences and effects are written by people.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "name", "software", "call", "parameters", "status", "review"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "kind": { "const": "implementation" },
+        "name": { "$ref": "#/$defs/nonEmptyString" },
+        "software": { "$ref": "#/$defs/id" },
+        "implements": { "$ref": "#/$defs/id" },
+        "call": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["interface", "name"],
+          "properties": {
+            "interface": { "enum": ["python", "cli", "qgis-process", "sql", "rest", "r", "js", "java", "dotnet", "other"] },
+            "name": { "$ref": "#/$defs/nonEmptyString" }
+          }
+        },
+        "harvest": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["harvester", "engine_version"],
+          "properties": {
+            "harvester": { "$ref": "#/$defs/nonEmptyString" },
+            "engine_version": { "$ref": "#/$defs/nonEmptyString" },
+            "harvested_on": { "type": "string", "format": "date" }
+          }
+        },
+        "parameters": {
+          "type": "object",
+          "propertyNames": { "type": "string", "pattern": "^[A-Za-z_][A-Za-z0-9_.:-]*$" },
+          "additionalProperties": { "$ref": "#/$defs/engineParam" }
+        },
+        "crosswalk": {
+          "type": "object",
+          "propertyNames": { "$ref": "#/$defs/paramName" },
+          "additionalProperties": { "$ref": "#/$defs/crosswalkItem" }
+        },
+        "differences": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1, "maxLength": 300 }
+        },
+        "effects": {
+          "description": "What the tool does beyond writing its output. These flags can only make the Columbus server stricter, never looser.",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "modifies_input": { "type": "boolean" },
+            "writes_outside_output": { "type": "boolean" },
+            "network": { "type": "boolean" }
+          }
+        },
+        "requires": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "licence": { "type": "string" },
+            "extension": { "type": "string" },
+            "note": { "type": "string" }
+          }
+        },
+        "docs": { "$ref": "#/$defs/httpUrl" },
+        "notes": { "type": "string" },
+        "status": { "$ref": "#/$defs/entryStatus" },
+        "replaced_by": { "$ref": "#/$defs/id" },
+        "review": { "$ref": "#/$defs/operationReview" }
       }
     }
   }

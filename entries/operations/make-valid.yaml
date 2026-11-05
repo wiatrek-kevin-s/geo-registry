@@ -1,0 +1,17 @@
+id: make-valid
+kind: operation
+name: Make valid
+aka: [Repair Geometry, Fix geometries, MakeValid, ST_MakeValid]
+summary: Repairs invalid geometries, such as self-intersecting polygons, so later operations give correct results.
+group: vector/geometry
+inputs:
+  - { name: layer, type: vector }
+outputs:
+  - { name: output, type: vector }
+checks: [geometry.valid, geometry.repaired]
+pitfalls:
+  - A repair can change a feature's geometry type (a polygon becoming a multipolygon or a collection); check the output types.
+  - Engines repair the same shape differently, so results are not always identical across engines.
+columbus: { tool: vector_op, op: make_valid }
+status: active
+review: { state: draft }

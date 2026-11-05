@@ -1,0 +1,21 @@
+id: slope
+kind: operation
+name: Slope
+aka: [gradient, steepness, gdaldem slope]
+summary: The steepness of each cell of an elevation raster, in degrees or percent.
+group: raster/terrain
+inputs:
+  - { name: raster, type: raster, note: An elevation model. }
+outputs:
+  - { name: output, type: raster }
+parameters:
+  z_unit: { type: enum, required: true, values: [m, ft, us-ft], note: Unit of the elevation values. }
+  units: { type: enum, values: [degrees, percent] }
+  band: { type: integer }
+checks: [crs.geographic, raster.nodata]
+pitfalls:
+  - Elevations in feet over a grid in metres, or a grid in degrees, give badly wrong slopes unless the z unit is set.
+related: [aspect, hillshade]
+columbus: { tool: raster_op, op: slope }
+status: active
+review: { state: draft }

@@ -1,7 +1,13 @@
-# Health checks (planned)
+# Checks
 
-This directory will hold scheduled checks that keep data entries honest. Nothing here
-runs yet; this file records the plan so the schema and entries are shaped for it.
+`index_compat.py` runs in CI on every change: it compares the index built from `main` with
+the one built from the change and fails if anything installed Columbus servers read was
+altered or removed (see the README, "Index compatibility").
+
+## Health checks (planned)
+
+This directory will also hold scheduled checks that keep data entries honest. They do not
+run yet; this section records the plan so the schema and entries are shaped for it.
 
 Each check reads `access[]` from data entries, probes one item, and records the outcome.
 A failing entry moves `status` from `active` to `degraded` (never straight to `retired`;

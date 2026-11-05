@@ -1,0 +1,18 @@
+id: intersect
+kind: operation
+name: Intersect
+aka: [Pairwise Intersect, Intersection, overlay intersection]
+summary: Keeps the areas where features of two layers overlap, with the attributes of both.
+group: vector/overlay
+inputs:
+  - { name: a, type: vector }
+  - { name: b, type: vector }
+outputs:
+  - { name: output, type: vector }
+checks: [crs.agreement, geometry.valid, extent.plausible]
+pitfalls:
+  - Overlaps of polygons with lines or points produce lines or points, not polygons.
+related: [clip, spatial-join]
+columbus: { tool: vector_op, op: intersect }
+status: active
+review: { state: draft }
