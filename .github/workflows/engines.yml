@@ -103,7 +103,7 @@ jobs:
           python harvest/whitebox.py --wbt "$WBT" | tee -a "$RUNNER_TEMP/summary.txt"
           PYTHONWARNINGS=ignore "$PYENV/bin/python" harvest/python_packages.py 2>/dev/null | grep -v '^  ' | tee -a "$RUNNER_TEMP/summary.txt"
           "$PYENV/bin/python" harvest/duckdb_spatial.py | tee -a "$RUNNER_TEMP/summary.txt"
-          "$PYENV/bin/python" harvest/rustgis.py | tee -a "$RUNNER_TEMP/summary.txt"
+          "$PYENV/bin/python" harvest/rustgis_tools.py | tee -a "$RUNNER_TEMP/summary.txt"
           python harvest/r_packages.py --rscript "$RSCRIPT" | tee -a "$RUNNER_TEMP/summary.txt"
           python harvest/cli_packages.py --prefix "$CLIENV" | tee -a "$RUNNER_TEMP/summary.txt"
           python harvest/turf.py --node-modules "$RUNNER_TEMP/turf/node_modules" | tee -a "$RUNNER_TEMP/summary.txt"

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Harvest RustGIS geoprocessing tools from its Python bindings (`Session.tools()`).
 
-    python harvest/rustgis.py
+    python harvest/rustgis_tools.py
 
 Needs `pip install rustgis` (Apache-2.0; https://rustgis.app). The bindings run the
 RustGIS engine headless; `Session().tools()` returns every geoprocessing tool with its
@@ -64,7 +64,7 @@ def parameters(tool: dict) -> dict:
 
 
 def harvest() -> tuple[str, list[dict]]:
-    import rustgis
+    import rustgis  # the PyPI package; this file is named rustgis_tools.py so it does not shadow it
     version = getattr(rustgis, "__version__", None) or "unknown"
     tools = rustgis.Session().tools()
     entries = []

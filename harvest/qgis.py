@@ -27,7 +27,10 @@ ENV = {**os.environ, "QT_QPA_PLATFORM": "offscreen"}
 
 
 def run(qp: str, *args: str) -> dict:
-    out = subprocess.run([qp, "--json", *args], capture_output=True, text=True, check=True, env=ENV).stdout
+    # QGIS's Python providers (GDAL, the qgis: scripts) load only with QGIS's own Python first on
+    # PATH; with another environment's Python first they are silently missing from the listing.
+    env = {**ENV, "PATH": str(Path(qp).resolve().parent) + os.pathsep + ENV.get("PATH", "")}
+    out = subprocess.run([qp, "--json", *args], capture_output=True, text=True, check=True, env=env).stdout
     return json.loads(out[out.index("{"):])
 
 
