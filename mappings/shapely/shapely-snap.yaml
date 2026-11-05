@@ -1,0 +1,11 @@
+id: shapely-snap
+implements: snap
+crosswalk:
+  layer: geometry
+  reference: reference
+  tolerance: tolerance
+  unit: { fixed: crs-units }
+differences:
+  - Snaps to the reference's vertices and edges (GEOS); one geometry against one reference geometry.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

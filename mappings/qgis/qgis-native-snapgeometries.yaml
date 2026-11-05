@@ -1,0 +1,14 @@
+id: qgis-native-snapgeometries
+implements: snap
+crosswalk:
+  layer: INPUT
+  reference: REFERENCE_LAYER
+  output: OUTPUT
+  tolerance: TOLERANCE
+  unit: { fixed: crs-units }
+presets:
+  BEHAVIOR: 0
+differences:
+  - 'BEHAVIOR (required; this mapping sets 0) chooses how: prefer nodes and add vertices (0), prefer closest point, nodes only, end points only, and more.'
+effects: { modifies_input: false, network: false }
+review: { state: draft }

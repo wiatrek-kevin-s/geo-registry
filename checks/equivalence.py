@@ -182,6 +182,20 @@ CASES = [
          {"count": 10, "seed": 1}, "vertices", expected=10),
     Case("random-points-in-polygons", "ten points, no seed", {"layer": [poly(621000, 3349000, 621100, 3349100)]},
          {"count": 10}, "vertices", expected=10),
+    # The line's middle vertex is 0.6 m from the reference point: snapping moves it there.
+    Case("snap", "a vertex 0.6 m from a reference point", {"layer": [shapely.LineString(
+         [(621000, 3349000), (621050, 3349000), (621100, 3349000)])], "reference": [shapely.Point(621050, 3349000.6)]},
+         {"tolerance": 1, "unit": "m"}, "coords", expected=621000 + 621050 + 621100 + 3 * 3349000 + 0.6, tolerance=1e-12),
+    Case("points-to-line", "three points in order", {"layer": [shapely.Point(621000, 3349000), shapely.Point(621030, 3349040),
+         shapely.Point(621030, 3349100)]}, {}, "length", expected=110.0, tolerance=1e-6),
+    Case("split-by-lines", "a square cut in two", {"layer": [poly(621000, 3349000, 621100, 3349100)],
+         "lines": [shapely.LineString([(621050, 3348990), (621050, 3349110)])]}, {}, "count", expected=2),
+    Case("split-by-lines", "the pieces keep the area", {"layer": [poly(621000, 3349000, 621100, 3349100)],
+         "lines": [shapely.LineString([(621050, 3348990), (621050, 3349110)])]}, {}, "area", expected=10000.0,
+         tolerance=1e-9),
+    Case("split-by-lines", "a line cut where another crosses it", {"layer": [shapely.LineString(
+         [(621000, 3349050), (621100, 3349050)])], "lines": [shapely.LineString([(621030, 3349000), (621030, 3349100)])]},
+         {}, "count", expected=2),
     Case("polygons-to-lines", "outline of a 100 m square", {"layer": [poly(0, 0, 100, 100)]}, {}, "length", expected=400.0),
     Case("lines-to-polygons", "closed square line", {"layer": [shapely.LineString([(0, 0), (100, 0), (100, 100), (0, 100), (0, 0)])]},
          {}, "area", expected=10000.0),
@@ -508,6 +522,14 @@ KNOWN_DIFFERENCES = {
         "the missing cell is filled with 10.96 where its neighbours average 10.5 (GDAL's fill)",
     ("rioxarray-raster-array-rasterarray-interpolate-na", "the filled value continues the plane"):
         "method defaults to nearest: the gap takes one neighbour's value",
+    ("postgis-st-split", "a square cut in two"):
+        "returns one GeometryCollection of the pieces per feature",
+    ("postgis-st-split", "a line cut where another crosses it"):
+        "returns one GeometryCollection of the pieces per feature",
+    ("shapely-split", "a square cut in two"):
+        "returns one GeometryCollection of the pieces per feature",
+    ("shapely-split", "a line cut where another crosses it"):
+        "returns one GeometryCollection of the pieces per feature",
     ("turf-envelope", "a tilted rectangle's bounding box"):
         "the box follows longitude and latitude, not the projected CRS's axes",
     ("qgis-native-densifygeometriesgivenaninterval", "100 m line, segments of at most 10 m"):
@@ -522,6 +544,8 @@ KNOWN_DIFFERENCES = {
 # Engine bugs the tests hit at random, recorded on the mapping: an error containing this
 # text is reported as "differs" with the reason instead of failing. (implementation id, case title)
 KNOWN_ERRORS = {
+    ("turf-linesplit", "a square cut in two"): ("line must be LineString", "turf.lineSplit splits lines only, not polygons"),
+    ("turf-linesplit", "the pieces keep the area"): ("line must be LineString", "turf.lineSplit splits lines only, not polygons"),
     ("qgis-native-randompointsinpolygons", "ten points in a square"): (
         "UNIQUE constraint failed", "copies the polygon's GeoPackage fid onto every point, so the GeoPackage output fails"),
     ("qgis-native-randompointsinpolygons", "ten points, no seed"): (
@@ -928,7 +952,8 @@ def run_turf(node: str, modules: str, impl: dict, op: dict, case: Case):
             frame = gpd.GeoDataFrame(case.attrs.get(port, {}), geometry=list(case.inputs[port]), crs=CRS)
             fc = json.loads(frame.to_crs(4326).to_json(drop_id=True))
             etype = str((declared.get(engine) or {}).get("type", ""))
-            if etype.startswith("Feature<") and "FeatureCollection" not in etype:  # one feature per call
+            single = etype.startswith("Feature<") or etype == "Splitter"  # lineSplit's splitter: one feature
+            if single and "FeatureCollection" not in etype:  # one feature per call
                 if len(fc["features"]) != 1:
                     raise Unsupported(f"'{engine}' takes one feature per call")
                 fc = fc["features"][0]
@@ -942,7 +967,8 @@ def run_turf(node: str, modules: str, impl: dict, op: dict, case: Case):
         r = subprocess.run([node, str(script), str(Path(modules) / "@turf" / "turf")], input=json.dumps(request),
                            capture_output=True, text=True)
         if r.returncode != 0:
-            raise RuntimeError(f"{request['fn']} failed: {r.stderr.strip()[-300:]}")
+            message = next((line.strip() for line in r.stderr.splitlines() if "Error" in line), r.stderr.strip()[-300:])
+            raise RuntimeError(f"{request['fn']} failed: {message}")
         data = json.loads(r.stdout)
         if isinstance(data, (int, float)):  # turf.area, turf.length
             return [float(data)]
@@ -1020,6 +1046,10 @@ def run_gdal(gdal: str, impl: dict, op: dict, case: Case):
         return [g for g in gpd.read_file(out).geometry if g is not None]
 
 
+# Two-input operations whose inputs need not intersect (the runner otherwise keeps only intersecting pairs).
+NO_INTERSECTS_FILTER = {"snap"}
+
+
 def run_postgis(psql: str, dsn: str, impl: dict, op: dict, case: Case) -> list:
     ports, args = translate(impl, op, case)
     fn = impl["call"]["name"]
@@ -1077,7 +1107,8 @@ def run_postgis(psql: str, dsn: str, impl: dict, op: dict, case: Case) -> list:
             f"(ST_GeomFromText('{g.wkt}', {SRID}), '{k}')" for g, k in zip(case.inputs[port], case.attrs[port]["k"]))
             + f") AS {port}(g, k)")
         group = f" GROUP BY {port}.k"
-    if len(ports) >= 2 and all(isinstance(case.inputs.get(p), list) for p in ports if p in case.inputs):
+    if len(ports) >= 2 and op["id"] not in NO_INTERSECTS_FILTER and all(
+            isinstance(case.inputs.get(p), list) for p in ports if p in case.inputs):
         names = [p for p in ports if p in case.inputs]
         if len(names) == 2:
             where.append(f"ST_Intersects({names[0]}.g, {names[1]}.g)")

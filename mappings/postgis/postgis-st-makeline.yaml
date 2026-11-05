@@ -1,0 +1,8 @@
+id: postgis-st-makeline
+implements: points-to-line
+crosswalk:
+  layer: "#1"
+differences:
+  - As an aggregate, ST_MakeLine(geom ORDER BY field) joins a group's points; without ORDER BY the order is not guaranteed.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

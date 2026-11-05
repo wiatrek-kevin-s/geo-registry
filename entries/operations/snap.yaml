@@ -1,0 +1,21 @@
+id: snap
+kind: operation
+name: Snap
+aka: [snap geometries, Snap (Editing), snap to layer, align vertices]
+summary: Moves vertices of each feature onto nearby vertices or edges of a reference layer, within a tolerance.
+group: vector/geometry
+inputs:
+  - { name: layer, type: vector }
+  - { name: reference, type: vector }
+outputs:
+  - { name: output, type: vector }
+parameters:
+  tolerance: { type: length, required: true, note: Largest distance a vertex may move. }
+  unit: { type: enum, required: true, values: [m, ft, us-ft, km, mi] }
+checks: [crs.agreement, crs.measure, geometry.valid]
+pitfalls:
+  - Engines differ on whether they snap to the reference's vertices only or also to its edges, and on whether they add vertices.
+  - A tolerance larger than the features' own detail can collapse them or make them invalid.
+related: [simplify, make-valid]
+status: active
+review: { state: draft }

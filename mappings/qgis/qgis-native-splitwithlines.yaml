@@ -1,0 +1,8 @@
+id: qgis-native-splitwithlines
+implements: split-by-lines
+crosswalk:
+  layer: INPUT
+  lines: LINES
+  output: OUTPUT
+effects: { modifies_input: false, network: false }
+review: { state: draft }

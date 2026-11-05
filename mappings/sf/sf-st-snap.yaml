@@ -1,0 +1,9 @@
+id: sf-st-snap
+implements: snap
+crosswalk:
+  layer: x
+  reference: y
+  tolerance: tolerance
+  unit: { fixed: crs-units }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

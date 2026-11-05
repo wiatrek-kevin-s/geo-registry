@@ -1,0 +1,9 @@
+id: shapely-split
+implements: split-by-lines
+crosswalk:
+  layer: geometry
+  lines: splitter
+differences:
+  - Returns one GeometryCollection of the pieces per geometry.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,17 @@
+id: points-to-line
+kind: operation
+name: Points to Line
+aka: [Points To Line, points to path, make line, connect points]
+summary: Joins a layer's points, in order, into a line.
+group: vector/geometry
+inputs:
+  - { name: layer, type: vector, geometry: point }
+outputs:
+  - { name: output, type: vector, geometry: line }
+checks: [geometry.valid]
+pitfalls:
+  - The line follows the points' order; without an order field or expression, that is whatever order the engine reads them in.
+  - Engines differ on how they make one line per group (a field, an expression, or a GROUP BY).
+related: [extract-vertices, lines-to-polygons]
+status: active
+review: { state: draft }

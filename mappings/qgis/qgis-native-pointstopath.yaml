@@ -1,0 +1,9 @@
+id: qgis-native-pointstopath
+implements: points-to-line
+crosswalk:
+  layer: INPUT
+  output: OUTPUT
+differences:
+  - ORDER_EXPRESSION sets the order and GROUP_EXPRESSION makes one line per group; CLOSE_PATH joins the last point back to the first.
+effects: { modifies_input: false, network: false }
+review: { state: draft }
