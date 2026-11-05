@@ -1,0 +1,13 @@
+id: xrspatial-hillshade
+implements: hillshade
+crosswalk:
+  raster: agg
+  azimuth: azimuth
+  altitude: angle_altitude
+  z_unit: { fixed: crs-units, note: "No vertical factor; elevations must be in the same units as the cell size." }
+differences:
+  - Output is the illumination from 0 to 1 (GDAL and QGIS give 0 to 255).
+  - azimuth defaults to 225 and angle_altitude to 25 (Columbus and GDAL 315 and 45).
+  - Takes an xarray DataArray with x and y coordinates; edge cells are NaN by default.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

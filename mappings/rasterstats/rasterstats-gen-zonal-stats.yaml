@@ -1,0 +1,12 @@
+id: rasterstats-gen-zonal-stats
+implements: zonal-statistics
+crosswalk:
+  raster: raster
+  zones: vectors
+  stats: { param: stats, values: { count: count, mean: mean, min: min, max: max, sum: sum, std: std } }
+  band: band
+  all_touched: all_touched
+differences:
+  - A generator of one dict per zone; rasterstats.zonal_stats takes the same arguments and returns a list.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

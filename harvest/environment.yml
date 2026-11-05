@@ -11,3 +11,9 @@ dependencies:
   - geopandas>=1
   - pyogrio
   - pyyaml
+  # for the equivalence tests of mapped Python raster libraries
+  - rasterio
+  - rioxarray
+  - xarray-spatial
+  - rasterstats
+  - dask-geopandas

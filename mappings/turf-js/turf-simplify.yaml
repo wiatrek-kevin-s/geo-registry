@@ -1,0 +1,12 @@
+id: turf-simplify
+implements: simplify
+crosswalk:
+  layer: geojson
+  tolerance: options.tolerance
+  unit: { fixed: crs-units, note: "The tolerance is in degrees." }
+  preserve_topology: { fixed: false }
+differences:
+  - tolerance defaults to 1 (degree); highQuality uses the slower full Douglas-Peucker without radial-distance prefiltering.
+  - Turf works on GeoJSON in longitude/latitude (WGS 84); data in another CRS must be reprojected first.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

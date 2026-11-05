@@ -1,0 +1,10 @@
+id: sedona-sql-st-intersection
+implements: intersect
+crosswalk:
+  a: a
+  b: b
+differences:
+  - Per pair of geometries; pairing the features of two tables is a spatial join first.
+  - "A Spark SQL function: arguments are columns or column names, run over a Spark DataFrame."
+effects: { modifies_input: false, network: false }
+review: { state: draft }

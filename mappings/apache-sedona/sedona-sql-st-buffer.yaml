@@ -1,0 +1,12 @@
+id: sedona-sql-st-buffer
+implements: buffer
+crosswalk:
+  layer: geometry
+  distance: buffer
+  unit: { fixed: crs-units, note: "CRS units; with useSpheroid = true on longitude/latitude data, metres." }
+  dissolve: { fixed: false, note: Aggregate with ST_Union_Aggr. }
+  segments: { note: "quad_segs=N in the parameters text." }
+differences:
+  - "A Spark SQL function: arguments are columns or column names, run over a Spark DataFrame."
+effects: { modifies_input: false, network: false }
+review: { state: draft }

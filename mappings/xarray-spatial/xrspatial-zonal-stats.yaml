@@ -1,0 +1,10 @@
+id: xrspatial-zonal-stats
+implements: zonal-statistics
+crosswalk:
+  raster: values
+  zones: zones
+  stats: { param: stats_funcs, values: { count: count, mean: mean, min: min, max: max, sum: sum, std: std } }
+differences:
+  - Zones are a raster of zone ids on the same grid as values (polygons need rasterizing first); returns a pandas DataFrame per zone id.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

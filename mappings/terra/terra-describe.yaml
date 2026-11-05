@@ -1,0 +1,8 @@
+id: terra-describe
+implements: describe-raster
+crosswalk:
+  raster: x
+differences:
+  - Returns GDAL's own description of a file (gdalinfo), as text.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

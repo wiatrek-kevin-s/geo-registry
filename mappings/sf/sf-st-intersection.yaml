@@ -1,0 +1,9 @@
+id: sf-st-intersection
+implements: intersect
+crosswalk:
+  a: x
+  b: y
+differences:
+  - With one argument it intersects the features of a single layer with each other.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,11 @@
+id: terra-project
+implements: reproject-raster
+crosswalk:
+  raster: x
+  crs: y
+  resampling: { param: method, values: { nearest: near, bilinear: bilinear, cubic: cubic, average: average, mode: mode } }
+  resolution: res
+differences:
+  - The same function reprojects SpatVectors (vector reproject); y can also be a raster to match its grid.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

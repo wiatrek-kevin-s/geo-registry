@@ -1,0 +1,9 @@
+id: sf-st-union
+implements: dissolve
+crosswalk:
+  layer: x
+  by: { note: "st_union merges everything into one geometry and drops the attributes; to dissolve by a field, group with aggregate() or dplyr's group_by and summarise." }
+differences:
+  - Returns geometry only (an sfc), not a layer with attributes.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

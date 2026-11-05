@@ -1,0 +1,10 @@
+id: xrspatial-slope
+implements: slope
+crosswalk:
+  raster: agg
+  units: { fixed: degrees }
+  z_unit: { fixed: crs-units, note: "With the default method = 'planar', elevations must be in the same units as the cell size; z_unit applies only with method = 'geodesic'." }
+differences:
+  - Takes an xarray DataArray with x and y coordinates; edge cells are NaN by default (boundary = 'nan').
+effects: { modifies_input: false, network: false }
+review: { state: draft }

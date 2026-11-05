@@ -1,0 +1,12 @@
+id: terra-zonal
+implements: zonal-statistics
+crosswalk:
+  raster: x
+  zones: z
+  stats: { param: fun, values: { count: notNA, mean: mean, min: min, max: max, sum: sum, std: sd } }
+  all_touched: touches
+differences:
+  - Zones can be a raster of zone codes or polygons (SpatVector); results come back as a data frame.
+  - std is computed by R's sd (sample standard deviation).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

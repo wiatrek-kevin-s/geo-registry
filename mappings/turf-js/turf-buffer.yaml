@@ -1,0 +1,14 @@
+id: turf-buffer
+implements: buffer
+crosswalk:
+  layer: geojson
+  distance: radius
+  unit: { param: options.units, values: { m: meters, ft: feet, km: kilometers, mi: miles }, unsupported: [us-ft] }
+  dissolve: { fixed: false, note: Call turf.dissolve or turf.union on the result. }
+  segments: options.steps
+differences:
+  - units defaults to kilometers.
+  - Each feature is buffered in an azimuthal equidistant projection centred on it, so distances are true ground distances near the feature.
+  - Turf works on GeoJSON in longitude/latitude (WGS 84); data in another CRS must be reprojected first.
+effects: { modifies_input: false, network: false }
+review: { state: draft }
