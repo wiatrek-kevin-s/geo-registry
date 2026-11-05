@@ -257,6 +257,12 @@ command you ran against each URL, what came back, and the date. **Regional stewa
 after entries for their area (for example Texas, or the US federal sources) and review PRs
 that touch it. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
+`main` only accepts pull requests whose required checks pass: the seed converter check,
+the Rust build, tests, validation and index compatibility on Linux and Windows, and the
+equivalence tests. Pull requests may be set to merge automatically once those pass.
+Data review decisions (setting `reviewed`), breaking index changes and anything about
+ArcGIS Pro are merged by a person, never automatically.
+
 ## Licences
 
 - Code (`build/`, `seed/convert.py`, `schema/`, CI): [Apache-2.0](LICENSE).
