@@ -1,0 +1,13 @@
+# PROPOSED by agent research on 2026-11-05 for global review batch 1. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/global-batch-1-2026-11.md
+id: sentinel-1
+publisher: European Space Agency (Copernicus)
+access:
+- type: http
+  url: https://sentiwiki.copernicus.eu/web/sentinel-1
+  auth: none
+- type: stac
+  url: https://earth-search.aws.element84.com/v1
+  index: sentinel-1-grd
+  auth: none
+  notes: Earth Search collection sentinel-1-grd (amplitude GRD); some assets are in requester-pays buckets.

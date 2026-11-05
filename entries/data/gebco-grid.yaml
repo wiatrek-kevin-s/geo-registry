@@ -2,7 +2,7 @@ id: gebco-grid
 kind: data
 name: GEBCO Grid
 summary: Global bathymetry and topography grid at 15 arc-seconds.
-publisher: Unknown
+publisher: GEBCO (IHO and IOC)
 themes:
 - global-elevation
 - open-data-sources

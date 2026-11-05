@@ -2,7 +2,7 @@ id: chirps
 kind: data
 name: CHIRPS
 summary: Quasi-global daily to monthly rainfall from satellite and stations since 1981.
-publisher: Unknown
+publisher: Climate Hazards Center, UC Santa Barbara
 themes:
 - global-climate
 - open-data-sources

@@ -1,0 +1,12 @@
+# PROPOSED by agent research on 2026-11-05 for global review batch 1. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/global-batch-1-2026-11.md
+id: worldpop
+publisher: WorldPop (University of Southampton)
+access:
+- type: http
+  url: https://www.worldpop.org/
+  auth: none
+- type: api
+  url: https://www.worldpop.org/rest/data
+  auth: none
+  notes: 'JSON catalogue: rest/data/pop/wpgp?iso3=XXX returns the GeoTIFF path for a country; no key mentioned.'

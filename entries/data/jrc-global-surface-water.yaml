@@ -14,6 +14,14 @@ access:
 - type: http
   url: https://global-surface-water.appspot.com/
   auth: none
+- type: download
+  url: https://s3.waw4-1.cloudferro.com/swift/v1/global-surface-water/
+  auth: none
+  notes: Version 1.5 (1984-2024) GeoTIFF tiles of 10 by 10 degrees.
+- type: ogc-wmts
+  url: https://storage.googleapis.com/water-world/downloads_ancillary/WMTS_Global_Surface_WaterV2024.xml
+  auth: none
+  notes: Display tiles (RGB, not for analysis).
 status: active
 review:
   state: seeded

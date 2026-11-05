@@ -2,7 +2,7 @@ id: fabdem
 kind: data
 name: FABDEM
 summary: Copernicus DEM with forests and buildings removed to approximate bare earth.
-publisher: Unknown
+publisher: University of Bristol
 themes:
 - global-elevation
 - open-data-sources
