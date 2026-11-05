@@ -22,7 +22,7 @@ web search returned, so some endpoints are listed as "not yet tested".
 | national-address-database-nad | **Merge** into national-address-database (same product) | (none) | Agree; then retire with replaced_by |
 | national-geologic-map-database | Keep as a lead | None found | Find an NGMDB service (MapView, GeMS downloads) |
 | neon-aop-lidar | Keep; publisher fixed | NEON data API (tutorial read) | Whether a token is needed for volume |
-| nhd-nhdplus-hr | Keep for now; 3DHP added as the successor | NHDPlus HR and 3DHP map services (3DHP read) | Add a 3DHP entry, and retire NHD when USGS does |
+| nhd-nhdplus-hr | Keep for now; 3DHP added as the successor | NHDPlus HR and 3DHP map services (3DHP read) | Link it to the existing usgs-3d-hydrography-program-3dhp entry; retire NHD when USGS does |
 | nlcd-annual-nlcd | Keep; publisher fixed | MRLC downloads; S3 requester-pays bucket (page read) | Requester-pays costs recorded |
 | noaa-ncei | Keep as a lead (very broad) | None tested | Split into products (normals, storm events, bathymetry)? |
 | nps-data-and-api | Keep | Not tested | API key requirement |
@@ -33,12 +33,14 @@ web search returned, so some endpoints are listed as "not yet tested".
 | the-national-map-tnm | Keep; publisher fixed | TNM Access API (documented examples) | none |
 | tiger-line-road-features | **Merge** into census-tiger-line (roads are a TIGER/Line layer) | (none) | Agree; add roads as a collection of census-tiger-line |
 | usfws-national-wetlands-inventory | Keep | REST and WMS (FWS page read) | none |
-| usgs-3dep | Keep | 3DEP ImageServer (tested) and project index | Add the EPT/COPC lidar access on AWS |
+| usgs-3dep | Keep | 3DEP ImageServer (tested) and project index | Link the existing usgs-3dep-lidar-on-aws-ept entry |
 | usgs-national-map-basemaps | Keep | USGS Topo tile service (tested) | none |
+
+Also: about 30 more federal entries have no coverage region yet; `reviews/coverage-unspecified-2026-11.md` proposes regions for all 90 such entries and flags the federal ones for the next batch.
 
 Questions for the steward:
 1. **Merges:** the two National Address Database entries, and TIGER road features into TIGER/Line.
-2. **NHD to 3DHP:** add a 3DHP entry now and mark NHD for retirement when USGS retires it?
+2. **NHD to 3DHP:** a 3DHP entry already exists (usgs-3d-hydrography-program-3dhp, not yet reviewed); mark NHD for retirement, replaced by it, when USGS retires NHD?
 3. **Commercial parcel data** (LightBox, Regrid, ReportAll): keep as commercial leads, or leave
    commercial products out of the public registry?
 4. **Very broad entries** (NOAA NCEI, the NPS API): split into the products people ask for?
