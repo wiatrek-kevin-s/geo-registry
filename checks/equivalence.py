@@ -2,7 +2,7 @@
 """Run each mapped implementation on the same small input and check the results agree.
 
     python checks/equivalence.py DIST [--gdal PATH] [--psql PATH --dsn CONNINFO]
-        [--qgis-process PATH] [--wbt PATH] [--rscript PATH] [--grass PATH]
+        [--qgis-process PATH] [--wbt PATH] [--rscript PATH] [--grass PATH] [--turf NODE_MODULES]
 
 DIST is a built registry (registry.sqlite). For every case below, each
 implementation mapped to the case's operation is called through its
@@ -20,7 +20,8 @@ contour, a grid one cell short) is listed in KNOWN_DIFFERENCES and reported as
 Engines not available on this machine are skipped. Needs geopandas and
 shapely in the running Python (rasterio, rioxarray, xarray-spatial, rasterstats
 and dask-geopandas there too, when installed); GDAL through --gdal; PostGIS
-through --psql; R's sf and terra through --rscript; GRASS through --grass.
+through --psql; R's sf and terra through --rscript; GRASS through --grass; Turf.js
+through --turf (a node_modules folder) and node.
 Exit status: 0 when nothing failed, 1 otherwise.
 """
 
@@ -94,8 +95,9 @@ CASES = [
          {}, "area", expected=200.0),
     Case("intersect", "overlap of two squares", {"a": [poly(0, 0, 10, 10)], "b": [poly(5, 5, 15, 15)]},
          {}, "area", expected=25.0),
-    Case("centroid", "centroid of a 100 m square", {"layer": [poly(0, 0, 100, 100)]}, {}, "coords",
-         expected=100.0, tolerance=1e-9),
+    # Inside the UTM zone, so engines that work in longitude/latitude (Turf) round-trip exactly.
+    Case("centroid", "centroid of a 100 m square", {"layer": [poly(621000, 3349000, 621100, 3349100)]}, {}, "coords",
+         expected=621050 + 3349050, tolerance=1e-9),
     Case("centroid", "L-shaped polygon, point inside", {"layer": [L_SHAPE]}, {"inside": True}, "count", expected=1),
     Case("convex-hull", "L-shaped polygon", {"layer": [L_SHAPE]}, {}, "area", expected=350.0),
     Case("difference", "square minus an overlapping square", {"layer": [poly(0, 0, 100, 100)], "mask": [poly(50, 50, 150, 150)]},
@@ -643,6 +645,51 @@ def run_grass(grass: str, impl: dict, op: dict, case: Case):
         return frame if case.measure.startswith("field_") else [g for g in frame.geometry if g is not None]
 
 
+TURF_SCRIPT = r"""
+const turf = require(process.argv[2]);
+const req = JSON.parse(require("fs").readFileSync(0, "utf8"));
+const args = [];
+const options = {};
+for (const [name, value] of req.args) {
+  if (name.startsWith("options.")) options[name.slice(8)] = value;
+  else args.push(value);
+}
+if (Object.keys(options).length) args.push(options);
+let out = turf[req.fn](...args);
+if (out && out.type === "Feature") out = turf.featureCollection([out]);
+process.stdout.write(JSON.stringify(out));
+"""
+
+
+def run_turf(node: str, modules: str, impl: dict, op: dict, case: Case):
+    """Turf.js through Node: inputs reprojected to WGS 84 GeoJSON (Turf works in longitude and
+    latitude), the function called with arguments in the order Turf declares them, the result
+    reprojected back to the fixtures' CRS for measuring."""
+    cw = impl.get("crosswalk") or {}
+    for name, item in cw.items():  # Turf's coordinate units are degrees, never the fixtures' metres
+        if isinstance(item, dict) and item.get("fixed") == "crs-units" and name in case.params:
+            raise Unsupported(f"{name}: Turf takes degrees here; convert the value first")
+    ports, args = translate(impl, op, case)
+    order = list((impl.get("parameters") or {}).keys())
+    values = {}
+    for port, engine in ports.items():
+        if engine and port in case.inputs:
+            frame = gpd.GeoDataFrame(case.attrs.get(port, {}), geometry=list(case.inputs[port]), crs=CRS)
+            values[engine] = json.loads(frame.to_crs(4326).to_json(drop_id=True))
+    values.update(args)
+    ordered = [[k, values[k]] for k in order if k in values and k != "options"]
+    request = {"fn": impl["call"]["name"].split(".", 1)[1], "args": ordered}
+    with tempfile.TemporaryDirectory() as tmp:
+        script = Path(tmp) / "run.js"
+        script.write_text(TURF_SCRIPT)
+        r = subprocess.run([node, str(script), str(Path(modules) / "@turf" / "turf")], input=json.dumps(request),
+                           capture_output=True, text=True)
+        if r.returncode != 0:
+            raise RuntimeError(f"{request['fn']} failed: {r.stderr.strip()[-300:]}")
+        out = gpd.GeoDataFrame.from_features(json.loads(r.stdout)["features"], crs=4326).to_crs(CRS)
+        return out if case.measure.startswith("field_") else [g for g in out.geometry if g is not None]
+
+
 def write_dem(path: Path, part: str = RASTER) -> None:
     """The DEM, or its western or eastern half (for mosaics)."""
     from osgeo import gdal, osr
@@ -865,6 +912,7 @@ def main() -> int:
     ap.add_argument("--wbt", default=shutil.which("whitebox_tools"))
     ap.add_argument("--rscript", default=shutil.which("Rscript"), help="Rscript with the sf and terra packages")
     ap.add_argument("--grass", default=shutil.which("grass"), help="the grass launcher")
+    ap.add_argument("--turf", default=None, help="a node_modules folder with @turf/turf (run with node)")
     args = ap.parse_args()
 
     db = sqlite3.connect(f"file:{args.dist / 'registry.sqlite'}?mode=ro", uri=True)
@@ -878,6 +926,8 @@ def main() -> int:
         if iface == "python" and software in PYLIB_SOFTWARE and importlib.util.find_spec(
                 {"xarray-spatial": "xrspatial", "dask-geopandas": "dask_geopandas"}.get(software, software)):
             return lambda op, case: run_pylib(impl, op, case)
+        if iface == "js" and software == "turf-js" and args.turf and shutil.which("node"):
+            return lambda op, case: run_turf(shutil.which("node"), args.turf, impl, op, case)
         if iface == "cli" and software == "grass" and args.grass:
             return lambda op, case: run_grass(args.grass, impl, op, case)
         if iface == "r" and software in ("sf", "terra") and args.rscript:

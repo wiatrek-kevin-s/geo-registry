@@ -52,12 +52,14 @@ jobs:
           echo "WBT=$envs/geo-registry-whitebox/bin/whitebox_tools" >> "$GITHUB_ENV"
           echo "RSCRIPT=$envs/geo-registry-r/bin/Rscript" >> "$GITHUB_ENV"
           echo "GRASS=$envs/geo-registry-grass/bin/grass" >> "$GITHUB_ENV"
+          npm install --ignore-scripts --no-audit --no-fund --silent --prefix "$RUNNER_TEMP/turf" @turf/turf
+          echo "TURF=$RUNNER_TEMP/turf/node_modules" >> "$GITHUB_ENV"
       - name: Run every mapped implementation on the same inputs
         shell: bash -el {0}
         run: |
           dsn=$(harvest/start-postgis.sh "$PGBIN" "$RUNNER_TEMP/pg")
           python -I checks/equivalence.py dist --gdal "$(which gdal)" --psql "$PGBIN/psql" --dsn "$dsn" \
-            --qgis-process "$QGIS_PROCESS" --wbt "$WBT" --rscript "$RSCRIPT" --grass "$GRASS"
+            --qgis-process "$QGIS_PROCESS" --wbt "$WBT" --rscript "$RSCRIPT" --grass "$GRASS" --turf "$TURF"
 
   harvest:
     name: Re-harvest engines
