@@ -65,8 +65,10 @@ CASES = [
          expected=100 * 100 + 4 * 100 * 10 + math.pi * 10 ** 2, tolerance=0.005),
     Case("buffer", "buffer dissolved into one shape", {"layer": [poly(0, 0, 10, 10), poly(15, 0, 25, 10)]},
          {"distance": 5, "unit": "m", "dissolve": True}, "count", expected=1),
-    Case("reproject", "a point to EPSG:3081", {"layer": [shapely.Point(621000, 3349000)]},
-         {"crs": "EPSG:3081"}, "coords", tolerance=1e-9),
+    # Same datum (WGS 84) on both sides: a datum change (to NAD 83, say) depends on
+    # which transformation each engine's PROJ setup picks, which is not what this checks.
+    Case("reproject", "a point to EPSG:3857 (same datum)", {"layer": [shapely.Point(621000, 3349000)]},
+         {"crs": "EPSG:3857"}, "coords", tolerance=1e-9),
     Case("simplify", "zigzag line, tolerance 1 m", {"layer": [shapely.LineString(
          [(0, 0), (10, 0.5), (20, 0), (30, 0.4), (40, 0), (50, 5), (60, 0)])]},
          {"tolerance": 1, "unit": "m"}, "length", tolerance=1e-9),
@@ -583,7 +585,7 @@ def main() -> int:
             if not ok:
                 failed += 1
             rows.append((case, impl_id, "ok" if ok else "FAIL",
-                         f"{case.measure} {value:.6g}" + ("" if ok else f", expected {reference:.6g}")))
+                         f"{case.measure} {value:.6g}" + ("" if ok else f" ({value:.12g}), expected {reference:.12g}")))
     for case, impl_id, status, detail in rows:
         print(f"{status:8} {case.operation:16} {impl_id:40} {case.title}: {detail}")
     ran = sum(1 for r in rows if r[2] in ("ok", "FAIL"))
