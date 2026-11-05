@@ -1,0 +1,6 @@
+id: xrspatial-hydro-flow-accumulation-d8
+implements: flow-accumulation
+crosswalk:
+  raster: { note: "Takes a D8 flow direction raster (xrspatial.hydro.flow_direction_d8), not the DEM." }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,12 @@
+id: gdal-vector-grid-invdist
+implements: idw-interpolation
+crosswalk:
+  layer: input
+  output: output
+  field: zfield
+  resolution: { note: "resolution (x and y) must come with extent (xmin, ymin, xmax, ymax); give the grid by both, or by size." }
+  power: power
+differences:
+  - Uses every point by default; radius, max-points and min-points limit the search. Cells with too few points get nodata (default 0).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

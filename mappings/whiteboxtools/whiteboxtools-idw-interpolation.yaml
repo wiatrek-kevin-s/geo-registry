@@ -1,0 +1,12 @@
+id: whiteboxtools-idw-interpolation
+implements: idw-interpolation
+crosswalk:
+  layer: input
+  output: output
+  field: field
+  resolution: cell_size
+  power: weight
+differences:
+  - "Without radius or min_points every cell came out as nodata in the equivalence tests; min_points must not exceed the number of points. base gives a raster whose grid to match."
+effects: { modifies_input: false, network: false }
+review: { state: draft }

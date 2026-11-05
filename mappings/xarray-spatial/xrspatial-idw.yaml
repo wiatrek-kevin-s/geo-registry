@@ -1,0 +1,11 @@
+id: xrspatial-idw
+implements: idw-interpolation
+crosswalk:
+  layer: { note: "x, y and z take the points' coordinates and values as arrays." }
+  field: { note: "z takes the values." }
+  resolution: { note: "template is a DataArray on the target grid." }
+  power: power
+differences:
+  - k limits each cell to the k nearest points.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

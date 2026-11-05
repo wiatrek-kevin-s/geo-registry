@@ -1,0 +1,21 @@
+id: idw-interpolation
+kind: operation
+name: IDW Interpolation
+aka: [inverse distance weighted, IDW, inverse distance to a power, surface from points]
+summary: A raster surface interpolated from point values, each cell a distance-weighted average of nearby points.
+group: conversion/vector-to-raster
+inputs:
+  - { name: layer, type: vector, geometry: point }
+outputs:
+  - { name: output, type: raster }
+parameters:
+  field: { type: field, required: true, note: The attribute holding the values to interpolate. }
+  resolution: { type: number, required: true, note: "Cell size, in the layer's CRS units." }
+  power: { type: number, default: 2, note: Higher powers give nearer points more weight. }
+checks: [crs.present, raster.nodata]
+pitfalls:
+  - Engines differ on which points each cell uses (all of them, a search radius, or the nearest N), so surfaces differ away from the points.
+  - IDW never goes above the highest or below the lowest input value, so it flattens peaks and pits.
+related: [rasterize]
+status: active
+review: { state: draft }

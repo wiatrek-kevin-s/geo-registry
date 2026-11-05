@@ -1,0 +1,17 @@
+id: flow-accumulation
+kind: operation
+name: Flow Accumulation
+aka: [contributing area, upslope area, D8 flow accumulation, catchment area]
+summary: For each cell, how many cells (or how much area) drain through it, following the steepest downhill direction.
+group: raster/hydrology
+inputs:
+  - { name: raster, type: raster }
+outputs:
+  - { name: output, type: raster }
+checks: [raster.nodata]
+pitfalls:
+  - Engines differ on whether a cell counts itself, on units (cells or area), and on cells at the edge.
+  - Run it on a filled DEM, or sinks stop the flow.
+related: [fill-sinks, slope, aspect]
+status: active
+review: { state: draft }

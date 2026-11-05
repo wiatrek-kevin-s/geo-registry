@@ -1,0 +1,14 @@
+id: grass-r-watershed
+implements: flow-accumulation
+crosswalk:
+  raster: elevation
+  output: accumulation
+presets:
+  flag_s: true
+  flag_a: true
+differences:
+  - Multiple flow direction by default; this mapping sets the s flag (single, D8). Also writes basins, streams and other maps when named.
+  - Without the a flag, cells that may receive flow from outside the region get negative counts (on a plane draining to one edge, every cell); this mapping sets it.
+  - Cells on the region's border drain straight out of it, so they do not feed their neighbours (on a 20 by 20 plane draining west, the top and bottom rows and the east column were all 1, interior rows counted 19 down to 1).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

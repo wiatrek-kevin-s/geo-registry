@@ -1,0 +1,9 @@
+id: whiteboxtools-fill-depressions-planchon-and-darboux
+implements: fill-sinks
+crosswalk:
+  raster: dem
+  output: output
+differences:
+  - Planchon and Darboux's method (slower than Wang and Liu); fix_flats adds a small gradient across flats.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

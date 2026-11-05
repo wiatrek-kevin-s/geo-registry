@@ -14,8 +14,9 @@ argument, a unit or value translated wrongly) shows up as a failure; an
 engine that cannot honour a canonical value (`unsupported`, `fixed`) is
 reported as skipped with the reason, which is the documented difference.
 A behaviour difference these tests found and the mapping records (a smoothed
-contour, a grid one cell short) is listed in KNOWN_DIFFERENCES and reported as
-"differs" with the reason, not as a failure.
+contour, a grid one cell short) is listed in KNOWN_DIFFERENCES, and an engine bug
+they hit at random in KNOWN_ERRORS (matched on the error's text); both are reported
+as "differs" with the reason, not as a failure.
 
 Engines not available on this machine are skipped. Needs geopandas and
 shapely in the running Python (rasterio, rioxarray, xarray-spatial, rasterstats
@@ -182,6 +183,17 @@ RASTER_CASES = [
          "raster_count", expected=400.0),
     Case("mosaic", "values unchanged", {"rasters": [RASTER_WEST, RASTER_EAST]}, {}, "raster_mean", expected=10.0,
          tolerance=1e-6),
+    # IDW of points that all hold the same value is that value everywhere, whatever the
+    # engine's power, search radius or neighbour count.
+    Case("idw-interpolation", "three points of value 5", {"layer": [shapely.Point(621005, 3349005),
+         shapely.Point(621095, 3349095), shapely.Point(621055, 3349035)]}, {"field": "v", "resolution": 10},
+         "raster_mean", expected=5.0, tolerance=1e-9, attrs={"layer": {"v": [5.0, 5.0, 5.0]}}),
+    Case("focal-statistics", "3 by 3 mean of a plane keeps its values", {"raster": RASTER},
+         {"statistic": "mean", "size": 3}, "raster_median", expected=10.0, tolerance=1e-6),
+    Case("fill-sinks", "a plane has no sinks", {"raster": RASTER}, {}, "raster_mean", expected=10.0, tolerance=1e-3),
+    # Every row drains west: from the east edge, 1, 2, ... 20 cells pass through each cell.
+    Case("flow-accumulation", "plane draining west", {"raster": RASTER}, {}, "raster_median", expected=10.5,
+         tolerance=1e-6),
     Case("rasterize", "50 m by 30 m rectangle at 10 m cells", {"layer": [dem_box(0, 5, 0, 3)]},
          {"resolution": 10}, "raster_count", expected=15.0),
     # The DEM's 20 columns each hold one value (0.5, 1.5, ... 19.5), so 20 strips.
@@ -325,6 +337,18 @@ KNOWN_DIFFERENCES = {
         "the output grid is one row and one column short of the inputs' combined extent",
     ("gdal-vector-rasterize", "50 m by 30 m rectangle at 10 m cells"):
         "with a resolution and no extent, the grid starts half a cell outside the features",
+    ("whiteboxtools-idw-interpolation", "three points of value 5"):
+        "without radius or min_points every cell is nodata",
+    ("grass-r-watershed", "plane draining west"):
+        "cells on the region's border drain straight out of it and do not feed their neighbours",
+}
+
+
+# Engine bugs the tests hit at random, recorded on the mapping: an error containing this
+# text is reported as "differs" with the reason instead of failing. (implementation id, case title)
+KNOWN_ERRORS = {
+    ("whiteboxtools-fill-depressions", "a plane has no sinks"): (
+        "Error unwrapping 'output'", "WhiteboxTools 2.4.0's FillDepressions panics at random on small rasters"),
 }
 
 
@@ -475,6 +499,14 @@ def run_pylib(impl: dict, op: dict, case: Case):
             return valid_cells(getattr(da.rio, fn)(**kwargs).values)
         if software == "xarray-spatial":
             import xrspatial
+            xmod = importlib.import_module(name.rsplit(".", 1)[0])  # xrspatial.focal, xrspatial.hydro, ...
+            if fn == "focal_stats":
+                import numpy as np
+                size = int(case.params.get("size", 3))
+                stats = args.pop("stats_funcs", "mean")
+                out = xmod.focal_stats(agg=da, kernel=np.ones((size, size)),
+                                       stats_funcs=[stats] if isinstance(stats, str) else stats)
+                return valid_cells(out.values[0] if out.ndim == 3 else out.values)
             if fn == "zonal_stats":
                 from rasterio.features import rasterize
                 zones = da.copy(data=rasterize([(g, 1) for g in case.inputs["zones"]], out_shape=da.shape,
@@ -487,7 +519,7 @@ def run_pylib(impl: dict, op: dict, case: Case):
                 return table[table["zone"] == 1].reset_index(drop=True)
             if fn == "contours":
                 raise Unsupported("levels must be listed; no interval argument")
-            return valid_cells(getattr(xrspatial, fn)(**{ports["raster"]: da}, **args).values)
+            return valid_cells(getattr(xmod, fn)(**{ports["raster"]: da}, **args).values)
     raise Unsupported(f"no runner for {name}")
 
 
@@ -992,12 +1024,18 @@ def main() -> int:
             except Unsupported as e:
                 rows.append((case, impl["id"], "skipped", str(e)))
             except Exception as e:  # noqa: BLE001 - any engine error is a failure to report
+                text, reason = KNOWN_ERRORS.get((impl["id"], case.title), (None, None))
+                if text and text in str(e):
+                    rows.append((case, impl["id"], "differs", f"engine error: {reason}"))
+                    continue
                 rows.append((case, impl["id"], "FAIL", f"{type(e).__name__}: {e}"[:300]))
                 failed += 1
         if any(math.isnan(v) for _, v in results):
             for impl_id, v in [r for r in results if math.isnan(r[1])]:
-                rows.append((case, impl_id, "FAIL", "no valid values in the output"))
-                failed += 1
+                known = KNOWN_DIFFERENCES.get((impl_id, case.title))
+                rows.append((case, impl_id, "differs" if known else "FAIL",
+                             "no valid values in the output" + (f": {known}" if known else "")))
+                failed += 0 if known else 1
             results = [r for r in results if not math.isnan(r[1])]
         reference = case.expected if case.expected is not None else (results[0][1] if results else None)
         for impl_id, value in results:

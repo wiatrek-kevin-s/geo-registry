@@ -1,0 +1,9 @@
+id: qgis-native-fillsinkswangliu
+implements: fill-sinks
+crosswalk:
+  raster: INPUT
+  output: OUTPUT_FILLED_DEM
+differences:
+  - MIN_SLOPE (default 0.1 degrees) keeps a small gradient across filled areas; also writes flow directions and watershed basins.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

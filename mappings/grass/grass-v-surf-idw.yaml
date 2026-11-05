@@ -1,0 +1,12 @@
+id: grass-v-surf-idw
+implements: idw-interpolation
+crosswalk:
+  layer: input
+  output: output
+  field: column
+  resolution: { note: "Set by the computational region (g.region res=...)." }
+  power: power
+differences:
+  - Uses the nearest npoints points (default 12).
+effects: { modifies_input: false, network: false }
+review: { state: draft }
