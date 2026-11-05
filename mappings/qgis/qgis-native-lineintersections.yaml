@@ -1,0 +1,10 @@
+id: qgis-native-lineintersections
+implements: line-intersections
+crosswalk:
+  a: INPUT
+  b: INTERSECT
+  output: OUTPUT
+differences:
+  - INPUT_FIELDS and INTERSECT_FIELDS choose which attributes the points carry.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

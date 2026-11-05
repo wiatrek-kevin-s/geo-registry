@@ -1,0 +1,16 @@
+id: explode-lines
+kind: operation
+name: Explode Lines
+aka: [Split Line At Vertices, line segments, dump segments, split lines into segments]
+summary: Splits each line into its individual segments, one feature per pair of consecutive vertices.
+group: vector/geometry
+inputs:
+  - { name: layer, type: vector, geometry: line }
+outputs:
+  - { name: output, type: vector, geometry: line }
+checks: [geometry.valid]
+pitfalls:
+  - Curved geometries are segmentized first, so one arc becomes many segments.
+related: [extract-vertices, densify, multipart-to-singlepart]
+status: active
+review: { state: draft }

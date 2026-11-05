@@ -1,0 +1,17 @@
+id: extract-vertices
+kind: operation
+name: Extract Vertices
+aka: [Feature Vertices To Points, extract nodes, dump points, vertices to points, explode to points]
+summary: One point for every vertex of each line or polygon.
+group: vector/geometry
+inputs:
+  - { name: layer, type: vector }
+outputs:
+  - { name: output, type: vector, geometry: point }
+checks: [geometry.valid]
+pitfalls:
+  - A polygon ring's first and last vertex are the same point; engines differ on whether it is output once or twice.
+  - Some tools output only the ends of each line (nodes) rather than every vertex.
+related: [points-along-lines, explode-lines]
+status: active
+review: { state: draft }

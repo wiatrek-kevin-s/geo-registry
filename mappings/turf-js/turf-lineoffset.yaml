@@ -1,0 +1,12 @@
+id: turf-lineoffset
+implements: offset-curve
+crosswalk:
+  layer: geojson
+  distance: distance
+  unit: { param: options.units, values: { m: meters, ft: feet, km: kilometers, mi: miles }, unsupported: [us-ft] }
+differences:
+  - A positive distance offsets to the right of the line's direction, the opposite of the canonical convention; negate it.
+  - units defaults to kilometers.
+  - Turf works on GeoJSON in longitude/latitude (WGS 84); data in another CRS must be reprojected first.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

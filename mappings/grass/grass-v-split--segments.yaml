@@ -1,0 +1,12 @@
+id: grass-v-split--segments
+variant_of: grass-v-split
+implements: explode-lines
+crosswalk:
+  layer: input
+  output: output
+presets:
+  vertices: 2
+differences:
+  - v.split cuts lines into pieces; this mapping sets vertices = 2, so every piece is one segment.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,9 @@
+id: qgis-native-extractvertices
+implements: extract-vertices
+crosswalk:
+  layer: INPUT
+  output: OUTPUT
+differences:
+  - Adds each vertex's index, part, distance along the feature and angle as fields.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

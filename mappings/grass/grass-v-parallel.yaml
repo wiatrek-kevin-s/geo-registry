@@ -1,0 +1,15 @@
+id: grass-v-parallel
+implements: offset-curve
+crosswalk:
+  layer: input
+  output: output
+  distance: distance
+  unit: { fixed: crs-units, note: The distance is in the map units of the GRASS project. }
+presets:
+  side: left
+differences:
+  - GRASS 8.5's v.parallel returns a line of one vertex for a straight two-vertex line; lines of three or more vertices come out right.
+  - 'The distance must be positive: side chooses left, right (the default) or both; this mapping sets side = left to match a positive canonical distance.'
+  - flag r makes rounded corners; flag b a buffer-like loop around the line.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

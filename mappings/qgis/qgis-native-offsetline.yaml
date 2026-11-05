@@ -1,0 +1,11 @@
+id: qgis-native-offsetline
+implements: offset-curve
+crosswalk:
+  layer: INPUT
+  output: OUTPUT
+  distance: DISTANCE
+  unit: { fixed: crs-units }
+differences:
+  - JOIN_STYLE 0 round, 1 miter, 2 bevel; DISTANCE can be data-defined.
+effects: { modifies_input: false, network: false }
+review: { state: draft }
