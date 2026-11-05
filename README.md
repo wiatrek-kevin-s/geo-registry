@@ -184,7 +184,7 @@ An implementation is one engine's tool: `gdal vector buffer`, `shapely.buffer`,
 `st_buffer`. They are **harvested**, never typed: each script in `harvest/` asks its
 engine to describe its own tools (GDAL's `--json-usage`, PostGIS's catalogue, Python
 introspection) and writes `implementations/<software>/<id>.yaml` with the parameters,
-types, defaults, choices and, for SQL, every overload. Today: about 6,600 tools from
+types, defaults, choices and, for SQL, every overload. Today: about 6,500 tools from
 more than 50 packages: GDAL, PDAL, PostGIS (geometry and raster), QGIS Processing, GRASS,
 WhiteboxTools, Shapely, GeoPandas and about 40 more Python packages (rasterio, pyproj,
 the PySAL family, osmnx, momepy, Apache Sedona, ...), R's sf and terra, Turf.js,

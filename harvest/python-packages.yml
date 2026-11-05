@@ -6,12 +6,17 @@
 #   methods:  classes whose public methods are tools too (accessors, trajectory classes);
 #             otherwise a class is one tool, called through its constructor
 #   exclude:  regular expressions for public names that are not tools (types, helpers)
+#   skip_modules: modules (and their submodules) to leave out entirely
+#
+# Names of back-end plumbing (GPU fallbacks, CUDA helpers) are always left out.
 #   dist:     the distribution name, when it differs from the import name (for the version)
 #
 # Shapely and GeoPandas have their own harvester (python_libs.py).
 packages:
   # Raster and coordinates
-  - { software: rasterio, module: rasterio }
+  - software: rasterio
+    module: rasterio
+    skip_modules: [rasterio.rio]   # the rio command line's internals; not the library's tools
   - { software: pyproj, module: pyproj }
   - { software: rasterstats, module: rasterstats }
   - software: rioxarray

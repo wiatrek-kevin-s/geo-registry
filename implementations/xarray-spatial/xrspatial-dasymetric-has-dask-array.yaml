@@ -1,9 +1,0 @@
-id: xrspatial-dasymetric-has-dask-array
-kind: implementation
-name: xrspatial.dasymetric.has_dask_array
-software: xarray-spatial
-call: {interface: python, name: xrspatial.dasymetric.has_dask_array}
-harvest: {harvester: python-packages, engine_version: 0.10.20}
-parameters: {}
-status: active
-review: {state: harvested, source: python-packages}

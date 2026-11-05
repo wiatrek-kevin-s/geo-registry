@@ -1,9 +1,0 @@
-id: rasterio-rio-calc-asarray
-kind: implementation
-name: rasterio.rio.calc.asarray
-software: rasterio
-call: {interface: python, name: rasterio.rio.calc.asarray}
-harvest: {harvester: python-packages, engine_version: 1.5.2}
-parameters: {}
-status: active
-review: {state: harvested, source: python-packages}
