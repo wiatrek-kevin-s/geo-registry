@@ -15,6 +15,11 @@ access:
 - type: http
   url: https://data.geographic.texas.gov/
   auth: none
+- type: api
+  url: https://api.tnris.org
+  auth: none
+  notes: TxGIO (formerly TNRIS) data API behind the DataHub; only /areas is documented publicly. Not yet
+    tested.
 notes: Formerly TNRIS; REST API and bulk downloader
 status: active
 review:

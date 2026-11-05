@@ -14,6 +14,12 @@ access:
 - type: http
   url: https://www.twdb.texas.gov/mapping/gisdata.asp
   auth: none
+- type: arcgis-rest
+  url: https://services.twdb.texas.gov/arcgis/rest/services
+  auth: none
+  notes: 51 services (Base, GAMs, Operational, Public, PWS, Surface, Utilities) per the sitemap fetched
+    2026-11-05 - well reports, groundwater database, regional water planning areas, groundwater conservation
+    districts, public water service areas.
 status: active
 review:
   state: seeded

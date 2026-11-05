@@ -11,9 +11,17 @@ coverage:
 license: LicenseRef-Public-Domain
 license_original: Public domain
 access:
+- type: arcgis-rest
+  url: https://services.arcgis.com/0L95CJ0VTaxqcmED/ArcGIS/rest/services
+  auth: none
+  notes: City of Austin's ArcGIS Online services (layers mostly in EPSG:2277, Texas Central ftUS). Example
+    tested 2026-11-05 - INLANDWATERS_greater_austin_fema_floodplain/FeatureServer (query supported, 2000
+    records per request).
 - type: http
   url: https://www.austintexas.gov/department/gis-and-maps
   auth: none
+notes: Derived products should credit 'City of Austin, Geospatial Services - Data Development' (service
+  copyright text).
 status: active
 review:
   state: seeded

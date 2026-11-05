@@ -14,6 +14,15 @@ access:
 - type: http
   url: https://geographic.texas.gov/stratmap/
   auth: none
+- type: arcgis-rest
+  url: https://feature.geographic.texas.gov/arcgis/rest/services/Parcels/stratmap_land_parcels_48_most_recent/MapServer
+  auth: none
+  notes: StratMap land parcels, most recent (from appraisal districts; one service per year also exists).
+    Item info read 2026-11-05 - licenseInfo "None".
+- type: arcgis-rest
+  url: https://feature.geographic.texas.gov/arcgis/rest/services/Address_Points/stratmap_address_points_48_most_recent/MapServer
+  auth: none
+  notes: StratMap address points, most recent (from 9-1-1 districts). Tested 2026-11-05.
 notes: Statewide parcels from appraisal districts
 status: active
 review:

@@ -14,6 +14,11 @@ access:
 - type: http
   url: https://tpwd.texas.gov/gis/
   auth: none
+- type: arcgis-rest
+  url: https://tpwd.texas.gov/server/rest/services
+  auth: none
+  notes: TPWD ArcGIS Server (Parks, Wildlife, Cultural folders). Wildlife/WildlifeManagementAssociations/MapServer
+    tested 2026-11-05.
 status: active
 review:
   state: seeded

@@ -1,0 +1,16 @@
+# PROPOSED by agent research on 2026-11-05 for the Texas review batch. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/texas-2026-11.md
+id: texas-orthoimagery-program-top
+publisher: Texas Geographic Information Office
+coverage:
+  region: Texas
+  bbox: [-106.916, 25.665, -93.478, 36.727]
+access:
+  - type: arcgis-rest
+    url: https://imagery.geographic.texas.gov/server/rest/services/TOP
+    auth: none
+    notes: One ImageServer per vintage (TOP96_CIR_1m, TOP08_CIR_50cm, TOP15_NCCIR_50cm, ...). TOP15_NCCIR_50cm tested 2026-11-05 - statewide 0.5 m, red/green/blue/infrared.
+  - type: http
+    url: https://geographic.texas.gov/stratmap/orthoimagery
+    auth: none
+notes: The current Texas Imagery Service needs an organization-specific link from TxGIO and is not open access.

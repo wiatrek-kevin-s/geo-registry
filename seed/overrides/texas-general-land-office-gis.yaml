@@ -1,0 +1,13 @@
+# PROPOSED by agent research on 2026-11-05 for the Texas review batch. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/texas-2026-11.md
+id: texas-general-land-office-gis
+summary: State lands, coastal boundaries, beach access and lease data from the Texas General Land Office.
+access:
+  - type: http
+    url: https://data-glo.hub.arcgis.com
+    auth: none
+    notes: GLO open data (ArcGIS Hub) - coastal zone boundary, beach access points, coastal, oil and gas, hard mineral and upland surface leases, Permanent School Fund lands.
+  - type: http
+    url: https://www.glo.texas.gov/land/land-management/gis/index.html
+    auth: none
+notes: "The Original Texas Land Survey grid is shown in GLO viewers but not distributed by the GLO. GLO data is not suitable for navigation and does not establish land boundaries."

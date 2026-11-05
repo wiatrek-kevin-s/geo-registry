@@ -1,0 +1,14 @@
+# PROPOSED by agent research on 2026-11-05 for the Texas review batch. Not reviewed:
+# review.state stays seeded until a person checks it. Evidence: reviews/texas-2026-11.md
+id: travis-central-appraisal-district
+access:
+  - type: http
+    url: https://traviscad.org/
+    auth: none
+  - type: arcgis-rest
+    url: https://gis.traviscountytx.gov/server1/rest/services/Boundaries_and_Jurisdictions/TCAD_public/FeatureServer
+    index: "0"
+    auth: none
+    notes: TCAD parcels republished monthly by Travis County TNR; query supported (1000 records per request). Tested 2026-11-05.
+update: monthly (Travis County's copy)
+notes: "Informational and reference use only; not a survey; boundaries approximate. Includes owner names (personal data)."

@@ -10,11 +10,19 @@ coverage:
   region: Texas
 license: LicenseRef-Custom
 license_original: Custom
+update: monthly (Travis County's copy)
 access:
 - type: http
   url: https://traviscad.org/
   auth: none
-notes: Each Texas county has its own CAD with its own terms
+- type: arcgis-rest
+  url: https://gis.traviscountytx.gov/server1/rest/services/Boundaries_and_Jurisdictions/TCAD_public/FeatureServer
+  index: '0'
+  auth: none
+  notes: TCAD parcels republished monthly by Travis County TNR; query supported (1000 records per request).
+    Tested 2026-11-05.
+notes: Informational and reference use only; not a survey; boundaries approximate. Includes owner names
+  (personal data).
 status: active
 review:
   state: seeded
