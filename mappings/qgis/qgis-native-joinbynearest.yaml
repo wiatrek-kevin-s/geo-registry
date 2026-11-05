@@ -1,0 +1,15 @@
+id: qgis-native-joinbynearest
+implements: nearest-join
+crosswalk:
+  left: INPUT
+  right: INPUT_2
+  output: OUTPUT
+  max_distance: MAX_DISTANCE
+  distance_field: { note: "Adds the fields distance, feature_x, feature_y, nearest_x and nearest_y itself." }
+  how: { param: DISCARD_NONMATCHING, values: { left: false, inner: true } }
+presets:
+  NEIGHBORS: 1
+differences:
+  - NEIGHBORS can join the k nearest features (one row each).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,11 @@
+id: whiteboxtools-resample
+implements: resample-raster
+crosswalk:
+  raster: inputs
+  output: output
+  resolution: cell_size
+  resampling: { param: method, values: { nearest: nn, bilinear: bilinear, cubic: cc }, unsupported: [average, mode] }
+differences:
+  - Takes a list of inputs, which it also mosaics; base gives a raster whose grid to match.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

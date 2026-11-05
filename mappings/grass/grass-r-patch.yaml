@@ -1,0 +1,9 @@
+id: grass-r-patch
+implements: mosaic
+crosswalk:
+  rasters: input
+  output: output
+differences:
+  - The first map listed has priority; later maps only fill its no-data cells. The output covers the computational region.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

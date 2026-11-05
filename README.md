@@ -169,10 +169,12 @@ status: active
 review: { state: draft }
 ```
 
-- Today: 23 operations: the 16 ops Columbus's `vector_op` and `raster_op` run, plus
+- Today: 28 operations: the 16 ops Columbus's `vector_op` and `raster_op` run, plus
   `table-to-points`; then `centroid`, `convex-hull`, `difference`,
-  `multipart-to-singlepart`, `rasterize` and `raster-to-polygons`, which Columbus can run
+  `multipart-to-singlepart`, `nearest-join`, `merge-layers`, `rasterize`,
+  `raster-to-polygons`, `contour`, `resample-raster` and `mosaic`, which Columbus can run
   through engine plugins and `run_tool`.
+- A port with `many: true` takes a list (the rasters of a mosaic, the layers of a merge).
 - Ids are hyphenated slugs. `columbus` records the Columbus tool and op in Columbus's own
   names (`vector_op` / `spatial_join`), so neither project has to rename anything; an
   operation Columbus has no op for leaves it out.
@@ -218,8 +220,9 @@ review: { state: draft }
 - The **crosswalk** maps each canonical parameter or port to the engine's: a parameter
   name, `#N` for an unnamed SQL argument, or an object with `param` and `values`
   (translation), `unsupported`, `fixed` (the engine has no argument and always behaves
-  one way; `crs-units` means a distance is in the CRS's units) or `pass: values` (the
-  column's values, not its name).
+  one way; `crs-units` means a distance is in the CRS's units), `pass: values` (the
+  column's values, not its name) or `repeat: 2` (the engine takes the value twice, as
+  one list: a cell size given as x and y resolution).
 - **presets** fixes engine arguments for this operation (`operation: intersection` for
   `gdal vector layer-algebra`).
 - A mapping without `implements` can still carry a warning in `notes` (`gdal vector
@@ -231,8 +234,10 @@ review: { state: draft }
   WhiteboxTools, rasterio, rioxarray, xarray-spatial, rasterstats, dask-geopandas, sf and
   terra implementation on the same small inputs (vector shapes, a tilted elevation raster)
   and compares the results; an engine that cannot honour a value is reported as skipped
-  with the reason. Mapped engines with no runner yet (GRASS, Turf.js, Apache Sedona) are
-  checked against their harvested parameters only.
+  with the reason. A behaviour difference the tests found is recorded on the mapping and
+  listed in `KNOWN_DIFFERENCES`, so the run reports it ("differs") instead of failing. Mapped
+  engines with no runner yet (GRASS, Turf.js, Apache Sedona) are checked against their
+  harvested parameters only.
 
 Search them with `geo-registry search "buffer" --kind implementation`.
 

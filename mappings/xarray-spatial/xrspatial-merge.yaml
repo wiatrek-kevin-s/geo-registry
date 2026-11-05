@@ -1,0 +1,8 @@
+id: xrspatial-merge
+implements: mosaic
+crosswalk:
+  rasters: rasters
+differences:
+  - strategy chooses which value wins where inputs overlap (default first); inputs in other CRSs are reprojected.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

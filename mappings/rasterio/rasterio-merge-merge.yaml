@@ -1,0 +1,8 @@
+id: rasterio-merge-merge
+implements: mosaic
+crosswalk:
+  rasters: sources
+differences:
+  - Returns an array and its transform; method chooses which value wins where inputs overlap (default first).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,20 @@
+id: resample-raster
+kind: operation
+name: Resample Raster
+aka: [Resample, change cell size, coarsen, aggregate cells, resize raster]
+summary: The same raster on a grid with a different cell size, in the same CRS.
+group: raster/projection
+inputs:
+  - { name: raster, type: raster }
+outputs:
+  - { name: output, type: raster }
+parameters:
+  resolution: { type: number, required: true, note: "New cell size, in the raster's CRS units." }
+  resampling: { type: enum, values: [nearest, bilinear, cubic, average, mode], default: nearest, note: "nearest or mode for categories; average to coarsen continuous data." }
+checks: [raster.resampling, raster.nodata]
+pitfalls:
+  - Nearest neighbour on continuous data keeps one cell's value per new cell; average gives the mean of the cells it covers.
+  - Interpolating categorical data (land cover codes) with bilinear or cubic makes codes that do not exist.
+related: [reproject-raster]
+status: active
+review: { state: draft }

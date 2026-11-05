@@ -1,0 +1,16 @@
+id: merge-layers
+kind: operation
+name: Merge Layers
+aka: [Merge, Append, Merge Vector Layers, combine layers, concatenate]
+summary: Combines the features of several vector layers into one layer.
+group: vector/combine
+inputs:
+  - { name: layers, type: vector, many: true }
+outputs:
+  - { name: output, type: vector }
+checks: [crs.agreement, geometry.valid]
+pitfalls:
+  - Fields with the same name but different types, or different names for the same thing, are not reconciled automatically.
+related: [mosaic, dissolve]
+status: active
+review: { state: draft }

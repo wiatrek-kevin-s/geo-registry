@@ -1,0 +1,8 @@
+id: terra-merge
+implements: mosaic
+crosswalk:
+  rasters: { param: x, note: "The rasters go in x, y and further arguments, or a SpatRasterCollection in x." }
+differences:
+  - Where inputs overlap, the first raster's values are kept (first = TRUE).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

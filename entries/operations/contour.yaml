@@ -1,0 +1,22 @@
+id: contour
+kind: operation
+name: Contour
+aka: [contours, contour lines, isolines, Contour List]
+summary: Lines joining cells of equal value in a raster, at a regular interval.
+group: raster/surface
+inputs:
+  - { name: raster, type: raster }
+outputs:
+  - { name: output, type: vector, geometry: line }
+parameters:
+  interval: { type: number, required: true, note: "Spacing between levels, in the raster's value units." }
+  base: { type: number, default: 0, note: Levels are base plus multiples of interval. }
+  field: { type: string, note: Name of the attribute that holds each line's level. }
+  band: { type: integer, default: 1 }
+checks: [raster.nodata, geometry.valid]
+pitfalls:
+  - Contours follow cell centres, so they stop half a cell short of the raster's edge and are only as precise as the cell size.
+  - Some engines smooth or simplify the lines by default, which changes their lengths and positions slightly.
+related: [slope, hillshade]
+status: active
+review: { state: draft }

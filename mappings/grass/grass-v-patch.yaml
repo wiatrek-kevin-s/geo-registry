@@ -1,0 +1,9 @@
+id: grass-v-patch
+implements: merge-layers
+crosswalk:
+  layers: input
+  output: output
+differences:
+  - Attribute tables are copied only with the e flag.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

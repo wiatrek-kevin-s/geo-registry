@@ -1,0 +1,11 @@
+id: grass-v-distance
+implements: nearest-join
+crosswalk:
+  left: from
+  right: to
+  max_distance: dmax
+  distance_field: { note: "upload = dist with column = the field name." }
+differences:
+  - Writes into the from map's attribute table (upload, column, to_column) rather than making a joined layer.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

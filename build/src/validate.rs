@@ -253,6 +253,11 @@ pub fn validate_files(files: &[EntryFile], validator: &jsonschema::Validator) ->
                             "crosswalk '{name}' has both param and fixed; fixed means the engine has no parameter for it"
                         ));
                     }
+                    if o.contains_key("repeat") && !o.contains_key("param") {
+                        problem(format!(
+                            "crosswalk '{name}' has repeat but no param to repeat it into"
+                        ));
+                    }
                 }
             }
         }
@@ -448,6 +453,29 @@ mod tests {
         let mut d = data("d");
         d["review"] = json!({"state": "draft"});
         assert!(!schema_errors(&s, &d).is_empty());
+    }
+
+    #[test]
+    fn repeat_needs_a_param_and_many_ports_validate() {
+        let s = schema();
+        let mut o = operation("buffer");
+        o["inputs"] = json!([{"name": "layer", "type": "vector", "many": true}]);
+        let mut i = implementation("q");
+        i["crosswalk"] = json!({"layer": "INPUT", "distance": {"repeat": 2, "note": "x and y"}});
+        let files = vec![
+            file("a", "tool", tool("a")),
+            file("buffer", "operation", o),
+            file("q", "implementation", i.clone()),
+        ];
+        let p = validate_files(&files, &s);
+        assert!(
+            p.iter()
+                .any(|p| p.message.contains("has repeat but no param")),
+            "{p:?}"
+        );
+        assert_eq!(p.len(), 1, "{p:?}");
+        i["crosswalk"] = json!({"layer": "INPUT", "dissolve": {"param": "DISSOLVE", "repeat": 2}});
+        assert!(schema_errors(&s, &i).is_empty());
     }
 
     #[test]

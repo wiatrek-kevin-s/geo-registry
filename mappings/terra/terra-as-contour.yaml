@@ -1,0 +1,9 @@
+id: terra-as-contour
+implements: contour
+crosswalk:
+  raster: x
+  interval: { note: "Give levels (or nlevels), passed through ... to grDevices::contourLines." }
+differences:
+  - Uses at most maxcells cells (default 100,000), sampling larger rasters.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

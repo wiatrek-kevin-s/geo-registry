@@ -1,0 +1,9 @@
+id: qgis-gdal-merge
+implements: mosaic
+crosswalk:
+  rasters: INPUT
+  output: OUTPUT
+differences:
+  - Runs gdal_merge; where inputs overlap the last one in the list is copied over earlier ones.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

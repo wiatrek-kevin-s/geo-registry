@@ -1,0 +1,11 @@
+id: whiteboxtools-contours-from-raster
+implements: contour
+crosswalk:
+  raster: input
+  output: output
+  interval: interval
+  base: base
+differences:
+  - Smooths (smooth, default 9) and simplifies (tolerance, default 10) the lines by default.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

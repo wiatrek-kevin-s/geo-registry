@@ -1,0 +1,17 @@
+id: mosaic
+kind: operation
+name: Mosaic
+aka: [Mosaic To New Raster, merge rasters, gdal_merge, stitch tiles, virtual mosaic]
+summary: Combines several rasters into one covering all of them.
+group: raster/combine
+inputs:
+  - { name: rasters, type: raster, many: true }
+outputs:
+  - { name: output, type: raster }
+checks: [crs.agreement, raster.nodata]
+pitfalls:
+  - Where inputs overlap, engines differ on which value wins (first, last, mean); check before mosaicking overlapping tiles.
+  - Inputs with different cell sizes or CRSs are resampled or refused depending on the engine.
+related: [merge-layers]
+status: active
+review: { state: draft }

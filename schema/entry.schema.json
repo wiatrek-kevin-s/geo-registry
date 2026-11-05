@@ -265,6 +265,10 @@
         "name": { "$ref": "#/$defs/paramName" },
         "type": { "enum": ["vector", "raster", "table", "pointcloud", "any"] },
         "geometry": { "enum": ["point", "line", "polygon", "any"] },
+        "many": {
+          "description": "The port takes a list of layers or rasters (mosaic, merge), not one.",
+          "type": "boolean"
+        },
         "note": { "type": "string", "maxLength": 300 }
       }
     },
@@ -376,6 +380,12 @@
             "pass": {
               "description": "For a field parameter: pass the field's name (the default) or its values.",
               "enum": ["name", "values"]
+            },
+            "repeat": {
+              "description": "The engine takes the value this many times, as one list: a single cell size given as x and y resolution is repeat 2.",
+              "type": "integer",
+              "minimum": 2,
+              "maximum": 4
             },
             "note": { "type": "string", "maxLength": 300 }
           }

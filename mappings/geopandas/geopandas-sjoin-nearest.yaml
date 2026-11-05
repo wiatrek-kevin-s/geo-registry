@@ -1,0 +1,13 @@
+id: geopandas-sjoin-nearest
+implements: nearest-join
+crosswalk:
+  left: left_df
+  right: right_df
+  max_distance: max_distance
+  distance_field: distance_col
+  how: how
+differences:
+  - Defaults to an inner join; Columbus's default is left.
+  - Ties give one row per tied feature.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

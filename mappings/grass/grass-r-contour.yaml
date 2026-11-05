@@ -1,0 +1,10 @@
+id: grass-r-contour
+implements: contour
+crosswalk:
+  raster: input
+  output: output
+  interval: step
+  base: { note: "No offset; minlevel and maxlevel limit the levels, or levels lists them." }
+  field: { note: "The level goes in the attribute table's level column." }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

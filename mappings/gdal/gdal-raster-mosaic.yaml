@@ -1,0 +1,9 @@
+id: gdal-raster-mosaic
+implements: mosaic
+crosswalk:
+  rasters: input
+  output: output
+differences:
+  - Builds a virtual mosaic (VRT) unless the output is another format.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

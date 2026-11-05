@@ -1,0 +1,11 @@
+id: gdal-vector-concat
+implements: merge-layers
+crosswalk:
+  layers: input
+  output: output
+presets:
+  mode: single
+differences:
+  - mode = single puts everything in one layer; the default merges layers of the same name.
+effects: { modifies_input: false, network: false }
+review: { state: draft }
