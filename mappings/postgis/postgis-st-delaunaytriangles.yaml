@@ -1,0 +1,10 @@
+id: postgis-st-delaunaytriangles
+implements: delaunay-triangulation
+crosswalk:
+  layer: "#1"
+  tolerance: "#2"
+differences:
+  - 'Triangulates the vertices of one geometry: ST_Collect the points first for one triangulation of the layer.'
+  - Returns a GeometryCollection of triangles (flags 0); flags 1 returns the edges, 2 a TIN.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,15 @@
+id: grass-v-to-points
+implements: points-along-lines
+crosswalk:
+  layer: input
+  output: output
+  distance: dmax
+  unit: { fixed: crs-units, note: dmax is in the map units of the GRASS project. }
+presets:
+  flag_i: true
+  use: vertex
+differences:
+  - Spaces the points evenly between vertices, both ends included, so a 95 m line at 10 m gets 11 points 9.5 m apart; with one more step than needed when the length is an exact multiple of dmax (a 100 m line at 10 m gets 12 points, 9.09 m apart).
+  - Keeps every vertex of the line and adds points between them so that none is further apart than dmax; flag i (set by this mapping) does the interpolation, without it only the vertices are output.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

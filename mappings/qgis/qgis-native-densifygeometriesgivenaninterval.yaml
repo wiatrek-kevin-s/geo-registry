@@ -1,0 +1,12 @@
+id: qgis-native-densifygeometriesgivenaninterval
+implements: densify
+crosswalk:
+  layer: INPUT
+  output: OUTPUT
+  distance: INTERVAL
+  unit: { fixed: crs-units }
+differences:
+  - Splits each segment into one more piece than needed when its length is an exact multiple of the interval (a 100 m segment at 10 m gets 11 pieces of 9.09 m).
+  - native:densifygeometries adds a fixed number of vertices to every segment instead.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

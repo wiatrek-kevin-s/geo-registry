@@ -1,0 +1,10 @@
+id: sedona-sql-st-delaunaytriangles
+implements: delaunay-triangulation
+crosswalk:
+  layer: geometry
+  tolerance: tolerance
+differences:
+  - 'Triangulates the vertices of one geometry: collect the points first (ST_Union_Aggr or ST_Collect).'
+  - 'A Spark SQL function: arguments are columns or column names, run over a Spark DataFrame.'
+effects: { modifies_input: false, network: false }
+review: { state: draft }

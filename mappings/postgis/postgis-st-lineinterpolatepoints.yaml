@@ -1,0 +1,11 @@
+id: postgis-st-lineinterpolatepoints
+implements: points-along-lines
+crosswalk:
+  layer: "#1"
+  distance: { note: "Takes a fraction of the line's length: divide the distance by ST_Length of the line." }
+  unit: { fixed: crs-units }
+differences:
+  - The first point is one step from the start; there is no point at the start.
+  - Returns one MultiPoint per line.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

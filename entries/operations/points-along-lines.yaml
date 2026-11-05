@@ -1,0 +1,20 @@
+id: points-along-lines
+kind: operation
+name: Points Along Lines
+aka: [Generate Points Along Lines, points along geometry, line sample, interpolate points, stationing]
+summary: Points placed along each line at a regular distance.
+group: vector/geometry
+inputs:
+  - { name: layer, type: vector, geometry: line }
+outputs:
+  - { name: output, type: vector, geometry: point }
+parameters:
+  distance: { type: length, required: true, note: "Spacing along the line: a point at the start, then one every distance." }
+  unit: { type: enum, required: true, values: [m, ft, us-ft, km, mi] }
+checks: [crs.measure]
+pitfalls:
+  - Engines differ on whether the first point is at the line's start, at the first full distance, or half a step in, and on whether the end gets a point.
+  - Some take a fraction of the line's length or a number of points per unit length instead of a distance.
+related: [densify]
+status: active
+review: { state: draft }

@@ -1,0 +1,10 @@
+id: qgis-native-delaunaytriangulation
+implements: delaunay-triangulation
+crosswalk:
+  layer: INPUT
+  output: OUTPUT
+  tolerance: TOLERANCE
+differences:
+  - ADD_ATTRIBUTES copies the point ids onto each triangle (on by default).
+effects: { modifies_input: false, network: false }
+review: { state: draft }

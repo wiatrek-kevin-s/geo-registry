@@ -1,0 +1,8 @@
+id: postgis-st-minimumboundingcircle
+implements: minimum-bounding-circle
+crosswalk:
+  layer: "#1"
+differences:
+  - The second argument sets the segments per quarter circle (48 by default); ST_MinimumBoundingRadius returns the centre and radius.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

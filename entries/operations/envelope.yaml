@@ -1,0 +1,18 @@
+id: envelope
+kind: operation
+name: Envelope
+aka: [bounding box, bbox, Minimum Bounding Geometry (envelope), Bounding boxes, extent polygon]
+summary: The smallest rectangle aligned with the coordinate axes that contains each feature.
+group: vector/geometry
+inputs:
+  - { name: layer, type: vector }
+outputs:
+  - { name: output, type: vector, geometry: polygon }
+checks: [geometry.valid]
+pitfalls:
+  - Engines differ on whether they return a box for each feature or one box for the whole layer.
+  - The box follows the CRS's axes, so the same features have different envelopes in different CRSs.
+  - The envelope of a point, or of a horizontal or vertical line, is a point or a line, not a polygon.
+related: [convex-hull, minimum-bounding-rectangle, minimum-bounding-circle]
+status: active
+review: { state: draft }

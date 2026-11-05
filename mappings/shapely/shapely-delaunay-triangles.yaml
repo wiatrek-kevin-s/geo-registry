@@ -1,0 +1,10 @@
+id: shapely-delaunay-triangles
+implements: delaunay-triangulation
+crosswalk:
+  layer: geometry
+  tolerance: tolerance
+differences:
+  - 'Triangulates the vertices of each geometry on its own: pass one MultiPoint (shapely.union_all of the points) for one triangulation.'
+  - Returns a GeometryCollection of triangles; only_edges returns the edges as lines.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

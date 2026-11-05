@@ -1,0 +1,8 @@
+id: postgis-st-envelope
+implements: envelope
+crosswalk:
+  layer: "#1"
+differences:
+  - Returns a point or a line for degenerate boxes; the coordinates are rounded to float precision.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

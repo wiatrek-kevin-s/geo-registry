@@ -1,0 +1,12 @@
+id: qgis-native-pointsalonglines
+implements: points-along-lines
+crosswalk:
+  layer: INPUT
+  output: OUTPUT
+  distance: DISTANCE
+  unit: { fixed: crs-units }
+differences:
+  - Starts at the line's start; the end gets a point only when it falls on a step; START_OFFSET and END_OFFSET leave a stretch at either end without points.
+  - Adds the distance along the line and the line's angle at each point as fields.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

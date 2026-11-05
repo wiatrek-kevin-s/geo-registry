@@ -1,0 +1,8 @@
+id: sf-st-segmentize
+implements: densify
+crosswalk:
+  layer: x
+  distance: dfMaxLength
+  unit: { fixed: crs-units, note: Longitude/latitude data is densified along great circles with the distance in metres. }
+effects: { modifies_input: false, network: false }
+review: { state: draft }

@@ -1,0 +1,9 @@
+id: qgis-native-boundingboxes
+implements: envelope
+crosswalk:
+  layer: INPUT
+  output: OUTPUT
+differences:
+  - One box per feature, with its width, height, area and perimeter as fields.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

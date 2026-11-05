@@ -1,0 +1,10 @@
+id: terra-densify
+implements: densify
+crosswalk:
+  layer: x
+  distance: interval
+  unit: { fixed: crs-units, note: Longitude/latitude data is densified along the geodesic with the interval in metres. }
+differences:
+  - equalize (on by default) spaces the new vertices evenly.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

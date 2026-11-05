@@ -1,0 +1,8 @@
+id: sf-st-minimum-bounding-circle
+implements: minimum-bounding-circle
+crosswalk:
+  layer: x
+differences:
+  - Needs GEOS 3.8 or later.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

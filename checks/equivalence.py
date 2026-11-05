@@ -46,6 +46,7 @@ from typing import Any
 import geopandas as gpd
 import pandas as pd
 import shapely
+import shapely.affinity
 from shapely import wkt
 
 CRS = "EPSG:32614"  # UTM zone 14N: metres, so canonical unit m is the CRS unit
@@ -59,6 +60,10 @@ def poly(x0, y0, x1, y1):
 # Inside, across the edge of, and outside a 100 m mask.
 SELECT_SQUARES = [poly(10, 10, 20, 20), poly(90, 90, 110, 110), poly(200, 200, 210, 210)]
 L_SHAPE = shapely.Polygon([(0, 0), (20, 0), (20, 10), (10, 10), (10, 20), (0, 20)])  # area 300; hull 350
+# A 100 m by 20 m rectangle turned 30 degrees, inside the UTM zone: its envelope is
+# (100 cos 30 + 20 sin 30) by (100 sin 30 + 20 cos 30); its minimum bounding rectangle is itself.
+TILTED = shapely.affinity.rotate(poly(621000, 3349000, 621100, 3349020), 30, origin="centroid")
+TILTED_ENVELOPE = (100 * math.cos(math.radians(30)) + 20 * 0.5) * (100 * 0.5 + 20 * math.cos(math.radians(30)))
 
 
 @dataclass
@@ -67,7 +72,7 @@ class Case:
     title: str
     inputs: dict[str, Any]          # port -> list of geometries, or a DataFrame for tables
     params: dict[str, Any]          # canonical parameters
-    measure: str                    # area | length | count | coords | raster_* | field_* | value:<name>
+    measure: str                    # area | length | count | coords | vertices | raster_* | field_* | value:<name>
     expected: float | None = None   # None: compare engines with each other
     tolerance: float = 1e-6         # relative
     attrs: dict[str, list] = field(default_factory=dict)  # extra columns per port
@@ -127,6 +132,26 @@ CASES = [
          {"predicate": "within"}, "count", expected=1),
     Case("voronoi", "three points, three polygons", {"layer": [shapely.Point(621000, 3349000), shapely.Point(621100, 3349000),
          shapely.Point(621050, 3349080)]}, {}, "count", expected=3),
+    Case("delaunay-triangulation", "a square's corners and centre: four triangles", {"layer": [
+         shapely.Point(621000, 3349000), shapely.Point(621100, 3349000), shapely.Point(621100, 3349100),
+         shapely.Point(621000, 3349100), shapely.Point(621050, 3349050)]}, {}, "count", expected=4),
+    Case("delaunay-triangulation", "triangles cover the square", {"layer": [
+         shapely.Point(621000, 3349000), shapely.Point(621100, 3349000), shapely.Point(621100, 3349100),
+         shapely.Point(621000, 3349100), shapely.Point(621050, 3349050)]}, {}, "area", expected=10000.0, tolerance=0.002),
+    Case("envelope", "a tilted rectangle's bounding box", {"layer": [TILTED]}, {}, "area", expected=TILTED_ENVELOPE,
+         tolerance=1e-6),
+    Case("minimum-bounding-rectangle", "a tilted rectangle is its own", {"layer": [TILTED]}, {}, "area", expected=2000.0,
+         tolerance=1e-6),
+    Case("minimum-bounding-circle", "circle around a 100 m square", {"layer": [poly(621000, 3349000, 621100, 3349100)]}, {},
+         "area", expected=math.pi * 5000, tolerance=0.03),
+    Case("densify", "100 m line, segments of at most 10 m", {"layer": [shapely.LineString([(0, 0), (100, 0)])]},
+         {"distance": 10, "unit": "m"}, "vertices", expected=11),
+    Case("densify", "length unchanged", {"layer": [shapely.LineString([(0, 0), (100, 0), (100, 35)])]},
+         {"distance": 10, "unit": "m"}, "length", expected=135.0),
+    Case("points-along-lines", "100 m line, a point every 10 m", {"layer": [shapely.LineString([(0, 0), (100, 0)])]},
+         {"distance": 10, "unit": "m"}, "count", expected=11),
+    Case("points-along-lines", "95 m line: start, then every 10 m", {"layer": [shapely.LineString([(0, 0), (95, 0)])]},
+         {"distance": 10, "unit": "m"}, "count", expected=10),
     Case("polygons-to-lines", "outline of a 100 m square", {"layer": [poly(0, 0, 100, 100)]}, {}, "length", expected=400.0),
     Case("lines-to-polygons", "closed square line", {"layer": [shapely.LineString([(0, 0), (100, 0), (100, 100), (0, 100), (0, 0)])]},
          {}, "area", expected=10000.0),
@@ -368,6 +393,26 @@ KNOWN_DIFFERENCES = {
         "without radius or min_points every cell is nodata",
     ("grass-r-watershed", "plane draining west"):
         "cells on the region's border drain straight out of it and do not feed their neighbours",
+    ("postgis-st-delaunaytriangles", "a square's corners and centre: four triangles"):
+        "triangulates the vertices of each point on its own, so separate points give no triangles (collect them first)",
+    ("postgis-st-delaunaytriangles", "triangles cover the square"):
+        "triangulates the vertices of each point on its own, so separate points give no triangles (collect them first)",
+    ("sf-st-triangulate", "a square's corners and centre: four triangles"):
+        "triangulates the vertices of each point on its own, so separate points give no triangles (collect them first)",
+    ("sf-st-triangulate", "triangles cover the square"):
+        "triangulates the vertices of each point on its own, so separate points give no triangles (collect them first)",
+    ("shapely-delaunay-triangles", "a square's corners and centre: four triangles"):
+        "triangulates the vertices of each point on its own, so separate points give no triangles (collect them first)",
+    ("shapely-delaunay-triangles", "triangles cover the square"):
+        "triangulates the vertices of each point on its own, so separate points give no triangles (collect them first)",
+    ("turf-envelope", "a tilted rectangle's bounding box"):
+        "the box follows longitude and latitude, not the projected CRS's axes",
+    ("qgis-native-densifygeometriesgivenaninterval", "100 m line, segments of at most 10 m"):
+        "a segment whose length is an exact multiple of the interval gets one piece too many (11 of 9.09 m)",
+    ("grass-v-to-points", "100 m line, a point every 10 m"):
+        "a line whose length is an exact multiple of dmax gets one step too many (12 points, 9.09 m apart)",
+    ("grass-v-to-points", "95 m line: start, then every 10 m"):
+        "spaces the points evenly with both ends included (11 points, 9.5 m apart)",
 }
 
 
@@ -996,6 +1041,8 @@ def measure(kind: str, geoms) -> float:
         return sum(g.length for g in geoms)
     if kind == "count":
         return float(len(geoms))
+    if kind == "vertices":
+        return float(sum(shapely.get_num_coordinates(g) for g in geoms))
     if kind == "coords":
         return float(sum(c for g in geoms for xy in shapely.get_coordinates(g) for c in xy))
     raise ValueError(kind)
@@ -1018,6 +1065,8 @@ def main() -> int:
     ap.add_argument("--rscript", default=shutil.which("Rscript"), help="Rscript with the sf and terra packages")
     ap.add_argument("--grass", default=shutil.which("grass"), help="the grass launcher")
     ap.add_argument("--turf", default=None, help="a node_modules folder with @turf/turf (run with node)")
+    ap.add_argument("--only", action="append", default=[], metavar="OPERATION",
+                    help="run only this operation's cases (repeatable)")
     args = ap.parse_args()
 
     db = sqlite3.connect(f"file:{args.dist / 'registry.sqlite'}?mode=ro", uri=True)
@@ -1052,6 +1101,8 @@ def main() -> int:
     failed = 0
     rows = []
     for case in CASES + RASTER_CASES:
+        if args.only and case.operation not in args.only:
+            continue
         op = ops[case.operation]
         results = []
         for impl in impls:

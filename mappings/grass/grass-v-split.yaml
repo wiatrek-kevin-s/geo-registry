@@ -1,0 +1,14 @@
+id: grass-v-split
+implements: densify
+crosswalk:
+  layer: input
+  output: output
+  distance: length
+  unit: { param: units, values: { m: meters, ft: feet, us-ft: surveyfeet, km: kilometers, mi: miles } }
+presets:
+  flag_n: true
+differences:
+  - v.split cuts lines into pieces; this mapping sets flag n, which adds the vertices without cutting. Flag f instead makes the pieces exactly the given length, except the last.
+  - vertices instead sets the most vertices a segment may have.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

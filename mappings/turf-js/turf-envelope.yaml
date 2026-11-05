@@ -1,0 +1,9 @@
+id: turf-envelope
+implements: envelope
+crosswalk:
+  layer: geojson
+differences:
+  - One box around all the features given, not one per feature.
+  - 'Turf works on GeoJSON in longitude/latitude (WGS 84): the box follows longitude and latitude, not the projected CRS''s axes.'
+effects: { modifies_input: false, network: false }
+review: { state: draft }

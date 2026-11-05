@@ -1,0 +1,10 @@
+id: grass-v-delaunay
+implements: delaunay-triangulation
+crosswalk:
+  layer: input
+  output: output
+  tolerance: { fixed: 0 }
+differences:
+  - Limited to the current computational region (flag r); flag l outputs the edges as lines.
+effects: { modifies_input: false, network: false }
+review: { state: draft }

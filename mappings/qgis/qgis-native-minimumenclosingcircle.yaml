@@ -1,0 +1,9 @@
+id: qgis-native-minimumenclosingcircle
+implements: minimum-bounding-circle
+crosswalk:
+  layer: INPUT
+  output: OUTPUT
+differences:
+  - SEGMENTS sets the number of segments in the whole circle (72 by default); adds the radius and area as fields.
+effects: { modifies_input: false, network: false }
+review: { state: draft }
