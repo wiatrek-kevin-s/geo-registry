@@ -1,0 +1,462 @@
+{
+  "project": "geo-registry.io: website, agent skill and connector for wiatrek-kevin-s/geo-registry",
+  "tasks": [
+    {
+      "id": "T-1",
+      "title": "Thin site: Astro project in site/ that reads dist/ and renders the home page plus every data, tool and operation page (REQ-1, REQ-2, REQ-3)",
+      "session": "S1",
+      "depends_on": [],
+      "done_by": "claude",
+      "acceptance": [
+        {
+          "how": "Claude builds the registry (cd build && cargo run --release -- build --entries ../entries --schema ../schema/entry.schema.json --out ../dist), then the site with SITE_BASE=/geo-registry/, and counts entry pages",
+          "expected": "data + tool + operation pages = len(index.json entries) + len(index.json operations) (1,564 + 65 = 1,629 on 2026-11-07); 0 build errors"
+        },
+        {
+          "how": "Claude runs the site's unit test that compares 5 fixed entries (txgio-lidar, pdal, buffer, census-tiger-line, tiger-line-road-features) with their YAML",
+          "expected": "every field the design spec's Screens table lists for that kind appears with its YAML value; absent ones show 'Not stated'; test passes"
+        },
+        {
+          "how": "Claude runs the link check on the built site at SITE_BASE=/geo-registry/ and again at SITE_BASE=/",
+          "expected": "0 broken internal links, fonts or CSS at both bases"
+        }
+      ],
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "T-2",
+      "title": "Search, review badges, retired banner and escaped registry text (REQ-4, REQ-5, REQ-6, REQ-12)",
+      "session": "S1",
+      "depends_on": [
+        "T-1"
+      ],
+      "done_by": "claude",
+      "acceptance": [
+        {
+          "how": "Claude copies the brief's Lookups table into site/tests/lookups.json and runs the Playwright lookup test (after npx playwright install) on the built site at 1,280 and 375 px",
+          "expected": "every row reaches one of its target ids within 3 interactions; test passes"
+        },
+        {
+          "how": "Claude runs the Playwright badge test",
+          "expected": "txgio-lidar shows 'Reviewed by a person' and 2026-11-05; a seeded entry shows 'Unverified lead from the seed atlas'; tiger-line-road-features shows a 'Retired' banner linking /data/census-tiger-line/"
+        },
+        {
+          "how": "Claude runs the unit test that renders a fixture entry whose notes contain an HTML script element calling alert(1) and an s3:// URL",
+          "expected": "the page source contains the escaped text, no script element is added, and the s3:// URL is code text, not a link"
+        }
+      ],
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "T-3",
+      "title": "Owner buys geo-registry.io, turns on GitHub Pages from Actions and sets the address variables (H-0, H-2)",
+      "session": "S1",
+      "depends_on": [],
+      "done_by": "person",
+      "acceptance": [
+        {
+          "how": "The owner follows the brief's H-0 steps (needs a Cloudflare account and a payment card)",
+          "expected": "the owner pastes back only: the domain geo-registry.io, its expiry date and 'auto-renew: on' (no order or payment details, because the log is public); if the name is taken, Claude stops and marks D-3 'Sent to Blueprint'"
+        },
+        {
+          "how": "The owner follows the H-2 click steps (needs GitHub admin access)",
+          "expected": "the owner pastes back: 'Source: GitHub Actions', SITE_URL=https://wiatrek-kevin-s.github.io, SITE_BASE=/geo-registry/, secret scanning and push protection on, and whether wiatrek-kevin-s.github.io already has a custom domain"
+        }
+      ],
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "T-4",
+      "title": "CI: site-check on every ci.yml event and site-deploy on main (REQ-7)",
+      "session": "S1",
+      "depends_on": [
+        "T-2",
+        "T-3"
+      ],
+      "done_by": "claude",
+      "acceptance": [
+        {
+          "how": "Claude opens a pull request with the CI change and reads its checks",
+          "expected": "every existing job still passes, site-check passes, no deploy job runs"
+        },
+        {
+          "how": "Claude runs gh workflow run ci.yml --ref on the PR branch",
+          "expected": "the dispatched run reports site-check as passed"
+        },
+        {
+          "how": "After the owner says to merge and the PR merges, Claude fetches https://wiatrek-kevin-s.github.io/geo-registry/ and /geo-registry/data/txgio-lidar/",
+          "expected": "HTTP 200 for both, and the CI run link is recorded"
+        }
+      ],
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "T-5",
+      "title": "Implementation and engine pages, browse lists, about, contribute, 404 and the /api/v1 JSON (REQ-2, REQ-8, REQ-9)",
+      "session": "S2",
+      "depends_on": [
+        "T-4"
+      ],
+      "done_by": "claude",
+      "acceptance": [
+        {
+          "how": "Claude builds the site and runs the API test against dist/",
+          "expected": "meta.json counts equal the counts in dist (data, tool, operation, implementation); 10 sampled per-entry files match the F-2 shape and the singular kind values; JSON parses"
+        },
+        {
+          "how": "Claude opens /implementations/gdal/does-not-exist/ on a local preview",
+          "expected": "the 404 page shows a search for 'does-not-exist' and links to /operations/"
+        },
+        {
+          "how": "Claude counts implementation pages",
+          "expected": "equal to the implementations count in dist (6,741 as of 2026-11-07)"
+        },
+        {
+          "how": "Claude searches 'buffer' in the built site, now that implementation pages exist",
+          "expected": "the Buffer operation page is the first result, above every implementation page"
+        }
+      ],
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "T-6",
+      "title": "The look from design-spec.md: tokens, light and dark themes, toggle, every required state (REQ-10, REQ-11)",
+      "session": "S2",
+      "depends_on": [
+        "T-5"
+      ],
+      "done_by": "claude",
+      "acceptance": [
+        {
+          "how": "Claude runs the token lint (stylelint rule: no colour, font or spacing literals outside the tokens file), then takes Playwright screenshots of home, search with results, search with no results, a data page, the Buffer operation page and the 404 page at 375 and 1,280 px in light and dark, plus the Playwright state tests (search loading and failed-to-load)",
+          "expected": "lint 0 errors; 24 screenshots in site/evidence/ with nothing overflowing or overlapping; state tests pass"
+        },
+        {
+          "how": "Claude runs axe (@axe-core/playwright) on the 23 pages in site/tests/a11y-pages.json (home, search, 404, about, ai, contribute, browse lists, and 3 entry pages of each kind) in light and dark",
+          "expected": "0 serious or critical violations"
+        },
+        {
+          "how": "Claude runs the Playwright theme test",
+          "expected": "with the device set to dark, the site is dark; the toggle switches to light and the choice survives a reload"
+        }
+      ],
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "T-7",
+      "title": "Suggest-a-fix issue form and links (REQ-13)",
+      "session": "S2",
+      "depends_on": [
+        "T-5"
+      ],
+      "done_by": "claude",
+      "acceptance": [
+        {
+          "how": "Claude runs the unit test on the suggest-a-fix link of txgio-lidar",
+          "expected": "the link opens .github/ISSUE_TEMPLATE/fix-entry.yml with title 'Fix: data txgio-lidar' and the entry id and page URL filled in"
+        },
+        {
+          "how": "Claude creates the label with gh label create fix-request (the one label it may create), then runs gh label list",
+          "expected": "the label fix-request exists"
+        }
+      ],
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "T-8",
+      "title": "Connect geo-registry.io to GitHub Pages (H-1)",
+      "session": "S2",
+      "depends_on": [
+        "T-3",
+        "T-4"
+      ],
+      "done_by": "both",
+      "acceptance": [
+        {
+          "how": "Claude gives the exact DNS records; the owner follows the brief's H-1 steps and pastes back the Pages settings line",
+          "expected": "GitHub Pages shows 'Your site is live at https://geo-registry.io' with Enforce HTTPS ticked"
+        },
+        {
+          "how": "Claude fetches https://geo-registry.io/ and https://www.geo-registry.io/ after the owner sets SITE_URL=https://geo-registry.io and SITE_BASE=/ and the next deploy runs",
+          "expected": "HTTP 200 with a valid certificate at the apex; www redirects to the apex; page links have no /geo-registry/ prefix"
+        }
+      ],
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "T-9",
+      "title": "Cookieless analytics through Cloudflare Web Analytics manual setup (H-3)",
+      "session": "S2",
+      "depends_on": [
+        "T-8"
+      ],
+      "done_by": "both",
+      "acceptance": [
+        {
+          "how": "After the owner stores CF_BEACON_TOKEN (H-3), Claude loads the home page in Playwright and records every network request",
+          "expected": "exactly one third-party script from static.cloudflareinsights.com with that token; no other third-party host"
+        },
+        {
+          "how": "At the start of session S3, the owner opens Web Analytics",
+          "expected": "at least 1 page view is shown; recorded in the progress log"
+        }
+      ],
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "T-10",
+      "title": "Skill files: SKILL.md, references and evals in agent/skills/geo-registry/ (REQ-14, REQ-15)",
+      "session": "S3",
+      "depends_on": [
+        "T-5"
+      ],
+      "done_by": "claude",
+      "acceptance": [
+        {
+          "how": "Claude runs agent/scripts/lint-skill.mjs",
+          "expected": "frontmatter has only name, description, license and metadata; name is geo-registry; description is 200 characters or fewer; SKILL.md is under 500 lines; every file it links exists"
+        },
+        {
+          "how": "Claude counts the prompts in evals/prompts.md by category",
+          "expected": "15 prompts: at least 4 that must trigger questions, 4 where the request is not the need, 4 plain lookups, 3 traps; each has an expected-behaviour line"
+        },
+        {
+          "how": "Claude counts the patterns in references/task-patterns.md",
+          "expected": "at least 25 patterns, each naming its alternatives and the registry entries to check"
+        }
+      ],
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "T-11",
+      "title": "Skill zip with dated snapshot, skill-release job and the /ai/ page (REQ-16)",
+      "session": "S3",
+      "depends_on": [
+        "T-10"
+      ],
+      "done_by": "claude",
+      "acceptance": [
+        {
+          "how": "Claude unzips the zip that site-check builds",
+          "expected": "one top-level folder geo-registry/ containing SKILL.md and references/registry-snapshot.json, whose generated_at equals dist/index.json generated_at"
+        },
+        {
+          "how": "After merge to main, Claude runs gh release view skill",
+          "expected": "assets geo-registry-skill.zip and its .sha256; the sha256 file verifies the zip"
+        },
+        {
+          "how": "Claude reads the /ai/ page",
+          "expected": "one section each for Claude app, Claude Code, Codex/ChatGPT, Gemini, Grok, Copilot and Cursor, each with what to download or paste, the plan it needs and an 'as of' date"
+        }
+      ],
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "T-12",
+      "title": "Skill evaluation in the Claude app (S-3)",
+      "session": "S3",
+      "depends_on": [
+        "T-11"
+      ],
+      "done_by": "both",
+      "acceptance": [
+        {
+          "how": "The owner uploads the zip in the Claude app (Pro or higher, code execution on) and runs each of the 15 eval prompts in a fresh chat, marking pass or fail against its expected-behaviour line on the sheet Claude provides; he also notes whether the upload accepted the description length (Q-4)",
+          "expected": "at least 13 of 15 marked pass; the sheet saved in agent/skills/geo-registry/evals/results-claude-app.md"
+        }
+      ],
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "T-13",
+      "title": "Repo-folder install path for CLI agents (Q-2) and a second-app evaluation (S-3)",
+      "session": "S3",
+      "depends_on": [
+        "T-11"
+      ],
+      "done_by": "both",
+      "acceptance": [
+        {
+          "how": "Claude runs npx skills add wiatrek-kevin-s/geo-registry in an empty temp folder",
+          "expected": "the geo-registry skill folder appears under the installer's target folders; if it does not, the /ai/ page gives the working copy command instead and the progress log records why"
+        },
+        {
+          "how": "The owner installs the repo skill folder in one non-Anthropic agent he has (Codex CLI or Gemini CLI, steps from Claude) and runs the 15 prompts with the same sheet; if he has none, Claude runs them in Claude Code and records that this is weaker evidence",
+          "expected": "at least 13 of 15 pass; results saved in evals/results-second-app.md"
+        }
+      ],
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "T-14",
+      "title": "Connector Worker in agent/connector/: tools, both protocol revisions, caps, fetch allowlist (REQ-17, REQ-18)",
+      "session": "S4",
+      "depends_on": [
+        "T-5"
+      ],
+      "done_by": "claude",
+      "acceptance": [
+        {
+          "how": "Claude runs the connector test suite against wrangler dev",
+          "expected": "search, get_entry and compare_engines pass with MCP revisions 2026-07-28 and 2025-11-25; a 201-character query, limit 21 and a 17 kB body are refused with plain messages; the fetch helper's unit test shows any host or path outside the API base is refused, and an id like ../../x returns 'Entry not found'"
+        },
+        {
+          "how": "Claude runs the Node speed test over 200 fixed queries and checks the generated index size",
+          "expected": "search p95 under 2 ms; search-index.json under 2 MB"
+        }
+      ],
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "T-15",
+      "title": "Owner creates the Cloudflare token and the GitHub production environment (H-4)",
+      "session": "S4",
+      "depends_on": [
+        "T-8"
+      ],
+      "done_by": "person",
+      "acceptance": [
+        {
+          "how": "The owner follows Claude's click steps (Claude first looks up the current permission names for deploying a Worker with a custom domain, Q-5)",
+          "expected": "the owner pastes back: environment 'production' exists, restricted to main, with secrets CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID (names only, never values), and the token's expiry date"
+        }
+      ],
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "T-16",
+      "title": "connector-deploy job and the address mcp.geo-registry.io",
+      "session": "S4",
+      "depends_on": [
+        "T-14",
+        "T-15"
+      ],
+      "done_by": "both",
+      "acceptance": [
+        {
+          "how": "After merge, Claude fetches https://mcp.geo-registry.io/ and calls search('lidar') with an MCP client library",
+          "expected": "plain-text page linking /ai/; search returns at least 1 result including txgio-lidar"
+        },
+        {
+          "how": "Claude sends 200 live search queries; the owner reads CPU time in the Cloudflare dashboard (Workers & Pages › geo-registry-mcp › Metrics)",
+          "expected": "CPU time p99 under 10 ms, pasted back by the owner"
+        }
+      ],
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "T-17",
+      "title": "Plugin folder with both manifest pairs, sync script and marketplace file (Q-3)",
+      "session": "S4",
+      "depends_on": [
+        "T-11",
+        "T-16"
+      ],
+      "done_by": "claude",
+      "acceptance": [
+        {
+          "how": "Claude edits the skill without re-running the sync script and runs npm run check:plugin (the same script site-check calls)",
+          "expected": "the check fails naming the out-of-date plugin copy; after the sync it passes"
+        },
+        {
+          "how": "Claude installs the plugin in Claude Code from the repo marketplace, and in Codex if available",
+          "expected": "each lists the geo-registry skill and the three connector tools; any app where it fails is recorded and its package removed from /ai/"
+        }
+      ],
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "T-18",
+      "title": "Connector check in Claude and ChatGPT (check 8)",
+      "session": "S4",
+      "depends_on": [
+        "T-16"
+      ],
+      "done_by": "person",
+      "acceptance": [
+        {
+          "how": "The owner adds https://mcp.geo-registry.io/mcp as a custom connector with no sign-in in Claude, and in ChatGPT developer mode if he has a paid ChatGPT plan (otherwise Claude adds it in Claude Code with claude mcp add, recorded as weaker evidence), and asks 'what lidar covers Austin?'",
+          "expected": "in both, the app calls search and the answer links geo-registry.io pages; one line per app pasted back"
+        }
+      ],
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "T-19",
+      "title": "Upkeep files: CODEOWNERS, Dependabot, uptime workflow, runbook, README section (REQ-19)",
+      "session": "S5",
+      "depends_on": [
+        "T-16"
+      ],
+      "done_by": "claude",
+      "acceptance": [
+        {
+          "how": "After the owner says to merge the PR with uptime.yml, Claude runs it by workflow_dispatch, then again with its connector_url input set to a wrong path",
+          "expected": "first run passes; second run opens one issue labelled outage, a re-run updates that same issue, and Claude closes it afterwards"
+        },
+        {
+          "how": "Claude compares docs/operations.md with the brief's Keeping it running section",
+          "expected": "every change stream, expiring item and runbook step in the brief appears, with dates"
+        },
+        {
+          "how": "Claude validates .github/dependabot.yml against the schemastore dependabot-2.0 schema with ajv (already a dev dependency), and after merge checks the repo's Dependabot tab",
+          "expected": "valid; weekly grouped updates for site/ and agent/; no auto-merge; no configuration error shown"
+        }
+      ],
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "T-20",
+      "title": "Owner applies the ruleset, required checks and scanning settings (H-5)",
+      "session": "S5",
+      "depends_on": [
+        "T-19"
+      ],
+      "done_by": "person",
+      "acceptance": [
+        {
+          "how": "Claude first lists the checks main requires today (gh api) and gives the exact names; the owner follows the brief's H-5 click steps",
+          "expected": "the owner pastes back the ruleset summary: require PR, 0 approvals, code-owner review on, required checks = today's list plus Site check, bypass = Repository admin role; Dependabot alerts on"
+        }
+      ],
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "T-21",
+      "title": "End-to-end freshness check with a non-entry commit (S-2, check 7)",
+      "session": "S5",
+      "depends_on": [
+        "T-20"
+      ],
+      "done_by": "claude",
+      "acceptance": [
+        {
+          "how": "After the owner says to merge Claude's last small PR (the README section, or any docs change), Claude records the merge sha and polls a data page footer, /api/v1/meta.json, the connector's search result metadata and the skill zip's snapshot",
+          "expected": "all four carry the new registry_commit within 30 minutes of the merge; times recorded in the progress log"
+        }
+      ],
+      "status": "todo",
+      "evidence": ""
+    }
+  ]
+}
