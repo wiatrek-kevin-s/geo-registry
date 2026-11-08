@@ -4,9 +4,9 @@ Kit version 1.0 · as of 2026-11-08, session S2 in progress
 
 ## Where things stand
 
-- **Session:** S2 · **Task:** T-5, T-6, T-7 and T-9 code in PR; site live at https://wiatrek-kevin-s.github.io/geo-registry/
-- **Next step:** owner does H-1 and H-3 and approves the merges; then T-8 and T-9 checks · **Waiting on the owner:** H-1, H-3, merge approval
-- **Homework received:** H-0 (geo-registry.io, expires 2027-11-07, auto-renew: on), H-2 (done by the owner, checked with gh api)
+- **Session:** S2 · **Task:** T-5 to T-7 done; T-8 and T-9 partly checked; site live at https://geo-registry.io/
+- **Next step:** S2 checkpoint, then S3 · **Waiting on the owner:** Enforce HTTPS, checks 1 to 6
+- **Homework received:** H-0 (geo-registry.io, expires 2027-11-07, auto-renew: on), H-1 (except Enforce HTTPS), H-2, H-3 (all checked with gh api)
 
 ## Decisions
 
@@ -40,6 +40,14 @@ Status: raised, approved, declined, or Sent to Blueprint (touches a one-way door
 ## Handoff notes
 
 Newest first, written as you go. Mark each claim verified (checked this session) or unverified.
+
+### S2: merged and live on geo-registry.io (2026-11-08)
+
+- **Done:** owner did H-1 and H-3 and said "merge 39 to 42". #42 and #41 merged into their stacked branches, #39 and #40 into `main`; #40 waited for its required checks, no admin override. Main run 42517891357: all jobs pass, site deployed (verified). geo-registry.io returns 200 with a valid certificate, www redirects, footer and `meta.json` show commit c642908, 64 browser tests pass on the live domain, the beacon is the only third-party host (verified).
+- **Waiting:** owner ticks Enforce HTTPS (T-8), runs checks 1 to 6 (S2 checkpoint). T-9's page-view check is at the start of S3.
+- **Check 7 in S2:** page footer and `meta.json` carry the merge commit (verified). The connector and skill zip don't exist yet; the full check is T-21.
+- **iCloud:** "… 2" conflict copies are back in the repo folder, untracked; none are in git (verified). Commit with explicit paths until the repo leaves iCloud.
+- **Saved:** branch `site/s2-close` (this log and tasks.json).
 
 ### S2: T-9 code in PR; waiting on H-1 and H-3 (2026-11-08)
 

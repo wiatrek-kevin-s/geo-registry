@@ -189,7 +189,7 @@
         }
       ],
       "status": "todo",
-      "evidence": ""
+      "evidence": "Partial, 2026-11-08, after main run https://github.com/wiatrek-kevin-s/geo-registry/actions/runs/42517891357. Check 2 passes: https://geo-registry.io/ HTTP 200, certificate valid (curl ssl_verify_result 0; GitHub certificate state approved, covers apex and www, expires 2027-02-06); https://www.geo-registry.io/ 301 to https://geo-registry.io/; page links have no /geo-registry/ prefix; 64 browser tests pass against the live domain. Check 1 waits for the owner to tick Enforce HTTPS (API https_enforced is false) and paste the Pages line."
     },
     {
       "id": "T-9",
@@ -210,7 +210,7 @@
         }
       ],
       "status": "todo",
-      "evidence": ""
+      "evidence": "Partial, 2026-11-08. Check 1 passes on https://geo-registry.io/ in Playwright: one script from static.cloudflareinsights.com per page, carrying the token saved as CF_BEACON_TOKEN; the only other third-party request is the beacon's POST to cloudflareinsights.com, the one the brief allows; no other host. Check 2 is at the start of S3: the owner reads at least 1 page view in Web Analytics."
     },
     {
       "id": "T-10",
