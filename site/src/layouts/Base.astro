@@ -9,8 +9,9 @@ interface Props {
   description?: string;
   section?: "home" | "data" | "tools" | "operations";
   noindex?: boolean;
+  hideHeaderSearch?: boolean;
 }
-const { title, description, section, noindex = false } = Astro.props;
+const { title, description, section, noindex = false, hideHeaderSearch = false } = Astro.props;
 const reg = loadRegistry();
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const nav = [
@@ -58,6 +59,17 @@ const fullTitle = section === "home" ? title : `${title} · geo-registry`;
             ))}
           </ul>
         </nav>
+        {!hideHeaderSearch && (
+          <form class="header-search" role="search" action={href("search/")} method="get">
+            <label for="header-q" class="visually-hidden">
+              Search the registry
+            </label>
+            <input id="header-q" name="q" type="search" placeholder="Search" />
+            <button type="submit" class="button-secondary">
+              Search
+            </button>
+          </form>
+        )}
       </div>
     </header>
     <main id="content" class="page" tabindex="-1">

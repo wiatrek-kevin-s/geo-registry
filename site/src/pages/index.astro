@@ -14,11 +14,23 @@ const reviewed = data.filter((c) => c.review === "reviewed").length;
   title="geo-registry: GIS data sources, tools and how each engine runs an operation"
   description="Find what data covers a place, which tool does a job, and how each GIS engine runs an operation."
   section="home"
+  hideHeaderSearch
 >
   <h1>geo-registry</h1>
   <p class="summary">
     Find what data covers a place, which tool does a job, and how each GIS engine runs an operation.
   </p>
+
+  <form class="search-form" role="search" action={href("search/")} method="get">
+    <label for="home-q">Search data sources, tools and operations</label>
+    <div class="search-row">
+      <input id="home-q" name="q" type="search" autocomplete="off" />
+      <button type="submit" class="button-primary">
+        Search
+      </button>
+    </div>
+    <p class="muted hint">Try “lidar Travis County”, “buffer PostGIS” or “zonal statistics”.</p>
+  </form>
 
   <ul class="counts" aria-label="What the registry holds">
     <li>

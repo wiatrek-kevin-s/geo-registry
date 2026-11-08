@@ -46,8 +46,8 @@
           "expected": "the page source contains the escaped text, no script element is added, and the s3:// URL is code text, not a link"
         }
       ],
-      "status": "todo",
-      "evidence": ""
+      "status": "done",
+      "evidence": "Local run 2026-11-07 on branch site/t2-search (Pagefind 1.6.0, Playwright 1.64.1, Chromium). Search layout per CR-1 (approved): grouped by kind, county lookup. (1) site/tests/lookups.json copied from the brief; site/tests/e2e/lookups.spec.ts at 1,280 and 375 px: 20 of 20 pass, each target reached by type, Enter, click (3 interactions). (2) site/tests/e2e/badges.spec.ts: txgio-lidar 'Reviewed by a person, 2026-11-05'; 3dbag 'Unverified lead from the seed atlas'; tiger-line-road-features 'Retired' banner linking /data/census-tiger-line/; plus every result shows a badge, retired ranks below census-tiger-line, Pagefind-failed message links the browse lists, empty filter offers 'Clear filters': 14 of 14 pass (34 browser tests in all). (3) site/tests/unit/escaping.test.mjs builds a fixture registry whose notes hold a script element calling alert(1) and an s3:// URL: escaped text in source, no script element added, s3:// is code text and never a link: 3 of 3 pass (10 unit tests in all). Link check 0 broken at /geo-registry/ and /; Prettier, ESLint, astro check 0 errors; npm audit --omit=dev 0 vulnerabilities."
     },
     {
       "id": "T-3",

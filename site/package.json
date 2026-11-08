@@ -7,12 +7,14 @@
     "node": ">=26.10.0"
   },
   "scripts": {
-    "build": "astro build",
+    "build": "astro build && pagefind --site dist",
     "preview": "astro preview",
     "check": "astro check",
     "test:unit": "node --test tests/unit/",
     "check:links": "node scripts/check-links.mjs",
-    "lint": "eslint . && prettier --check ."
+    "lint": "eslint . && prettier --check .",
+    "test:e2e": "playwright test",
+    "serve": "node scripts/serve.mjs"
   },
   "dependencies": {
     "astro": "7.4.7"
@@ -20,11 +22,13 @@
   "devDependencies": {
     "@astrojs/check": "0.9.12",
     "@eslint/js": "10.0.1",
+    "@playwright/test": "1.64.1",
     "@types/node": "26.6.6",
     "eslint": "10.14.0",
     "eslint-plugin-astro": "3.2.1",
     "globals": "17.14.0",
     "node-html-parser": "9.0.7",
+    "pagefind": "1.6.0",
     "prettier": "3.9.10",
     "prettier-plugin-astro": "1.1.2",
     "typescript": "6.0.3",

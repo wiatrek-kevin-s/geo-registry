@@ -1,0 +1,53 @@
+---
+import Base from "../layouts/Base.astro";
+import { href } from "../lib/paths";
+---
+
+<Base title="Search" description="Search the geo-registry." hideHeaderSearch>
+  <h1>Search</h1>
+  <form class="search-form" role="search" action={href("search/")} method="get" id="search-form">
+    <label for="q">Search data sources, tools and operations</label>
+    <div class="search-row">
+      <input id="q" name="q" type="search" autocomplete="off" spellcheck="false" />
+      <button type="submit" class="button-primary">
+        Search
+      </button>
+    </div>
+  </form>
+
+  <div id="filters" class="filters" hidden></div>
+
+  <p id="search-status" class="search-status" role="status" aria-live="polite"></p>
+
+  <div id="search-error" class="search-error" hidden>
+    <p>
+      <strong>Search couldn't load.</strong> Your connection may have dropped, or a browser setting
+      is blocking it. You can still browse:
+    </p>
+    <ul class="inline">
+      <li>
+        <a href={href("data/")}>Data sources</a>
+      </li>
+      <li>
+        <a href={href("tools/")}>Tools</a>
+      </li>
+      <li>
+        <a href={href("operations/")}>Operations</a>
+      </li>
+    </ul>
+  </div>
+
+  <div id="results"></div>
+
+  <noscript>
+    <p>
+      Search needs JavaScript. Browse instead: <a href={href("data/")}>Data sources</a> ·
+      <a href={href("tools/")}>Tools</a> · <a href={href("operations/")}>Operations</a>
+    </p>
+  </noscript>
+</Base>
+
+<script>
+  import { startSearch } from "../scripts/search";
+  startSearch();
+</script>
