@@ -4,9 +4,9 @@ Kit version 1.0 · as of 2026-11-07, session S1 in progress
 
 ## Where things stand
 
-- **Session:** S1 · **Task:** T-1 and T-2 done and merged (#35, #36); T-3 evidence recorded (auto-renew to confirm); T-4 in PR #37
-- **Next step:** owner approves merging #37, then the S1 checkpoint · **Waiting on the owner:** merge of #37, auto-renew confirmation, checkpoint checks 1 and 2
-- **Homework received:** H-0 (domain bought, 2026-11-08; expiry read from the public record), H-2 (done by the owner, checked with gh api)
+- **Session:** S1 · **Task:** T-1 to T-4 done; site live at https://wiatrek-kevin-s.github.io/geo-registry/
+- **Next step:** S1 checkpoint: owner confirms checks 1 and 2 on the live site; then S2 (T-5 to T-9) · **Waiting on the owner:** checkpoint confirmation
+- **Homework received:** H-0 (geo-registry.io, expires 2027-11-07, auto-renew: on), H-2 (done by the owner, checked with gh api)
 
 ## Decisions
 
@@ -33,6 +33,13 @@ Status: raised, approved, declined, or Sent to Blueprint (touches a one-way door
 ## Handoff notes
 
 Newest first, written as you go. Mark each claim verified (checked this session) or unverified.
+
+### S1: T-3 and T-4 done, site live (2026-11-08)
+
+- **Done:** owner confirmed auto-renew on and said "merge 37". Main run 42509313766 deployed the site; both T-4 URLs return 200 and the footer shows commit 21cffb9 (verified). The 34 browser tests (10 lookups at 1280 and 375 px, badges, retired banner) pass against the live site (verified).
+- **Note:** the owner saw "site unsecure" because geo-registry.io isn't connected yet; that is T-8 (H-1) in S2.
+- **Saved:** branch `site/s1-close` (this log and tasks.json).
+- **Next:** S1 checkpoint, then S2.
 
 ### S1: T-3 recorded, T-4 in PR (2026-11-08)
 
