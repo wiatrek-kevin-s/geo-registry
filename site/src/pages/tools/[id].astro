@@ -7,8 +7,9 @@ import RelatedList from "../../components/RelatedList.astro";
 import EntryHeader from "../../components/EntryHeader.astro";
 import { RETIRED_FACTOR } from "../../lib/search";
 import { getEntry, loadRegistry, type Entry } from "../../lib/registry";
-import { sourceUrl } from "../../lib/paths";
-import { isBlank, isWebUrl } from "../../lib/text";
+import { sectionNav } from "../../lib/browse";
+import { enginePath, sourceUrl } from "../../lib/paths";
+import { fmtCount, isBlank, isWebUrl } from "../../lib/text";
 
 export function getStaticPaths() {
   return loadRegistry()
@@ -18,11 +19,17 @@ export function getStaticPaths() {
 
 const { id } = Astro.params as { id: string };
 const e: Entry = getEntry("tool", id);
+const engineCount = loadRegistry().implementations.filter((i) => i.software === id).length;
 const install: [string, string][] =
   e.install && typeof e.install === "object" ? Object.entries(e.install) : [];
 ---
 
-<Base title={e.name} description={e.summary} section="tools">
+<Base
+  title={e.name}
+  description={e.summary}
+  section="tools"
+  sidebar={sectionNav("tools", e.category)}
+>
   <article
     data-pagefind-body
     data-pagefind-weight={e.status === "retired" ? String(RETIRED_FACTOR) : undefined}
@@ -87,6 +94,11 @@ const install: [string, string][] =
   </article>
 
   <p class="links-row">
+    {engineCount > 0 && (
+      <a href={enginePath(e.id)} data-engine-link>
+        {fmtCount(engineCount)} engine implementations
+      </a>
+    )}
     <a href={sourceUrl("tool", e.id)} data-source-yaml>
       View source YAML
     </a>

@@ -1,11 +1,11 @@
 # Progress log: geo-registry.io
 
-Kit version 1.0 · as of 2026-11-07, session S1 in progress
+Kit version 1.0 · as of 2026-11-08, session S2 in progress
 
 ## Where things stand
 
-- **Session:** S1 · **Task:** T-1 to T-4 done; site live at https://wiatrek-kevin-s.github.io/geo-registry/
-- **Next step:** S1 checkpoint: owner confirms checks 1 and 2 on the live site; then S2 (T-5 to T-9) · **Waiting on the owner:** checkpoint confirmation
+- **Session:** S2 · **Task:** T-5 in PR; site live at https://wiatrek-kevin-s.github.io/geo-registry/
+- **Next step:** T-6, T-7, then the owner merges and does H-1 and H-3 · **Waiting on the owner:** nothing yet
 - **Homework received:** H-0 (geo-registry.io, expires 2027-11-07, auto-renew: on), H-2 (done by the owner, checked with gh api)
 
 ## Decisions
@@ -21,6 +21,11 @@ Kit version 1.0 · as of 2026-11-07, session S1 in progress
 | 2026-11-07 | Retired entries: weight 0.3 on their pages and, in results, searched after active and degraded entries (relevance order kept within each) | The 0.3 weight alone still ranked tiger-line-road-features above census-tiger-line for "TIGER/Line"; REQ-6 says retired rank below active | Decided |
 | 2026-11-07 | Tests serve `dist/` with a small Node server (`site/scripts/serve.mjs`) | Astro 7's `astro preview` detaches, so Playwright can't manage it | Decided |
 | 2026-11-08 | Started T-4 before the owner confirmed H-0's auto-renew | T-4 needs only H-2, which is verified; the owner asked to be contacted only when input is truly needed | Decided |
+| 2026-11-08 | `/ai/` exists from T-5 as a short "being built" page; T-11 fills it | T-6's accessibility check and the home page need the page; it says plainly that the skill isn't ready | Decided |
+| 2026-11-08 | Implementation pages and results get a one-line summary built from real fields (engine, operation, tool name, or the notes) | Implementations have no `summary` field, and "Not stated" on 6,741 results says nothing | Decided |
+| 2026-11-08 | The 28 variant implementations cite `mappings/<software>/<id>.yaml` as their source | They exist only as mapping files; every other implementation has a file in `implementations/` | Decided |
+| 2026-11-08 | Implementation pages state the harvester and engine version instead of a harvest date | The registry records no date for a harvest | Decided |
+| 2026-11-08 | `/engines/` is grouped by the engine's tool category; `/engines/<software>/` by operation group, with unmapped tools last | The spec's "grouped by category, region or operation group" | Decided |
 
 ## Change requests
 
@@ -33,6 +38,13 @@ Status: raised, approved, declined, or Sent to Blueprint (touches a one-way door
 ## Handoff notes
 
 Newest first, written as you go. Mark each claim verified (checked this session) or unverified.
+
+### S2: T-5 in PR (2026-11-08)
+
+- **S1 checkpoint:** owner confirmed checks 1 and 2 on the live site (2026-11-08).
+- **Done:** smoke check passed (1,564 entries, 65 operations, 6,741 implementations) (verified). 6,741 implementation pages, `/engines/`, grouped lists with a sidebar, about, contribute, a short `/ai/`, 404 and `/api/v1/`. The build makes 8,436 pages and 25,283 files, 159 MB, in about 16 s (verified). All T-5 checks pass; evidence in `docs/tasks.json` (verified).
+- **Saved:** branch `site/t5-full-site`.
+- **Next:** T-6.
 
 ### S1: T-3 and T-4 done, site live (2026-11-08)
 

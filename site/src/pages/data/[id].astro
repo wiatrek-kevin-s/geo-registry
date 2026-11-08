@@ -7,6 +7,7 @@ import RelatedList from "../../components/RelatedList.astro";
 import EntryHeader from "../../components/EntryHeader.astro";
 import { RETIRED_FACTOR } from "../../lib/search";
 import { getEntry, loadRegistry, type Entry } from "../../lib/registry";
+import { sectionNav } from "../../lib/browse";
 import { sourceUrl } from "../../lib/paths";
 import { isBlank, isWebUrl, reviewState } from "../../lib/text";
 
@@ -27,6 +28,7 @@ const steps: string[] = Array.isArray(e.recipe?.steps) ? e.recipe.steps : [];
   title={e.name}
   description={e.summary}
   section="data"
+  sidebar={sectionNav("data", e.coverage?.region ?? "Unspecified")}
   noindex={reviewState(e.review) !== "reviewed"}
 >
   <article

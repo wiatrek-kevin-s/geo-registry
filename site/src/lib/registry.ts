@@ -36,6 +36,7 @@ export interface Registry {
   cards: Card[];
   operations: Card[];
   entries: Map<string, Entry>; // key: `${kind}/${id}`
+  raw: Map<string, string>; // the entry JSON exactly as stored; key: `${kind}/${id}`
   implementations: Implementation[];
   ids: { data: Set<string>; tool: Set<string>; operation: Set<string> };
 }
@@ -73,18 +74,21 @@ export function loadRegistry(): Registry {
   const index = JSON.parse(readFileSync(indexPath, "utf8"));
   const db = new DatabaseSync(dbPath, { readOnly: true });
   const entries = new Map<string, Entry>();
+  const raw = new Map<string, string>();
   for (const row of db.prepare("SELECT kind, id, entry FROM entries").all() as {
     kind: string;
     id: string;
     entry: string;
   }[]) {
     entries.set(`${row.kind}/${row.id}`, JSON.parse(row.entry));
+    raw.set(`${row.kind}/${row.id}`, row.entry);
   }
   for (const row of db.prepare("SELECT id, entry FROM operations").all() as {
     id: string;
     entry: string;
   }[]) {
     entries.set(`operation/${row.id}`, JSON.parse(row.entry));
+    raw.set(`operation/${row.id}`, row.entry);
   }
   const implementations: Implementation[] = (
     db
@@ -92,15 +96,18 @@ export function loadRegistry(): Registry {
         "SELECT id, software, implements, name, status, card, entry FROM implementations ORDER BY software, id",
       )
       .all() as Record<string, string | null>[]
-  ).map((r) => ({
-    id: r.id as string,
-    software: r.software as string,
-    implements: r.implements,
-    name: r.name as string,
-    status: r.status as string,
-    card: JSON.parse(r.card as string),
-    entry: JSON.parse(r.entry as string),
-  }));
+  ).map((r) => {
+    raw.set(`implementation/${r.id}`, r.entry as string);
+    return {
+      id: r.id as string,
+      software: r.software as string,
+      implements: r.implements,
+      name: r.name as string,
+      status: r.status as string,
+      card: JSON.parse(r.card as string),
+      entry: JSON.parse(r.entry as string),
+    };
+  });
   db.close();
 
   const cards: Card[] = index.entries;
@@ -116,6 +123,7 @@ export function loadRegistry(): Registry {
     cards,
     operations,
     entries,
+    raw,
     implementations,
     ids: {
       data: new Set(cards.filter((c) => c.kind === "data").map((c) => c.id)),
@@ -124,6 +132,11 @@ export function loadRegistry(): Registry {
     },
   };
   return cached;
+}
+
+/** dist/index.json, byte for byte (F-2). */
+export function indexBytes(): Buffer {
+  return readFileSync(resolve(DIST_DIR, "index.json"));
 }
 
 export function getEntry(kind: Kind, id: string): Entry {

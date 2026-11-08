@@ -1,0 +1,23 @@
+---
+// Breadcrumb of a list or static page: Home, then the current page.
+import { href } from "../lib/paths";
+interface Props {
+  label: string;
+  parent?: { label: string; path: string };
+}
+const { label, parent } = Astro.props;
+---
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li>
+      <a href={href()}>Home</a>
+    </li>
+    {parent && (
+      <li>
+        <a href={href(parent.path)}>{parent.label}</a>
+      </li>
+    )}
+    <li aria-current="page">{label}</li>
+  </ol>
+</nav>

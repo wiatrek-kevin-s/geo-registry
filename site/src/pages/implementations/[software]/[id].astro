@@ -1,0 +1,230 @@
+---
+import Base from "../../../layouts/Base.astro";
+import EntryHeader from "../../../components/EntryHeader.astro";
+import Fact from "../../../components/Fact.astro";
+import Text from "../../../components/Text.astro";
+import Value from "../../../components/Value.astro";
+import { engineNav, implementationGroupOf } from "../../../lib/browse";
+import { enginePath, implPath, implSource, entryPath } from "../../../lib/paths";
+import { loadRegistry, type Entry, type Implementation } from "../../../lib/registry";
+import { IMPLEMENTATION_FACTOR, searchWeight } from "../../../lib/search";
+import { describeCrosswalk, formatScalar, isBlank, isWebUrl } from "../../../lib/text";
+
+export function getStaticPaths() {
+  return loadRegistry().implementations.map((i) => ({
+    params: { software: i.software, id: i.id },
+    props: { impl: i },
+  }));
+}
+
+const { impl } = Astro.props as { impl: Implementation };
+const reg = loadRegistry();
+const e: Entry = impl.entry;
+const retired = e.status === "retired";
+const toolCard = reg.cards.find((c) => c.kind === "tool" && c.id === e.software);
+const toolName = toolCard?.name ?? e.software;
+const operation = impl.implements
+  ? reg.operations.find((o) => o.id === impl.implements)
+  : undefined;
+const parameters: [string, Entry][] = e.parameters ? Object.entries(e.parameters) : [];
+const signatures: Entry[] = Array.isArray(e.signatures) ? e.signatures : [];
+const crosswalk = Object.entries((e.crosswalk ?? {}) as Record<string, unknown>);
+const differences: string[] = Array.isArray(e.differences) ? e.differences : [];
+const callName: string = e.call?.name ?? e.name;
+const firstNote = typeof e.notes === "string" ? e.notes.slice(0, 200) : undefined;
+const summary = operation
+  ? `How ${toolName} runs ${operation.name}: ${callName}.`
+  : (firstNote ?? `${callName} in ${toolName}, not yet mapped to an operation.`);
+const argument = (a: Entry) =>
+  [a.name, a.type, a.default !== undefined && `DEFAULT ${a.default}`].filter(Boolean).join(" ");
+const signature = (s: Entry) =>
+  `${callName}(${(s.arguments ?? []).map(argument).join(", ")}) → ${s.returns ?? "Not stated"}`;
+const effects =
+  e.effects && typeof e.effects === "object"
+    ? Object.entries(e.effects as Record<string, unknown>)
+        .map(([k, v]) => `${k.replaceAll("_", " ")}: ${formatScalar(v)}`)
+        .join(", ")
+    : undefined;
+---
+
+<Base
+  title={callName}
+  description={summary}
+  section="engines"
+  sidebar={engineNav(e.software, implementationGroupOf(impl))}
+>
+  <article
+    data-pagefind-body
+    data-pagefind-weight={searchWeight(1, retired, IMPLEMENTATION_FACTOR)}
+  >
+    <EntryHeader
+      kind="implementation"
+      entry={e}
+      summary={summary}
+      filters={{ software: e.software, group: operation?.group }}
+    />
+
+    <div class="table-wrap">
+      <table class="facts">
+        <caption>About this implementation</caption>
+        <tbody>
+          <Fact field="engine" label="Engine">
+            <a href={enginePath(e.software)}>{toolName}</a>
+          </Fact>
+          <Fact field="call" label="Tool name" value={callName} mono />
+          <Fact field="interface" label="Interface" value={e.call?.interface} mono />
+          <Fact
+            field="implements"
+            label="Implements"
+            weight={searchWeight(5, retired, IMPLEMENTATION_FACTOR)}
+          >
+            {operation ? (
+              <a href={entryPath("operation", operation.id)}>{operation.name}</a>
+            ) : (
+              <Value value={undefined} />
+            )}
+          </Fact>
+          {!isBlank(e.variant_of) && (
+            <Fact field="variant_of" label="Variant of">
+              <a href={implPath(e.software, e.variant_of)}>
+                <code>{e.variant_of}</code>
+              </a>
+            </Fact>
+          )}
+          {!isBlank(e.presets) && (
+            <Fact field="presets" label="Preset" value={formatScalar(e.presets)} mono />
+          )}
+          <Fact field="docs" label="Documentation">
+            {isWebUrl(e.docs) ? (
+              <a href={e.docs} class="mono" rel="noopener nofollow">
+                {e.docs}
+              </a>
+            ) : (
+              <Value value={e.docs} mono />
+            )}
+          </Fact>
+          <Fact field="effects" label="Effects" value={effects} />
+          <Fact field="notes" label="Notes" value={e.notes} />
+          <Fact field="status" label="Status" value={e.status} />
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="parameters">Parameters</h2>
+    {parameters.length === 0 ? (
+      <p class="not-stated">Not stated</p>
+    ) : (
+      <div class="table-wrap">
+        <table data-field="parameters">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Type</th>
+              <th scope="col">Required</th>
+              <th scope="col">Default</th>
+              <th scope="col">Choices</th>
+              <th scope="col">Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            {parameters.map(([name, p]) => (
+              <tr>
+                <th scope="row">
+                  <code>{name}</code>
+                </th>
+                <td>
+                  <Value value={p.type} mono />
+                </td>
+                <td>{p.required ? "yes" : "no"}</td>
+                <td>
+                  <Value value={p.default} mono />
+                </td>
+                <td>
+                  <Value value={p.values} mono />
+                </td>
+                <td>
+                  <Value value={p.note} />
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    )}
+
+    {signatures.length > 0 && (
+      <>
+        <h2 id="signatures">SQL overloads</h2>
+        <ul class="plain" data-field="signatures">
+          {signatures.map((s) => (
+            <li>
+              <code>{signature(s)}</code>
+            </li>
+          ))}
+        </ul>
+      </>
+    )}
+
+    {operation && (
+      <>
+        <h2 id="crosswalk">How it maps to the operation</h2>
+        {crosswalk.length === 0 ? (
+          <p class="not-stated">Not stated</p>
+        ) : (
+          <div class="table-wrap">
+            <table data-field="crosswalk">
+              <thead>
+                <tr>
+                  <th scope="col">Operation parameter</th>
+                  <th scope="col">Parameter here</th>
+                  <th scope="col">Note</th>
+                </tr>
+              </thead>
+              <tbody>
+                {crosswalk.map(([k, v]) => {
+                  const d = describeCrosswalk(v);
+                  return (
+                    <tr>
+                      <th scope="row">
+                        <code>{k}</code>
+                      </th>
+                      <td>
+                        <Value value={d.param} mono />
+                      </td>
+                      <td>
+                        <Value value={d.text} />
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        )}
+        <h3 id="differences">Differences from the operation</h3>
+        {differences.length === 0 ? (
+          <p class="muted">None noted</p>
+        ) : (
+          <ul class="plain" data-field="differences">
+            {differences.map((d) => (
+              <li>
+                <Text text={d} />
+              </li>
+            ))}
+          </ul>
+        )}
+      </>
+    )}
+
+    <p class="muted" data-field="harvest" data-pagefind-ignore>
+      Harvested by the <code>{e.harvest?.harvester}</code> harvester from engine version
+      <code>{e.harvest?.engine_version}</code>. Names can change when an engine is harvested again.
+    </p>
+  </article>
+
+  <p class="links-row">
+    <a href={implSource(e.software, e.id, Boolean(e.variant_of))} data-source-yaml>
+      View source YAML
+    </a>
+  </p>
+</Base>

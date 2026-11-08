@@ -3,11 +3,19 @@ import Base from "../layouts/Base.astro";
 import { loadRegistry } from "../lib/registry";
 import { href } from "../lib/paths";
 import { fmtCount } from "../lib/text";
+import { dataGroups } from "../lib/browse";
 
 const reg = loadRegistry();
 const data = reg.cards.filter((c) => c.kind === "data");
 const tools = reg.cards.filter((c) => c.kind === "tool");
 const reviewed = data.filter((c) => c.review === "reviewed").length;
+const themeCounts = new Map<string, number>();
+for (const c of data) {
+  for (const t of (c.themes as string[] | undefined) ?? []) {
+    themeCounts.set(t, (themeCounts.get(t) ?? 0) + 1);
+  }
+}
+const themes = [...themeCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12);
 ---
 
 <Base
@@ -47,7 +55,7 @@ const reviewed = data.filter((c) => c.review === "reviewed").length;
     </li>
     <li>
       <strong>{fmtCount(reg.implementations.length)}</strong>
-      engine implementations
+      <a href={href("engines/")}>engine implementations</a>
     </li>
   </ul>
 
@@ -56,5 +64,27 @@ const reviewed = data.filter((c) => c.review === "reviewed").length;
     {fmtCount(reviewed)} of {fmtCount(data.length)} data sources have been reviewed by a person. The
     rest are <em>seeded</em>: unverified leads from the seed atlas, worth checking before you rely
     on them.
+  </p>
+
+  <h2>Browse</h2>
+  <h3>By region</h3>
+  <ul class="inline" data-browse="region">
+    {dataGroups().map((g) => (
+      <li>
+        <a href={href(`data/#${g.anchor}`)}>{g.label}</a>
+      </li>
+    ))}
+  </ul>
+  <h3>By theme</h3>
+  <ul class="inline" data-browse="theme">
+    {themes.map(([t]) => (
+      <li>
+        <a href={href(`search/?theme=${encodeURIComponent(t)}`)}>{t}</a>
+      </li>
+    ))}
+  </ul>
+
+  <p>
+    Using an AI app? See the <a href={href("ai/")}>AI skill and connector</a>.
   </p>
 </Base>

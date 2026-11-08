@@ -1,0 +1,49 @@
+---
+// One group of an engine's implementations, ordered by name.
+import Badge from "./Badge.astro";
+import EntryLink from "./EntryLink.astro";
+import Value from "./Value.astro";
+import { implPath } from "../lib/paths";
+import type { Implementation } from "../lib/registry";
+interface Props {
+  items: Implementation[];
+}
+const { items } = Astro.props;
+---
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Tool</th>
+        <th scope="col">Interface</th>
+        <th scope="col">Implements</th>
+        <th scope="col">Review</th>
+      </tr>
+    </thead>
+    <tbody>
+      {items.map((i) => (
+        <tr>
+          <th scope="row">
+            <a href={implPath(i.software, i.id)}>
+              <code>{i.name}</code>
+            </a>
+          </th>
+          <td>
+            <Value value={i.entry.call?.interface} mono />
+          </td>
+          <td>
+            {i.implements ? (
+              <EntryLink kind="operation" id={i.implements} />
+            ) : (
+              <span class="not-stated">Not stated</span>
+            )}
+          </td>
+          <td>
+            <Badge review={i.entry.review} />
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

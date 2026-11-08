@@ -4,17 +4,20 @@
 import Badge from "./Badge.astro";
 import RetiredBanner from "./RetiredBanner.astro";
 import Value from "./Value.astro";
-import { href, FOLDER } from "../lib/paths";
+import { enginePath, href, FOLDER } from "../lib/paths";
 import { reviewState } from "../lib/text";
-import { KIND_LABEL, LIST_LABEL, searchWeight } from "../lib/search";
+import { IMPLEMENTATION_FACTOR, KIND_LABEL, LIST_LABEL, searchWeight } from "../lib/search";
 import type { Entry } from "../lib/registry";
 
 interface Props {
-  kind: "data" | "tool" | "operation";
+  kind: "data" | "tool" | "operation" | "implementation";
   entry: Entry;
   filters: Record<string, unknown>;
+  /** Implementations have no summary field; their page passes a line built from real fields. */
+  summary?: string;
 }
-const { kind, entry: e, filters } = Astro.props;
+const { kind, entry: e, filters, summary = e.summary } = Astro.props;
+const factor = kind === "implementation" ? IMPLEMENTATION_FACTOR : 1;
 const retired = e.status === "retired";
 const review = reviewState(e.review);
 const filterPairs: [string, string][] = Object.entries({
@@ -34,9 +37,20 @@ const filterPairs: [string, string][] = Object.entries({
     <li>
       <a href={href()}>Home</a>
     </li>
-    <li>
-      <a href={href(`${FOLDER[kind]}/`)}>{LIST_LABEL[kind]}</a>
-    </li>
+    {kind === "implementation" ? (
+      <>
+        <li>
+          <a href={href("engines/")}>Engines</a>
+        </li>
+        <li>
+          <a href={enginePath(e.software)}>{e.software}</a>
+        </li>
+      </>
+    ) : (
+      <li>
+        <a href={href(`${FOLDER[kind]}/`)}>{LIST_LABEL[kind]}</a>
+      </li>
+    )}
     <li aria-current="page">
       <code>{e.id}</code>
     </li>
@@ -46,13 +60,13 @@ const filterPairs: [string, string][] = Object.entries({
   <RetiredBanner kind={kind} entry={e} />
 </div>
 <h1
-  data-pagefind-weight={searchWeight(10, retired)}
+  data-pagefind-weight={searchWeight(10, retired, factor)}
   data-pagefind-meta="id[data-id], kind[data-kind], review[data-review], status[data-status], summary[data-summary], reviewed_on[data-reviewed-on]"
   data-id={e.id}
   data-kind={kind}
   data-review={review}
   data-status={e.status}
-  data-summary={e.summary ?? ""}
+  data-summary={summary ?? ""}
   data-reviewed-on={review === "reviewed" ? (e.review?.reviewed_on ?? "") : ""}
 >
   {e.name}
@@ -66,6 +80,6 @@ const filterPairs: [string, string][] = Object.entries({
     {KIND_LABEL[kind]} · <code>{e.id}</code>
   </span>
 </div>
-<p class="summary" data-pagefind-weight={searchWeight(2, retired)}>
-  <Value value={e.summary} />
+<p class="summary" data-pagefind-weight={searchWeight(2, retired, factor)}>
+  <Value value={summary} />
 </p>

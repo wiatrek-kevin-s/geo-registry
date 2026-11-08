@@ -1,0 +1,42 @@
+---
+// The left sidebar; below 768 px it is a "Sections" disclosure button.
+import type { SectionNav } from "../lib/browse";
+import { fmtCount } from "../lib/text";
+interface Props {
+  nav: SectionNav;
+}
+const { nav } = Astro.props;
+---
+
+<aside class="sidebar">
+  <button
+    type="button"
+    class="button-secondary sidebar-toggle"
+    aria-expanded="false"
+    aria-controls="sidebar-body"
+  >
+    Sections
+  </button>
+  <nav id="sidebar-body" class="sidebar-body" aria-label={nav.title}>
+    <p class="sidebar-title">{nav.title}</p>
+    <ul>
+      {nav.items.map((i) => (
+        <li>
+          <a href={i.href} aria-current={i.current ? "true" : undefined}>
+            <span>{i.label}</span>
+            {i.count !== undefined && <span class="count">{fmtCount(i.count)}</span>}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</aside>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>(".sidebar-toggle");
+  const body = document.getElementById("sidebar-body");
+  toggle?.addEventListener("click", () => {
+    const open = body?.classList.toggle("open") ?? false;
+    toggle.setAttribute("aria-expanded", String(open));
+  });
+</script>

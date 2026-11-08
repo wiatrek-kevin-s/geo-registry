@@ -1,0 +1,28 @@
+---
+import Base from "../layouts/Base.astro";
+import Crumbs from "../components/Crumbs.astro";
+import { projectNav } from "../lib/browse";
+import { href } from "../lib/paths";
+---
+
+<Base
+  title="AI skill and connector"
+  description="Use the geo-registry from an AI app."
+  sidebar={projectNav("ai")}
+>
+  <Crumbs label="AI skill and connector" />
+  <div class="prose">
+    <h1>AI skill and connector</h1>
+    <p>
+      An agent skill and a read-only connector are being built, so AI apps can use this registry.
+      Install steps for each app will appear here when they are ready.
+    </p>
+    <p>
+      Until then, agents can read the registry's JSON at
+      <a href={href("api/v1/meta.json")} class="mono">
+        /api/v1/
+      </a>
+      .
+    </p>
+  </div>
+</Base>

@@ -1,7 +1,7 @@
 ---
 import EntryLink from "./EntryLink.astro";
 interface Props {
-  kind: "data" | "tool" | "operation";
+  kind: "data" | "tool" | "operation" | "implementation";
   entry: Record<string, unknown>;
 }
 const { kind, entry } = Astro.props;
@@ -14,7 +14,13 @@ const replacedBy = typeof entry.replaced_by === "string" ? entry.replaced_by : u
     {replacedBy && (
       <>
         {" "}
-        Replaced by <EntryLink kind={kind} id={replacedBy} />.
+        Replaced by{" "}
+        {kind === "implementation" ? (
+          <code>{replacedBy}</code>
+        ) : (
+          <EntryLink kind={kind} id={replacedBy} />
+        )}
+        .
       </>
     )}
   </div>

@@ -2,22 +2,36 @@
 import "../styles/tokens.css";
 import "../styles/site.css";
 import { loadRegistry } from "../lib/registry";
+import Sidebar from "../components/Sidebar.astro";
+import type { SectionNav } from "../lib/browse";
 import { href, REPO } from "../lib/paths";
 
 interface Props {
   title: string;
   description?: string;
-  section?: "home" | "data" | "tools" | "operations";
+  section?: "home" | "data" | "tools" | "operations" | "engines" | "contribute";
+  sidebar?: SectionNav;
   noindex?: boolean;
+  noCanonical?: boolean;
   hideHeaderSearch?: boolean;
 }
-const { title, description, section, noindex = false, hideHeaderSearch = false } = Astro.props;
+const {
+  title,
+  description,
+  section,
+  sidebar,
+  noindex = false,
+  noCanonical = false,
+  hideHeaderSearch = false,
+} = Astro.props;
 const reg = loadRegistry();
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const nav = [
   { key: "data", label: "Data", path: "data/" },
   { key: "tools", label: "Tools", path: "tools/" },
   { key: "operations", label: "Operations", path: "operations/" },
+  { key: "engines", label: "Engines", path: "engines/" },
+  { key: "contribute", label: "Contribute", path: "contribute/" },
 ] as const;
 const fullTitle = section === "home" ? title : `${title} · geo-registry`;
 ---
@@ -30,7 +44,7 @@ const fullTitle = section === "home" ? title : `${title} · geo-registry`;
     <title>{fullTitle}</title>
     {description && <meta name="description" content={description} />}
     {noindex && <meta name="robots" content="noindex" />}
-    <link rel="canonical" href={canonical} />
+    {!noCanonical && <link rel="canonical" href={canonical} />}
     <link
       rel="preload"
       href={href("fonts/IBMPlexSans-Regular.woff2")}
@@ -72,9 +86,12 @@ const fullTitle = section === "home" ? title : `${title} · geo-registry`;
         )}
       </div>
     </header>
-    <main id="content" class="page" tabindex="-1">
-      <slot />
-    </main>
+    <div class={sidebar ? "layout layout-sidebar" : "layout"}>
+      {sidebar && <Sidebar nav={sidebar} />}
+      <main id="content" class="page" tabindex="-1">
+        <slot />
+      </main>
+    </div>
     <footer class="footer">
       <div class="footer-inner">
         <p>
@@ -87,6 +104,10 @@ const fullTitle = section === "home" ? title : `${title} · geo-registry`;
         <p>
           Entries CC0-1.0, code Apache-2.0; each publisher's own terms apply to its data.
           <a href={REPO}>Source on GitHub</a>.
+        </p>
+        <p>
+          <a href={href("about/")}>About and privacy</a> ·
+          <a href={href("ai/")}>AI skill and connector</a>
         </p>
       </div>
     </footer>
