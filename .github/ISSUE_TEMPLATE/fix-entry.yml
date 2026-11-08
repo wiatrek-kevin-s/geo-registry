@@ -1,0 +1,38 @@
+name: Fix an entry
+description: Tell us something is wrong or out of date on a geo-registry entry.
+title: "Fix: "
+labels: ["fix-request"]
+body:
+  - type: input
+    id: entry_id
+    attributes:
+      label: Entry id
+      description: Filled in for you when you start from the entry's page.
+    validations:
+      required: true
+  - type: input
+    id: page_url
+    attributes:
+      label: Page address
+      description: Filled in for you when you start from the entry's page.
+    validations:
+      required: true
+  - type: textarea
+    id: what_is_wrong
+    attributes:
+      label: What is wrong?
+    validations:
+      required: true
+  - type: textarea
+    id: should_say
+    attributes:
+      label: What should it say?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: A link, a command you ran, or a date you checked. Optional, but it speeds up review.
+    validations:
+      required: false

@@ -8,7 +8,13 @@ export default defineConfig({
   testDir: "tests/e2e",
   fullyParallel: true,
   reporter: [["list"]],
-  use: { baseURL: `http://localhost:${PORT}${base}` },
+  use: {
+    baseURL: `http://localhost:${PORT}${base}`,
+    // Tests must never count as real visits: the analytics host resolves nowhere.
+    launchOptions: {
+      args: ["--host-resolver-rules=MAP static.cloudflareinsights.com 127.0.0.1:9"],
+    },
+  },
   webServer: {
     command: `node scripts/serve.mjs ${PORT}`,
     url: `http://localhost:${PORT}${base}`,

@@ -117,6 +117,7 @@ jobs:
     env:
       SITE_URL: ${{ vars.SITE_URL }}
       SITE_BASE: ${{ vars.SITE_BASE }}
+      CF_BEACON_TOKEN: ${{ vars.CF_BEACON_TOKEN }}
       REGISTRY_COMMIT: ${{ github.sha }}
     steps:
       - uses: actions/checkout@v4

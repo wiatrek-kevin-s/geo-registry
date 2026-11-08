@@ -114,7 +114,11 @@ export async function startSearch(): Promise<void> {
   const box = document.getElementById("results") as HTMLElement;
   const errorBox = document.getElementById("search-error") as HTMLElement;
   const filterBox = document.getElementById("filters") as HTMLElement;
-  const setState = (s: string) => (document.body.dataset.searchState = s);
+  const submit = form.querySelector("button[type=submit]") as HTMLButtonElement;
+  const setState = (s: string) => {
+    document.body.dataset.searchState = s;
+    submit.setAttribute("aria-busy", String(s === "loading"));
+  };
 
   const params = new URLSearchParams(location.search);
   input.value = params.get("q") ?? "";
@@ -134,6 +138,8 @@ export async function startSearch(): Promise<void> {
   } catch {
     status.textContent = "";
     errorBox.hidden = false;
+    input.setAttribute("aria-invalid", "true");
+    submit.disabled = true;
     setState("error");
     return;
   }
@@ -158,7 +164,10 @@ export async function startSearch(): Promise<void> {
     wrap.append(select);
     filterBox.append(wrap);
   }
-  filterBox.hidden = false;
+  // Open on a laptop; on a phone it stays folded so results are visible, unless a filter is set.
+  const filtersBox = document.getElementById("filters-box") as HTMLDetailsElement;
+  filtersBox.open = matchMedia("(min-width: 768px)").matches || Object.keys(selected).length > 0;
+  filtersBox.hidden = false;
 
   function setFilter(key: string, value: string): void {
     if (value) selected[key] = value;

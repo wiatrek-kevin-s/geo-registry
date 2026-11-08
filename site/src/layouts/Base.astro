@@ -3,6 +3,7 @@ import "../styles/tokens.css";
 import "../styles/site.css";
 import { loadRegistry } from "../lib/registry";
 import Sidebar from "../components/Sidebar.astro";
+import ThemeToggle from "../components/ThemeToggle.astro";
 import type { SectionNav } from "../lib/browse";
 import { href, REPO } from "../lib/paths";
 
@@ -33,6 +34,8 @@ const nav = [
   { key: "engines", label: "Engines", path: "engines/" },
   { key: "contribute", label: "Contribute", path: "contribute/" },
 ] as const;
+// Public token from the repo variable CF_BEACON_TOKEN; with none, no analytics at all.
+const beaconToken = process.env.CF_BEACON_TOKEN;
 const fullTitle = section === "home" ? title : `${title} · geo-registry`;
 ---
 
@@ -41,6 +44,19 @@ const fullTitle = section === "home" ? title : `${title} · geo-registry`;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script is:inline>
+      // Set the saved theme before the first paint, so a page never flashes the wrong one.
+      (function () {
+        const root = document.documentElement;
+        root.classList.add("js");
+        try {
+          const saved = localStorage.getItem("theme");
+          if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+        } catch {
+          // Storage can be blocked; the device setting still applies.
+        }
+      })();
+    </script>
     <title>{fullTitle}</title>
     {description && <meta name="description" content={description} />}
     {noindex && <meta name="robots" content="noindex" />}
@@ -52,6 +68,14 @@ const fullTitle = section === "home" ? title : `${title} · geo-registry`;
       type="font/woff2"
       crossorigin
     />
+    {beaconToken && (
+      <script
+        is:inline
+        defer
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon={JSON.stringify({ token: beaconToken })}
+      />
+    )}
   </head>
   <body>
     <a class="skip-link" href="#content">
@@ -62,17 +86,6 @@ const fullTitle = section === "home" ? title : `${title} · geo-registry`;
         <a class="site-name" href={href()}>
           geo-registry
         </a>
-        <nav class="main-nav" aria-label="Main">
-          <ul>
-            {nav.map((n) => (
-              <li>
-                <a href={href(n.path)} aria-current={section === n.key ? "true" : undefined}>
-                  {n.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
         {!hideHeaderSearch && (
           <form class="header-search" role="search" action={href("search/")} method="get">
             <label for="header-q" class="visually-hidden">
@@ -84,6 +97,18 @@ const fullTitle = section === "home" ? title : `${title} · geo-registry`;
             </button>
           </form>
         )}
+        <nav class="main-nav" aria-label="Main">
+          <ul>
+            {nav.map((n) => (
+              <li>
+                <a href={href(n.path)} aria-current={section === n.key ? "true" : undefined}>
+                  {n.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <ThemeToggle />
       </div>
     </header>
     <div class={sidebar ? "layout layout-sidebar" : "layout"}>
@@ -99,7 +124,6 @@ const fullTitle = section === "home" ? title : `${title} · geo-registry`;
           <time datetime={reg.generatedAt} data-generated-at>
             {reg.generatedAt}
           </time>
-          .
         </p>
         <p>
           Entries CC0-1.0, code Apache-2.0; each publisher's own terms apply to its data.
@@ -111,5 +135,23 @@ const fullTitle = section === "home" ? title : `${title} · geo-registry`;
         </p>
       </div>
     </footer>
+    <script>
+      // A table that scrolls sideways must be reachable by keyboard (WCAG 2.1.1).
+      function markScrollable() {
+        for (const box of document.querySelectorAll<HTMLElement>(".table-wrap")) {
+          if (box.scrollWidth > box.clientWidth) {
+            box.tabIndex = 0;
+            box.setAttribute("role", "region");
+            box.setAttribute("aria-label", "Table, scrolls sideways");
+          } else {
+            box.removeAttribute("tabindex");
+            box.removeAttribute("role");
+            box.removeAttribute("aria-label");
+          }
+        }
+      }
+      markScrollable();
+      addEventListener("resize", markScrollable);
+    </script>
   </body>
 </html>

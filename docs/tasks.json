@@ -145,8 +145,8 @@
           "expected": "with the device set to dark, the site is dark; the toggle switches to light and the choice survives a reload"
         }
       ],
-      "status": "todo",
-      "evidence": ""
+      "status": "done",
+      "evidence": "Local run 2026-11-08 on branch site/t6-look (stylelint 18.0.0, @axe-core/playwright 4.14.0). (1) npm run lint includes stylelint: 0 errors; it fails as expected on an injected hex colour, 3px margin, 13px font-size and Arial. 24 screenshots in site/evidence/ (6 screens x 375 and 1,280 px x light and dark) inspected; nothing overlapping; tests/e2e/states.spec.ts confirms no sideways page overflow on all 6 screens at both widths; loading and failed-to-load state tests pass. (2) tests/e2e/a11y.spec.ts over the 23 pages in site/tests/a11y-pages.json, light and dark, at 1,280 and 375 px: 92 of 92 pass, 0 serious or critical violations; axe reports color-contrast on an injected low-contrast style, so the check bites. (3) states.spec.ts theme test: dark device gives dark, toggle gives light, survives reload and a page change: passes. Also 154 of 154 browser tests, 16 of 16 unit tests, link check 0 broken at /geo-registry/ and at / (with SITE_URL=https://geo-registry.io, all browser tests also pass there); Prettier, ESLint, astro check 0 errors; npm audit --omit=dev 0 vulnerabilities."
     },
     {
       "id": "T-7",
@@ -166,8 +166,8 @@
           "expected": "the label fix-request exists"
         }
       ],
-      "status": "todo",
-      "evidence": ""
+      "status": "done",
+      "evidence": "Local run 2026-11-08 on branch site/t7-fix-form. (1) site/tests/unit/fix-link.test.mjs: txgio-lidar's link opens .github/ISSUE_TEMPLATE/fix-entry.yml with title 'Fix: data txgio-lidar', entry_id txgio-lidar and its page URL; also tool, operation and implementation pages; the form has the F-5 fields and label: 5 of 5 pass. (2) gh label create fix-request, then gh label list shows 'fix-request'. Also 21 of 21 unit tests, 154 of 154 browser tests, link check 0 broken, lint and astro check 0 errors. The form itself goes live on merge; check 4 (a stranger files one) follows."
     },
     {
       "id": "T-8",

@@ -4,8 +4,8 @@ Kit version 1.0 · as of 2026-11-08, session S2 in progress
 
 ## Where things stand
 
-- **Session:** S2 · **Task:** T-5 in PR; site live at https://wiatrek-kevin-s.github.io/geo-registry/
-- **Next step:** T-6, T-7, then the owner merges and does H-1 and H-3 · **Waiting on the owner:** nothing yet
+- **Session:** S2 · **Task:** T-5, T-6, T-7 and T-9 code in PR; site live at https://wiatrek-kevin-s.github.io/geo-registry/
+- **Next step:** owner does H-1 and H-3 and approves the merges; then T-8 and T-9 checks · **Waiting on the owner:** H-1, H-3, merge approval
 - **Homework received:** H-0 (geo-registry.io, expires 2027-11-07, auto-renew: on), H-2 (done by the owner, checked with gh api)
 
 ## Decisions
@@ -25,6 +25,8 @@ Kit version 1.0 · as of 2026-11-08, session S2 in progress
 | 2026-11-08 | Implementation pages and results get a one-line summary built from real fields (engine, operation, tool name, or the notes) | Implementations have no `summary` field, and "Not stated" on 6,741 results says nothing | Decided |
 | 2026-11-08 | The 28 variant implementations cite `mappings/<software>/<id>.yaml` as their source | They exist only as mapping files; every other implementation has a file in `implementations/` | Decided |
 | 2026-11-08 | Implementation pages state the harvester and engine version instead of a harvest date | The registry records no date for a harvest | Decided |
+| 2026-11-08 | Added dev dependencies stylelint 18.0.0 and @axe-core/playwright 4.14.0 (as of 2026-11-08) | Named by T-6 | Decided |
+| 2026-11-08 | Search filters are a "Filters" fold: open on a laptop, closed on a phone unless a filter is set | Ten filters pushed every result below the first screen on a phone | Decided |
 | 2026-11-08 | `/engines/` is grouped by the engine's tool category; `/engines/<software>/` by operation group, with unmapped tools last | The spec's "grouped by category, region or operation group" | Decided |
 
 ## Change requests
@@ -38,6 +40,26 @@ Status: raised, approved, declined, or Sent to Blueprint (touches a one-way door
 ## Handoff notes
 
 Newest first, written as you go. Mark each claim verified (checked this session) or unverified.
+
+### S2: T-9 code in PR; waiting on H-1 and H-3 (2026-11-08)
+
+- **Done:** the beacon is added only when `CF_BEACON_TOKEN` is set; a build with a test token loads exactly one third-party script, a build without loads none (verified). Browser tests never reach Cloudflare, so CI won't count as visits. Pages DNS records re-checked against GitHub's docs on 2026-11-08 (verified).
+- **Saved:** branch `site/t9-analytics`, stacked on `site/t7-fix-form`. T-8 and T-9 stay `todo` until checked on the live domain.
+- **Next:** owner does H-1 and H-3 and says to merge; Claude merges the four PRs in order, then checks T-8 and T-9 on geo-registry.io.
+
+### S2: T-7 in PR (2026-11-08)
+
+- **Done:** issue form `.github/ISSUE_TEMPLATE/fix-entry.yml`, "Suggest a fix" on all four kinds of entry page, label `fix-request` created (verified).
+- **Saved:** branch `site/t7-fix-form`, stacked on `site/t6-look`.
+- **Next:** T-9's code, then the owner's steps (H-1, H-3).
+
+### S2: T-6 in PR (2026-11-08)
+
+- **Done:** theme toggle, required states, style lint, axe on 23 pages, 24 screenshots. All T-6 checks pass; the site also builds, links and passes every browser test at `SITE_BASE=/` (verified). Screenshots exposed crushed table columns that no automated check caught; fixed.
+- **Correction:** the T-6 evidence was first committed while ESLint still reported 3 errors in the theme script. Fixed in the next commit on the branch; lint now exits 0 (verified).
+- **For the final review:** on a phone, the "In each engine" table needs a sideways scroll to reach its Parameters and Differences columns, as the spec says for wide tables (verified).
+- **Saved:** branch `site/t6-look`, stacked on `site/t5-full-site`.
+- **Next:** T-7.
 
 ### S2: T-5 in PR (2026-11-08)
 
