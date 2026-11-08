@@ -43,3 +43,14 @@ export function implSource(software: string, id: string, isVariant: boolean): st
 export function absolute(path: string): string {
   return new URL(href(path), import.meta.env.SITE).href;
 }
+
+/** The prefilled "Suggest a fix" issue form (format F-5). */
+export function fixUrl(kind: Kind, id: string, pagePath: string): string {
+  const query = new URLSearchParams({
+    template: "fix-entry.yml",
+    title: `Fix: ${kind} ${id}`,
+    entry_id: id,
+    page_url: absolute(pagePath),
+  });
+  return `${REPO}/issues/new?${query.toString().replaceAll("+", "%20")}`;
+}

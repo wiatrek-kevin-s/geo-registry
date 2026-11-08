@@ -5,7 +5,7 @@ import Fact from "../../../components/Fact.astro";
 import Text from "../../../components/Text.astro";
 import Value from "../../../components/Value.astro";
 import { engineNav, implementationGroupOf } from "../../../lib/browse";
-import { enginePath, implPath, implSource, entryPath } from "../../../lib/paths";
+import { enginePath, implPath, implSource, entryPath, fixUrl } from "../../../lib/paths";
 import { loadRegistry, type Entry, type Implementation } from "../../../lib/registry";
 import { IMPLEMENTATION_FACTOR, searchWeight } from "../../../lib/search";
 import { describeCrosswalk, formatScalar, isBlank, isWebUrl } from "../../../lib/text";
@@ -223,6 +223,12 @@ const effects =
   </article>
 
   <p class="links-row">
+    <a
+      href={fixUrl("implementation", e.id, `implementations/${e.software}/${e.id}/`)}
+      data-suggest-fix
+    >
+      Suggest a fix
+    </a>
     <a href={implSource(e.software, e.id, Boolean(e.variant_of))} data-source-yaml>
       View source YAML
     </a>

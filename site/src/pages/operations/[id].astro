@@ -8,7 +8,7 @@ import EntryHeader from "../../components/EntryHeader.astro";
 import { RETIRED_FACTOR, searchWeight } from "../../lib/search";
 import { getEntry, loadRegistry, type Entry } from "../../lib/registry";
 import { sectionNav } from "../../lib/browse";
-import { enginePath, implPath, sourceUrl } from "../../lib/paths";
+import { enginePath, implPath, sourceUrl, fixUrl } from "../../lib/paths";
 import { describeCrosswalk, formatScalar, isBlank } from "../../lib/text";
 
 export function getStaticPaths() {
@@ -257,6 +257,9 @@ for (const i of impls) {
   </article>
 
   <p class="links-row">
+    <a href={fixUrl("operation", e.id, `operations/${e.id}/`)} data-suggest-fix>
+      Suggest a fix
+    </a>
     <a href={sourceUrl("operation", e.id)} data-source-yaml>
       View source YAML
     </a>
