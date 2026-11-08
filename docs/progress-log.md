@@ -4,8 +4,8 @@ Kit version 1.0 · as of 2026-11-08, session S2 in progress
 
 ## Where things stand
 
-- **Session:** S2 · **Task:** T-5, T-6 and T-7 in PR; site live at https://wiatrek-kevin-s.github.io/geo-registry/
-- **Next step:** T-9 code, then the owner merges and does H-1 and H-3 · **Waiting on the owner:** nothing yet
+- **Session:** S2 · **Task:** T-5, T-6, T-7 and T-9 code in PR; site live at https://wiatrek-kevin-s.github.io/geo-registry/
+- **Next step:** owner does H-1 and H-3 and approves the merges; then T-8 and T-9 checks · **Waiting on the owner:** H-1, H-3, merge approval
 - **Homework received:** H-0 (geo-registry.io, expires 2027-11-07, auto-renew: on), H-2 (done by the owner, checked with gh api)
 
 ## Decisions
@@ -40,6 +40,12 @@ Status: raised, approved, declined, or Sent to Blueprint (touches a one-way door
 ## Handoff notes
 
 Newest first, written as you go. Mark each claim verified (checked this session) or unverified.
+
+### S2: T-9 code in PR; waiting on H-1 and H-3 (2026-11-08)
+
+- **Done:** the beacon is added only when `CF_BEACON_TOKEN` is set; a build with a test token loads exactly one third-party script, a build without loads none (verified). Browser tests never reach Cloudflare, so CI won't count as visits. Pages DNS records re-checked against GitHub's docs on 2026-11-08 (verified).
+- **Saved:** branch `site/t9-analytics`, stacked on `site/t7-fix-form`. T-8 and T-9 stay `todo` until checked on the live domain.
+- **Next:** owner does H-1 and H-3 and says to merge; Claude merges the four PRs in order, then checks T-8 and T-9 on geo-registry.io.
 
 ### S2: T-7 in PR (2026-11-08)
 
