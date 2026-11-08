@@ -12,15 +12,17 @@
     "check": "astro check",
     "test:unit": "node --test tests/unit/",
     "check:links": "node scripts/check-links.mjs",
-    "lint": "eslint . && prettier --check .",
+    "lint": "eslint . && prettier --check . && stylelint \"src/**/*.css\"",
     "test:e2e": "playwright test",
-    "serve": "node scripts/serve.mjs"
+    "serve": "node scripts/serve.mjs",
+    "evidence": "node scripts/screenshots.mjs"
   },
   "dependencies": {
     "astro": "7.4.7"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.12",
+    "@axe-core/playwright": "4.14.0",
     "@eslint/js": "10.0.1",
     "@playwright/test": "1.64.1",
     "@types/node": "26.6.6",
@@ -31,6 +33,7 @@
     "pagefind": "1.6.0",
     "prettier": "3.9.10",
     "prettier-plugin-astro": "1.1.2",
+    "stylelint": "18.0.0",
     "typescript": "6.0.3",
     "typescript-eslint": "8.72.1",
     "yaml": "2.9.1"

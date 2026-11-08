@@ -1,0 +1,28 @@
+{
+  "source": "T-6: home, search, 404, about, ai, contribute, browse lists, and 3 entry pages of each kind (23 pages).",
+  "pages": [
+    "",
+    "search/?q=lidar",
+    "implementations/gdal/does-not-exist/",
+    "about/",
+    "ai/",
+    "contribute/",
+    "data/",
+    "tools/",
+    "operations/",
+    "engines/",
+    "engines/gdal/",
+    "data/txgio-lidar/",
+    "data/3dbag/",
+    "data/tiger-line-road-features/",
+    "tools/pdal/",
+    "tools/gdal/",
+    "tools/qgis/",
+    "operations/buffer/",
+    "operations/zonal-statistics/",
+    "operations/flow-accumulation/",
+    "implementations/postgis/postgis-st-buffer/",
+    "implementations/gdal/gdal-vector-buffer/",
+    "implementations/qgis/qgis-3d-tessellate/"
+  ]
+}

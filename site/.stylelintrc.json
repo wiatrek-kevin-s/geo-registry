@@ -1,0 +1,28 @@
+{
+  "ignoreFiles": ["src/styles/tokens.css", "dist/**", "node_modules/**", "tests/.fixture/**"],
+  "rules": {
+    "color-no-hex": true,
+    "color-named": "never",
+    "function-disallowed-list": [
+      "rgb",
+      "rgba",
+      "hsl",
+      "hsla",
+      "hwb",
+      "lab",
+      "lch",
+      "oklab",
+      "oklch"
+    ],
+    "declaration-property-value-disallowed-list": {
+      "/^(margin|padding|gap|row-gap|column-gap)/": ["/\\d(px|r?em|%|vh|vw)/"],
+      "/^(top|right|bottom|left)$/": ["/(^|[\\s(])[1-9][\\d.]*(px|r?em)/"],
+      "font-size": ["/^(?!var\\().*/"],
+      "font-family": ["/^(?!var\\(|inherit).*/"],
+      "line-height": ["/\\d/"],
+      "border-radius": ["/\\d/"],
+      "letter-spacing": ["/\\d/"],
+      "/^(background|box-shadow|text-shadow|filter|backdrop-filter)$/": ["/gradient|blur|shadow/"]
+    }
+  }
+}

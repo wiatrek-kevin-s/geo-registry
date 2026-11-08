@@ -53,6 +53,8 @@
   --color-warning-bg: #fff8e8;
   --color-danger: #a12b2b;
   --color-focus: #1f4e79;
+  --show-when-dark: none;
+  --show-when-light: block;
 
   --font-sans: "IBM Plex Sans", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
@@ -86,6 +88,7 @@
   --target-main: 44px;
   --content-max: 1100px;
   --sidebar-width: 240px;
+  --filter-min: 176px;
   --transition: 150ms;
 }
 
@@ -106,6 +109,8 @@
     --color-warning-bg: #2b2312;
     --color-danger: #f08a8a;
     --color-focus: #8cb8e6;
+    --show-when-dark: block;
+    --show-when-light: none;
   }
 }
 
@@ -125,4 +130,6 @@
   --color-warning-bg: #2b2312;
   --color-danger: #f08a8a;
   --color-focus: #8cb8e6;
+  --show-when-dark: block;
+  --show-when-light: none;
 }
