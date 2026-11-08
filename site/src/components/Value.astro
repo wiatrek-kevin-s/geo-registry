@@ -1,0 +1,22 @@
+---
+// A field value, or "Not stated" in muted text when it is missing.
+import Text from "./Text.astro";
+import { formatScalar, isBlank } from "../lib/text";
+interface Props {
+  value: unknown;
+  mono?: boolean;
+}
+const { value, mono = false } = Astro.props;
+const blank = isBlank(value);
+const str = blank ? "" : formatScalar(value);
+---
+
+{blank ? (
+  <span class="not-stated">Not stated</span>
+) : mono ? (
+  <code>
+    <Text text={str} />
+  </code>
+) : (
+  <Text text={str} />
+)}

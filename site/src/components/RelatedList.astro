@@ -1,0 +1,29 @@
+---
+// Related ids may point at any kind; link each to the first kind that has it.
+import { loadRegistry } from "../lib/registry";
+import EntryLink from "./EntryLink.astro";
+import Value from "./Value.astro";
+interface Props {
+  ids: unknown;
+  prefer?: "data" | "tool" | "operation";
+}
+const { ids, prefer } = Astro.props;
+const reg = loadRegistry();
+const list = Array.isArray(ids) ? (ids as string[]) : [];
+const order = [prefer, "data", "tool", "operation"].filter(Boolean) as (
+  "data" | "tool" | "operation"
+)[];
+const kindOf = (id: string) => order.find((k) => reg.ids[k].has(id)) ?? order[0]!;
+---
+
+{list.length === 0 ? (
+  <Value value={undefined} />
+) : (
+  <ul class="inline">
+    {list.map((id) => (
+      <li>
+        <EntryLink kind={kindOf(id)} id={id} />
+      </li>
+    ))}
+  </ul>
+)}

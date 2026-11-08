@@ -1,0 +1,21 @@
+---
+// Untrusted registry text: escaped plain text; only http(s) URLs become links.
+import { segments } from "../lib/text";
+interface Props {
+  text: unknown;
+}
+const { text } = Astro.props;
+const parts = segments(String(text ?? ""));
+---
+
+{parts.map((p) =>
+  p.type === "link" ? (
+    <a href={p.value} class="mono" rel="noopener nofollow">
+      {p.value}
+    </a>
+  ) : p.type === "code" ? (
+    <code>{p.value}</code>
+  ) : (
+    p.value
+  ),
+)}

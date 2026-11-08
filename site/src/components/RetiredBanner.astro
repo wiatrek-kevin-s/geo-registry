@@ -1,0 +1,21 @@
+---
+import EntryLink from "./EntryLink.astro";
+interface Props {
+  kind: "data" | "tool" | "operation";
+  entry: Record<string, unknown>;
+}
+const { kind, entry } = Astro.props;
+const replacedBy = typeof entry.replaced_by === "string" ? entry.replaced_by : undefined;
+---
+
+{entry.status === "retired" && (
+  <div class="banner-retired" role="note" data-retired>
+    <strong>Retired.</strong> This entry is no longer maintained.
+    {replacedBy && (
+      <>
+        {" "}
+        Replaced by <EntryLink kind={kind} id={replacedBy} />.
+      </>
+    )}
+  </div>
+)}
