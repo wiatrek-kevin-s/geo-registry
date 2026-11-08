@@ -4,9 +4,9 @@ Kit version 1.0 · as of 2026-11-07, session S1 in progress
 
 ## Where things stand
 
-- **Session:** S1 · **Task:** T-1 and T-2 done; T-3 (owner homework) next, then T-4
-- **Next step:** owner does H-0 and H-2 and pastes back the results; then T-4 (CI) · **Waiting on the owner:** H-0, H-2
-- **Homework received:** none yet
+- **Session:** S1 · **Task:** T-1 and T-2 done and merged (#35, #36); T-3 evidence recorded (auto-renew to confirm); T-4 in PR #37
+- **Next step:** owner approves merging #37, then the S1 checkpoint · **Waiting on the owner:** merge of #37, auto-renew confirmation, checkpoint checks 1 and 2
+- **Homework received:** H-0 (domain bought, 2026-11-08; expiry read from the public record), H-2 (done by the owner, checked with gh api)
 
 ## Decisions
 
@@ -20,6 +20,7 @@ Kit version 1.0 · as of 2026-11-07, session S1 in progress
 | 2026-11-07 | Search page uses Pagefind's JS API with our own result list, not Pagefind's default UI | REQ-5 needs a review badge on every result, which the default UI can't show; the spec's intent (Pagefind, restyled with tokens) is kept | Decided |
 | 2026-11-07 | Retired entries: weight 0.3 on their pages and, in results, searched after active and degraded entries (relevance order kept within each) | The 0.3 weight alone still ranked tiger-line-road-features above census-tiger-line for "TIGER/Line"; REQ-6 says retired rank below active | Decided |
 | 2026-11-07 | Tests serve `dist/` with a small Node server (`site/scripts/serve.mjs`) | Astro 7's `astro preview` detaches, so Playwright can't manage it | Decided |
+| 2026-11-08 | Started T-4 before the owner confirmed H-0's auto-renew | T-4 needs only H-2, which is verified; the owner asked to be contacted only when input is truly needed | Decided |
 
 ## Change requests
 
@@ -32,6 +33,13 @@ Status: raised, approved, declined, or Sent to Blueprint (touches a one-way door
 ## Handoff notes
 
 Newest first, written as you go. Mark each claim verified (checked this session) or unverified.
+
+### S1: T-3 recorded, T-4 in PR (2026-11-08)
+
+- **Done:** owner merged #35 and #36; main CI green (runs 42507342363, 42507365333) (verified). H-2 settings checked with `gh api` (verified). Domain registered at Cloudflare, expires 2027-11-07 (verified via whois); auto-renew not yet confirmed, so T-3 stays `todo`.
+- **T-4:** `site-check` and `site-deploy` added to `ci.yml`, existing jobs unchanged; PR #37. PR run 42507879342 and dispatch run 42508573110: all jobs pass, deploy skipped (verified). Last check (live fetch) waits for the merge.
+- **Owner preference:** contact only at hard stops (merge approvals, checkpoints, homework), batched in one message.
+- **iCloud:** five "… 2" sync-conflict copies were moved out of the repo to the session scratchpad; the committed versions are current.
 
 ### S1: T-2 done (2026-11-07)
 
