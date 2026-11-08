@@ -1,0 +1,24 @@
+---
+import Base from "../../layouts/Base.astro";
+import CardTable from "../../components/CardTable.astro";
+import { byName, loadRegistry } from "../../lib/registry";
+import { fmtCount } from "../../lib/text";
+import { href } from "../../lib/paths";
+
+const reg = loadRegistry();
+const cards = [...reg.operations].sort(byName);
+---
+
+<Base title="Operations" section="operations">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li>
+        <a href={href()}>Home</a>
+      </li>
+      <li aria-current="page">Operations</li>
+    </ol>
+  </nav>
+  <h1>Operations</h1>
+  <p class="muted">{fmtCount(cards.length)} entries, ordered by name.</p>
+  <CardTable cards={cards} kind="operation" extra={{ label: "Group", key: "group" }} />
+</Base>

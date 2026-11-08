@@ -1,0 +1,82 @@
+---
+import "../styles/tokens.css";
+import "../styles/site.css";
+import { loadRegistry } from "../lib/registry";
+import { href, REPO } from "../lib/paths";
+
+interface Props {
+  title: string;
+  description?: string;
+  section?: "home" | "data" | "tools" | "operations";
+  noindex?: boolean;
+}
+const { title, description, section, noindex = false } = Astro.props;
+const reg = loadRegistry();
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const nav = [
+  { key: "data", label: "Data", path: "data/" },
+  { key: "tools", label: "Tools", path: "tools/" },
+  { key: "operations", label: "Operations", path: "operations/" },
+] as const;
+const fullTitle = section === "home" ? title : `${title} · geo-registry`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    {description && <meta name="description" content={description} />}
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="canonical" href={canonical} />
+    <link
+      rel="preload"
+      href={href("fonts/IBMPlexSans-Regular.woff2")}
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#content">
+      Skip to content
+    </a>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="site-name" href={href()}>
+          geo-registry
+        </a>
+        <nav class="main-nav" aria-label="Main">
+          <ul>
+            {nav.map((n) => (
+              <li>
+                <a href={href(n.path)} aria-current={section === n.key ? "true" : undefined}>
+                  {n.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="content" class="page" tabindex="-1">
+      <slot />
+    </main>
+    <footer class="footer">
+      <div class="footer-inner">
+        <p>
+          Built from registry commit <code data-registry-commit>{reg.commit}</code>, index generated
+          <time datetime={reg.generatedAt} data-generated-at>
+            {reg.generatedAt}
+          </time>
+          .
+        </p>
+        <p>
+          Entries CC0-1.0, code Apache-2.0; each publisher's own terms apply to its data.
+          <a href={REPO}>Source on GitHub</a>.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

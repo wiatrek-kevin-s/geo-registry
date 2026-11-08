@@ -1,0 +1,128 @@
+/* Design tokens from docs/design-spec.md (direction A). The only file with
+   colour, font and spacing literals. */
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/IBMPlexSans-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/IBMPlexSans-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/IBMPlexSans-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/IBMPlexMono-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/IBMPlexMono-SemiBold.woff2") format("woff2");
+}
+
+:root {
+  color-scheme: light;
+  --color-bg: #ffffff;
+  --color-surface: #f3f5f8;
+  --color-text: #1a1d21;
+  --color-muted: #4f5966;
+  --color-border: #d5dae1;
+  --color-border-strong: #7a8491;
+  --color-accent: #1f4e79;
+  --color-accent-hover: #163a5b;
+  --color-on-accent: #ffffff;
+  --color-success: #1e6b3a;
+  --color-warning: #8a5a00;
+  --color-warning-bg: #fff8e8;
+  --color-danger: #a12b2b;
+  --color-focus: #1f4e79;
+
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --text-13: 13px;
+  --text-14: 14px;
+  --text-16: 16px;
+  --text-18: 18px;
+  --text-22: 22px;
+  --text-28: 28px;
+  --text-36: 36px;
+  --text-label: 12px;
+  --leading-body: 1.5;
+  --leading-heading: 1.2;
+  --tracking-label: 0.06em;
+
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-64: 64px;
+
+  --radius: 2px;
+  --rule-1: 1px;
+  --rule-2: 2px;
+  --rule-3: 3px;
+  --target-min: 24px;
+  --target-main: 44px;
+  --content-max: 1100px;
+  --sidebar-width: 240px;
+  --transition: 150ms;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --color-bg: #111418;
+    --color-surface: #1a1f26;
+    --color-text: #e7eaee;
+    --color-muted: #a3adb8;
+    --color-border: #2e3640;
+    --color-border-strong: #6b7684;
+    --color-accent: #8cb8e6;
+    --color-accent-hover: #b3d1f0;
+    --color-on-accent: #111418;
+    --color-success: #6cc48a;
+    --color-warning: #e0b357;
+    --color-warning-bg: #2b2312;
+    --color-danger: #f08a8a;
+    --color-focus: #8cb8e6;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #111418;
+  --color-surface: #1a1f26;
+  --color-text: #e7eaee;
+  --color-muted: #a3adb8;
+  --color-border: #2e3640;
+  --color-border-strong: #6b7684;
+  --color-accent: #8cb8e6;
+  --color-accent-hover: #b3d1f0;
+  --color-on-accent: #111418;
+  --color-success: #6cc48a;
+  --color-warning: #e0b357;
+  --color-warning-bg: #2b2312;
+  --color-danger: #f08a8a;
+  --color-focus: #8cb8e6;
+}

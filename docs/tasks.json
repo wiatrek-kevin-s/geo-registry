@@ -21,8 +21,8 @@
           "expected": "0 broken internal links, fonts or CSS at both bases"
         }
       ],
-      "status": "todo",
-      "evidence": ""
+      "status": "done",
+      "evidence": "Local run 2026-11-07 on branch site/t1-thin-site (Node 26.10.0, Astro 7.4.7). (1) Registry build ok; site build at SITE_BASE=/geo-registry/: 1,629 entry pages = 1,564 entries + 65 operations (1,633 pages incl. home and 3 lists), 0 errors. (2) site/tests/unit/entry-pages.test.mjs (npm run test:unit): 5 pass, 0 fail (txgio-lidar, census-tiger-line, tiger-line-road-features, pdal, buffer). (3) site/scripts/check-links.mjs: 0 broken of 16,888 internal links at /geo-registry/ and at / (fonts and CSS included); fails as expected when a page and a font are deleted. REQ-1: with no dist/ the build stops with 'dist/ not found: run the registry build first' (exit 1). Prettier, ESLint, astro check: 0 errors; npm audit --omit=dev: 0 vulnerabilities."
     },
     {
       "id": "T-2",

@@ -1,0 +1,18 @@
+---
+import { REVIEW_TEXT, reviewState } from "../lib/text";
+interface Props {
+  review: unknown;
+}
+const { review } = Astro.props;
+const state = reviewState(review);
+const label = REVIEW_TEXT[state] ?? "Review state not stated";
+const on =
+  state === "reviewed" && review && typeof review === "object"
+    ? (review as { reviewed_on?: string }).reviewed_on
+    : undefined;
+---
+
+<span class={`badge badge-${REVIEW_TEXT[state] ? state : "unknown"}`} data-review={state}>
+  {label}
+  {on && <>, {on}</>}
+</span>

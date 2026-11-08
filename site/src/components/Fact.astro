@@ -1,0 +1,18 @@
+---
+// One row of an entry's facts table. Children render the value; with no
+// children, `value` is shown (or "Not stated").
+import Value from "./Value.astro";
+interface Props {
+  field: string;
+  label: string;
+  value?: unknown;
+  mono?: boolean;
+}
+const { field, label, value, mono } = Astro.props;
+const hasSlot = Astro.slots.has("default");
+---
+
+<tr data-field={field}>
+  <th scope="row">{label}</th>
+  <td>{hasSlot ? <slot /> : <Value value={value} mono={mono} />}</td>
+</tr>

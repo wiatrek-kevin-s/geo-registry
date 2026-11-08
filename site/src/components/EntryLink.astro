@@ -1,0 +1,20 @@
+---
+// Link to another entry when its page exists; otherwise show the id as code.
+import { loadRegistry } from "../lib/registry";
+import { entryPath } from "../lib/paths";
+interface Props {
+  kind: "data" | "tool" | "operation";
+  id: string;
+}
+const { kind, id } = Astro.props;
+const reg = loadRegistry();
+const exists = reg.ids[kind].has(id);
+---
+
+{exists ? (
+  <a href={entryPath(kind, id)}>
+    <code>{id}</code>
+  </a>
+) : (
+  <code>{id}</code>
+)}

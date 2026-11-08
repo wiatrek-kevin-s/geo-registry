@@ -1,0 +1,48 @@
+---
+import Base from "../layouts/Base.astro";
+import { loadRegistry } from "../lib/registry";
+import { href } from "../lib/paths";
+import { fmtCount } from "../lib/text";
+
+const reg = loadRegistry();
+const data = reg.cards.filter((c) => c.kind === "data");
+const tools = reg.cards.filter((c) => c.kind === "tool");
+const reviewed = data.filter((c) => c.review === "reviewed").length;
+---
+
+<Base
+  title="geo-registry: GIS data sources, tools and how each engine runs an operation"
+  description="Find what data covers a place, which tool does a job, and how each GIS engine runs an operation."
+  section="home"
+>
+  <h1>geo-registry</h1>
+  <p class="summary">
+    Find what data covers a place, which tool does a job, and how each GIS engine runs an operation.
+  </p>
+
+  <ul class="counts" aria-label="What the registry holds">
+    <li>
+      <strong>{fmtCount(data.length)}</strong>
+      <a href={href("data/")}>data sources</a>
+    </li>
+    <li>
+      <strong>{fmtCount(tools.length)}</strong>
+      <a href={href("tools/")}>tools</a>
+    </li>
+    <li>
+      <strong>{fmtCount(reg.operations.length)}</strong>
+      <a href={href("operations/")}>operations</a>
+    </li>
+    <li>
+      <strong>{fmtCount(reg.implementations.length)}</strong>
+      engine implementations
+    </li>
+  </ul>
+
+  <p>
+    <strong>Reviewed or unverified?</strong>
+    {fmtCount(reviewed)} of {fmtCount(data.length)} data sources have been reviewed by a person. The
+    rest are <em>seeded</em>: unverified leads from the seed atlas, worth checking before you rely
+    on them.
+  </p>
+</Base>

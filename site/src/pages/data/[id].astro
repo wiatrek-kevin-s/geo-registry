@@ -1,0 +1,160 @@
+---
+import Base from "../../layouts/Base.astro";
+import Badge from "../../components/Badge.astro";
+import Fact from "../../components/Fact.astro";
+import Text from "../../components/Text.astro";
+import Value from "../../components/Value.astro";
+import RelatedList from "../../components/RelatedList.astro";
+import RetiredBanner from "../../components/RetiredBanner.astro";
+import { getEntry, loadRegistry, type Entry } from "../../lib/registry";
+import { href, sourceUrl } from "../../lib/paths";
+import { isBlank, isWebUrl, reviewState } from "../../lib/text";
+
+export function getStaticPaths() {
+  return loadRegistry()
+    .cards.filter((c) => c.kind === "data")
+    .map((c) => ({ params: { id: c.id } }));
+}
+
+const { id } = Astro.params as { id: string };
+const e: Entry = getEntry("data", id);
+const access: Entry[] = Array.isArray(e.access) ? e.access : [];
+const bbox: number[] | undefined = e.coverage?.bbox;
+const steps: string[] = Array.isArray(e.recipe?.steps) ? e.recipe.steps : [];
+---
+
+<Base
+  title={e.name}
+  description={e.summary}
+  section="data"
+  noindex={reviewState(e.review) !== "reviewed"}
+>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li>
+        <a href={href()}>Home</a>
+      </li>
+      <li>
+        <a href={href("data/")}>Data</a>
+      </li>
+      <li aria-current="page">
+        <code>{e.id}</code>
+      </li>
+    </ol>
+  </nav>
+  <RetiredBanner kind="data" entry={e} />
+  <h1>{e.name}</h1>
+  <div class="entry-meta">
+    <Badge review={e.review} />
+    <span>
+      Data source · <code>{e.id}</code>
+    </span>
+  </div>
+  <p class="summary">
+    <Value value={e.summary} />
+  </p>
+
+  <div class="table-wrap">
+    <table class="facts">
+      <caption class="muted">About this source</caption>
+      <tbody>
+        <Fact field="publisher" label="Publisher" value={e.publisher} />
+        <Fact field="coverage" label="Coverage">
+          <Value value={e.coverage?.region} />
+          {bbox && bbox.length === 4 && (
+            <div class="muted" data-field="bbox">
+              Bounding box (EPSG:4326): <code>{bbox.join(", ")}</code>
+            </div>
+          )}
+        </Fact>
+        <Fact field="license" label="Licence">
+          <Value value={e.license} mono />
+          {!isBlank(e.license_original) && (
+            <div data-field="license_original">
+              Publisher's wording: <Text text={e.license_original} />
+            </div>
+          )}
+        </Fact>
+        <Fact field="themes" label="Themes" value={e.themes} mono />
+        <Fact field="update" label="Update cadence" value={e.update} />
+        <Fact field="formats_out" label="Formats" value={e.formats_out} mono />
+        <Fact field="status" label="Status" value={e.status} />
+        <Fact field="last_verified" label="Last verified" value={e.last_verified} />
+        <Fact field="notes" label="Notes" value={e.notes} />
+        <Fact field="recipe" label="Recipe">
+          {steps.length === 0 ? (
+            <Value value={undefined} />
+          ) : (
+            <>
+              <div>
+                Runs with <code>{e.recipe.tool}</code>
+              </div>
+              <ol class="steps">
+                {steps.map((s) => (
+                  <li>
+                    <Text text={s} />
+                  </li>
+                ))}
+              </ol>
+            </>
+          )}
+        </Fact>
+        <Fact field="related" label="Related">
+          <RelatedList ids={e.related} prefer="data" />
+        </Fact>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="access">Access endpoints</h2>
+  {access.length === 0 ? (
+    <p class="not-stated">Not stated</p>
+  ) : (
+    <div class="table-wrap">
+      <table data-field="access">
+        <thead>
+          <tr>
+            <th scope="col">Type</th>
+            <th scope="col">URL</th>
+            <th scope="col">Layer or index</th>
+            <th scope="col">Auth</th>
+            <th scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          {access.map((a) => (
+            <tr>
+              <td>
+                <code>{a.type}</code>
+              </td>
+              <td>
+                {isWebUrl(a.url) ? (
+                  <a href={a.url} class="mono" rel="noopener nofollow">
+                    {a.url}
+                  </a>
+                ) : (
+                  <Value value={a.url} mono />
+                )}
+              </td>
+              <td>
+                <Value value={a.index} mono />
+              </td>
+              <td>
+                <Value value={a.auth} />
+              </td>
+              <td>
+                <Value value={a.notes} />
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )}
+
+  <p class="links-row">
+    <a href={sourceUrl("data", e.id)} data-source-yaml>
+      View source YAML
+    </a>
+  </p>
+</Base>
