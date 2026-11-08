@@ -1,13 +1,13 @@
 ---
 import Base from "../../layouts/Base.astro";
-import Badge from "../../components/Badge.astro";
 import Fact from "../../components/Fact.astro";
 import Text from "../../components/Text.astro";
 import Value from "../../components/Value.astro";
 import RelatedList from "../../components/RelatedList.astro";
-import RetiredBanner from "../../components/RetiredBanner.astro";
+import EntryHeader from "../../components/EntryHeader.astro";
+import { RETIRED_FACTOR } from "../../lib/search";
 import { getEntry, loadRegistry, type Entry } from "../../lib/registry";
-import { href, sourceUrl } from "../../lib/paths";
+import { sourceUrl } from "../../lib/paths";
 import { isBlank, isWebUrl } from "../../lib/text";
 
 export function getStaticPaths() {
@@ -23,82 +23,68 @@ const install: [string, string][] =
 ---
 
 <Base title={e.name} description={e.summary} section="tools">
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <ol>
-      <li>
-        <a href={href()}>Home</a>
-      </li>
-      <li>
-        <a href={href("tools/")}>Tools</a>
-      </li>
-      <li aria-current="page">
-        <code>{e.id}</code>
-      </li>
-    </ol>
-  </nav>
-  <RetiredBanner kind="tool" entry={e} />
-  <h1>{e.name}</h1>
-  <div class="entry-meta">
-    <Badge review={e.review} />
-    <span>
-      Tool · <code>{e.id}</code>
-    </span>
-  </div>
-  <p class="summary">
-    <Value value={e.summary} />
-  </p>
+  <article
+    data-pagefind-body
+    data-pagefind-weight={e.status === "retired" ? String(RETIRED_FACTOR) : undefined}
+  >
+    <EntryHeader
+      kind="tool"
+      entry={e}
+      filters={{ category: [e.category, ...(e.also_categories ?? [])], licence: e.license }}
+    />
 
-  <div class="table-wrap">
-    <table class="facts">
-      <caption>About this tool</caption>
-      <tbody>
-        <Fact field="category" label="Category" value={e.category} />
-        <Fact field="subcategory" label="Subcategory" value={e.subcategory} />
-        <Fact field="tool_kind" label="Tool kind" value={e.tool_kind} />
-        <Fact field="license" label="Licence">
-          <Value value={e.license} mono />
-          {!isBlank(e.license_original) && (
-            <div data-field="license_original">
-              Project's wording: <Text text={e.license_original} />
-            </div>
-          )}
-        </Fact>
-        <Fact field="open_source" label="Open source" value={e.open_source} />
-        <Fact field="language" label="Language" value={e.language} />
-        <Fact field="interfaces" label="Interfaces" value={e.interfaces} />
-        <Fact field="call" label="How an agent calls it" value={e.call} mono />
-        <Fact field="install" label="Install">
-          {install.length === 0 ? (
-            <Value value={undefined} />
-          ) : (
-            <ul class="plain">
-              {install.map(([k, v]) => (
-                <li>
-                  {k}: <code>{v}</code>
-                </li>
-              ))}
-            </ul>
-          )}
-        </Fact>
-        <Fact field="project_status" label="Project status" value={e.project_status} />
-        <Fact field="url" label="Website">
-          {isWebUrl(e.url) ? (
-            <a href={e.url} class="mono" rel="noopener nofollow">
-              {e.url}
-            </a>
-          ) : (
-            <Value value={e.url} mono />
-          )}
-        </Fact>
-        <Fact field="notes" label="Notes" value={e.notes} />
-        <Fact field="also_categories" label="Also listed under" value={e.also_categories} />
-        <Fact field="status" label="Registry status" value={e.status} />
-        <Fact field="related" label="Related">
-          <RelatedList ids={e.related} prefer="tool" />
-        </Fact>
-      </tbody>
-    </table>
-  </div>
+    <div class="table-wrap">
+      <table class="facts">
+        <caption>About this tool</caption>
+        <tbody>
+          <Fact field="category" label="Category" value={e.category} />
+          <Fact field="subcategory" label="Subcategory" value={e.subcategory} />
+          <Fact field="tool_kind" label="Tool kind" value={e.tool_kind} />
+          <Fact field="license" label="Licence">
+            <Value value={e.license} mono />
+            {!isBlank(e.license_original) && (
+              <div data-field="license_original">
+                Project's wording: <Text text={e.license_original} />
+              </div>
+            )}
+          </Fact>
+          <Fact field="open_source" label="Open source" value={e.open_source} />
+          <Fact field="language" label="Language" value={e.language} />
+          <Fact field="interfaces" label="Interfaces" value={e.interfaces} />
+          <Fact field="call" label="How an agent calls it" value={e.call} mono />
+          <Fact field="install" label="Install">
+            {install.length === 0 ? (
+              <Value value={undefined} />
+            ) : (
+              <ul class="plain">
+                {install.map(([k, v]) => (
+                  <li>
+                    {k}: <code>{v}</code>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </Fact>
+          <Fact field="project_status" label="Project status" value={e.project_status} />
+          <Fact field="url" label="Website">
+            {isWebUrl(e.url) ? (
+              <a href={e.url} class="mono" rel="noopener nofollow">
+                {e.url}
+              </a>
+            ) : (
+              <Value value={e.url} mono />
+            )}
+          </Fact>
+          <Fact field="notes" label="Notes" value={e.notes} />
+          <Fact field="also_categories" label="Also listed under" value={e.also_categories} />
+          <Fact field="status" label="Registry status" value={e.status} />
+          <Fact field="related" label="Related">
+            <RelatedList ids={e.related} prefer="tool" />
+          </Fact>
+        </tbody>
+      </table>
+    </div>
+  </article>
 
   <p class="links-row">
     <a href={sourceUrl("tool", e.id)} data-source-yaml>

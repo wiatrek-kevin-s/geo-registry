@@ -1,0 +1,31 @@
+{
+  "source": "docs/build-brief.md, Rules and examples, Lookups (copied at T-2, 2026-11-07). A row with several targets passes on any of them.",
+  "lookups": [
+    { "query": "lidar Travis County", "targets": [{ "kind": "data", "id": "txgio-lidar" }] },
+    { "query": "buffer PostGIS", "targets": [{ "kind": "operation", "id": "buffer" }] },
+    {
+      "query": "parcels Travis County",
+      "targets": [{ "kind": "data", "id": "travis-central-appraisal-district" }]
+    },
+    {
+      "query": "STAC imagery",
+      "targets": [
+        { "kind": "data", "id": "microsoft-planetary-computer-catalog" },
+        { "kind": "data", "id": "earth-search-element-84" },
+        { "kind": "data", "id": "landsat-collection-2" }
+      ]
+    },
+    {
+      "query": "flow accumulation GRASS",
+      "targets": [{ "kind": "operation", "id": "flow-accumulation" }]
+    },
+    { "query": "OpenStreetMap", "targets": [{ "kind": "data", "id": "planet-osm" }] },
+    {
+      "query": "TxDOT roads",
+      "targets": [{ "kind": "data", "id": "txdot-roadway-inventory-dfo-lrs" }]
+    },
+    { "query": "PDAL", "targets": [{ "kind": "tool", "id": "pdal" }] },
+    { "query": "zonal statistics", "targets": [{ "kind": "operation", "id": "zonal-statistics" }] },
+    { "query": "census boundaries", "targets": [{ "kind": "data", "id": "census-tiger-line" }] }
+  ]
+}

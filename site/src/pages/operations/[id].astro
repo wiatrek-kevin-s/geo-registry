@@ -1,14 +1,14 @@
 ---
 import Base from "../../layouts/Base.astro";
-import Badge from "../../components/Badge.astro";
 import Fact from "../../components/Fact.astro";
 import Text from "../../components/Text.astro";
 import Value from "../../components/Value.astro";
 import EntryLink from "../../components/EntryLink.astro";
 import RelatedList from "../../components/RelatedList.astro";
-import RetiredBanner from "../../components/RetiredBanner.astro";
+import EntryHeader from "../../components/EntryHeader.astro";
+import { RETIRED_FACTOR, searchWeight } from "../../lib/search";
 import { getEntry, loadRegistry, type Entry } from "../../lib/registry";
-import { href, sourceUrl } from "../../lib/paths";
+import { sourceUrl } from "../../lib/paths";
 import { describeCrosswalk, formatScalar, isBlank } from "../../lib/text";
 
 export function getStaticPaths() {
@@ -33,232 +33,219 @@ for (const i of impls) {
 ---
 
 <Base title={e.name} description={e.summary} section="operations">
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <ol>
-      <li>
-        <a href={href()}>Home</a>
-      </li>
-      <li>
-        <a href={href("operations/")}>Operations</a>
-      </li>
-      <li aria-current="page">
-        <code>{e.id}</code>
-      </li>
-    </ol>
-  </nav>
-  <RetiredBanner kind="operation" entry={e} />
-  <h1>{e.name}</h1>
-  <div class="entry-meta">
-    <Badge review={e.review} />
-    <span>
-      Operation · <code>{e.id}</code>
-    </span>
-  </div>
-  <p class="summary">
-    <Value value={e.summary} />
-  </p>
+  <article
+    data-pagefind-body
+    data-pagefind-weight={e.status === "retired" ? String(RETIRED_FACTOR) : undefined}
+  >
+    <EntryHeader kind="operation" entry={e} filters={{ group: e.group }} />
 
-  {pitfalls.map((p) => (
-    <div class="callout-pitfall" data-field="pitfalls">
-      <strong>Pitfall.</strong> <Text text={p} />
-    </div>
-  ))}
+    {pitfalls.map((p) => (
+      <div class="callout-pitfall" data-field="pitfalls">
+        <strong>Pitfall.</strong> <Text text={p} />
+      </div>
+    ))}
 
-  <div class="table-wrap">
-    <table class="facts">
-      <caption>About this operation</caption>
-      <tbody>
-        <Fact field="aka" label="Also called" value={e.aka} />
-        <Fact field="group" label="Group" value={e.group} mono />
-        <Fact field="checks" label="Checks" value={e.checks} mono />
-        <Fact
-          field="pitfalls"
-          label="Pitfalls"
-          value={pitfalls.length ? `${pitfalls.length} listed above` : undefined}
-        />
-        <Fact field="columbus" label="Columbus tool">
-          {e.columbus ? (
-            <code>
-              {e.columbus.tool} · {e.columbus.op}
-            </code>
-          ) : (
-            <Value value={undefined} />
-          )}
-        </Fact>
-        <Fact field="notes" label="Notes" value={e.notes} />
-        <Fact field="status" label="Status" value={e.status} />
-        <Fact field="broader" label="Broader">
-          <RelatedList ids={e.broader} prefer="operation" />
-        </Fact>
-        <Fact field="narrower" label="Narrower">
-          <RelatedList ids={e.narrower} prefer="operation" />
-        </Fact>
-        <Fact field="related" label="Related">
-          <RelatedList ids={e.related} prefer="operation" />
-        </Fact>
-      </tbody>
-    </table>
-  </div>
-
-  <h2 id="parameters">Parameters</h2>
-  {params.length === 0 ? (
-    <p class="not-stated">Not stated</p>
-  ) : (
     <div class="table-wrap">
-      <table data-field="parameters">
+      <table class="facts">
+        <caption>About this operation</caption>
+        <tbody>
+          <Fact
+            field="aka"
+            label="Also called"
+            value={e.aka}
+            weight={searchWeight(5, e.status === "retired")}
+          />
+          <Fact field="group" label="Group" value={e.group} mono />
+          <Fact field="checks" label="Checks" value={e.checks} mono />
+          <Fact
+            field="pitfalls"
+            label="Pitfalls"
+            value={pitfalls.length ? `${pitfalls.length} listed above` : undefined}
+          />
+          <Fact field="columbus" label="Columbus tool">
+            {e.columbus ? (
+              <code>
+                {e.columbus.tool} · {e.columbus.op}
+              </code>
+            ) : (
+              <Value value={undefined} />
+            )}
+          </Fact>
+          <Fact field="notes" label="Notes" value={e.notes} />
+          <Fact field="status" label="Status" value={e.status} />
+          <Fact field="broader" label="Broader">
+            <RelatedList ids={e.broader} prefer="operation" />
+          </Fact>
+          <Fact field="narrower" label="Narrower">
+            <RelatedList ids={e.narrower} prefer="operation" />
+          </Fact>
+          <Fact field="related" label="Related">
+            <RelatedList ids={e.related} prefer="operation" />
+          </Fact>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="parameters">Parameters</h2>
+    {params.length === 0 ? (
+      <p class="not-stated">Not stated</p>
+    ) : (
+      <div class="table-wrap">
+        <table data-field="parameters">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Type</th>
+              <th scope="col">Required</th>
+              <th scope="col">Default</th>
+              <th scope="col">Values</th>
+              <th scope="col">Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            {params.map(([name, p]) => (
+              <tr>
+                <th scope="row">
+                  <code>{name}</code>
+                </th>
+                <td>{p.type}</td>
+                <td>{p.required ? "yes" : "no"}</td>
+                <td>
+                  <Value value={p.default} mono />
+                </td>
+                <td>
+                  <Value value={p.values} mono />
+                </td>
+                <td>
+                  <Value value={[p.unit && `Unit: ${p.unit}`, p.note].filter(Boolean).join(". ")} />
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    )}
+
+    <h2 id="ports">Inputs and outputs</h2>
+    <div class="table-wrap">
+      <table data-field="inputs">
         <thead>
           <tr>
+            <th scope="col">Direction</th>
             <th scope="col">Name</th>
             <th scope="col">Type</th>
-            <th scope="col">Required</th>
-            <th scope="col">Default</th>
-            <th scope="col">Values</th>
+            <th scope="col">Geometry</th>
             <th scope="col">Note</th>
           </tr>
         </thead>
         <tbody>
-          {params.map(([name, p]) => (
+          {[
+            ...ports(e.inputs).map((p) => ({ dir: "Input", p })),
+            ...ports(e.outputs).map((p) => ({ dir: "Output", p })),
+          ].map(({ dir, p }) => (
             <tr>
+              <td>{dir}</td>
               <th scope="row">
-                <code>{name}</code>
+                <code>{p.name}</code>
               </th>
-              <td>{p.type}</td>
-              <td>{p.required ? "yes" : "no"}</td>
               <td>
-                <Value value={p.default} mono />
+                {p.type}
+                {p.many && " (several)"}
               </td>
               <td>
-                <Value value={p.values} mono />
+                <Value value={p.geometry} />
               </td>
               <td>
-                <Value value={[p.unit && `Unit: ${p.unit}`, p.note].filter(Boolean).join(". ")} />
+                <Value value={p.note} />
               </td>
             </tr>
           ))}
         </tbody>
       </table>
     </div>
-  )}
 
-  <h2 id="ports">Inputs and outputs</h2>
-  <div class="table-wrap">
-    <table data-field="inputs">
-      <thead>
-        <tr>
-          <th scope="col">Direction</th>
-          <th scope="col">Name</th>
-          <th scope="col">Type</th>
-          <th scope="col">Geometry</th>
-          <th scope="col">Note</th>
-        </tr>
-      </thead>
-      <tbody>
-        {[
-          ...ports(e.inputs).map((p) => ({ dir: "Input", p })),
-          ...ports(e.outputs).map((p) => ({ dir: "Output", p })),
-        ].map(({ dir, p }) => (
-          <tr>
-            <td>{dir}</td>
-            <th scope="row">
-              <code>{p.name}</code>
-            </th>
-            <td>
-              {p.type}
-              {p.many && " (several)"}
-            </td>
-            <td>
-              <Value value={p.geometry} />
-            </td>
-            <td>
-              <Value value={p.note} />
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </div>
-
-  <h2 id="engines">In each engine</h2>
-  {impls.length === 0 ? (
-    <p class="not-stated">No engine implementations are mapped to this operation yet.</p>
-  ) : (
-    <div class="table-wrap">
-      <table data-field="engines">
-        <thead>
-          <tr>
-            <th scope="col">Engine</th>
-            <th scope="col">Tool</th>
-            <th scope="col">Parameters</th>
-            <th scope="col">Differences</th>
-          </tr>
-        </thead>
-        <tbody>
-          {impls.map((i) => {
-            const cw = (i.entry.crosswalk ?? {}) as Record<string, unknown>;
-            const diffs: string[] = Array.isArray(i.entry.differences) ? i.entry.differences : [];
-            return (
-              <tr data-implementation={i.id}>
-                <td>
-                  <EntryLink kind="tool" id={i.software} />
-                </td>
-                <td>
-                  <code>{i.entry.call?.name ?? i.name}</code>
-                </td>
-                <td>
-                  {Object.keys(cw).length === 0 ? (
-                    <Value value={undefined} />
-                  ) : (
-                    <ul class="plain">
-                      {canonical
-                        .filter((k) => k in cw)
-                        .map((k) => {
-                          const d = describeCrosswalk(cw[k]);
-                          return (
-                            <li>
-                              <code>{k}</code>
-                              {d.param && (
-                                <>
-                                  {" → "}
-                                  <code>{d.param}</code>
-                                </>
-                              )}
-                              {d.text && (
-                                <>
-                                  {d.param ? ": " : " "}
-                                  <Text text={d.text} />
-                                </>
-                              )}
-                            </li>
-                          );
-                        })}
-                    </ul>
-                  )}
-                </td>
-                <td>
-                  {diffs.length === 0 ? (
-                    <span class="muted">None noted</span>
-                  ) : (
-                    <ul class="plain">
-                      {diffs.map((d) => (
-                        <li>
-                          <Text text={d} />
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                  {!isBlank(i.entry.presets) && (
-                    <div class="muted">
-                      Preset: <code>{formatScalar(i.entry.presets)}</code>
-                    </div>
-                  )}
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </div>
-  )}
+    <h2 id="engines">In each engine</h2>
+    {impls.length === 0 ? (
+      <p class="not-stated">No engine implementations are mapped to this operation yet.</p>
+    ) : (
+      <div class="table-wrap">
+        <table data-field="engines">
+          <thead>
+            <tr>
+              <th scope="col">Engine</th>
+              <th scope="col">Tool</th>
+              <th scope="col">Parameters</th>
+              <th scope="col">Differences</th>
+            </tr>
+          </thead>
+          <tbody>
+            {impls.map((i) => {
+              const cw = (i.entry.crosswalk ?? {}) as Record<string, unknown>;
+              const diffs: string[] = Array.isArray(i.entry.differences) ? i.entry.differences : [];
+              return (
+                <tr data-implementation={i.id}>
+                  <td>
+                    <EntryLink kind="tool" id={i.software} />
+                  </td>
+                  <td>
+                    <code>{i.entry.call?.name ?? i.name}</code>
+                  </td>
+                  <td>
+                    {Object.keys(cw).length === 0 ? (
+                      <Value value={undefined} />
+                    ) : (
+                      <ul class="plain">
+                        {canonical
+                          .filter((k) => k in cw)
+                          .map((k) => {
+                            const d = describeCrosswalk(cw[k]);
+                            return (
+                              <li>
+                                <code>{k}</code>
+                                {d.param && (
+                                  <>
+                                    {" → "}
+                                    <code>{d.param}</code>
+                                  </>
+                                )}
+                                {d.text && (
+                                  <>
+                                    {d.param ? ": " : " "}
+                                    <Text text={d.text} />
+                                  </>
+                                )}
+                              </li>
+                            );
+                          })}
+                      </ul>
+                    )}
+                  </td>
+                  <td>
+                    {diffs.length === 0 ? (
+                      <span class="muted">None noted</span>
+                    ) : (
+                      <ul class="plain">
+                        {diffs.map((d) => (
+                          <li>
+                            <Text text={d} />
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                    {!isBlank(i.entry.presets) && (
+                      <div class="muted">
+                        Preset: <code>{formatScalar(i.entry.presets)}</code>
+                      </div>
+                    )}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    )}
+  </article>
 
   <p class="links-row">
     <a href={sourceUrl("operation", e.id)} data-source-yaml>

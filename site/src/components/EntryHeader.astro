@@ -1,0 +1,71 @@
+---
+// Breadcrumb, retired banner, name, review badge and summary of an entry page,
+// plus the Pagefind meta and filter values for its search result.
+import Badge from "./Badge.astro";
+import RetiredBanner from "./RetiredBanner.astro";
+import Value from "./Value.astro";
+import { href, FOLDER } from "../lib/paths";
+import { reviewState } from "../lib/text";
+import { KIND_LABEL, LIST_LABEL, searchWeight } from "../lib/search";
+import type { Entry } from "../lib/registry";
+
+interface Props {
+  kind: "data" | "tool" | "operation";
+  entry: Entry;
+  filters: Record<string, unknown>;
+}
+const { kind, entry: e, filters } = Astro.props;
+const retired = e.status === "retired";
+const review = reviewState(e.review);
+const filterPairs: [string, string][] = Object.entries({
+  kind: KIND_LABEL[kind],
+  review,
+  status: e.status,
+  ...filters,
+}).flatMap(([k, v]) =>
+  (Array.isArray(v) ? v : [v])
+    .filter((x) => x !== undefined && x !== null && String(x).trim() !== "")
+    .map((x) => [k, String(x)] as [string, string]),
+);
+---
+
+<nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+  <ol>
+    <li>
+      <a href={href()}>Home</a>
+    </li>
+    <li>
+      <a href={href(`${FOLDER[kind]}/`)}>{LIST_LABEL[kind]}</a>
+    </li>
+    <li aria-current="page">
+      <code>{e.id}</code>
+    </li>
+  </ol>
+</nav>
+<div data-pagefind-ignore>
+  <RetiredBanner kind={kind} entry={e} />
+</div>
+<h1
+  data-pagefind-weight={searchWeight(10, retired)}
+  data-pagefind-meta="id[data-id], kind[data-kind], review[data-review], status[data-status], summary[data-summary], reviewed_on[data-reviewed-on]"
+  data-id={e.id}
+  data-kind={kind}
+  data-review={review}
+  data-status={e.status}
+  data-summary={e.summary ?? ""}
+  data-reviewed-on={review === "reviewed" ? (e.review?.reviewed_on ?? "") : ""}
+>
+  {e.name}
+</h1>
+{filterPairs.map(([k, v]) => (
+  <span data-pagefind-filter={`${k}[data-value]`} data-value={v} />
+))}
+<div class="entry-meta" data-pagefind-ignore>
+  <Badge review={e.review} />
+  <span>
+    {KIND_LABEL[kind]} · <code>{e.id}</code>
+  </span>
+</div>
+<p class="summary" data-pagefind-weight={searchWeight(2, retired)}>
+  <Value value={e.summary} />
+</p>

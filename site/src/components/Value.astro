@@ -12,7 +12,9 @@ const str = blank ? "" : formatScalar(value);
 ---
 
 {blank ? (
-  <span class="not-stated">Not stated</span>
+  <span class="not-stated" data-pagefind-ignore>
+    Not stated
+  </span>
 ) : mono ? (
   <code>
     <Text text={str} />

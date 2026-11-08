@@ -7,12 +7,15 @@ interface Props {
   label: string;
   value?: unknown;
   mono?: boolean;
+  weight?: string;
 }
-const { field, label, value, mono } = Astro.props;
+const { field, label, value, mono, weight } = Astro.props;
 const hasSlot = Astro.slots.has("default");
 ---
 
 <tr data-field={field}>
-  <th scope="row">{label}</th>
-  <td>{hasSlot ? <slot /> : <Value value={value} mono={mono} />}</td>
+  <th scope="row" data-pagefind-ignore>
+    {label}
+  </th>
+  <td data-pagefind-weight={weight}>{hasSlot ? <slot /> : <Value value={value} mono={mono} />}</td>
 </tr>

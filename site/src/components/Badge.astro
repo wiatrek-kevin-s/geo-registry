@@ -10,9 +10,9 @@ const on =
   state === "reviewed" && review && typeof review === "object"
     ? (review as { reviewed_on?: string }).reviewed_on
     : undefined;
+const text = on ? `${label}, ${on}` : label;
 ---
 
 <span class={`badge badge-${REVIEW_TEXT[state] ? state : "unknown"}`} data-review={state}>
-  {label}
-  {on && <>, {on}</>}
+  {text}
 </span>
