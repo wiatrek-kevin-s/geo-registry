@@ -8,7 +8,7 @@ import EntryHeader from "../../components/EntryHeader.astro";
 import { RETIRED_FACTOR } from "../../lib/search";
 import { getEntry, loadRegistry, type Entry } from "../../lib/registry";
 import { sectionNav } from "../../lib/browse";
-import { sourceUrl } from "../../lib/paths";
+import { sourceUrl, fixUrl } from "../../lib/paths";
 import { isBlank, isWebUrl, reviewState } from "../../lib/text";
 
 export function getStaticPaths() {
@@ -146,6 +146,9 @@ const steps: string[] = Array.isArray(e.recipe?.steps) ? e.recipe.steps : [];
   </article>
 
   <p class="links-row">
+    <a href={fixUrl("data", e.id, `data/${e.id}/`)} data-suggest-fix>
+      Suggest a fix
+    </a>
     <a href={sourceUrl("data", e.id)} data-source-yaml>
       View source YAML
     </a>

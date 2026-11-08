@@ -166,8 +166,8 @@
           "expected": "the label fix-request exists"
         }
       ],
-      "status": "todo",
-      "evidence": ""
+      "status": "done",
+      "evidence": "Local run 2026-11-08 on branch site/t7-fix-form. (1) site/tests/unit/fix-link.test.mjs: txgio-lidar's link opens .github/ISSUE_TEMPLATE/fix-entry.yml with title 'Fix: data txgio-lidar', entry_id txgio-lidar and its page URL; also tool, operation and implementation pages; the form has the F-5 fields and label: 5 of 5 pass. (2) gh label create fix-request, then gh label list shows 'fix-request'. Also 21 of 21 unit tests, 154 of 154 browser tests, link check 0 broken, lint and astro check 0 errors. The form itself goes live on merge; check 4 (a stranger files one) follows."
     },
     {
       "id": "T-8",

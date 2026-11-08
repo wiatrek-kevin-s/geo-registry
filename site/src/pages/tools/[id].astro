@@ -8,7 +8,7 @@ import EntryHeader from "../../components/EntryHeader.astro";
 import { RETIRED_FACTOR } from "../../lib/search";
 import { getEntry, loadRegistry, type Entry } from "../../lib/registry";
 import { sectionNav } from "../../lib/browse";
-import { enginePath, sourceUrl } from "../../lib/paths";
+import { enginePath, sourceUrl, fixUrl } from "../../lib/paths";
 import { fmtCount, isBlank, isWebUrl } from "../../lib/text";
 
 export function getStaticPaths() {
@@ -94,6 +94,9 @@ const install: [string, string][] =
   </article>
 
   <p class="links-row">
+    <a href={fixUrl("tool", e.id, `tools/${e.id}/`)} data-suggest-fix>
+      Suggest a fix
+    </a>
     {engineCount > 0 && (
       <a href={enginePath(e.id)} data-engine-link>
         {fmtCount(engineCount)} engine implementations

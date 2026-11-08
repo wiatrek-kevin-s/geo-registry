@@ -4,8 +4,8 @@ Kit version 1.0 · as of 2026-11-08, session S2 in progress
 
 ## Where things stand
 
-- **Session:** S2 · **Task:** T-5 and T-6 in PR; site live at https://wiatrek-kevin-s.github.io/geo-registry/
-- **Next step:** T-7, T-9 code, then the owner merges and does H-1 and H-3 · **Waiting on the owner:** nothing yet
+- **Session:** S2 · **Task:** T-5, T-6 and T-7 in PR; site live at https://wiatrek-kevin-s.github.io/geo-registry/
+- **Next step:** T-9 code, then the owner merges and does H-1 and H-3 · **Waiting on the owner:** nothing yet
 - **Homework received:** H-0 (geo-registry.io, expires 2027-11-07, auto-renew: on), H-2 (done by the owner, checked with gh api)
 
 ## Decisions
@@ -41,9 +41,16 @@ Status: raised, approved, declined, or Sent to Blueprint (touches a one-way door
 
 Newest first, written as you go. Mark each claim verified (checked this session) or unverified.
 
+### S2: T-7 in PR (2026-11-08)
+
+- **Done:** issue form `.github/ISSUE_TEMPLATE/fix-entry.yml`, "Suggest a fix" on all four kinds of entry page, label `fix-request` created (verified).
+- **Saved:** branch `site/t7-fix-form`, stacked on `site/t6-look`.
+- **Next:** T-9's code, then the owner's steps (H-1, H-3).
+
 ### S2: T-6 in PR (2026-11-08)
 
 - **Done:** theme toggle, required states, style lint, axe on 23 pages, 24 screenshots. All T-6 checks pass; the site also builds, links and passes every browser test at `SITE_BASE=/` (verified). Screenshots exposed crushed table columns that no automated check caught; fixed.
+- **Correction:** the T-6 evidence was first committed while ESLint still reported 3 errors in the theme script. Fixed in the next commit on the branch; lint now exits 0 (verified).
 - **For the final review:** on a phone, the "In each engine" table needs a sideways scroll to reach its Parameters and Differences columns, as the spec says for wide tables (verified).
 - **Saved:** branch `site/t6-look`, stacked on `site/t5-full-site`.
 - **Next:** T-7.
