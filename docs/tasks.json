@@ -66,7 +66,7 @@
         }
       ],
       "status": "todo",
-      "evidence": ""
+      "evidence": "H-0: geo-registry.io registered at Cloudflare, Inc. (public registry record via whois, 2026-11-08): created 2026-11-07, expires 2027-11-07; auto-renew not publicly visible, owner to confirm. H-2 (owner did it; checked by Claude with gh api, 2026-11-08): Pages build_type=workflow (Source: GitHub Actions); repo variables SITE_URL=https://wiatrek-kevin-s.github.io and SITE_BASE=/geo-registry/; secret_scanning and secret_scanning_push_protection enabled; no wiatrek-kevin-s.github.io user site, so no custom domain on it."
     },
     {
       "id": "T-4",
@@ -92,7 +92,7 @@
         }
       ],
       "status": "todo",
-      "evidence": ""
+      "evidence": "PR #37 run https://github.com/wiatrek-kevin-s/geo-registry/actions/runs/42507879342: Seed converter check, Rust (ubuntu-latest), Rust (windows-latest) and Site check passed; Publish the index and Deploy the site skipped (Site check 1m31s: 1,629 pages indexed, 0 broken links, 34 browser tests passed; github-pages artifact uploaded). Dispatch run (gh workflow run ci.yml --ref site/t4-ci) https://github.com/wiatrek-kevin-s/geo-registry/actions/runs/42508573110: Site check passed, nothing deployed. Live fetch after merge: pending the owner's go-ahead to merge #37."
     },
     {
       "id": "T-5",
