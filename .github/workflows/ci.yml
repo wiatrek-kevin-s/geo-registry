@@ -103,3 +103,71 @@ jobs:
             gh release create index --title "Registry index (rolling)" \
               --notes "The current registry index, rebuilt on every change to main. Columbus servers download it with columbus-mcp registry update." --latest=false
           gh release upload index dist/registry.sqlite dist/index.json dist/index.sha256 --clobber
+
+  site-check:
+    name: Site check
+    # Runs on every event, including workflow_dispatch, so Health and Engines
+    # PRs get this check too. Builds and tests the site; deploys nothing.
+    needs: rust
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: site
+    env:
+      SITE_URL: ${{ vars.SITE_URL }}
+      SITE_BASE: ${{ vars.SITE_BASE }}
+      REGISTRY_COMMIT: ${{ github.sha }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: geo-registry-dist
+          path: dist
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: site/.nvmrc
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - name: Install
+        run: npm ci --ignore-scripts
+      - name: Lint and format
+        run: npm run lint
+      - name: Type check
+        run: npm run check
+      - name: Build the site and search index
+        run: npm run build
+      - name: Internal links
+        run: npm run check:links
+      - name: Unit tests
+        run: npm run test:unit
+      - name: Install the test browser
+        run: npx playwright install --with-deps chromium
+      - name: Browser tests
+        env:
+          CI: "true"
+        run: npm run test:e2e
+      - name: Upload the site
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: site/dist
+
+  site-deploy:
+    name: Deploy the site
+    # Every push to main publishes the site built by site-check.
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: [publish, site-check]
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v5
