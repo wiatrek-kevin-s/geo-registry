@@ -1,0 +1,49 @@
+---
+import Base from "../layouts/Base.astro";
+import Crumbs from "../components/Crumbs.astro";
+import { projectNav } from "../lib/browse";
+import { REPO } from "../lib/paths";
+---
+
+<Base
+  title="Contribute"
+  description="How to suggest a fix to the geo-registry, and how entries get reviewed."
+  section="contribute"
+  sidebar={projectNav("contribute")}
+>
+  <Crumbs label="Contribute" />
+  <div class="prose">
+    <h1>Contribute</h1>
+    <h2 id="fix">Suggest a fix</h2>
+    <p>
+      Found something wrong? Open the entry's page and choose “Suggest a fix”. It opens a short form
+      on GitHub with the entry already filled in. You need a free GitHub account.
+    </p>
+
+    <h2 id="review">How review works</h2>
+    <p>
+      Entries start in one of three unchecked states, and move to reviewed when a person checks
+      them:
+    </p>
+    <ul>
+      <li>
+        <strong>Seeded:</strong> an unverified lead from the seed atlas.
+      </li>
+      <li>
+        <strong>Draft:</strong> written, not yet checked by a person.
+      </li>
+      <li>
+        <strong>Harvested:</strong> read from the engine itself, not yet checked by a person.
+      </li>
+      <li>
+        <strong>Reviewed:</strong> a person checked it, on the date shown.
+      </li>
+    </ul>
+
+    <h2 id="more">Adding entries</h2>
+    <p>
+      New entries and larger changes go through a pull request.{" "}
+      <a href={`${REPO}/blob/main/CONTRIBUTING.md`}>CONTRIBUTING.md</a> explains how.
+    </p>
+  </div>
+</Base>

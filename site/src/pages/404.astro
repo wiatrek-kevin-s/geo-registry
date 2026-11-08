@@ -1,0 +1,60 @@
+---
+import Base from "../layouts/Base.astro";
+import { href } from "../lib/paths";
+---
+
+<Base title="Page not found" noindex noCanonical hideHeaderSearch>
+  <h1>Page not found</h1>
+  <p id="missing-note" class="summary" hidden>
+    Nothing here is called <code id="missing-id"></code>. It may have been renamed.
+  </p>
+  <p id="implementation-note" hidden>
+    Implementation names can change when an engine is harvested again. The operation page always
+    lists the current name.
+  </p>
+
+  <form class="search-form" role="search" action={href("search/")} method="get">
+    <label for="missing-q">Search the registry</label>
+    <div class="search-row">
+      <input id="missing-q" name="q" type="search" autocomplete="off" spellcheck="false" />
+      <button type="submit" class="button-primary">
+        Search
+      </button>
+    </div>
+  </form>
+
+  <h2>Or browse</h2>
+  <ul class="inline" data-browse-links>
+    <li>
+      <a href={href("data/")}>Data sources</a>
+    </li>
+    <li>
+      <a href={href("tools/")}>Tools</a>
+    </li>
+    <li>
+      <a href={href("operations/")}>Operations</a>
+    </li>
+    <li>
+      <a href={href("engines/")}>Engines</a>
+    </li>
+  </ul>
+</Base>
+
+<script>
+  // The id is the last part of the requested path; it is only ever set as text or a value.
+  const parts = location.pathname.split("/").filter(Boolean);
+  let id = parts.at(-1) ?? "";
+  try {
+    id = decodeURIComponent(id);
+  } catch {
+    // keep the raw text
+  }
+  if (id && id !== "404.html") {
+    (document.getElementById("missing-q") as HTMLInputElement).value = id;
+    (document.getElementById("missing-id") as HTMLElement).textContent = id;
+    (document.getElementById("missing-note") as HTMLElement).hidden = false;
+    if (parts.includes("implementations")) {
+      (document.getElementById("implementation-note") as HTMLElement).hidden = false;
+    }
+  }
+</script>

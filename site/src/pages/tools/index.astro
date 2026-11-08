@@ -1,24 +1,25 @@
 ---
 import Base from "../../layouts/Base.astro";
 import CardTable from "../../components/CardTable.astro";
-import { byName, loadRegistry } from "../../lib/registry";
+import Crumbs from "../../components/Crumbs.astro";
+import { toolGroups, sectionNav } from "../../lib/browse";
 import { fmtCount } from "../../lib/text";
-import { href } from "../../lib/paths";
 
-const reg = loadRegistry();
-const cards = [...reg.cards.filter((c) => c.kind === "tool")].sort(byName);
+const groups = toolGroups();
+const total = groups.reduce((n, g) => n + g.items.length, 0);
 ---
 
-<Base title="Tools" section="tools">
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <ol>
-      <li>
-        <a href={href()}>Home</a>
-      </li>
-      <li aria-current="page">Tools</li>
-    </ol>
-  </nav>
+<Base title="Tools" section="tools" sidebar={sectionNav("tools")}>
+  <Crumbs label="Tools" />
   <h1>Tools</h1>
-  <p class="muted">{fmtCount(cards.length)} entries, ordered by name.</p>
-  <CardTable cards={cards} kind="tool" extra={{ label: "Category", key: "category" }} />
+  <p class="muted">{fmtCount(total)} entries, grouped by category and ordered by name.</p>
+  {groups.length === 0 && <p class="not-stated">No entries here yet.</p>}
+  {groups.map((g) => (
+    <section>
+      <h2 id={g.anchor} class="group-heading">
+        {g.label} ({fmtCount(g.items.length)})
+      </h2>
+      <CardTable cards={g.items} kind="tool" extra={{ label: "Subcategory", key: "subcategory" }} />
+    </section>
+  ))}
 </Base>

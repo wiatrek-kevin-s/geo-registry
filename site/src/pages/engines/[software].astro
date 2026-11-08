@@ -1,0 +1,41 @@
+---
+import Base from "../../layouts/Base.astro";
+import Crumbs from "../../components/Crumbs.astro";
+import ImplementationTable from "../../components/ImplementationTable.astro";
+import { engineNav, engines, implementationGroups } from "../../lib/browse";
+import { entryPath } from "../../lib/paths";
+import { fmtCount } from "../../lib/text";
+
+export function getStaticPaths() {
+  return engines().map((engine) => ({ params: { software: engine.software }, props: { engine } }));
+}
+
+const { engine } = Astro.props;
+const groups = implementationGroups(engine.software);
+---
+
+<Base
+  title={engine.name}
+  description={`Every tool ${engine.name} ships, and the operation each one runs.`}
+  section="engines"
+  sidebar={engineNav(engine.software)}
+>
+  <Crumbs label={engine.software} parent={{ label: "Engines", path: "engines/" }} />
+  <h1>{engine.name}</h1>
+  <p class="muted">
+    {fmtCount(engine.count)} implementations, {fmtCount(engine.mapped)} mapped to an operation.
+    {engine.card && (
+      <>
+        See the <a href={entryPath("tool", engine.software)}>tool entry</a>.
+      </>
+    )}
+  </p>
+  {groups.map((g) => (
+    <section>
+      <h2 id={g.anchor} class="group-heading">
+        {g.label} ({fmtCount(g.items.length)})
+      </h2>
+      <ImplementationTable items={g.items} />
+    </section>
+  ))}
+</Base>

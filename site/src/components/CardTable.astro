@@ -12,39 +12,43 @@ interface Props {
 const { cards, kind, extra } = Astro.props;
 ---
 
-<div class="table-wrap">
-  <table>
-    <thead>
-      <tr>
-        <th scope="col">Name</th>
-        <th scope="col">{extra.label}</th>
-        <th scope="col">Summary</th>
-        <th scope="col">Review</th>
-      </tr>
-    </thead>
-    <tbody>
-      {cards.map((c) => (
+{cards.length === 0 ? (
+  <p class="not-stated">No entries here yet.</p>
+) : (
+  <div class="table-wrap">
+    <table>
+      <thead>
         <tr>
-          <th scope="row">
-            <a href={entryPath(kind, c.id)}>{c.name}</a>
-            {c.status === "retired" && (
-              <>
-                {" "}
-                <span class="badge badge-retired">Retired</span>
-              </>
-            )}
-          </th>
-          <td>
-            <Value value={c[extra.key]} />
-          </td>
-          <td>
-            <Value value={c.summary} />
-          </td>
-          <td>
-            <Badge review={c.review} />
-          </td>
+          <th scope="col">Name</th>
+          <th scope="col">{extra.label}</th>
+          <th scope="col">Summary</th>
+          <th scope="col">Review</th>
         </tr>
-      ))}
-    </tbody>
-  </table>
-</div>
+      </thead>
+      <tbody>
+        {cards.map((c) => (
+          <tr>
+            <th scope="row">
+              <a href={entryPath(kind, c.id)}>{c.name}</a>
+              {c.status === "retired" && (
+                <>
+                  {" "}
+                  <span class="badge badge-retired">Retired</span>
+                </>
+              )}
+            </th>
+            <td>
+              <Value value={c[extra.key]} />
+            </td>
+            <td>
+              <Value value={c.summary} />
+            </td>
+            <td>
+              <Badge review={c.review} />
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+)}

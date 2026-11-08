@@ -1,0 +1,63 @@
+---
+import Base from "../../layouts/Base.astro";
+import Crumbs from "../../components/Crumbs.astro";
+import Badge from "../../components/Badge.astro";
+import Value from "../../components/Value.astro";
+import { engineGroups, engines, sectionNav } from "../../lib/browse";
+import { enginePath } from "../../lib/paths";
+import { fmtCount } from "../../lib/text";
+
+const groups = engineGroups();
+---
+
+<Base
+  title="Engines"
+  description="Every GIS engine in the registry, with the tools it ships."
+  section="engines"
+  sidebar={sectionNav("engines")}
+>
+  <Crumbs label="Engines" />
+  <h1>Engines</h1>
+  <p class="muted">
+    {fmtCount(engines().length)} engines, grouped by category and ordered by name. Each one lists
+    the tools it ships and which operation each tool runs.
+  </p>
+  {groups.length === 0 && <p class="not-stated">No entries here yet.</p>}
+  {groups.map((g) => (
+    <section>
+      <h2 id={g.anchor} class="group-heading">
+        {g.label} ({fmtCount(g.items.length)})
+      </h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Engine</th>
+              <th scope="col">Version harvested</th>
+              <th scope="col">Implementations</th>
+              <th scope="col">Mapped to an operation</th>
+              <th scope="col">Review</th>
+            </tr>
+          </thead>
+          <tbody>
+            {g.items.map((e) => (
+              <tr>
+                <th scope="row">
+                  <a href={enginePath(e.software)}>{e.name}</a>
+                </th>
+                <td>
+                  <Value value={e.version} mono />
+                </td>
+                <td>{fmtCount(e.count)}</td>
+                <td>{fmtCount(e.mapped)}</td>
+                <td>
+                  <Badge review={e.card?.review} />
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  ))}
+</Base>

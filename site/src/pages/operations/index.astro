@@ -1,24 +1,25 @@
 ---
 import Base from "../../layouts/Base.astro";
 import CardTable from "../../components/CardTable.astro";
-import { byName, loadRegistry } from "../../lib/registry";
+import Crumbs from "../../components/Crumbs.astro";
+import { operationGroups, sectionNav } from "../../lib/browse";
 import { fmtCount } from "../../lib/text";
-import { href } from "../../lib/paths";
 
-const reg = loadRegistry();
-const cards = [...reg.operations].sort(byName);
+const groups = operationGroups();
+const total = groups.reduce((n, g) => n + g.items.length, 0);
 ---
 
-<Base title="Operations" section="operations">
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <ol>
-      <li>
-        <a href={href()}>Home</a>
-      </li>
-      <li aria-current="page">Operations</li>
-    </ol>
-  </nav>
+<Base title="Operations" section="operations" sidebar={sectionNav("operations")}>
+  <Crumbs label="Operations" />
   <h1>Operations</h1>
-  <p class="muted">{fmtCount(cards.length)} entries, ordered by name.</p>
-  <CardTable cards={cards} kind="operation" extra={{ label: "Group", key: "group" }} />
+  <p class="muted">{fmtCount(total)} entries, grouped by group and ordered by name.</p>
+  {groups.length === 0 && <p class="not-stated">No entries here yet.</p>}
+  {groups.map((g) => (
+    <section>
+      <h2 id={g.anchor} class="group-heading">
+        {g.label} ({fmtCount(g.items.length)})
+      </h2>
+      <CardTable cards={g.items} kind="operation" extra={{ label: "Also called", key: "aka" }} />
+    </section>
+  ))}
 </Base>

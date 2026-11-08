@@ -120,8 +120,8 @@
           "expected": "the Buffer operation page is the first result, above every implementation page"
         }
       ],
-      "status": "todo",
-      "evidence": ""
+      "status": "done",
+      "evidence": "Local run 2026-11-08 on branch site/t5-full-site, base /geo-registry/. (1) site/tests/unit/api.test.mjs: meta.json counts = dist (183 data, 1,381 tool, 65 operation, 6,741 implementation); one file per entry; 58 sampled per-entry files match the F-2 shape, singular kinds and the entry text as stored in registry.sqlite; index.json byte-for-byte; all parse: 6 of 6 pass. (2) site/tests/e2e/pages.spec.ts: /implementations/gdal/does-not-exist/ returns 404, the page's search box holds 'does-not-exist', links /operations/: passes at 1,280 and 375 px. (3) api.test.mjs 'every implementation has a page': 6,741 implementation pages = dist. (4) pages.spec.ts: search 'buffer' shows operation buffer first, above every implementation page: passes at both widths. Also: 40 of 40 browser tests, 16 of 16 unit tests, link check 0 broken, ESLint, Prettier, astro check 0 errors, npm audit --omit=dev 0 vulnerabilities."
     },
     {
       "id": "T-6",

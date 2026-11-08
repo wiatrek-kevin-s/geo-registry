@@ -1,0 +1,53 @@
+---
+import Base from "../layouts/Base.astro";
+import Crumbs from "../components/Crumbs.astro";
+import { projectNav } from "../lib/browse";
+import { href, REPO } from "../lib/paths";
+---
+
+<Base
+  title="About and privacy"
+  description="What the geo-registry is, its licences and its privacy statement."
+  sidebar={projectNav("about")}
+>
+  <Crumbs label="About and privacy" />
+  <div class="prose">
+    <h1>About and privacy</h1>
+    <p>
+      The geo-registry is a public list of geographic data sources, GIS tools, the operations
+      analysts run, and how each engine runs them. It tells you what exists and where to get it. It
+      does not host the data or run anything.
+    </p>
+
+    <h2 id="trust">How far to trust an entry</h2>
+    <p>
+      Every entry shows a review badge. Only entries marked “Reviewed by a person” have been checked
+      by someone. The others are leads, drafts or harvested from an engine, and may be out of date.
+      <a href={href("contribute/")}>Help fix them</a>.
+    </p>
+
+    <h2 id="licences">Licences</h2>
+    <ul>
+      <li>Registry entries and the generated JSON: CC0-1.0.</li>
+      <li>Site, skill and connector code: Apache-2.0.</li>
+      <li>Fonts: IBM Plex, SIL Open Font License. Icons: Lucide, ISC.</li>
+      <li>
+        The data itself belongs to its publishers and their terms apply. Check each publisher's
+        terms before you rely on an entry's licence field.
+      </li>
+    </ul>
+
+    <h2 id="privacy">Privacy</h2>
+    <p>
+      This site counts visits with Cloudflare Web Analytics, which sets no cookies and collects no
+      personal data. Ad blockers can block it, so the counts are a floor.
+    </p>
+    <p>The site has no accounts, and no form posts anywhere except GitHub.</p>
+
+    <h2 id="independence">Independence</h2>
+    <p>
+      This project is not affiliated with any publisher or vendor it lists. Its source is
+      <a href={REPO}>on GitHub</a>.
+    </p>
+  </div>
+</Base>
