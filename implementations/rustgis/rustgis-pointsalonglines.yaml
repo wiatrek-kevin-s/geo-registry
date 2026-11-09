@@ -1,0 +1,17 @@
+id: rustgis-pointsalonglines
+kind: implementation
+name: Points Along Lines
+software: rustgis
+call: {interface: python, name: pointsAlongLines}
+harvest: {harvester: rustgis, engine_version: 0.6.0}
+parameters:
+  input: {type: VectorLayer, required: true}
+  distance: {type: Number, required: true}
+  units: {type: 'Choice(["Kilometers", "Meters", "Miles", "Feet"])'}
+  startOffset: {type: Number}
+  endOffset: {type: Number}
+  includeEnd: {type: Bool}
+  output: {type: Text}
+notes: 'Toolbox: Data Management › Features.'
+status: active
+review: {state: harvested, source: rustgis}

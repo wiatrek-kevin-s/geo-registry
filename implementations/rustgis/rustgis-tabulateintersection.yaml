@@ -1,0 +1,16 @@
+id: rustgis-tabulateintersection
+kind: implementation
+name: Tabulate Intersection
+software: rustgis
+call: {interface: python, name: tabulateIntersection}
+harvest: {harvester: rustgis, engine_version: 0.6.0}
+parameters:
+  zones: {type: PolygonLayer, required: true}
+  zoneFields: {type: 'Fields { input: "zones" }', required: true}
+  classes: {type: PolygonLayer, required: true}
+  classFields: {type: 'Fields { input: "classes" }'}
+  sumFields: {type: 'Fields { input: "classes" }'}
+  output: {type: Text}
+notes: 'Toolbox: Analysis › Statistics.'
+status: active
+review: {state: harvested, source: rustgis}

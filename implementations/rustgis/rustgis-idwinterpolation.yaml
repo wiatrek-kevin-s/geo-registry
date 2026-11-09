@@ -3,7 +3,7 @@ kind: implementation
 name: IDW Interpolation
 software: rustgis
 call: {interface: python, name: idwInterpolation}
-harvest: {harvester: rustgis, engine_version: 0.5.0}
+harvest: {harvester: rustgis, engine_version: 0.6.0}
 parameters:
   input: {type: VectorLayer, required: true}
   field: {type: NumericField, required: true}

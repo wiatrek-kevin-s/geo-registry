@@ -3,7 +3,7 @@ kind: implementation
 name: Buffer
 software: rustgis
 call: {interface: python, name: buffer}
-harvest: {harvester: rustgis, engine_version: 0.5.0}
+harvest: {harvester: rustgis, engine_version: 0.6.0}
 parameters:
   input: {type: Layer, required: true}
   distance: {type: Number, required: true}

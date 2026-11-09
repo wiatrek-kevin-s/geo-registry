@@ -1,0 +1,12 @@
+id: rustgis-polygontoline
+kind: implementation
+name: Polygon To Line
+software: rustgis
+call: {interface: python, name: polygonToLine}
+harvest: {harvester: rustgis, engine_version: 0.6.0}
+parameters:
+  input: {type: PolygonLayer, required: true}
+  output: {type: Text}
+notes: 'Toolbox: Data Management › Features.'
+status: active
+review: {state: harvested, source: rustgis}

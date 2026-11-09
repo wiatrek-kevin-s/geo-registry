@@ -3,7 +3,7 @@ kind: implementation
 name: Zonal Statistics
 software: rustgis
 call: {interface: python, name: zonalStats}
-harvest: {harvester: rustgis, engine_version: 0.5.0}
+harvest: {harvester: rustgis, engine_version: 0.6.0}
 parameters:
   raster: {type: RasterLayer, required: true}
   polygons: {type: PolygonLayer, required: true}

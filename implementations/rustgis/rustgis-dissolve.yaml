@@ -3,10 +3,12 @@ kind: implementation
 name: Dissolve
 software: rustgis
 call: {interface: python, name: dissolve}
-harvest: {harvester: rustgis, engine_version: 0.5.0}
+harvest: {harvester: rustgis, engine_version: 0.6.0}
 parameters:
   input: {type: PolygonLayer, required: true}
   field: {type: Field}
+  statistics: {type: 'FieldStatistics { input: "input", statistics: Summary }'}
+  separator: {type: Text}
   output: {type: Text}
 notes: 'Toolbox: Data Management › Generalization.'
 status: active

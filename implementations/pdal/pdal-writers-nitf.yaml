@@ -22,7 +22,7 @@ parameters:
   project_id: {type: option}
   system_id: {type: option, default: "PDAL\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}
   software_id: {type: option, default: "PDAL 2.10.2 (21d285)\0\0\0\0\0\0\0\0\0\0\0\0"}
-  creation_doy: {type: option, default: '309'}
+  creation_doy: {type: option, default: '313'}
   creation_year: {type: option, default: '2026'}
   pdal_metadata: {type: option, default: 'false'}
   scale_x: {type: option, default: '.01'}
