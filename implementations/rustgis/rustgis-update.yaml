@@ -3,7 +3,7 @@ kind: implementation
 name: Update
 software: rustgis
 call: {interface: python, name: update}
-harvest: {harvester: rustgis, engine_version: 0.5.0}
+harvest: {harvester: rustgis, engine_version: 0.6.0}
 parameters:
   input: {type: PolygonLayer, required: true}
   update: {type: PolygonLayer, required: true}

@@ -3,7 +3,7 @@ kind: implementation
 name: Simplify
 software: rustgis
 call: {interface: python, name: simplify}
-harvest: {harvester: rustgis, engine_version: 0.5.0}
+harvest: {harvester: rustgis, engine_version: 0.6.0}
 parameters:
   input: {type: Layer, required: true}
   tolerance: {type: Number, required: true}

@@ -3,10 +3,12 @@ kind: implementation
 name: Summarize Within
 software: rustgis
 call: {interface: python, name: countPoints}
-harvest: {harvester: rustgis, engine_version: 0.5.0}
+harvest: {harvester: rustgis, engine_version: 0.6.0}
 parameters:
   polygons: {type: PolygonLayer, required: true}
   points: {type: PointLayer, required: true}
+  statistics: {type: 'FieldStatistics { input: "points", statistics: Summary }'}
+  separator: {type: Text}
   output: {type: Text}
 notes: 'Toolbox: Analysis › Summarize.'
 status: active

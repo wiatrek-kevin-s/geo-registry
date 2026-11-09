@@ -1,0 +1,12 @@
+id: rustgis-unsplitline
+kind: implementation
+name: Unsplit Line
+software: rustgis
+call: {interface: python, name: unsplitLine}
+harvest: {harvester: rustgis, engine_version: 0.6.0}
+parameters:
+  input: {type: Layer, required: true}
+  output: {type: Text}
+notes: 'Toolbox: Data Management › Features.'
+status: active
+review: {state: harvested, source: rustgis}
