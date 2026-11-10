@@ -15,6 +15,7 @@ access:
   url: https://source.coop/radiantearth
   auth: none
 notes: MLHub API retired
+last_verified: 2026-11-10
 status: active
 review:
   state: seeded

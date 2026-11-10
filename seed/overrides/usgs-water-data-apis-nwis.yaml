@@ -9,3 +9,4 @@ access:
   auth: none
   notes: Modernized Water Data APIs; they replace waterservices.usgs.gov, which USGS decommissions in the first
     quarter of 2027.
+status: degraded

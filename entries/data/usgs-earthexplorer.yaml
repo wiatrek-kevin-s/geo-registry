@@ -16,6 +16,7 @@ access:
   url: https://earthexplorer.usgs.gov
   auth: none
 notes: M2M API needs approval
+last_verified: 2026-11-10
 status: active
 review:
   state: seeded

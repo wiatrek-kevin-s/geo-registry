@@ -15,6 +15,7 @@ access:
   url: https://github.com/GeoGPT-Research-Project/GeoGPT
   auth: none
 notes: 70B weights too big for laptops
+last_verified: 2026-11-10
 status: active
 review:
   state: seeded

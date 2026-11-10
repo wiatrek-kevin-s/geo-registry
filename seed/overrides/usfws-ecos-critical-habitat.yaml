@@ -11,3 +11,4 @@ access:
   url: https://mapsd.ecosphere.fws.gov/server/rest/services/Datawarehouse/Critical_Habitat/MapServer
   auth: none
   notes: Final critical habitat designations; query formats JSON, GeoJSON, PBF; 2,000 records per request.
+last_verified: 2026-11-10

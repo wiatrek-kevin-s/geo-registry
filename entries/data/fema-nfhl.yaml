@@ -41,7 +41,7 @@ recipe:
 notes: The public NFHL service holds effective data only; preliminary and pending services exist separately
   and are not for rating flood insurance. TLS 1.2 only.
 last_verified: '2026-11-05'
-status: active
+status: degraded
 review:
   state: reviewed
   source: geospatial-tool-atlas

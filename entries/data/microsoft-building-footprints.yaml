@@ -13,6 +13,7 @@ access:
 - type: http
   url: https://github.com/microsoft/GlobalMLBuildingFootprints
   auth: none
+last_verified: 2026-11-10
 status: active
 review:
   state: seeded

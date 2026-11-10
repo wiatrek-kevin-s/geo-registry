@@ -22,6 +22,7 @@ access:
     or service links found on 2026-11-05.
 notes: No machine-readable endpoint found from TCEQ itself; its water district and Edwards Aquifer layers
   are viewable in TCEQ's map viewers and republished by others.
+last_verified: 2026-11-10
 status: active
 review:
   state: seeded

@@ -21,7 +21,7 @@ access:
     digitized by USGS, served by TxGIO. Tested 2026-11-05 (service page).'
 notes: Paper and digital products are also sold through the BEG store (store.beg.utexas.edu); licence
   varies by product.
-status: active
+status: degraded
 review:
   state: seeded
   source: geospatial-tool-atlas

@@ -15,6 +15,7 @@ access:
   url: https://www.capellaspace.com
   auth: none
 notes: Open data on AWS
+last_verified: 2026-11-10
 status: active
 review:
   state: seeded

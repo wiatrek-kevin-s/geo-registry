@@ -28,7 +28,7 @@ access:
   auth: none
   notes: Terrascope STAC (listed on the AWS registry page).
 last_verified: '2026-11-05'
-status: active
+status: degraded
 review:
   state: reviewed
   source: geospatial-tool-atlas

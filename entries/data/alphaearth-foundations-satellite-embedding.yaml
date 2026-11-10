@@ -16,6 +16,7 @@ access:
   url: https://developers.google.com/earth-engine/datasets/catalog/GOOGLE_SATELLITE_EMBEDDING_V1_ANNUAL
   auth: none
 notes: Model closed; embeddings open
+last_verified: 2026-11-10
 status: active
 review:
   state: seeded

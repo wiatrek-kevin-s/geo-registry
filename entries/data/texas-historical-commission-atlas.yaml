@@ -21,6 +21,7 @@ access:
   auth: none
   notes: Official Texas Historical Markers (points).
 notes: Archeological site data is restricted (separate archeological login) and not in the public downloads.
+last_verified: 2026-11-10
 status: active
 review:
   state: seeded

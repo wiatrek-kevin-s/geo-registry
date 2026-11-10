@@ -15,6 +15,7 @@ access:
   url: https://developers.google.com/earth-engine/datasets
   auth: none
 notes: Platform needs Google account; non-commercial free
+last_verified: 2026-11-10
 status: active
 review:
   state: seeded

@@ -15,6 +15,7 @@ access:
   url: https://www.usgs.gov/landsat-missions
   auth: none
 notes: STAC on AWS and Planetary Computer
+last_verified: 2026-11-10
 status: active
 review:
   state: seeded
