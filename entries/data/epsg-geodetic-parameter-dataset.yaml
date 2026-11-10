@@ -16,6 +16,7 @@ access:
   url: https://epsg.org
   auth: none
 notes: Source of CRS codes embedded in PROJ.
+last_verified: 2026-11-10
 status: active
 review:
   state: seeded

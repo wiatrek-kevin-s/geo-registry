@@ -13,3 +13,4 @@ access:
   auth: api-key
   notes: CKAN API (action/package_search, ...); needs an api.data.gov key in the x-api-key header (DEMO_KEY for
     trials).
+last_verified: 2026-11-10

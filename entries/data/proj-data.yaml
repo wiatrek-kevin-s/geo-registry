@@ -15,6 +15,7 @@ access:
   url: https://github.com/OSGeo/PROJ-data
   auth: none
 notes: Needed offline for accurate datum shifts.
+last_verified: 2026-11-10
 status: active
 review:
   state: seeded

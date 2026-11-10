@@ -32,7 +32,7 @@ access:
   notes: Index of 3DEP projects and products.
 notes: Primary US lidar source.
 last_verified: '2026-11-05'
-status: active
+status: degraded
 review:
   state: reviewed
   source: geospatial-tool-atlas

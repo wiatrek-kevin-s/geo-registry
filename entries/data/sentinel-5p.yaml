@@ -14,6 +14,7 @@ access:
 - type: http
   url: https://sentiwiki.copernicus.eu/web/sentinel-5p
   auth: none
+last_verified: 2026-11-10
 status: active
 review:
   state: seeded

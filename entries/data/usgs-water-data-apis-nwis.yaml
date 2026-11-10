@@ -17,7 +17,7 @@ access:
   notes: Modernized Water Data APIs; they replace waterservices.usgs.gov, which USGS decommissions in
     the first quarter of 2027.
 notes: OGC API-Features endpoints
-status: active
+status: degraded
 review:
   state: seeded
   source: geospatial-tool-atlas

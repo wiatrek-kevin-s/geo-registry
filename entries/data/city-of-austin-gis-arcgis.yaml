@@ -23,7 +23,7 @@ access:
 notes: Derived products should credit 'City of Austin, Geospatial Services - Data Development' (service
   copyright text).
 last_verified: '2026-11-05'
-status: active
+status: degraded
 review:
   state: reviewed
   source: geospatial-tool-atlas

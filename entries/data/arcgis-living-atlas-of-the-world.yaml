@@ -15,6 +15,7 @@ access:
   url: https://livingatlas.arcgis.com/
   auth: none
 notes: Ready-made context layers; some need subscription credits
+last_verified: 2026-11-10
 status: active
 review:
   state: seeded

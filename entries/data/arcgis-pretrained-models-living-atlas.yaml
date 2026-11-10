@@ -16,6 +16,7 @@ access:
   url: https://livingatlas.arcgis.com/en/browse/?q=dlpk
   auth: none
 notes: dlpk format, ArcGIS only
+last_verified: 2026-11-10
 status: active
 review:
   state: seeded

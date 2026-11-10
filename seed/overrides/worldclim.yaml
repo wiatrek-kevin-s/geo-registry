@@ -2,3 +2,4 @@
 # review.state stays seeded until a person checks it. Evidence: reviews/global-batch-1-2026-11.md
 id: worldclim
 publisher: WorldClim (Fick and Hijmans)
+last_verified: 2026-11-10

@@ -3,3 +3,4 @@
 id: noaa-open-data-dissemination-nodd
 coverage:
   region: Global
+status: degraded

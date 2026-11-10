@@ -17,6 +17,7 @@ access:
   url: https://openaddresses.io/
   auth: none
 notes: Per-source licences vary
+last_verified: 2026-11-10
 status: active
 review:
   state: seeded

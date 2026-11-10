@@ -16,6 +16,7 @@ access:
   url: https://regrid.com/
   auth: none
 notes: Paid; nationwide parcels
+last_verified: 2026-11-10
 status: active
 review:
   state: seeded
