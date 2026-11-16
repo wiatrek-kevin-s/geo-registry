@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.breusch_pagan
 software: spreg
 call: {interface: python, name: spreg.breusch_pagan}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters:
   reg: {type: any, required: true}
   z: {type: any}

@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.optim_moments
 software: spreg
 call: {interface: python, name: spreg.optim_moments}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters:
   moments_in: {type: any, required: true}
   vcX: {type: any, note: 'default array([0])'}

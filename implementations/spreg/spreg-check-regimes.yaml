@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.check_regimes
 software: spreg
 call: {interface: python, name: spreg.check_regimes}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters:
   reg_set: {type: any, required: true}
   N: {type: any}

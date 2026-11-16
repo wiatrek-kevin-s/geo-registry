@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.sur_crossprod
 software: spreg
 call: {interface: python, name: spreg.sur_crossprod}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters:
   bigZ: {type: any, required: true}
   bigy: {type: any, required: true}

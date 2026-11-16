@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.sur_lmtest
 software: spreg
 call: {interface: python, name: spreg.sur_lmtest}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters:
   n: {type: any, required: true}
   n_eq: {type: any, required: true}
