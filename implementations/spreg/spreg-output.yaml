@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.output
 software: spreg
 call: {interface: python, name: spreg.output}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters:
   reg: {type: any, required: true}
   vm: {type: any, required: true}

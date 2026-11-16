@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.RegressionPropsVM
 software: spreg
 call: {interface: python, name: spreg.RegressionPropsVM}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters: {}
 notes: 'Class: called through its constructor.'
 status: active

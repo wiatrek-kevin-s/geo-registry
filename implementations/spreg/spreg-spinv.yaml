@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.spinv
 software: spreg
 call: {interface: python, name: spreg.spinv}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters:
   a: {type: any, required: true}
 status: active

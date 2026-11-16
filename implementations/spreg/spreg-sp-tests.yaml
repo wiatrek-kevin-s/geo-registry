@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.sp_tests
 software: spreg
 call: {interface: python, name: spreg.sp_tests}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters:
   regprob: {type: any}
   obj_list: {type: any}

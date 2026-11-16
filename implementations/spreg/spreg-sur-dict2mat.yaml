@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.sur_dict2mat
 software: spreg
 call: {interface: python, name: spreg.sur_dict2mat}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters:
   dicts: {type: any, required: true}
 status: active

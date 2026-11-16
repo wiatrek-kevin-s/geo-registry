@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.foptim_par
 software: spreg
 call: {interface: python, name: spreg.foptim_par}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters:
   par: {type: any, required: true}
   moments: {type: any, required: true}

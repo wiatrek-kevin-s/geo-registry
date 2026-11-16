@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.regimeX_setup
 software: spreg
 call: {interface: python, name: spreg.regimeX_setup}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters:
   x: {type: any, required: true}
   regimes: {type: any, required: true}

@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.Regimes_Frame
 software: spreg
 call: {interface: python, name: spreg.Regimes_Frame}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters:
   x: {type: any, required: true}
   regimes: {type: any, required: true}

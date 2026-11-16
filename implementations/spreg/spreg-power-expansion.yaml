@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.power_expansion
 software: spreg
 call: {interface: python, name: spreg.power_expansion}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters:
   w: {type: any, required: true}
   data: {type: any, required: true}

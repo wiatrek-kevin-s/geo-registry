@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.make_wx
 software: spreg
 call: {interface: python, name: spreg.make_wx}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters:
   x: {type: any, required: true}
   w: {type: any, required: true}

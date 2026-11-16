@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.surLMlag
 software: spreg
 call: {interface: python, name: spreg.surLMlag}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters:
   n_eq: {type: any, required: true}
   WS: {type: any, required: true}

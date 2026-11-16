@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.check_endog
 software: spreg
 call: {interface: python, name: spreg.check_endog}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters:
   arrays: {type: any, required: true}
   names: {type: any, required: true}
