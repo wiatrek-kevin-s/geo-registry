@@ -14,7 +14,7 @@ access:
   url: https://data.bris.ac.uk/data/dataset/s5hqmjcdj8yo2ibzi9b4ew3sn
   auth: none
 notes: Non-commercial only
-status: active
+status: degraded
 review:
   state: seeded
   source: geospatial-tool-atlas

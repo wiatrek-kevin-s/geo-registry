@@ -11,3 +11,4 @@ access:
     auth: none
     notes: "Geologic Database of Texas: the 38 Geologic Atlas of Texas sheets (1:250,000) compiled by BEG, digitized by USGS, served by TxGIO. Tested 2026-11-05 (service page)."
 notes: Paper and digital products are also sold through the BEG store (store.beg.utexas.edu); licence varies by product.
+status: degraded

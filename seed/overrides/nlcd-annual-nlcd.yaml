@@ -11,3 +11,4 @@ access:
     url: s3://usgs-landcover/annual-nlcd/c1/v0/
     auth: none
     notes: AWS us-west-2, requester pays (the requester pays the transfer); regions cu, ak, hi; tile and mosaic folders.
+status: degraded

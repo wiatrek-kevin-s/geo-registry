@@ -25,3 +25,4 @@ review:
   state: reviewed
   reviewed_by: wiatrek-kevin-s
   reviewed_on: '2026-11-05'
+status: degraded
