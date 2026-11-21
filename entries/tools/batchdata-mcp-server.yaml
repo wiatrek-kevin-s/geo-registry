@@ -1,0 +1,24 @@
+id: batchdata-mcp-server
+kind: tool
+name: BatchData MCP Server
+category: AI, agents & MCP for GIS
+subcategory: Vendor/location MCP servers
+tool_kind: Server
+summary: 'Hosted MCP for US property data: property lookup, comparables, parcel and owner search, skip
+  tracing and address verification.'
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- MCP
+call:
+- mcp
+wrapped_by_columbus: false
+project_status: active
+url: https://batchdata.io/mcp-server
+notes: Endpoint https://mcp.batchdata.com; needs a BatchData account (OAuth sign-in or API token)
+status: active
+review:
+  state: seeded
+  source: vendor
+  source_row: 383
