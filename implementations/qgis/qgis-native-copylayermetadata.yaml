@@ -3,7 +3,7 @@ kind: implementation
 name: native:copylayermetadata
 software: qgis
 call: {interface: qgis-process, name: 'native:copylayermetadata'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   DEFAULT: {type: boolean, required: true, default: false}
   SOURCE: {type: layer, required: true}

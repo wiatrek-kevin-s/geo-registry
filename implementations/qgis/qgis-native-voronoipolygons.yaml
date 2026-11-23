@@ -3,7 +3,7 @@ kind: implementation
 name: native:voronoipolygons
 software: qgis
 call: {interface: qgis-process, name: 'native:voronoipolygons'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   BUFFER: {type: number, required: true, default: 0}
   COPY_ATTRIBUTES: {type: boolean, required: true, default: true}

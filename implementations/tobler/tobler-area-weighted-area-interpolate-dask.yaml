@@ -3,7 +3,7 @@ kind: implementation
 name: tobler.area_weighted.area_interpolate_dask
 software: tobler
 call: {interface: python, name: tobler.area_weighted.area_interpolate_dask}
-harvest: {harvester: python-packages, engine_version: 0.14.0}
+harvest: {harvester: python-packages, engine_version: 0.14.1}
 parameters:
   source_dgdf: {type: any, required: true}
   target_dgdf: {type: any, required: true}

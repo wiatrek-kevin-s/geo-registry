@@ -3,7 +3,7 @@ kind: implementation
 name: native:countpointsinpolygon
 software: qgis
 call: {interface: qgis-process, name: 'native:countpointsinpolygon'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   CLASSFIELD: {type: field}
   FIELD: {type: string, required: true, default: NUMPOINTS}

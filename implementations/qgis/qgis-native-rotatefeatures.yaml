@@ -3,7 +3,7 @@ kind: implementation
 name: native:rotatefeatures
 software: qgis
 call: {interface: qgis-process, name: 'native:rotatefeatures'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   ANCHOR: {type: point}
   ANGLE: {type: number, required: true, default: 0.0}

@@ -3,7 +3,7 @@ kind: implementation
 name: pdal:compare
 software: qgis
 call: {interface: qgis-process, name: 'pdal:compare'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   CYLINDER_HALF_LENGTH: {type: distance, required: true, default: 5.0}
   CYLINDER_ORIENTATION: {type: enum, required: true, default: 0, values: [0, 1, 2], note: '0 Up, 1 Origin, 2 None'}

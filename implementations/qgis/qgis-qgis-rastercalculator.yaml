@@ -3,11 +3,11 @@ kind: implementation
 name: qgis:rastercalculator
 software: qgis
 call: {interface: qgis-process, name: 'qgis:rastercalculator'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   CELLSIZE: {type: number, default: 0.0}
   CRS: {type: crs}
-  EXPRESSION: {type: raster_calc_expression, required: true}
+  EXPRESSION: {type: string, required: true}
   EXTENT: {type: extent}
   LAYERS: {type: multilayer}
   OUTPUT: {type: rasterDestination, required: true, note: output}

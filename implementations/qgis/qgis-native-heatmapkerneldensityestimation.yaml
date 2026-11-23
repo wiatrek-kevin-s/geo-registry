@@ -3,7 +3,7 @@ kind: implementation
 name: native:heatmapkerneldensityestimation
 software: qgis
 call: {interface: qgis-process, name: 'native:heatmapkerneldensityestimation'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   DECAY: {type: number, default: 0.0}
   INPUT: {type: source, required: true}

@@ -3,7 +3,7 @@ kind: implementation
 name: gdal:hillshade
 software: qgis
 call: {interface: qgis-process, name: 'gdal:hillshade'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   ALTITUDE: {type: number, required: true, default: 45.0}
   AZIMUTH: {type: number, required: true, default: 315.0}

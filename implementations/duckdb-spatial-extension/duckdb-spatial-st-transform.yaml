@@ -3,7 +3,7 @@ kind: implementation
 name: ST_Transform
 software: duckdb-spatial-extension
 call: {interface: sql, name: ST_Transform}
-harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+harvest: {harvester: duckdb-spatial, engine_version: 37bff11aea}
 parameters:
   box: {type: BOX_2D}
   source_crs: {type: VARCHAR}

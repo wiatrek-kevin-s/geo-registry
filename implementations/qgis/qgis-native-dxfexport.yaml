@@ -3,7 +3,7 @@ kind: implementation
 name: native:dxfexport
 software: qgis
 call: {interface: qgis-process, name: 'native:dxfexport'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   CRS: {type: crs, required: true, default: 'EPSG:4326'}
   ENCODING: {type: enum, required: true, default: ISO-8859-1, values: [0, 1, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 2, 20,

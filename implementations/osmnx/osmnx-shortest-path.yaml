@@ -3,7 +3,7 @@ kind: implementation
 name: osmnx.shortest_path
 software: osmnx
 call: {interface: python, name: osmnx.shortest_path}
-harvest: {harvester: python-packages, engine_version: 2.1.1}
+harvest: {harvester: python-packages, engine_version: 2.2.0}
 parameters:
   G: {type: nx.MultiDiGraph, required: true}
   orig: {type: 'int | Iterable[int]', required: true}

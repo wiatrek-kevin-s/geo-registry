@@ -3,7 +3,7 @@ kind: implementation
 name: tobler.dasymetric.raster_tools.extract_raster_features
 software: tobler
 call: {interface: python, name: tobler.dasymetric.raster_tools.extract_raster_features}
-harvest: {harvester: python-packages, engine_version: 0.14.0}
+harvest: {harvester: python-packages, engine_version: 0.14.1}
 parameters:
   gdf: {type: any, required: true}
   raster_path: {type: any, required: true}

@@ -3,7 +3,7 @@ kind: implementation
 name: osmnx.utils_geo.bbox_from_point
 software: osmnx
 call: {interface: python, name: osmnx.utils_geo.bbox_from_point}
-harvest: {harvester: python-packages, engine_version: 2.1.1}
+harvest: {harvester: python-packages, engine_version: 2.2.0}
 parameters:
   point: {type: 'tuple[float, float]', required: true}
   dist: {type: float, required: true}

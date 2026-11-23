@@ -3,7 +3,7 @@ kind: implementation
 name: native:hublines
 software: qgis
 call: {interface: qgis-process, name: 'native:hublines'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   ANTIMERIDIAN_SPLIT: {type: boolean, required: true, default: false}
   GEODESIC: {type: boolean, required: true, default: false}

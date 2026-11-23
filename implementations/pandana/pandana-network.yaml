@@ -3,7 +3,7 @@ kind: implementation
 name: pandana.Network
 software: pandana
 call: {interface: python, name: pandana.Network}
-harvest: {harvester: python-packages, engine_version: '0.8'}
+harvest: {harvester: python-packages, engine_version: 0.8.1}
 parameters:
   node_x: {type: any, required: true}
   node_y: {type: any, required: true}

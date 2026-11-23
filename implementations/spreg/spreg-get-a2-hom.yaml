@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.get_A2_hom
 software: spreg
 call: {interface: python, name: spreg.get_A2_hom}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters:
   s: {type: any, required: true}
 status: active

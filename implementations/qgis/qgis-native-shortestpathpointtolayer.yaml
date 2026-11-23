@@ -3,7 +3,7 @@ kind: implementation
 name: native:shortestpathpointtolayer
 software: qgis
 call: {interface: qgis-process, name: 'native:shortestpathpointtolayer'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   DEFAULT_DIRECTION: {type: enum, required: true, default: 2, values: [0, 1, 2], note: '0 Forward direction, 1 Backward direction,
       2 Both directions'}

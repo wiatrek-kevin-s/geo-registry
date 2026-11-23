@@ -3,7 +3,7 @@ kind: implementation
 name: native:polygonize
 software: qgis
 call: {interface: qgis-process, name: 'native:polygonize'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   INPUT: {type: source, required: true}
   KEEP_FIELDS: {type: boolean, required: true, default: false}

@@ -3,7 +3,7 @@ kind: implementation
 name: qgis:variabledistancebuffer
 software: qgis
 call: {interface: qgis-process, name: 'qgis:variabledistancebuffer'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   DISSOLVE: {type: boolean, required: true, default: false}
   END_CAP_STYLE: {type: enum, required: true, default: 0, values: [0, 1, 2], note: '0 Round, 1 Flat, 2 Square'}

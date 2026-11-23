@@ -3,7 +3,7 @@ kind: implementation
 name: native:calculateexpression
 software: qgis
 call: {interface: qgis-process, name: 'native:calculateexpression'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   INPUT: {type: string, required: true}
 notes: Deprecated in QGIS.

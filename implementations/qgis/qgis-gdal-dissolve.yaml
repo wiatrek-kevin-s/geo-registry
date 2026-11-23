@@ -3,7 +3,7 @@ kind: implementation
 name: gdal:dissolve
 software: qgis
 call: {interface: qgis-process, name: 'gdal:dissolve'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   COMPUTE_AREA: {type: boolean, required: true, default: false}
   COMPUTE_STATISTICS: {type: boolean, required: true, default: false}

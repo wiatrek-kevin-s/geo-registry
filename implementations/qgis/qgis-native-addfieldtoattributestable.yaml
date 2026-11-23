@@ -3,7 +3,7 @@ kind: implementation
 name: native:addfieldtoattributestable
 software: qgis
 call: {interface: qgis-process, name: 'native:addfieldtoattributestable'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   FIELD_ALIAS: {type: string}
   FIELD_COMMENT: {type: string}

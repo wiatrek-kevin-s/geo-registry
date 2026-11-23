@@ -3,7 +3,7 @@ kind: implementation
 name: pdal:thinbydecimate
 software: qgis
 call: {interface: qgis-process, name: 'pdal:thinbydecimate'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   FILTER_EXPRESSION: {type: expression}
   FILTER_EXTENT: {type: extent}

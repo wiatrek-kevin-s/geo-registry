@@ -3,7 +3,7 @@ kind: implementation
 name: native:exportlayersinformation
 software: qgis
 call: {interface: qgis-process, name: 'native:exportlayersinformation'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   LAYERS: {type: multilayer, required: true}
   OUTPUT: {type: sink, required: true, note: output}

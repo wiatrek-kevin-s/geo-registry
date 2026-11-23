@@ -1,0 +1,15 @@
+id: qgis-native-rastercellindex
+kind: implementation
+name: native:rastercellindex
+software: qgis
+call: {interface: qgis-process, name: 'native:rastercellindex'}
+harvest: {harvester: qgis, engine_version: 4.4.0}
+parameters:
+  BAND: {type: band, required: true, default: 1}
+  CREATION_OPTIONS: {type: string}
+  INPUT: {type: raster, required: true}
+  NODATA: {type: number, required: true, default: -9999}
+  ORDER: {type: enum, required: true, default: 0, values: [0, 1], note: '0 Ascending, 1 Descending'}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

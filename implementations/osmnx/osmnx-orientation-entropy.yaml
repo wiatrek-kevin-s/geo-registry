@@ -3,7 +3,7 @@ kind: implementation
 name: osmnx.orientation_entropy
 software: osmnx
 call: {interface: python, name: osmnx.orientation_entropy}
-harvest: {harvester: python-packages, engine_version: 2.1.1}
+harvest: {harvester: python-packages, engine_version: 2.2.0}
 parameters:
   G: {type: nx.MultiGraph | nx.MultiDiGraph, required: true}
   num_bins: {type: int, default: 36}

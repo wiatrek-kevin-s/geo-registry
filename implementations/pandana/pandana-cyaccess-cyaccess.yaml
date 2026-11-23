@@ -3,7 +3,7 @@ kind: implementation
 name: pandana.cyaccess.cyaccess
 software: pandana
 call: {interface: python, name: pandana.cyaccess.cyaccess}
-harvest: {harvester: python-packages, engine_version: '0.8'}
+harvest: {harvester: python-packages, engine_version: 0.8.1}
 parameters: {}
 notes: 'Class: called through its constructor.'
 status: active

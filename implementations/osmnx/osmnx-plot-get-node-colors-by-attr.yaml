@@ -3,7 +3,7 @@ kind: implementation
 name: osmnx.plot.get_node_colors_by_attr
 software: osmnx
 call: {interface: python, name: osmnx.plot.get_node_colors_by_attr}
-harvest: {harvester: python-packages, engine_version: 2.1.1}
+harvest: {harvester: python-packages, engine_version: 2.2.0}
 parameters:
   G: {type: nx.MultiDiGraph, required: true}
   attr: {type: str, required: true}

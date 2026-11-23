@@ -3,7 +3,7 @@ kind: implementation
 name: qgis:topologicalcoloring
 software: qgis
 call: {interface: qgis-process, name: 'qgis:topologicalcoloring'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   BALANCE: {type: enum, required: true, default: 0, values: [0, 1, 2], note: '0 By feature count, 1 By assigned area, 2 By
       distance between colors'}

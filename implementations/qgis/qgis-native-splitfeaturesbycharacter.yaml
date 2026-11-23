@@ -3,7 +3,7 @@ kind: implementation
 name: native:splitfeaturesbycharacter
 software: qgis
 call: {interface: qgis-process, name: 'native:splitfeaturesbycharacter'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   CHAR: {type: string, required: true}
   FIELD: {type: field, required: true}

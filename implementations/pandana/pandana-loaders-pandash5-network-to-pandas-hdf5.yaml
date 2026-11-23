@@ -3,7 +3,7 @@ kind: implementation
 name: pandana.loaders.pandash5.network_to_pandas_hdf5
 software: pandana
 call: {interface: python, name: pandana.loaders.pandash5.network_to_pandas_hdf5}
-harvest: {harvester: python-packages, engine_version: '0.8'}
+harvest: {harvester: python-packages, engine_version: 0.8.1}
 parameters:
   network: {type: any, required: true}
   filename: {type: any, required: true}

@@ -3,7 +3,7 @@ kind: implementation
 name: native:filterlayersbytype
 software: qgis
 call: {interface: qgis-process, name: 'native:filterlayersbytype'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   INPUT: {type: layer, required: true}
   RASTER: {type: rasterDestination, note: output}

@@ -3,7 +3,7 @@ kind: implementation
 name: qgis:advancedpythonfieldcalculator
 software: qgis
 call: {interface: qgis-process, name: 'qgis:advancedpythonfieldcalculator'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   FIELD_LENGTH: {type: number, required: true, default: 10}
   FIELD_NAME: {type: string, required: true, default: NewField}

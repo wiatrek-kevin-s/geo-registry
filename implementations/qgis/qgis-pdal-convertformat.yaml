@@ -3,7 +3,7 @@ kind: implementation
 name: pdal:convertformat
 software: qgis
 call: {interface: qgis-process, name: 'pdal:convertformat'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   INPUT: {type: pointcloud, required: true}
   OUTPUT: {type: pointCloudDestination, required: true, note: output}

@@ -3,7 +3,7 @@ kind: implementation
 name: qgis:regularpoints
 software: qgis
 call: {interface: qgis-process, name: 'qgis:regularpoints'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   CRS: {type: crs, required: true, default: ProjectCrs}
   EXTENT: {type: extent, required: true}

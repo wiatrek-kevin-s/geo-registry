@@ -1,0 +1,19 @@
+id: qgis-native-upslopeareafrompoint
+kind: implementation
+name: native:upslopeareafrompoint
+software: qgis
+call: {interface: qgis-process, name: 'native:upslopeareafrompoint'}
+harvest: {harvester: qgis, engine_version: 4.4.0}
+parameters:
+  CONVERGE: {type: number, required: true, default: 1.1}
+  CREATION_OPTIONS: {type: string}
+  ELEVATION: {type: raster, required: true}
+  METHOD: {type: enum, required: true, default: 2, values: [0, 1, 2, 3, 4], note: '0 Deterministic 8, 1 Deterministic Infinity,
+      2 Multiple Flow Direction, 3 Multiple Triangular Flow Direction, 4 Multiple Maximum Downslope Gradient Based Flow Direction'}
+  MFD_CONTOUR: {type: boolean, required: true, default: false}
+  NODATA: {type: number, required: true, default: -9999}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  SINK_ROUTES: {type: raster}
+  TARGET_PT: {type: point, required: true}
+status: active
+review: {state: harvested, source: qgis}

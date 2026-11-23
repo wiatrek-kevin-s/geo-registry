@@ -3,7 +3,7 @@ kind: implementation
 name: gdal:clipvectorbyextent
 software: qgis
 call: {interface: qgis-process, name: 'gdal:clipvectorbyextent'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   EXTENT: {type: extent, required: true}
   INPUT: {type: source, required: true}

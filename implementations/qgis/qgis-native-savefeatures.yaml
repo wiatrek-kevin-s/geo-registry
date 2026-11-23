@@ -3,7 +3,7 @@ kind: implementation
 name: native:savefeatures
 software: qgis
 call: {interface: qgis-process, name: 'native:savefeatures'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   ACTION_ON_EXISTING_FILE: {type: enum, required: true, default: 0, values: [0, 1, 2, 3], note: '0 Create or overwrite file,
       1 Create or overwrite layer, 2 Append features to existing layer, but do not create new fields, 3 Append features to

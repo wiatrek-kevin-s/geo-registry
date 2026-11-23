@@ -3,7 +3,7 @@ kind: implementation
 name: native:checkgeometryhole
 software: qgis
 call: {interface: qgis-process, name: 'native:checkgeometryhole'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   AREA_THRESHOLD: {type: area}
   ERRORS: {type: sink, required: true, note: output}

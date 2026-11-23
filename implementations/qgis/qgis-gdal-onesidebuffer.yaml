@@ -3,7 +3,7 @@ kind: implementation
 name: gdal:onesidebuffer
 software: qgis
 call: {interface: qgis-process, name: 'gdal:onesidebuffer'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   BUFFER_SIDE: {type: enum, required: true, default: 0, values: [0, 1], note: '0 Right, 1 Left'}
   DISSOLVE: {type: boolean, required: true, default: false}

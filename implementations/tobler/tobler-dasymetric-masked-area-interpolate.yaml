@@ -3,7 +3,7 @@ kind: implementation
 name: tobler.dasymetric.masked_area_interpolate
 software: tobler
 call: {interface: python, name: tobler.dasymetric.masked_area_interpolate}
-harvest: {harvester: python-packages, engine_version: 0.14.0}
+harvest: {harvester: python-packages, engine_version: 0.14.1}
 parameters:
   source_df: {type: any, required: true}
   target_df: {type: any, required: true}

@@ -1,0 +1,15 @@
+id: qgis-native-strahlerorderfromflowdirection
+kind: implementation
+name: native:strahlerorderfromflowdirection
+software: qgis
+call: {interface: qgis-process, name: 'native:strahlerorderfromflowdirection'}
+harvest: {harvester: qgis, engine_version: 4.4.0}
+parameters:
+  CREATION_OPTIONS: {type: string}
+  INPUT: {type: raster, required: true}
+  INPUT_FLOW_DIRECTION: {type: raster, required: true}
+  NODATA: {type: number, required: true, default: -9999}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  THRESHOLD: {type: number, required: true, default: 1}
+status: active
+review: {state: harvested, source: qgis}

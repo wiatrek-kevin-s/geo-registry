@@ -3,7 +3,7 @@ kind: implementation
 name: pandana.loaders.osm.pdna_network_from_bbox
 software: pandana
 call: {interface: python, name: pandana.loaders.osm.pdna_network_from_bbox}
-harvest: {harvester: python-packages, engine_version: '0.8'}
+harvest: {harvester: python-packages, engine_version: 0.8.1}
 parameters:
   lat_min: {type: any}
   lng_min: {type: any}

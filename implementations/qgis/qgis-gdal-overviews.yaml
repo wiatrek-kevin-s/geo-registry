@@ -3,7 +3,7 @@ kind: implementation
 name: gdal:overviews
 software: qgis
 call: {interface: qgis-process, name: 'gdal:overviews'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   CLEAN: {type: boolean, required: true, default: false}
   EXTRA: {type: string}

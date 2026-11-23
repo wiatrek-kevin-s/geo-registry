@@ -3,7 +3,7 @@ kind: implementation
 name: native:convertgpsdata
 software: qgis
 call: {interface: qgis-process, name: 'native:convertgpsdata'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   FEATURE_TYPE: {type: enum, required: true, default: 0, values: [0, 1, 2], note: '0 Waypoints, 1 Routes, 2 Tracks'}
   FORMAT: {type: string, required: true}

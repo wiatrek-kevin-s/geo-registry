@@ -3,7 +3,7 @@ kind: implementation
 name: native:createpointslayerfromtable
 software: qgis
 call: {interface: qgis-process, name: 'native:createpointslayerfromtable'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   INPUT: {type: source, required: true}
   MFIELD: {type: field}

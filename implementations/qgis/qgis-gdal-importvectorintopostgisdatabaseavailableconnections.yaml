@@ -3,7 +3,7 @@ kind: implementation
 name: gdal:importvectorintopostgisdatabaseavailableconnections
 software: qgis
 call: {interface: qgis-process, name: 'gdal:importvectorintopostgisdatabaseavailableconnections'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   ADDFIELDS: {type: boolean, required: true, default: false}
   APPEND: {type: boolean, required: true, default: false}

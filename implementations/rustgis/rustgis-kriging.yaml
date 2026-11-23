@@ -3,7 +3,7 @@ kind: implementation
 name: Ordinary Kriging
 software: rustgis
 call: {interface: python, name: kriging}
-harvest: {harvester: rustgis, engine_version: 0.5.0}
+harvest: {harvester: rustgis, engine_version: 0.8.0}
 parameters:
   input: {type: VectorLayer, required: true}
   field: {type: NumericField, required: true}
@@ -14,6 +14,7 @@ parameters:
   range: {type: Number}
   extent: {type: Text}
   pixelSize: {type: Number}
+  crs: {type: Text}
   output: {type: Text}
 notes: 'Toolbox: Analysis › Interpolation.'
 status: active

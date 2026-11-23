@@ -3,7 +3,7 @@ kind: implementation
 name: native:convertgpxfeaturetype
 software: qgis
 call: {interface: qgis-process, name: 'native:convertgpxfeaturetype'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   CONVERSION: {type: enum, required: true, default: 0, values: [0, 1, 2, 3], note: '0 Waypoints from a Route, 1 Waypoints
       from a Track, 2 Route from Waypoints, 3 Track from Waypoints'}

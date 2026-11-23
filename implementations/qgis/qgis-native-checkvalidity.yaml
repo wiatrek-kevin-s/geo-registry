@@ -3,14 +3,14 @@ kind: implementation
 name: native:checkvalidity
 software: qgis
 call: {interface: qgis-process, name: 'native:checkvalidity'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   ERROR_OUTPUT: {type: sink, note: output}
   IGNORE_RING_SELF_INTERSECTION: {type: boolean, required: true, default: false}
   INPUT_LAYER: {type: source, required: true}
   INVALID_OUTPUT: {type: sink, note: output}
-  METHOD: {type: enum, required: true, default: 2, values: [0, 1, 2], note: '0 The one selected in digitizing settings, 1
-      QGIS, 2 GEOS'}
+  METHOD: {type: enum, required: true, default: 2, values: [0, 1, 2, 3], note: '0 The one selected in digitizing settings,
+      1 QGIS, 2 GEOS, 3 SFCGAL'}
   VALID_OUTPUT: {type: sink, note: output}
 status: active
 review: {state: harvested, source: qgis}

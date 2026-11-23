@@ -3,7 +3,7 @@ kind: implementation
 name: native:writevectortiles_xyz
 software: qgis
 call: {interface: qgis-process, name: 'native:writevectortiles_xyz'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   EXTENT: {type: extent}
   LAYERS: {type: vectortilewriterlayers, required: true}

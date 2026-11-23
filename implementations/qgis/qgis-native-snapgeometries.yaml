@@ -3,7 +3,7 @@ kind: implementation
 name: native:snapgeometries
 software: qgis
 call: {interface: qgis-process, name: 'native:snapgeometries'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   BEHAVIOR: {type: enum, required: true, values: [0, 1, 2, 3, 4, 5, 6, 7], note: '0 Prefer aligning nodes, insert extra vertices
       where required, 1 Prefer closest point, insert extra vertices where required, 2 Prefer aligning nodes, don''t insert

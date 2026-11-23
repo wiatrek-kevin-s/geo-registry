@@ -3,7 +3,7 @@ kind: implementation
 name: gdal:rgbtopct
 software: qgis
 call: {interface: qgis-process, name: 'gdal:rgbtopct'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   INPUT: {type: raster, required: true}
   NCOLORS: {type: number, required: true, default: 2}

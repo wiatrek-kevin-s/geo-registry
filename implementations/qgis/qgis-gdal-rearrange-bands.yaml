@@ -3,7 +3,7 @@ kind: implementation
 name: gdal:rearrange_bands
 software: qgis
 call: {interface: qgis-process, name: 'gdal:rearrange_bands'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   BANDS: {type: band, required: true, note: multiple values}
   CREATION_OPTIONS: {type: string, default: ''}

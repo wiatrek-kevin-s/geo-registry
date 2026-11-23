@@ -1,0 +1,13 @@
+id: osmnx-graph-graph-from-pbf
+kind: implementation
+name: osmnx.graph.graph_from_pbf
+software: osmnx
+call: {interface: python, name: osmnx.graph.graph_from_pbf}
+harvest: {harvester: python-packages, engine_version: 2.2.0}
+parameters:
+  filepath: {type: str | Path, required: true}
+  network_type: {type: str | None, default: all}
+  simplify: {type: bool, default: true}
+  retain_all: {type: bool, default: false}
+status: active
+review: {state: harvested, source: python-packages}

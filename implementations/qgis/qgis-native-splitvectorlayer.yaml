@@ -3,7 +3,7 @@ kind: implementation
 name: native:splitvectorlayer
 software: qgis
 call: {interface: qgis-process, name: 'native:splitvectorlayer'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   FIELD: {type: field, required: true}
   FILE_TYPE: {type: enum, default: 0, values: [0, 1, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 2, 20, 21, 3, 4, 5, 6, 7, 8,

@@ -3,7 +3,7 @@ kind: implementation
 name: osmnx.plot.get_colors
 software: osmnx
 call: {interface: python, name: osmnx.plot.get_colors}
-harvest: {harvester: python-packages, engine_version: 2.1.1}
+harvest: {harvester: python-packages, engine_version: 2.2.0}
 parameters:
   n: {type: int, required: true}
   cmap: {type: str, default: viridis}

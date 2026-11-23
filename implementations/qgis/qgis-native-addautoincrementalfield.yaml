@@ -3,7 +3,7 @@ kind: implementation
 name: native:addautoincrementalfield
 software: qgis
 call: {interface: qgis-process, name: 'native:addautoincrementalfield'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   FIELD_NAME: {type: string, required: true, default: AUTO}
   GROUP_FIELDS: {type: field, note: multiple values}

@@ -3,7 +3,7 @@ kind: implementation
 name: native:reprojectlayer
 software: qgis
 call: {interface: qgis-process, name: 'native:reprojectlayer'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   CONVERT_CURVED_GEOMETRIES: {type: boolean, required: true, default: false}
   INPUT: {type: source, required: true}

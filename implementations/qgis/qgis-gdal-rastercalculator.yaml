@@ -3,7 +3,7 @@ kind: implementation
 name: gdal:rastercalculator
 software: qgis
 call: {interface: qgis-process, name: 'gdal:rastercalculator'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   BAND_A: {type: band, required: true}
   BAND_B: {type: band}

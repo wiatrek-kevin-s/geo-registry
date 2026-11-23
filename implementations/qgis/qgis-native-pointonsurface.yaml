@@ -3,7 +3,7 @@ kind: implementation
 name: native:pointonsurface
 software: qgis
 call: {interface: qgis-process, name: 'native:pointonsurface'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   ALL_PARTS: {type: boolean, required: true, default: false}
   INPUT: {type: source, required: true}

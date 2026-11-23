@@ -3,7 +3,7 @@ kind: implementation
 name: native:randomextract
 software: qgis
 call: {interface: qgis-process, name: 'native:randomextract'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   INPUT: {type: source, required: true}
   METHOD: {type: enum, required: true, default: 0, values: [0, 1], note: '0 Number of features, 1 Percentage of features'}

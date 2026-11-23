@@ -1,0 +1,17 @@
+id: qgis-native-globaltpsinterpolation
+kind: implementation
+name: native:globaltpsinterpolation
+software: qgis
+call: {interface: qgis-process, name: 'native:globaltpsinterpolation'}
+harvest: {harvester: qgis, engine_version: 4.4.0}
+parameters:
+  CREATION_OPTIONS: {type: string}
+  EXTENT: {type: extent, required: true}
+  FIELD: {type: field, required: true}
+  INPUT: {type: source, required: true}
+  NODATA: {type: number, required: true, default: -9999.0}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  PIXEL_SIZE: {type: interpolationpixelsize, required: true, default: 0.1}
+  REGULARIZATION: {type: number, required: true, default: 0.0001}
+status: active
+review: {state: harvested, source: qgis}

@@ -3,7 +3,7 @@ kind: implementation
 name: osmnx.plot_orientation
 software: osmnx
 call: {interface: python, name: osmnx.plot_orientation}
-harvest: {harvester: python-packages, engine_version: 2.1.1}
+harvest: {harvester: python-packages, engine_version: 2.2.0}
 parameters:
   G: {type: nx.MultiGraph | nx.MultiDiGraph, required: true}
   num_bins: {type: int, default: 36}

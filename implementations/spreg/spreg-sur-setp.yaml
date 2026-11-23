@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.sur_setp
 software: spreg
 call: {interface: python, name: spreg.sur_setp}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters:
   bigB: {type: any, required: true}
   varb: {type: any, required: true}

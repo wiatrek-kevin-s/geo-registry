@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.LMtests
 software: spreg
 call: {interface: python, name: spreg.LMtests}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters:
   ols: {type: any, required: true}
   w: {type: any, required: true}

@@ -3,7 +3,7 @@ kind: implementation
 name: native:removeduplicatesbyattribute
 software: qgis
 call: {interface: qgis-process, name: 'native:removeduplicatesbyattribute'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   DUPLICATES: {type: sink, note: output}
   FIELDS: {type: field, required: true, note: multiple values}

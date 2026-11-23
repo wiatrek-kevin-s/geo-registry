@@ -1,0 +1,15 @@
+id: qgis-native-channelnetworkfromdem
+kind: implementation
+name: native:channelnetworkfromdem
+software: qgis
+call: {interface: qgis-process, name: 'native:channelnetworkfromdem'}
+harvest: {harvester: qgis, engine_version: 4.4.0}
+parameters:
+  BASINS: {type: vectorDestination, note: output}
+  CHANNELS: {type: vectorDestination, note: output}
+  INPUT: {type: raster, required: true}
+  JUNCTIONS: {type: vectorDestination, note: output}
+  SUBBASINS: {type: boolean, required: true, default: true}
+  THRESHOLD: {type: number, required: true, default: 5}
+status: active
+review: {state: harvested, source: qgis}

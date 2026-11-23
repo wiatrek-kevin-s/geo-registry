@@ -3,7 +3,7 @@ kind: implementation
 name: ST_MinimumRotatedRectangle
 software: duckdb-spatial-extension
 call: {interface: sql, name: ST_MinimumRotatedRectangle}
-harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+harvest: {harvester: duckdb-spatial, engine_version: 37bff11aea}
 parameters:
   geom: {type: GEOMETRY}
 signatures:

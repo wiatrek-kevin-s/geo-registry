@@ -3,7 +3,7 @@ kind: implementation
 name: native:orderbyexpression
 software: qgis
 call: {interface: qgis-process, name: 'native:orderbyexpression'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   ASCENDING: {type: boolean, required: true, default: true}
   EXPRESSION: {type: expression, required: true}

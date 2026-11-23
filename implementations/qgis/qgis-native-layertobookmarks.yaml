@@ -3,7 +3,7 @@ kind: implementation
 name: native:layertobookmarks
 software: qgis
 call: {interface: qgis-process, name: 'native:layertobookmarks'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   DESTINATION: {type: enum, required: true, default: 0, values: [0, 1], note: '0 Project bookmarks, 1 User bookmarks'}
   GROUP_EXPRESSION: {type: expression}

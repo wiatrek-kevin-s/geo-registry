@@ -3,7 +3,7 @@ kind: implementation
 name: native:wedgebuffers
 software: qgis
 call: {interface: qgis-process, name: 'native:wedgebuffers'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   AZIMUTH: {type: number, required: true, default: 0}
   INNER_RADIUS: {type: number, default: 0}

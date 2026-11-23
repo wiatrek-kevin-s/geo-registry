@@ -3,7 +3,7 @@ kind: implementation
 name: native:createdirectory
 software: qgis
 call: {interface: qgis-process, name: 'native:createdirectory'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   PATH: {type: layer, required: true}
 notes: Deprecated in QGIS.

@@ -3,7 +3,7 @@ kind: implementation
 name: native:checkgeometrycontained
 software: qgis
 call: {interface: qgis-process, name: 'native:checkgeometrycontained'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   ERRORS: {type: sink, required: true, note: output}
   INPUT: {type: source, required: true}

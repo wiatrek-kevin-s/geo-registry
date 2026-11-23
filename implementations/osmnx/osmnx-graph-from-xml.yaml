@@ -3,7 +3,7 @@ kind: implementation
 name: osmnx.graph_from_xml
 software: osmnx
 call: {interface: python, name: osmnx.graph_from_xml}
-harvest: {harvester: python-packages, engine_version: 2.1.1}
+harvest: {harvester: python-packages, engine_version: 2.2.0}
 parameters:
   filepath: {type: str | Path, required: true}
   bidirectional: {type: bool, default: false}

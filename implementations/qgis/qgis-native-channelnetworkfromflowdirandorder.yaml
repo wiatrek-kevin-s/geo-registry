@@ -1,0 +1,17 @@
+id: qgis-native-channelnetworkfromflowdirandorder
+kind: implementation
+name: native:channelnetworkfromflowdirandorder
+software: qgis
+call: {interface: qgis-process, name: 'native:channelnetworkfromflowdirandorder'}
+harvest: {harvester: qgis, engine_version: 4.4.0}
+parameters:
+  BASINS: {type: vectorDestination, note: output}
+  CHANNELS: {type: vectorDestination, note: output}
+  INPUT_DEM: {type: raster, required: true}
+  INPUT_FLOW_DIR: {type: raster, required: true}
+  INPUT_STRAHLER: {type: raster, required: true}
+  JUNCTIONS: {type: vectorDestination, note: output}
+  SUBBASINS: {type: boolean, required: true, default: true}
+  THRESHOLD: {type: number, required: true, default: 5}
+status: active
+review: {state: harvested, source: qgis}

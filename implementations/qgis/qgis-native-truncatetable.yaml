@@ -3,7 +3,7 @@ kind: implementation
 name: native:truncatetable
 software: qgis
 call: {interface: qgis-process, name: 'native:truncatetable'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   INPUT: {type: vector, required: true}
 status: active

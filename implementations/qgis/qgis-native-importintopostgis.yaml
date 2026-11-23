@@ -3,7 +3,7 @@ kind: implementation
 name: native:importintopostgis
 software: qgis
 call: {interface: qgis-process, name: 'native:importintopostgis'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   CREATEINDEX: {type: boolean, required: true, default: true}
   DATABASE: {type: providerconnection, required: true}

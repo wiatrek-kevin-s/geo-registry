@@ -3,7 +3,7 @@ kind: implementation
 name: native:lineintersections
 software: qgis
 call: {interface: qgis-process, name: 'native:lineintersections'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   INPUT: {type: source, required: true}
   INPUT_FIELDS: {type: field, note: multiple values}

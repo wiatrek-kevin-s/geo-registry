@@ -3,7 +3,7 @@ kind: implementation
 name: pdal:heightabovegroundtriangulation
 software: qgis
 call: {interface: qgis-process, name: 'pdal:heightabovegroundtriangulation'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   COUNT: {type: number, required: true, default: 10}
   INPUT: {type: pointcloud, required: true}

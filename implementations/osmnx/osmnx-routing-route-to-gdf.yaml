@@ -3,7 +3,7 @@ kind: implementation
 name: osmnx.routing.route_to_gdf
 software: osmnx
 call: {interface: python, name: osmnx.routing.route_to_gdf}
-harvest: {harvester: python-packages, engine_version: 2.1.1}
+harvest: {harvester: python-packages, engine_version: 2.2.0}
 parameters:
   G: {type: nx.MultiDiGraph, required: true}
   route: {type: 'list[int]', required: true}

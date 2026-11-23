@@ -3,7 +3,7 @@ kind: implementation
 name: qgis:distancetonearesthubpoints
 software: qgis
 call: {interface: qgis-process, name: 'qgis:distancetonearesthubpoints'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   FIELD: {type: field, required: true}
   HUBS: {type: source, required: true}

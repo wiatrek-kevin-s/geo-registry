@@ -3,7 +3,7 @@ kind: implementation
 name: native:fixgeometries
 software: qgis
 call: {interface: qgis-process, name: 'native:fixgeometries'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   INPUT: {type: source, required: true}
   METHOD: {type: enum, required: true, default: 1, values: [0, 1], note: '0 Linework, 1 Structure'}

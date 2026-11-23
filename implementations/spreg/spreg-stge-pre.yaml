@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.stge_pre
 software: spreg
 call: {interface: python, name: spreg.stge_pre}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters:
   y: {type: any, required: true}
   x: {type: any, required: true}

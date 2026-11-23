@@ -3,7 +3,7 @@ kind: implementation
 name: native:extractmvalues
 software: qgis
 call: {interface: qgis-process, name: 'native:extractmvalues'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   COLUMN_PREFIX: {type: string, default: m_}
   INPUT: {type: source, required: true}

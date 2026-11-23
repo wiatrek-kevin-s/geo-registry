@@ -1,0 +1,30 @@
+id: duckdb-spatial-st-asgrid
+kind: implementation
+name: ST_AsGrid
+software: duckdb-spatial-extension
+call: {interface: sql, name: ST_AsGrid}
+harvest: {harvester: duckdb-spatial, engine_version: 37bff11aea}
+parameters:
+  geom: {type: GEOMETRY}
+  x_size: {type: DOUBLE}
+  y_size: {type: DOUBLE}
+  all_touch: {type: BOOLEAN}
+  x_origin: {type: DOUBLE}
+  y_origin: {type: DOUBLE}
+signatures:
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  - {name: x_size, type: DOUBLE}
+  - {name: y_size, type: DOUBLE}
+  - {name: all_touch, type: BOOLEAN}
+  returns: STRUCT(sub_geom INTEGER, col INTEGER, "row" INTEGER, x DOUBLE, y DOUBLE)[]
+- arguments:
+  - {name: geom, type: GEOMETRY}
+  - {name: x_origin, type: DOUBLE}
+  - {name: y_origin, type: DOUBLE}
+  - {name: x_size, type: DOUBLE}
+  - {name: y_size, type: DOUBLE}
+  - {name: all_touch, type: BOOLEAN}
+  returns: STRUCT(sub_geom INTEGER, col INTEGER, "row" INTEGER, x DOUBLE, y DOUBLE)[]
+status: active
+review: {state: harvested, source: duckdb-spatial}

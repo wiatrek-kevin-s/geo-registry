@@ -3,7 +3,7 @@ kind: implementation
 name: native:pointstopath
 software: qgis
 call: {interface: qgis-process, name: 'native:pointstopath'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   CLOSE_PATH: {type: boolean, required: true, default: false}
   GROUP_EXPRESSION: {type: expression}

@@ -3,7 +3,7 @@ kind: implementation
 name: native:extractwithindistance
 software: qgis
 call: {interface: qgis-process, name: 'native:extractwithindistance'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   DISTANCE: {type: distance, required: true, default: 100}
   INPUT: {type: source, required: true}

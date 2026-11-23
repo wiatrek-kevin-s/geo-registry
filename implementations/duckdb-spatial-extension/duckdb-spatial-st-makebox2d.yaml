@@ -3,7 +3,7 @@ kind: implementation
 name: ST_MakeBox2D
 software: duckdb-spatial-extension
 call: {interface: sql, name: ST_MakeBox2D}
-harvest: {harvester: duckdb-spatial, engine_version: a3dbcd1781}
+harvest: {harvester: duckdb-spatial, engine_version: 37bff11aea}
 parameters:
   point1: {type: GEOMETRY}
   point2: {type: GEOMETRY}

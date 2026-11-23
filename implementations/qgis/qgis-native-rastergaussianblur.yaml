@@ -3,7 +3,7 @@ kind: implementation
 name: native:rastergaussianblur
 software: qgis
 call: {interface: qgis-process, name: 'native:rastergaussianblur'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   BAND: {type: band, required: true, default: 1}
   CREATION_OPTIONS: {type: string}

@@ -3,7 +3,7 @@ kind: implementation
 name: native:zonalstatistics
 software: qgis
 call: {interface: qgis-process, name: 'native:zonalstatistics'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   COLUMN_PREFIX: {type: string, required: true, default: _}
   INPUT_RASTER: {type: raster, required: true}

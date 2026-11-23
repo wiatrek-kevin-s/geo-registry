@@ -3,7 +3,7 @@ kind: implementation
 name: gdal:buffervectors
 software: qgis
 call: {interface: qgis-process, name: 'gdal:buffervectors'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   DISSOLVE: {type: boolean, required: true, default: false}
   DISTANCE: {type: distance, required: true, default: 10.0}

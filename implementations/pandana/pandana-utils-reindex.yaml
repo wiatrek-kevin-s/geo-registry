@@ -3,7 +3,7 @@ kind: implementation
 name: pandana.utils.reindex
 software: pandana
 call: {interface: python, name: pandana.utils.reindex}
-harvest: {harvester: python-packages, engine_version: '0.8'}
+harvest: {harvester: python-packages, engine_version: 0.8.1}
 parameters:
   series1: {type: any, required: true}
   series2: {type: any, required: true}

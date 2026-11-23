@@ -3,7 +3,7 @@ kind: implementation
 name: gdal:pointsalonglines
 software: qgis
 call: {interface: qgis-process, name: 'gdal:pointsalonglines'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   DISTANCE: {type: number, required: true, default: 0.5}
   GEOMETRY: {type: string, required: true, default: geometry}

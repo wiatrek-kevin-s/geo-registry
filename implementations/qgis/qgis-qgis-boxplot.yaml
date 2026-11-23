@@ -3,7 +3,7 @@ kind: implementation
 name: qgis:boxplot
 software: qgis
 call: {interface: qgis-process, name: 'qgis:boxplot'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   INPUT: {type: source, required: true}
   MSD: {type: enum, required: true, default: 0, values: [0, 1, 2], note: '0 Show Mean, 1 Show Standard Deviation, 2 Don''t

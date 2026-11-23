@@ -3,7 +3,7 @@ kind: implementation
 name: pandana.loaders.pandash5.open_hdf_store
 software: pandana
 call: {interface: python, name: pandana.loaders.pandash5.open_hdf_store}
-harvest: {harvester: python-packages, engine_version: '0.8'}
+harvest: {harvester: python-packages, engine_version: 0.8.1}
 parameters:
   filename: {type: any, required: true}
   mode: {type: string, default: r}

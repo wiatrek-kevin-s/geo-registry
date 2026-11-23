@@ -3,7 +3,7 @@ kind: implementation
 name: native:createrandomexponentialrasterlayer
 software: qgis
 call: {interface: qgis-process, name: 'native:createrandomexponentialrasterlayer'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   CREATION_OPTIONS: {type: string}
   EXTENT: {type: extent, required: true}

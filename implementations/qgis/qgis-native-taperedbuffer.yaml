@@ -3,7 +3,7 @@ kind: implementation
 name: native:taperedbuffer
 software: qgis
 call: {interface: qgis-process, name: 'native:taperedbuffer'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   END_WIDTH: {type: number, required: true, default: 1}
   INPUT: {type: source, required: true}

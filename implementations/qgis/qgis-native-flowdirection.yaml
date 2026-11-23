@@ -1,0 +1,13 @@
+id: qgis-native-flowdirection
+kind: implementation
+name: native:flowdirection
+software: qgis
+call: {interface: qgis-process, name: 'native:flowdirection'}
+harvest: {harvester: qgis, engine_version: 4.4.0}
+parameters:
+  CREATION_OPTIONS: {type: string}
+  INPUT: {type: raster, required: true}
+  NODATA: {type: number, required: true, default: -9999}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+status: active
+review: {state: harvested, source: qgis}

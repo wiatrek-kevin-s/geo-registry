@@ -1,0 +1,17 @@
+id: rustgis-servicearea
+kind: implementation
+name: Service Area
+software: rustgis
+call: {interface: python, name: serviceArea}
+harvest: {harvester: rustgis, engine_version: 0.8.0}
+parameters:
+  network: {type: VectorLayer, required: true}
+  facilities: {type: PointLayer, required: true}
+  breaks: {type: Text, required: true}
+  units: {type: 'Choice(["Kilometers", "Meters", "Miles", "Feet"])'}
+  costField: {type: NumericField}
+  snapDistance: {type: Number}
+  output: {type: Text}
+notes: 'Toolbox: Analysis › Network.'
+status: active
+review: {state: harvested, source: rustgis}

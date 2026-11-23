@@ -3,7 +3,7 @@ kind: implementation
 name: native:fixgeometrygap
 software: qgis
 call: {interface: qgis-process, name: 'native:fixgeometrygap'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   ERROR_ID_IDX: {type: field, required: true, default: gc_errorid}
   GAPS: {type: source, required: true}

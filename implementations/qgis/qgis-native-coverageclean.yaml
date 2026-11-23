@@ -1,0 +1,15 @@
+id: qgis-native-coverageclean
+kind: implementation
+name: native:coverageclean
+software: qgis
+call: {interface: qgis-process, name: 'native:coverageclean'}
+harvest: {harvester: qgis, engine_version: 4.4.0}
+parameters:
+  INPUT: {type: source, required: true}
+  MAXIMUM_GAP_WIDTH: {type: distance, required: true, default: 0.0}
+  OUTPUT: {type: sink, required: true, note: output}
+  OVERLAP_MERGE_STRATEGY: {type: enum, required: true, default: 0, values: [0, 1, 2, 3], note: '0 Longest border, 1 Maximum
+      area, 2 Minimum area, 3 Minimum index'}
+  SNAPPING_DISTANCE: {type: distance}
+status: active
+review: {state: harvested, source: qgis}

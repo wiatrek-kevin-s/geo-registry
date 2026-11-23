@@ -3,7 +3,7 @@ kind: implementation
 name: native:minimumboundinggeometry
 software: qgis
 call: {interface: qgis-process, name: 'native:minimumboundinggeometry'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   FIELD: {type: field}
   INPUT: {type: source, required: true}

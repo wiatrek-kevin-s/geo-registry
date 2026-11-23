@@ -1,0 +1,17 @@
+id: rustgis-tabulatearea
+kind: implementation
+name: Tabulate Area
+software: rustgis
+call: {interface: python, name: tabulateArea}
+harvest: {harvester: rustgis, engine_version: 0.8.0}
+parameters:
+  raster: {type: RasterLayer, required: true}
+  zones: {type: PolygonLayer, required: true}
+  zoneField: {type: Field}
+  band: {type: Number}
+  measure: {type: 'Choice(["Area", "Count"])'}
+  unit: {type: 'Choice(["km2", "m2", "ha", "ac", "ft2", "mi2"])'}
+  output: {type: Text}
+notes: 'Toolbox: Analysis › Raster.'
+status: active
+review: {state: harvested, source: rustgis}

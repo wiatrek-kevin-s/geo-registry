@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.make_vmult
 software: spreg
 call: {interface: python, name: spreg.make_vmult}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters:
   n: {type: any, required: true}
   method: {type: string, default: linear}

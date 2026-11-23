@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.sur_dictxy
 software: spreg
 call: {interface: python, name: spreg.sur_dictxy}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters:
   db: {type: any, required: true}
   y_vars: {type: any, required: true}

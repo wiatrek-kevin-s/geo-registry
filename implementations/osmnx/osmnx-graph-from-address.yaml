@@ -3,7 +3,7 @@ kind: implementation
 name: osmnx.graph_from_address
 software: osmnx
 call: {interface: python, name: osmnx.graph_from_address}
-harvest: {harvester: python-packages, engine_version: 2.1.1}
+harvest: {harvester: python-packages, engine_version: 2.2.0}
 parameters:
   address: {type: str, required: true}
   dist: {type: float, required: true}

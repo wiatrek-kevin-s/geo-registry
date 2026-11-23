@@ -3,7 +3,7 @@ kind: implementation
 name: osmnx.plot_footprints
 software: osmnx
 call: {interface: python, name: osmnx.plot_footprints}
-harvest: {harvester: python-packages, engine_version: 2.1.1}
+harvest: {harvester: python-packages, engine_version: 2.2.0}
 parameters:
   gdf: {type: gpd.GeoDataFrame, required: true}
   ax: {type: Axes | None}

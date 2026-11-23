@@ -3,7 +3,7 @@ kind: implementation
 name: qgis:rasterlayerhistogram
 software: qgis
 call: {interface: qgis-process, name: 'qgis:rasterlayerhistogram'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   BAND: {type: band, required: true, default: 1}
   BINS: {type: number, required: true, default: 10}

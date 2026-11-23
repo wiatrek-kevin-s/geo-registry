@@ -3,7 +3,7 @@ kind: implementation
 name: native:extractlabels
 software: qgis
 call: {interface: qgis-process, name: 'native:extractlabels'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   DPI: {type: number, default: 96.0}
   EXTENT: {type: extent, required: true}

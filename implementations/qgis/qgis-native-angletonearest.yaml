@@ -3,7 +3,7 @@ kind: implementation
 name: native:angletonearest
 software: qgis
 call: {interface: qgis-process, name: 'native:angletonearest'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   APPLY_SYMBOLOGY: {type: boolean, required: true, default: true}
   FIELD_NAME: {type: string, required: true, default: rotation}

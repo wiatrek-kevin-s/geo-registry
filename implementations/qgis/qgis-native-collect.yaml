@@ -3,7 +3,7 @@ kind: implementation
 name: native:collect
 software: qgis
 call: {interface: qgis-process, name: 'native:collect'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   FIELD: {type: field, note: multiple values}
   INPUT: {type: source, required: true}

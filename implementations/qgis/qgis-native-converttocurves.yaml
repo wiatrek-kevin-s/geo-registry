@@ -3,7 +3,7 @@ kind: implementation
 name: native:converttocurves
 software: qgis
 call: {interface: qgis-process, name: 'native:converttocurves'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   ANGLE: {type: number, required: true, default: 1.0e-06}
   DISTANCE: {type: number, required: true, default: 1.0e-06}

@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.make_error
 software: spreg
 call: {interface: python, name: spreg.make_error}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters:
   rng: {type: any, required: true}
   n: {type: any, required: true}

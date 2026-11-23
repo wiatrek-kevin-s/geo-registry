@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.get_omega_hom_ols
 software: spreg
 call: {interface: python, name: spreg.get_omega_hom_ols}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters:
   w: {type: any, required: true}
   wA1: {type: any, required: true}

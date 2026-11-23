@@ -3,7 +3,7 @@ kind: implementation
 name: pandana.loaders.pandash5.remove_nodes
 software: pandana
 call: {interface: python, name: pandana.loaders.pandash5.remove_nodes}
-harvest: {harvester: python-packages, engine_version: '0.8'}
+harvest: {harvester: python-packages, engine_version: 0.8.1}
 parameters:
   network: {type: any, required: true}
   rm_nodes: {type: any, required: true}

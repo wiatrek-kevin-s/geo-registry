@@ -3,7 +3,7 @@ kind: implementation
 name: gdal:ogrinfo
 software: qgis
 call: {interface: qgis-process, name: 'gdal:ogrinfo'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   ALL_LAYERS: {type: boolean, required: true, default: false}
   EXTRA: {type: string}

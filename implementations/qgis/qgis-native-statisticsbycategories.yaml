@@ -1,9 +1,9 @@
-id: qgis-qgis-statisticsbycategories
+id: qgis-native-statisticsbycategories
 kind: implementation
-name: qgis:statisticsbycategories
+name: native:statisticsbycategories
 software: qgis
-call: {interface: qgis-process, name: 'qgis:statisticsbycategories'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+call: {interface: qgis-process, name: 'native:statisticsbycategories'}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   CATEGORIES_FIELD_NAME: {type: field, required: true, note: multiple values}
   INPUT: {type: source, required: true}

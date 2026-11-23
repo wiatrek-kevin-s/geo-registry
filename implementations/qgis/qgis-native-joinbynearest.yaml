@@ -3,7 +3,7 @@ kind: implementation
 name: native:joinbynearest
 software: qgis
 call: {interface: qgis-process, name: 'native:joinbynearest'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   DISCARD_NONMATCHING: {type: boolean, required: true, default: false}
   FIELDS_TO_COPY: {type: field, note: multiple values}

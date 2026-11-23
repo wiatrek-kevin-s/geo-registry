@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.check_numeric_bool
 software: spreg
 call: {interface: python, name: spreg.check_numeric_bool}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters:
   array: {type: any, required: true}
 status: active

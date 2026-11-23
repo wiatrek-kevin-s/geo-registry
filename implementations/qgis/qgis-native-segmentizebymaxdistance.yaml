@@ -3,7 +3,7 @@ kind: implementation
 name: native:segmentizebymaxdistance
 software: qgis
 call: {interface: qgis-process, name: 'native:segmentizebymaxdistance'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   DISTANCE: {type: distance, required: true, default: 1.0}
   INPUT: {type: source, required: true}

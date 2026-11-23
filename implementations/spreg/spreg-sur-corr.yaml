@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.sur_corr
 software: spreg
 call: {interface: python, name: spreg.sur_corr}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters:
   sig: {type: any, required: true}
 status: active

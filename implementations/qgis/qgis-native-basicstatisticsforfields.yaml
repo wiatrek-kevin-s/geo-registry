@@ -3,7 +3,7 @@ kind: implementation
 name: native:basicstatisticsforfields
 software: qgis
 call: {interface: qgis-process, name: 'native:basicstatisticsforfields'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   FIELD_NAME: {type: field, required: true}
   INPUT_LAYER: {type: source, required: true}

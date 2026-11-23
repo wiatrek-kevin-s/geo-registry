@@ -3,7 +3,7 @@ kind: implementation
 name: native:stylefromproject
 software: qgis
 call: {interface: qgis-process, name: 'native:stylefromproject'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   INPUT: {type: file}
   OBJECTS: {type: enum, required: true, values: [0, 1, 2, 3], note: '0 Symbols, 1 Color ramps, 2 Text formats, 3 Label settings;

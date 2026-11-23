@@ -3,7 +3,7 @@ kind: implementation
 name: tobler.util.circumradius
 software: tobler
 call: {interface: python, name: tobler.util.circumradius}
-harvest: {harvester: python-packages, engine_version: 0.14.0}
+harvest: {harvester: python-packages, engine_version: 0.14.1}
 parameters:
   resolution: {type: any, required: true}
 status: active

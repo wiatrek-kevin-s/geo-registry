@@ -3,7 +3,7 @@ kind: implementation
 name: native:checkgeometrygap
 software: qgis
 call: {interface: qgis-process, name: 'native:checkgeometrygap'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   ALLOWED_GAPS_BUFFER: {type: distance}
   ALLOWED_GAPS_LAYER: {type: vector}

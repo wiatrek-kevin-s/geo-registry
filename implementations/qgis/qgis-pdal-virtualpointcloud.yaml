@@ -3,7 +3,7 @@ kind: implementation
 name: pdal:virtualpointcloud
 software: qgis
 call: {interface: qgis-process, name: 'pdal:virtualpointcloud'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   BOUNDARY: {type: boolean, required: true, default: false}
   CONVERT_COPC: {type: boolean, required: true, default: false}

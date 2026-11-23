@@ -3,7 +3,7 @@ kind: implementation
 name: native:meshexportcrosssection
 software: qgis
 call: {interface: qgis-process, name: 'native:meshexportcrosssection'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   COORDINATES_DIGITS: {type: number, required: true, default: 2}
   DATASET_DIGITS: {type: number, required: true, default: 2}

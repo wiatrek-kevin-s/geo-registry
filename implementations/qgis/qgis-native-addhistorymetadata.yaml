@@ -3,7 +3,7 @@ kind: implementation
 name: native:addhistorymetadata
 software: qgis
 call: {interface: qgis-process, name: 'native:addhistorymetadata'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   HISTORY: {type: string, required: true}
   INPUT: {type: layer, required: true}

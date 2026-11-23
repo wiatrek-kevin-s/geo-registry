@@ -3,7 +3,7 @@ kind: implementation
 name: native:setlayerencoding
 software: qgis
 call: {interface: qgis-process, name: 'native:setlayerencoding'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   ENCODING: {type: string, required: true}
   INPUT: {type: vector, required: true}

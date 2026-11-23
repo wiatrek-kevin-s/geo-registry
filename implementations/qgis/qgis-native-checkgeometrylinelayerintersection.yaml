@@ -3,7 +3,7 @@ kind: implementation
 name: native:checkgeometrylinelayerintersection
 software: qgis
 call: {interface: qgis-process, name: 'native:checkgeometrylinelayerintersection'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   CHECK_LAYER: {type: source, required: true}
   ERRORS: {type: sink, required: true, note: output}

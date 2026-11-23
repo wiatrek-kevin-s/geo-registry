@@ -3,7 +3,7 @@ kind: implementation
 name: native:dbscanclustering
 software: qgis
 call: {interface: qgis-process, name: 'native:dbscanclustering'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   DBSCAN*: {type: boolean, required: true, default: false}
   EPS: {type: distance, required: true, default: 1}

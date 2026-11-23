@@ -1,0 +1,17 @@
+id: qgis-native-tininterpolation
+kind: implementation
+name: native:tininterpolation
+software: qgis
+call: {interface: qgis-process, name: 'native:tininterpolation'}
+harvest: {harvester: qgis, engine_version: 4.4.0}
+parameters:
+  CREATION_OPTIONS: {type: string}
+  EXTENT: {type: extent, required: true}
+  INTERPOLATION_DATA: {type: interpolationdata, required: true}
+  METHOD: {type: enum, required: true, default: 0, values: [0, 1], note: '0 Linear, 1 Clough-Toucher (cubic)'}
+  NODATA: {type: number, required: true, default: -9999.0}
+  OUTPUT: {type: rasterDestination, required: true, note: output}
+  PIXEL_SIZE: {type: interpolationpixelsize, required: true, default: 0.1}
+  TRIANGULATION: {type: sink, note: output}
+status: active
+review: {state: harvested, source: qgis}

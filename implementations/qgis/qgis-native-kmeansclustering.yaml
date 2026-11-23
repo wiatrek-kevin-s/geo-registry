@@ -3,7 +3,7 @@ kind: implementation
 name: native:kmeansclustering
 software: qgis
 call: {interface: qgis-process, name: 'native:kmeansclustering'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   CLUSTERS: {type: number, required: true, default: 5}
   FIELD_NAME: {type: string, required: true, default: CLUSTER_ID}

@@ -3,10 +3,10 @@ kind: implementation
 name: Select Layer By Attribute
 software: rustgis
 call: {interface: python, name: selectByAttributes}
-harvest: {harvester: rustgis, engine_version: 0.5.0}
+harvest: {harvester: rustgis, engine_version: 0.8.0}
 parameters:
   input: {type: Layer, required: true}
-  where: {type: Text, required: true}
+  where: {type: Expression, required: true}
 notes: 'Toolbox: Data Management › Layers and Table Views.'
 status: active
 review: {state: harvested, source: rustgis}

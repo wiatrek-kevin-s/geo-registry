@@ -3,7 +3,7 @@ kind: implementation
 name: native:validatenetwork
 software: qgis
 call: {interface: qgis-process, name: 'native:validatenetwork'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   DIRECTION_FIELD: {type: field}
   ENDPOINTS_ONLY: {type: boolean, required: true, default: false}

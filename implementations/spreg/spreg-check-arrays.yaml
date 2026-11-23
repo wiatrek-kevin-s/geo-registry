@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.check_arrays
 software: spreg
 call: {interface: python, name: spreg.check_arrays}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters: {}
 status: active
 review: {state: harvested, source: python-packages}

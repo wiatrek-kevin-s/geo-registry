@@ -3,7 +3,7 @@ kind: implementation
 name: gdal:merge
 software: qgis
 call: {interface: qgis-process, name: 'gdal:merge'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   CREATION_OPTIONS: {type: string, default: ''}
   DATA_TYPE: {type: enum, required: true, default: 5, values: [0, 1, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9], note: '0 Byte, 1 Int16,

@@ -3,7 +3,7 @@ kind: implementation
 name: native:package
 software: qgis
 call: {interface: qgis-process, name: 'native:package'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   CRS: {type: crs}
   EXPORT_RELATED_LAYERS: {type: boolean, required: true, default: false}

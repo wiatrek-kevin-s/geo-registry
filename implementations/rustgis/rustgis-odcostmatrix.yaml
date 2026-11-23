@@ -1,0 +1,19 @@
+id: rustgis-odcostmatrix
+kind: implementation
+name: OD Cost Matrix
+software: rustgis
+call: {interface: python, name: odCostMatrix}
+harvest: {harvester: rustgis, engine_version: 0.8.0}
+parameters:
+  network: {type: VectorLayer, required: true}
+  origins: {type: PointLayer, required: true}
+  destinations: {type: PointLayer, required: true}
+  units: {type: 'Choice(["Kilometers", "Meters", "Miles", "Feet"])'}
+  costField: {type: NumericField}
+  cutoff: {type: Number}
+  count: {type: Number}
+  snapDistance: {type: Number}
+  output: {type: Text}
+notes: 'Toolbox: Analysis › Network.'
+status: active
+review: {state: harvested, source: rustgis}

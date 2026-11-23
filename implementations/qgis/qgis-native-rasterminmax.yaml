@@ -3,7 +3,7 @@ kind: implementation
 name: native:rasterminmax
 software: qgis
 call: {interface: qgis-process, name: 'native:rasterminmax'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   BAND: {type: band, required: true, default: 1}
   EXTRACT: {type: enum, required: true, default: 0, values: [0, 1, 2], note: '0 Minimum and Maximum, 1 Minimum, 2 Maximum'}

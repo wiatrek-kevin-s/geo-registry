@@ -3,7 +3,7 @@ kind: implementation
 name: native:pixelstopoints
 software: qgis
 call: {interface: qgis-process, name: 'native:pixelstopoints'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   FIELD_NAME: {type: string, required: true, default: VALUE}
   INPUT_RASTER: {type: raster, required: true}

@@ -3,7 +3,7 @@ kind: implementation
 name: gdal:contour
 software: qgis
 call: {interface: qgis-process, name: 'gdal:contour'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   BAND: {type: band, required: true, default: 1}
   CREATE_3D: {type: boolean, required: true, default: false}

@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.r2
 software: spreg
 call: {interface: python, name: spreg.r2}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters:
   reg: {type: any, required: true}
 status: active

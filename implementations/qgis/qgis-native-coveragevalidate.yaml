@@ -3,7 +3,7 @@ kind: implementation
 name: native:coveragevalidate
 software: qgis
 call: {interface: qgis-process, name: 'native:coveragevalidate'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   GAP_WIDTH: {type: distance, required: true, default: 0.0}
   INPUT: {type: source, required: true}

@@ -3,7 +3,7 @@ kind: implementation
 name: gdal:buildvirtualraster
 software: qgis
 call: {interface: qgis-process, name: 'gdal:buildvirtualraster'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   ADD_ALPHA: {type: boolean, required: true, default: false}
   ASSIGN_CRS: {type: crs}

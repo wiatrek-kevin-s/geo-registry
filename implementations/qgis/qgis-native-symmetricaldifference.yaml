@@ -3,7 +3,7 @@ kind: implementation
 name: native:symmetricaldifference
 software: qgis
 call: {interface: qgis-process, name: 'native:symmetricaldifference'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   GRID_SIZE: {type: number}
   INPUT: {type: source, required: true}

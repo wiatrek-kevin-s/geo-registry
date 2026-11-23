@@ -3,7 +3,7 @@ kind: implementation
 name: pdal:filternoisestatistical
 software: qgis
 call: {interface: qgis-process, name: 'pdal:filternoisestatistical'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   INPUT: {type: pointcloud, required: true}
   MEAN_K: {type: number, required: true, default: 8}

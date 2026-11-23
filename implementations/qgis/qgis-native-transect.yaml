@@ -3,7 +3,7 @@ kind: implementation
 name: native:transect
 software: qgis
 call: {interface: qgis-process, name: 'native:transect'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   ANGLE: {type: number, required: true, default: 90.0}
   DIRECTION: {type: enum, default: 0, values: [0, 1], note: '0 Right to Left, 1 Left to Right'}

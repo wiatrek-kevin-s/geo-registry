@@ -3,7 +3,7 @@ kind: implementation
 name: native:zonalhistogram
 software: qgis
 call: {interface: qgis-process, name: 'native:zonalhistogram'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   COLUMN_PREFIX: {type: string, default: HISTO_}
   INPUT_RASTER: {type: raster, required: true}

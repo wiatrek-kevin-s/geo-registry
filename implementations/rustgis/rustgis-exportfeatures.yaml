@@ -3,10 +3,10 @@ kind: implementation
 name: Export Features
 software: rustgis
 call: {interface: python, name: exportFeatures}
-harvest: {harvester: rustgis, engine_version: 0.5.0}
+harvest: {harvester: rustgis, engine_version: 0.8.0}
 parameters:
   input: {type: Layer, required: true}
-  where: {type: Text}
+  where: {type: Expression}
   output: {type: Text}
 notes: 'Toolbox: Conversion.'
 status: active

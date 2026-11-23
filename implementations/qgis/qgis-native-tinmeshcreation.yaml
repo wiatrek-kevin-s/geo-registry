@@ -3,7 +3,7 @@ kind: implementation
 name: native:tinmeshcreation
 software: qgis
 call: {interface: qgis-process, name: 'native:tinmeshcreation'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   CRS_OUTPUT: {type: crs}
   MESH_FORMAT: {type: enum, required: true, default: 0, values: [0, 1, 2, 3, 4], note: '0 2DM, 1 SELAFIN, 2 PLY, 3 Ugrid,

@@ -3,7 +3,7 @@ kind: implementation
 name: native:orthogonalize
 software: qgis
 call: {interface: qgis-process, name: 'native:orthogonalize'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   ANGLE_TOLERANCE: {type: number, required: true, default: 15.0}
   INPUT: {type: source, required: true}

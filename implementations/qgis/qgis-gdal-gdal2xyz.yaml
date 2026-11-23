@@ -3,7 +3,7 @@ kind: implementation
 name: gdal:gdal2xyz
 software: qgis
 call: {interface: qgis-process, name: 'gdal:gdal2xyz'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   BAND: {type: band, required: true, default: 1}
   CSV: {type: boolean, required: true, default: false}

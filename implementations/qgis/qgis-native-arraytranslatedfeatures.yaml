@@ -3,7 +3,7 @@ kind: implementation
 name: native:arraytranslatedfeatures
 software: qgis
 call: {interface: qgis-process, name: 'native:arraytranslatedfeatures'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   COUNT: {type: number, required: true, default: 10}
   DELTA_M: {type: number, required: true, default: 0.0}

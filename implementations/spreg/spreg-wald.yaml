@@ -3,7 +3,7 @@ kind: implementation
 name: spreg.Wald
 software: spreg
 call: {interface: python, name: spreg.Wald}
-harvest: {harvester: python-packages, engine_version: 1.9.1}
+harvest: {harvester: python-packages, engine_version: 1.9.2}
 parameters:
   reg: {type: any, required: true}
   r: {type: any, required: true}

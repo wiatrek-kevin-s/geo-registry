@@ -3,7 +3,7 @@ kind: implementation
 name: native:createrandomgammarasterlayer
 software: qgis
 call: {interface: qgis-process, name: 'native:createrandomgammarasterlayer'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   ALPHA: {type: number, required: true, default: 1.0}
   BETA: {type: number, required: true, default: 1.0}

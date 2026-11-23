@@ -3,7 +3,7 @@ kind: implementation
 name: gdal:tileindex
 software: qgis
 call: {interface: qgis-process, name: 'gdal:tileindex'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   ABSOLUTE_PATH: {type: boolean, required: true, default: false}
   CRS_FIELD_NAME: {type: string}

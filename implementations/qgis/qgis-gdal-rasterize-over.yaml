@@ -3,7 +3,7 @@ kind: implementation
 name: gdal:rasterize_over
 software: qgis
 call: {interface: qgis-process, name: 'gdal:rasterize_over'}
-harvest: {harvester: qgis, engine_version: 4.2.3}
+harvest: {harvester: qgis, engine_version: 4.4.0}
 parameters:
   ADD: {type: boolean, required: true, default: false}
   EXTRA: {type: string}
