@@ -16,7 +16,7 @@ access:
   url: https://www.earthdata.nasa.gov
   auth: none
 notes: Free Earthdata Login required
-status: active
+status: degraded
 review:
   state: seeded
   source: geospatial-tool-atlas

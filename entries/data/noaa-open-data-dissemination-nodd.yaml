@@ -14,7 +14,7 @@ access:
 - type: http
   url: https://www.noaa.gov/nodd
   auth: none
-status: active
+status: degraded
 review:
   state: seeded
   source: geospatial-tool-atlas

@@ -19,7 +19,7 @@ access:
   auth: none
   notes: Listed as operational on FGDC's Geospatial Platform status page (modified 2026-10-22); only an
     http address is published.
-status: active
+status: degraded
 review:
   state: seeded
   source: geospatial-tool-atlas
