@@ -1,0 +1,23 @@
+id: h1dr4-police-incident-map
+kind: tool
+name: H1DR4 Police Incident Map
+category: Display & visualization
+subcategory: Data viewers & editors
+tool_kind: Application
+summary: Browser viewer for monthly Police.uk street-level records in England and Wales.
+open_source: 'no'
+license: NOASSERTION
+license_original: Unknown
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://h1dr4.dev/map
+notes: Free to browse without registration. Published locations are approximate and coverage varies by
+  force and month.
+status: active
+review:
+  state: seeded
+  source: h1dr4-project
+  source_row: 383
