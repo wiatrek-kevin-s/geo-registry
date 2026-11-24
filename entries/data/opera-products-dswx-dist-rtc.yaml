@@ -15,7 +15,7 @@ access:
 - type: http
   url: https://www.jpl.nasa.gov/go/opera
   auth: none
-status: active
+status: degraded
 review:
   state: seeded
   source: geospatial-tool-atlas

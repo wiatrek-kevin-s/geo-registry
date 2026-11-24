@@ -20,7 +20,7 @@ access:
   auth: none
   notes: AWS us-west-2, requester pays (the requester pays the transfer); regions cu, ak, hi; tile and
     mosaic folders.
-status: active
+status: degraded
 review:
   state: seeded
   source: geospatial-tool-atlas

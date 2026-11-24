@@ -14,7 +14,7 @@ access:
 - type: http
   url: https://nassgeodata.gmu.edu/CropScape/
   auth: none
-status: active
+status: degraded
 review:
   state: seeded
   source: geospatial-tool-atlas

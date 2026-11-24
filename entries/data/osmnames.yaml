@@ -14,6 +14,7 @@ access:
   url: http://osmnames.org/
   auth: none
 notes: Licence shown is for the code; data derives from OSM.
+last_verified: 2026-11-24
 status: active
 review:
   state: seeded

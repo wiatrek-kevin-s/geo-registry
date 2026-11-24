@@ -14,7 +14,7 @@ access:
 - type: http
   url: https://www.earthdata.nasa.gov/esds/competitive-programs/measures/nasadem
   auth: none
-status: active
+status: degraded
 review:
   state: seeded
   source: geospatial-tool-atlas

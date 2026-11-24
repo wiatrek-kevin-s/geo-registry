@@ -10,3 +10,4 @@ access:
     url: https://data.neonscience.org/api/v0/
     auth: none
     notes: NEON data API (products, sites, data); discrete return lidar point clouds are product DP1.30003.001.
+status: degraded

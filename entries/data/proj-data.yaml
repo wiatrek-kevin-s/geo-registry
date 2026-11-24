@@ -15,7 +15,7 @@ access:
   url: https://github.com/OSGeo/PROJ-data
   auth: none
 notes: Needed offline for accurate datum shifts.
-status: active
+status: degraded
 review:
   state: seeded
   source: geospatial-tool-atlas

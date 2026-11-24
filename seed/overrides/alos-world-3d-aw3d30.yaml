@@ -2,3 +2,4 @@
 # review.state stays seeded until a person checks it. Evidence: reviews/global-batch-1-2026-11.md
 id: alos-world-3d-aw3d30
 publisher: Japan Aerospace Exploration Agency (JAXA)
+status: degraded

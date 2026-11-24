@@ -15,6 +15,7 @@ access:
   url: https://github.com/teamookla/ookla-open-data
   auth: none
 notes: New subcategory. Licence terms are on the repo page; check before reuse.
+last_verified: 2026-11-24
 status: active
 review:
   state: seeded
