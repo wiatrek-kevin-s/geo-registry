@@ -1,0 +1,23 @@
+id: map-animation-studio
+kind: tool
+name: Map Animation Studio
+category: Display & visualization
+subcategory: Hosted web map makers
+tool_kind: Application
+summary: Browser-based editor for animated map videos, with travel routes, camera moves and a visual scene
+  timeline.
+open_source: 'no'
+license: LicenseRef-Proprietary
+license_original: Proprietary
+interfaces:
+- GUI
+call: []
+wrapped_by_columbus: false
+project_status: active
+url: https://map-animation.com/
+notes: Exports map videos. A worked London-to-Paris route tutorial is available at https://map-animation.com/guides/animate-a-route.
+status: active
+review:
+  state: seeded
+  source: geospatial-tool-atlas
+  source_row: 1566
